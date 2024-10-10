@@ -1,0 +1,15 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+parts:
+- caption: Meccanica di Newton
+  chapters:
+  - file: ch/kinematics
+  - file: ch/actions
+  - file: ch/inertia
+  - file: ch/dynamics
+- caption: Meccanica analitica
+  - file: ch/lagrange
+  - file: ch/hamilton

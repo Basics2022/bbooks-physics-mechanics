@@ -1,0 +1,2 @@
+(classical-mechanics:dynamics)=
+# Dinamica
