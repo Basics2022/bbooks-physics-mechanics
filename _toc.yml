@@ -11,5 +11,6 @@ parts:
   - file: ch/inertia
   - file: ch/dynamics
 - caption: Meccanica analitica
+  chapters:
   - file: ch/lagrange
   - file: ch/hamilton

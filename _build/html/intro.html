@@ -64,7 +64,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'intro';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Markdown File - Example" href="markdown.html" />
+    <link rel="next" title="Cinematica" href="ch/kinematics.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -166,8 +166,17 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="markdown.html">Markdown File - Example</a></li>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Meccanica di Newton</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="ch/kinematics.html">Cinematica</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ch/actions.html">Azioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ch/inertia.html">Inertia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ch/dynamics.html">Dinamica</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Meccanica analitica</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="ch/lagrange.html">Meccanica analitica: formulazione di Lagrange</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ch/hamilton.html">Meccanica analitica: formulazione di Hamilton</a></li>
 </ul>
 
     </div>
@@ -340,7 +349,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -356,6 +367,17 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#meccanica-newtoniana">Meccanica newtoniana</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#meccanica-analitica">Meccanica analitica</a><ul class="nav section-nav flex-column">
+</ul>
+</li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -367,10 +389,30 @@ document.write(`
                   
   <div class="tex2jax_ignore mathjax_ignore section" id="meccanica-classica">
 <span id="book-classical-mechanics"></span><h1>Meccanica classica<a class="headerlink" href="#meccanica-classica" title="Permalink to this heading">#</a></h1>
+<p><strong>Pre-requisiti</strong>: … <br>
+<strong>Livello</strong>: università <br>
+<strong>Altro…</strong>:</p>
+<div class="section" id="meccanica-newtoniana">
+<h2>Meccanica newtoniana<a class="headerlink" href="#meccanica-newtoniana" title="Permalink to this heading">#</a></h2>
+</div>
+<div class="section" id="meccanica-analitica">
+<h2>Meccanica analitica<a class="headerlink" href="#meccanica-analitica" title="Permalink to this heading">#</a></h2>
 <div class="toctree-wrapper compound">
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Meccanica di Newton</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="markdown.html">Markdown File - Example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ch/kinematics.html">Cinematica</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ch/actions.html">Azioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ch/inertia.html">Inertia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ch/dynamics.html">Dinamica</a></li>
 </ul>
+</div>
+<div class="toctree-wrapper compound">
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Meccanica analitica</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="ch/lagrange.html">Meccanica analitica: formulazione di Lagrange</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ch/hamilton.html">Meccanica analitica: formulazione di Hamilton</a></li>
+</ul>
+</div>
 </div>
 </div>
 
@@ -405,11 +447,11 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="right-next"
-       href="markdown.html"
+       href="ch/kinematics.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Markdown File - Example</p>
+        <p class="prev-next-title">Cinematica</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -419,6 +461,23 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#meccanica-newtoniana">Meccanica newtoniana</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#meccanica-analitica">Meccanica analitica</a><ul class="nav section-nav flex-column">
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
