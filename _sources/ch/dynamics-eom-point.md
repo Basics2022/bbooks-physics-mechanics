@@ -26,7 +26,7 @@ $$\begin{aligned}
 & = m \left[ ( \dot{\mathbf{r}}_P - \dot{\mathbf{r}}_H ) \times \mathbf{v}_P + m_P (\mathbf{r}_P - \mathbf{r}_H) \times \dot{\mathbf{v}}_P \right] = \\
 & = - m_P \dot{\mathbf{r}}_H \times \mathbf{v}_P + m_P (\mathbf{r}_P - \mathbf{r}_H) \times \dot{\mathbf{v}}_P = \\
 & = - \dot{\mathbf{r}}_H \times \mathbf{Q} + \mathbf{M}_H^{ext} \ .
-\end{aligend}$$
+\end{aligned}$$
 
 **Bilancio dell'energia cinetica.**
 
@@ -35,6 +35,6 @@ $$\begin{aligned}
             & = m_P \dot{\mathbf{v}}_P \cdot \mathbf{m}_P = \\
             & = \mathbf{R}^e \cdot \mathbf{m}_P = \\
             & = \mathbf{R}^{tot} \cdot \mathbf{m}_P = P^{tot} \ .
-\end{aligend}$$
+\end{aligned}$$
 
 
