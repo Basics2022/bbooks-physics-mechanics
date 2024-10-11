@@ -44,9 +44,9 @@ La derivata nel tempo della legge dell'atto di moto rigido permette di ricavare 
 
 $$\begin{aligned}
   \mathbf{v}_P - \mathbf{v}_Q & = \frac{d}{dt} \left( \mathbb{R} \cdot (\mathbf{r}_P - \mathbf{r}_Q)_0 \right) = \\
-                              & = \frac{d}{dt} \dot{\mathbb{R}} \cdot (\mathbf{r}_P - \mathbf{r}_Q)_0 \right) = \\
-                              & = \omega_{\times} \cdot \mathbb{R} \cdot (\mathbf{r}_P - \mathbf{r}_Q)_0 \right) = \\
-                              & = \omega \times \mathbf{r}_P - \mathbf{r}_Q 
+                              & = \frac{d}{dt} \dot{\mathbb{R}} \cdot (\mathbf{r}_P - \mathbf{r}_Q)_0 = \\
+                              & = \omega_{\times} \cdot \mathbb{R} \cdot (\mathbf{r}_P - \mathbf{r}_Q)_0 = \\
+                              & = \omega \times ( \mathbf{r}_P - \mathbf{r}_Q ) 
 \end{aligned}$$
 
 - composizione di rotazioni (qui o nella cinematica relativa? o in un'appendice apposita per le rotazioni?)
