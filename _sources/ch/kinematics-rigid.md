@@ -40,6 +40,15 @@ $$\mathbb{0} = \dot{\mathbb{R}} \cdot \mathbb{R}^T + {\mathbb{R}} \cdot \dot{\ma
 
 $$\dot{\mathbb{R}} = \omega_{\times} \cdot \mathbb{R}$$
 
+La derivata nel tempo della legge dell'atto di moto rigido permette di ricavare la relazione tra le velocità di due punti materiali di un corpo rigido,
+
+$$\begin{aligned}
+  \mathbf{v}_P - \mathbf{v}_Q & = \frac{d}{dt} \left( \mathbb{R} \cdot (\mathbf{r}_P - \mathbf{r}_Q)_0 \right) = \\
+                              & = \frac{d}{dt} \dot{\mathbb{R}} \cdot (\mathbf{r}_P - \mathbf{r}_Q)_0 \right) = \\
+                              & = \omega_{\times} \cdot \mathbb{R} \cdot (\mathbf{r}_P - \mathbf{r}_Q)_0 \right) = \\
+                              & = \omega \times \mathbf{r}_P - \mathbf{r}_Q 
+\end{aligned}$$
+
 - composizione di rotazioni (qui o nella cinematica relativa? o in un'appendice apposita per le rotazioni?)
 
 
