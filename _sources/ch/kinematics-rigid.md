@@ -17,7 +17,15 @@ dove $(\mathbf{r}_P - \mathbf{r}_Q)_0$ rappresenta il vettore materiale nella po
 
 ## Tensore di rotazione
 **Proprietà**
-- definizione con due sistemi di riferimento cartesiani in moto relativo. Dati due basi ortonormali, $\{\hat{\mathbf{e}}^0_i\}$, $\{\hat{\mathbf{e}}^1_k\}$
+- definizione con due sistemi di riferimento cartesiani in moto relativo. Dati due basi ortonormali, $\{\hat{\mathbf{e}}^0_i\}$, $\{\hat{\mathbf{e}}^1_j\}$, è possibile scrivere i vettori di una base come
+
+$$\begin{aligned}
+  \hat{\mathbf{e}}^1_j & = (\hat{\mathbf{e}}^1_j \cdot \hat{\mathbf{e}}^0_i ) \hat{\mathbf{e}}^0_i = \\
+                       & = (\hat{\mathbf{e}}^0_i \cdot \hat{\mathbf{e}}^1_k ) \hat{\mathbf{e}}^0_i \otimes \hat{mathbf{e}}^0_k \cdot \hat{mathbf{e}}^0_k = \\
+                       & = R^{0\rightarrow 1} \hat{\mathbf{e}}^0_i \otimes \hat{mathbf{e}}^0_k \cdot \hat{mathbf{e}}^0_k = \\
+                       & = \mathbb{R}^{0 \rightarrow 1} \cdot \hat{mathbf{e}}^0_k = \\
+\end{aligned}$$
+
 
 
 - unitarietà

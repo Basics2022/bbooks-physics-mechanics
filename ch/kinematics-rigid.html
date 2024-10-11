@@ -445,7 +445,16 @@ document.write(`
 <h2>Tensore di rotazione<a class="headerlink" href="#tensore-di-rotazione" title="Permalink to this heading">#</a></h2>
 <p><strong>Proprietà</strong></p>
 <ul class="simple">
-<li><p>definizione con due sistemi di riferimento cartesiani in moto relativo. Dati due basi ortonormali, <span class="math notranslate nohighlight">\(\{\hat{\mathbf{e}}^0_i\}\)</span>, <span class="math notranslate nohighlight">\(\{\hat{\mathbf{e}}^1_k\}\)</span></p></li>
+<li><p>definizione con due sistemi di riferimento cartesiani in moto relativo. Dati due basi ortonormali, <span class="math notranslate nohighlight">\(\{\hat{\mathbf{e}}^0_i\}\)</span>, <span class="math notranslate nohighlight">\(\{\hat{\mathbf{e}}^1_j\}\)</span>, è possibile scrivere i vettori di una base come</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \hat{\mathbf{e}}^1_j &amp; = (\hat{\mathbf{e}}^1_j \cdot \hat{\mathbf{e}}^0_i ) \hat{\mathbf{e}}^0_i = \\
+                       &amp; = (\hat{\mathbf{e}}^0_i \cdot \hat{\mathbf{e}}^1_k ) \hat{\mathbf{e}}^0_i \otimes \hat{mathbf{e}}^0_k \cdot \hat{mathbf{e}}^0_k = \\
+                       &amp; = R^{0\rightarrow 1} \hat{\mathbf{e}}^0_i \otimes \hat{mathbf{e}}^0_k \cdot \hat{mathbf{e}}^0_k = \\
+                       &amp; = \mathbb{R}^{0 \rightarrow 1} \cdot \hat{mathbf{e}}^0_k = \\
+\end{aligned}\end{split}\]</div>
+<ul class="simple">
 <li><p>unitarietà</p></li>
 </ul>
 <div class="math notranslate nohighlight">
