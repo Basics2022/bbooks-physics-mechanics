@@ -12,11 +12,11 @@ Partendo dalle equazioni dinamiche per un punto, si calcolano le equazioni dinam
 **Bilancio della quantità di moto.**
 E' possibile scrivere il bilancio della quantità di moto per ogni punto $i$ del sistema, scrivendo la risultante delle forze esterne agente sul punto come la somma delle forze esterne all'intero sistema agenti sul punto e le forze interne scambiate con gli altri punti del sistema,
 
-$$\mathbf{R}_i{ext,i} = \mathbf{F}_i^{ext} + \sum_{j \ne i} \mathbf{F}_{ij} \ .$$
+$$\mathbf{R}_i^{ext,i} = \mathbf{F}_i^{ext} + \sum_{j \ne i} \mathbf{F}_{ij} \ .$$
 
 L'equazione di bilancio per la $i$-esima massa diventa quindi
 
-$$\dot{\mathbf{Q}}_i = \mathbf{R}_i{ext,i} = \mathbf{F}_i^{ext} + \sum_{j \ne i} \mathbf{F}_{ij} \ .$$
+$$\dot{\mathbf{Q}}_i = \mathbf{R}_i^{ext,i} = \mathbf{F}_i^{ext} + \sum_{j \ne i} \mathbf{F}_{ij} \ .$$
 
 Sommando le equazioni di bilancio di tutte le masse, si ottiene
 
@@ -64,4 +64,22 @@ si ritrova la forma generale del bilancio del momento della quantità di moto,
 $$\dot{\mathbf{L}}_{H} + \dot{\mathbf{r}}_H \times \mathbf{Q} = \mathbf{M}_H^e \ .$$
 
 **Bilancio dell'energia cinetica.**
+E' possibile ricavare il bilancio dell'energia cinetica del sistema, moltiplicando scalarmente il bilancio della quantità di moto di ogni punto,
 
+$$\mathbf{v}_i \cdot m_i \dot{\mathbf{v}}_i = \mathbf{v}_i \cdot \left( \mathbf{F}_i^{e} + \sum_{j \ne i} \mathbf{F}_{ij} \right) \ ,$$
+
+riconoscendo nel primo termine la derivata nel tempo dell'energia cinetica dell'$i$-esimo punto,
+
+$$\dot{K}_i = \dfrac{d}{dt} \left( \frac{1}{2} m_i \mathbf{v}_i \cdot \mathbf{v}_i = m_i \mathbf{v}_i \cdot \dot{\mathbf{v}}_i \ ,$$
+
+e sommando queste equazioni di bilancio per ottenere
+
+$$\begin{aligned}
+  \sum_i K_i = \underbrace{\sum_i \mathbf{v}_i \cdot  \mathbf{F}_i^{e}}_{P^e} + \underbrace{\sum_i \mathbf{v}_i \sum_{j \ne i} \mathbf{F}_{ij} }_{=P^i} \ , 
+\end{aligned}$$
+
+o, in breve, la forma generale del bilancio dell'energia cinetica per i sistemi meccanici,
+
+$$\dot{K} = P^e + P^i = P^{tot} \ ,$$
+
+dove si sono riconosciute le potenze delle forze interne ed esterne, e l'energia cinetica del sistema è stata definita come la somma dell'energia cinetica delle sue parti.
