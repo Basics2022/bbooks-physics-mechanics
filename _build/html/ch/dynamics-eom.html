@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Principi della dinamica &#8212; Meccanica classica</title>
+    <title>Equazioni cardinali della dinamica &#8212; Meccanica classica</title>
   
   
   
@@ -64,11 +64,9 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'ch/dynamics-principles';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'ch/dynamics-eom';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Meccanica analitica: formulazione di Lagrange" href="lagrange.html" />
-    <link rel="prev" title="Dinamica" href="dynamics.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -171,7 +169,7 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Meccanica di Newton</span></p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="kinematics.html">Cinematica</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="kinematics-point.html">Cinematica del punto</a></li>
 <li class="toctree-l2"><a class="reference internal" href="kinematics-rigid.html">Cinematica del corpo rigido</a></li>
@@ -181,8 +179,8 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 <li class="toctree-l1"><a class="reference internal" href="actions.html">Azioni</a></li>
 <li class="toctree-l1"><a class="reference internal" href="inertia.html">Inertia</a></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="dynamics.html">Dinamica</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Principi della dinamica</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="dynamics.html">Dinamica</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="dynamics-principles.html">Principi della dinamica</a></li>
 </ul>
 </li>
 </ul>
@@ -261,7 +259,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fch/dynamics-principles.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fch/dynamics-eom.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -291,7 +289,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/ch/dynamics-principles.md" target="_blank"
+      <li><a href="../_sources/ch/dynamics-eom.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -373,7 +371,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Principi della dinamica</h1>
+    <h1>Equazioni cardinali della dinamica</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -406,20 +404,18 @@ document.write(`
 </div>
 </div>
 </div>
-<div class="tex2jax_ignore mathjax_ignore section" id="principi-della-dinamica">
-<span id="classical-mechanics-dynamics-principles"></span><h1>Principi della dinamica<a class="headerlink" href="#principi-della-dinamica" title="Permalink to this heading">#</a></h1>
-<p><strong>Primo principio della dinamica.</strong>
-Un corpo (o meglio, il baricentro di un corpo) sul quale agisce una forza netta nulla, persevera nel suo stato di quiete o di moto rettilineo uniforme rispetto a un sistema di riferimento inerziale.</p>
-<p><strong>Secondo principio della dinamica.</strong> Rispetto a un sistema di riferimento inerziale, la variazione della quantità di moto di un sistema è uguale all’impulso delle forze esterne agenti su di esso,</p>
+<div class="tex2jax_ignore mathjax_ignore section" id="equazioni-cardinali-della-dinamica">
+<span id="classical-mechanics-dynamics-eom"></span><h1>Equazioni cardinali della dinamica<a class="headerlink" href="#equazioni-cardinali-della-dinamica" title="Permalink to this heading">#</a></h1>
+<p>Utilizzando i concetti di quantità di moto, momento della quantità di moto ed energia cinetica di un sistema, si possono scrivere le 3 equazioni cardinali della dinamica in una forma valida per <strong>ogni sistema chiuso</strong>.</p>
+<p><strong>Bilancio della quantità di moto.</strong> La derivata nel tempo della quantità di moto è uguale alla risultante delle forze esterne,</p>
 <div class="math notranslate nohighlight">
-\[\Delta \mathbf{Q} = \mathbf{I}^e \ .\]</div>
-<p>Nel caso di moto regolare, in cui la quantità di moto può essere rappresentata da una funzione continua e differenziabile in funzione del tempo, si può scrivere il secondo principio della dinamica in forma differenziale,</p>
+\[\dot{\mathbf{Q}} = \mathbf{R}^e \ .\]</div>
+<p><strong>Bilancio del momento della quantità di moto rispetto a un polo <span class="math notranslate nohighlight">\(H\)</span>.</strong> La derivata nel tempo del momento della quantità di moto rispetto a un punto <span class="math notranslate nohighlight">\(H\)</span>, a meno di “un termine di trasporto” è uguale alla risultate dei momenti esterni rispetto al polo <span class="math notranslate nohighlight">\(H\)</span></p>
 <div class="math notranslate nohighlight">
-\[\dot{\mathbf{Q}} = \mathbf{R}^e \ ,\]</div>
-<p>essendo la risultante delle forze esterne, <span class="math notranslate nohighlight">\(\mathbf{R}^e = \frac{d \mathbf{I}^e}{dt}\)</span>, la derivata nel tempo dell’impulso.</p>
-<p><strong>Terzo principio della dinamica.</strong> Se un sistema <span class="math notranslate nohighlight">\(i\)</span> esercita su un sistema <span class="math notranslate nohighlight">\(j\)</span> una forza <span class="math notranslate nohighlight">\(\mathbf{F}_{ji}\)</span>, allora il sistema <span class="math notranslate nohighlight">\(j\)</span> esercita sul sistema <span class="math notranslate nohighlight">\(i\)</span> una forza <span class="math notranslate nohighlight">\(\mathbf{F}_{ij}\)</span> “uguale e contraria”, con modulo uguale e verso opposto,</p>
+\[\dot{\mathbf{L}}_H + \dot{\mathbf{x}}_H \times \mathbf{Q} = \mathbf{M}_H^e \ .\]</div>
+<p><strong>Bilancio dell’energia cinetica.</strong> La derivata nel tempo dell’energia cinetica è uguale alla potenza totale agente sul sistema, risultato della somma della potenza delle azioni esterne e della potenza delle azioni interne al sistema</p>
 <div class="math notranslate nohighlight">
-\[\mathbf{F}_{ij} = - \mathbf{F}_{ji} \ .\]</div>
+\[\dot{K} = P^{tot} = P^e + P^i\]</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -452,24 +448,6 @@ Un corpo (o meglio, il baricentro di un corpo) sul quale agisce una forza netta 
                 <footer class="prev-next-footer">
                   
 <div class="prev-next-area">
-    <a class="left-prev"
-       href="dynamics.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Dinamica</p>
-      </div>
-    </a>
-    <a class="right-next"
-       href="lagrange.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Meccanica analitica: formulazione di Lagrange</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
-    </a>
 </div>
                 </footer>
               

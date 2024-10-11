@@ -17,6 +17,7 @@ parts:
   - file: ch/dynamics
     sections:
     - file: ch/dynamics-principles
+    - file: ch/dynamics-eom
 - caption: Meccanica analitica
   chapters:
   - file: ch/lagrange
