@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dinamica &#8212; Meccanica classica</title>
+    <title>Equazioni cardinali della dinamica: corpo rigido &#8212; Meccanica classica</title>
   
   
   
@@ -62,11 +62,11 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'ch/dynamics';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'ch/dynamics-eom-rigid';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Principi della dinamica" href="dynamics-principles.html" />
-    <link rel="prev" title="Inertia" href="inertia.html" />
+    <link rel="next" title="Equazioni cardinali della dinamica: mezzi continui" href="dynamics-eom-continuum.html" />
+    <link rel="prev" title="Equazioni cardinali della dinamica: sistemi discreti di punti materiali" href="dynamics-eom-points.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -179,12 +179,12 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 <li class="toctree-l1"><a class="reference internal" href="actions.html">Azioni</a></li>
 <li class="toctree-l1"><a class="reference internal" href="inertia.html">Inertia</a></li>
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Dinamica</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="dynamics.html">Dinamica</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="dynamics-principles.html">Principi della dinamica</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="dynamics-eom.html">Equazioni cardinali della dinamica</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="dynamics-eom.html">Equazioni cardinali della dinamica</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="dynamics-eom-point.html">Equazioni cardinali della dinamica: punto materiale</a></li>
 <li class="toctree-l3"><a class="reference internal" href="dynamics-eom-points.html">Equazioni cardinali della dinamica: sistemi discreti di punti materiali</a></li>
-<li class="toctree-l3"><a class="reference internal" href="dynamics-eom-rigid.html">Equazioni cardinali della dinamica: corpo rigido</a></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">Equazioni cardinali della dinamica: corpo rigido</a></li>
 <li class="toctree-l3"><a class="reference internal" href="dynamics-eom-continuum.html">Equazioni cardinali della dinamica: mezzi continui</a></li>
 </ul>
 </li>
@@ -266,7 +266,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fch/dynamics.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fch/dynamics-eom-rigid.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -296,7 +296,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/ch/dynamics.md" target="_blank"
+      <li><a href="../_sources/ch/dynamics-eom-rigid.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -378,7 +378,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Dinamica</h1>
+    <h1>Equazioni cardinali della dinamica: corpo rigido</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -404,19 +404,15 @@ document.write(`
 <p class="sd-p-0 sd-m-0"><span class="sd-pr-2"><svg version="1.1" width="16.0px" height="16.0px" class="sd-octicon sd-octicon-calendar" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M4.75 0a.75.75 0 01.75.75V2h5V.75a.75.75 0 011.5 0V2h1.25c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0113.25 16H2.75A1.75 1.75 0 011 14.25V3.75C1 2.784 1.784 2 2.75 2H4V.75A.75.75 0 014.75 0zm0 3.5h8.5a.25.25 0 01.25.25V6h-11V3.75a.25.25 0 01.25-.25h2zm-2.25 4v6.75c0 .138.112.25.25.25h10.5a.25.25 0 00.25-.25V7.5h-11z"></path></svg></span>Oct 11, 2024</p>
 </div>
 <div class="sd-col sd-col-auto sd-d-flex-row sd-align-minor-center docutils">
-<p class="sd-p-0 sd-m-0"><span class="sd-pr-2"><svg version="1.1" width="16.0px" height="16.0px" class="sd-octicon sd-octicon-clock" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0zM8 0a8 8 0 100 16A8 8 0 008 0zm.5 4.75a.75.75 0 00-1.5 0v3.5a.75.75 0 00.471.696l2.5 1a.75.75 0 00.557-1.392L8.5 7.742V4.75z"></path></svg></span>1 min read</p>
+<p class="sd-p-0 sd-m-0"><span class="sd-pr-2"><svg version="1.1" width="16.0px" height="16.0px" class="sd-octicon sd-octicon-clock" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0zM8 0a8 8 0 100 16A8 8 0 008 0zm.5 4.75a.75.75 0 00-1.5 0v3.5a.75.75 0 00.471.696l2.5 1a.75.75 0 00.557-1.392L8.5 7.742V4.75z"></path></svg></span>0 min read</p>
 </div>
 </div>
 </div>
 </div>
 </div>
 </div>
-<div class="tex2jax_ignore mathjax_ignore section" id="dinamica">
-<span id="classical-mechanics-dynamics"></span><h1>Dinamica<a class="headerlink" href="#dinamica" title="Permalink to this heading">#</a></h1>
-<p>La dinamica fornisce il legame tra il moto di un corpo e le azioni causa del moto stesso.</p>
-<p>I principi della dinamica di Newton e le equazioni cardinali della dinamica sono le leggi fisiche che governano il moto dei sistemi meccanici. Queste leggi fisiche vengono formulate nei termini di alcune grandezze fisiche, come la quantità di moto, il momento della quantità di moto o l’energia cinetica del sistema. Queste grandezze dinamiche rendono particolarmente facile la scrittura di una forma generale delle equazioni che governano il moto, e che si riducono a una relazione tra la derivate nel tempo di queste grandezze dinamiche e le cause della loro variazione. In assenza di cause nette, si ottengono i princìpi di conservazione.</p>
-<div class="toctree-wrapper compound">
-</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="equazioni-cardinali-della-dinamica-corpo-rigido">
+<span id="classical-mechanics-dynamics-eom-point"></span><h1>Equazioni cardinali della dinamica: corpo rigido<a class="headerlink" href="#equazioni-cardinali-della-dinamica-corpo-rigido" title="Permalink to this heading">#</a></h1>
 </div>
 
     <script type="text/x-thebe-config">
@@ -450,20 +446,20 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="inertia.html"
+       href="dynamics-eom-points.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Inertia</p>
+        <p class="prev-next-title">Equazioni cardinali della dinamica: sistemi discreti di punti materiali</p>
       </div>
     </a>
     <a class="right-next"
-       href="dynamics-principles.html"
+       href="dynamics-eom-continuum.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Principi della dinamica</p>
+        <p class="prev-next-title">Equazioni cardinali della dinamica: mezzi continui</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
