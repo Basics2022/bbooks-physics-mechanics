@@ -7,7 +7,7 @@ parts:
 - caption: Meccanica di Newton
   chapters:
   - file: ch/kinematics
-    chapters:
+    sections:
     - file: ch/kinematics-point
     - file: ch/kinematics-rigid
     - file: ch/kinematics-continuum
