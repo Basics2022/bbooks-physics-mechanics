@@ -9,7 +9,7 @@ $$\mathbf{r}_P = (P - O) \ .$$
 
 La posizione è identificata da una quantità vettoriale. Per identificare il punto si possono scegliere diversi sistemi di coordinate, ma la posizione del punto non è influenzata dalla scelta delle coordinate.
 
-Ad esempio, usando un sistema di coordinate Cartesiane associate alla base $\{\hat{\mathbf{x}}_I, \hat{\mathbf{y}}_I, \hat{\mathbf{z}}_I \}, indipendente dal tempo, la posizione del punto P può essere scritta come combinazione lineare dei vettori della base,
+Ad esempio, usando un sistema di coordinate Cartesiane associate alla base $\{\hat{\mathbf{x}}_I, \hat{\mathbf{y}}_I, \hat{\mathbf{z}}_I \}$, indipendente dal tempo, la posizione del punto P può essere scritta come combinazione lineare dei vettori della base,
 
 $$\mathbf{r}_P(t) = x_P(t) \hat{\mathbf{x}}_I + y_P(t) \hat{\mathbf{y}}_I + z_P(t) \hat{\mathbf{z}}_I \ .$$
 
