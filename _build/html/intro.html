@@ -377,9 +377,7 @@ document.write(`
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</label>
+
 </div></div>
       
     </div>
@@ -395,17 +393,6 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#meccanica-newtoniana">Meccanica newtoniana</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#meccanica-analitica">Meccanica analitica</a><ul class="nav section-nav flex-column">
-</ul>
-</li>
-</ul>
-            </nav>
         </div>
     </div>
 </div>
@@ -417,30 +404,44 @@ document.write(`
                   
   <div class="tex2jax_ignore mathjax_ignore section" id="meccanica-classica">
 <span id="book-classical-mechanics"></span><h1>Meccanica classica<a class="headerlink" href="#meccanica-classica" title="Permalink to this heading">#</a></h1>
+<p><strong>Introduzione.</strong></p>
+<ul class="simple">
+<li><p>la meccanica si occupa della descrizione del moto dei sistemi e delle sue cause.</p></li>
+<li><p>lo sviluppo della teoria può essere riassunto in due parti: la prima formulazione di Newton nel XVII secolo, accompagnata allo sviluppo del calcolo infinitesimale; le riformulazioni “geometriche” di Lagrange e Hamilton, con lo sviluppo del calcolo delle variazioni;</p></li>
+<li><p>i <em>Principi</em> di Newton (<em>Philosophiae Naturalis Mathematica Principia</em>) concentono i concetti e i modelli necessari per formulare i principi della meccanica e sviluppare la teoria: partendo dalle definizioni di spazio, tempo (per lui assoluti), massa (per Lavoisier, costante), quantità di moto e forza, Newton formula i principi della meccanica classica; gli strumenti matematici del <strong>calcolo infinitesimale</strong> da lui congeniati, permettono a Newton di sviluppare la teoria;</p></li>
+<li><p>in questo lavoro, Newton formula la <strong>legge di gravitazione universale</strong>, riconoscendo la gravita come causa unica del moto dei corpi celesti e della caduta dei gravi sulla Terra. Questa legge, insieme alle equazioni della meccanica sviluppate gli permettono di dimostrare le leggi di Keplero</p></li>
+<li><p>nel secolo successivo a Parigi (<strong>todo</strong> riferimenti storici?), l’opera di D’Alembert e, soprattutto, Lagrange permette una riformulazione “geometrica” (<strong>todo</strong> spiegare) delle leggi della meccanica, usando gli strumenti del <strong>calcolo della variazioni</strong>; qualche anno dopo segue la riformulazione di Hamitlon; nonostante queste riformulazioni forniscano una teoria equivalente alla teoria di Newton, e non permettano di risolvere nuovi problemi in meccanica classica, esse forniscono un approccio moderno e comodo, che semplifica la scrittura delle equazioni che governano il moto dei sistemi, e che viene usato come base nella fisica moderna per l’approccio alle nuove discipline, come la meccanica quantistica.</p></li>
+</ul>
+<p><strong>Argomenti</strong></p>
+<ul class="simple">
+<li><p>Meccanica di Newton:</p>
+<ul>
+<li><p>cinematica</p></li>
+<li><p>azioni</p></li>
+<li><p>inerzia</p></li>
+<li><p>dinamica</p></li>
+</ul>
+</li>
+<li><p>Meccanica analitica</p>
+<ul>
+<li><p>formualzione di Lagrange</p></li>
+<li><p>formulazione di Hamilton</p></li>
+</ul>
+</li>
+</ul>
 <p><strong>Pre-requisiti</strong>: … <br>
 <strong>Livello</strong>: università <br>
 <strong>Altro…</strong>:</p>
-<div class="section" id="meccanica-newtoniana">
-<h2>Meccanica newtoniana<a class="headerlink" href="#meccanica-newtoniana" title="Permalink to this heading">#</a></h2>
-</div>
-<div class="section" id="meccanica-analitica">
-<h2>Meccanica analitica<a class="headerlink" href="#meccanica-analitica" title="Permalink to this heading">#</a></h2>
+<!--
+## Meccanica newtoniana
+## Meccanica analitica
+
+```{tableofcontents}
+```
+-->
 <div class="toctree-wrapper compound">
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Meccanica di Newton</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="ch/kinematics.html">Cinematica</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ch/actions.html">Azioni</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ch/inertia.html">Inertia</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ch/dynamics.html">Dinamica</a></li>
-</ul>
 </div>
 <div class="toctree-wrapper compound">
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Meccanica analitica</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="ch/lagrange.html">Meccanica analitica: formulazione di Lagrange</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ch/hamilton.html">Meccanica analitica: formulazione di Hamilton</a></li>
-</ul>
-</div>
 </div>
 </div>
 
@@ -489,23 +490,6 @@ document.write(`
             </div>
             
             
-              
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#meccanica-newtoniana">Meccanica newtoniana</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#meccanica-analitica">Meccanica analitica</a><ul class="nav section-nav flex-column">
-</ul>
-</li>
-</ul>
-  </nav></div>
-
-</div></div>
               
             
           </div>
