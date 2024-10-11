@@ -19,6 +19,11 @@ latex:
 bibtex_bibfiles:
   - references.bib
 
+# Sphinx configuration
+sphinx:
+  configure:
+    language: it
+
 # Information about where the book exists on the web
 repository:
   url: https://github.com/executablebooks/jupyter-book  # Online location of your book
