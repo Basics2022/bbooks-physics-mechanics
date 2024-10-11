@@ -38,7 +38,7 @@ $$\begin{aligned}
 ## Parametrizzazione della traiettoria, coordinata naturale e terna di Frenet
 Usando i concetti della geometria delle curve, è possibile definire la coordinata naturale $s$ lungo la curva, tale che il vettore unitario tangente alla curva coincide con la derivata della posizione rispetto alla coordinata $s$,
 
-$$\hat{\mathbf}{t}(s) = \dfrac{d \mathbf{r}}{d s} \ .$$
+$$\hat{\mathbf{t}}(s) = \dfrac{d \mathbf{r}}{d s} \ .$$
 
 La derivata del versore tangente è ortogonale ad esso, punta verso il centro del cerchio osculatore, il cui raggio $R$ è definito come il raggio di curvatura della curva nel punto; la curvatura è definita come l'inverso del raggio di curvatura, $\kappa = \frac{1}{R}$; il valore assoluto della derivata del versore tangente rispetto alla coordinata $s$ è uguale alla curvatura,
 
