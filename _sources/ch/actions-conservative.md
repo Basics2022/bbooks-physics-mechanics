@@ -29,7 +29,7 @@ $$dL = dU = \mathbf{F} \cdot \mathbf{r} \ ,$$
 
 si può scrivere il campo di forze come il gradiente della funzione $U$,
 
-$$\mathbf{F}(\mathbf{r}) = \nabla \cdot U(\mathbf{r}) \ .$$
+$$\mathbf{F}(\mathbf{r}) = \nabla U(\mathbf{r}) = - \nabla V(\mathbf{r} )\ .$$
 
 Per le proprietà dei campi e degli operatori vettoriali, se un campo vettoriale può essere scritto come gradiente di una funzione scalare, il suo rotore è nullo,
 

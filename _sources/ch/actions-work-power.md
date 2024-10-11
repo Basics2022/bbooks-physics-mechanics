@@ -17,9 +17,11 @@ Per uno spostamento finito del punto $P$ dal punto $\mathbf{r}_A$ al punto $\mat
 
 $$L = \int_{\ell_{AB}} dL = \int_{\ell_{AB}} \mathbf{F} \cdot d \mathbf{r}_P \ .$$
 
+**todo** In generale il lavoro di una forza o di un campo di forze **dipende dal percorso di integrazione** $\ell_{AB}$. Sarebbe meglio usare $\delta L$ per ricordare questa proprietà del lavoro, che quindi non è un **differenziale esatto**.
+
 **Potenza.** La potenza di una forza $\mathbf{F}$ applicata in un punto di applicazione $\mathbf{r}_P$ che ha velocità $\mathbf{v}_P$ viene definita come
 
-$$P = \mathbf{F}_ \mathbf{v}_P \ ,$$
+$$P = \mathbf{F} \cdot \mathbf{v}_P \ ,$$
 
 cioè come la derivata nel tempo del lavoro,
 
