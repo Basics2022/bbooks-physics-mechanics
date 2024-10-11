@@ -42,7 +42,7 @@ $$\hat{\mathbf{t}}(s) = \dfrac{d \mathbf{r}}{d s} \ .$$
 
 La derivata del versore tangente è ortogonale ad esso, punta verso il centro del cerchio osculatore, il cui raggio $R$ è definito come il raggio di curvatura della curva nel punto; la curvatura è definita come l'inverso del raggio di curvatura, $\kappa = \frac{1}{R}$; il valore assoluto della derivata del versore tangente rispetto alla coordinata $s$ è uguale alla curvatura,
 
-$$\kappa(s) \hat{\mathbf{n}} := \frac{d \hat{\mathbf{t}}}{ d s } =  \frac{d \hat{\mathbf{t}}}{ d s } \ .$$
+$$\kappa(s) \hat{\mathbf{n}} := \frac{d \hat{\mathbf{t}}}{ d s } =  \frac{d^2 \mathbf{r}}{ d s^2 } \ .$$
 
 Il versore binormale che forma la terna di Frenet è definito come il prodotto vettore tra $\hat{\mathbf{t}}$ e $\hat{\mathbf{n}}$,
 
