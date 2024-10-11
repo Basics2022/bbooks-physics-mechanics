@@ -11,7 +11,7 @@
 
 $$\begin{aligned}
   \mathbf{Q}_P & := m_P \mathbf{v}_P \\
-$$\mathbf{L}_{P,H} & := (\mathbf{r}_P - \mathbf{r}_H) \times \mathbf{Q} = m_P (\mathbf{r}_P - \mathbf{r}_H) \times \mathbf{v}_P \\
+  \mathbf{L}_{P,H} & := (\mathbf{r}_P - \mathbf{r}_H) \times \mathbf{Q} = m_P (\mathbf{r}_P - \mathbf{r}_H) \times \mathbf{v}_P \\
   K & := \frac{1}{2} m_P \mathbf{v}_P \cdot \mathbf{v}_P = \frac{1}{2} m_P |\mathbf{v}_P|^2
 \end{aligned}$$
 
