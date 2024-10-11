@@ -13,6 +13,12 @@ parts:
     - file: ch/kinematics-continuum
     - file: ch/kinematics-relative
   - file: ch/actions
+    sections:
+    - file: ch/actions-types
+    - file: ch/actions-work-power
+    - file: ch/actions-conservative
+    - file: ch/actions-reactions
+    - file: ch/actions-examples
   - file: ch/inertia
   - file: ch/dynamics
     sections:
