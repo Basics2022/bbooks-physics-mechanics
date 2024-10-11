@@ -11,9 +11,12 @@ parts:
     - file: ch/kinematics-point
     - file: ch/kinematics-rigid
     - file: ch/kinematics-continuum
+    - file: ch/kinematics-relative
   - file: ch/actions
   - file: ch/inertia
   - file: ch/dynamics
+    sections:
+    - file: ch/dynamics-principles
 - caption: Meccanica analitica
   chapters:
   - file: ch/lagrange
