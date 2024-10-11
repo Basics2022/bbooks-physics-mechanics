@@ -4,6 +4,6 @@
 :read-time: "{sub-ref}`wordcount-minutes` min read"
 ```
 
-(classical-mechanics:kinematics:rigid-body)=
-# Cinematica del corpo rigido
+(classical-mechanics:kinematics:relative)=
+# Cinematica relativa
 
