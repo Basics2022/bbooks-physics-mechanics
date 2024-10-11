@@ -65,6 +65,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'ch/dynamics-motions';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Gravitazione: problema dei due corpi" href="dynamics-motions-gravitation-2bodies.html" />
+    <link rel="prev" title="Equazioni cardinali della dinamica: mezzi continui" href="dynamics-eom-continuum.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -167,7 +169,7 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Meccanica di Newton</span></p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="kinematics.html">Cinematica</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="kinematics-point.html">Cinematica del punto</a></li>
 <li class="toctree-l2"><a class="reference internal" href="kinematics-rigid.html">Cinematica del corpo rigido</a></li>
@@ -175,15 +177,26 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="kinematics-relative.html">Cinematica relativa</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="actions.html">Azioni</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="actions.html">Azioni</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="actions-types.html">Forze, momenti, forze distribuite</a></li>
+<li class="toctree-l2"><a class="reference internal" href="actions-work-power.html">Lavoro e potenza</a></li>
+<li class="toctree-l2"><a class="reference internal" href="actions-conservative.html">Azioni conservative</a></li>
+<li class="toctree-l2"><a class="reference internal" href="actions-reactions.html">Reazioni vincolari</a></li>
+<li class="toctree-l2"><a class="reference internal" href="actions-examples.html">Esempi</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="inertia.html">Inertia</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="dynamics.html">Dinamica</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="dynamics.html">Dinamica</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="dynamics-principles.html">Principi della dinamica</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="dynamics-eom.html">Equazioni cardinali della dinamica</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="dynamics-eom.html">Equazioni cardinali della dinamica</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="dynamics-eom-point.html">Equazioni cardinali della dinamica: punto materiale</a></li>
 <li class="toctree-l3"><a class="reference internal" href="dynamics-eom-points.html">Equazioni cardinali della dinamica: sistemi discreti di punti materiali</a></li>
 <li class="toctree-l3"><a class="reference internal" href="dynamics-eom-rigid.html">Equazioni cardinali della dinamica: corpo rigido</a></li>
 <li class="toctree-l3"><a class="reference internal" href="dynamics-eom-continuum.html">Equazioni cardinali della dinamica: mezzi continui</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current active has-children"><a class="current reference internal" href="#">Moti particolari</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="dynamics-motions-gravitation-2bodies.html">Gravitazione: problema dei due corpi</a></li>
 </ul>
 </li>
 </ul>
@@ -435,6 +448,8 @@ document.write(`
 <li><p><strong>Gravitazione</strong>: partendo dalla legge di gravitazione universale fornita da Newton, si studia il moto dei corpi celesti in sistemi a due corpi, scoprendo che le loro traiettorie descrivono le sezioni coniche (cerchio, ellisse, parabola, iperbole), e dimostrando le leggi di Keplero</p></li>
 <li><p>rotazione di un corpo attorno a un punto fisso, moti di Poinsot</p></li>
 </ul>
+<div class="toctree-wrapper compound">
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -467,6 +482,24 @@ document.write(`
                 <footer class="prev-next-footer">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="dynamics-eom-continuum.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Equazioni cardinali della dinamica: mezzi continui</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="dynamics-motions-gravitation-2bodies.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Gravitazione: problema dei due corpi</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               
