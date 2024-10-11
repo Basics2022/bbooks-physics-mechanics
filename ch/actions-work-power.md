@@ -44,7 +44,7 @@ $$\mathbf{v}_1 - \mathbf{v}_2 = \symbf{\omega} \times (\mathbf{r}_1 - \mathbf{r}
 si può riscrivere la potenza della coppia di forze come
 
 $$\begin{aligned}
-P & = \mathbf{F}_1 \cdot symbf{\omega} \times (\mathbf{r}_1 - \mathbf{r}_2) = \\
+P & = \mathbf{F}_1 \cdot \symbf{\omega} \times (\mathbf{r}_1 - \mathbf{r}_2) = \\
   & = \symbf{\omega} \cdot ( \mathbf{r}_1 - \mathbf{r}_2 ) \times \mathbf{F}_1 = \\
   & = \symbf{\omega} \cdot \mathbf{C}
 \end {aligned}$$
