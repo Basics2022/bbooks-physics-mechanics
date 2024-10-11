@@ -29,6 +29,9 @@ parts:
       - file: ch/dynamics-eom-points
       - file: ch/dynamics-eom-rigid
       - file: ch/dynamics-eom-continuum
+    - file: ch/dynamics-motions
+      sections:
+      - file: ch/dynamics-motions-gravitation-2bodies
 - caption: Meccanica analitica
   chapters:
   - file: ch/lagrange
