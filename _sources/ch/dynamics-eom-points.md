@@ -84,6 +84,6 @@ $$K :=  \sum_i K_i$$
 $$P^e := \sum_i P^{ext}_i = \sum_i \mathbf{v}_i \cdot  \mathbf{F}_i^{e} $$
 $$P^i := \sum_i P^{int}_i = \sum_i \mathbf{v}_i \cdot \sum_{j \ne i} \mathbf{F}_{ij}$$
 
-si ritrova la forma generale del bilancio della quantità di moto,
+si ritrova la forma generale del bilancio dell'energia cinetica,
 
 $$\dot{K} = P^e + P^i = P^{tot} \ .$$
