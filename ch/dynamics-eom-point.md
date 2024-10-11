@@ -31,10 +31,10 @@ $$\begin{aligned}
 **Bilancio dell'energia cinetica.**
 
 $$\begin{aligned}
-\dot{K}_{P} & = \dfrac{d}{dt} \left( \frac{1}{2} m_P \mathbf{v}_P \cdot \mathbf{m}_P \right) = \\
-            & = m_P \dot{\mathbf{v}}_P \cdot \mathbf{m}_P = \\
-            & = \mathbf{R}^e \cdot \mathbf{m}_P = \\
-            & = \mathbf{R}^{tot} \cdot \mathbf{m}_P = P^{tot} \ .
+\dot{K}_{P} & = \dfrac{d}{dt} \left( \frac{1}{2} m_P \mathbf{v}_P \cdot \mathbf{v}_P \right) = \\
+            & = m_P \dot{\mathbf{v}}_P \cdot \mathbf{v}_P = \\
+            & = \mathbf{R}^e \cdot \mathbf{v}_P = \\
+            & = \mathbf{R}^{tot} \cdot \mathbf{v}_P = P^{tot} \ .
 \end{aligned}$$
 
 
