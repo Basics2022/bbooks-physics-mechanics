@@ -34,3 +34,37 @@ $$\begin{aligned}
 \mathbf{a}_P(t) & = \ddot{\mathbf{r}}_P(t) = \ddot{x}_P(t) \hat{\mathbf{x}}_I + \ddot{y}_P(t) \hat{\mathbf{y}}_I + \ddot{z}_P(t) \hat{\mathbf{z}}_I \\
                 & =  \dot{\mathbf{v}}_P(t) =  \dot{v}_{x,P}(t) \hat{\mathbf{x}}_I + \dot{v}_{y,P}(t) \hat{\mathbf{y}}_I + \dot{v}_{z,P}(t) \hat{\mathbf{z}}_I \ .
 \end{aligned}$$
+
+## Parametrizzazione della traiettoria, coordinata naturale e terna di Frenet
+Usando i concetti della geometria delle curve, è possibile definire la coordinata naturale $s$ lungo la curva, tale che il vettore unitario tangente alla curva coincide con la derivata della posizione rispetto alla coordinata $s$,
+
+$$\hat{\mathbf{t}}(s) = \dfrac{d \mathbf{r}}{d s} \ .$$
+
+La derivata del versore tangente è ortogonale ad esso, punta verso il centro del cerchio osculatore, il cui raggio $R$ è definito come il raggio di curvatura della curva nel punto; la curvatura è definita come l'inverso del raggio di curvatura, $\kappa = \frac{1}{R}$; il valore assoluto della derivata del versore tangente rispetto alla coordinata $s$ è uguale alla curvatura,
+
+$$\kappa(s) \hat{\mathbf{n}} := \frac{d \hat{\mathbf{t}}}{ d s } =  \frac{d^2 \mathbf{r}}{ d s^2 } \ .$$
+
+Il versore binormale che forma la terna di Frenet è definito come il prodotto vettore tra $\hat{\mathbf{t}}$ e $\hat{\mathbf{n}}$,
+
+$$\hat{\mathbf{b}}(s) := \hat{\mathbf{t}}(s) \times \hat{\mathbf{n}}(s) \ .$$
+
+Usando le regole per la derivazione di funzioni composte, si può scrivere la velocità come
+
+$$\mathbf{v}_P(t) = \dfrac{d}{dt} \mathbf{r}_P = \dfrac{d s}{d t} \dfrac{d}{ds} \mathbf{r}_P = v_P \hat{\mathbf{t}} \ ,$$
+
+essendo $v_P$ il modulo della velocità, sempre tangente alla traiettoria.
+
+Derivando una seconda volta in tempo, si ottiene l'espressione dell'accelerazione,
+
+$$\begin{aligned}
+  \mathbf{a}_P(t) & = \dfrac{d}{dt} \mathbf{v}_P(t) = \\
+                  & = \dfrac{d}{dt} \left( v_P \hat{\mathbf{t}} \right) = \\
+                  & = \dfrac{d}{dt} v_P \hat{\mathbf{t}} + v_P \dfrac{ds}{dt} \dfrac{d}{ds} \hat{\mathbf{t}}= \\
+                  & = a_P \hat{\mathbf{t}} + \kappa \, v^2_P \hat{\mathbf{n}}  \ ,
+\end{aligned}$$
+
+che può essere scritta come la somma de:
+- l'accelerazione tangenziale lungo la curva, che è causa della variazione del modulo della velocità
+- l'accelerazione in direzione normale ad essa, l'accelerazione centripeta, che fa cambiare direzione al direttore velocità.
+
+**todo.** Mostrare queste ultime due affermazioni, calcolando la derivata di $|\mathbf{v}|$...
