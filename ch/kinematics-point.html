@@ -380,7 +380,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -396,6 +398,16 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#posizione">Posizione</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#velocita">Velocità</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#accelerazione">Accelerazione</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -408,20 +420,28 @@ document.write(`
   <div class="tex2jax_ignore mathjax_ignore section" id="cinematica-del-punto">
 <span id="classical-mechanics-kinematics-point"></span><h1>Cinematica del punto<a class="headerlink" href="#cinematica-del-punto" title="Permalink to this heading">#</a></h1>
 <p>La cinematica di un punto generalmente si riduce alla determinazione della posizione, della velocità e dell’accelerazione del punto.</p>
-<p><strong>Posizione.</strong> La posizione di un punto nello spazio euclideo <span class="math notranslate nohighlight">\(E^3\)</span> rispetto a un sistema di riferimento <span class="math notranslate nohighlight">\(I\)</span> è identificata dal raggio vettore tra l’origine <span class="math notranslate nohighlight">\(O_I\)</span> del sistema di riferimento e il punto stesso,</p>
+<div class="section" id="posizione">
+<h2>Posizione<a class="headerlink" href="#posizione" title="Permalink to this heading">#</a></h2>
+<p>La posizione di un punto nello spazio euclideo <span class="math notranslate nohighlight">\(E^3\)</span> rispetto a un sistema di riferimento <span class="math notranslate nohighlight">\(I\)</span> è identificata dal raggio vettore tra l’origine <span class="math notranslate nohighlight">\(O_I\)</span> del sistema di riferimento e il punto stesso,</p>
 <div class="math notranslate nohighlight">
 \[\mathbf{r}_P = (P - O) \ .\]</div>
 <p>La posizione è identificata da una quantità vettoriale. Per identificare il punto si possono scegliere diversi sistemi di coordinate, ma la posizione del punto non è influenzata dalla scelta delle coordinate.</p>
 <p>Ad esempio, usando un sistema di coordinate Cartesiane associate alla base <span class="math notranslate nohighlight">\(\{\hat{\mathbf{x}}_I, \hat{\mathbf{y}}_I, \hat{\mathbf{z}}_I \}\)</span>, indipendente dal tempo, la posizione del punto P può essere scritta come combinazione lineare dei vettori della base,</p>
 <div class="math notranslate nohighlight">
 \[\mathbf{r}_P(t) = x_P(t) \hat{\mathbf{x}}_I + y_P(t) \hat{\mathbf{y}}_I + z_P(t) \hat{\mathbf{z}}_I \ .\]</div>
-<p><strong>Velocità.</strong> La velocità del punto <span class="math notranslate nohighlight">\(P\)</span> rispetto al sistema di riferimento <span class="math notranslate nohighlight">\(I\)</span> è la derivata rispetto al tempo della posizione del punto,</p>
+</div>
+<div class="section" id="velocita">
+<h2>Velocità<a class="headerlink" href="#velocita" title="Permalink to this heading">#</a></h2>
+<p>La velocità del punto <span class="math notranslate nohighlight">\(P\)</span> rispetto al sistema di riferimento <span class="math notranslate nohighlight">\(I\)</span> è la derivata rispetto al tempo della posizione del punto,</p>
 <div class="math notranslate nohighlight">
 \[\mathbf{v}_P(t) = \dot{\mathbf{r}}_P(t) \ .\]</div>
 <p>Usando il sistema di riferimento cartesiano, e che i vettori della base sono costanti, la velocità può essere scritta come</p>
 <div class="math notranslate nohighlight">
 \[\mathbf{v}_P(t) = \dot{\mathbf{r}}_P(t) = \dot{x}_P(t) \hat{\mathbf{x}}_I + \dot{y}_P(t) \hat{\mathbf{y}}_I + \dot{z}_P(t) \hat{\mathbf{z}}_I \ .\]</div>
-<p><strong>Accelerazione.</strong> L’accelerazione del punto <span class="math notranslate nohighlight">\(P\)</span> rispetto al sistema di riferimento <span class="math notranslate nohighlight">\(I\)</span> è la derivata rispetto al tempo della velocità del punto, la derivata seconda della posizione</p>
+</div>
+<div class="section" id="accelerazione">
+<h2>Accelerazione<a class="headerlink" href="#accelerazione" title="Permalink to this heading">#</a></h2>
+<p>L’accelerazione del punto <span class="math notranslate nohighlight">\(P\)</span> rispetto al sistema di riferimento <span class="math notranslate nohighlight">\(I\)</span> è la derivata rispetto al tempo della velocità del punto, la derivata seconda della posizione</p>
 <div class="math notranslate nohighlight">
 \[\mathbf{a}_P(t) = \dot{\mathbf{v}}_P(t) = \ddot{\mathbf{r}}_P(t) \ .\]</div>
 <p>Usando il sistema di riferimento cartesiano, e che i vettori della base sono costanti, l’accelerazione può essere scritta come</p>
@@ -430,6 +450,7 @@ document.write(`
 \mathbf{a}_P(t) &amp; = \ddot{\mathbf{r}}_P(t) = \ddot{x}_P(t) \hat{\mathbf{x}}_I + \ddot{y}_P(t) \hat{\mathbf{y}}_I + \ddot{z}_P(t) \hat{\mathbf{z}}_I \\
                 &amp; =  \dot{\mathbf{v}}_P(t) =  \dot{v}_{x,P}(t) \hat{\mathbf{x}}_I + \dot{v}_{y,P}(t) \hat{\mathbf{y}}_I + \dot{v}_{z,P}(t) \hat{\mathbf{z}}_I \ .
 \end{aligned}\end{split}\]</div>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -486,6 +507,22 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#posizione">Posizione</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#velocita">Velocità</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#accelerazione">Accelerazione</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
