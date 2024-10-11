@@ -4,4 +4,7 @@
 :read-time: "{sub-ref}`wordcount-minutes` min read"
 ```
 
+(classical-mechanics:actions:examples)=
+# Esempi
+
 
