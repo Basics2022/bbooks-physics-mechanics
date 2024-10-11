@@ -3,7 +3,8 @@
 
 La cinematica di un punto generalmente si riduce alla determinazione della posizione, della velocità e dell'accelerazione del punto.
 
-**Posizione.** La posizione di un punto nello spazio euclideo $E^3$ rispetto a un sistema di riferimento $I$ è identificata dal raggio vettore tra l'origine $O_I$ del sistema di riferimento e il punto stesso,
+## Posizione
+La posizione di un punto nello spazio euclideo $E^3$ rispetto a un sistema di riferimento $I$ è identificata dal raggio vettore tra l'origine $O_I$ del sistema di riferimento e il punto stesso,
 
 $$\mathbf{r}_P = (P - O) \ .$$
 
@@ -13,7 +14,8 @@ Ad esempio, usando un sistema di coordinate Cartesiane associate alla base $\{\h
 
 $$\mathbf{r}_P(t) = x_P(t) \hat{\mathbf{x}}_I + y_P(t) \hat{\mathbf{y}}_I + z_P(t) \hat{\mathbf{z}}_I \ .$$
 
-**Velocità.** La velocità del punto $P$ rispetto al sistema di riferimento $I$ è la derivata rispetto al tempo della posizione del punto,
+## Velocità
+La velocità del punto $P$ rispetto al sistema di riferimento $I$ è la derivata rispetto al tempo della posizione del punto,
 
 $$\mathbf{v}_P(t) = \dot{\mathbf{r}}_P(t) \ .$$
 
@@ -21,7 +23,8 @@ Usando il sistema di riferimento cartesiano, e che i vettori della base sono cos
 
 $$\mathbf{v}_P(t) = \dot{\mathbf{r}}_P(t) = \dot{x}_P(t) \hat{\mathbf{x}}_I + \dot{y}_P(t) \hat{\mathbf{y}}_I + \dot{z}_P(t) \hat{\mathbf{z}}_I \ .$$
 
-**Accelerazione.** L'accelerazione del punto $P$ rispetto al sistema di riferimento $I$ è la derivata rispetto al tempo della velocità del punto, la derivata seconda della posizione
+## Accelerazione
+L'accelerazione del punto $P$ rispetto al sistema di riferimento $I$ è la derivata rispetto al tempo della velocità del punto, la derivata seconda della posizione
 
 $$\mathbf{a}_P(t) = \dot{\mathbf{v}}_P(t) = \ddot{\mathbf{r}}_P(t) \ .$$
 
