@@ -54,7 +54,7 @@ $$\begin{aligned}
                             & = \sum_i \mathbf{M}_{H,i}^{ext} + \sum_{\{i,j\}} \underbrace{\left( \mathbf{M}_{H,ij} + \mathbf{M}_{H,ji} \right)}_{=\mathbf{0}} 
 \end{aligned}$$
 
-e riconoscendo la quantità di moto del sistema e derinendo il momento della quantità di moto di un sistema come la somma delmomento della quantità di moto delle sue parti e la risultante dei momenti esterni come somma dei momenti esterni agenti sulle parti del sistema, 
+e riconoscendo la quantità di moto del sistema e definendo il momento della quantità di moto di un sistema come la somma del momento della quantità di moto delle sue parti e la risultante dei momenti esterni come somma dei momenti esterni agenti sulle parti del sistema, 
 
   $$\mathbf{L}_H := \sum_i \mathbf{L}_{H,i}$$
   $$\mathbf{M}_H^e := \sum_i \mathbf{M}_{H,i}^{ext}$$
@@ -75,11 +75,15 @@ $$\dot{K}_i = \dfrac{d}{dt} \left( \frac{1}{2} m_i \mathbf{v}_i \cdot \mathbf{v}
 e sommando queste equazioni di bilancio per ottenere
 
 $$\begin{aligned}
-  \sum_i \dot{K}_i = \underbrace{\sum_i \mathbf{v}_i \cdot  \mathbf{F}_i^{e}}_{P^e} + \underbrace{\sum_i \mathbf{v}_i \sum_{j \ne i} \mathbf{F}_{ij} }_{=P^i} \ , 
+  \sum_i \dot{K}_i = \sum_i \mathbf{v}_i \cdot  \mathbf{F}_i^{e} + \sum_i \mathbf{v}_i \cdot \sum_{j \ne i} \mathbf{F}_{ij} \ . 
 \end{aligned}$$
 
-o, in breve, la forma generale del bilancio dell'energia cinetica per i sistemi meccanici,
+Definendo l'energia cinetica di un sistema come la somma dell'energia cinetica delle sue parti, e definendo la potenza delle forze esterne/interne agenti sul sistema come la somma della potenza di tutte le forze esterne/interni al sistema,
 
-$$\dot{K} = P^e + P^i = P^{tot} \ ,$$
+$$K :=  \sum_i K_i$$
+$$P^e := \sum_i P^{ext}_i = \sum_i \mathbf{v}_i \cdot  \mathbf{F}_i^{e} $$
+$$P^i := \sum_i P^{int}_i = \sum_i \mathbf{v}_i \cdot \sum_{j \ne i} \mathbf{F}_{ij}$$
 
-dove si sono riconosciute le potenze delle forze interne ed esterne, e l'energia cinetica del sistema è stata definita come la somma dell'energia cinetica delle sue parti.
+si ritrova la forma generale del bilancio della quantità di moto,
+
+$$\dot{K} = P^e + P^i = P^{tot} \ .$$
