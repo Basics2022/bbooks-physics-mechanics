@@ -70,12 +70,12 @@ $$\mathbf{v}_i \cdot m_i \dot{\mathbf{v}}_i = \mathbf{v}_i \cdot \left( \mathbf{
 
 riconoscendo nel primo termine la derivata nel tempo dell'energia cinetica dell'$i$-esimo punto,
 
-$$\dot{K}_i = \dfrac{d}{dt} \left( \frac{1}{2} m_i \mathbf{v}_i \cdot \mathbf{v}_i = m_i \mathbf{v}_i \cdot \dot{\mathbf{v}}_i \ ,$$
+$$\dot{K}_i = \dfrac{d}{dt} \left( \frac{1}{2} m_i \mathbf{v}_i \cdot \mathbf{v}_i \right) = m_i \mathbf{v}_i \cdot \dot{\mathbf{v}}_i \ ,$$
 
 e sommando queste equazioni di bilancio per ottenere
 
 $$\begin{aligned}
-  \sum_i K_i = \underbrace{\sum_i \mathbf{v}_i \cdot  \mathbf{F}_i^{e}}_{P^e} + \underbrace{\sum_i \mathbf{v}_i \sum_{j \ne i} \mathbf{F}_{ij} }_{=P^i} \ , 
+  \sum_i \dot{K}_i = \underbrace{\sum_i \mathbf{v}_i \cdot  \mathbf{F}_i^{e}}_{P^e} + \underbrace{\sum_i \mathbf{v}_i \sum_{j \ne i} \mathbf{F}_{ij} }_{=P^i} \ , 
 \end{aligned}$$
 
 o, in breve, la forma generale del bilancio dell'energia cinetica per i sistemi meccanici,
