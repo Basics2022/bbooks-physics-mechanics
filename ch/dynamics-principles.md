@@ -7,7 +7,8 @@
 (classical-mechanics:dynamics:principles)=
 # Principi della dinamica
 
-**Primo principio della dinamica.** Un corpo (o meglio, il baricentro di un corpo) sul quale agisce una forza netta nulla, persevera nel suo stato di quiete o di moto rettilineo uniforme rispetto a un sistema di riferimento inerziale.
+**Primo principio della dinamica.**
+Un corpo (o meglio, il baricentro di un corpo) sul quale agisce una forza netta nulla, persevera nel suo stato di quiete o di moto rettilineo uniforme rispetto a un sistema di riferimento inerziale.
 
 **Secondo principio della dinamica.** Rispetto a un sistema di riferimento inerziale, la variazione della quantità di moto di un sistema è uguale all'impulso delle forze esterne agenti su di esso,
 
