@@ -22,8 +22,8 @@ dove $(\mathbf{r}_P - \mathbf{r}_Q)_0$ rappresenta il vettore materiale nella po
 $$\begin{aligned}
   \hat{\mathbf{e}}^1_j & = (\hat{\mathbf{e}}^1_j \cdot \hat{\mathbf{e}}^0_i ) \hat{\mathbf{e}}^0_i = \\
                        & = (\hat{\mathbf{e}}^0_i \cdot \hat{\mathbf{e}}^1_k ) \hat{\mathbf{e}}^0_i \otimes \hat{\mathbf{e}}^0_k \cdot \hat{\mathbf{e}}^0_k = \\
-                       & = R^{0\rightarrow 1} \hat{\mathbf{e}}^0_i \otimes \hat{\mathbf{e}}^0_k \cdot \hat{\mathbf{e}}^0_k = \\
-                       & = \mathbb{R}^{0 \rightarrow 1} \cdot \hat{\mathbf{e}}^0_k = \\
+                       & = R^{0\rightarrow 1}_{ik} \hat{\mathbf{e}}^0_i \otimes \hat{\mathbf{e}}^0_k \cdot \hat{\mathbf{e}}^0_j = \\
+                       & = \mathbb{R}^{0 \rightarrow 1} \cdot \hat{\mathbf{e}}^0_j = \\
 \end{aligned}$$
 
 
