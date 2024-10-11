@@ -67,7 +67,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'ch/dynamics-eom';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Meccanica analitica: formulazione di Lagrange" href="lagrange.html" />
+    <link rel="next" title="Equazioni cardinali della dinamica: punto materiale" href="dynamics-eom-point.html" />
     <link rel="prev" title="Principi della dinamica" href="dynamics-principles.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -183,7 +183,13 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="inertia.html">Inertia</a></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="dynamics.html">Dinamica</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="dynamics-principles.html">Principi della dinamica</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Equazioni cardinali della dinamica</a></li>
+<li class="toctree-l2 current active has-children"><a class="current reference internal" href="#">Equazioni cardinali della dinamica</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="dynamics-eom-point.html">Equazioni cardinali della dinamica: punto materiale</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dynamics-eom-points.html">Equazioni cardinali della dinamica: sistemi discreti di punti materiali</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dynamics-eom-rigid.html">Equazioni cardinali della dinamica: corpo rigido</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dynamics-eom-continuum.html">Equazioni cardinali della dinamica: mezzi continui</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -410,11 +416,6 @@ document.write(`
 <div class="tex2jax_ignore mathjax_ignore section" id="equazioni-cardinali-della-dinamica">
 <span id="classical-mechanics-dynamics-eom"></span><h1>Equazioni cardinali della dinamica<a class="headerlink" href="#equazioni-cardinali-della-dinamica" title="Permalink to this heading">#</a></h1>
 <p>Utilizzando i concetti di quantità di moto, momento della quantità di moto ed energia cinetica di un sistema, si possono scrivere le 3 equazioni cardinali della dinamica in una forma valida per <strong>ogni sistema chiuso</strong>.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Nota 1
-bla bla</p>
-</div>
 <p><strong>Bilancio della quantità di moto.</strong> La derivata nel tempo della quantità di moto è uguale alla risultante delle forze esterne,</p>
 <div class="math notranslate nohighlight" id="equation-principle-q">
 <span class="eqno">(1)<a class="headerlink" href="#equation-principle-q" title="Permalink to this equation">#</a></span>\[\dot{\mathbf{Q}} = \mathbf{R}^e \ .\]</div>
@@ -424,10 +425,7 @@ bla bla</p>
 <p><strong>Bilancio dell’energia cinetica.</strong> La derivata nel tempo dell’energia cinetica è uguale alla potenza totale agente sul sistema, risultato della somma della potenza delle azioni esterne e della potenza delle azioni interne al sistema</p>
 <div class="math notranslate nohighlight" id="equation-principle-k">
 <span class="eqno">(3)<a class="headerlink" href="#equation-principle-k" title="Permalink to this equation">#</a></span>\[\dot{K} = P^{tot} = P^e + P^i\]</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Nota 2
-bla bla</p>
+<div class="toctree-wrapper compound">
 </div>
 </div>
 
@@ -471,11 +469,11 @@ bla bla</p>
       </div>
     </a>
     <a class="right-next"
-       href="lagrange.html"
+       href="dynamics-eom-point.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Meccanica analitica: formulazione di Lagrange</p>
+        <p class="prev-next-title">Equazioni cardinali della dinamica: punto materiale</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
