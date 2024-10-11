@@ -404,6 +404,8 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tensore-di-rotazione">Tensore di rotazione</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#velocita">Velocità</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#accelerazione">Accelerazione</a></li>
 </ul>
             </nav>
         </div>
@@ -469,6 +471,12 @@ document.write(`
 \dot{\mathbb{R}} \cdot \mathbb{R}^T = - \mathbb{R} \cdot \dot{\mathbb{R}}^T =: \omega_{\times}\]</div>
 <div class="math notranslate nohighlight">
 \[\dot{\mathbb{R}} = \omega_{\times} \cdot \mathbb{R}\]</div>
+<ul class="simple">
+<li><p>composizione di rotazioni (qui o nella cinematica relativa? o in un’appendice apposita per le rotazioni?)</p></li>
+</ul>
+</div>
+<div class="section" id="velocita">
+<h2>Velocità<a class="headerlink" href="#velocita" title="Permalink to this heading">#</a></h2>
 <p>La derivata nel tempo della legge dell’atto di moto rigido permette di ricavare la relazione tra le velocità di due punti materiali di un corpo rigido,</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
@@ -477,9 +485,17 @@ document.write(`
                               &amp; = \omega_{\times} \cdot \mathbb{R} \cdot (\mathbf{r}_P - \mathbf{r}_Q)_0 = \\
                               &amp; = \omega \times ( \mathbf{r}_P - \mathbf{r}_Q ) 
 \end{aligned}\end{split}\]</div>
-<ul class="simple">
-<li><p>composizione di rotazioni (qui o nella cinematica relativa? o in un’appendice apposita per le rotazioni?)</p></li>
-</ul>
+</div>
+<div class="section" id="accelerazione">
+<h2>Accelerazione<a class="headerlink" href="#accelerazione" title="Permalink to this heading">#</a></h2>
+<p>Derivando nuovamente nel tempo, si trova la relazione tra l’accelerazione di una coppia di punti materiali del corpo rigido,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \mathbf{a}_P - \mathbf{a}_Q &amp; = \frac{d}{dt} \left( \omega \times ( \mathbf{r}_P - \mathbf{r}_Q )  \right) = \\
+                              &amp; = \frac{d \omega}{dt} \times ( \mathbf{r}_P - \mathbf{r}_Q ) + \omega \times \dfrac{d}{dt}( \mathbf{r}_P - \mathbf{r}_Q ) = \\
+                              &amp; = \alpha \times ( \mathbf{r}_P - \mathbf{r}_Q ) + \omega \times \left (\omega \times ( \mathbf{r}_P - \mathbf{r}_Q ) \right) = \\
+                              &amp; = \alpha \times ( \mathbf{r}_P - \mathbf{r}_Q ) + \omega_{\times} \cdot  \omega_{\times} \cdot ( \mathbf{r}_P - \mathbf{r}_Q ) \ . 
+\end{aligned}\end{split}\]</div>
 </div>
 </div>
 
@@ -547,6 +563,8 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tensore-di-rotazione">Tensore di rotazione</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#velocita">Velocità</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#accelerazione">Accelerazione</a></li>
 </ul>
   </nav></div>
 

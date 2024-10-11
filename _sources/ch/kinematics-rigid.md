@@ -40,6 +40,10 @@ $$\mathbb{0} = \dot{\mathbb{R}} \cdot \mathbb{R}^T + {\mathbb{R}} \cdot \dot{\ma
 
 $$\dot{\mathbb{R}} = \omega_{\times} \cdot \mathbb{R}$$
 
+
+- composizione di rotazioni (qui o nella cinematica relativa? o in un'appendice apposita per le rotazioni?)
+
+## Velocità
 La derivata nel tempo della legge dell'atto di moto rigido permette di ricavare la relazione tra le velocità di due punti materiali di un corpo rigido,
 
 $$\begin{aligned}
@@ -49,7 +53,16 @@ $$\begin{aligned}
                               & = \omega \times ( \mathbf{r}_P - \mathbf{r}_Q ) 
 \end{aligned}$$
 
-- composizione di rotazioni (qui o nella cinematica relativa? o in un'appendice apposita per le rotazioni?)
+## Accelerazione
+Derivando nuovamente nel tempo, si trova la relazione tra l'accelerazione di una coppia di punti materiali del corpo rigido,
+
+$$\begin{aligned}
+  \mathbf{a}_P - \mathbf{a}_Q & = \frac{d}{dt} \left( \omega \times ( \mathbf{r}_P - \mathbf{r}_Q )  \right) = \\
+                              & = \frac{d \omega}{dt} \times ( \mathbf{r}_P - \mathbf{r}_Q ) + \omega \times \dfrac{d}{dt}( \mathbf{r}_P - \mathbf{r}_Q ) = \\
+                              & = \alpha \times ( \mathbf{r}_P - \mathbf{r}_Q ) + \omega \times \left (\omega \times ( \mathbf{r}_P - \mathbf{r}_Q ) \right) = \\
+                              & = \alpha \times ( \mathbf{r}_P - \mathbf{r}_Q ) + \omega_{\times} \cdot  \omega_{\times} \cdot ( \mathbf{r}_P - \mathbf{r}_Q ) \ . 
+\end{aligned}$$
+
 
 
 
