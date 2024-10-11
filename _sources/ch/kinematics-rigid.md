@@ -17,14 +17,18 @@ dove $(\mathbf{r}_P - \mathbf{r}_Q)_0$ rappresenta il vettore materiale nella po
 
 ## Tensore di rotazione
 **Proprietà**
-- definizione con due sistemi di riferimento cartesiani in moto relativo
+- definizione con due sistemi di riferimento cartesiani in moto relativo. Dati due basi ortonormali, $\{\hat{\mathbf{e}}^0_i\}$, $\{\hat{\mathbf{e}}^1_k\}$
+
+
 - unitarietà
 
+$$\mathbb{R}^T \cdot \mathbb{R}  = \mathbb{I}$$
 $$\mathbb{R} \cdot \mathbb{R}^T  = \mathbb{I}$$
 
 - derivata del tensore di rotazione e definizione del vettore velocità angolare
 
 $$\mathbb{0} = \dot{\mathbb{R}} \cdot \mathbb{R}^T + {\mathbb{R}} \cdot \dot\mathbb{R}^T \qquad \rightarrow \qquad
+
 \dot{\mathbb{R}} \cdot \mathbb{R}^T = - {\mathbb{R}} \cdot \dot\mathbb{R}^T =: \omega_{\times}$$
 
 $$\dot{\mathbb{R}} = \omega_{\times} \cdot \mathbb{R}$$
