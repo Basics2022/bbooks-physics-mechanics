@@ -27,7 +27,7 @@ $$\mathbb{R} \cdot \mathbb{R}^T  = \mathbb{I}$$
 
 - derivata del tensore di rotazione e definizione del vettore velocità angolare
 
-$$0 = \dot{\mathbb{R}} \cdot \mathbb{R}^T + {\mathbb{R}} \cdot \dot{\mathbb{R}}^T \qquad \rightarrow \qquad
+$$\mathbb{0} = \dot{\mathbb{R}} \cdot \mathbb{R}^T + {\mathbb{R}} \cdot \dot{\mathbb{R}}^T \qquad \rightarrow \qquad
 \dot{\mathbb{R}} \cdot \mathbb{R}^T = - \mathbb{R} \cdot \dot{\mathbb{R}}^T =: \omega_{\times}$$
 
 $$\dot{\mathbb{R}} = \omega_{\times} \cdot \mathbb{R}$$
