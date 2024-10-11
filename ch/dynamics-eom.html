@@ -369,7 +369,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -385,6 +387,15 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#equazioni-cardinali">Equazioni cardinali</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#principi-di-conservazione">Principi di conservazione</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -406,7 +417,7 @@ document.write(`
 <p class="sd-p-0 sd-m-0"><span class="sd-pr-2"><svg version="1.1" width="16.0px" height="16.0px" class="sd-octicon sd-octicon-calendar" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M4.75 0a.75.75 0 01.75.75V2h5V.75a.75.75 0 011.5 0V2h1.25c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0113.25 16H2.75A1.75 1.75 0 011 14.25V3.75C1 2.784 1.784 2 2.75 2H4V.75A.75.75 0 014.75 0zm0 3.5h8.5a.25.25 0 01.25.25V6h-11V3.75a.25.25 0 01.25-.25h2zm-2.25 4v6.75c0 .138.112.25.25.25h10.5a.25.25 0 00.25-.25V7.5h-11z"></path></svg></span>Oct 11, 2024</p>
 </div>
 <div class="sd-col sd-col-auto sd-d-flex-row sd-align-minor-center docutils">
-<p class="sd-p-0 sd-m-0"><span class="sd-pr-2"><svg version="1.1" width="16.0px" height="16.0px" class="sd-octicon sd-octicon-clock" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0zM8 0a8 8 0 100 16A8 8 0 008 0zm.5 4.75a.75.75 0 00-1.5 0v3.5a.75.75 0 00.471.696l2.5 1a.75.75 0 00.557-1.392L8.5 7.742V4.75z"></path></svg></span>1 min read</p>
+<p class="sd-p-0 sd-m-0"><span class="sd-pr-2"><svg version="1.1" width="16.0px" height="16.0px" class="sd-octicon sd-octicon-clock" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0zM8 0a8 8 0 100 16A8 8 0 008 0zm.5 4.75a.75.75 0 00-1.5 0v3.5a.75.75 0 00.471.696l2.5 1a.75.75 0 00.557-1.392L8.5 7.742V4.75z"></path></svg></span>2 min read</p>
 </div>
 </div>
 </div>
@@ -415,7 +426,9 @@ document.write(`
 </div>
 <div class="tex2jax_ignore mathjax_ignore section" id="equazioni-cardinali-della-dinamica">
 <span id="classical-mechanics-dynamics-eom"></span><h1>Equazioni cardinali della dinamica<a class="headerlink" href="#equazioni-cardinali-della-dinamica" title="Permalink to this heading">#</a></h1>
-<p>Utilizzando i concetti di quantità di moto, momento della quantità di moto ed energia cinetica di un sistema, si possono scrivere le 3 equazioni cardinali della dinamica in una forma valida per <strong>ogni sistema chiuso</strong>.</p>
+<p>Utilizzando i concetti di quantità di moto, momento della quantità di moto ed energia cinetica di un sistema, si possono scrivere le 3 equazioni cardinali della dinamica in una forma valida per <strong>ogni sistema chiuso</strong>. Nel caso siano soddisfatte alcune condizioni, e solo in questo caso, le equazioni cardinali della dinamica rappresentano dei principi di conservazione delle quantità dinamiche: osservando le espressioni delle equazioni cardinali, è facile intuire che la condizione da soddisfare per otenere un principio di conservazione è l’annullamento di tutti i termini ad eccezione della derivata temporale della quantità conservata.</p>
+<div class="section" id="equazioni-cardinali">
+<h2>Equazioni cardinali<a class="headerlink" href="#equazioni-cardinali" title="Permalink to this heading">#</a></h2>
 <p><strong>Bilancio della quantità di moto.</strong> La derivata nel tempo della quantità di moto è uguale alla risultante delle forze esterne,</p>
 <div class="math notranslate nohighlight" id="equation-principle-q">
 <span class="eqno">(1)<a class="headerlink" href="#equation-principle-q" title="Permalink to this equation">#</a></span>\[\dot{\mathbf{Q}} = \mathbf{R}^e \ .\]</div>
@@ -425,6 +438,28 @@ document.write(`
 <p><strong>Bilancio dell’energia cinetica.</strong> La derivata nel tempo dell’energia cinetica è uguale alla potenza totale agente sul sistema, risultato della somma della potenza delle azioni esterne e della potenza delle azioni interne al sistema</p>
 <div class="math notranslate nohighlight" id="equation-principle-k">
 <span class="eqno">(3)<a class="headerlink" href="#equation-principle-k" title="Permalink to this equation">#</a></span>\[\dot{K} = P^{tot} = P^e + P^i\]</div>
+</div>
+<div class="section" id="principi-di-conservazione">
+<h2>Principi di conservazione<a class="headerlink" href="#principi-di-conservazione" title="Permalink to this heading">#</a></h2>
+<p><strong>Conservazione della quantità di moto, in presenza di forze esterne con risultante nulla.</strong> Se la risultante delle forze esterne è nulla, <span class="math notranslate nohighlight">\(\mathbf{R}^e = \mathbf{0}\)</span>, dal bilancio della quantità di moto segue immediatamente</p>
+<div class="math notranslate nohighlight">
+\[\dot{\mathbf{Q}} = \mathbf{0} \qquad \rightarrow \qquad \mathbf{Q} = \overline{\mathbf{Q}} = \text{cost.}\]</div>
+<p><strong>Conservazione del momento della quantità di moto, in presenza di momenti esterni con risultante nulla.</strong> Se la scelta del polo <span class="math notranslate nohighlight">\(H\)</span> rende nullo il termine di trasporto, <span class="math notranslate nohighlight">\(\dot{\mathbf{r}}_H \times \mathbf{Q} = \mathbf{0}\)</span>, se la risultante dei momenti esterni è nulla, <span class="math notranslate nohighlight">\(\mathbf{M}^e_H = \mathbf{0}\)</span>, dal bilancio del momento della quantità di moto segue immediatamente</p>
+<div class="math notranslate nohighlight">
+\[\dot{\mathbf{L}}_H = \mathbf{0} \qquad \rightarrow \qquad \mathbf{L}_H = \overline{\mathbf{L}}_H = \text{cost.}\]</div>
+<p><strong>Conservazione dell’energia cinetica, in presenza di potenza totale nulla.</strong> Se la potenza totale delle azioni sul sistema è nulla, <span class="math notranslate nohighlight">\(P^{tot} = 0\)</span>, dal bilancio dell’energia cinetica segue immediatamente</p>
+<div class="math notranslate nohighlight">
+\[\dot{K} = 0 \qquad \rightarrow \qquad K = \overline{K} = \text{cost.}\]</div>
+<p><strong>Conservazione dell’energia meccanica, in assenza di azioni non conservative.</strong> Ai tre principi di conservazione direttamente ottenibili dalle equazioni cardinali, si aggiunge il principio della conservazione dell’energia meccanica, somma dell’energia cinetica e dell’energia potenziale del sistema,</p>
+<div class="math notranslate nohighlight">
+\[E^{mech} = K + V \ ,\]</div>
+<p>in assenza di azioni non conservative. Se non ci sono forze non conervative, la potenza delle azioni agenti sul sistema può essere scritta come l’opposto della derivata nel tempo dell’energia potenziale del sistema,</p>
+<div class="math notranslate nohighlight">
+\[P^{tot} = -\dot{V}\]</div>
+<p>Dal bilancio dell’energia cinetica segue</p>
+<div class="math notranslate nohighlight">
+\[\dot{K} = - \dot{V} \qquad \rightarrow \qquad \dfrac{d}{dt}(K+V) = 0 \qquad \rightarrow \qquad \dot{E}^{mech = 0} \qquad \rightarrow \qquad E^{mech} = \overline{E}^{mech} = \text{const.}\]</div>
+</div>
 <div class="toctree-wrapper compound">
 </div>
 </div>
@@ -483,6 +518,21 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#equazioni-cardinali">Equazioni cardinali</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#principi-di-conservazione">Principi di conservazione</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
