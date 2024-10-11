@@ -9,7 +9,7 @@
 
 Utilizzando i concetti di quantità di moto, momento della quantità di moto ed energia cinetica di un sistema, si possono scrivere le 3 equazioni cardinali della dinamica in una forma valida per **ogni sistema chiuso**.
 
-```{note}
+```{note}  Nota 1
 ```
 
 **Bilancio della quantità di moto.** La derivata nel tempo della quantità di moto è uguale alla risultante delle forze esterne,
@@ -24,5 +24,5 @@ $$\dot{\mathbf{L}}_H + \dot{\mathbf{x}}_H \times \mathbf{Q} = \mathbf{M}_H^e \ .
 
 $$\dot{K} = P^{tot} = P^e + P^i$$ (principle:k)
 
-```{note}
+```{note} Nota 2
 ```
