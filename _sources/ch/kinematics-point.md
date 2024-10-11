@@ -54,11 +54,17 @@ $$\mathbf{v}_P(t) = \dfrac{d}{dt} \mathbf{r}_P = \dfrac{d s}{d t} \dfrac{d}{ds} 
 
 essendo $v_P$ il modulo della velocità, sempre tangente alla traiettoria.
 
-L'accelerazione diventa quindi
+Derivando una seconda volta in tempo, si ottiene l'espressione dell'accelerazione,
 
 $$\begin{aligned}
   \mathbf{a}_P(t) & = \dfrac{d}{dt} \mathbf{v}_P(t) = \\
                   & = \dfrac{d}{dt} \left( v_P \hat{\mathbf{t}} \right) = \\
                   & = \dfrac{d}{dt} v_P \hat{\mathbf{t}} + v_P \dfrac{ds}{dt} \dfrac{d}{ds} \hat{\mathbf{t}}= \\
-                  & = a_P \hat{\mathbf{t}} + \kappa \, v^2_P \hat{\mathbf{n}}  \ .
+                  & = a_P \hat{\mathbf{t}} + \kappa \, v^2_P \hat{\mathbf{n}}  \ ,
 \end{aligned}$$
+
+che può essere scritta come la somma de:
+- l'accelerazione tangenziale lungo la curva, che è causa della variazione del modulo della velocità
+- l'accelerazione in direzione normale ad essa, l'accelerazione centripeta, che fa cambiare direzione al direttore velocità.
+
+**todo.** Mostrare queste ultime due affermazioni, calcolando la derivata di $|\mathbf{v}|$...

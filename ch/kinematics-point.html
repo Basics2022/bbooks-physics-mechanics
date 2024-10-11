@@ -467,14 +467,20 @@ document.write(`
 <div class="math notranslate nohighlight">
 \[\mathbf{v}_P(t) = \dfrac{d}{dt} \mathbf{r}_P = \dfrac{d s}{d t} \dfrac{d}{ds} \mathbf{r}_P = v_P \hat{\mathbf{t}} \ ,\]</div>
 <p>essendo <span class="math notranslate nohighlight">\(v_P\)</span> il modulo della velocità, sempre tangente alla traiettoria.</p>
-<p>L’accelerazione diventa quindi</p>
+<p>Derivando una seconda volta in tempo, si ottiene l’espressione dell’accelerazione,</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
   \mathbf{a}_P(t) &amp; = \dfrac{d}{dt} \mathbf{v}_P(t) = \\
                   &amp; = \dfrac{d}{dt} \left( v_P \hat{\mathbf{t}} \right) = \\
                   &amp; = \dfrac{d}{dt} v_P \hat{\mathbf{t}} + v_P \dfrac{ds}{dt} \dfrac{d}{ds} \hat{\mathbf{t}}= \\
-                  &amp; = a_P \hat{\mathbf{t}} + \kappa \, v^2_P \hat{\mathbf{n}}  \ .
+                  &amp; = a_P \hat{\mathbf{t}} + \kappa \, v^2_P \hat{\mathbf{n}}  \ ,
 \end{aligned}\end{split}\]</div>
+<p>che può essere scritta come la somma de:</p>
+<ul class="simple">
+<li><p>l’accelerazione tangenziale lungo la curva, che è causa della variazione del modulo della velocità</p></li>
+<li><p>l’accelerazione in direzione normale ad essa, l’accelerazione centripeta, che fa cambiare direzione al direttore velocità.</p></li>
+</ul>
+<p><strong>todo.</strong> Mostrare queste ultime due affermazioni, calcolando la derivata di <span class="math notranslate nohighlight">\(|\mathbf{v}|\)</span>…</p>
 </div>
 </div>
 
