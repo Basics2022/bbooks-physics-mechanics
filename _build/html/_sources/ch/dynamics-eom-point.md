@@ -12,7 +12,7 @@
 $$\begin{aligned}
   \mathbf{Q}_P & := m_P \mathbf{v}_P \\
 $$\mathbf{L}_{P,H} & := (\mathbf{r}_P - \mathbf{r}_H) \times \mathbf{Q} = m_P (\mathbf{r}_P - \mathbf{r}_H) \times \mathbf{v}_P \\
-  K := \frac{1}{2} m_P \mathbf{v}_P \cdot \mathbf{v}_P = \frac{1}{2} m_P |\mathbf{v}_P|^2
+  K & := \frac{1}{2} m_P \mathbf{v}_P \cdot \mathbf{v}_P = \frac{1}{2} m_P |\mathbf{v}_P|^2
 \end{aligned}$$
 
 **Bilancio della quantità di moto.** Il bilancio della quantità di moto di un punto materiale $P$, $\mathbf{Q}_P = m \mathbf{v}_P$ segue direttamente dal secondo principio della dinamica di Newton,
@@ -26,7 +26,7 @@ $$\begin{aligned}
 & = m \left[ ( \dot{\mathbf{r}}_P - \dot{\mathbf{r}}_H ) \times \mathbf{v}_P + m_P (\mathbf{r}_P - \mathbf{r}_H) \times \dot{\mathbf{v}}_P \right] = \\
 & = - m_P \dot{\mathbf{r}}_H \times \mathbf{v}_P + m_P (\mathbf{r}_P - \mathbf{r}_H) \times \dot{\mathbf{v}}_P = \\
 & = - \dot{\mathbf{r}}_H \times \mathbf{Q} + \mathbf{M}_H^{ext} \ .
-\end{aligend}$$
+\end{aligned}$$
 
 **Bilancio dell'energia cinetica.**
 
@@ -35,6 +35,6 @@ $$\begin{aligned}
             & = m_P \dot{\mathbf{v}}_P \cdot \mathbf{m}_P = \\
             & = \mathbf{R}^e \cdot \mathbf{m}_P = \\
             & = \mathbf{R}^{tot} \cdot \mathbf{m}_P = P^{tot} \ .
-\end{aligend}$$
+\end{aligned}$$
 
 
