@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Meccanica analitica: formulazione di Hamilton &#8212; Meccanica classica</title>
+    <title>Punto materiale &#8212; Meccanica classica</title>
   
   
   
@@ -64,10 +64,9 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'ch/hamilton';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'ch/lagrange-point';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="Meccanica analitica: formulazione di Lagrange" href="lagrange.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -204,9 +203,9 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Meccanica analitica</span></p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="lagrange.html">Meccanica analitica: formulazione di Lagrange</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Meccanica analitica: formulazione di Hamilton</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hamilton.html">Meccanica analitica: formulazione di Hamilton</a></li>
 </ul>
 
     </div>
@@ -278,7 +277,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fch/hamilton.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fch/lagrange-point.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -308,7 +307,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/ch/hamilton.md" target="_blank"
+      <li><a href="../_sources/ch/lagrange-point.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -390,7 +389,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Meccanica analitica: formulazione di Hamilton</h1>
+    <h1>Punto materiale</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -404,40 +403,33 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <div class="tex2jax_ignore mathjax_ignore section" id="meccanica-analitica-formulazione-di-hamilton">
-<span id="classical-mechanics-hamilton"></span><h1>Meccanica analitica: formulazione di Hamilton<a class="headerlink" href="#meccanica-analitica-formulazione-di-hamilton" title="Permalink to this heading">#</a></h1>
-<p>Riformulazione ulteriore della <span class="xref myst">meccanica di Newton</span>, a partire dalla <span class="xref myst">meccanica analitica</span>.
-Fornisce le basi per un approccio moderno anche in altre teorie della Fisica. <strong>dots…</strong></p>
-<p>Partendo dalle equazioni di Lagrange</p>
+  <div class="tex2jax_ignore mathjax_ignore section" id="punto-materiale">
+<h1>Punto materiale<a class="headerlink" href="#punto-materiale" title="Permalink to this heading">#</a></h1>
+<p><strong>Equazione in forma forte.</strong> Dalla meccanica di Newton, l’equazione del moto per un punto materiale è</p>
 <div class="math notranslate nohighlight">
-\[\dfrac{d}{dt}\Big( \frac{\partial \mathscr{L}}{\partial \dot{q}} \Big) - \frac{\partial \mathscr{L}}{\partial q} = Q_q\]</div>
-<p>si definisce il <strong>momento generalizzato</strong> (dall’inglese, momentum = quantità di moto)</p>
+\[m \dot{\boldsymbol{v}} = \boldsymbol{R}^e \ .\]</div>
+<p><strong>Equazione in forma debole.</strong> La forma debole dell’equazione si ottiene moltiplicando scalarmente l’equazione del moto per una funzione arbitraria <span class="math notranslate nohighlight">\(\boldsymbol{w}\)</span></p>
 <div class="math notranslate nohighlight">
-\[p := \frac{\partial \mathscr{L}}{\partial \dot{q}} \ ,\]</div>
-<p>e la funzione <strong>hamiltoniana</strong></p>
+\[\boldsymbol{0} = \boldsymbol{w} \cdot \Big( m \dot{\boldsymbol{v}} - \boldsymbol{R}^e\Big)  \qquad \forall \boldsymbol{w}\]</div>
+<p><strong>Formulazione della meccanica di Lagrange.</strong> La formulazione di Lagrange della meccanica si ottiene scrivendo la posizione del punto materiale come funzione delle coordinate generalizzate <span class="math notranslate nohighlight">\(q(t)\)</span> e del tempo <span class="math notranslate nohighlight">\(t\)</span>,</p>
 <div class="math notranslate nohighlight">
-\[H(q(t), p(t), t) := p_k \dot{q}^k - \mathscr{L} \ .\]</div>
+\[\boldsymbol{r}(q(t),t)\]</div>
+<p>e, di conseguenza, la velocità del punto</p>
+<div class="math notranslate nohighlight">
+\[\boldsymbol{v}(\dot{q}(t), q(t), t) = \frac{d\boldsymbol{r}}{dt} = \dot{q}(t) \underbrace{\frac{\partial \boldsymbol{r}}{\partial q}}_{\frac{\partial \boldsymbol{v}}{\partial \dot{q}}} + \frac{\partial \boldsymbol{r}}{\partial t} \ ,\]</div>
+<p>dove si è riconosciuta l’uguaglianza <span class="math notranslate nohighlight">\(\frac{\partial \boldsymbol{r}}{\partial q} = \frac{\partial \boldsymbol{v}}{\partial \dot{q}}\)</span>.</p>
+<p>Scegliendo come funzione test <span class="math notranslate nohighlight">\(\boldsymbol{w} = \frac{\partial \boldsymbol{r}}{\partial q} = \frac{\partial \boldsymbol{v}}{\partial \dot{q}}\)</span>,</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
-dH &amp; = dq^k \, \frac{\partial H}{\partial q^k} + dp_k \, \frac{\partial H}{\partial p_k} + dt \,  \frac{\partial H}{\partial t} = \\
-&amp; = d p_k \, \dot{q}^k + \underbrace{ p_k \, d \dot{q}^k - d \dot{q}^k \, \frac{\partial \mathscr{L}}{\partial \dot{q}^k}}_{=0} - d q^k \, \frac{\partial \mathscr{L}}{\partial q^k} - dt \, \frac{\partial \mathscr{L}}{\partial t}
+\boldsymbol{0} &amp; = \frac{\partial \boldsymbol{v}}{\partial \dot{q}} \cdot \Big( m \dot{\boldsymbol{v}} - \boldsymbol{R}^e \Big) = \\
+&amp; = \frac{d}{dt} \Big( \frac{\partial \boldsymbol{v}}{\partial \dot{q}} \cdot m \boldsymbol{v} \Big) - \frac{d}{dt} \frac{\partial \boldsymbol{r}}{\partial q} \cdot m \boldsymbol{v} - \frac{\partial \boldsymbol{r}}{\partial q} \cdot ( \boldsymbol{R}^{e,c} + \boldsymbol{R}^{e,nc} ) \\
+&amp; = \frac{d}{dt} \Big( \frac{\partial \boldsymbol{v}}{\partial \dot{q}} \cdot m \boldsymbol{v} \Big) - \frac{\partial \boldsymbol{v}}{\partial q} \cdot m \boldsymbol{v} - \frac{\partial \boldsymbol{r}}{\partial q} \cdot ( \nabla U + \boldsymbol{R}^{e,nc} ) \\
+&amp; = \frac{d}{dt} \Big( \frac{\partial K}{\partial \dot{q}} \Big) - \frac{\partial K}{\partial q} - \frac{\partial U}{\partial q} - \underbrace{\frac{\partial \boldsymbol{r}}{\partial q} \cdot \boldsymbol{R}^{e,nc}}_{=Q_q} \ . \\
 \end{aligned}\end{split}\]</div>
-<p>e quindi segue</p>
+<p>Introducendo la funzione lagrangiana, <span class="math notranslate nohighlight">\(\mathscr{L}(\dot{q}(t), q(t), t) := K(\dot{q}(t), q(t), t) + U(q(t),t)\)</span>, si può quindi scrivere le equazioni di Lagrange come</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\begin{cases}
- \dot{q}^k &amp; = \dfrac{\partial H}{\partial p_k} \\
- \dfrac{\partial \mathscr{H}}{\partial q^k} &amp; = - \dfrac{\partial \mathscr{L}}{\partial q^k} \\
- \dfrac{\partial H}{\partial t} &amp; = - \dfrac{\partial\mathscr{L}}{\partial t} \ .
-\end{cases}\end{split}\]</div>
-<p>Riscrivendo le equazioni di Lagrange come</p>
-<div class="math notranslate nohighlight">
-\[\frac{\partial \mathscr{L}}{\partial q^k} = - Q_{q^k} + \dfrac{d}{dt}\Big( \frac{\partial \mathscr{L}}{\partial \dot{q}^k} \Big) = -Q_{q^k} + \dot{p}_k\]</div>
-<p>si ottengono le <strong>equazioni di Hamilton</strong></p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{cases}
- \dot{q}^k &amp; = \dfrac{\partial H}{\partial p_k} \\
- \dot{p}_k &amp; =-\dfrac{\partial H}{\partial q^k} + Q_{q^k} \\
-\end{cases}\end{split}\]</div>
+\[\frac{d}{dt}\Big(\frac{\partial \mathscr{L}}{\partial \dot{q}} \Big) - \frac{\partial \mathscr{L}}{\partial q} = Q_q \ ,\]</div>
+<p>essendo <span class="math notranslate nohighlight">\(Q_q\)</span> la forza generalizzata non conservativa, <span class="math notranslate nohighlight">\(Q_q = \frac{\partial \boldsymbol{r}}{\partial q} \cdot \boldsymbol{R}^{e,nc}\)</span>.</p>
 </div>
 
     <script type="text/x-thebe-config">
@@ -470,15 +462,6 @@ dH &amp; = dq^k \, \frac{\partial H}{\partial q^k} + dp_k \, \frac{\partial H}{\
                 <footer class="prev-next-footer">
                   
 <div class="prev-next-area">
-    <a class="left-prev"
-       href="lagrange.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Meccanica analitica: formulazione di Lagrange</p>
-      </div>
-    </a>
 </div>
                 </footer>
               

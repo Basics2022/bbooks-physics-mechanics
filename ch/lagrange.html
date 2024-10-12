@@ -62,11 +62,13 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'ch/lagrange';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Meccanica analitica: formulazione di Hamilton" href="hamilton.html" />
-    <link rel="prev" title="Principi della dinamica" href="dynamics-principles.html" />
+    <link rel="prev" title="Gravitazione: problema dei due corpi" href="dynamics-motions-gravitation-2bodies.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -177,10 +179,28 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="kinematics-relative.html">Cinematica relativa</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="actions.html">Azioni</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="actions.html">Azioni</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="actions-types.html">Forze, momenti, forze distribuite</a></li>
+<li class="toctree-l2"><a class="reference internal" href="actions-work-power.html">Lavoro e potenza</a></li>
+<li class="toctree-l2"><a class="reference internal" href="actions-conservative.html">Azioni conservative</a></li>
+<li class="toctree-l2"><a class="reference internal" href="actions-reactions.html">Reazioni vincolari</a></li>
+<li class="toctree-l2"><a class="reference internal" href="actions-examples.html">Esempi</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="inertia.html">Inertia</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="dynamics.html">Dinamica</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="dynamics.html">Dinamica</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="dynamics-principles.html">Principi della dinamica</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="dynamics-eom.html">Equazioni cardinali della dinamica</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="dynamics-eom-point.html">Equazioni cardinali della dinamica: punto materiale</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dynamics-eom-points.html">Equazioni cardinali della dinamica: sistemi discreti di punti materiali</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dynamics-eom-rigid.html">Equazioni cardinali della dinamica: corpo rigido</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dynamics-eom-continuum.html">Equazioni cardinali della dinamica: mezzi continui</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="dynamics-motions.html">Moti particolari</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="dynamics-motions-gravitation-2bodies.html">Gravitazione: problema dei due corpi</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -387,6 +407,32 @@ document.write(`
                   
   <div class="tex2jax_ignore mathjax_ignore section" id="meccanica-analitica-formulazione-di-lagrange">
 <span id="classical-mechanics-lagrange"></span><h1>Meccanica analitica: formulazione di Lagrange<a class="headerlink" href="#meccanica-analitica-formulazione-di-lagrange" title="Permalink to this heading">#</a></h1>
+<p>Riformulazione della <span class="xref myst">meccanica di Newton</span>:</p>
+<ul class="simple">
+<li><p><strong>forma debole</strong> delle equazioni: approccio di D’Alembert, lavori virtuali</p></li>
+<li><p><strong>equazioni di Lagrange</strong></p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\dfrac{d}{dt}\Big( \frac{\partial \mathscr{L}}{\partial \dot{q}} \Big) - \frac{\partial \mathscr{L}}{\partial q} = Q_q\]</div>
+<p>con <span class="math notranslate nohighlight">\(\mathscr{L}(\dot{q}(t), q(t), t) = K(\dot{q}(t), q(t), t) + U(q(t), t)\)</span>.</p>
+<ul class="simple">
+<li><p><strong>principi di stazionarietà del funzionale azione <span class="math notranslate nohighlight">\(S\)</span></strong></p></li>
+</ul>
+<p>Nel caso non ci siano azioni non conservative, <span class="math notranslate nohighlight">\(Q_q = 0\)</span>, è possibile interpretare le equazioni di Lagrange come risultato di un principio di stazionarietà. Chiamando <span class="math notranslate nohighlight">\(\delta q(t)\)</span> la variazione della funzion <span class="math notranslate nohighlight">\(q(t)\)</span>, moltiplicandola per le equazioni di Lagrange e integrando in tempo per <span class="math notranslate nohighlight">\(t \in [t_0, t_1]\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  0 &amp; = \int_{t_0}^{t_1} \delta q (t) \Big[ \dfrac{d}{dt}\Big( \frac{\partial \mathscr{L}}{\partial \dot{q}} \Big) - \frac{\partial \mathscr{L}}{\partial q} \Big] \, dt = \\
+    &amp; = \delta q(t) \Big( \frac{\partial \mathscr{L}}{\partial \dot{q}} \Big) \Big|_{t_0}^{t_1} - \int_{t_0}^{t_1} \Big[ \delta \dot{q}(t) \, \frac{\partial \mathscr{L}}{\partial \dot{q}} + \delta q(t) \, \frac{\partial \mathscr{L}}{\partial q} \Big] \, dt \ . \\
+\end{aligned}\end{split}\]</div>
+<p>Imponendo che la variazione <span class="math notranslate nohighlight">\(\delta q(t)\)</span> sia nulla per <span class="math notranslate nohighlight">\(t_0\)</span> e <span class="math notranslate nohighlight">\(t_1\)</span>, il primo termine si annulla, e si può dimostrare che</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+    0 &amp; = - \int_{t_0}^{t_1} \Big[ \delta \dot{q}(t) \, \frac{\partial \mathscr{L}}{\partial \dot{q}} + \delta q(t) \, \frac{\partial \mathscr{L}}{\partial q} \Big] \, dt \\
+    &amp; = - \delta \int_{t_0}^{t_1} \mathscr{L}(\dot{q}(t), q(t), t) \, dt =: - \delta S \ ,
+\end{aligned}\end{split}\]</div>
+<p>cioè le equazioni di Lagrange sono equivalenti alla condizione di stazionarietà del funzionale <strong>azione</strong></p>
+<div class="math notranslate nohighlight">
+\[S:= \int_{t_0}^{t_1} \mathscr{L}(\dot{q}(t), q(t), t) \, dt \ .\]</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -420,12 +466,12 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="dynamics-principles.html"
+       href="dynamics-motions-gravitation-2bodies.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Principi della dinamica</p>
+        <p class="prev-next-title">Gravitazione: problema dei due corpi</p>
       </div>
     </a>
     <a class="right-next"
