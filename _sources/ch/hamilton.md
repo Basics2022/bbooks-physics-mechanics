@@ -1,10 +1,16 @@
+```{article-info}
+:author: basics
+:date: "{sub-ref}`today`"
+:read-time: "{sub-ref}`wordcount-minutes` min read"
+```
+
 (classical-mechanics:hamilton)=
 # Meccanica analitica: formulazione di Hamilton
 
-Riformulazione ulteriore della [meccanica di Newton](classical_mechanics_newton), a partire dalla [meccanica analitica](classical_mechanics_lagrange).
+Riformulazione ulteriore della meccanica di Newton, a partire dalla meccanica di Lagrange.
 Fornisce le basi per un approccio moderno anche in altre teorie della Fisica. **dots...**
 
-Partendo dalle equazioni di Lagrange
+Partendo dalle equazioni di Lagrange,
 
 $$\dfrac{d}{dt}\Big( \frac{\partial \mathscr{L}}{\partial \dot{q}} \Big) - \frac{\partial \mathscr{L}}{\partial q} = Q_q$$
 

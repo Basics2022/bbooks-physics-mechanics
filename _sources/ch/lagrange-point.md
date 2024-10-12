@@ -1,3 +1,10 @@
+```{article-info}
+:author: basics
+:date: "{sub-ref}`today`"
+:read-time: "{sub-ref}`wordcount-minutes` min read"
+```
+
+(classical-mechanics:lagrange:point)=
 # Punto materiale
 
 **Equazione in forma forte.** Dalla meccanica di Newton, l'equazione del moto per un punto materiale è
