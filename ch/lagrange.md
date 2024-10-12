@@ -1,7 +1,13 @@
+```{article-info}
+:author: basics
+:date: "{sub-ref}`today`"
+:read-time: "{sub-ref}`wordcount-minutes` min read"
+```
+
 (classical-mechanics:lagrange)=
 # Meccanica analitica: formulazione di Lagrange
 
-Riformulazione della [meccanica di Newton](classical_mechanics_newton):
+Riformulazione della meccanica di Newton:
 - **forma debole** delle equazioni: approccio di D'Alembert, lavori virtuali
 - **equazioni di Lagrange**
 

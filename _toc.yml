@@ -35,4 +35,8 @@ parts:
 - caption: Meccanica analitica
   chapters:
   - file: ch/lagrange
+    sections:
+    - file: ch/lagrange-point
+    - file: ch/lagrange-points
+    - file: ch/lagrange-rigid-body
   - file: ch/hamilton
