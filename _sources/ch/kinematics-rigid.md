@@ -48,19 +48,19 @@ La derivata nel tempo della legge dell'atto di moto rigido permette di ricavare 
 
 $$\begin{aligned}
   \mathbf{v}_P - \mathbf{v}_Q & = \frac{d}{dt} \left( \mathbb{R} \cdot (\mathbf{r}_P - \mathbf{r}_Q)_0 \right) = \\
-                              & = \frac{d}{dt} \dot{\mathbb{R}} \cdot (\mathbf{r}_P - \mathbf{r}_Q)_0 = \\
-                              & = \omega_{\times} \cdot \mathbb{R} \cdot (\mathbf{r}_P - \mathbf{r}_Q)_0 = \\
-                              & = \omega \times ( \mathbf{r}_P - \mathbf{r}_Q ) 
+                              & = \dot{\mathbb{R}} \cdot (\mathbf{r}_P - \mathbf{r}_Q)_0 = \\
+                              & = \symbf{\omega}_{\times} \cdot \mathbb{R} \cdot (\mathbf{r}_P - \mathbf{r}_Q)_0 = \\
+                              & = \symbf{\omega} \times ( \mathbf{r}_P - \mathbf{r}_Q ) 
 \end{aligned}$$
 
 ## Accelerazione
 Derivando nuovamente nel tempo, si trova la relazione tra l'accelerazione di una coppia di punti materiali del corpo rigido,
 
 $$\begin{aligned}
-  \mathbf{a}_P - \mathbf{a}_Q & = \frac{d}{dt} \left( \omega \times ( \mathbf{r}_P - \mathbf{r}_Q )  \right) = \\
-                              & = \frac{d \omega}{dt} \times ( \mathbf{r}_P - \mathbf{r}_Q ) + \omega \times \dfrac{d}{dt}( \mathbf{r}_P - \mathbf{r}_Q ) = \\
-                              & = \alpha \times ( \mathbf{r}_P - \mathbf{r}_Q ) + \omega \times \left (\omega \times ( \mathbf{r}_P - \mathbf{r}_Q ) \right) = \\
-                              & = \alpha \times ( \mathbf{r}_P - \mathbf{r}_Q ) + \omega_{\times} \cdot  \omega_{\times} \cdot ( \mathbf{r}_P - \mathbf{r}_Q ) \ . 
+  \mathbf{a}_P - \mathbf{a}_Q & = \frac{d}{dt} \left( \symbf{\omega} \times ( \mathbf{r}_P - \mathbf{r}_Q )  \right) = \\
+                              & = \frac{d \symbf{\omega}}{dt} \times ( \mathbf{r}_P - \mathbf{r}_Q ) + \symbf{\omega} \times \dfrac{d}{dt}( \mathbf{r}_P - \mathbf{r}_Q ) = \\
+                              & = \symbf{\alpha} \times ( \mathbf{r}_P - \mathbf{r}_Q ) + \symbf{\omega} \times \left ( \symbf{\omega} \times ( \mathbf{r}_P - \mathbf{r}_Q ) \right) = \\
+                              & = \symbf{\alpha} \times ( \mathbf{r}_P - \mathbf{r}_Q ) + \symbf{\omega}_{\times} \cdot  \symbf{\omega}_{\times} \cdot ( \mathbf{r}_P - \mathbf{r}_Q ) \ . 
 \end{aligned}$$
 
 

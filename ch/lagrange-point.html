@@ -419,10 +419,10 @@ document.write(`
 <p class="sd-p-0 sd-m-0">basics</p>
 </div>
 <div class="sd-col sd-col-auto sd-d-flex-row sd-align-minor-center docutils">
-<p class="sd-p-0 sd-m-0"><span class="sd-pr-2"><svg version="1.1" width="16.0px" height="16.0px" class="sd-octicon sd-octicon-calendar" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M4.75 0a.75.75 0 01.75.75V2h5V.75a.75.75 0 011.5 0V2h1.25c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0113.25 16H2.75A1.75 1.75 0 011 14.25V3.75C1 2.784 1.784 2 2.75 2H4V.75A.75.75 0 014.75 0zm0 3.5h8.5a.25.25 0 01.25.25V6h-11V3.75a.25.25 0 01.25-.25h2zm-2.25 4v6.75c0 .138.112.25.25.25h10.5a.25.25 0 00.25-.25V7.5h-11z"></path></svg></span>Oct 29, 2024</p>
+<p class="sd-p-0 sd-m-0"><span class="sd-pr-2"><svg version="1.1" width="16.0px" height="16.0px" class="sd-octicon sd-octicon-calendar" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M4.75 0a.75.75 0 01.75.75V2h5V.75a.75.75 0 011.5 0V2h1.25c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0113.25 16H2.75A1.75 1.75 0 011 14.25V3.75C1 2.784 1.784 2 2.75 2H4V.75A.75.75 0 014.75 0zm0 3.5h8.5a.25.25 0 01.25.25V6h-11V3.75a.25.25 0 01.25-.25h2zm-2.25 4v6.75c0 .138.112.25.25.25h10.5a.25.25 0 00.25-.25V7.5h-11z"></path></svg></span>Nov 09, 2024</p>
 </div>
 <div class="sd-col sd-col-auto sd-d-flex-row sd-align-minor-center docutils">
-<p class="sd-p-0 sd-m-0"><span class="sd-pr-2"><svg version="1.1" width="16.0px" height="16.0px" class="sd-octicon sd-octicon-clock" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0zM8 0a8 8 0 100 16A8 8 0 008 0zm.5 4.75a.75.75 0 00-1.5 0v3.5a.75.75 0 00.471.696l2.5 1a.75.75 0 00.557-1.392L8.5 7.742V4.75z"></path></svg></span>0 min read</p>
+<p class="sd-p-0 sd-m-0"><span class="sd-pr-2"><svg version="1.1" width="16.0px" height="16.0px" class="sd-octicon sd-octicon-clock" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0zM8 0a8 8 0 100 16A8 8 0 008 0zm.5 4.75a.75.75 0 00-1.5 0v3.5a.75.75 0 00.471.696l2.5 1a.75.75 0 00.557-1.392L8.5 7.742V4.75z"></path></svg></span>1 min read</p>
 </div>
 </div>
 </div>
@@ -431,31 +431,34 @@ document.write(`
 </div>
 <div class="tex2jax_ignore mathjax_ignore section" id="punto-materiale">
 <span id="classical-mechanics-lagrange-point"></span><h1>Punto materiale<a class="headerlink" href="#punto-materiale" title="Permalink to this heading">#</a></h1>
-<p><strong>Equazione in forma forte.</strong> Dalla meccanica di Newton, l’equazione del moto per un punto materiale è</p>
+<p><strong>Equazione in forma forte.</strong> Dalla meccanica di Newton, l’equazione del moto per un punto materiale <span class="math notranslate nohighlight">\(P\)</span> può essere scritta come</p>
 <div class="math notranslate nohighlight">
-\[m \dot{\boldsymbol{v}} = \boldsymbol{R}^e \ .\]</div>
-<p><strong>Equazione in forma debole.</strong> La forma debole dell’equazione si ottiene moltiplicando scalarmente l’equazione del moto per una funzione arbitraria <span class="math notranslate nohighlight">\(\boldsymbol{w}\)</span></p>
+\[m \dot{\mathbf{v}}_P = \mathbf{R}^e \ ,\]</div>
+<p>avendo indicato con <span class="math notranslate nohighlight">\(m\)</span> la massa del sistema, <span class="math notranslate nohighlight">\(\mathbf{v}_P\)</span> la velocità del punto, <span class="math notranslate nohighlight">\(\mathbf{a}_P = \dot{\mathbf{v}}_P\)</span> la sua accelerazione e <span class="math notranslate nohighlight">\(\mathbf{R}^{e}\)</span> la risultante delle forze esterne agenti sul sistema.</p>
+<p><strong>Equazione in forma debole.</strong> La forma debole dell’equazione si ottiene moltiplicando scalarmente l’equazione del moto per una funzione arbitraria <span class="math notranslate nohighlight">\(\mathbf{w}\)</span></p>
 <div class="math notranslate nohighlight">
-\[\boldsymbol{0} = \boldsymbol{w} \cdot \Big( m \dot{\boldsymbol{v}} - \boldsymbol{R}^e\Big)  \qquad \forall \boldsymbol{w}\]</div>
+\[\mathbf{0} = \mathbf{w} \cdot \left( m \dot{\mathbf{v}} - \mathbf{R}^e\right)  \qquad \forall \mathbf{w}\]</div>
 <p><strong>Formulazione della meccanica di Lagrange.</strong> La formulazione di Lagrange della meccanica si ottiene scrivendo la posizione del punto materiale come funzione delle coordinate generalizzate <span class="math notranslate nohighlight">\(q(t)\)</span> e del tempo <span class="math notranslate nohighlight">\(t\)</span>,</p>
 <div class="math notranslate nohighlight">
-\[\boldsymbol{r}(q(t),t)\]</div>
-<p>e, di conseguenza, la velocità del punto</p>
+\[\mathbf{r}_P(t) = \mathbf{r}(q_k(t),t) \ .\]</div>
+<p>Di conseguenza, usando la definizione di velocità e la regola di derivazione di funzioni composte, si può ottenere un’espressione della velocità in funzione del tempo, delle coordinate generalizzate e della loro derivata prima rispetto al tempo,</p>
 <div class="math notranslate nohighlight">
-\[\boldsymbol{v}(\dot{q}(t), q(t), t) = \frac{d\boldsymbol{r}}{dt} = \dot{q}(t) \underbrace{\frac{\partial \boldsymbol{r}}{\partial q}}_{\frac{\partial \boldsymbol{v}}{\partial \dot{q}}} + \frac{\partial \boldsymbol{r}}{\partial t} \ ,\]</div>
-<p>dove si è riconosciuta l’uguaglianza <span class="math notranslate nohighlight">\(\frac{\partial \boldsymbol{r}}{\partial q} = \frac{\partial \boldsymbol{v}}{\partial \dot{q}}\)</span>.</p>
-<p>Scegliendo come funzione test <span class="math notranslate nohighlight">\(\boldsymbol{w} = \frac{\partial \boldsymbol{r}}{\partial q} = \frac{\partial \boldsymbol{v}}{\partial \dot{q}}\)</span>,</p>
+\[\mathbf{v}_P(t) := \frac{d\mathbf{r}_P}{dt} = \dot{q}_k(t) \underbrace{\frac{\partial \mathbf{r}}{\partial q_k}}_{\frac{\partial \mathbf{v}}{\partial \dot{q}_k}} + \frac{\partial \mathbf{r}}{\partial t} = \mathbf{v}\left(\dot{q}_k(t), q_k(t), t \right) \ ,\]</div>
+<p>grazie alla quale si può riconoscere la relazione</p>
+<div class="math notranslate nohighlight" id="equation-classical-mechanics-lagrange-point-mixed-der">
+<span class="eqno">(4)<a class="headerlink" href="#equation-classical-mechanics-lagrange-point-mixed-der" title="Permalink to this equation">#</a></span>\[\dfrac{\partial \mathbf{r}}{\partial q_k} = \dfrac{\partial \mathbf{v}}{\partial \dot{q}_k} \ .\]</div>
+<p>Scegliendo come funzione test <span class="math notranslate nohighlight">\(\mathbf{w} = \dfrac{\partial \mathbf{r}}{\partial q_k} = \dfrac{\partial \mathbf{v}}{\partial \dot{q}_k}\)</span>, applicando la regola di derivazione del prodotto e usando il teorema di Schwartz per invertire l’ordine delle derivate e la relazione <a class="reference internal" href="#equation-classical-mechanics-lagrange-point-mixed-der">(4)</a>, si può manipolare l’equazione in forma debole</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
-\boldsymbol{0} &amp; = \frac{\partial \boldsymbol{v}}{\partial \dot{q}} \cdot \Big( m \dot{\boldsymbol{v}} - \boldsymbol{R}^e \Big) = \\
-&amp; = \frac{d}{dt} \Big( \frac{\partial \boldsymbol{v}}{\partial \dot{q}} \cdot m \boldsymbol{v} \Big) - \frac{d}{dt} \frac{\partial \boldsymbol{r}}{\partial q} \cdot m \boldsymbol{v} - \frac{\partial \boldsymbol{r}}{\partial q} \cdot ( \boldsymbol{R}^{e,c} + \boldsymbol{R}^{e,nc} ) \\
-&amp; = \frac{d}{dt} \Big( \frac{\partial \boldsymbol{v}}{\partial \dot{q}} \cdot m \boldsymbol{v} \Big) - \frac{\partial \boldsymbol{v}}{\partial q} \cdot m \boldsymbol{v} - \frac{\partial \boldsymbol{r}}{\partial q} \cdot ( \nabla U + \boldsymbol{R}^{e,nc} ) \\
-&amp; = \frac{d}{dt} \Big( \frac{\partial K}{\partial \dot{q}} \Big) - \frac{\partial K}{\partial q} - \frac{\partial U}{\partial q} - \underbrace{\frac{\partial \boldsymbol{r}}{\partial q} \cdot \boldsymbol{R}^{e,nc}}_{=Q_q} \ . \\
+\mathbf{0} &amp; = \frac{\partial \mathbf{v}}{\partial \dot{q}_k} \cdot \left( m \dot{\mathbf{v}} - \mathbf{R}^e \right) = \\
+&amp; = \frac{d}{dt} \left( \frac{\partial \mathbf{v}}{\partial \dot{q}_k} \cdot m \mathbf{v} \right) - \frac{d}{dt} \frac{\partial \mathbf{r}}{\partial q_k} \cdot m \mathbf{v} - \frac{\partial \mathbf{r}}{\partial q_k} \cdot ( \mathbf{R}^{e,c} + \mathbf{R}^{e,nc} ) \\
+&amp; = \frac{d}{dt} \left( \frac{\partial \mathbf{v}}{\partial \dot{q}_k} \cdot m \mathbf{v} \right) - \frac{\partial \mathbf{v}}{\partial q_k} \cdot m \mathbf{v} - \frac{\partial \mathbf{r}}{\partial q_k} \cdot ( \nabla U + \mathbf{R}^{e,nc} ) \\
+&amp; = \frac{d}{dt} \left( \frac{\partial K}{\partial \dot{q}_k} \right) - \frac{\partial K}{\partial q_k} - \frac{\partial U}{\partial q_k} - \underbrace{\frac{\partial \mathbf{r}}{\partial q_k} \cdot \mathbf{R}^{e,nc}}_{=: Q_k} \ . \\
 \end{aligned}\end{split}\]</div>
-<p>Introducendo la funzione lagrangiana, <span class="math notranslate nohighlight">\(\mathscr{L}(\dot{q}(t), q(t), t) := K(\dot{q}(t), q(t), t) + U(q(t),t)\)</span>, si può quindi scrivere le equazioni di Lagrange come</p>
+<p>Introducendo la funzione lagrangiana, <span class="math notranslate nohighlight">\(\mathscr{L}(\dot{q}_k(t), q_k(t), t) := K(\dot{q}_k(t), q_k(t), t) + U(q_k(t),t)\)</span>, e ricordando che la funzione potenziale non dipende dalle velocità e quindi dalle derivate delle coordinate generalizzate <span class="math notranslate nohighlight">\(\dot{q}_k\)</span>, si possono raccogliere i termini e scrivere le equazioni di Lagrange come</p>
 <div class="math notranslate nohighlight">
-\[\frac{d}{dt}\Big(\frac{\partial \mathscr{L}}{\partial \dot{q}} \Big) - \frac{\partial \mathscr{L}}{\partial q} = Q_q \ ,\]</div>
-<p>essendo <span class="math notranslate nohighlight">\(Q_q\)</span> la forza generalizzata non conservativa, <span class="math notranslate nohighlight">\(Q_q = \frac{\partial \boldsymbol{r}}{\partial q} \cdot \boldsymbol{R}^{e,nc}\)</span>.</p>
+\[\frac{d}{dt}\left(\frac{\partial \mathscr{L}}{\partial \dot{q}_k} \right) - \frac{\partial \mathscr{L}}{\partial q_k} = Q_k \ ,\]</div>
+<p>essendo <span class="math notranslate nohighlight">\(Q_k\)</span> la <strong>forza generalizzata non conservativa</strong>, <span class="math notranslate nohighlight">\(Q_k = \dfrac{\partial \mathbf{r}}{\partial q_k} \cdot \mathbf{R}^{e,nc}\)</span>.</p>
 </div>
 
     <script type="text/x-thebe-config">
