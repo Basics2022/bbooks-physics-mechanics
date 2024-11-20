@@ -21,11 +21,11 @@ $$L_{AB} = U(\mathbf{r}_B) - U(\mathbf{r}_A) = - V(\mathbf{r}_B) + V(\mathbf{r}_
 
 o in forma differenziale,
 
-$$dL = dU = - dV \ .$$
+$$\delta L = dU = - dV \ .$$
 
 Sotto l'ipotesi di sufficiente regolarità (**todo**), e confrontando le espressioni del lavoro infinitesimale di un campo di forze $\mathbf{F}(\mathbf{r})$,
 
-$$dL = dU = \mathbf{F} \cdot \mathbf{r} \ ,$$
+$$\delta L = dU = \mathbf{F} \cdot \mathbf{r} \ ,$$
 
 si può scrivere il campo di forze come il gradiente della funzione $U$,
 
@@ -33,7 +33,7 @@ $$\mathbf{F}(\mathbf{r}) = \nabla U(\mathbf{r}) = - \nabla V(\mathbf{r} )\ .$$
 
 Per le proprietà dei campi e degli operatori vettoriali, se un campo vettoriale può essere scritto come gradiente di una funzione scalare, il suo rotore è nullo,
 
-$$\nabla \times \mathbf{F} = \mathbf{0} \ .$$
+$$\nabla \times \mathbf{F}(\mathbf{r}) = \mathbf{0} \ .$$
 
 
 
