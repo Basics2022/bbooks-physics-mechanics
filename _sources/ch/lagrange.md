@@ -31,7 +31,7 @@ Nel caso non ci siano azioni non conservative, $Q_q = 0$, è possibile interpret
 
 $$\begin{aligned}
   0 & = \int_{t_0}^{t_1} \delta q (t) \left[ \dfrac{d}{dt}\left( \frac{\partial \mathscr{L}}{\partial \dot{q}} \right) - \frac{\partial \mathscr{L}}{\partial q} \right] \, dt = \\
-    & = \delta q(t) \left( \frac{\partial \mathscr{L}}{\partial \dot{q}} \right) \Big|_{t_0}^{t_1} - \int_{t_0}^{t_1} \Big[ \delta \dot{q}(t) \, \frac{\partial \mathscr{L}}{\partial \dot{q}} + \delta q(t) \, \frac{\partial \mathscr{L}}{\partial q} \Big] \, dt \ . \\
+    & = \delta q(t) \left.\left( \frac{\partial \mathscr{L}}{\partial \dot{q}} \right)\right|_{t_0}^{t_1} - \int_{t_0}^{t_1} \left[ \delta \dot{q}(t) \, \frac{\partial \mathscr{L}}{\partial \dot{q}} + \delta q(t) \, \frac{\partial \mathscr{L}}{\partial q} \right] \, dt \ . \\
 \end{aligned}$$
 
 Imponendo che la variazione $\delta q(t)$ sia nulla per $t_0$ e $t_1$, il primo termine si annulla, e si può dimostrare che

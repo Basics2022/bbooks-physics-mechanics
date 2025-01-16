@@ -407,7 +407,7 @@ document.write(`
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
   0 &amp; = \int_{t_0}^{t_1} \delta q (t) \left[ \dfrac{d}{dt}\left( \frac{\partial \mathscr{L}}{\partial \dot{q}} \right) - \frac{\partial \mathscr{L}}{\partial q} \right] \, dt = \\
-    &amp; = \delta q(t) \left( \frac{\partial \mathscr{L}}{\partial \dot{q}} \right) \Big|_{t_0}^{t_1} - \int_{t_0}^{t_1} \Big[ \delta \dot{q}(t) \, \frac{\partial \mathscr{L}}{\partial \dot{q}} + \delta q(t) \, \frac{\partial \mathscr{L}}{\partial q} \Big] \, dt \ . \\
+    &amp; = \delta q(t) \left.\left( \frac{\partial \mathscr{L}}{\partial \dot{q}} \right)\right|_{t_0}^{t_1} - \int_{t_0}^{t_1} \left[ \delta \dot{q}(t) \, \frac{\partial \mathscr{L}}{\partial \dot{q}} + \delta q(t) \, \frac{\partial \mathscr{L}}{\partial q} \right] \, dt \ . \\
 \end{aligned}\end{split}\]</div>
 <p>Imponendo che la variazione <span class="math notranslate nohighlight">\(\delta q(t)\)</span> sia nulla per <span class="math notranslate nohighlight">\(t_0\)</span> e <span class="math notranslate nohighlight">\(t_1\)</span>, il primo termine si annulla, e si può dimostrare che</p>
 <div class="math notranslate nohighlight">
