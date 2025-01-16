@@ -9,7 +9,7 @@ $$P - O'= x'^k_{P/O'} \hat{e}'_k$$
 
 $$\begin{aligned}
   \hat{e}'_i 
-  = \hat{e}'_i \cdot \hat{e}_k \, \hat{e}_k =
+  = \hat{e}'_i \cdot \hat{e}_k \, \hat{e}_k
   = \mathbb{R} \cdot \hat{e}_i =
 \end{aligned}$$
 
