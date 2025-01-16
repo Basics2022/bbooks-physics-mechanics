@@ -1,6 +1,8 @@
 (classical-mechanics:kinematics:point)=
-# Cinematica del punto
+# Point
 
+
+<!--
 La cinematica di un punto generalmente si riduce alla determinazione della posizione, della velocità e dell'accelerazione del punto.
 
 ## Posizione
@@ -68,3 +70,4 @@ che può essere scritta come la somma de:
 - l'accelerazione in direzione normale ad essa, l'accelerazione centripeta, che fa cambiare direzione al direttore velocità.
 
 **todo.** Mostrare queste ultime due affermazioni, calcolando la derivata di $|\mathbf{v}|$...
+-->
