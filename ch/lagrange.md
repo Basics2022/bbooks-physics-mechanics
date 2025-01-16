@@ -5,7 +5,7 @@
 ```
 
 (classical-mechanics:lagrange)=
-# Meccanica analitica: formulazione di Lagrange
+# Lagrangian Mechanics
 
 Riformulazione della meccanica di Newton:
 - **forma debole** delle equazioni: approccio di D'Alembert, lavori virtuali

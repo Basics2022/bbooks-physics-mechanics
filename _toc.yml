@@ -9,8 +9,11 @@ parts:
   chapters:
   - file: ch/kinematics
     sections:
+    - file: ch/kinematics-space-time
+    - file: ch/kinematics-models
     - file: ch/kinematics-point
     - file: ch/kinematics-rigid
+    - file: ch/kinematics-rotations
     - file: ch/kinematics-continuum
     - file: ch/kinematics-relative
   - file: ch/actions
