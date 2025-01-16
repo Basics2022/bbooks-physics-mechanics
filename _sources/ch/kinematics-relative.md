@@ -1,6 +1,12 @@
 (classical-mechanics:kinematics:relative)=
 # Relative Kinematics
 
+Relative kinematics is discussed here using two Cartesian reference frames.
+
+$$P - O = x^i_{P/O} \hat{e}_i$$
+$$O'- O = x^i_{O'/O} \hat{e}_i$$
+$$P - O'= x'^i_{P/O'} \hat{e}'_i$$
+
 ## Points
 
 **Position.**
