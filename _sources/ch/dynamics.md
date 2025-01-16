@@ -1,11 +1,13 @@
+<!--
 ```{article-info}
 :author: basics
 :date: "{sub-ref}`today`"
 :read-time: "{sub-ref}`wordcount-minutes` min read"
 ```
+-->
 
 (classical-mechanics:dynamics)=
-# Dinamica
+# Dynamics
 
 La dinamica fornisce il legame tra il moto di un corpo e le azioni causa del moto stesso.
 

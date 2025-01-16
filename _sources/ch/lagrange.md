@@ -1,8 +1,10 @@
+<!--
 ```{article-info}
 :author: basics
 :date: "{sub-ref}`today`"
 :read-time: "{sub-ref}`wordcount-minutes` min read"
 ```
+-->
 
 (classical-mechanics:lagrange)=
 # Lagrangian Mechanics
@@ -18,23 +20,28 @@ Here, the equivalence of analytical mechanics and Newton mechanics is stressed, 
 
    being $q^k(t)$ the generalized coordinates, $\mathscr{L}\left(\dot{q}^k(t), q?k(t), t \right) = K\left(\dot{q}^k(t), q^k(t), t\right) + U(q^k(t), t)$ the Lagrangian function of the system, defined as the sum of the kinetic energy $K$ and the potential function $U = - V$, being $V$ the potential energy - s.t. the conservative vector field reads $\vec{F} = - \nabla V$, and $Q_q$ the generalized force.
 
-- Lagrange equations can be interpreted as a result of a stationary principle of a functional, $S$, defined **action functional**. Here, **assuming $Q_{q^{k}} = 0$**, and multiplying by $w^k(t)$, integrating over time from $t_0$, $t_1$, and assuming that $w(t_0) = w(t_1) = 0$,
+- Lagrange equations can be interpreted as a result of a stationary principle of a functional, $S$, defined **action functional**, as it can be shown with the tools of [calculus of variations](https://basics2022.github.io/bbooks-math-miscellanea/ch/calculus-variations/intro.html). Here, **assuming $Q_{q^{k}} = 0$**, and multiplying by $w^k(t)$, integrating over time from $t_0$, $t_1$, and assuming that $w(t_0) = w(t_1) = 0$,
 
-$$\begin{aligned}
-  0 & = \int_{t_0}^{t_1} w^k (t) \left[ \dfrac{d}{dt}\left( \frac{\partial \mathscr{L}}{\partial \dot{q}^k} \right) - \frac{\partial \mathscr{L}}{\partial q} \right] \, dt = \\
-    & = w^k(t) \left.\left( \frac{\partial \mathscr{L}}{\partial \dot{q}^k} \right)\right|_{t_0}^{t_1} - \int_{t_0}^{t_1} \left[ \dot{w}^k(t) \, \frac{\partial \mathscr{L}}{\partial \dot{q}^k} + w^k(t) \, \frac{\partial \mathscr{L}}{\partial q^k} \right] \, dt \ . \\
-\end{aligned}$$
+   $$\begin{aligned}
+     0 & = \int_{t_0}^{t_1} w^k (t) \left[ \dfrac{d}{dt}\left( \frac{\partial \mathscr{L}}{\partial \dot{q}^k} \right) - \frac{\partial \mathscr{L}}{\partial q} \right] \, dt = \\
+       & = w^k(t) \left.\left( \frac{\partial \mathscr{L}}{\partial \dot{q}^k} \right)\right|_{t_0}^{t_1} - \int_{t_0}^{t_1} \left[ \dot{w}^k(t) \, \frac{\partial \mathscr{L}}{\partial \dot{q}^k} + w^k(t) \, \frac{\partial \mathscr{L}}{\partial q^k} \right] \, dt \ . \\
+   \end{aligned}$$
 
-If $w^k(t)$ is equal to zero for $t$ equal to $t_0$ and $t_1$, first term vanishes
+   If $w^k(t)$ is equal to zero for $t$ equal to $t_0$ and $t_1$, first term vanishes
 
-$$\begin{aligned}
-    0 & = - \int_{t_0}^{t_1} \left[ w^k(t) \, \frac{\partial \mathscr{L}}{\partial \dot{q}} + \delta q(t) \, \frac{\partial \mathscr{L}}{\partial q} \right] \, dt \\
-    & = - \delta \int_{t_0}^{t_1} \mathscr{L}(\dot{q}(t), q(t), t) \, dt =: - \delta S \ ,
-\end{aligned}$$
+   $$\begin{aligned}
+       0 & = - \int_{t_0}^{t_1} \left[ \dot{w}^k(t) \, \frac{\partial \mathscr{L}}{\partial \dot{q}^k} + w^k(t) \, \frac{\partial \mathscr{L}}{\partial q^k} \right] \, dt \\
+       & = - \frac{1}{\varepsilon} \int_{t_0}^{t_1} \varepsilon \left[ \dot{w}^k(t) \, \frac{\partial \mathscr{L}}{\partial \dot{q}^k}\left(\dot{q}^l(t), q^l(t), t \right) + w^k(t) \, \frac{\partial \mathscr{L}}{\partial q^k}\left(\dot{q}^l(t), q^l(t), t \right) \right] \, dt = \\
+       & = - \lim_{\varepsilon \rightarrow 0} \left\{ \frac{1}{\varepsilon} \int_{t_0}^{t_1} \varepsilon \left[ \dot{w}^k(t) \, \frac{\partial \mathscr{L}}{\partial \dot{q}^k}\left(\dot{q}^l(t), q^l(t), t \right) + w^k(t) \, \frac{\partial \mathscr{L}}{\partial q^k}\left(\dot{q}^l(t), q^l(t), t \right) \right] \, dt \right\}= \\
+       & = - \lim_{\varepsilon \rightarrow 0} \left\{ \frac{1}{\varepsilon} \int_{t_0}^{t_1} \left[ \mathscr{L}\left(\dot{q}^l(t)+\varepsilon \dot{w}^l(t), q^l(t) + \varepsilon w^l(t), t \right) - \mathscr{L}\left(\dot{q}^l(t), q^l(t), t \right) \right] \, dt + o(\varepsilon) \right\}= \\
+       & = - \delta \int_{t_0}^{t_1} \mathscr{L}(\dot{q}^l(t), q^l(t), t) \, dt =: - \delta S[q^k(t)] \ ,
+   \end{aligned}$$
 
-cioè le equazioni di Lagrange sono equivalenti alla condizione di stazionarietà del funzionale **azione**
+   i.e. Lagrange equations are equivalent to the stationary condition of the action functional
 
-$$S:= \int_{t_0}^{t_1} \mathscr{L}(\dot{q}(t), q(t), t) \, dt \ .$$
+   $$S[q^k(t)]:= \int_{t_0}^{t_1} \mathscr{L}\left(\dot{q}^l(t), q^l(t), t\right) \, dt \ .$$
+
+
 <!--
 Riformulazione della meccanica di Newton:
 - **forma debole** delle equazioni: approccio di D'Alembert, lavori virtuali
