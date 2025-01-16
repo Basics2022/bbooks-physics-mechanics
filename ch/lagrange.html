@@ -374,7 +374,7 @@ document.write(`
 <p class="sd-p-0 sd-m-0"><span class="sd-pr-2"><svg version="1.1" width="16.0px" height="16.0px" class="sd-octicon sd-octicon-calendar" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M4.75 0a.75.75 0 01.75.75V2h5V.75a.75.75 0 011.5 0V2h1.25c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0113.25 16H2.75A1.75 1.75 0 011 14.25V3.75C1 2.784 1.784 2 2.75 2H4V.75A.75.75 0 014.75 0zm0 3.5h8.5a.25.25 0 01.25.25V6h-11V3.75a.25.25 0 01.25-.25h2zm-2.25 4v6.75c0 .138.112.25.25.25h10.5a.25.25 0 00.25-.25V7.5h-11z"></path></svg></span>16 gen 2025</p>
 </div>
 <div class="sd-col sd-col-auto sd-d-flex-row sd-align-minor-center docutils">
-<p class="sd-p-0 sd-m-0"><span class="sd-pr-2"><svg version="1.1" width="16.0px" height="16.0px" class="sd-octicon sd-octicon-clock" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0zM8 0a8 8 0 100 16A8 8 0 008 0zm.5 4.75a.75.75 0 00-1.5 0v3.5a.75.75 0 00.471.696l2.5 1a.75.75 0 00.557-1.392L8.5 7.742V4.75z"></path></svg></span>2 min read</p>
+<p class="sd-p-0 sd-m-0"><span class="sd-pr-2"><svg version="1.1" width="16.0px" height="16.0px" class="sd-octicon sd-octicon-clock" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0zM8 0a8 8 0 100 16A8 8 0 008 0zm.5 4.75a.75.75 0 00-1.5 0v3.5a.75.75 0 00.471.696l2.5 1a.75.75 0 00.557-1.392L8.5 7.742V4.75z"></path></svg></span>1 min read</p>
 </div>
 </div>
 </div>
@@ -390,24 +390,15 @@ document.write(`
 <li><p><strong>weak form of equations.</strong> Strong form are recast in weak form, also referred as <strong>D’Alembert approach</strong> or <strong>virtual work formulation</strong>, multiplying strong form of equations for arbitrary test functions</p></li>
 <li><p><strong>Lagrange equations.</strong> A proper choice of test functions as a function of generalized coordinates, and some manipulation, leads to Lagrange equations. While the choice of test functions depends on the nature of the system, their expression always reads</p>
 <div class="math notranslate nohighlight">
-\[\dfrac{d}{dt}\left( \frac{\partial \mathscr{L}}{\partial \dot{q}} \right) - \frac{\partial \mathscr{L}}{\partial q} = Q_q\]</div>
-<p>being <span class="math notranslate nohighlight">\(\mathscr{L} = K + U\)</span> the Lagrangian function of the system, defined as the sum of the kinetic energy <span class="math notranslate nohighlight">\(K\)</span> and the potential function <span class="math notranslate nohighlight">\(U = - V\)</span>, being <span class="math notranslate nohighlight">\(V\)</span> the potential energy - s.t. the conservative vector field reads <span class="math notranslate nohighlight">\(\vec{F} = - \nabla V\)</span>, and <span class="math notranslate nohighlight">\(Q_q\)</span> the generalized force.</p>
+\[\dfrac{d}{dt}\left( \frac{\partial \mathscr{L}}{\partial \dot{q}^k} \right) - \frac{\partial \mathscr{L}}{\partial q^k} = Q_{q^k} \ ,\]</div>
+<p>being <span class="math notranslate nohighlight">\(q^k(t)\)</span> the generalized coordinates, <span class="math notranslate nohighlight">\(\mathscr{L}\left(\dot{q}^k(t), q?k(t), t \right) = K\left(\dot{q}^k(t), q^k(t), t\right) + U(q^k(t), t)\)</span> the Lagrangian function of the system, defined as the sum of the kinetic energy <span class="math notranslate nohighlight">\(K\)</span> and the potential function <span class="math notranslate nohighlight">\(U = - V\)</span>, being <span class="math notranslate nohighlight">\(V\)</span> the potential energy - s.t. the conservative vector field reads <span class="math notranslate nohighlight">\(\vec{F} = - \nabla V\)</span>, and <span class="math notranslate nohighlight">\(Q_q\)</span> the generalized force.</p>
 </li>
+<li><p>Lagrange equations can be interpreted as a result of a stationary principle of a functional, <span class="math notranslate nohighlight">\(S\)</span>, defined <strong>action functional</strong>. Here, <strong>assuming <span class="math notranslate nohighlight">\(Q_{q^{k}} = 0\)</span></strong>, and multiplying by <span class="math notranslate nohighlight">\(w^k(t)\)</span>, integrating over time from <span class="math notranslate nohighlight">\(t_0\)</span>, <span class="math notranslate nohighlight">\(t_1\)</span>, and assuming that <span class="math notranslate nohighlight">\(w(t_0) = w(t_1) = 0\)</span>,</p></li>
 </ul>
-<p>Riformulazione della meccanica di Newton:</p>
-<ul class="simple">
-<li><p><strong>forma debole</strong> delle equazioni: approccio di D’Alembert, lavori virtuali</p></li>
-<li><p><strong>equazioni di Lagrange</strong></p></li>
-</ul>
-<p>con <span class="math notranslate nohighlight">\(\mathscr{L}(\dot{q}(t), q(t), t) = K(\dot{q}(t), q(t), t) + U(q(t), t)\)</span>.</p>
-<ul class="simple">
-<li><p><strong>principi di stazionarietà del funzionale azione <span class="math notranslate nohighlight">\(S\)</span></strong></p></li>
-</ul>
-<p>Nel caso non ci siano azioni non conservative, <span class="math notranslate nohighlight">\(Q_q = 0\)</span>, è possibile interpretare le equazioni di Lagrange come risultato di un principio di stazionarietà. Chiamando <span class="math notranslate nohighlight">\(\delta q(t)\)</span> la variazione della funzion <span class="math notranslate nohighlight">\(q(t)\)</span>, moltiplicandola per le equazioni di Lagrange e integrando in tempo per <span class="math notranslate nohighlight">\(t \in [t_0, t_1]\)</span>,</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
-  0 &amp; = \int_{t_0}^{t_1} \delta q (t) \left[ \dfrac{d}{dt}\left( \frac{\partial \mathscr{L}}{\partial \dot{q}} \right) - \frac{\partial \mathscr{L}}{\partial q} \right] \, dt = \\
-    &amp; = \delta q(t) \left.\left( \frac{\partial \mathscr{L}}{\partial \dot{q}} \right)\right|_{t_0}^{t_1} - \int_{t_0}^{t_1} \left[ \delta \dot{q}(t) \, \frac{\partial \mathscr{L}}{\partial \dot{q}} + \delta q(t) \, \frac{\partial \mathscr{L}}{\partial q} \right] \, dt \ . \\
+  0 &amp; = \int_{t_0}^{t_1} \w^k (t) \left[ \dfrac{d}{dt}\left( \frac{\partial \mathscr{L}}{\partial \dot{q}^k} \right) - \frac{\partial \mathscr{L}}{\partial q} \right] \, dt = \\
+    &amp; = w^k(t) \left.\left( \frac{\partial \mathscr{L}}{\partial \dot{q}^k} \right)\right|_{t_0}^{t_1} - \int_{t_0}^{t_1} \left[ w^k(t) \, \frac{\partial \mathscr{L}}{\partial \dot{q}^k} + w^k(t) \, \frac{\partial \mathscr{L}}{\partial q^k} \right] \, dt \ . \\
 \end{aligned}\end{split}\]</div>
 <p>Imponendo che la variazione <span class="math notranslate nohighlight">\(\delta q(t)\)</span> sia nulla per <span class="math notranslate nohighlight">\(t_0\)</span> e <span class="math notranslate nohighlight">\(t_1\)</span>, il primo termine si annulla, e si può dimostrare che</p>
 <div class="math notranslate nohighlight">
@@ -418,6 +409,33 @@ document.write(`
 <p>cioè le equazioni di Lagrange sono equivalenti alla condizione di stazionarietà del funzionale <strong>azione</strong></p>
 <div class="math notranslate nohighlight">
 \[S:= \int_{t_0}^{t_1} \mathscr{L}(\dot{q}(t), q(t), t) \, dt \ .\]</div>
+<!--
+Riformulazione della meccanica di Newton:
+- **forma debole** delle equazioni: approccio di D'Alembert, lavori virtuali
+- **equazioni di Lagrange**
+
+con $\mathscr{L}(\dot{q}(t), q(t), t) = K(\dot{q}(t), q(t), t) + U(q(t), t)$.
+
+- **principi di stazionarietà del funzionale azione $S$**
+
+Nel caso non ci siano azioni non conservative, $Q_q = 0$, è possibile interpretare le equazioni di Lagrange come risultato di un principio di stazionarietà. Chiamando $\delta q(t)$ la variazione della funzion $q(t)$, moltiplicandola per le equazioni di Lagrange e integrando in tempo per $t \in [t_0, t_1]$,
+
+$$\begin{aligned}
+  0 & = \int_{t_0}^{t_1} \delta q (t) \left[ \dfrac{d}{dt}\left( \frac{\partial \mathscr{L}}{\partial \dot{q}} \right) - \frac{\partial \mathscr{L}}{\partial q} \right] \, dt = \\
+    & = \delta q(t) \left.\left( \frac{\partial \mathscr{L}}{\partial \dot{q}} \right)\right|_{t_0}^{t_1} - \int_{t_0}^{t_1} \left[ \delta \dot{q}(t) \, \frac{\partial \mathscr{L}}{\partial \dot{q}} + \delta q(t) \, \frac{\partial \mathscr{L}}{\partial q} \right] \, dt \ . \\
+\end{aligned}$$
+
+Imponendo che la variazione $\delta q(t)$ sia nulla per $t_0$ e $t_1$, il primo termine si annulla, e si può dimostrare che
+
+$$\begin{aligned}
+    0 & = - \int_{t_0}^{t_1} \left[ \delta \dot{q}(t) \, \frac{\partial \mathscr{L}}{\partial \dot{q}} + \delta q(t) \, \frac{\partial \mathscr{L}}{\partial q} \right] \, dt \\
+    & = - \delta \int_{t_0}^{t_1} \mathscr{L}(\dot{q}(t), q(t), t) \, dt =: - \delta S \ ,
+\end{aligned}$$
+
+cioè le equazioni di Lagrange sono equivalenti alla condizione di stazionarietà del funzionale **azione**
+
+$$S:= \int_{t_0}^{t_1} \mathscr{L}(\dot{q}(t), q(t), t) \, dt \ .$$
+-->
 <div class="toctree-wrapper compound">
 </div>
 </div>

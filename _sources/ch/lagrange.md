@@ -14,11 +14,28 @@ Here, the equivalence of analytical mechanics and Newton mechanics is stressed, 
 - **weak form of equations.** Strong form are recast in weak form, also referred as **D'Alembert approach** or **virtual work formulation**, multiplying strong form of equations for arbitrary test functions
 - **Lagrange equations.** A proper choice of test functions as a function of generalized coordinates, and some manipulation, leads to Lagrange equations. While the choice of test functions depends on the nature of the system, their expression always reads
 
-   $$\dfrac{d}{dt}\left( \frac{\partial \mathscr{L}}{\partial \dot{q}} \right) - \frac{\partial \mathscr{L}}{\partial q} = Q_q$$
+   $$\dfrac{d}{dt}\left( \frac{\partial \mathscr{L}}{\partial \dot{q}^k} \right) - \frac{\partial \mathscr{L}}{\partial q^k} = Q_{q^k} \ ,$$
 
-   being $\mathscr{L} = K + U$ the Lagrangian function of the system, defined as the sum of the kinetic energy $K$ and the potential function $U = - V$, being $V$ the potential energy - s.t. the conservative vector field reads $\vec{F} = - \nabla V$, and $Q_q$ the generalized force.
+   being $q^k(t)$ the generalized coordinates, $\mathscr{L}\left(\dot{q}^k(t), q?k(t), t \right) = K\left(\dot{q}^k(t), q^k(t), t\right) + U(q^k(t), t)$ the Lagrangian function of the system, defined as the sum of the kinetic energy $K$ and the potential function $U = - V$, being $V$ the potential energy - s.t. the conservative vector field reads $\vec{F} = - \nabla V$, and $Q_q$ the generalized force.
 
+- Lagrange equations can be interpreted as a result of a stationary principle of a functional, $S$, defined **action functional**. Here, **assuming $Q_{q^{k}} = 0$**, and multiplying by $w^k(t)$, integrating over time from $t_0$, $t_1$, and assuming that $w(t_0) = w(t_1) = 0$,
 
+$$\begin{aligned}
+  0 & = \int_{t_0}^{t_1} \w^k (t) \left[ \dfrac{d}{dt}\left( \frac{\partial \mathscr{L}}{\partial \dot{q}^k} \right) - \frac{\partial \mathscr{L}}{\partial q} \right] \, dt = \\
+    & = w^k(t) \left.\left( \frac{\partial \mathscr{L}}{\partial \dot{q}^k} \right)\right|_{t_0}^{t_1} - \int_{t_0}^{t_1} \left[ w^k(t) \, \frac{\partial \mathscr{L}}{\partial \dot{q}^k} + w^k(t) \, \frac{\partial \mathscr{L}}{\partial q^k} \right] \, dt \ . \\
+\end{aligned}$$
+
+Imponendo che la variazione $\delta q(t)$ sia nulla per $t_0$ e $t_1$, il primo termine si annulla, e si può dimostrare che
+
+$$\begin{aligned}
+    0 & = - \int_{t_0}^{t_1} \left[ \delta \dot{q}(t) \, \frac{\partial \mathscr{L}}{\partial \dot{q}} + \delta q(t) \, \frac{\partial \mathscr{L}}{\partial q} \right] \, dt \\
+    & = - \delta \int_{t_0}^{t_1} \mathscr{L}(\dot{q}(t), q(t), t) \, dt =: - \delta S \ ,
+\end{aligned}$$
+
+cioè le equazioni di Lagrange sono equivalenti alla condizione di stazionarietà del funzionale **azione**
+
+$$S:= \int_{t_0}^{t_1} \mathscr{L}(\dot{q}(t), q(t), t) \, dt \ .$$
+<!--
 Riformulazione della meccanica di Newton:
 - **forma debole** delle equazioni: approccio di D'Alembert, lavori virtuali
 - **equazioni di Lagrange**
@@ -44,4 +61,4 @@ $$\begin{aligned}
 cioè le equazioni di Lagrange sono equivalenti alla condizione di stazionarietà del funzionale **azione**
 
 $$S:= \int_{t_0}^{t_1} \mathscr{L}(\dot{q}(t), q(t), t) \, dt \ .$$
-
+-->
