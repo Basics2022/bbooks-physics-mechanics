@@ -3,9 +3,11 @@
 
 Relative kinematics is discussed here using two Cartesian reference frames.
 
-$$P - O = x^i_{P/O} \hat{e}_i$$
-$$O'- O = x^i_{O'/O} \hat{e}_i$$
-$$P - O'= x'^i_{P/O'} \hat{e}'_i$$
+$$P - O =  x^k_{P/O}   \hat{e}_k$$
+$$O'- O =  x^k_{O'/O}  \hat{e}_k$$
+$$P - O'= x'^k_{P/O'} \hat{e}'_k$$
+
+$$\vec{e}'_i = \mathbb$$
 
 ## Points
 
