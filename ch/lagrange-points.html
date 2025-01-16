@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>5.2. Sistemi di punti &#8212; Meccanica classica</title>
+    <title>5.2. System of points &#8212; Meccanica classica</title>
   
   
   
@@ -69,8 +69,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../_static/favicon.svg"/>
     <link rel="index" title="Indice" href="../genindex.html" />
     <link rel="search" title="Cerca" href="../search.html" />
-    <link rel="next" title="5.3. Corpo rigido" href="lagrange-rigid-body.html" />
-    <link rel="prev" title="5.1. Punto materiale" href="lagrange-point.html" />
+    <link rel="next" title="5.3. Rigid Body" href="lagrange-rigid-body.html" />
+    <link rel="prev" title="5.1. Point" href="lagrange-point.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="it"/>
   </head>
@@ -166,11 +166,14 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Newton Mechanics</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="kinematics.html">1. Cinematica</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="kinematics-point.html">1.1. Cinematica del punto</a></li>
-<li class="toctree-l2"><a class="reference internal" href="kinematics-rigid.html">1.2. Cinematica del corpo rigido</a></li>
-<li class="toctree-l2"><a class="reference internal" href="kinematics-continuum.html">1.3. Cinematica di mezzi continui</a></li>
-<li class="toctree-l2"><a class="reference internal" href="kinematics-relative.html">1.4. Cinematica relativa</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="kinematics.html">1. Kinematics</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="kinematics-space-time.html">1.1. Space and time</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kinematics-models.html">1.2. Models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kinematics-point.html">1.3. Point</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kinematics-rigid.html">1.4. Rigid Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kinematics-rotations.html">1.5. Rotations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kinematics-continuum.html">1.6. Continuous Medium</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kinematics-relative.html">1.7. Relative Kinematics</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="actions.html">2. Azioni</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -201,9 +204,9 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Analytical Mechanics</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="lagrange.html">5. Meccanica analitica: formulazione di Lagrange</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="lagrange-point.html">5.1. Punto materiale</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">5.2. Sistemi di punti</a></li>
-<li class="toctree-l2"><a class="reference internal" href="lagrange-rigid-body.html">5.3. Corpo rigido</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lagrange-point.html">5.1. Point</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">5.2. System of points</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lagrange-rigid-body.html">5.3. Rigid Body</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="hamilton.html">6. Meccanica analitica: formulazione di Hamilton</a></li>
@@ -343,7 +346,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Sistemi di punti</h1>
+    <h1>System of points</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -357,27 +360,18 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <div class="sd-container-fluid sd-sphinx-override sd-p-0 sd-mt-2 sd-mb-4 docutils">
-<div class="sd-row sd-row-cols-2 sd-gx-2 sd-gy-1 docutils">
-<div class="sd-col sd-d-flex-row sd-align-minor-center docutils">
-<div class="sd-container-fluid sd-sphinx-override docutils">
-<div class="sd-row sd-row-cols-2 sd-row-cols-xs-2 sd-row-cols-sm-3 sd-row-cols-md-3 sd-row-cols-lg-3 sd-gx-3 sd-gy-1 docutils">
-<div class="sd-col sd-col-auto sd-d-flex-row sd-align-minor-center docutils">
-<p class="sd-p-0 sd-m-0">basics</p>
-</div>
-<div class="sd-col sd-col-auto sd-d-flex-row sd-align-minor-center docutils">
-<p class="sd-p-0 sd-m-0"><span class="sd-pr-2"><svg version="1.1" width="16.0px" height="16.0px" class="sd-octicon sd-octicon-calendar" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M4.75 0a.75.75 0 01.75.75V2h5V.75a.75.75 0 011.5 0V2h1.25c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0113.25 16H2.75A1.75 1.75 0 011 14.25V3.75C1 2.784 1.784 2 2.75 2H4V.75A.75.75 0 014.75 0zm0 3.5h8.5a.25.25 0 01.25.25V6h-11V3.75a.25.25 0 01.25-.25h2zm-2.25 4v6.75c0 .138.112.25.25.25h10.5a.25.25 0 00.25-.25V7.5h-11z"></path></svg></span>20 nov 2024</p>
-</div>
-<div class="sd-col sd-col-auto sd-d-flex-row sd-align-minor-center docutils">
-<p class="sd-p-0 sd-m-0"><span class="sd-pr-2"><svg version="1.1" width="16.0px" height="16.0px" class="sd-octicon sd-octicon-clock" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0zM8 0a8 8 0 100 16A8 8 0 008 0zm.5 4.75a.75.75 0 00-1.5 0v3.5a.75.75 0 00.471.696l2.5 1a.75.75 0 00.557-1.392L8.5 7.742V4.75z"></path></svg></span>0 min read</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="tex2jax_ignore mathjax_ignore section" id="sistemi-di-punti">
-<span id="classical-mechanics-lagrange-points"></span><h1><span class="section-number">5.2. </span>Sistemi di punti<a class="headerlink" href="#sistemi-di-punti" title="Permalink to this heading">#</a></h1>
+  <!--
+```{article-info}
+:author: basics
+:date: "{sub-ref}`today`"
+:read-time: "{sub-ref}`wordcount-minutes` min read"
+```
+-->
+<div class="tex2jax_ignore mathjax_ignore section" id="system-of-points">
+<span id="classical-mechanics-lagrange-points"></span><h1><span class="section-number">5.2. </span>System of points<a class="headerlink" href="#system-of-points" title="Permalink to this heading">#</a></h1>
+<p><strong>Newton dynamical equations - strong form.</strong></p>
+<p><strong>Weak form.</strong></p>
+<p><strong>Lagrange equations.</strong></p>
 </div>
 
     <script type="text/x-thebe-config">
@@ -416,7 +410,7 @@ document.write(`
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">precedente</p>
-        <p class="prev-next-title"><span class="section-number">5.1. </span>Punto materiale</p>
+        <p class="prev-next-title"><span class="section-number">5.1. </span>Point</p>
       </div>
     </a>
     <a class="right-next"
@@ -424,7 +418,7 @@ document.write(`
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">successivo</p>
-        <p class="prev-next-title"><span class="section-number">5.3. </span>Corpo rigido</p>
+        <p class="prev-next-title"><span class="section-number">5.3. </span>Rigid Body</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

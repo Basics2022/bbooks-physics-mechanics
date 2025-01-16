@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>5.3. Rigid Body &#8212; Meccanica classica</title>
+    <title>1.5. Rotations &#8212; Meccanica classica</title>
   
   
   
@@ -67,12 +67,12 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'ch/lagrange-rigid-body';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'ch/kinematics-rotations';</script>
     <link rel="shortcut icon" href="../_static/favicon.svg"/>
     <link rel="index" title="Indice" href="../genindex.html" />
     <link rel="search" title="Cerca" href="../search.html" />
-    <link rel="next" title="6. Meccanica analitica: formulazione di Hamilton" href="hamilton.html" />
-    <link rel="prev" title="5.2. System of points" href="lagrange-points.html" />
+    <link rel="next" title="1.6. Continuous Medium" href="kinematics-continuum.html" />
+    <link rel="prev" title="1.4. Rigid Body" href="kinematics-rigid.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="it"/>
   </head>
@@ -167,13 +167,13 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Newton Mechanics</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="kinematics.html">1. Kinematics</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="kinematics.html">1. Kinematics</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="kinematics-space-time.html">1.1. Space and time</a></li>
 <li class="toctree-l2"><a class="reference internal" href="kinematics-models.html">1.2. Models</a></li>
 <li class="toctree-l2"><a class="reference internal" href="kinematics-point.html">1.3. Point</a></li>
 <li class="toctree-l2"><a class="reference internal" href="kinematics-rigid.html">1.4. Rigid Body</a></li>
-<li class="toctree-l2"><a class="reference internal" href="kinematics-rotations.html">1.5. Rotations</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">1.5. Rotations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="kinematics-continuum.html">1.6. Continuous Medium</a></li>
 <li class="toctree-l2"><a class="reference internal" href="kinematics-relative.html">1.7. Relative Kinematics</a></li>
 </ul>
@@ -204,11 +204,11 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Analytical Mechanics</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="lagrange.html">5. Lagrangian Mechanics</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="lagrange-point.html">5.1. Point</a></li>
-<li class="toctree-l2"><a class="reference internal" href="lagrange-points.html">5.2. System of points</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">5.3. Rigid Body</a></li>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="lagrange.html">5. Meccanica analitica: formulazione di Lagrange</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="lagrange-point.html">5.1. Punto materiale</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lagrange-points.html">5.2. Sistemi di punti</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lagrange-rigid-body.html">5.3. Rigid Body</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="hamilton.html">6. Meccanica analitica: formulazione di Hamilton</a></li>
@@ -266,7 +266,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/ch/lagrange-rigid-body.md" target="_blank"
+      <li><a href="../_sources/ch/kinematics-rotations.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Scarica il file sorgente"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -337,7 +337,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -348,11 +350,24 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Rigid Body</h1>
+    <h1>Rotations</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contenuti </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rotation-tensor">1.5.1. Rotation tensor</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#successive-rotations">1.5.1.1. Successive rotations</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#linearization-of-rotations">1.5.1.2. Linearization of rotations</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quaternions">1.5.2. Quaternions</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -362,19 +377,85 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <div class="tex2jax_ignore mathjax_ignore section" id="rigid-body">
-<span id="classical-mechanics-lagrange-rigid"></span><h1><span class="section-number">5.3. </span>Rigid Body<a class="headerlink" href="#rigid-body" title="Permalink to this heading">#</a></h1>
-<p><strong>Newton dynamical equations - strong form.</strong> Dynamical equations governing the motion of a rigid body, referred to its center of mass <span class="math notranslate nohighlight">\(G\)</span> read</p>
+  <div class="tex2jax_ignore mathjax_ignore section" id="rotations">
+<span id="classical-mechanics-kinematics-rotations"></span><h1><span class="section-number">1.5. </span>Rotations<a class="headerlink" href="#rotations" title="Permalink to this heading">#</a></h1>
+<div class="section" id="rotation-tensor">
+<h2><span class="section-number">1.5.1. </span>Rotation tensor<a class="headerlink" href="#rotation-tensor" title="Permalink to this heading">#</a></h2>
+<p>Given 2 Cartesian bases <span class="math notranslate nohighlight">\(\{ \hat{e}^0_i \}_{i=1:3}\)</span>, <span class="math notranslate nohighlight">\(\{ \hat{e}^1_j \}_{j=1:3}\)</span>, the rotation tensor providing the transformation</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\begin{cases}
-  \dot{\vec{Q}} = \vec{R}^{e} \\
-  \dot{\vec{\Gamma}}_G = \vec{M}^e_G \ ,
-\end{cases}\end{split}\]</div>
-<p>with momentum <span class="math notranslate nohighlight">\(\vec{Q} = m \vec{v}_G\)</span> and angular momentum <span class="math notranslate nohighlight">\(\vec{\Gamma}_G = \mathbb{I}_G \cdot \vec{\omega}\)</span>.</p>
-<p><strong>Weak form.</strong> Weak form of dynamical equations is derived with scalar multiplication of the strong form by an arbitrary test functions <span class="math notranslate nohighlight">\(\vec{w}_t\)</span>, <span class="math notranslate nohighlight">\(\vec{w}_r\)</span></p>
-<div class="math notranslate nohighlight" id="equation-eq-lagrange-rigid-weak">
-<span class="eqno">(5.3)<a class="headerlink" href="#equation-eq-lagrange-rigid-weak" title="Permalink a questa equazione">#</a></span>\[\vec{0} = \vec{w}_t \cdot \left( m \dot{\vec{v}} - \vec{R}^e\right) + \vec{w}_r \cdot ( \dot{\vec{\Gamma}}_G - \vec{M}^e_G ) \qquad \forall \vec{w}\]</div>
-<p><strong>Lagrange equations.</strong></p>
+\[\hat{e}^1_i = \mathbb{R}^{0 \rightarrow 1} \cdot \hat{e}^0_i \ ,\]</div>
+<p>is</p>
+<div class="math notranslate nohighlight">
+\[\mathbb{R}^{0 \rightarrow 1}
+ = R_{ij}^{0 \rightarrow 1} \hat{e}^0_i \otimes \hat{e}^0_j  
+ = R_{ij}^{0 \rightarrow 1} \hat{e}^1_i \otimes \hat{e}^1_j 
+\]</div>
+<p>with <span class="math notranslate nohighlight">\(R^{0 \rightarrow 1}_{ij} = \hat{e}^0_i \cdot \hat{e}^1_j\)</span>.</p>
+<p><strong>Angular velocity.</strong></p>
+<div class="math notranslate nohighlight">
+\[\vec{\omega}^{01}_{\times} = \mathbb{\Omega}^{01} = \dot{\mathbb{R}}^{01} \cdot \mathbb{R}^{01,T}\]</div>
+<p>Using index notation</p>
+<div class="math notranslate nohighlight">
+\[\varepsilon_{ijk} \omega_j = \dot{R}_{ij} R_{kj}\]</div>
+<p>and the identities</p>
+<div class="math notranslate nohighlight">
+\[\varepsilon_{ijk} \varepsilon_{lmk} = \delta_{il} \delta_{jm} - \delta_{jl} \delta_{im}\]</div>
+<div class="math notranslate nohighlight">
+\[\varepsilon_{ijk} \varepsilon_{ljk} = \delta_{il} \delta_{jj} - \delta_{ij} \delta_{jl} = 3 \delta_{il} - \delta_{il} = 2 \delta_{il}\]</div>
+<p>it follows</p>
+<div class="math notranslate nohighlight">
+\[\varepsilon_{ilk} \varepsilon_{ijk} \omega_j = \varepsilon_{ilk} \dot{R}_{ij} R_{kj}\]</div>
+<div class="math notranslate nohighlight">
+\[2 \delta_{lj} \omega_j = \varepsilon_{ilk} \dot{R}_{ij} R_{kj}\]</div>
+<div class="math notranslate nohighlight">
+\[\omega_l = \frac{1}{2} \varepsilon_{ilk} \dot{R}_{ij} R_{kj} = - \frac{1}{2} \varepsilon_{lik} \dot{R}_{ij} R_{kj} = -\frac{1}{2} \varepsilon_{lij} \Omega_{ij}\]</div>
+<div class="section" id="successive-rotations">
+<h3><span class="section-number">1.5.1.1. </span>Successive rotations<a class="headerlink" href="#successive-rotations" title="Permalink to this heading">#</a></h3>
+<p>Given 3 Cartesian bases <span class="math notranslate nohighlight">\(\{ \hat{e}^0_i \}_{i=1:3}\)</span>, <span class="math notranslate nohighlight">\(\{ \hat{e}^1_j \}_{j=1:3}\)</span>, <span class="math notranslate nohighlight">\(\{ \hat{e}^2_k \}_{k=1:3}\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+ \hat{e}^2_i 
+  &amp; = \mathbb{R}^{1 \rightarrow 2} \cdot \hat{e}^1_i = \\ 
+  &amp; = \mathbb{R}^{1 \rightarrow 2} \cdot \mathbb{R}^{0 \rightarrow 1} \cdot\hat{e}^0_i 
+\end{aligned}\end{split}\]</div>
+<p>Time derivative w.r.t. reference frame 0 is indicated as the standard time derivative</p>
+<div class="math notranslate nohighlight">
+\[\dot{a} = \dfrac{d a}{d t} = \dfrac{{}^0 d a}{d t} \ ,\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\dfrac{d}{dt} \mathbb{R}^{21} 
+  &amp; = \frac{d}{dt} \left[ R^{21}_{ik} \hat{e}^1_i \otimes \hat{e}^1_k \right] = \\
+  &amp; = \dot{R}^{21}_{ik} \hat{e}^1_i \otimes \hat{e}^1_k + \mathbb{\Omega}^{10} \cdot  \mathbb{R}^{21} - \mathbb{R}^{21} \cdot \mathbb{\Omega}^{10} = \\
+  &amp; = \dfrac{{}^1 d}{dt} \mathbb{R}^{21} + \mathbb{\Omega}^{10} \cdot  \mathbb{R}^{21} - \mathbb{R}^{21} \cdot \mathbb{\Omega}^{10} = \\
+\end{aligned}\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+ \mathbb{\Omega}^{20}
+ &amp; = \dot{\mathbb{R}}^{20} \cdot \mathbb{R}^{20, T} = \\
+ &amp; = \frac{d}{dt} \left( \mathbb{R}^{21} \cdot \mathbb{R}^{10} \right) \cdot \mathbb{R}^{20, T} = \\
+ &amp; = \left\{ \left[ \dfrac{{}^1 d}{dt} \mathbb{R}^{21} + \mathbb{\Omega}^{10} \cdot  \mathbb{R}^{21} - \mathbb{R}^{21} \cdot \mathbb{\Omega}^{10} \right] \cdot \mathbb{R}^{10} + \mathbb{R}^{21} \cdot \dot{\mathbb{R}}^{10}  \right\} \cdot \mathbb{R}^{01} \cdot \mathbb{R}^{12} = \\
+ &amp; =  \dfrac{{}^1 d}{dt} \mathbb{R}^{21} \cdot \mathbb{R}^{12} + \mathbb{\Omega}^{10} = \\
+ &amp; = \mathbb{\Omega}^{21} + \mathbb{\Omega}^{10} \ .
+\end{aligned}\end{split}\]</div>
+</div>
+<div class="section" id="linearization-of-rotations">
+<h3><span class="section-number">1.5.1.2. </span>Linearization of rotations<a class="headerlink" href="#linearization-of-rotations" title="Permalink to this heading">#</a></h3>
+<div class="math notranslate nohighlight">
+\[\mathbb{I} = \mathbb{R} \cdot \mathbb{R}^T\]</div>
+<p>Increment</p>
+<div class="math notranslate nohighlight">
+\[\mathbb{0} = \delta \mathbb{R} \cdot \mathbb{R}^T + \mathbb{R} \cdot \delta \mathbb{R}^T\]</div>
+<p>and thus the antisymmetric tensor can be written as</p>
+<div class="math notranslate nohighlight">
+\[\delta \theta_{\times} := \delta \mathbb{R} \cdot \mathbb{R}^T\]</div>
+<p>so that</p>
+<div class="math notranslate nohighlight">
+\[\delta \theta_l = -\frac{1}{2} \varepsilon_{lij} \delta R_{ik} \, R_{jk}\]</div>
+</div>
+</div>
+<div class="section" id="quaternions">
+<h2><span class="section-number">1.5.2. </span>Quaternions<a class="headerlink" href="#quaternions" title="Permalink to this heading">#</a></h2>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -408,20 +489,20 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="lagrange-points.html"
+       href="kinematics-rigid.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">precedente</p>
-        <p class="prev-next-title"><span class="section-number">5.2. </span>System of points</p>
+        <p class="prev-next-title"><span class="section-number">1.4. </span>Rigid Body</p>
       </div>
     </a>
     <a class="right-next"
-       href="hamilton.html"
+       href="kinematics-continuum.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">successivo</p>
-        <p class="prev-next-title"><span class="section-number">6. </span>Meccanica analitica: formulazione di Hamilton</p>
+        <p class="prev-next-title"><span class="section-number">1.6. </span>Continuous Medium</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -431,6 +512,25 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contenuti
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rotation-tensor">1.5.1. Rotation tensor</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#successive-rotations">1.5.1.1. Successive rotations</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#linearization-of-rotations">1.5.1.2. Linearization of rotations</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quaternions">1.5.2. Quaternions</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>5.3. Rigid Body &#8212; Meccanica classica</title>
+    <title>1.1. Space and time &#8212; Meccanica classica</title>
   
   
   
@@ -67,12 +67,12 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'ch/lagrange-rigid-body';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'ch/kinematics-space-time';</script>
     <link rel="shortcut icon" href="../_static/favicon.svg"/>
     <link rel="index" title="Indice" href="../genindex.html" />
     <link rel="search" title="Cerca" href="../search.html" />
-    <link rel="next" title="6. Meccanica analitica: formulazione di Hamilton" href="hamilton.html" />
-    <link rel="prev" title="5.2. System of points" href="lagrange-points.html" />
+    <link rel="next" title="1.2. Models" href="kinematics-models.html" />
+    <link rel="prev" title="1. Kinematics" href="kinematics.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="it"/>
   </head>
@@ -167,15 +167,14 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Newton Mechanics</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="kinematics.html">1. Kinematics</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="kinematics-space-time.html">1.1. Space and time</a></li>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="kinematics.html">1. Kinematics</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">1.1. Space and time</a></li>
 <li class="toctree-l2"><a class="reference internal" href="kinematics-models.html">1.2. Models</a></li>
 <li class="toctree-l2"><a class="reference internal" href="kinematics-point.html">1.3. Point</a></li>
 <li class="toctree-l2"><a class="reference internal" href="kinematics-rigid.html">1.4. Rigid Body</a></li>
-<li class="toctree-l2"><a class="reference internal" href="kinematics-rotations.html">1.5. Rotations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="kinematics-continuum.html">1.6. Continuous Medium</a></li>
-<li class="toctree-l2"><a class="reference internal" href="kinematics-relative.html">1.7. Relative Kinematics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kinematics-continuum.html">1.5. Continuous Medium</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kinematics-relative.html">1.6. Relative Kinematics</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="actions.html">2. Azioni</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -204,11 +203,11 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Analytical Mechanics</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="lagrange.html">5. Lagrangian Mechanics</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="lagrange-point.html">5.1. Point</a></li>
-<li class="toctree-l2"><a class="reference internal" href="lagrange-points.html">5.2. System of points</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">5.3. Rigid Body</a></li>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="lagrange.html">5. Meccanica analitica: formulazione di Lagrange</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="lagrange-point.html">5.1. Punto materiale</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lagrange-points.html">5.2. Sistemi di punti</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lagrange-rigid-body.html">5.3. Corpo rigido</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="hamilton.html">6. Meccanica analitica: formulazione di Hamilton</a></li>
@@ -266,7 +265,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/ch/lagrange-rigid-body.md" target="_blank"
+      <li><a href="../_sources/ch/kinematics-space-time.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Scarica il file sorgente"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -348,7 +347,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Rigid Body</h1>
+    <h1>Space and time</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -362,19 +361,11 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <div class="tex2jax_ignore mathjax_ignore section" id="rigid-body">
-<span id="classical-mechanics-lagrange-rigid"></span><h1><span class="section-number">5.3. </span>Rigid Body<a class="headerlink" href="#rigid-body" title="Permalink to this heading">#</a></h1>
-<p><strong>Newton dynamical equations - strong form.</strong> Dynamical equations governing the motion of a rigid body, referred to its center of mass <span class="math notranslate nohighlight">\(G\)</span> read</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{cases}
-  \dot{\vec{Q}} = \vec{R}^{e} \\
-  \dot{\vec{\Gamma}}_G = \vec{M}^e_G \ ,
-\end{cases}\end{split}\]</div>
-<p>with momentum <span class="math notranslate nohighlight">\(\vec{Q} = m \vec{v}_G\)</span> and angular momentum <span class="math notranslate nohighlight">\(\vec{\Gamma}_G = \mathbb{I}_G \cdot \vec{\omega}\)</span>.</p>
-<p><strong>Weak form.</strong> Weak form of dynamical equations is derived with scalar multiplication of the strong form by an arbitrary test functions <span class="math notranslate nohighlight">\(\vec{w}_t\)</span>, <span class="math notranslate nohighlight">\(\vec{w}_r\)</span></p>
-<div class="math notranslate nohighlight" id="equation-eq-lagrange-rigid-weak">
-<span class="eqno">(5.3)<a class="headerlink" href="#equation-eq-lagrange-rigid-weak" title="Permalink a questa equazione">#</a></span>\[\vec{0} = \vec{w}_t \cdot \left( m \dot{\vec{v}} - \vec{R}^e\right) + \vec{w}_r \cdot ( \dot{\vec{\Gamma}}_G - \vec{M}^e_G ) \qquad \forall \vec{w}\]</div>
-<p><strong>Lagrange equations.</strong></p>
+  <div class="tex2jax_ignore mathjax_ignore section" id="space-and-time">
+<span id="classical-mechanics-kinematics-space-time"></span><h1><span class="section-number">1.1. </span>Space and time<a class="headerlink" href="#space-and-time" title="Permalink to this heading">#</a></h1>
+<p>Classical mechanics relies on the concepts of <strong>absolute 3-dimensional Euclidean space</strong>, <span class="math notranslate nohighlight">\(E^3\)</span>, and <strong>absolute time</strong>.</p>
+<p>Briefly, what is space? It’s something you can measure with ruler (for distances) and square (for angles), or other space-measurment devices.
+What is time? It’s something you can measure with a clock or other timekeeping devices.</p>
 </div>
 
     <script type="text/x-thebe-config">
@@ -408,20 +399,20 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="lagrange-points.html"
+       href="kinematics.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">precedente</p>
-        <p class="prev-next-title"><span class="section-number">5.2. </span>System of points</p>
+        <p class="prev-next-title"><span class="section-number">1. </span>Kinematics</p>
       </div>
     </a>
     <a class="right-next"
-       href="hamilton.html"
+       href="kinematics-models.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">successivo</p>
-        <p class="prev-next-title"><span class="section-number">6. </span>Meccanica analitica: formulazione di Hamilton</p>
+        <p class="prev-next-title"><span class="section-number">1.2. </span>Models</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

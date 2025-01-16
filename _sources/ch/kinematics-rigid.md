@@ -1,6 +1,46 @@
 (classical-mechanics:kinematics:rigid-body)=
 # Rigid Body
 
+## Rigid motion
+Rigid motion preserves distance between any pair of points, and thus angles. Rotations are described by rotation matrices.
+
+The configuration of a material vector $\vec{a}$ undergoing a rotation is described by the product of the rotation tensor $\mathbb{R}$ by the reference configuration $\vec{a}^0$,
+
+$$\vec{a} = \mathbb{R} \cdot \vec{a}^0 \ .$$
+
+A rotation tensor is unitary to preserve distance,
+
+$$\mathbb{I} = \mathbb{R} \cdot \mathbb{R}^T = \mathbb{R}^T \cdot \mathbb{R}$$ (eq:rot:unitary)
+
+so that its time derivative reads,
+
+$$\mathbb{0} = \dfrac{d}{dt} \left( \mathbb{R} \cdot \mathbb{R}^T \right) = \dot{\mathbb{R}} \cdot \mathbb{R}^T + \mathbb{R} \cdot \dot{\mathbb{R}}^T$$
+
+It follows that the 2-nd order tensor $\dot{\mathbb{R}} \cdot \mathbb{R}^T = - \mathbb{R} \cdot \dot{\mathbb{R}}^T$ is anti-symmetric, and thus it can be written as 
+
+$$\dot{\mathbb{R}} \cdot \mathbb{R}^T =: \vec{\omega}_{\times} \ ,$$ (eq:omegax:def)
+
+being the vector $\vec{\omega}$ the angular velocity. Since $\mathbb{R}$ is unitary by {eq}`eq:rot:unitary`, multiplying {eq}`eq:omegax:def` with the dot-product on the right by $\mathbb{R}$, it follows
+
+$$\dot{\mathbb{R}} = \vec{\omega}_{\times} \cdot \mathbb{R} \ ,$$
+
+and the expression of the time derivative of a material vector $\vec{a}$,
+
+$$\dfrac{d \vec{a}}{d t} = \dot{\mathbb{R}} \cdot \vec{a}^0 = \vec{\omega}_{\times} \cdot \mathbb{R} \cdot \vec{a}^0 = \vec{\omega}_{\times} \cdot \vec{a} = \vec{\omega} \times \vec{a} \  .$$
+
+## Kinematics of rigid body
+Rigid motion allows to describe the kinematics of a rigid body - determining position, velocity and acceleration of all of its points - given the position of a material point $P$ and its orientation with respect to the reference frame, as an example using a rotation tensor $\mathbb{R}$.
+
+**Orientation.**
+
+**Angular velocity.**
+
+
+
+**Angular acceleration.**
+
+<!--
+
 I punti di corpi estesi che compiono un atto di moto rigido (**todo** definizione di atto di moto? E' utile?) mantengono costante la propria distanza. Poiché questa condizione vale per ogni coppia di punti, vengono mantenuti costanti anche gli angoli tra segmenti che congiungono punti materiali, cioè appartenenti al copo e che si muovono con esso.
 
 Affinché queste condizioni siano soddisfatte, un vettore materiale si trasforma con una rotazione. Il moto di un corpo rigido può quindi essere descritto come la composizione di un moto di traslazione di un punto $P$ e la rotazione del corpo attorno ad esso.
@@ -57,7 +97,7 @@ $$\begin{aligned}
                               & = \symbf{\alpha} \times ( \mathbf{r}_P - \mathbf{r}_Q ) + \symbf{\omega}_{\times} \cdot  \symbf{\omega}_{\times} \cdot ( \mathbf{r}_P - \mathbf{r}_Q ) \ . 
 \end{aligned}$$
 
-
+-->
 
 
 
