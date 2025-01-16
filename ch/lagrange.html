@@ -398,12 +398,12 @@ document.write(`
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
   0 &amp; = \int_{t_0}^{t_1} w^k (t) \left[ \dfrac{d}{dt}\left( \frac{\partial \mathscr{L}}{\partial \dot{q}^k} \right) - \frac{\partial \mathscr{L}}{\partial q} \right] \, dt = \\
-    &amp; = w^k(t) \left.\left( \frac{\partial \mathscr{L}}{\partial \dot{q}^k} \right)\right|_{t_0}^{t_1} - \int_{t_0}^{t_1} \left[ w^k(t) \, \frac{\partial \mathscr{L}}{\partial \dot{q}^k} + w^k(t) \, \frac{\partial \mathscr{L}}{\partial q^k} \right] \, dt \ . \\
+    &amp; = w^k(t) \left.\left( \frac{\partial \mathscr{L}}{\partial \dot{q}^k} \right)\right|_{t_0}^{t_1} - \int_{t_0}^{t_1} \left[ \dot{w}^k(t) \, \frac{\partial \mathscr{L}}{\partial \dot{q}^k} + w^k(t) \, \frac{\partial \mathscr{L}}{\partial q^k} \right] \, dt \ . \\
 \end{aligned}\end{split}\]</div>
-<p>Imponendo che la variazione <span class="math notranslate nohighlight">\(\delta q(t)\)</span> sia nulla per <span class="math notranslate nohighlight">\(t_0\)</span> e <span class="math notranslate nohighlight">\(t_1\)</span>, il primo termine si annulla, e si può dimostrare che</p>
+<p>If <span class="math notranslate nohighlight">\(w^k(t)\)</span> is equal to zero for <span class="math notranslate nohighlight">\(t\)</span> equal to <span class="math notranslate nohighlight">\(t_0\)</span> and <span class="math notranslate nohighlight">\(t_1\)</span>, first term vanishes</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
-    0 &amp; = - \int_{t_0}^{t_1} \left[ \delta \dot{q}(t) \, \frac{\partial \mathscr{L}}{\partial \dot{q}} + \delta q(t) \, \frac{\partial \mathscr{L}}{\partial q} \right] \, dt \\
+    0 &amp; = - \int_{t_0}^{t_1} \left[ w^k(t) \, \frac{\partial \mathscr{L}}{\partial \dot{q}} + \delta q(t) \, \frac{\partial \mathscr{L}}{\partial q} \right] \, dt \\
     &amp; = - \delta \int_{t_0}^{t_1} \mathscr{L}(\dot{q}(t), q(t), t) \, dt =: - \delta S \ ,
 \end{aligned}\end{split}\]</div>
 <p>cioè le equazioni di Lagrange sono equivalenti alla condizione di stazionarietà del funzionale <strong>azione</strong></p>

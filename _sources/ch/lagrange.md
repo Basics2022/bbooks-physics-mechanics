@@ -22,13 +22,13 @@ Here, the equivalence of analytical mechanics and Newton mechanics is stressed, 
 
 $$\begin{aligned}
   0 & = \int_{t_0}^{t_1} w^k (t) \left[ \dfrac{d}{dt}\left( \frac{\partial \mathscr{L}}{\partial \dot{q}^k} \right) - \frac{\partial \mathscr{L}}{\partial q} \right] \, dt = \\
-    & = w^k(t) \left.\left( \frac{\partial \mathscr{L}}{\partial \dot{q}^k} \right)\right|_{t_0}^{t_1} - \int_{t_0}^{t_1} \left[ w^k(t) \, \frac{\partial \mathscr{L}}{\partial \dot{q}^k} + w^k(t) \, \frac{\partial \mathscr{L}}{\partial q^k} \right] \, dt \ . \\
+    & = w^k(t) \left.\left( \frac{\partial \mathscr{L}}{\partial \dot{q}^k} \right)\right|_{t_0}^{t_1} - \int_{t_0}^{t_1} \left[ \dot{w}^k(t) \, \frac{\partial \mathscr{L}}{\partial \dot{q}^k} + w^k(t) \, \frac{\partial \mathscr{L}}{\partial q^k} \right] \, dt \ . \\
 \end{aligned}$$
 
-Imponendo che la variazione $\delta q(t)$ sia nulla per $t_0$ e $t_1$, il primo termine si annulla, e si può dimostrare che
+If $w^k(t)$ is equal to zero for $t$ equal to $t_0$ and $t_1$, first term vanishes
 
 $$\begin{aligned}
-    0 & = - \int_{t_0}^{t_1} \left[ \delta \dot{q}(t) \, \frac{\partial \mathscr{L}}{\partial \dot{q}} + \delta q(t) \, \frac{\partial \mathscr{L}}{\partial q} \right] \, dt \\
+    0 & = - \int_{t_0}^{t_1} \left[ w^k(t) \, \frac{\partial \mathscr{L}}{\partial \dot{q}} + \delta q(t) \, \frac{\partial \mathscr{L}}{\partial q} \right] \, dt \\
     & = - \delta \int_{t_0}^{t_1} \mathscr{L}(\dot{q}(t), q(t), t) \, dt =: - \delta S \ ,
 \end{aligned}$$
 
