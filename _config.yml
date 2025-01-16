@@ -22,7 +22,7 @@ bibtex_bibfiles:
 # Sphinx configuration
 sphinx:
   configure:
-    language: it
+#   language: it
 
 # Information about where the book exists on the web
 repository:

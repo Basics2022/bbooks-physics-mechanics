@@ -3,6 +3,8 @@
 
 Classical mechanics deal with the motion of systems and its causes. 
 
+Different formulations of mechanics are available. Newton formulation was developed at the end of XVII century and starts from mass conservation and Newton's three principles of dynamics, summarised in invariance under Galileian transformations, the relation between force and the change of momentum of a system, and action/reaction principle. Analytical mechanics was developed in the following centuries by D'Alembert and Lagrange and starts from variational principles, leading to Lagrange or Hamiltonian equations of motion.
+
 **Newton Mechanics.**
 ```{dropdown} [Kinematics](classical-mechanics:kinematics)
 ```
@@ -14,22 +16,19 @@ Classical mechanics deal with the motion of systems and its causes.
 ```
 
 **Analytical Mechanics.**
-```{dropdown} Lagrangian Mechanics
+```{dropdown} [Lagrangian Mechanics](classical-mechanics:lagrange)
 ```
-```{dropdown} Hamiltonian Mechanics
+```{dropdown} [Hamiltonian Mechanics](classical-mechanics:hamilton)
 ```
 
 
 Classical mechanics provides a reliable and useful theory for systems:
 - much larger than atomic scales; at atomic scales, [quantum mechanics](https://basics2022.github.io/bbooks-physics-modern/ch/quantum-mechanics/intro.html) is needed
-- with velocity much slower than the speed of light or in domains where the finite value of maximum speed of interactions can be neglected, as it relies on istantaneous action at distance; if these assumptions fail, Einstein theory is needed either [special relativity](https://basics2022.github.io/bbooks-physics-modern/ch/relativity-special/intro.html) - as a consistent theory of mechanics and [electromagnetism](https://basics2022.github.io/bbooks-physics-electromagnetism/intro.html) - or [general relativity](https://basics2022.github.io/bbooks-physics-modern/ch/relativity-general/intro.html) - as a theory of gravitation.
+- with velocity much slower than the speed of light or in domains where the finite value of finite speed of interactions can be neglected, as classical mechanics relies on istantaneous action at distance; if these assumptions fail, Einstein theory is needed either [special relativity](https://basics2022.github.io/bbooks-physics-modern/ch/relativity-special/intro.html) - as a consistent theory of mechanics and [electromagnetism](https://basics2022.github.io/bbooks-physics-electromagnetism/intro.html) - or [general relativity](https://basics2022.github.io/bbooks-physics-modern/ch/relativity-general/intro.html) - as a theory of gravitation.
 - with a small number of components, so that the integration of the governing equations of motion is feasible; continuous model of the systems are object of classical continuum mechanics, relying on the equations of classical mechanics and thermodynamics; systems with large number of components can be approached with the techniques developed in [statistical mechanics](https://basics2022.github.io/bbooks-physics-modern/ch/statistical-mechanics/intro.html).
 
 Under these assumptions, mass conservation (Lavoisier principle) holds, inertial reference frames are related by Galileian relativity and the equations of motions are deterministic and can be solved with a reasonable effort - compared to the information and detail contained in the results - either analytically or numerically.
-
-In classical mechanics, time and space are individually absolute - this is not true in special relativity.
-
-**Contents.** Different formulations of mechanics are available. Newton formulation was developed at the end of XVII century and starts from mass conservation and Newton's three principles of dynamics, summarised in invariance under Galileian transformations, the relation between force and the change of momentum of a system, and action/reaction principle. Analytical mechanics was developed in the following centuries by D'Alembert and Lagrange and starts from variational principles, leading to Lagrange or Hamiltonian equations of motion.
+Classical mechanics treats time and space as individually absolute physical quantities: this can be a good model whenever Einstein relativity effects are negligible.
 
 
 <!--

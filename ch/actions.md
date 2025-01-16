@@ -1,11 +1,13 @@
+<!--
 ```{article-info}
 :author: basics
 :date: "{sub-ref}`today`"
 :read-time: "{sub-ref}`wordcount-minutes` min read"
 ```
+-->
 
 (classical-mechanics:actions)=
-# Azioni
+# Actions
 
 **Cos'è una forza?**
 Newton lega il concetto di azione, che comprende i concetti di forza e momento, alle cause che distinguono il *moto vero* dal *moto relativo*: per Newton, queste cause sono le forze.
