@@ -7,11 +7,20 @@
 (classical-mechanics:lagrange)=
 # Lagrangian Mechanics
 
+Classical mechanics can be re-formulated starting from variational principles, usually referred as **analytical mechanics**. Under some assumptions, that will be discussed during the derivation, analytical mechanics is equivalent to Newton mechanics.
+
+Here, the equivalence of analytical mechanics and Newton mechanics is stressed, by means of the derivation of the principle of analytical mechanics starting from the equations of motions derived in Newtonian mechanics, relying on the conservation of mass and the three principles of Newton mechanics. The process is shown for [point systems](classical-mechanics:lagrange:point), [systems of points](classical-mechanics:lagrange:points), [extended rigid bodies](classical-mechanics:lagrange:rigid) and follows these steps:
+- **strong form of equations.** Starting point is the dynamical equations of Newton mechanics, here also referred as the strong form of equations
+- **weak form of equations.** Strong form are recast in weak form, also referred as **D'Alembert approach** or **virtual work formulation**, multiplying strong form of equations for arbitrary test functions
+- **Lagrange equations.** A proper choice of test functions as a function of generalized coordinates, and some manipulation, leads to Lagrange equations. While the choice of test functions depends on the nature of the system, their expression always reads
+
+   $$\dfrac{d}{dt}\left( \frac{\partial \mathscr{L}}{\partial \dot{q}} \right) - \frac{\partial \mathscr{L}}{\partial q} = Q_q$$
+
+
+
 Riformulazione della meccanica di Newton:
 - **forma debole** delle equazioni: approccio di D'Alembert, lavori virtuali
 - **equazioni di Lagrange**
-
-$$\dfrac{d}{dt}\Big( \frac{\partial \mathscr{L}}{\partial \dot{q}} \Big) - \frac{\partial \mathscr{L}}{\partial q} = Q_q$$
 
 con $\mathscr{L}(\dot{q}(t), q(t), t) = K(\dot{q}(t), q(t), t) + U(q(t), t)$.
 
