@@ -71,7 +71,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../_static/favicon.svg"/>
     <link rel="index" title="Indice" href="../genindex.html" />
     <link rel="search" title="Cerca" href="../search.html" />
-    <link rel="next" title="6. Meccanica analitica: formulazione di Hamilton" href="hamilton.html" />
+    <link rel="next" title="6. Hamiltonian Mechanics" href="hamilton.html" />
     <link rel="prev" title="5.2. System of points" href="lagrange-points.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="it"/>
@@ -211,7 +211,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">5.3. Rigid Body</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="hamilton.html">6. Meccanica analitica: formulazione di Hamilton</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hamilton.html">6. Hamiltonian Mechanics</a></li>
 </ul>
 
     </div>
@@ -373,8 +373,56 @@ document.write(`
 <p>with momentum <span class="math notranslate nohighlight">\(\vec{Q} = m \vec{v}_G\)</span> and angular momentum <span class="math notranslate nohighlight">\(\vec{\Gamma}_G = \mathbb{I}_G \cdot \vec{\omega}\)</span>.</p>
 <p><strong>Weak form.</strong> Weak form of dynamical equations is derived with scalar multiplication of the strong form by an arbitrary test functions <span class="math notranslate nohighlight">\(\vec{w}_t\)</span>, <span class="math notranslate nohighlight">\(\vec{w}_r\)</span></p>
 <div class="math notranslate nohighlight" id="equation-eq-lagrange-rigid-weak">
-<span class="eqno">(5.3)<a class="headerlink" href="#equation-eq-lagrange-rigid-weak" title="Permalink a questa equazione">#</a></span>\[\vec{0} = \vec{w}_t \cdot \left( m \dot{\vec{v}} - \vec{R}^e\right) + \vec{w}_r \cdot ( \dot{\vec{\Gamma}}_G - \vec{M}^e_G ) \qquad \forall \vec{w}\]</div>
-<p><strong>Lagrange equations.</strong></p>
+<span class="eqno">(5.3)<a class="headerlink" href="#equation-eq-lagrange-rigid-weak" title="Permalink a questa equazione">#</a></span>\[\vec{0} = \vec{w}_t \cdot \left( m \dot{\vec{v}}_G - \vec{R}^e\right) + \vec{w}_r \cdot \left( \dot{\vec{\Gamma}}_G - \vec{M}^e_G \right) \qquad \forall \vec{w}_t, \, \vec{w}_r\]</div>
+<p><strong>Lagrange equations.</strong> Lagrange equations are derived from the weak form, with a proper choice of the weak test functions. The «translational part» is recasted after choosing</p>
+<div class="math notranslate nohighlight">
+\[\vec{w}_t = \frac{\partial \vec{r}}{\partial q^k} = \frac{\partial \vec{v}}{\partial \dot{q}^k} \ .\]</div>
+<p>Following the same steps show to derive <a class="reference internal" href="lagrange-point.html#classical-mechanics-lagrange-point"><span class="std std-ref">Lagrange equations for a point system</span></a>, the translational part becomes</p>
+<div class="math notranslate nohighlight">
+\[\dfrac{d}{dt}\frac{\partial K^{tr}}{\partial \dot{q}^k} - \frac{\partial K^{tr}}{\partial q^k} - \frac{\partial U^{tr}}{\partial q^{k}} = Q^{tr}_{k} \ ,\]</div>
+<p>being <span class="math notranslate nohighlight">\(K^{tr} = \frac{1}{2} m |\vec{v}_G|^2\)</span> the contribution to kinetic energy of the velocity of the center of mass <span class="math notranslate nohighlight">\(G\)</span> deriving from the momentum equation, <span class="math notranslate nohighlight">\(U^{tr}\)</span> the contribution to the potential energy <span class="math notranslate nohighlight">\(U\)</span> from the momentum equation, and <span class="math notranslate nohighlight">\(Q^{tr}_{k}\)</span> the contribution to the generalized force from the momentum equation.</p>
+<p>The «rotational part» is recasted after choosing</p>
+<div class="math notranslate nohighlight">
+\[\vec{w}_r = \frac{\partial \vec{\theta}}{\partial q^k} = \frac{\partial \vec{\omega}}{\partial \dot{q}^k} \]</div>
+<p>Angular velocity <span class="math notranslate nohighlight">\(\vec{\omega}\)</span> can be written w.r.t the inertial <span class="math notranslate nohighlight">\(\{ \hat{e}_i \}\)</span> or the material reference frame <span class="math notranslate nohighlight">\(\{ \hat{E}_i \}\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[\vec{\omega} = \omega_i \hat{e}_i = \sigma_j \hat{E}_j \ ,\]</div>
+<p>and the inertia tensor as</p>
+<div class="math notranslate nohighlight">
+\[\mathbb{I}_G = I_{ij} \, \hat{E}_i \otimes \hat{E}_j \ ,\]</div>
+<p>being the components <span class="math notranslate nohighlight">\(I_{ij}\)</span> constant.</p>
+<div class="math notranslate nohighlight">
+\[0 = \frac{\partial \vec{\omega}}{\partial \dot{q}^k} \cdot \dfrac{d}{d t} \left( \mathbb{I}_G \cdot \vec{\omega} \right) - \frac{\partial \vec{\omega}}{\partial \dot{q}^k } \cdot \vec{M}^e_G = \dfrac{d}{dt}\left( \frac{\partial \vec{\omega}}{\partial \dot{q}^k} \cdot \mathbb{I}_G \cdot \vec{\omega} \right) - \dfrac{d}{dt} \frac{\partial \vec{\omega}}{\partial \dot{q}^k} \cdot \mathbb{I}_G \cdot \vec{\omega} - \frac{\partial \vec{\theta}}{\partial q^k} \cdot \vec{M}^e_G\]</div>
+<p>The first term becomes</p>
+<div class="math notranslate nohighlight">
+\[\dfrac{d}{dt}\left( \frac{\partial \vec{\omega}}{\partial \dot{q}^k} \cdot \mathbb{I}_G \cdot \vec{\omega} \right) = \dfrac{d}{dt} \left( \frac{\partial \sigma_a}{\partial \dot{q}^k} I_{ab} \sigma_b \right) = \dfrac{d}{dt} \dfrac{\partial}{\partial \dot{q}^k}\left( \dfrac{1}{2} \vec{\omega} \cdot \mathbb{I}_G \cdot \vec{\omega} \right) = \dfrac{d}{dt}\dfrac{\partial K^{rot}}{\partial \dot{q}^k}\]</div>
+<p>The second term becomes</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+ \dfrac{d}{dt} \frac{\partial \vec{\theta}}{\partial q^k} \cdot \mathbb{I}_G \cdot \vec{\omega} 
+  &amp; = \dfrac{\partial }{\partial q^k} \underbrace{\dfrac{d \vec{\theta}}{d t}}_{\vec{\omega}} \cdot \mathbb{I}_G \cdot \vec{\omega} = \\
+  &amp; = \dfrac{\partial \vec{\omega}}{\partial q^k} \cdot \mathbb{I}_G \cdot \vec{\omega} = \\
+  &amp; = \dfrac{\partial}{\partial q^k} \left( \sigma_a \hat{E}_a \right) \cdot \hat{E}_b \, I_{bc} \sigma_c = \\
+  &amp; = \dfrac{\partial \sigma_a}{\partial q^k} \underbrace{\hat{E}_a \cdot \hat{E}_b}_{= \delta_{ab}} \, I_{bc} \sigma_c 
+    + \sigma_a \underbrace{\dfrac{\partial \hat{E}_a}{\partial q^k}  \cdot \hat{E}_b}_{= 0} \, I_{bc} \sigma_c = \\
+  &amp; = \dfrac{\partial}{\partial q^k} \left( \frac{1}{2} \sigma_a \, I_{ab} \sigma_b \right) = \\
+  &amp; = \dfrac{\partial }{\partial q^k} \left( \frac{1}{2} \vec{\omega} \cdot \mathbb{I}_G \cdot \vec{\omega} \right) 
+    = \dfrac{\partial K^{rot}}{\partial q^k} \ .
+\end{aligned}\end{split}\]</div>
+<p>The third term can be written as the sum of the derivative of a potential function and a generalized force,</p>
+<div class="math notranslate nohighlight">
+\[\frac{\partial \vec{\theta}}{\partial q^k} \cdot \vec{M}_G^e = \frac{\partial U^{rot}}{\partial q^k} + Q^{rot}_{q^k}\]</div>
+<p>The rotational part of the wak form becomes</p>
+<div class="math notranslate nohighlight">
+\[\dfrac{d}{dt}\frac{\partial K^{rot}}{\partial \dot{q}^k} - \frac{\partial K^{rot}}{\partial q^k} - \frac{\partial U^{rot}}{\partial q^{k}} = Q^{rot}_{q^k} \ ,\]</div>
+<p>being <span class="math notranslate nohighlight">\(K^{rot} = \frac{1}{2} \vec{\omega} \cdot \mathbb{I}_G \cdot \vec{\omega}\)</span> the contribution to kinetic energy of the rotation aroung the center of mass <span class="math notranslate nohighlight">\(G\)</span> deriving from the angular momentum equation, <span class="math notranslate nohighlight">\(U^{rot}\)</span> the contribution to the potential energy <span class="math notranslate nohighlight">\(U\)</span> from the angular momentum equation, and <span class="math notranslate nohighlight">\(Q^{rot}_{k}\)</span> the contribution to the generalized force from the angular momentum equation.</p>
+<p>Adding together the contributions of the momentum and the angular momentum equations, the Lagrange equation can be formally written with the same expression found for the system of points,</p>
+<div class="math notranslate nohighlight">
+\[\dfrac{d}{dt}\left(\frac{\partial \mathscr{L}}{\partial \dot{q}^k}\right) - \frac{\partial \mathscr{L}}{\partial q^k} = Q_{q^k} \ ,\]</div>
+<p>being <span class="math notranslate nohighlight">\(\mathscr{L} = K + U\)</span> the Lagrangian function of the system, and <span class="math notranslate nohighlight">\(K = K^{tr} + K^{rot}\)</span>, <span class="math notranslate nohighlight">\(U = U^{tr} + U^{rot}\)</span>, <span class="math notranslate nohighlight">\(Q_{q^k} = Q_{q^k}^{tr} + Q_{q^k}^{rot}\)</span> the kinetic energy the potential function and the generalized force of the system, defined as the sum of the contributions coming from the momentum and the angular momentum equations.</p>
+<!--
+$$\vec{w}_r = \frac{\partial \theta_l}{\partial q^k} \, \hat{e}_l = - \frac{1}{2} \varepsilon_{lab} \dfrac{\partial R_{ac}}{\partial q^k} R_{bc} \, \hat{e}_l$$
+-->
 </div>
 
     <script type="text/x-thebe-config">
@@ -421,7 +469,7 @@ document.write(`
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">successivo</p>
-        <p class="prev-next-title"><span class="section-number">6. </span>Meccanica analitica: formulazione di Hamilton</p>
+        <p class="prev-next-title"><span class="section-number">6. </span>Hamiltonian Mechanics</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
