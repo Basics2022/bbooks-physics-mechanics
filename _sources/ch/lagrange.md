@@ -21,7 +21,7 @@ Here, the equivalence of analytical mechanics and Newton mechanics is stressed, 
 - Lagrange equations can be interpreted as a result of a stationary principle of a functional, $S$, defined **action functional**. Here, **assuming $Q_{q^{k}} = 0$**, and multiplying by $w^k(t)$, integrating over time from $t_0$, $t_1$, and assuming that $w(t_0) = w(t_1) = 0$,
 
 $$\begin{aligned}
-  0 & = \int_{t_0}^{t_1} \w^k (t) \left[ \dfrac{d}{dt}\left( \frac{\partial \mathscr{L}}{\partial \dot{q}^k} \right) - \frac{\partial \mathscr{L}}{\partial q} \right] \, dt = \\
+  0 & = \int_{t_0}^{t_1} w^k (t) \left[ \dfrac{d}{dt}\left( \frac{\partial \mathscr{L}}{\partial \dot{q}^k} \right) - \frac{\partial \mathscr{L}}{\partial q} \right] \, dt = \\
     & = w^k(t) \left.\left( \frac{\partial \mathscr{L}}{\partial \dot{q}^k} \right)\right|_{t_0}^{t_1} - \int_{t_0}^{t_1} \left[ w^k(t) \, \frac{\partial \mathscr{L}}{\partial \dot{q}^k} + w^k(t) \, \frac{\partial \mathscr{L}}{\partial q^k} \right] \, dt \ . \\
 \end{aligned}$$
 
