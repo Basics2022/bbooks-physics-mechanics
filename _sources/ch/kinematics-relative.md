@@ -7,7 +7,11 @@ $$P - O =  x^k_{P/O}   \hat{e}_k$$
 $$O'- O =  x^k_{O'/O}  \hat{e}_k$$
 $$P - O'= x'^k_{P/O'} \hat{e}'_k$$
 
-$$\vec{e}'_i = \mathbb{R} \cdot \vec{e}_i$$
+$$\begin{aligned}
+  \hat{e}'_i 
+  = \hat{e}'_i \cdot \hat{e}_k \, \hat{e}_k =
+  = \mathbb{R} \cdot \hat{e}_i =
+\end{aligned}$$
 
 ## Points
 
