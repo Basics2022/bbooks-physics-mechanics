@@ -34,6 +34,7 @@ parts:
       - file: ch/dynamics-eom-rigid
       - file: ch/dynamics-eom-continuum
     - file: ch/dynamics-motions
+    - file: ch/dynamics-equilibrium-stability
       sections:
       - file: ch/dynamics-motions-gravitation-2bodies
 - caption: Analytical Mechanics

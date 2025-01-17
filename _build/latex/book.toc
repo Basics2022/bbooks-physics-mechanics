@@ -1,11 +1,11 @@
-\selectlanguage *{italian}
+\selectlanguage *{english}
 \contentsline {part}{I\hspace {1em}Newton Mechanics}{3}{part.1}%
 \contentsline {chapter}{\numberline {1}Kinematics}{5}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Space and time}{5}{section.1.1}%
 \contentsline {section}{\numberline {1.2}Models}{5}{section.1.2}%
-\contentsline {section}{\numberline {1.3}Point}{6}{section.1.3}%
-\contentsline {section}{\numberline {1.4}Rigid Body}{6}{section.1.4}%
-\contentsline {subsection}{\numberline {1.4.1}Rigid motion}{6}{subsection.1.4.1}%
+\contentsline {section}{\numberline {1.3}Point}{5}{section.1.3}%
+\contentsline {section}{\numberline {1.4}Rigid Body}{5}{section.1.4}%
+\contentsline {subsection}{\numberline {1.4.1}Rigid motion}{5}{subsection.1.4.1}%
 \contentsline {subsection}{\numberline {1.4.2}Kinematics of rigid body}{6}{subsection.1.4.2}%
 \contentsline {section}{\numberline {1.5}Rotations}{6}{section.1.5}%
 \contentsline {subsection}{\numberline {1.5.1}Rotation tensor}{6}{subsection.1.5.1}%
@@ -17,30 +17,31 @@
 \contentsline {subsection}{\numberline {1.7.1}Points}{8}{subsection.1.7.1}%
 \contentsline {subsection}{\numberline {1.7.2}Rigid bodies}{9}{subsection.1.7.2}%
 \contentsline {chapter}{\numberline {2}Actions}{11}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Forze, momenti, forze distribuite}{12}{section.2.1}%
+\contentsline {section}{\numberline {2.1}Forze, momenti, forze distribuite}{11}{section.2.1}%
 \contentsline {section}{\numberline {2.2}Lavoro e potenza}{12}{section.2.2}%
 \contentsline {subsection}{\numberline {2.2.1}Lavoro e potenza di una forza}{12}{subsection.2.2.1}%
 \contentsline {subsection}{\numberline {2.2.2}Lavoro e potenza di una coppia di forze}{12}{subsection.2.2.2}%
 \contentsline {section}{\numberline {2.3}Azioni conservative}{13}{section.2.3}%
-\contentsline {section}{\numberline {2.4}Reazioni vincolari}{14}{section.2.4}%
+\contentsline {section}{\numberline {2.4}Reazioni vincolari}{13}{section.2.4}%
 \contentsline {subsection}{\numberline {2.4.1}Esempi 2D}{14}{subsection.2.4.1}%
 \contentsline {subsection}{\numberline {2.4.2}Esempi 3D}{14}{subsection.2.4.2}%
 \contentsline {section}{\numberline {2.5}Esempi}{14}{section.2.5}%
 \contentsline {chapter}{\numberline {3}Inertia}{15}{chapter.3}%
 \contentsline {chapter}{\numberline {4}Dynamics}{17}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Principi della dinamica}{17}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Equazioni cardinali della dinamica}{18}{section.4.2}%
+\contentsline {section}{\numberline {4.1}Principles of Newton mechanics}{17}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Equations of motion}{18}{section.4.2}%
 \contentsline {subsection}{\numberline {4.2.1}Equazioni cardinali}{18}{subsection.4.2.1}%
 \contentsline {subsection}{\numberline {4.2.2}Principi di conservazione}{18}{subsection.4.2.2}%
 \contentsline {subsection}{\numberline {4.2.3}Equazioni cardinali della dinamica: punto materiale}{19}{subsection.4.2.3}%
 \contentsline {subsection}{\numberline {4.2.4}Equazioni cardinali della dinamica: sistemi discreti di punti materiali}{20}{subsection.4.2.4}%
-\contentsline {subsection}{\numberline {4.2.5}Equazioni cardinali della dinamica: corpo rigido}{21}{subsection.4.2.5}%
+\contentsline {subsection}{\numberline {4.2.5}Equazioni cardinali della dinamica: corpo rigido}{22}{subsection.4.2.5}%
 \contentsline {subsection}{\numberline {4.2.6}Equazioni cardinali della dinamica: mezzi continui}{22}{subsection.4.2.6}%
 \contentsline {section}{\numberline {4.3}Moti particolari}{22}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Gravitazione: problema dei due corpi}{22}{subsection.4.3.1}%
-\contentsline {part}{II\hspace {1em}Analytical Mechanics}{23}{part.2}%
-\contentsline {chapter}{\numberline {5}Lagrangian Mechanics}{25}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Point}{26}{section.5.1}%
-\contentsline {section}{\numberline {5.2}System of points}{27}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Rigid Body}{27}{section.5.3}%
-\contentsline {chapter}{\numberline {6}Hamiltonian Mechanics}{31}{chapter.6}%
+\contentsline {section}{\numberline {4.4}Equilibrium and Stability}{23}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Gravitazione: problema dei due corpi}{23}{subsection.4.4.1}%
+\contentsline {part}{II\hspace {1em}Analytical Mechanics}{25}{part.2}%
+\contentsline {chapter}{\numberline {5}Lagrangian Mechanics}{27}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Point}{28}{section.5.1}%
+\contentsline {section}{\numberline {5.2}System of points}{29}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Rigid Body}{29}{section.5.3}%
+\contentsline {chapter}{\numberline {6}Hamiltonian Mechanics}{33}{chapter.6}%

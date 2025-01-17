@@ -1,11 +1,23 @@
+<!--
 ```{article-info}
 :author: basics
 :date: "{sub-ref}`today`"
 :read-time: "{sub-ref}`wordcount-minutes` min read"
 ```
+-->
 
 (classical-mechanics:dynamics:eom)=
-# Equazioni cardinali della dinamica
+# Equations of motion
+
+Starting from [principles of Newton mechanics](classical-mechanics:dynamics:principles), it's possible to derive dynamical equations governing the motion of mechanical systems. The general form of these equations are easily expressed in terms of dynamical quantities discussed in the inertia section,
+
+$$\begin{aligned}
+ \dfrac{d \vec{Q}       }{dt} & = \vec{R}^e                               & \qquad \text{(momentum balance equation)} \\
+ \dfrac{d \vec{\Gamma}_H}{dt} & = -\vec{r}_H \times \vec{Q} + \vec{M}^e_H & \qquad \text{(angular momentum balance equation)} \\
+ \dfrac{d      K        }{dt} & = P^{tot}                                 & \qquad \text{(kinetic energy balance equation)} \\
+\end{aligned}$$
+
+for every mechanical (closed) mechanical system. These equations will be derived for different systems in the following sections: point, system of points, rigid body.
 
 Utilizzando i concetti di quantità di moto, momento della quantità di moto ed energia cinetica di un sistema, si possono scrivere le 3 equazioni cardinali della dinamica in una forma valida per **ogni sistema chiuso**. Nel caso siano soddisfatte alcune condizioni, e solo in questo caso, le equazioni cardinali della dinamica rappresentano dei principi di conservazione delle quantità dinamiche: osservando le espressioni delle equazioni cardinali, è facile intuire che la condizione da soddisfare per otenere un principio di conservazione è l'annullamento di tutti i termini ad eccezione della derivata temporale della quantità conservata.
 

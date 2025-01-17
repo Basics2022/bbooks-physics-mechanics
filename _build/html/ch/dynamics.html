@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 
 
-<html lang="it" data-content_root="" >
+<html lang="en" data-content_root="" >
 
   <head>
     <meta charset="utf-8" />
@@ -56,7 +56,6 @@
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js"></script>
-    <script src="../_static/translations.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
@@ -67,12 +66,12 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'ch/dynamics';</script>
     <link rel="shortcut icon" href="../_static/favicon.svg"/>
-    <link rel="index" title="Indice" href="../genindex.html" />
-    <link rel="search" title="Cerca" href="../search.html" />
-    <link rel="next" title="4.1. Principi della dinamica" href="dynamics-principles.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="4.1. Principles of Newton mechanics" href="dynamics-principles.html" />
     <link rel="prev" title="3. Inertia" href="inertia.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="it"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -186,16 +185,17 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 <li class="toctree-l1"><a class="reference internal" href="inertia.html">3. Inertia</a></li>
 <li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">4. Dynamics</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="dynamics-principles.html">4.1. Principi della dinamica</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="dynamics-eom.html">4.2. Equazioni cardinali della dinamica</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="dynamics-principles.html">4.1. Principles of Newton mechanics</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="dynamics-eom.html">4.2. Equations of motion</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="dynamics-eom-point.html">4.2.3. Equazioni cardinali della dinamica: punto materiale</a></li>
 <li class="toctree-l3"><a class="reference internal" href="dynamics-eom-points.html">4.2.4. Equazioni cardinali della dinamica: sistemi discreti di punti materiali</a></li>
 <li class="toctree-l3"><a class="reference internal" href="dynamics-eom-rigid.html">4.2.5. Equazioni cardinali della dinamica: corpo rigido</a></li>
 <li class="toctree-l3"><a class="reference internal" href="dynamics-eom-continuum.html">4.2.6. Equazioni cardinali della dinamica: mezzi continui</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="dynamics-motions.html">4.3. Moti particolari</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="dynamics-motions-gravitation-2bodies.html">4.3.1. Gravitazione: problema dei due corpi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dynamics-motions.html">4.3. Moti particolari</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="dynamics-equilibrium-stability.html">4.4. Equilibrium and Stability</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="dynamics-motions-gravitation-2bodies.html">4.4.1. Gravitazione: problema dei due corpi</a></li>
 </ul>
 </li>
 </ul>
@@ -257,7 +257,7 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 <div class="dropdown dropdown-download-buttons">
-  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Scarica questa pagina">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
     <i class="fas fa-download"></i>
   </button>
   <ul class="dropdown-menu">
@@ -266,7 +266,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       <li><a href="../_sources/ch/dynamics.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
-   title="Scarica il file sorgente"
+   title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
@@ -284,7 +284,7 @@ const thebe_selector_output = ".output, .cell_output"
       <li>
 <button onclick="window.print()"
   class="btn btn-sm btn-download-pdf-button dropdown-item"
-  title="Stampa in PDF"
+  title="Print to PDF"
   data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
@@ -304,7 +304,7 @@ const thebe_selector_output = ".output, .cell_output"
 
 <button onclick="toggleFullScreen()"
   class="btn btn-sm btn-fullscreen-button"
-  title="Modalità schermo intero"
+  title="Fullscreen mode"
   data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
   
@@ -330,7 +330,7 @@ document.write(`
 
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Cerca" aria-label="Cerca" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
@@ -369,8 +369,14 @@ document.write(`
 -->
 <div class="tex2jax_ignore mathjax_ignore section" id="dynamics">
 <span id="classical-mechanics-dynamics"></span><h1><span class="section-number">4. </span>Dynamics<a class="headerlink" href="#dynamics" title="Permalink to this heading">#</a></h1>
-<p>La dinamica fornisce il legame tra il moto di un corpo e le azioni causa del moto stesso.</p>
-<p>I principi della dinamica di Newton e le equazioni cardinali della dinamica sono le leggi fisiche che governano il moto dei sistemi meccanici. Queste leggi fisiche vengono formulate nei termini di alcune grandezze fisiche, come la quantità di moto, il momento della quantità di moto o l’energia cinetica del sistema. Queste grandezze dinamiche hanno la proprietà di essere additive (per definizione) e rendono particolarmente facile la scrittura di una forma generale delle equazioni che governano il moto, e che si riducono a una relazione tra la derivate nel tempo di queste grandezze dinamiche e le cause della loro variazione. In assenza di cause nette, si ottengono i princìpi di conservazione.</p>
+<p>Dynamics provides the link between the motion of a body and the forces causing that motion.</p>
+<p>Newton’s principles of dynamics and the cardinal equations of dynamics are the physical laws that govern the motion of mechanical systems: <a class="reference internal" href="dynamics-principles.html#classical-mechanics-dynamics-principles"><span class="std std-ref">Newton’s principles</span></a> agree with the experimental observations (for systems with negligible quantum and Einstein relativity effects) and are the starting point - the principles - of Newton’s formulation of mechanics; from these principles, <a class="reference internal" href="dynamics-eom.html#classical-mechanics-dynamics-eom"><span class="std std-ref">equations of motion</span></a> of mechanical systems are derived.
+These physical laws are formulated in terms of certain physical quantities, such as momentum, angular momentum, or the kinetic energy of the system - already discussed in the section about <a class="reference internal" href="inertia.html#classical-mechanics-inertia"><span class="std std-ref">inertia</span></a>. These dynamic quantities have the property of being additive (by definition), and making it particularly easy to write and interpret a general form of the equations governing motion. In general, these equations relate the time derivatives of these dynamic quantities to the causes of their variation. In the absence of net causes, conservation principles hold.</p>
+<!--
+La dinamica fornisce il legame tra il moto di un corpo e le azioni causa del moto stesso.
+
+I principi della dinamica di Newton e le equazioni cardinali della dinamica sono le leggi fisiche che governano il moto dei sistemi meccanici. Queste leggi fisiche vengono formulate nei termini di alcune grandezze fisiche, come la quantità di moto, il momento della quantità di moto o l'energia cinetica del sistema. Queste grandezze dinamiche hanno la proprietà di essere additive (per definizione) e rendono particolarmente facile la scrittura di una forma generale delle equazioni che governano il moto, e che si riducono a una relazione tra la derivate nel tempo di queste grandezze dinamiche e le cause della loro variazione. In assenza di cause nette, si ottengono i princìpi di conservazione.
+-->
 <div class="toctree-wrapper compound">
 </div>
 </div>
@@ -410,7 +416,7 @@ document.write(`
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
-        <p class="prev-next-subtitle">precedente</p>
+        <p class="prev-next-subtitle">previous</p>
         <p class="prev-next-title"><span class="section-number">3. </span>Inertia</p>
       </div>
     </a>
@@ -418,8 +424,8 @@ document.write(`
        href="dynamics-principles.html"
        title="next page">
       <div class="prev-next-info">
-        <p class="prev-next-subtitle">successivo</p>
-        <p class="prev-next-title"><span class="section-number">4.1. </span>Principi della dinamica</p>
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">4.1. </span>Principles of Newton mechanics</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -439,7 +445,7 @@ document.write(`
   <div class="footer-item">
     
 <p class="component-author">
-Di basics
+By basics
 </p>
 
   </div>
