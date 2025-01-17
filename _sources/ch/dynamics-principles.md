@@ -1,11 +1,13 @@
+<!--
 ```{article-info}
 :author: basics
 :date: "{sub-ref}`today`"
 :read-time: "{sub-ref}`wordcount-minutes` min read"
 ```
+-->
 
 (classical-mechanics:dynamics:principles)=
-# Principi della dinamica
+# Principles of Newton mechanics
 
 **Primo principio della dinamica.**
 Un corpo (o meglio, il baricentro di un corpo) sul quale agisce una forza netta nulla, persevera nel suo stato di quiete o di moto rettilineo uniforme rispetto a un sistema di riferimento inerziale.

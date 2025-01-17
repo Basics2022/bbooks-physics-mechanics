@@ -1,11 +1,13 @@
+<!--
 ```{article-info}
 :author: basics
 :date: "{sub-ref}`today`"
 :read-time: "{sub-ref}`wordcount-minutes` min read"
 ```
+-->
 
 (classical-mechanics:dynamics:eom)=
-# Equazioni cardinali della dinamica
+# Equations of motion
 
 Utilizzando i concetti di quantità di moto, momento della quantità di moto ed energia cinetica di un sistema, si possono scrivere le 3 equazioni cardinali della dinamica in una forma valida per **ogni sistema chiuso**. Nel caso siano soddisfatte alcune condizioni, e solo in questo caso, le equazioni cardinali della dinamica rappresentano dei principi di conservazione delle quantità dinamiche: osservando le espressioni delle equazioni cardinali, è facile intuire che la condizione da soddisfare per otenere un principio di conservazione è l'annullamento di tutti i termini ad eccezione della derivata temporale della quantità conservata.
 
