@@ -12,7 +12,7 @@ Different formulations of mechanics are available. Newton formulation was develo
 ```
 ```{dropdown} Inertia
 ```
-```{dropdown} Dynamics
+```{dropdown} [Dynamics](classical-mechanics:dynamics)
 ```
 
 **Analytical Mechanics.**
