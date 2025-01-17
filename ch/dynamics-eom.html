@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 
 
-<html lang="it" data-content_root="" >
+<html lang="en" data-content_root="" >
 
   <head>
     <meta charset="utf-8" />
@@ -56,7 +56,6 @@
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js"></script>
-    <script src="../_static/translations.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
@@ -69,12 +68,12 @@ const thebe_selector_output = ".output, .cell_output"
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'ch/dynamics-eom';</script>
     <link rel="shortcut icon" href="../_static/favicon.svg"/>
-    <link rel="index" title="Indice" href="../genindex.html" />
-    <link rel="search" title="Cerca" href="../search.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="4.2.3. Equazioni cardinali della dinamica: punto materiale" href="dynamics-eom-point.html" />
     <link rel="prev" title="4.1. Principles of Newton mechanics" href="dynamics-principles.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="it"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -196,8 +195,9 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l3"><a class="reference internal" href="dynamics-eom-continuum.html">4.2.6. Equazioni cardinali della dinamica: mezzi continui</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="dynamics-motions.html">4.3. Moti particolari</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="dynamics-motions-gravitation-2bodies.html">4.3.1. Gravitazione: problema dei due corpi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dynamics-motions.html">4.3. Moti particolari</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="dynamics-equilibrium-stability.html">4.4. Equilibrium and Stability</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="dynamics-motions-gravitation-2bodies.html">4.4.1. Gravitazione: problema dei due corpi</a></li>
 </ul>
 </li>
 </ul>
@@ -259,7 +259,7 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 <div class="dropdown dropdown-download-buttons">
-  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Scarica questa pagina">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
     <i class="fas fa-download"></i>
   </button>
   <ul class="dropdown-menu">
@@ -268,7 +268,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       <li><a href="../_sources/ch/dynamics-eom.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
-   title="Scarica il file sorgente"
+   title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
@@ -286,7 +286,7 @@ const thebe_selector_output = ".output, .cell_output"
       <li>
 <button onclick="window.print()"
   class="btn btn-sm btn-download-pdf-button dropdown-item"
-  title="Stampa in PDF"
+  title="Print to PDF"
   data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
@@ -306,7 +306,7 @@ const thebe_selector_output = ".output, .cell_output"
 
 <button onclick="toggleFullScreen()"
   class="btn btn-sm btn-fullscreen-button"
-  title="Modalità schermo intero"
+  title="Fullscreen mode"
   data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
   
@@ -332,7 +332,7 @@ document.write(`
 
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Cerca" aria-label="Cerca" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
@@ -356,7 +356,7 @@ document.write(`
         <div id="jb-print-toc">
             
             <div>
-                <h2> Contenuti </h2>
+                <h2> Contents </h2>
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
@@ -382,18 +382,26 @@ document.write(`
 -->
 <div class="tex2jax_ignore mathjax_ignore section" id="equations-of-motion">
 <span id="classical-mechanics-dynamics-eom"></span><h1><span class="section-number">4.2. </span>Equations of motion<a class="headerlink" href="#equations-of-motion" title="Permalink to this heading">#</a></h1>
+<p>Starting from <a class="reference internal" href="dynamics-principles.html#classical-mechanics-dynamics-principles"><span class="std std-ref">principles of Newton mechanics</span></a>, it’s possible to derive dynamical equations governing the motion of mechanical systems. The general form of these equations are easily expressed in terms of dynamical quantities discussed in the inertia section,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+ \dfrac{d \vec{Q}       }{dt} &amp; = \vec{R}^e                               &amp; \qquad \text{(momentum balance equation)} \\
+ \dfrac{d \vec{\Gamma}_H}{dt} &amp; = -\vec{r}_H \times \vec{Q} + \vec{M}^e_H &amp; \qquad \text{(angular momentum balance equation)} \\
+ \dfrac{d      K        }{dt} &amp; = P^{tot}                                 &amp; \qquad \text{(kinetic energy balance equation)} \\
+\end{aligned}\end{split}\]</div>
+<p>for every mechanical (closed) mechanical system. These equations will be derived for different systems in the following sections: point, system of points, rigid body.</p>
 <p>Utilizzando i concetti di quantità di moto, momento della quantità di moto ed energia cinetica di un sistema, si possono scrivere le 3 equazioni cardinali della dinamica in una forma valida per <strong>ogni sistema chiuso</strong>. Nel caso siano soddisfatte alcune condizioni, e solo in questo caso, le equazioni cardinali della dinamica rappresentano dei principi di conservazione delle quantità dinamiche: osservando le espressioni delle equazioni cardinali, è facile intuire che la condizione da soddisfare per otenere un principio di conservazione è l’annullamento di tutti i termini ad eccezione della derivata temporale della quantità conservata.</p>
 <div class="section" id="equazioni-cardinali">
 <h2><span class="section-number">4.2.1. </span>Equazioni cardinali<a class="headerlink" href="#equazioni-cardinali" title="Permalink to this heading">#</a></h2>
 <p><strong>Bilancio della quantità di moto.</strong> La derivata nel tempo della quantità di moto è uguale alla risultante delle forze esterne,</p>
 <div class="math notranslate nohighlight" id="equation-principle-q">
-<span class="eqno">(4.1)<a class="headerlink" href="#equation-principle-q" title="Permalink a questa equazione">#</a></span>\[\dot{\mathbf{Q}} = \mathbf{R}^e \ .\]</div>
-<p><strong>Bilancio del momento della quantità di moto rispetto a un polo <span class="math notranslate nohighlight">\(H\)</span>.</strong> La derivata nel tempo del momento della quantità di moto rispetto a un punto <span class="math notranslate nohighlight">\(H\)</span>, a meno di «un termine di trasporto» è uguale alla risultate dei momenti esterni rispetto al polo <span class="math notranslate nohighlight">\(H\)</span></p>
+<span class="eqno">(4.1)<a class="headerlink" href="#equation-principle-q" title="Permalink to this equation">#</a></span>\[\dot{\mathbf{Q}} = \mathbf{R}^e \ .\]</div>
+<p><strong>Bilancio del momento della quantità di moto rispetto a un polo <span class="math notranslate nohighlight">\(H\)</span>.</strong> La derivata nel tempo del momento della quantità di moto rispetto a un punto <span class="math notranslate nohighlight">\(H\)</span>, a meno di “un termine di trasporto” è uguale alla risultate dei momenti esterni rispetto al polo <span class="math notranslate nohighlight">\(H\)</span></p>
 <div class="math notranslate nohighlight" id="equation-principle-l">
-<span class="eqno">(4.2)<a class="headerlink" href="#equation-principle-l" title="Permalink a questa equazione">#</a></span>\[\dot{\mathbf{L}}_H + \dot{\mathbf{x}}_H \times \mathbf{Q} = \mathbf{M}_H^e \ .\]</div>
+<span class="eqno">(4.2)<a class="headerlink" href="#equation-principle-l" title="Permalink to this equation">#</a></span>\[\dot{\mathbf{L}}_H + \dot{\mathbf{x}}_H \times \mathbf{Q} = \mathbf{M}_H^e \ .\]</div>
 <p><strong>Bilancio dell’energia cinetica.</strong> La derivata nel tempo dell’energia cinetica è uguale alla potenza totale agente sul sistema, risultato della somma della potenza delle azioni esterne e della potenza delle azioni interne al sistema</p>
 <div class="math notranslate nohighlight" id="equation-principle-k">
-<span class="eqno">(4.3)<a class="headerlink" href="#equation-principle-k" title="Permalink a questa equazione">#</a></span>\[\dot{K} = P^{tot} = P^e + P^i\]</div>
+<span class="eqno">(4.3)<a class="headerlink" href="#equation-principle-k" title="Permalink to this equation">#</a></span>\[\dot{K} = P^{tot} = P^e + P^i\]</div>
 </div>
 <div class="section" id="principi-di-conservazione">
 <h2><span class="section-number">4.2.2. </span>Principi di conservazione<a class="headerlink" href="#principi-di-conservazione" title="Permalink to this heading">#</a></h2>
@@ -455,7 +463,7 @@ document.write(`
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
-        <p class="prev-next-subtitle">precedente</p>
+        <p class="prev-next-subtitle">previous</p>
         <p class="prev-next-title"><span class="section-number">4.1. </span>Principles of Newton mechanics</p>
       </div>
     </a>
@@ -463,7 +471,7 @@ document.write(`
        href="dynamics-eom-point.html"
        title="next page">
       <div class="prev-next-info">
-        <p class="prev-next-subtitle">successivo</p>
+        <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title"><span class="section-number">4.2.3. </span>Equazioni cardinali della dinamica: punto materiale</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
@@ -479,7 +487,7 @@ document.write(`
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contenuti
+    <i class="fa-solid fa-list"></i> Contents
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
@@ -499,7 +507,7 @@ document.write(`
   <div class="footer-item">
     
 <p class="component-author">
-Di basics
+By basics
 </p>
 
   </div>

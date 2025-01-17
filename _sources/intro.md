@@ -8,9 +8,9 @@ Different formulations of mechanics are available. Newton formulation was develo
 **Newton Mechanics.**
 ```{dropdown} [Kinematics](classical-mechanics:kinematics)
 ```
-```{dropdown} Actions
+```{dropdown} [Actions](classical-mechanics:actions)
 ```
-```{dropdown} Inertia
+```{dropdown} [Inertia](classical-mechanics:inertia)
 ```
 ```{dropdown} [Dynamics](classical-mechanics:dynamics)
 ```
