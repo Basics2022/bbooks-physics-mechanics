@@ -3,7 +3,7 @@
 
 This material is part of the [**basics-books project**](https://basics2022.github.io/bbooks). It is also available as a [.pdf document](_build/latex/book.pdf).
 
-Classical mechanics deal with the motion of systems and its causes. 
+Classical mechanics deal with the motion of systems and its causes.
 
 Different formulations of mechanics are available. Newton formulation was developed at the end of XVII century and starts from mass conservation and Newton's three principles of dynamics, summarised in invariance under Galileian transformations, the relation between force and the change of momentum of a system, and action/reaction principle. Analytical mechanics was developed in the following centuries by D'Alembert and Lagrange and starts from variational principles, leading to Lagrange or Hamiltonian equations of motion.
 
