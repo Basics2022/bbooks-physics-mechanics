@@ -70,7 +70,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../_static/favicon.svg"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="1.5. Rotations" href="kinematics-rotations.html" />
+    <link rel="next" title="1.5. Continuous Medium" href="kinematics-continuum.html" />
     <link rel="prev" title="1.3. Point" href="kinematics-point.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -170,9 +170,9 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="kinematics.html">1. Kinematics</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="kinematics-point.html">1.3. Point</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">1.4. Rigid Body</a></li>
-<li class="toctree-l2"><a class="reference internal" href="kinematics-rotations.html">1.5. Rotations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="kinematics-continuum.html">1.6. Continuous Medium</a></li>
-<li class="toctree-l2"><a class="reference internal" href="kinematics-relative.html">1.7. Relative Kinematics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kinematics-continuum.html">1.5. Continuous Medium</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kinematics-relative.html">1.6. Relative Kinematics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kinematics-rotations.html">1.7. Rotations</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="actions.html">2. Actions</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -354,7 +354,6 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rigid-motion">1.4.1. Rigid motion</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kinematics-of-rigid-body">1.4.2. Kinematics of rigid body</a></li>
 </ul>
             </nav>
         </div>
@@ -368,18 +367,70 @@ document.write(`
                   
   <div class="tex2jax_ignore mathjax_ignore section" id="rigid-body">
 <span id="classical-mechanics-kinematics-rigid-body"></span><h1><span class="section-number">1.4. </span>Rigid Body<a class="headerlink" href="#rigid-body" title="Permalink to this heading">#</a></h1>
-<div class="math notranslate nohighlight" id="equation-eq-kin-rigid-vel">
-<span class="eqno">(1.1)<a class="headerlink" href="#equation-eq-kin-rigid-vel" title="Permalink to this equation">#</a></span>\[\vec{v}_Q - \vec{v}_P = \vec{\omega} \times (Q-P)\]</div>
 <div class="section" id="rigid-motion">
 <h2><span class="section-number">1.4.1. </span>Rigid motion<a class="headerlink" href="#rigid-motion" title="Permalink to this heading">#</a></h2>
-<p>Rigid motion preserves distance between any pair of points, and thus angles. Rotations are described by rotation matrices.</p>
-<p>The configuration of a material vector <span class="math notranslate nohighlight">\(\vec{a}\)</span> undergoing a rotation is described by the product of the rotation tensor <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> by the reference configuration <span class="math notranslate nohighlight">\(\vec{a}^0\)</span>,</p>
+<p>Rigid motion preserves distance between any pair of points, and thus angles. The motion of two material points <span class="math notranslate nohighlight">\(P\)</span>, <span class="math notranslate nohighlight">\(Q\)</span> performing a rigid motion obeys</p>
+<div class="math notranslate nohighlight" id="equation-eq-kin-rigid-vel">
+<span class="eqno">(1.1)<a class="headerlink" href="#equation-eq-kin-rigid-vel" title="Permalink to this equation">#</a></span>\[\vec{v}_P - \vec{v}_Q = \vec{\omega} \times (P - Q) \ ,\]</div>
+<p>being <span class="math notranslate nohighlight">\(\vec{v}_P\)</span>, <span class="math notranslate nohighlight">\(\vec{v}_Q\)</span> the velocity of the points and <span class="math notranslate nohighlight">\(\vec{\omega}\)</span> the <strong>angular velocity</strong> of the rigid motion. Taking a point <span class="math notranslate nohighlight">\(Q\)</span> as the reference point of the motion, the velocity of all other points can be found</p>
 <div class="math notranslate nohighlight">
-\[\vec{a} = \mathbb{R} \cdot \vec{a}^0 \ .\]</div>
-<p>A rotation tensor is unitary to preserve distance,</p>
+\[\vec{v}_P = \vec{v}_Q + \vec{\omega} \times (P-Q) \ ,\]</div>
+<p>as a function of the velocity of <span class="math notranslate nohighlight">\(Q\)</span>, the angular velocity of the rigid motion, and the relative position <span class="math notranslate nohighlight">\(P-Q\)</span>.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Proof.<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Given 3 points <span class="math notranslate nohighlight">\(P(t)\)</span>, <span class="math notranslate nohighlight">\(Q(t)\)</span>, <span class="math notranslate nohighlight">\(R(t)\)</span>, the distance bewteen each pair of points is constant and thus its time derivative zero,</p>
+<div class="math notranslate nohighlight">
+\[0 = \dfrac{d}{dt} |P(t)-Q(t)|^2 = 2 \left(P - Q\right) \cdot \left( \vec{v}_P - \vec{v}_Q \right) \quad \rightarrow \quad \Delta \vec{v}_{QP} = \vec{\omega}_{QP} \times \Delta \vec{r}_{QP}\]</div>
+<div class="math notranslate nohighlight">
+\[0 = \dfrac{d}{dt} |P(t)-R(t)|^2 = 2 \left(P - R\right) \cdot \left( \vec{v}_P - \vec{v}_R \right) \quad \rightarrow \quad \Delta \vec{v}_{RP} = \vec{\omega}_{RP} \times \Delta \vec{r}_{RP}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  0 = \dfrac{d}{dt} \left[ (P-Q) \cdot (P-R) \right] 
+  &amp; = \Delta \vec{v}_{QP} \cdot \Delta \vec{r}_{RP} + \Delta \vec{r}_{QP} \cdot \Delta \vec{v}_{RP} = \\
+  &amp; = \vec{\omega}_{QP} \times \Delta \vec{r}_{QP} \cdot \Delta \vec{r}_{RP} + \Delta \vec{r}_{QP} \cdot \Delta \vec{\omega}_{RP} \times \Delta \vec{r}_{RP} = \\
+  &amp; = \Delta \vec{r}_{QP} \times \Delta \vec{r}_{RP} \cdot ( \vec{\omega}_{QP} - \vec{\omega}_{RP} ) \ ,
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text">and since <span class="math notranslate nohighlight">\(\Delta \vec{r}_{QP}\)</span>, <span class="math notranslate nohighlight">\(\Delta \vec{r}_{RP}\)</span> are arbitrary it follows that the vector <span class="math notranslate nohighlight">\(\vec{\omega} = \vec{\omega}_{QP} = \vec{\omega}_{RP}\)</span> is unique for all the points performing a rigid motion.</p>
+</div>
+</details><p>The configuration of a material vector <span class="math notranslate nohighlight">\(\vec{a}\)</span> undergoing a rotation is described by the product of the rotation tensor <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> by the reference configuration <span class="math notranslate nohighlight">\(\vec{a}^0\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[
+\vec{a} = \mathbb{R} \cdot \vec{a}^0 
+\qquad , \qquad
+\vec{b} = \mathbb{R} \cdot \vec{b}^0 \ .
+\]</div>
+<p>In order to preserve distance, and angles</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{cases}
+ |\vec{a}|^2 = &amp; \vec{a} \cdot \vec{a} = \vec{a}^0 \cdot \mathbb{R}^T \cdot \mathbb{R} \cdot \vec{a}^0 = \vec{a}^0 \cdot \vec{a}^0 = |\vec{a}|^2 \\
+               &amp; \vec{a} \cdot \vec{b} = \vec{a}^0 \cdot \mathbb{R}^T \cdot \mathbb{R} \cdot \vec{b}^0 = \vec{a}^0 \cdot \vec{a}^0
+\end{cases}
+\qquad \rightarrow \qquad \mathbb{R}^T \cdot \mathbb{R} = \mathbb{I}
+\end{split}\]</div>
+<p>the <strong>rotation tensor</strong> is <strong>unitary</strong></p>
 <div class="math notranslate nohighlight" id="equation-eq-rot-unitary">
-<span class="eqno">(1.2)<a class="headerlink" href="#equation-eq-rot-unitary" title="Permalink to this equation">#</a></span>\[\mathbb{I} = \mathbb{R} \cdot \mathbb{R}^T = \mathbb{R}^T \cdot \mathbb{R}\]</div>
-<p>so that its time derivative reads,</p>
+<span class="eqno">(1.2)<a class="headerlink" href="#equation-eq-rot-unitary" title="Permalink to this equation">#</a></span>\[\mathbb{I} = \mathbb{R}^T \cdot \mathbb{R} = \mathbb{R} \cdot \mathbb{R}^T\]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>From relation <a class="reference internal" href="#equation-eq-rot-unitary">(1.2)</a>, it follows that</p>
+<div class="math notranslate nohighlight">
+\[1 = |\mathbb{I}| = |\mathbb{R}^T| |\mathbb{R}| = |\mathbb{R}|^2 \ ,\]</div>
+<p>and thus <span class="math notranslate nohighlight">\(|\mathbb{R}| = \mp 1\)</span>. If <span class="math notranslate nohighlight">\(|\mathbb{R}| = 1\)</span>, <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> represents a rotation, and implies conservation of orientation of space; if <span class="math notranslate nohighlight">\(|\mathbb{R}| = -1\)</span> represents a reflection w.r.t. a plane, and implies inversion of orientation of space.</p>
+<p>Orientation of space is determined by the transformation of a RHS triad of vectors: if the transform triad is RHS, then orientation of space is preserved; if it becomes LHS, then orientation of space is inverted.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Rotation tensor <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> is not singular and its determinant equals <span class="math notranslate nohighlight">\(|\mathbb{R}| = 1\)</span>. Thus, <span class="math notranslate nohighlight">\(\mathbb{R}^T \cdot \mathbb{R} = \mathbb{I}\)</span> implies <span class="math notranslate nohighlight">\(\mathbb{R} \cdot \mathbb{R}^T = \mathbb{I}\)</span>. Multiplying <a class="reference internal" href="#equation-eq-rot-unitary">(1.2)</a> by <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> on the left</p>
+<div class="math notranslate nohighlight">
+\[\mathbb{0} = \mathbb{R} \cdot \mathbb{R}^T \cdot \mathbb{R} - \mathbb{R} \cdot \mathbb{I} = (\mathbb{R} \cdot \mathbb{R}^T - \mathbb{I}) \cdot  \mathbb{R} \ ,\]</div>
+<p>and since <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> is non-singular, it follows that <span class="math notranslate nohighlight">\(\mathbb{R} \cdot \mathbb{R}^T = \mathbb{I}\)</span>.</p>
+</div>
+<p>Time derivative of the relation <a class="reference internal" href="#equation-eq-rot-unitary">(1.2)</a> reads</p>
 <div class="math notranslate nohighlight">
 \[\mathbb{0} = \dfrac{d}{dt} \left( \mathbb{R} \cdot \mathbb{R}^T \right) = \dot{\mathbb{R}} \cdot \mathbb{R}^T + \mathbb{R} \cdot \dot{\mathbb{R}}^T\]</div>
 <p>It follows that the 2-nd order tensor <span class="math notranslate nohighlight">\(\dot{\mathbb{R}} \cdot \mathbb{R}^T = - \mathbb{R} \cdot \dot{\mathbb{R}}^T\)</span> is anti-symmetric, and thus it can be written as</p>
@@ -389,15 +440,37 @@ document.write(`
 <div class="math notranslate nohighlight">
 \[\dot{\mathbb{R}} = \vec{\omega}_{\times} \cdot \mathbb{R} \ ,\]</div>
 <p>and the expression of the time derivative of a material vector <span class="math notranslate nohighlight">\(\vec{a}\)</span>,</p>
+<div class="math notranslate nohighlight" id="equation-eq-material-v-time-derivative">
+<span class="eqno">(1.4)<a class="headerlink" href="#equation-eq-material-v-time-derivative" title="Permalink to this equation">#</a></span>\[\dfrac{d \vec{a}}{d t} = \dot{\mathbb{R}} \cdot \vec{a}^0 = \vec{\omega}_{\times} \cdot \mathbb{R} \cdot \vec{a}^0 = \vec{\omega}_{\times} \cdot \vec{a} = \vec{\omega} \times \vec{a} \  .\]</div>
+<!--
+## Kinematics of rigid body
+Rigid motion allows to describe the kinematics of a rigid body - determining position, velocity and acceleration of all of its points - given the position of a material point $P$ and its orientation with respect to the reference frame, as an example using a rotation tensor $\mathbb{R}$.
+-->
+<p><strong>Position and Orientation.</strong>
+The most general rigid motion is the combination of the translation of a reference point <span class="math notranslate nohighlight">\(Q\)</span> and the rotation w.r.t. this point of other material points,</p>
+<div class="math notranslate nohighlight" id="equation-eq-rigid-pos">
+<span class="eqno">(1.5)<a class="headerlink" href="#equation-eq-rigid-pos" title="Permalink to this equation">#</a></span>\[\begin{split}\begin{aligned}
+  \vec{r}_P
+  &amp; = \vec{r}_Q + (P - Q) = \\
+  &amp; = \vec{r}_Q + \mathbb{R} \cdot (P-Q)^0 
+\end{aligned}\end{split}\]</div>
+<p><strong>Velocity and Angular velocity.</strong>
+Time derivative of the relation <a class="reference internal" href="#equation-eq-rigid-pos">(1.5)</a> between positions of material points gives again <a class="reference internal" href="#equation-eq-kin-rigid-vel">(1.1)</a></p>
+<div class="math notranslate nohighlight" id="equation-eq-rigid-vel">
+<span class="eqno">(1.6)<a class="headerlink" href="#equation-eq-rigid-vel" title="Permalink to this equation">#</a></span>\[\begin{split}\begin{aligned}
+  \vec{v}_P
+  &amp; = \vec{v}_Q + \dot{\mathbb{R}} \cdot (P-Q)^0 = \\
+  &amp; = \vec{v}_Q + \vec{\omega}_{\times} \mathbb{R} \cdot (P-Q)^0 = \\
+  &amp; = \vec{v}_Q + \vec{\omega} \times (P-Q)
+\end{aligned}\end{split}\]</div>
+<p><strong>Acceleration and Angular acceleration.</strong>
+Time derivatives of the relation {eq}`eq:rigid:vel} gives</p>
 <div class="math notranslate nohighlight">
-\[\dfrac{d \vec{a}}{d t} = \dot{\mathbb{R}} \cdot \vec{a}^0 = \vec{\omega}_{\times} \cdot \mathbb{R} \cdot \vec{a}^0 = \vec{\omega}_{\times} \cdot \vec{a} = \vec{\omega} \times \vec{a} \  .\]</div>
-</div>
-<div class="section" id="kinematics-of-rigid-body">
-<h2><span class="section-number">1.4.2. </span>Kinematics of rigid body<a class="headerlink" href="#kinematics-of-rigid-body" title="Permalink to this heading">#</a></h2>
-<p>Rigid motion allows to describe the kinematics of a rigid body - determining position, velocity and acceleration of all of its points - given the position of a material point <span class="math notranslate nohighlight">\(P\)</span> and its orientation with respect to the reference frame, as an example using a rotation tensor <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>.</p>
-<p><strong>Orientation.</strong></p>
-<p><strong>Angular velocity.</strong></p>
-<p><strong>Angular acceleration.</strong></p>
+\[\begin{split}\begin{aligned}
+\vec{a}_P 
+ &amp; = \vec{a}_Q + \vec{\alpha} \times (P-Q) + \vec{\omega} \times \left( \vec{v}_P - \vec{Q} \right) = \\
+ &amp; = \vec{a}_Q + \vec{\alpha} \times (P-Q) + \vec{\omega} \times \left[ \, \vec{\omega} \times (P - Q) \, \right] \ .
+\end{aligned}\end{split}\]</div>
 <!--
 
 I punti di corpi estesi che compiono un atto di moto rigido (**todo** definizione di atto di moto? E' utile?) mantengono costante la propria distanza. Poiché questa condizione vale per ogni coppia di punti, vengono mantenuti costanti anche gli angoli tra segmenti che congiungono punti materiali, cioè appartenenti al copo e che si muovono con esso.
@@ -500,11 +573,11 @@ $$\begin{aligned}
       </div>
     </a>
     <a class="right-next"
-       href="kinematics-rotations.html"
+       href="kinematics-continuum.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">1.5. </span>Rotations</p>
+        <p class="prev-next-title"><span class="section-number">1.5. </span>Continuous Medium</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -524,7 +597,6 @@ $$\begin{aligned}
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rigid-motion">1.4.1. Rigid motion</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kinematics-of-rigid-body">1.4.2. Kinematics of rigid body</a></li>
 </ul>
   </nav></div>
 

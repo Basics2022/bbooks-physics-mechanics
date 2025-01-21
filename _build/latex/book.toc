@@ -64,15 +64,15 @@
 \contentsline {subsubsection}{Dynamical quantities and time derivatives with \(G\) as reference point}{29}{subsubsection*.22}%
 \contentsline {chapter}{\numberline {4}Dynamics}{31}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Principles of Newtonian Mechanics}{31}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Equations of Motion}{32}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Cardinal Equations}{32}{subsection.4.2.1}%
+\contentsline {section}{\numberline {4.2}Equations of Motion and Conservation Principles}{32}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Equations of Motion}{32}{subsection.4.2.1}%
 \contentsline {subsection}{\numberline {4.2.2}Conservation Principles}{32}{subsection.4.2.2}%
 \contentsline {section}{\numberline {4.3}Equations of motion of a point mass}{33}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Cardinal Equations of Dynamics: Discrete Systems of Point Masses}{34}{section.4.4}%
-\contentsline {section}{\numberline {4.5}Equations of motion of a rigid body}{36}{section.4.5}%
+\contentsline {section}{\numberline {4.4}Equations of motion of a discrete system of point masses}{34}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Equations of motion of a rigid body}{35}{section.4.5}%
 \contentsline {subsection}{\numberline {4.5.1}General equations}{36}{subsection.4.5.1}%
 \contentsline {subsection}{\numberline {4.5.2}Dynamical equations w.r.t. the center of mass \(G\)}{36}{subsection.4.5.2}%
-\contentsline {subsection}{\numberline {4.5.3}Dynamical equations w.r.t. a material point \(Q\)}{37}{subsection.4.5.3}%
+\contentsline {subsection}{\numberline {4.5.3}Dynamical equations w.r.t. a material point \(Q\)}{36}{subsection.4.5.3}%
 \contentsline {section}{\numberline {4.6}Equations of motion for continuous media}{37}{section.4.6}%
 \contentsline {section}{\numberline {4.7}Particular Motions}{37}{section.4.7}%
 \contentsline {section}{\numberline {4.8}Equilibrium and Stability}{38}{section.4.8}%

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Debian) (preloaded format=xelatex 2024.9.16)  21 JAN 2025 21:52
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Debian) (preloaded format=xelatex 2024.9.16)  22 JAN 2025 00:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1790,9 +1790,9 @@ LaTeX Info: Redefining \rmfamily on input line 1798.
 LaTeX Info: Redefining \sffamily on input line 1798.
 LaTeX Info: Redefining \ttfamily on input line 1798.
  [34]
-LaTeX Info: Redefining \rmfamily on input line 1850.
-LaTeX Info: Redefining \sffamily on input line 1850.
-LaTeX Info: Redefining \ttfamily on input line 1850.
+LaTeX Info: Redefining \rmfamily on input line 1856.
+LaTeX Info: Redefining \sffamily on input line 1856.
+LaTeX Info: Redefining \ttfamily on input line 1856.
  [35]
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
 (Font)              scaled to size 8.00085pt on input line 1874.
@@ -1807,18 +1807,18 @@ LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1874.
 
-LaTeX Info: Redefining \rmfamily on input line 1919.
-LaTeX Info: Redefining \sffamily on input line 1919.
-LaTeX Info: Redefining \ttfamily on input line 1919.
-[36]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1919.
 
-LaTeX Info: Redefining \rmfamily on input line 2040.
-LaTeX Info: Redefining \sffamily on input line 2040.
-LaTeX Info: Redefining \ttfamily on input line 2040.
-[37]
+LaTeX Info: Redefining \rmfamily on input line 1957.
+LaTeX Info: Redefining \sffamily on input line 1957.
+LaTeX Info: Redefining \ttfamily on input line 1957.
+[36]
+LaTeX Info: Redefining \rmfamily on input line 2050.
+LaTeX Info: Redefining \sffamily on input line 2050.
+LaTeX Info: Redefining \ttfamily on input line 2050.
+ [37]
 LaTeX Info: Redefining \rmfamily on input line 2069.
 LaTeX Info: Redefining \sffamily on input line 2069.
 LaTeX Info: Redefining \ttfamily on input line 2069.
@@ -1907,12 +1907,12 @@ Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 2382.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2382.
 
 Package rerunfilecheck Info: File `book.out' has not changed.
-(rerunfilecheck)             Checksum: AF95D16EB829E09BB06E55F8515062AA;6681.
+(rerunfilecheck)             Checksum: B3458ED3D55FC7E1DCCB217EFA1E343A;6717.
  ) 
 Here is how much of TeX's memory you used:
  42217 strings out of 481789
- 952156 string characters out of 5937152
- 1665963 words of memory out of 5000000
+ 952178 string characters out of 5937152
+ 1666961 words of memory out of 5000000
  58404 multiletter control sequences out of 15000+600000
  540072 words of font info for 117 fonts, out of 8000000 for 9000
  15 hyphenation exceptions out of 8191

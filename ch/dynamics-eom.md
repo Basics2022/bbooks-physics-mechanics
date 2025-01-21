@@ -1,5 +1,5 @@
 (classical-mechanics:dynamics:eom)=
-# Equations of Motion
+# Equations of Motion and Conservation Principles
 
 Starting from the [principles of Newtonian mechanics](classical-mechanics:dynamics:principles), it is possible to derive the dynamical equations governing the motion of mechanical systems. These equations governs the change of dynamical quantities, **momentum**, **angular momentum**, **kinetic energy**, linking them to (external) **forces**, (external) **moments** and (total) **power**. Under certain conditions, and only in these cases, the [cardinal equations](classical-mechanics:dynamics:eom:eom) of dynamics become[principles of conservation of dynamic quantities](classical-mechanics:dynamics:eom:conservation): by observing the expressions of the cardinal equations, it is easy to infer that the condition to obtain a conservation principle is the vanishing of all terms except for the time derivative of the conserved quantity.
 
@@ -18,7 +18,7 @@ Using the concepts of momentum, angular momentum, and the kinetic energy of a sy
 -->
 
 (classical-mechanics:dynamics:eom:eom)=
-## Cardinal Equations
+## Equations of Motion
 
 The general form of these equations is easily expressed in terms of the dynamical quantities discussed in the section about [inertia](classical-mechanics). Cardinal equations, or equations of motion, are collected here in their most general form for closed systems, and derived in the following sectinos for different systems: [point mass](classical-mechanics:dynamics:eom:point), [systems of point masses](classical-mechanics:dynamics:eom:points), [rigid body](classical-mechanics:dynamics:eom:rigid),...
 
