@@ -35,21 +35,27 @@ $$\varepsilon_{ilk} \varepsilon_{ijk} \omega_j = \varepsilon_{ilk} \dot{R}_{ij} 
 $$2 \delta_{lj} \omega_j = \varepsilon_{ilk} \dot{R}_{ij} R_{kj}$$
 $$\omega_l = \frac{1}{2} \varepsilon_{ilk} \dot{R}_{ij} R_{kj} = - \frac{1}{2} \varepsilon_{lik} \dot{R}_{ij} R_{kj} = -\frac{1}{2} \varepsilon_{lij} \Omega_{ij}$$
 
-### Successive rotations
+**Angular acceleration.** Angular acceleration, $\vec{\alpha}$, is the time derivative of angular velocity, $\vec{\omega}$,
 
-Given 3 Cartesian bases $\{ \hat{e}^0_i \}_{i=1:3}$, $\{ \hat{e}^1_j \}_{j=1:3}$, $\{ \hat{e}^2_k \}_{k=1:3}$,
+$$\vec{\alpha} = \dot{\vec{\omega}} \ .$$
+
+## Successive rotations
+
+**Orientation.** Given 3 Cartesian bases $\{ \hat{e}^0_i \}_{i=1:3}$, $\{ \hat{e}^1_j \}_{j=1:3}$, $\{ \hat{e}^2_k \}_{k=1:3}$,
 
 $$\begin{aligned}
  \hat{e}^2_i 
   & = \mathbb{R}^{1 \rightarrow 2} \cdot \hat{e}^1_i = \\ 
   & = \mathbb{R}^{1 \rightarrow 2} \cdot \mathbb{R}^{0 \rightarrow 1} \cdot\hat{e}^0_i 
-\end{aligned}$$
+\end{aligned} \ , $$
 
-Time derivative w.r.t. reference frame 0 is indicated as the standard time derivative
+i.e composition of rotations holds
 
-$$\dot{a} = \dfrac{d a}{d t} = \dfrac{{}^0 d a}{d t} \ ,$$
+$$\mathbb{R}^{0 \rightarrow 2} = \mathbb{R}^{1 \rightarrow 2} \cdot \mathbb{R}^{0 \rightarrow 1} \ .$$
 
+**Angular velocity.** Time derivative w.r.t. reference frame 0 is indicated as the standard time derivative
 
+$$\dot{a} = \dfrac{d a}{d t} = \dfrac{{}^0 d a}{d t} = \dfrac{{}^1 d}{dt} + \vec{\omega}_{1/0} \times \ ,$$
 
 $$\begin{aligned}
 \dfrac{d}{dt} \mathbb{R}^{21} 
@@ -57,7 +63,6 @@ $$\begin{aligned}
   & = \dot{R}^{21}_{ik} \hat{e}^1_i \otimes \hat{e}^1_k + \mathbb{\Omega}^{10} \cdot  \mathbb{R}^{21} - \mathbb{R}^{21} \cdot \mathbb{\Omega}^{10} = \\
   & = \dfrac{{}^1 d}{dt} \mathbb{R}^{21} + \mathbb{\Omega}^{10} \cdot  \mathbb{R}^{21} - \mathbb{R}^{21} \cdot \mathbb{\Omega}^{10} = \\
 \end{aligned}$$
-
 
 $$\begin{aligned}
  \mathbb{\Omega}^{20}
@@ -68,7 +73,19 @@ $$\begin{aligned}
  & = \mathbb{\Omega}^{21} + \mathbb{\Omega}^{10} \ .
 \end{aligned}$$
 
-### Linearization of rotations
+so that addition of relative angular velocity holds
+
+$$\mathbb{\Omega}^{20} = \mathbb{\Omega}^{21} + \mathbb{\Omega}^{10} \qquad , \qquad \vec{\omega}_{2/0} = \vec{\omega}_{2/1} + \vec{\omega}_{1/0} \ .$$
+
+**Angular acceleration.** Time derivative of angular velocity composition provides the addition of relative angular accelerations
+
+$$\dfrac{{}^0 d}{dt} \vec{\omega}_{2/0} = \dfrac{{}^0 d}{dt} \vec{\omega}_{2/1} + \dfrac{{}^0 d}{dt} \vec{\omega}_{1/0} \ ,$$
+
+or
+
+$$\vec{\alpha}_{2/0} = \vec{\alpha}_{2/1} + \vec{\alpha}_{1/0} \ .$$
+
+## Linearization of rotations
 
 $$\mathbb{I} = \mathbb{R} \cdot \mathbb{R}^T$$
 
@@ -78,10 +95,20 @@ $$\mathbb{0} = \delta \mathbb{R} \cdot \mathbb{R}^T + \mathbb{R} \cdot \delta \m
 
 and thus the antisymmetric tensor can be written as
 
-$$\delta \theta_{\times} := \delta \mathbb{R} \cdot \mathbb{R}^T$$
+$$\delta \theta_{\times} := \delta \mathbb{R} \cdot \mathbb{R}^T = \delta \mathbb{\Theta} \ ,$$
 
 so that
 
-$$\delta \theta_l = -\frac{1}{2} \varepsilon_{lij} \delta R_{ik} \, R_{jk}$$
+$$\delta \theta_l = -\frac{1}{2} \varepsilon_{lij} \delta R_{ik} \, R_{jk} = - \frac{1}{2} \varepsilon_{lij} \delta \Theta_{ij}$$
 
-## Quaternions
+(classical-mechanics:kinematics:rotations:param)=
+## Parametrizations
+Minimal sets of parameters to represent rotations have 3 parameters. However these sets of parameters are not regular over all the possible rotations, and the transformation becomes singular somewhere. [Quaternions](classical-mechanics:kinematics:rotations:param:quaternions) provide a set of 4 parameters for a regular parametrization of rotations
+
+(classical-mechanics:kinematics:rotations:param:euler)=
+### Euler angles
+(classical-mechanics:kinematics:rotations:param:axis)=
+### Axis and rotation angle
+
+(classical-mechanics:kinematics:rotations:param:quaternions)=
+### Quaternions

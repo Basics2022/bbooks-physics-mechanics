@@ -93,7 +93,9 @@ $$\begin{aligned}
    + \dfrac{1}{2} \vec{v}_Q \cdot \left[ - \sum_k m_k (P_k - Q)_\times \right] \cdot \vec{\omega} + \\
  & + \dfrac{1}{2} \vec{\omega} \cdot \left[ \sum_k m_k (P_k - Q)_\times \right] \cdot \vec{v}_Q
    + \dfrac{1}{2} \vec{\omega} \cdot \left[ \sum_k m_k (P_k - Q)_{\times} (P_k - Q)_\times \right] \cdot \vec{\omega} = \\
- & = \dfrac{1}{2} m |\vec{v}_Q|^2 + \dfrac{1}{2} \vec{v}_Q \cdot \mathbb{S}_Q \cdot \vec{\omega} + \dfrac{1}{2} \vec{\omega} \cdot \mathbb{S}^T \cdot \vec{v}_Q + \dfrac{1}{2} \vec{\omega} \cdot \mathbb{I}_Q \cdot \vec{\omega} \ .
+ & = \dfrac{1}{2} m |\vec{v}_Q|^2 + \dfrac{1}{2} \vec{v}_Q \cdot \mathbb{S}_Q \cdot \vec{\omega} + \dfrac{1}{2} \vec{\omega} \cdot \mathbb{S}^T \cdot \vec{v}_Q + \dfrac{1}{2} \vec{\omega} \cdot \mathbb{I}_Q \cdot \vec{\omega} = \\
+ & = \dfrac{1}{2} \vec{v}_Q \cdot \left[ m \vec{v}_Q + \mathbb{S}_Q \cdot \vec{\omega} \right] + \dfrac{1}{2} \vec{\omega} \cdot \left[  \mathbb{S}_Q^T \cdot \vec{v}_Q + \mathbb{I}_Q \cdot \vec{\omega} \right] = \\
+ & = \dfrac{1}{2} \vec{v}_Q \cdot \vec{Q} + \dfrac{1}{2} \vec{\omega} \cdot \vec{L}_Q \ .
 \end{aligned}$$
 
 having used the vector identities
@@ -101,9 +103,7 @@ having used the vector identities
 $$\vec{a} \cdot \vec{b} \times \vec{c} = \vec{b} \cdot \vec{c} \times \vec{a}$$
 $$\vec{a} \times \vec{b} = - \vec{b} \times \vec{a}$$
 
-Comparing the expression of the kinetic energy with those of the momentum and angular momentum, it readily follows that
-
-$$K = \dfrac{1}{2} \vec{v}_Q \cdot \vec{Q} + \dfrac{1}{2} \vec{\omega} \cdot \vec{L}_Q \ .$$
+and having introduced the expression of momentum and angular momentum in the last step.
 
 
 ```{note}
@@ -270,6 +270,80 @@ $$\begin{aligned}
 or w.r.t. the center of mass $G$,
 
 $$ \mathbb{I}_Q = \mathbb{I}_G - m (Q-G)_\times (Q-G)_\times \ .$$
+
+
+### Time derivatives of dynamical quantities
+
+Time derivatives of dynamical quantities are easily evaluated using a Cartesian material reference frame.
+
+**Momentum.**
+
+$$\begin{aligned}
+\dfrac{d}{dt} \vec{Q} 
+  & = \dfrac{d}{dt} \left( m \vec{v}_Q + \mathbb{S}_Q \cdot \vec{\omega} \right) =  \\
+  & =  m \dot{\vec{v}}_Q + \dfrac{d}{dt} \left( \vec{E}^0_i S^0_{ij} \omega^0_j \right) = \\
+  & =  m \dot{\vec{v}}_Q + \dfrac{d\vec{E}^0_i }{dt} S^0_{ij} \omega^0_j + \vec{E}^0_i S^0_{ij} \dfrac{d} \omega^0_j{dt} = \\
+  & =  m \dot{\vec{v}}_Q + \vec{\omega} \times \vec{E}^0_i S^0_{ij} \omega^0_j + \vec{E}^0_i S^0_{ij} \dfrac{d}{dt}\omega^0_j = \\
+  & =  m \dot{\vec{v}}_Q + \vec{\omega} \times \left( \mathbb{S}_Q \cdot \vec{\omega} \right) + \mathbb{S}_Q \cdot \dot{\vec{\omega}} \ .
+\end{aligned}$$
+
+$$\begin{aligned}
+ \dfrac{d}{dt} \vec{\omega} 
+ & = \dfrac{d}{dt} \left( \hat{E}^0_i \omega_i^0 \right) = \\
+ & = \vec{\omega} \times \hat{E}^0_i \omega_i^0 + \hat{E}^0_i \dfrac{d \omega^0_i}{dt} = \\
+ & = \underbrace{\vec{\omega} \times \vec{\omega}}_{=\vec{0}} + \hat{E}^0_i \dfrac{d \omega^0_i}{dt} \ .
+\end{aligned}$$
+
+$$\begin{aligned}
+ \dfrac{d}{dt} \vec{v} 
+ & = \dfrac{d}{dt} \left( \hat{E}^0_i v_i^0 \right) = \\
+ & = \vec{\omega} \times \hat{E}^0_i v_i^0 + \hat{E}^0_i \dfrac{d v^0_i}{dt} = \\
+ & = \vec{\omega} \times \vec{v}  + \dfrac{{}^0 d}{dt} \vec{v} \\
+\end{aligned}$$
+
+
+**Angular momentum.**
+
+$$\begin{aligned}
+\dfrac{d}{dt} \vec{L}_H
+& =  \dfrac{d}{dt} \left( (Q-H) \times \vec{Q} + \vec{L}_Q  \right) \ ,
+\end{aligned}$$
+
+and
+
+$$\dfrac{d}{dt} \left( (Q-H) \times \vec{Q} \right) = ( \vec{v}_Q - \dot{\vec{x}}_H ) \times \vec{Q} + ( Q - H ) \times \dot{\vec{Q}}$$
+
+and
+
+$$\begin{aligned}
+ \dfrac{d \vec{L}_Q}{dt} 
+ & = \dfrac{d}{dt} \left( \mathbb{S}^T_Q \cdot \vec{v}_Q + \mathbb{I}_Q \cdot \vec{\omega} \right) = \\
+ & = \dfrac{d}{dt} \left[ \hat{E}_i^0 \left( S^0_{ji} v^0_{Q,j} + I^0_{ij} \omega^0_j \right) \right] = \\
+ & = \vec{\omega} \times \hat{E}_i^0 \left( S^0_{ji} v^0_{Q,j} + I^0_{ij} \omega^0_j \right)
+   + \hat{E}^0_i \left( S_{ji}^0 \dot{v}^0_{Q,j} + I^0_{ij} \dot{\omega}^0_j \right) = \\
+ & = \vec{\omega} \times ( \mathbb{S}_Q^T \cdot \vec{v}_Q + \mathbb{I}_Q \cdot \vec{\omega} )
+   + \left( \mathbb{S}_Q^T \cdot \dfrac{{}^0 d}{dt} \vec{v}_Q + \mathbb{I} \cdot \dot{\vec{\omega}} \right) = \\
+ & = \vec{\omega} \times ( \mathbb{S}_Q^T \cdot \vec{v}_Q + \mathbb{I}_Q \cdot \vec{\omega} )
+   + \left( \mathbb{S}_Q^T \cdot \left( \dot{v}_Q - \vec{\omega} \times \vec{v}_Q \right) + \mathbb{I} \cdot \dot{\vec{\omega}} \right) \\
+ & = \left( \mathbb{S}_Q^T \cdot \left( \dot{v}_Q - \vec{\omega} \times \vec{v}_Q \right) + \mathbb{I} \cdot \dot{\vec{\omega}} \right) 
+    + \vec{\omega} \times ( \mathbb{S}_Q^T \cdot \vec{v}_Q + \mathbb{I}_Q \cdot \vec{\omega} )
+\end{aligned}$$
+
+#### Dynamical quantities and time derivatives with $G$ as reference point
+
+$$
+\begin{cases}
+  \vec{Q} = m \vec{v}_G \\
+  \vec{L}_G = \mathbb{I}_G \cdot \vec{\omega}
+\end{cases}
+\qquad , \qquad
+\begin{cases}
+  \dot{\vec{Q}} = m \dot{\vec{v}}_G \\
+  \dot{\vec{L}}_G = \mathbb{I}_G \cdot \dot{\vec{\omega}} + \vec{\omega} \times \mathbb{I}_G \cdot \vec{\omega}
+\end{cases}$$
+
+
+
 
 
 

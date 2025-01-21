@@ -64,6 +64,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'ch/inertia';</script>
     <link rel="shortcut icon" href="../_static/favicon.svg"/>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -166,8 +168,6 @@ const thebe_selector_output = ".output, .cell_output"
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Newton Mechanics</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="kinematics.html">1. Kinematics</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="kinematics-space-time.html">1.1. Space and time</a></li>
-<li class="toctree-l2"><a class="reference internal" href="kinematics-models.html">1.2. Models</a></li>
 <li class="toctree-l2"><a class="reference internal" href="kinematics-point.html">1.3. Point</a></li>
 <li class="toctree-l2"><a class="reference internal" href="kinematics-rigid.html">1.4. Rigid Body</a></li>
 <li class="toctree-l2"><a class="reference internal" href="kinematics-rotations.html">1.5. Rotations</a></li>
@@ -185,25 +185,20 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">3. Inertia</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="dynamics.html">4. Dynamics</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="dynamics-principles.html">4.1. Principles of Newton mechanics</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="dynamics-eom.html">4.2. Equations of motion</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="dynamics-eom-point.html">4.2.3. Equazioni cardinali della dinamica: punto materiale</a></li>
-<li class="toctree-l3"><a class="reference internal" href="dynamics-eom-points.html">4.2.4. Equazioni cardinali della dinamica: sistemi discreti di punti materiali</a></li>
-<li class="toctree-l3"><a class="reference internal" href="dynamics-eom-rigid.html">4.2.5. Equazioni cardinali della dinamica: corpo rigido</a></li>
-<li class="toctree-l3"><a class="reference internal" href="dynamics-eom-continuum.html">4.2.6. Equazioni cardinali della dinamica: mezzi continui</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="dynamics-motions.html">4.3. Moti particolari</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="dynamics-equilibrium-stability.html">4.4. Equilibrium and Stability</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="dynamics-motions-gravitation-2bodies.html">4.4.1. Gravitazione: problema dei due corpi</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="dynamics-principles.html">4.1. Principles of Newtonian Mechanics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dynamics-eom.html">4.2. Equations of Motion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dynamics-eom-point.html">4.3. Equations of motion of a point mass</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dynamics-eom-points.html">4.4. Cardinal Equations of Dynamics: Discrete Systems of Point Masses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dynamics-eom-rigid.html">4.5. Equations of motion of a rigid body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dynamics-eom-continuum.html">4.6. Equations of motion for continuous media</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dynamics-motions.html">4.7. Particular Motions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dynamics-equilibrium-stability.html">4.8. Equilibrium and Stability</a></li>
 </ul>
 </li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Analytical Mechanics</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="lagrange.html">5. Lagrangian Mechanics</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="lagrange.html">5. Lagrangian Mechanics</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="lagrange-point.html">5.1. Point</a></li>
 <li class="toctree-l2"><a class="reference internal" href="lagrange-points.html">5.2. System of points</a></li>
 <li class="toctree-l2"><a class="reference internal" href="lagrange-rigid-body.html">5.3. Rigid Body</a></li>
@@ -335,7 +330,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -351,6 +348,30 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#point-mass">3.1. Point mass</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#discrete-masses">3.2. Discrete masses</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#continuous-systems">3.3. Continuous systems</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rigid-systems">3.4. Rigid systems</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#discrete-systems">3.4.1. Discrete systems</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">3.4.2. Continuous systems</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#properties-of-inertia-tensors-of-rigid-bodies">3.4.3. Properties of inertia tensors of rigid bodies</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#static-inertia">3.4.3.1. Static inertia</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tensor-of-inertia">3.4.3.2. Tensor of inertia</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#time-derivatives-of-dynamical-quantities">3.4.4. Time derivatives of dynamical quantities</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#dynamical-quantities-and-time-derivatives-with-g-as-reference-point">3.4.4.1. Dynamical quantities and time derivatives with <span class="math notranslate nohighlight">\(G\)</span> as reference point</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -369,6 +390,300 @@ document.write(`
 <li><p>in resistance to change of motion of a system under external <a class="reference internal" href="actions.html#classical-mechanics-actions"><span class="std std-ref">actions</span></a>, as it will be clear from principles and equations of motions in <a class="reference internal" href="dynamics.html#classical-mechanics-dynamics"><span class="std std-ref">dynamics</span></a></p></li>
 </ul>
 <p>In the range of application of classical mechanics <strong>mass conservation</strong> holds, as stated by <strong>Lavoisier principle</strong>: the mass of a closed system is constant.</p>
+<p>Beside mass, three main <strong>additive dynamical quantities</strong> are introduced: <strong>momentum</strong>, <strong>angular momentum</strong>, and <strong>kinetic energy</strong>. Even though their meaning could not be clear in this chapter, it would be clear in the following chapters, in the derivation of <a class="reference internal" href="dynamics-eom.html#classical-mechanics-dynamics-eom-eom"><span class="std std-ref">equations of motion</span></a> of mechanical systems, like <a class="reference internal" href="dynamics-eom-point.html#classical-mechanics-dynamics-eom-point"><span class="std std-ref">point mass</span></a>, <a class="reference internal" href="dynamics-eom-points.html#classical-mechanics-dynamics-eom-points"><span class="std std-ref">system of point masses</span></a> and <a class="reference internal" href="dynamics-eom-rigid.html#classical-mechanics-dynamics-eom-rigid"><span class="std std-ref">rigid bodies</span></a>,…</p>
+<div class="section" id="point-mass">
+<h2><span class="section-number">3.1. </span>Point mass<a class="headerlink" href="#point-mass" title="Permalink to this heading">#</a></h2>
+</div>
+<div class="section" id="discrete-masses">
+<h2><span class="section-number">3.2. </span>Discrete masses<a class="headerlink" href="#discrete-masses" title="Permalink to this heading">#</a></h2>
+<p><strong>Momentum.</strong></p>
+<div class="math notranslate nohighlight">
+\[\vec{Q} := \sum_k m_k \vec{v}_k \]</div>
+<p><strong>Angular momentum.</strong></p>
+<div class="math notranslate nohighlight">
+\[\vec{L}_H := \int_{V_t} (P_k - H) \times m_k \vec{v}_k \]</div>
+<p><strong>Kinetic energy.</strong></p>
+<div class="math notranslate nohighlight">
+\[K := \sum_k \dfrac{1}{2} m_k |\vec{v}_k|^2\]</div>
+</div>
+<div class="section" id="continuous-systems">
+<h2><span class="section-number">3.3. </span>Continuous systems<a class="headerlink" href="#continuous-systems" title="Permalink to this heading">#</a></h2>
+<p><strong>Momentum.</strong></p>
+<div class="math notranslate nohighlight">
+\[\vec{Q} := \int_{V_t} \rho \vec{v} \]</div>
+<p><strong>Angular momentum.</strong></p>
+<div class="math notranslate nohighlight">
+\[\vec{L}_H := \int_{V_t} (P - H) \times \rho \vec{v} \]</div>
+<p><strong>Kinetic energy.</strong></p>
+<div class="math notranslate nohighlight">
+\[K := \int_{V_t} \dfrac{1}{2} \rho |\vec{v}|^2\]</div>
+</div>
+<div class="section" id="rigid-systems">
+<h2><span class="section-number">3.4. </span>Rigid systems<a class="headerlink" href="#rigid-systems" title="Permalink to this heading">#</a></h2>
+<p>The expression of dynamical quantities for rigid bodies can be written in terms of the velocity <span class="math notranslate nohighlight">\(\vec{v}_Q\)</span> of a point <span class="math notranslate nohighlight">\(Q\)</span> of the rigid body and its angular velocity <span class="math notranslate nohighlight">\(\vec{\omega}\)</span>, exploiting the law of rigid motion <a class="reference internal" href="kinematics-rigid.html#equation-eq-kin-rigid-vel">(1.1)</a> to write the velocity of each points of the rigid system as functions of <span class="math notranslate nohighlight">\(\vec{v}_Q\)</span> and <span class="math notranslate nohighlight">\(\vec{\omega}\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[\vec{v}_P = \vec{v}_Q + \vec{\omega} \times (P - Q) \ .\]</div>
+<div class="section" id="discrete-systems">
+<h3><span class="section-number">3.4.1. </span>Discrete systems<a class="headerlink" href="#discrete-systems" title="Permalink to this heading">#</a></h3>
+<p><strong>Momentum.</strong></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \vec{Q} = \sum_k m_k \vec{v}_k 
+  &amp; = \sum_k m_k \left( \vec{v}_Q + \vec{\omega} \times (P_k - Q) \right) = \\
+  &amp; = m \vec{v}_Q - \sum_k m_k (P_k - Q) \times \vec{\omega} = \\
+  &amp; = m \vec{v}_Q + \mathbb{S}_Q \cdot \vec{\omega} \ ,
+\end{aligned}\end{split}\]</div>
+<p>having defined the static moment of inertia (a <span class="math notranslate nohighlight">\(2^{nd}\)</span>-order antisymmetric tensor)</p>
+<div class="math notranslate nohighlight">
+\[\mathbb{S}_Q := \vec{s}_{P \times} := - \sum_k m_k (P_k - Q)_{\times} \ .\]</div>
+<p><strong>Angular momentum.</strong></p>
+<div class="math notranslate nohighlight">
+\[\begin{aligned}
+  \vec{L}_H = \sum_k (P_k-H) \times  m_k \vec{v}_k 
+  &amp; = \underbrace{\sum_k (P_k-Q) \times m_k \vec{v}_k}_{\vec{L}_Q} + (Q - H) \times \vec{Q}
+\end{aligned}\]</div>
+<p>and</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\vec{L}_Q = \sum_k (P_k - Q) \times m_k \vec{v}_k 
+ &amp; = \sum_k (P_k - Q) \times m_k \left( \vec{v}_Q - (P_k - Q) \times \vec{\omega} \right) = \\
+ &amp; = \mathbb{S}_Q^T \cdot \vec{v}_Q + \mathbb{I}_Q \cdot \vec{\omega}  \ ,
+\end{aligned}\end{split}\]</div>
+<p>having recognized the transpose of the static moment of inertia, and introduced the tensor of inertia w.r.t. reference point <span class="math notranslate nohighlight">\(Q\)</span></p>
+<div class="math notranslate nohighlight">
+\[\mathbb{I}_Q := - \sum_k m_k \left( P_k - Q \right)_{\times} \left( P_k - Q \right)_{\times} \ .\]</div>
+<p><strong>Kinetic energy.</strong></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+ K = \sum_k \dfrac{1}{2} m_k |\vec{v}_k|^2 
+ &amp; = \sum_k \dfrac{1}{2} m_k \left( \vec{v}_Q + \vec{\omega} \times (P_k - Q)  \right) \cdot \left( \vec{v}_Q + \vec{\omega} \times (P_k - Q) \right) = \\
+ &amp; = \sum_k \dfrac{1}{2} m_k | \vec{v}_Q |^2 + \dfrac{1}{2} \sum_k 2 m_k \vec{v}_Q \cdot \left( - (P_k - Q) \times \vec{\omega} \right) + \dfrac{1}{2} \sum_k \vec{\omega} \cdot (P_k - Q)_{\times} (P_k - Q)_\times \cdot \vec{\omega} = \\
+ &amp; = \dfrac{1}{2} \left[\sum_k m_k \right] | \vec{v}_Q |^2 
+   + \dfrac{1}{2} \vec{v}_Q \cdot \left[ - \sum_k m_k (P_k - Q)_\times \right] \cdot \vec{\omega} + \\
+ &amp; + \dfrac{1}{2} \vec{\omega} \cdot \left[ \sum_k m_k (P_k - Q)_\times \right] \cdot \vec{v}_Q
+   + \dfrac{1}{2} \vec{\omega} \cdot \left[ \sum_k m_k (P_k - Q)_{\times} (P_k - Q)_\times \right] \cdot \vec{\omega} = \\
+ &amp; = \dfrac{1}{2} m |\vec{v}_Q|^2 + \dfrac{1}{2} \vec{v}_Q \cdot \mathbb{S}_Q \cdot \vec{\omega} + \dfrac{1}{2} \vec{\omega} \cdot \mathbb{S}^T \cdot \vec{v}_Q + \dfrac{1}{2} \vec{\omega} \cdot \mathbb{I}_Q \cdot \vec{\omega} = \\
+ &amp; = \dfrac{1}{2} \vec{v}_Q \cdot \left[ m \vec{v}_Q + \mathbb{S}_Q \cdot \vec{\omega} \right] + \dfrac{1}{2} \vec{\omega} \cdot \left[  \mathbb{S}_Q^T \cdot \vec{v}_Q + \mathbb{I}_Q \cdot \vec{\omega} \right] = \\
+ &amp; = \dfrac{1}{2} \vec{v}_Q \cdot \vec{Q} + \dfrac{1}{2} \vec{\omega} \cdot \vec{L}_Q \ .
+\end{aligned}\end{split}\]</div>
+<p>having used the vector identities</p>
+<div class="math notranslate nohighlight">
+\[\vec{a} \cdot \vec{b} \times \vec{c} = \vec{b} \cdot \vec{c} \times \vec{a}\]</div>
+<div class="math notranslate nohighlight">
+\[\vec{a} \times \vec{b} = - \vec{b} \times \vec{a}\]</div>
+<p>and having introduced the expression of momentum and angular momentum in the last step.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The components of static moment of inertia and tensor of inertia in a material basis - following the motion of the system - are constant.</p>
+</div>
+</div>
+<div class="section" id="id1">
+<h3><span class="section-number">3.4.2. </span>Continuous systems<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
+<p><strong>Momentum.</strong></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \vec{Q} = \int_{V_t} \rho \vec{v}
+  &amp; = \int_{V_t} \rho \left( \vec{v}_Q + \vec{\omega} \times (P - Q) \right) = \\
+  &amp; = m \vec{v}_Q - \int_{V_t} \rho (P_k - Q) \times \vec{\omega} = \\
+  &amp; = m \vec{v}_Q + \mathbb{S}_Q \cdot \vec{\omega} \ ,
+\end{aligned}\end{split}\]</div>
+<p>having defined the static moment of inertia (a <span class="math notranslate nohighlight">\(2^{nd}\)</span>-order antisymmetric tensor) for continuous systems,</p>
+<div class="math notranslate nohighlight">
+\[\mathbb{S}_Q := \vec{s}_{P \times} := - \int_{V_t} \rho (P - Q)_{\times} \ .\]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Using the definition of the center of mass <span class="math notranslate nohighlight">\(G\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[G = \dfrac{1}{m} \int_{V_t} \rho P \ ,\]</div>
+<p>the static moment of inertia can be written as</p>
+<div class="math notranslate nohighlight">
+\[\mathbb{S}_Q = - \int_{V_t} \rho (P-Q)_{\times} = - m (G - Q)_{\times} \ .\]</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The components of static moment of inertia w.r.t. a material reference frame are constant. Using a material Carteisan reference frame the tensor reads</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\mathbb{S}_{Q} 
+ &amp; = - \int_{V_t} \rho (P - Q)_{\times} = \\
+ &amp; = - \int_{V_t} \rho \left[ ( x^0 - x_Q^0 ) \hat{x}^0 +  ( y^0 - y_Q^0 ) \hat{y}^0 +  ( z^0 - z_Q^0 ) \hat{z}^0 \right]_\times
+ = S_{ij} \hat{e}^0_i \hat{e}^0_j \ ,
+\end{aligned}\end{split}\]</div>
+<p>whose components can be collected in the <strong>antisymmetric matrix</strong></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\underline{\underline{S}}_Q = \left[ S_{Q,ij} \right] = - \int_{V_0} \rho \begin{bmatrix} 0 &amp; -(z^0-z^0_Q) &amp; (y^0-y^0_Q) \\ (z^0 - z_Q^0) &amp; 0 &amp; -(x^0-x_Q^0) \\ -(y^0-y^0_Q) &amp; (x^0-x^0_Q) &amp; 0 \end{bmatrix} \ ,\end{split}\]</div>
+<p>so that the vector product between <span class="math notranslate nohighlight">\(-\int_V \rho (P-Q)\)</span> and a vector <span class="math notranslate nohighlight">\(\vec{a}\)</span> reads</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  - \int_{V} \rho (P-Q) \times a
+  &amp; = - \int_V \rho \left[ \hat{x}^0 \left( \Delta y^0 a_z - \Delta z^0 a_y \right) + \hat{y}^0 \left( \Delta z^0 a_x - \Delta x^0 a_z \right) + \hat{z}^0 \left( \Delta x^0 a_y - \Delta y^0 a_x  \right) \right] \\
+  &amp; = \mathbb{S} \cdot \vec{a} \ .
+\end{aligned}\end{split}\]</div>
+</div>
+<p><strong>Angular momentum.</strong></p>
+<div class="math notranslate nohighlight">
+\[\begin{aligned}
+  \vec{L}_H = \int_{V_t} (P-H) \times  \rho \vec{v}
+  &amp; = \underbrace{\int_{V_t}(P-Q) \times \rho \vec{v}_k}_{\vec{L}_Q} + (Q - H) \times \vec{Q}
+\end{aligned}\]</div>
+<p>and</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\vec{L}_Q = \int_{V_t} (P - Q) \times \rho \vec{v}
+ &amp; = \int_{V_t} (P - Q) \times \rho \left( \vec{v}_Q - (P - Q) \times \vec{\omega} \right) = \\
+ &amp; = \mathbb{S}_Q^T \cdot \vec{v}_Q + \mathbb{I}_Q \cdot \vec{\omega}  \ ,
+\end{aligned}\end{split}\]</div>
+<p>having recognized the transpose of the static moment of inertia, and introduced the tensor of inertia w.r.t. reference point <span class="math notranslate nohighlight">\(Q\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \mathbb{I}_Q
+  &amp; := - \int_{V_t} \rho \left( P - Q \right)_{\times} \left( P - Q \right)_{\times}  = \\
+  &amp; := \int_{V_t} \rho \left[ |P-Q|^2 \mathbb{I} - (P-Q) \otimes (P-Q) \right] \ ,
+\end{aligned}\end{split}\]</div>
+<p>having used the tensor identity</p>
+<div class="math notranslate nohighlight">
+\[- \vec{a}_{\times} \cdot \vec{a}_{\times} = |\vec{a}|^2 \mathbb{I} - \vec{a} \otimes \vec{a}\]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The components of tensor of inertia w.r.t. a material reference frame are constant. Using a material Carteisan reference frame the tensor reads</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\mathbb{I}_{Q} 
+ &amp; = - \int_{V_t} \rho (P - Q)_{\times} (P-Q)_{\times} = \\
+ &amp; = - \int_{V_t} \rho \left[ |P-Q|^2 \mathbb{I} - (P-Q) \otimes (P-Q) \right] = \\
+ &amp; = I^0_{Q,ij} \hat{e}^0_i \hat{e}^0_j \ ,
+\end{aligned}\end{split}\]</div>
+<p>whose components can be collected in the <strong>symmetric matrix</strong></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\underline{\underline{I}}^0_Q = \left[ I^0_{Q,ij} \right] = \int_{V_0} \rho \begin{bmatrix} \Delta y_0^2 + \Delta z_0^2 &amp; -\Delta x_0 \Delta y_0 &amp; -\Delta x_0 \Delta z_0 \\ -\Delta y_0 \Delta x_0 &amp; \Delta x_0^2 + \Delta y_0^2 &amp; -\Delta y_0 \Delta z_0 \\ -\Delta z_0 \Delta x_0 &amp; - \Delta z_0 \Delta y_0 &amp; \Delta x_0^2 + \Delta z_0^2 \end{bmatrix} \ ,\end{split}\]</div>
+<p>being <span class="math notranslate nohighlight">\(\Delta x^0 := x^0_P - x_Q^0\)</span>.</p>
+</div>
+</div>
+<div class="section" id="properties-of-inertia-tensors-of-rigid-bodies">
+<h3><span class="section-number">3.4.3. </span>Properties of inertia tensors of rigid bodies<a class="headerlink" href="#properties-of-inertia-tensors-of-rigid-bodies" title="Permalink to this heading">#</a></h3>
+<div class="section" id="static-inertia">
+<h4><span class="section-number">3.4.3.1. </span>Static inertia<a class="headerlink" href="#static-inertia" title="Permalink to this heading">#</a></h4>
+<p><strong>Center of mass, <span class="math notranslate nohighlight">\(G\)</span>.</strong> Center of mass of of a rigid body is defined as the point <span class="math notranslate nohighlight">\(G\)</span> for which <span class="math notranslate nohighlight">\(\mathbb{S}_G \equiv \mathbb{0}\)</span>, whose coordinates are given by</p>
+<div class="math notranslate nohighlight">
+\[G = \dfrac{1}{m} \int_{V_t} \rho \, P\]</div>
+<p><strong>Anti-symmetric.</strong> From the definition of the static inertia tensor</p>
+<div class="math notranslate nohighlight">
+\[\mathbb{S}_Q \cdot \vec{a} = \int_{V_t} \rho (P-Q) \times \vec{a} = - \vec{a} \times \int_{V_t} \rho (P-Q) = - \vec{a} \cdot \mathbb{S}_Q = - \mathbb{S}^T \cdot \vec{a} \ .\]</div>
+<p><strong>Transport.</strong></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \mathbb{S}_Q 
+  &amp; = - \int_{V_t} \rho (P - Q)_{\times} = \\
+  &amp; = - \int_{V_t} \rho (P - R)_{\times} - \int_{V_t} \rho (R - Q)_{\times} = \\
+  &amp; = \mathbb{S}_R - m (R-Q)_{\times} \ ,
+\end{aligned}\end{split}\]</div>
+<p>or w.r.t. the center of mass <span class="math notranslate nohighlight">\(G\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[\mathbb{S}_Q = \mathbb{S}_G - m (G-Q)_{\times} \ .\]</div>
+</div>
+<div class="section" id="tensor-of-inertia">
+<h4><span class="section-number">3.4.3.2. </span>Tensor of inertia<a class="headerlink" href="#tensor-of-inertia" title="Permalink to this heading">#</a></h4>
+<p><strong>Symmetric (semi)-definite positive.</strong> Inertia tensor is symmetric</p>
+<div class="math notranslate nohighlight">
+\[\vec{v} \cdot \mathbb{I}_Q \cdot \vec{w} = \vec{v} \cdot \int_{V_t} \rho \left[ |\Delta \vec{r}|^2 \mathbb{I} - \Delta \vec{r} \otimes \Delta \vec{r} \right] \cdot \vec{w} = \vec{w} \cdot \mathbb{I}_Q \cdot \vec{v} \ .\]</div>
+<p>for all <span class="math notranslate nohighlight">\(\forall \vec{v}, \vec{w}\)</span>, and semi-definite positive</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \vec{v} \cdot \mathbb{I}_Q \cdot \vec{v} 
+  &amp; = - \vec{v} \cdot \int_{V_t} \rho \Delta \vec{r}_{\times} \Delta \vec{r}_{\times} \cdot \vec{v} = \\
+  &amp; = - \int_{V_t} \rho \vec{v} \cdot \Delta \vec{r}_{\times} \Delta \vec{r}_{\times} \cdot \vec{v} = \\
+  &amp; = - \int_{V_t} \rho \vec{v} \cdot \left[ \Delta \vec{r} \times \left( \Delta \vec{r} \times \cdot \vec{v} \right) \right] = \\
+  &amp; = - \int_{V_t} \rho \left( \Delta \vec{r} \times \vec{v} \right) \cdot \left( \vec{v} \times  \Delta \vec{r} \right) = \\
+  &amp; =   \int_{V_t} \rho \left( \Delta \vec{r} \times \vec{v} \right) \cdot \left( \Delta \vec{r} \times \vec{v} \right) = \\
+  &amp; =   \int_{V_t} \rho | \Delta \vec{r} \times \vec{v} |^2 \ge 0 \\
+\end{aligned}\end{split}\]</div>
+<p><strong>Principal axes of inertia.</strong> As the tensor of inertia is symmetric and definite positive, a set of orthogonal vectors <span class="math notranslate nohighlight">\(\hat{E}^0_i\)</span> so that it can be written in diagonal form,</p>
+<div class="math notranslate nohighlight">
+\[\mathbb{I}_Q = I^0_{XX} \, \hat{E}^0_X \otimes \hat{E}^0_X +  I^0_{YY} \, \hat{E}^0_Y \otimes \hat{E}^0_Y + I^0_{ZZ} \, \hat{E}^0_Z \otimes \hat{E}^0_Z \ ,\]</div>
+<p>with <span class="math notranslate nohighlight">\(I_{ii}^0 \ge 0\)</span>.</p>
+<p><strong>Transport - Huygens’ theorem.</strong></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \mathbb{I}_Q 
+  &amp; = - \int_{V_t} \rho (P - Q)_{\times} (P-Q)_{\times} = \\
+  &amp; =    - \int_{V_t} \rho (P - R)_{\times} (P - R)_{\times}     
+         - \int_{V_t} \rho (P - R)_{\times} (R - Q)_{\times} \\  
+&amp; \quad  - \int_{V_t} \rho (R - Q)_{\times} (P - R)_{\times}     
+         - \int_{V_t} \rho (R - Q)_{\times} (R - Q)_{\times} = \\ 
+  &amp; = \mathbb{I}_R + \mathbb{S}_R \cdot (R-Q)_{\times} + (R-Q)_{\times} \cdot \mathbb{S}_R - m (R - Q)_{\times} (R - Q)_{\times}
+\end{aligned}\end{split}\]</div>
+<p>or w.r.t. the center of mass <span class="math notranslate nohighlight">\(G\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[ \mathbb{I}_Q = \mathbb{I}_G - m (Q-G)_\times (Q-G)_\times \ .\]</div>
+</div>
+</div>
+<div class="section" id="time-derivatives-of-dynamical-quantities">
+<h3><span class="section-number">3.4.4. </span>Time derivatives of dynamical quantities<a class="headerlink" href="#time-derivatives-of-dynamical-quantities" title="Permalink to this heading">#</a></h3>
+<p>Time derivatives of dynamical quantities are easily evaluated using a Cartesian material reference frame.</p>
+<p><strong>Momentum.</strong></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\dfrac{d}{dt} \vec{Q} 
+  &amp; = \dfrac{d}{dt} \left( m \vec{v}_Q + \mathbb{S}_Q \cdot \vec{\omega} \right) =  \\
+  &amp; =  m \dot{\vec{v}}_Q + \dfrac{d}{dt} \left( \vec{E}^0_i S^0_{ij} \omega^0_j \right) = \\
+  &amp; =  m \dot{\vec{v}}_Q + \dfrac{d\vec{E}^0_i }{dt} S^0_{ij} \omega^0_j + \vec{E}^0_i S^0_{ij} \dfrac{d} \omega^0_j{dt} = \\
+  &amp; =  m \dot{\vec{v}}_Q + \vec{\omega} \times \vec{E}^0_i S^0_{ij} \omega^0_j + \vec{E}^0_i S^0_{ij} \dfrac{d}{dt}\omega^0_j = \\
+  &amp; =  m \dot{\vec{v}}_Q + \vec{\omega} \times \left( \mathbb{S}_Q \cdot \vec{\omega} \right) + \mathbb{S}_Q \cdot \dot{\vec{\omega}} \ .
+\end{aligned}\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+ \dfrac{d}{dt} \vec{\omega} 
+ &amp; = \dfrac{d}{dt} \left( \hat{E}^0_i \omega_i^0 \right) = \\
+ &amp; = \vec{\omega} \times \hat{E}^0_i \omega_i^0 + \hat{E}^0_i \dfrac{d \omega^0_i}{dt} = \\
+ &amp; = \underbrace{\vec{\omega} \times \vec{\omega}}_{=\vec{0}} + \hat{E}^0_i \dfrac{d \omega^0_i}{dt} \ .
+\end{aligned}\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+ \dfrac{d}{dt} \vec{v} 
+ &amp; = \dfrac{d}{dt} \left( \hat{E}^0_i v_i^0 \right) = \\
+ &amp; = \vec{\omega} \times \hat{E}^0_i v_i^0 + \hat{E}^0_i \dfrac{d v^0_i}{dt} = \\
+ &amp; = \vec{\omega} \times \vec{v}  + \dfrac{{}^0 d}{dt} \vec{v} \\
+\end{aligned}\end{split}\]</div>
+<p><strong>Angular momentum.</strong></p>
+<div class="math notranslate nohighlight">
+\[\begin{aligned}
+\dfrac{d}{dt} \vec{L}_H
+&amp; =  \dfrac{d}{dt} \left( (Q-H) \times \vec{Q} + \vec{L}_Q  \right) \ ,
+\end{aligned}\]</div>
+<p>and</p>
+<div class="math notranslate nohighlight">
+\[\dfrac{d}{dt} \left( (Q-H) \times \vec{Q} \right) = ( \vec{v}_Q - \dot{\vec{x}}_H ) \times \vec{Q} + ( Q - H ) \times \dot{\vec{Q}}\]</div>
+<p>and</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+ \dfrac{d \vec{L}_Q}{dt} 
+ &amp; = \dfrac{d}{dt} \left( \mathbb{S}^T_Q \cdot \vec{v}_Q + \mathbb{I}_Q \cdot \vec{\omega} \right) = \\
+ &amp; = \dfrac{d}{dt} \left[ \hat{E}_i^0 \left( S^0_{ji} v^0_{Q,j} + I^0_{ij} \omega^0_j \right) \right] = \\
+ &amp; = \vec{\omega} \times \hat{E}_i^0 \left( S^0_{ji} v^0_{Q,j} + I^0_{ij} \omega^0_j \right)
+   + \hat{E}^0_i \left( S_{ji}^0 \dot{v}^0_{Q,j} + I^0_{ij} \dot{\omega}^0_j \right) = \\
+ &amp; = \vec{\omega} \times ( \mathbb{S}_Q^T \cdot \vec{v}_Q + \mathbb{I}_Q \cdot \vec{\omega} )
+   + \left( \mathbb{S}_Q^T \cdot \dfrac{{}^0 d}{dt} \vec{v}_Q + \mathbb{I} \cdot \dot{\vec{\omega}} \right) = \\
+ &amp; = \vec{\omega} \times ( \mathbb{S}_Q^T \cdot \vec{v}_Q + \mathbb{I}_Q \cdot \vec{\omega} )
+   + \left( \mathbb{S}_Q^T \cdot \left( \dot{v}_Q - \vec{\omega} \times \vec{v}_Q \right) + \mathbb{I} \cdot \dot{\vec{\omega}} \right) \\
+ &amp; = \left( \mathbb{S}_Q^T \cdot \left( \dot{v}_Q - \vec{\omega} \times \vec{v}_Q \right) + \mathbb{I} \cdot \dot{\vec{\omega}} \right) 
+    + \vec{\omega} \times ( \mathbb{S}_Q^T \cdot \vec{v}_Q + \mathbb{I}_Q \cdot \vec{\omega} )
+\end{aligned}\end{split}\]</div>
+<div class="section" id="dynamical-quantities-and-time-derivatives-with-g-as-reference-point">
+<h4><span class="section-number">3.4.4.1. </span>Dynamical quantities and time derivatives with <span class="math notranslate nohighlight">\(G\)</span> as reference point<a class="headerlink" href="#dynamical-quantities-and-time-derivatives-with-g-as-reference-point" title="Permalink to this heading">#</a></h4>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{cases}
+  \vec{Q} = m \vec{v}_G \\
+  \vec{L}_G = \mathbb{I}_G \cdot \vec{\omega}
+\end{cases}
+\qquad , \qquad
+\begin{cases}
+  \dot{\vec{Q}} = m \dot{\vec{v}}_G \\
+  \dot{\vec{L}}_G = \mathbb{I}_G \cdot \dot{\vec{\omega}} + \vec{\omega} \times \mathbb{I}_G \cdot \vec{\omega}
+\end{cases}\end{split}\]</div>
+</div>
+</div>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -425,6 +740,36 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#point-mass">3.1. Point mass</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#discrete-masses">3.2. Discrete masses</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#continuous-systems">3.3. Continuous systems</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rigid-systems">3.4. Rigid systems</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#discrete-systems">3.4.1. Discrete systems</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">3.4.2. Continuous systems</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#properties-of-inertia-tensors-of-rigid-bodies">3.4.3. Properties of inertia tensors of rigid bodies</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#static-inertia">3.4.3.1. Static inertia</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tensor-of-inertia">3.4.3.2. Tensor of inertia</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#time-derivatives-of-dynamical-quantities">3.4.4. Time derivatives of dynamical quantities</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#dynamical-quantities-and-time-derivatives-with-g-as-reference-point">3.4.4.1. Dynamical quantities and time derivatives with <span class="math notranslate nohighlight">\(G\)</span> as reference point</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

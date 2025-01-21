@@ -168,8 +168,6 @@ const thebe_selector_output = ".output, .cell_output"
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Newton Mechanics</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="kinematics.html">1. Kinematics</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="kinematics-space-time.html">1.1. Space and time</a></li>
-<li class="toctree-l2"><a class="reference internal" href="kinematics-models.html">1.2. Models</a></li>
 <li class="toctree-l2"><a class="reference internal" href="kinematics-point.html">1.3. Point</a></li>
 <li class="toctree-l2"><a class="reference internal" href="kinematics-rigid.html">1.4. Rigid Body</a></li>
 <li class="toctree-l2"><a class="reference internal" href="kinematics-rotations.html">1.5. Rotations</a></li>
@@ -187,25 +185,20 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 <li class="toctree-l1"><a class="reference internal" href="inertia.html">3. Inertia</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="dynamics.html">4. Dynamics</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="dynamics-principles.html">4.1. Principles of Newton mechanics</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="dynamics-eom.html">4.2. Equations of motion</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="dynamics-eom-point.html">4.2.3. Equazioni cardinali della dinamica: punto materiale</a></li>
-<li class="toctree-l3"><a class="reference internal" href="dynamics-eom-points.html">4.2.4. Equazioni cardinali della dinamica: sistemi discreti di punti materiali</a></li>
-<li class="toctree-l3"><a class="reference internal" href="dynamics-eom-rigid.html">4.2.5. Equazioni cardinali della dinamica: corpo rigido</a></li>
-<li class="toctree-l3"><a class="reference internal" href="dynamics-eom-continuum.html">4.2.6. Equazioni cardinali della dinamica: mezzi continui</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="dynamics-motions.html">4.3. Moti particolari</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="dynamics-equilibrium-stability.html">4.4. Equilibrium and Stability</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="dynamics-motions-gravitation-2bodies.html">4.4.1. Gravitazione: problema dei due corpi</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="dynamics-principles.html">4.1. Principles of Newtonian Mechanics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dynamics-eom.html">4.2. Equations of Motion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dynamics-eom-point.html">4.3. Equations of motion of a point mass</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dynamics-eom-points.html">4.4. Cardinal Equations of Dynamics: Discrete Systems of Point Masses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dynamics-eom-rigid.html">4.5. Equations of motion of a rigid body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dynamics-eom-continuum.html">4.6. Equations of motion for continuous media</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dynamics-motions.html">4.7. Particular Motions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dynamics-equilibrium-stability.html">4.8. Equilibrium and Stability</a></li>
 </ul>
 </li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Analytical Mechanics</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="lagrange.html">5. Lagrangian Mechanics</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="lagrange.html">5. Lagrangian Mechanics</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="lagrange-point.html">5.1. Point</a></li>
 <li class="toctree-l2"><a class="reference internal" href="lagrange-points.html">5.2. System of points</a></li>
 <li class="toctree-l2"><a class="reference internal" href="lagrange-rigid-body.html">5.3. Rigid Body</a></li>
@@ -396,11 +389,11 @@ document.write(`
 <p>and is considered a constant of nature.</p>
 <p><strong>Principle of Superposition of Causes and Effects (PSCE).</strong> Principle of superposition holds, i.e. the force acting on a mass <span class="math notranslate nohighlight">\(m\)</span> placed in <span class="math notranslate nohighlight">\(P\)</span> due to a set of <span class="math notranslate nohighlight">\(N\)</span> masses <span class="math notranslate nohighlight">\(\{ m_k \}_{k=1:N}\)</span> placed in <span class="math notranslate nohighlight">\(P_k\)</span> is the sum of individual forces <span class="math notranslate nohighlight">\(\vec{F}_{k}\)</span>,</p>
 <div class="math notranslate nohighlight" id="equation-eq-gravitation-force-psce">
-<span class="eqno">(2.1)<a class="headerlink" href="#equation-eq-gravitation-force-psce" title="Permalink to this equation">#</a></span>\[\vec{F} = \sum_{k=1}^N \vec{F}_{k} = G \, m \, \sum_{k=1}^N m_k \dfrac{P_k - P}{|P_k - P|^3} \ .\]</div>
+<span class="eqno">(2.3)<a class="headerlink" href="#equation-eq-gravitation-force-psce" title="Permalink to this equation">#</a></span>\[\vec{F} = \sum_{k=1}^N \vec{F}_{k} = G \, m \, \sum_{k=1}^N m_k \dfrac{P_k - P}{|P_k - P|^3} \ .\]</div>
 </div>
 <div class="section" id="gravitational-field">
 <span id="classical-mechanics-actions-gravitation-field"></span><h3><span class="section-number">2.4.1.2. </span>Gravitational Field<a class="headerlink" href="#gravitational-field" title="Permalink to this heading">#</a></h3>
-<p>The gravitational field generated by a set of masses <span class="math notranslate nohighlight">\(\{ m_k \}_{k=1:N}\)</span> located at <span class="math notranslate nohighlight">\(P_k\)</span> is a vector field associating a vector with physical dimensions <span class="math notranslate nohighlight">\(\frac{\text{[force]}}{\text{[mass]}}\)</span> to each point in space <span class="math notranslate nohighlight">\(P\)</span>, that can be thought as the force per unit-mass acting on a <strong>test mass</strong> <span class="math notranslate nohighlight">\(m\)</span> placed in <span class="math notranslate nohighlight">\(P\)</span>, whose expression directly follows from <a class="reference internal" href="#equation-eq-gravitation-force-psce">(2.1)</a></p>
+<p>The gravitational field generated by a set of masses <span class="math notranslate nohighlight">\(\{ m_k \}_{k=1:N}\)</span> located at <span class="math notranslate nohighlight">\(P_k\)</span> is a vector field associating a vector with physical dimensions <span class="math notranslate nohighlight">\(\frac{\text{[force]}}{\text{[mass]}}\)</span> to each point in space <span class="math notranslate nohighlight">\(P\)</span>, that can be thought as the force per unit-mass acting on a <strong>test mass</strong> <span class="math notranslate nohighlight">\(m\)</span> placed in <span class="math notranslate nohighlight">\(P\)</span>, whose expression directly follows from <a class="reference internal" href="#equation-eq-gravitation-force-psce">(2.3)</a></p>
 <div class="math notranslate nohighlight">
 \[\vec{g}(P) = \dfrac{\vec{F}}{m} = G \, \sum_{k=1}^N m_k \dfrac{P_k - P}{|P_k - P|^3} \ .\]</div>
 <p>Given the gravitational field <span class="math notranslate nohighlight">\(\vec{g}(P)\)</span>, the gravitational force experienced by a system of mass <span class="math notranslate nohighlight">\(m\)</span> at <span class="math notranslate nohighlight">\(P\)</span> can be written as</p>

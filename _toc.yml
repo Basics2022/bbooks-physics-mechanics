@@ -9,13 +9,13 @@ parts:
   chapters:
   - file: ch/kinematics
     sections:
-    - file: ch/kinematics-space-time
-    - file: ch/kinematics-models
+#   - file: ch/kinematics-space-time
+#   - file: ch/kinematics-models
     - file: ch/kinematics-point
     - file: ch/kinematics-rigid
-    - file: ch/kinematics-rotations
     - file: ch/kinematics-continuum
     - file: ch/kinematics-relative
+    - file: ch/kinematics-rotations
   - file: ch/actions
     sections:
     - file: ch/actions-types
@@ -33,9 +33,9 @@ parts:
     - file: ch/dynamics-eom-rigid
     - file: ch/dynamics-eom-continuum
     - file: ch/dynamics-motions
+#     sections:
+#     - file: ch/dynamics-motions-gravitation-2bodies
     - file: ch/dynamics-equilibrium-stability
-      sections:
-      - file: ch/dynamics-motions-gravitation-2bodies
 - caption: Analytical Mechanics
   numbered: true
   chapters:

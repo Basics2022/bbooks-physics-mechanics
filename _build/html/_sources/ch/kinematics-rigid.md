@@ -1,6 +1,8 @@
 (classical-mechanics:kinematics:rigid-body)=
 # Rigid Body
 
+$$\vec{v}_Q - \vec{v}_P = \vec{\omega} \times (Q-P)$$ (eq:kin:rigid:vel)
+
 ## Rigid motion
 Rigid motion preserves distance between any pair of points, and thus angles. Rotations are described by rotation matrices.
 

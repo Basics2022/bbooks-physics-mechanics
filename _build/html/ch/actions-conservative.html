@@ -168,8 +168,6 @@ const thebe_selector_output = ".output, .cell_output"
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Newton Mechanics</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="kinematics.html">1. Kinematics</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="kinematics-space-time.html">1.1. Space and time</a></li>
-<li class="toctree-l2"><a class="reference internal" href="kinematics-models.html">1.2. Models</a></li>
 <li class="toctree-l2"><a class="reference internal" href="kinematics-point.html">1.3. Point</a></li>
 <li class="toctree-l2"><a class="reference internal" href="kinematics-rigid.html">1.4. Rigid Body</a></li>
 <li class="toctree-l2"><a class="reference internal" href="kinematics-rotations.html">1.5. Rotations</a></li>
@@ -187,25 +185,20 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 <li class="toctree-l1"><a class="reference internal" href="inertia.html">3. Inertia</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="dynamics.html">4. Dynamics</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="dynamics-principles.html">4.1. Principles of Newton mechanics</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="dynamics-eom.html">4.2. Equations of motion</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="dynamics-eom-point.html">4.2.3. Equazioni cardinali della dinamica: punto materiale</a></li>
-<li class="toctree-l3"><a class="reference internal" href="dynamics-eom-points.html">4.2.4. Equazioni cardinali della dinamica: sistemi discreti di punti materiali</a></li>
-<li class="toctree-l3"><a class="reference internal" href="dynamics-eom-rigid.html">4.2.5. Equazioni cardinali della dinamica: corpo rigido</a></li>
-<li class="toctree-l3"><a class="reference internal" href="dynamics-eom-continuum.html">4.2.6. Equazioni cardinali della dinamica: mezzi continui</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="dynamics-motions.html">4.3. Moti particolari</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="dynamics-equilibrium-stability.html">4.4. Equilibrium and Stability</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="dynamics-motions-gravitation-2bodies.html">4.4.1. Gravitazione: problema dei due corpi</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="dynamics-principles.html">4.1. Principles of Newtonian Mechanics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dynamics-eom.html">4.2. Equations of Motion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dynamics-eom-point.html">4.3. Equations of motion of a point mass</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dynamics-eom-points.html">4.4. Cardinal Equations of Dynamics: Discrete Systems of Point Masses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dynamics-eom-rigid.html">4.5. Equations of motion of a rigid body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dynamics-eom-continuum.html">4.6. Equations of motion for continuous media</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dynamics-motions.html">4.7. Particular Motions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dynamics-equilibrium-stability.html">4.8. Equilibrium and Stability</a></li>
 </ul>
 </li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Analytical Mechanics</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="lagrange.html">5. Lagrangian Mechanics</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="lagrange.html">5. Lagrangian Mechanics</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="lagrange-point.html">5.1. Point</a></li>
 <li class="toctree-l2"><a class="reference internal" href="lagrange-points.html">5.2. System of points</a></li>
 <li class="toctree-l2"><a class="reference internal" href="lagrange-rigid-body.html">5.3. Rigid Body</a></li>
@@ -364,15 +357,18 @@ document.write(`
                   
   <div class="tex2jax_ignore mathjax_ignore section" id="conservative-actions">
 <span id="classical-mechanics-actions-conservative"></span><h1><span class="section-number">2.3. </span>Conservative Actions<a class="headerlink" href="#conservative-actions" title="Permalink to this heading">#</a></h1>
-<p>A conservative force field is defined by the work it performs. In general, the work of a force field acting on a point <span class="math notranslate nohighlight">\(P\)</span> moving in space from point <span class="math notranslate nohighlight">\(A\)</span> to point <span class="math notranslate nohighlight">\(B\)</span> along a path <span class="math notranslate nohighlight">\(\ell_{AB}\)</span> depends on the path. (<strong>todo</strong> add reference)</p>
-<p>If the work of a force field does not depend on the path <span class="math notranslate nohighlight">\(\ell_{AB}\)</span> but only on the endpoints <span class="math notranslate nohighlight">\(A\)</span>, <span class="math notranslate nohighlight">\(B\)</span>, for all pairs of points within a region of space <span class="math notranslate nohighlight">\(\Omega\)</span>, the <strong>force field</strong> is said to be <strong>conservative</strong> in the region <span class="math notranslate nohighlight">\(\Omega\)</span> of space.</p>
-<p>In this case, the work done can be expressed as the difference of a scalar field, <span class="math notranslate nohighlight">\(U(P)\)</span> or its opposite <span class="math notranslate nohighlight">\(V(P) := - U(P)\)</span>,</p>
+<p>In general, the work of a force field acting on a point <span class="math notranslate nohighlight">\(P\)</span> moving in space from point <span class="math notranslate nohighlight">\(A\)</span> to point <span class="math notranslate nohighlight">\(B\)</span> along a path <span class="math notranslate nohighlight">\(\ell_{AB}\)</span> represented by integral <a class="reference internal" href="actions-work.html#equation-eq-work-int">(2.2)</a> depends on the path, and this dependence on the path is usually highlighted with the use of the symbol <span class="math notranslate nohighlight">\(\delta\)</span> in the elementary work <a class="reference internal" href="actions-work.html#equation-eq-work-diff">(2.1)</a>.</p>
+<p>If the work of a force field does not depend on the path <span class="math notranslate nohighlight">\(\ell_{AB}\)</span> but only on the endpoints <span class="math notranslate nohighlight">\(A\)</span>, <span class="math notranslate nohighlight">\(B\)</span>, for all pairs of points within a region of space <span class="math notranslate nohighlight">\(\Omega\)</span>, the <strong>force field</strong> is said to be <strong>conservative</strong> in the region <span class="math notranslate nohighlight">\(\Omega\)</span> of space. In this case, the work integral can be written as the difference of a scalar field, <span class="math notranslate nohighlight">\(U(P)\)</span> or its opposite <span class="math notranslate nohighlight">\(V(P) := - U(P)\)</span>,</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
-  W_{AB} &amp;  = U(B) - U(A) = \Delta_{AB} U  \\
+  W_{AB} &amp;  = \int_{\ell_{AB}} \vec{F} \cdot d \vec{r} = \\
+         &amp;  = \int_{\ell_{AB}} \delta W = \\
+         &amp;  = U(B) - U(A) = \Delta_{AB} U  \\
          &amp;  = V(A) - V(B) = -\Delta_{AB} V  \\
 \end{aligned}\end{split}\]</div>
-<p>The functions <span class="math notranslate nohighlight">\(U\)</span>, <span class="math notranslate nohighlight">\(V\)</span> are respectively defined as the <strong>potential</strong> and <strong>potential energy</strong> of the force field.</p>
+<p>The functions <span class="math notranslate nohighlight">\(U\)</span>, <span class="math notranslate nohighlight">\(V\)</span> are respectively defined as the <strong>potential</strong> and <strong>potential energy</strong> of the force field. From the definition of a conservative force field it readily follows that</p>
+<div class="math notranslate nohighlight">
+\[\oint_{\ell} \vec{F} \cdot d \vec{r} = 0 \ .\]</div>
 <p>The elementary work can thus be expressed in terms of the differential of these functions,</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
@@ -382,7 +378,25 @@ document.write(`
 <p>Comparing this relation with the definition of work <span class="math notranslate nohighlight">\(\delta W = d \vec{r} \cdot \vec{F}\)</span>, it is possible to identify the force field with the gradient of the potential function, and the opposite of the gradient of the potential energy,</p>
 <div class="math notranslate nohighlight">
 \[\vec{F} = \nabla U = - \nabla V \ .\]</div>
+<p>Since the force field can be written as the gradient of a scalar field, and the curl of a gradient is identically zero, the curl of a potential force field is identically zero,</p>
+<div class="math notranslate nohighlight">
+\[\nabla \times \vec{F} = \vec{0} \ .\]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The reverse logical process - <span class="math notranslate nohighlight">\(\nabla \times \vec{F} = \vec{0}\)</span> implies <span class="math notranslate nohighlight">\(\vec{F} = \nabla U\)</span> implies <span class="math notranslate nohighlight">\(\vec{F}\)</span> conservative, i.e. independence of the work from the path - requires the domain continaing the integration path <span class="math notranslate nohighlight">\(\ell\)</span> to be simply connected.</p>
 </div>
+<div class="proof example admonition" id="example-0">
+<p class="admonition-title"><span class="caption-number">Example 2.1 </span> (Force fields in non-simply connected domains)</p>
+<div class="example-content section" id="proof-content">
+<p>In a region of <span class="math notranslate nohighlight">\(E^2\)</span>, described with Cartesian coordinates, containing the origin <span class="math notranslate nohighlight">\(O \equiv (x_0, y_0) \equiv (0,0)\)</span> the vector field</p>
+<div class="math notranslate nohighlight">
+\[\vec{F}_1(\vec{r}) = \frac{x}{x^2 + y^2} \hat{x} + \frac{y}{x^2+y^2} \hat{y}\]</div>
+<p>is conservative, while the vector field</p>
+<div class="math notranslate nohighlight">
+\[\vec{F}_2(\vec{r}) = -\frac{y}{x^2 + y^2} \hat{x} + \frac{x}{x^2+y^2} \hat{y}\]</div>
+<p>is not conservative, even though their curl is zero in all the points of the domain where the field is defined - they’re not defined in the origin.</p>
+</div>
+</div></div>
 
     <script type="text/x-thebe-config">
     {

@@ -160,11 +160,9 @@ Classical mechanics treats time and space as individually absolute physical quan
 \sphinxAtStartPar
 Kinematics deals with the motion of mechanical systems, without taking into account the causes of motion.
 
-\sphinxstepscope
-
 
 \section{Space and time}
-\label{\detokenize{ch/kinematics-space-time:space-and-time}}\label{\detokenize{ch/kinematics-space-time:classical-mechanics-kinematics-space-time}}\label{\detokenize{ch/kinematics-space-time::doc}}
+\label{\detokenize{ch/kinematics:space-and-time}}\label{\detokenize{ch/kinematics:classical-mechanics-kinematics-space-time}}
 \sphinxAtStartPar
 Classical mechanics relies on the concepts of \sphinxstylestrong{absolute 3\sphinxhyphen{}dimensional Euclidean space}, \(E^3\), and \sphinxstylestrong{absolute time}.
 
@@ -172,11 +170,9 @@ Classical mechanics relies on the concepts of \sphinxstylestrong{absolute 3\sphi
 Briefly, what is space? It’s something you can measure with ruler (for distances) and square (for angles), or other space\sphinxhyphen{}measurment devices.
 What is time? It’s something you can measure with a clock or other timekeeping devices.
 
-\sphinxstepscope
-
 
 \section{Models}
-\label{\detokenize{ch/kinematics-models:models}}\label{\detokenize{ch/kinematics-models:classical-mechanics-kinematics-models}}\label{\detokenize{ch/kinematics-models::doc}}
+\label{\detokenize{ch/kinematics:models}}\label{\detokenize{ch/kinematics:classical-mechanics-kinematics-models}}
 \sphinxAtStartPar
 Different models of physical systems can be derived with an abstraction and modelling process, depending on the characteristics of the system under investigation and on the level of detail required by the analysis.
 
@@ -201,39 +197,134 @@ Here, the focus goes to the kinematics of {\hyperref[\detokenize{ch/kinematics-p
 
 \sphinxAtStartPar
 While space and time are absolute, the motion of a system is usually the \sphinxstylestrong{motion relative to an observer} or to a reference frame. After treating the kinematics of points and rigid bodies w.r.t. a given reference frame, {\hyperref[\detokenize{ch/kinematics-relative:classical-mechanics-kinematics-relative}]{\sphinxcrossref{\DUrole{std,std-ref}{relative kinematics}}}} provides the description of the motion of the same system w.r.t. 2 different observers/reference frames in relative motion.
+\label{ch/kinematics:definition-0}
+\begin{sphinxadmonition}{note}{Definition 1.2.1 (Configuration)}
+
+
+\end{sphinxadmonition}
+\label{ch/kinematics:definition-1}
+\begin{sphinxadmonition}{note}{Definition 1.2.2 (State)}
+
+
+\end{sphinxadmonition}
 
 \sphinxstepscope
 
 
 \section{Point}
 \label{\detokenize{ch/kinematics-point:point}}\label{\detokenize{ch/kinematics-point:classical-mechanics-kinematics-point}}\label{\detokenize{ch/kinematics-point::doc}}
+\sphinxAtStartPar
+The configuration of a point system is determined by its position in space, its state by its position and its velocity. Acceleration is usually required in mechanics, since equations of motions may be recast as a system of second\sphinxhyphen{}orde ordinary differential equations in the configuration of the system. These physical quantites are defined here w.r.t. a reference frame \(O_o \hat{x}^0 \hat{y}^0 \hat{z}^0, t^0\), keeping constant the vectors of the base w.r.t. time \(t^0\).
+
+\sphinxAtStartPar
+\sphinxstylestrong{Position.}
+\begin{equation*}
+\begin{split}\vec{r}_P(t) = P - O_0 = x^0_{P,i}(t) \, \hat{e}^0_i\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Velocity.}
+\begin{equation*}
+\begin{split}\vec{v}_P(t) = \dfrac{d \vec{r}_P}{dt} = \dot{x}^0_{P,i} \, \hat{e}^0_i\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Acceleration.}
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \vec{a}_P(t)
+  & = \dfrac{d \vec{v}_P}{dt}     = \dot{v}^0_{P,i} \, \hat{e}^0_i = \\
+  & = \dfrac{d^2 \vec{r}_P}{dt^2} =\ddot{x}^0_{P,i} \, \hat{e}^0_i 
+\end{aligned}\end{split}
+\end{equation*}
 
 
 \sphinxstepscope
 
 
 \section{Rigid Body}
-\label{\detokenize{ch/kinematics-rigid:rigid-body}}\label{\detokenize{ch/kinematics-rigid:classical-mechanics-kinematics-rigid-body}}\label{\detokenize{ch/kinematics-rigid::doc}}\begin{equation}\label{equation:ch/kinematics-rigid:eq:kin:rigid:vel}
-\begin{split}\vec{v}_Q - \vec{v}_P = \vec{\omega} \times (Q-P)\end{split}
-\end{equation}
+\label{\detokenize{ch/kinematics-rigid:rigid-body}}\label{\detokenize{ch/kinematics-rigid:classical-mechanics-kinematics-rigid-body}}\label{\detokenize{ch/kinematics-rigid::doc}}
 
 \subsection{Rigid motion}
 \label{\detokenize{ch/kinematics-rigid:rigid-motion}}
 \sphinxAtStartPar
-Rigid motion preserves distance between any pair of points, and thus angles. Rotations are described by rotation matrices.
+Rigid motion preserves distance between any pair of points, and thus angles. The motion of two material points \(P\), \(Q\) performing a rigid motion obeys
+\begin{equation}\label{equation:ch/kinematics-rigid:eq:kin:rigid:vel}
+\begin{split}\vec{v}_P - \vec{v}_Q = \vec{\omega} \times (P - Q) \ ,\end{split}
+\end{equation}
+\sphinxAtStartPar
+being \(\vec{v}_P\), \(\vec{v}_Q\) the velocity of the points and \(\vec{\omega}\) the \sphinxstylestrong{angular velocity} of the rigid motion. Taking a point \(Q\) as the reference point of the motion, the velocity of all other points can be found
+\begin{equation*}
+\begin{split}\vec{v}_P = \vec{v}_Q + \vec{\omega} \times (P-Q) \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+as a function of the velocity of \(Q\), the angular velocity of the rigid motion, and the relative position \(P-Q\).
+\subsubsection*{Proof.}
+
+\sphinxAtStartPar
+Given 3 points \(P(t)\), \(Q(t)\), \(R(t)\), the distance bewteen each pair of points is constant and thus its time derivative zero,
+\begin{equation*}
+\begin{split}0 = \dfrac{d}{dt} |P(t)-Q(t)|^2 = 2 \left(P - Q\right) \cdot \left( \vec{v}_P - \vec{v}_Q \right) \quad \rightarrow \quad \Delta \vec{v}_{QP} = \vec{\omega}_{QP} \times \Delta \vec{r}_{QP}\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}0 = \dfrac{d}{dt} |P(t)-R(t)|^2 = 2 \left(P - R\right) \cdot \left( \vec{v}_P - \vec{v}_R \right) \quad \rightarrow \quad \Delta \vec{v}_{RP} = \vec{\omega}_{RP} \times \Delta \vec{r}_{RP}\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}\begin{aligned}
+  0 = \dfrac{d}{dt} \left[ (P-Q) \cdot (P-R) \right] 
+  & = \Delta \vec{v}_{QP} \cdot \Delta \vec{r}_{RP} + \Delta \vec{r}_{QP} \cdot \Delta \vec{v}_{RP} = \\
+  & = \vec{\omega}_{QP} \times \Delta \vec{r}_{QP} \cdot \Delta \vec{r}_{RP} + \Delta \vec{r}_{QP} \cdot \Delta \vec{\omega}_{RP} \times \Delta \vec{r}_{RP} = \\
+  & = \Delta \vec{r}_{QP} \times \Delta \vec{r}_{RP} \cdot ( \vec{\omega}_{QP} - \vec{\omega}_{RP} ) \ ,
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+and since \(\Delta \vec{r}_{QP}\), \(\Delta \vec{r}_{RP}\) are arbitrary it follows that the vector \(\vec{\omega} = \vec{\omega}_{QP} = \vec{\omega}_{RP}\) is unique for all the points performing a rigid motion.
 
 \sphinxAtStartPar
 The configuration of a material vector \(\vec{a}\) undergoing a rotation is described by the product of the rotation tensor \(\mathbb{R}\) by the reference configuration \(\vec{a}^0\),
 \begin{equation*}
-\begin{split}\vec{a} = \mathbb{R} \cdot \vec{a}^0 \ .\end{split}
+\begin{split}
+\vec{a} = \mathbb{R} \cdot \vec{a}^0 
+\qquad , \qquad
+\vec{b} = \mathbb{R} \cdot \vec{b}^0 \ .
+\end{split}
 \end{equation*}
 \sphinxAtStartPar
-A rotation tensor is unitary to preserve distance,
-\begin{equation}\label{equation:ch/kinematics-rigid:eq:rot:unitary}
-\begin{split}\mathbb{I} = \mathbb{R} \cdot \mathbb{R}^T = \mathbb{R}^T \cdot \mathbb{R}\end{split}
-\end{equation}
+In order to preserve distance, and angles
+\begin{equation*}
+\begin{split}\begin{cases}
+ |\vec{a}|^2 = & \vec{a} \cdot \vec{a} = \vec{a}^0 \cdot \mathbb{R}^T \cdot \mathbb{R} \cdot \vec{a}^0 = \vec{a}^0 \cdot \vec{a}^0 = |\vec{a}|^2 \\
+               & \vec{a} \cdot \vec{b} = \vec{a}^0 \cdot \mathbb{R}^T \cdot \mathbb{R} \cdot \vec{b}^0 = \vec{a}^0 \cdot \vec{a}^0
+\end{cases}
+\qquad \rightarrow \qquad \mathbb{R}^T \cdot \mathbb{R} = \mathbb{I}
+\end{split}
+\end{equation*}
 \sphinxAtStartPar
-so that its time derivative reads,
+the \sphinxstylestrong{rotation tensor} is \sphinxstylestrong{unitary}
+\begin{equation}\label{equation:ch/kinematics-rigid:eq:rot:unitary}
+\begin{split}\mathbb{I} = \mathbb{R}^T \cdot \mathbb{R} = \mathbb{R} \cdot \mathbb{R}^T\end{split}
+\end{equation}
+\begin{sphinxadmonition}{note}{Note:}
+\sphinxAtStartPar
+From relation \eqref{equation:ch/kinematics-rigid:eq:rot:unitary}, it follows that
+\begin{equation*}
+\begin{split}1 = |\mathbb{I}| = |\mathbb{R}^T| |\mathbb{R}| = |\mathbb{R}|^2 \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+and thus \(|\mathbb{R}| = \mp 1\). If \(|\mathbb{R}| = 1\), \(\mathbb{R}\) represents a rotation, and implies conservation of orientation of space; if \(|\mathbb{R}| = -1\) represents a reflection w.r.t. a plane, and implies inversion of orientation of space.
+
+\sphinxAtStartPar
+Orientation of space is determined by the transformation of a RHS triad of vectors: if the transform triad is RHS, then orientation of space is preserved; if it becomes LHS, then orientation of space is inverted.
+\end{sphinxadmonition}
+
+\begin{sphinxadmonition}{note}{Note:}
+\sphinxAtStartPar
+Rotation tensor \(\mathbb{R}\) is not singular and its determinant equals \(|\mathbb{R}| = 1\). Thus, \(\mathbb{R}^T \cdot \mathbb{R} = \mathbb{I}\) implies \(\mathbb{R} \cdot \mathbb{R}^T = \mathbb{I}\). Multiplying \eqref{equation:ch/kinematics-rigid:eq:rot:unitary} by \(\mathbb{R}\) on the left
+\begin{equation*}
+\begin{split}\mathbb{0} = \mathbb{R} \cdot \mathbb{R}^T \cdot \mathbb{R} - \mathbb{R} \cdot \mathbb{I} = (\mathbb{R} \cdot \mathbb{R}^T - \mathbb{I}) \cdot  \mathbb{R} \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+and since \(\mathbb{R}\) is non\sphinxhyphen{}singular, it follows that \(\mathbb{R} \cdot \mathbb{R}^T = \mathbb{I}\).
+\end{sphinxadmonition}
+
+\sphinxAtStartPar
+Time derivative of the relation \eqref{equation:ch/kinematics-rigid:eq:rot:unitary} reads
 \begin{equation*}
 \begin{split}\mathbb{0} = \dfrac{d}{dt} \left( \mathbb{R} \cdot \mathbb{R}^T \right) = \dot{\mathbb{R}} \cdot \mathbb{R}^T + \mathbb{R} \cdot \dot{\mathbb{R}}^T\end{split}
 \end{equation*}
@@ -249,15 +340,122 @@ being the vector \(\vec{\omega}\) the angular velocity. Since \(\mathbb{R}\) is 
 \end{equation*}
 \sphinxAtStartPar
 and the expression of the time derivative of a material vector \(\vec{a}\),
-\begin{equation*}
+\begin{equation}\label{equation:ch/kinematics-rigid:eq:material-v:time-derivative}
 \begin{split}\dfrac{d \vec{a}}{d t} = \dot{\mathbb{R}} \cdot \vec{a}^0 = \vec{\omega}_{\times} \cdot \mathbb{R} \cdot \vec{a}^0 = \vec{\omega}_{\times} \cdot \vec{a} = \vec{\omega} \times \vec{a} \  .\end{split}
+\end{equation}
+
+
+\sphinxAtStartPar
+\sphinxstylestrong{Position and Orientation.}
+The most general rigid motion is the combination of the translation of a reference point \(Q\) and the rotation w.r.t. this point of other material points,
+\begin{equation}\label{equation:ch/kinematics-rigid:eq:rigid:pos}
+\begin{split}\begin{aligned}
+  \vec{r}_P
+  & = \vec{r}_Q + (P - Q) = \\
+  & = \vec{r}_Q + \mathbb{R} \cdot (P-Q)^0 
+\end{aligned}\end{split}
+\end{equation}
+\sphinxAtStartPar
+\sphinxstylestrong{Velocity and Angular velocity.}
+Time derivative of the relation \eqref{equation:ch/kinematics-rigid:eq:rigid:pos} between positions of material points gives again \eqref{equation:ch/kinematics-rigid:eq:kin:rigid:vel}
+\begin{equation}\label{equation:ch/kinematics-rigid:eq:rigid:vel}
+\begin{split}\begin{aligned}
+  \vec{v}_P
+  & = \vec{v}_Q + \dot{\mathbb{R}} \cdot (P-Q)^0 = \\
+  & = \vec{v}_Q + \vec{\omega}_{\times} \mathbb{R} \cdot (P-Q)^0 = \\
+  & = \vec{v}_Q + \vec{\omega} \times (P-Q)
+\end{aligned}\end{split}
+\end{equation}
+\sphinxAtStartPar
+\sphinxstylestrong{Acceleration and Angular acceleration.}
+Time derivatives of the relation \{eq\}`eq:rigid:vel\} gives
+\begin{equation*}
+\begin{split}\begin{aligned}
+\vec{a}_P 
+ & = \vec{a}_Q + \vec{\alpha} \times (P-Q) + \vec{\omega} \times \left( \vec{v}_P - \vec{Q} \right) = \\
+ & = \vec{a}_Q + \vec{\alpha} \times (P-Q) + \vec{\omega} \times \left[ \, \vec{\omega} \times (P - Q) \, \right] \ .
+\end{aligned}\end{split}
 \end{equation*}
 
-\subsection{Kinematics of rigid body}
-\label{\detokenize{ch/kinematics-rigid:kinematics-of-rigid-body}}
-\sphinxAtStartPar
-Rigid motion allows to describe the kinematics of a rigid body \sphinxhyphen{} determining position, velocity and acceleration of all of its points \sphinxhyphen{} given the position of a material point \(P\) and its orientation with respect to the reference frame, as an example using a rotation tensor \(\mathbb{R}\).
 
+\sphinxstepscope
+
+
+\section{Continuous Medium}
+\label{\detokenize{ch/kinematics-continuum:continuous-medium}}\label{\detokenize{ch/kinematics-continuum:classical-mechanics-kinematics-contiuum}}\label{\detokenize{ch/kinematics-continuum::doc}}
+\sphinxstepscope
+
+
+\section{Relative Kinematics}
+\label{\detokenize{ch/kinematics-relative:relative-kinematics}}\label{\detokenize{ch/kinematics-relative:classical-mechanics-kinematics-relative}}\label{\detokenize{ch/kinematics-relative::doc}}
+\sphinxAtStartPar
+Relative kinematics is discussed here using two Cartesian reference frames.
+\begin{equation*}
+\begin{split}P   - O_0 = x^{0i}_{  P/O_0} \hat{e}^0_i\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}O_1 - O_0 = x^{0i}_{O_1/O_0} \hat{e}^0_i\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}P   - O_1 = x^{1i}_{  P/O_1} \hat{e}^1_i\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}\begin{aligned}
+  \hat{e}^1_i 
+  = \hat{e}^{1}_i \cdot \hat{e}^0_k \, \hat{e}^0_k
+  & = \hat{e}^{1}_j \cdot \hat{e}^0_k \, \hat{e}^0_k \otimes \hat{e}^0_j \cdot \hat{e}^0_i = \\
+  & = R^{0\rightarrow 1}_{kj} \hat{e}^0_k \otimes \hat{e}^0_j \cdot \hat{e}^0_i 
+    = \mathbb{R}^{0\rightarrow 1} \cdot \hat{e}^0_i  \ .
+\end{aligned}\end{split}
+\end{equation*}
+
+\subsection{Points}
+\label{\detokenize{ch/kinematics-relative:points}}
+\sphinxAtStartPar
+\sphinxstylestrong{Position.}
+Given two reference frames \(Ox^i\), \(O' x^{i'}\), for the position of a point \(P\) reads
+\begin{equation}\label{equation:ch/kinematics-relative:eq:relative:point:pos}
+\begin{split}(P - O_0) = ( O_1 - O_0 ) + ( P - O_1) \ ,\end{split}
+\end{equation}\begin{equation*}
+\begin{split}x^0_{P/O_0,i} \hat{e}^0_i = x^0_{O_1/O_0,i} \hat{e}^0_i + x^1_{P/O_1,k} \hat{e}^1_k \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+i.e. the position vector \(P-O\) of the point \(P\) w.r.t. point \(O\) \sphinxhyphen{} origin of the reference frame \(O x^i\) \sphinxhyphen{} is the sum of the position vector \(P-O'\) of the point \(P\) w.r.t. to the point \(O'\) \sphinxhyphen{} origin of the reference frame \(O' x^{'i}\) \sphinxhyphen{}  and the position vector \(O' - O\), of the origin \(O'\) w.r.t. to \(O\).
+
+\sphinxAtStartPar
+\sphinxstylestrong{Velocity.} Time derivative of relative position relation \eqref{equation:ch/kinematics-relative:eq:relative:point:pos} w.r.t. to reference frame \(0\) is performed keeping \(\hat{e}^0_i\) constant.
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \dfrac{{}^0 d}{dt} (P-O_0)
+  & = \dfrac{{}^0 d}{dt} \left[ (O_1 - O_0) + (P - O_1) \right] = \\
+  & = \dfrac{{}^0 d}{dt} \left( x^0_{O_1/O_0,i} \hat{e}^0_i  \right) + \dfrac{{}^0 d}{dt} \left( x^1_{P/O_1,k} \hat{e}^1_k \right) = \\
+  & = \dfrac{{}^0 d}{dt} x^0_{O_1/O_0,i} \, \hat{e}^0_i + \dfrac{{}^0 d}{dt} x^1_{P/O_1,k} \, \hat{e}^1_k + x^1_{P/O_1,k} \, \dfrac{{}^0 d}{dt}  \hat{e}^1_k = \\
+  & = \vec{v}^0_{O_1/O_0} + \vec{v}^1_{P/O_1} + \vec{\omega}_{1/0} \times  \hat{e}^1_k x^1_{P/O_1,k} = \\
+  & = \vec{v}^0_{O_1/O_0} + \vec{v}^1_{P/O_1} + \vec{\omega}_{1/0} \times ( P - O_1 )  \ ,
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+so that
+\begin{equation}\label{equation:ch/kinematics-relative:eq:relative:point:vel}
+\begin{split} \vec{v}^0_{P/O} = \vec{v}^0_{O_1/O_0} + \vec{v}^1_{P/O_1} + \vec{\omega}_{1/0} \times ( P - O_1 )  \ .\end{split}
+\end{equation}
+\sphinxAtStartPar
+\sphinxstylestrong{Acceleration.} Time derivative of relative velocity relation \eqref{equation:ch/kinematics-relative:eq:relative:point:vel} w.r.t. reference frame \(0\) reads
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \dfrac{{}^0 d}{dt} \vec{v}^0_{P/O_0}
+  & = \dfrac{{}^0 d}{dt} \left[ \vec{v}^0_{O_1/O_0} + \vec{v}^1_{P/O_1} + \vec{\omega}_{1/0} \times ( P - O_1 ) \right] = \\
+  & = \dots \\
+  & = \vec{a}^0_{O_1/O_0} + \vec{a}^{1}_{P/O_1} + 2 \vec{\omega}_{1/0} \times \vec{v}^1_{P/O_1} + \vec{\alpha}_{1/0} \times (P - O_1) + \vec{\omega}_{1/0} \times [ \, \vec{\omega}_{1/0} \times (P - O_1) \, ]
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+so that
+\begin{equation*}
+\begin{split}
+\vec{a}^0_{P/O_0} = \vec{a}^0_{O_1/O_0} + \vec{a}^{1}_{P/O_1} + \underbrace{\vec{\alpha}_{1/0} \times (P - O_1)}_{\text{tangential}} + \underbrace{2 \vec{\omega}_{1/0} \times \vec{v}^1_{P/O_1}}_{\text{Coriolis}} + \underbrace{\vec{\omega}_{1/0} \times [ \, \vec{\omega}_{1/0} \times (P - O_1) \, ]}_{\text{centripetal}} \ .
+\end{split}
+\end{equation*}
+
+\subsection{Rigid bodies}
+\label{\detokenize{ch/kinematics-relative:rigid-bodies}}
 \sphinxAtStartPar
 \sphinxstylestrong{Orientation.}
 
@@ -266,8 +464,6 @@ Rigid motion allows to describe the kinematics of a rigid body \sphinxhyphen{} d
 
 \sphinxAtStartPar
 \sphinxstylestrong{Angular acceleration.}
-
-
 
 \sphinxstepscope
 
@@ -319,22 +515,32 @@ it follows
 \end{equation*}\begin{equation*}
 \begin{split}\omega_l = \frac{1}{2} \varepsilon_{ilk} \dot{R}_{ij} R_{kj} = - \frac{1}{2} \varepsilon_{lik} \dot{R}_{ij} R_{kj} = -\frac{1}{2} \varepsilon_{lij} \Omega_{ij}\end{split}
 \end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Angular acceleration.} Angular acceleration, \(\vec{\alpha}\), is the time derivative of angular velocity, \(\vec{\omega}\),
+\begin{equation*}
+\begin{split}\vec{\alpha} = \dot{\vec{\omega}} \ .\end{split}
+\end{equation*}
 
-\subsubsection{Successive rotations}
+\subsection{Successive rotations}
 \label{\detokenize{ch/kinematics-rotations:successive-rotations}}
 \sphinxAtStartPar
-Given 3 Cartesian bases \(\{ \hat{e}^0_i \}_{i=1:3}\), \(\{ \hat{e}^1_j \}_{j=1:3}\), \(\{ \hat{e}^2_k \}_{k=1:3}\),
+\sphinxstylestrong{Orientation.} Given 3 Cartesian bases \(\{ \hat{e}^0_i \}_{i=1:3}\), \(\{ \hat{e}^1_j \}_{j=1:3}\), \(\{ \hat{e}^2_k \}_{k=1:3}\),
 \begin{equation*}
 \begin{split}\begin{aligned}
  \hat{e}^2_i 
   & = \mathbb{R}^{1 \rightarrow 2} \cdot \hat{e}^1_i = \\ 
   & = \mathbb{R}^{1 \rightarrow 2} \cdot \mathbb{R}^{0 \rightarrow 1} \cdot\hat{e}^0_i 
-\end{aligned}\end{split}
+\end{aligned} \ , \end{split}
 \end{equation*}
 \sphinxAtStartPar
-Time derivative w.r.t. reference frame 0 is indicated as the standard time derivative
+i.e composition of rotations holds
 \begin{equation*}
-\begin{split}\dot{a} = \dfrac{d a}{d t} = \dfrac{{}^0 d a}{d t} \ ,\end{split}
+\begin{split}\mathbb{R}^{0 \rightarrow 2} = \mathbb{R}^{1 \rightarrow 2} \cdot \mathbb{R}^{0 \rightarrow 1} \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Angular velocity.} Time derivative w.r.t. reference frame 0 is indicated as the standard time derivative
+\begin{equation*}
+\begin{split}\dot{a} = \dfrac{d a}{d t} = \dfrac{{}^0 d a}{d t} = \dfrac{{}^1 d}{dt} + \vec{\omega}_{1/0} \times \ ,\end{split}
 \end{equation*}\begin{equation*}
 \begin{split}\begin{aligned}
 \dfrac{d}{dt} \mathbb{R}^{21} 
@@ -352,8 +558,23 @@ Time derivative w.r.t. reference frame 0 is indicated as the standard time deriv
  & = \mathbb{\Omega}^{21} + \mathbb{\Omega}^{10} \ .
 \end{aligned}\end{split}
 \end{equation*}
+\sphinxAtStartPar
+so that addition of relative angular velocity holds
+\begin{equation*}
+\begin{split}\mathbb{\Omega}^{20} = \mathbb{\Omega}^{21} + \mathbb{\Omega}^{10} \qquad , \qquad \vec{\omega}_{2/0} = \vec{\omega}_{2/1} + \vec{\omega}_{1/0} \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Angular acceleration.} Time derivative of angular velocity composition provides the addition of relative angular accelerations
+\begin{equation*}
+\begin{split}\dfrac{{}^0 d}{dt} \vec{\omega}_{2/0} = \dfrac{{}^0 d}{dt} \vec{\omega}_{2/1} + \dfrac{{}^0 d}{dt} \vec{\omega}_{1/0} \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+or
+\begin{equation*}
+\begin{split}\vec{\alpha}_{2/0} = \vec{\alpha}_{2/1} + \vec{\alpha}_{1/0} \ .\end{split}
+\end{equation*}
 
-\subsubsection{Linearization of rotations}
+\subsection{Linearization of rotations}
 \label{\detokenize{ch/kinematics-rotations:linearization-of-rotations}}\begin{equation*}
 \begin{split}\mathbb{I} = \mathbb{R} \cdot \mathbb{R}^T\end{split}
 \end{equation*}
@@ -365,73 +586,28 @@ Increment
 \sphinxAtStartPar
 and thus the antisymmetric tensor can be written as
 \begin{equation*}
-\begin{split}\delta \theta_{\times} := \delta \mathbb{R} \cdot \mathbb{R}^T\end{split}
+\begin{split}\delta \theta_{\times} := \delta \mathbb{R} \cdot \mathbb{R}^T = \delta \mathbb{\Theta} \ ,\end{split}
 \end{equation*}
 \sphinxAtStartPar
 so that
 \begin{equation*}
-\begin{split}\delta \theta_l = -\frac{1}{2} \varepsilon_{lij} \delta R_{ik} \, R_{jk}\end{split}
+\begin{split}\delta \theta_l = -\frac{1}{2} \varepsilon_{lij} \delta R_{ik} \, R_{jk} = - \frac{1}{2} \varepsilon_{lij} \delta \Theta_{ij}\end{split}
 \end{equation*}
 
-\subsection{Quaternions}
-\label{\detokenize{ch/kinematics-rotations:quaternions}}
-\sphinxstepscope
-
-
-\section{Continuous Medium}
-\label{\detokenize{ch/kinematics-continuum:continuous-medium}}\label{\detokenize{ch/kinematics-continuum:classical-mechanics-kinematics-contiuum}}\label{\detokenize{ch/kinematics-continuum::doc}}
-\sphinxstepscope
-
-
-\section{Relative Kinematics}
-\label{\detokenize{ch/kinematics-relative:relative-kinematics}}\label{\detokenize{ch/kinematics-relative:classical-mechanics-kinematics-relative}}\label{\detokenize{ch/kinematics-relative::doc}}
+\subsection{Parametrizations}
+\label{\detokenize{ch/kinematics-rotations:parametrizations}}\label{\detokenize{ch/kinematics-rotations:classical-mechanics-kinematics-rotations-param}}
 \sphinxAtStartPar
-Relative kinematics is discussed here using two Cartesian reference frames.
-\begin{equation*}
-\begin{split}P   - O_0 = x^{0i}_{  P/O_0} \hat{e}^0_i\end{split}
-\end{equation*}\begin{equation*}
-\begin{split}O_1 - O_0 = x^{0i}_{O_1/O_0} \hat{e}^0_i\end{split}
-\end{equation*}\begin{equation*}
-\begin{split}P   - O_1 = x^{1i}_{  P/O_1} \hat{e}^1_i\end{split}
-\end{equation*}\begin{equation*}
-\begin{split}\begin{aligned}
-  \hat{e}^1_i 
-  = \hat{e}^{1}_i \cdot \hat{e}^0_k \, \hat{e}^0_k
-  & = \hat{e}^{1}_j \cdot \hat{e}^0_k \, \hat{e}^0_k \otimes \hat{e}^0_j \cdot \hat{e}^0_i = \\
-  & = R^{0\rightarrow 1}_{kj} \hat{e}^0_k \otimes \hat{e}^0_j \cdot \hat{e}^0_i 
-    = \mathbb{R}^{0\rightarrow 1} \cdot \hat{e}^0_i  \ .
-\end{aligned}\end{split}
-\end{equation*}
-
-\subsection{Points}
-\label{\detokenize{ch/kinematics-relative:points}}
-\sphinxAtStartPar
-\sphinxstylestrong{Position.}
-Given two reference frames \(Ox^i\), \(O' x^{i'}\), for the position of a point \(P\) reads
-\begin{equation*}
-\begin{split}(P - O) = (P - O') + ( O' - O) \ ,\end{split}
-\end{equation*}
-\sphinxAtStartPar
-i.e. the position vector \(P-O\) of the point \(P\) w.r.t. point \(O\) \sphinxhyphen{} origin of the reference frame \(O x^i\) \sphinxhyphen{} is the sum of the position vector \(P-O'\) of the point \(P\) w.r.t. to the point \(O'\) \sphinxhyphen{} origin of the reference frame \(O' x^{'i}\) \sphinxhyphen{}  and the position vector \(O' - O\), of the origin \(O'\) w.r.t. to \(O\).
-
-\sphinxAtStartPar
-\sphinxstylestrong{Velocity.}
-
-\sphinxAtStartPar
-\sphinxstylestrong{Acceleration.}
+Minimal sets of parameters to represent rotations have 3 parameters. However these sets of parameters are not regular over all the possible rotations, and the transformation becomes singular somewhere. {\hyperref[\detokenize{ch/kinematics-rotations:classical-mechanics-kinematics-rotations-param-quaternions}]{\sphinxcrossref{\DUrole{std,std-ref}{Quaternions}}}} provide a set of 4 parameters for a regular parametrization of rotations
 
 
-\subsection{Rigid bodies}
-\label{\detokenize{ch/kinematics-relative:rigid-bodies}}
-\sphinxAtStartPar
-\sphinxstylestrong{Orientation.}
+\subsubsection{Euler angles}
+\label{\detokenize{ch/kinematics-rotations:euler-angles}}\label{\detokenize{ch/kinematics-rotations:classical-mechanics-kinematics-rotations-param-euler}}
 
-\sphinxAtStartPar
-\sphinxstylestrong{Angular velocity.}
+\subsubsection{Axis and rotation angle}
+\label{\detokenize{ch/kinematics-rotations:axis-and-rotation-angle}}\label{\detokenize{ch/kinematics-rotations:classical-mechanics-kinematics-rotations-param-axis}}
 
-\sphinxAtStartPar
-\sphinxstylestrong{Angular acceleration.}
-
+\subsubsection{Quaternions}
+\label{\detokenize{ch/kinematics-rotations:quaternions}}\label{\detokenize{ch/kinematics-rotations:classical-mechanics-kinematics-rotations-param-quaternions}}
 \sphinxstepscope
 
 
@@ -1120,7 +1296,9 @@ having recognized the transpose of the static moment of inertia, and introduced 
    + \dfrac{1}{2} \vec{v}_Q \cdot \left[ - \sum_k m_k (P_k - Q)_\times \right] \cdot \vec{\omega} + \\
  & + \dfrac{1}{2} \vec{\omega} \cdot \left[ \sum_k m_k (P_k - Q)_\times \right] \cdot \vec{v}_Q
    + \dfrac{1}{2} \vec{\omega} \cdot \left[ \sum_k m_k (P_k - Q)_{\times} (P_k - Q)_\times \right] \cdot \vec{\omega} = \\
- & = \dfrac{1}{2} m |\vec{v}_Q|^2 + \dfrac{1}{2} \vec{v}_Q \cdot \mathbb{S}_Q \cdot \vec{\omega} + \dfrac{1}{2} \vec{\omega} \cdot \mathbb{S}^T \cdot \vec{v}_Q + \dfrac{1}{2} \vec{\omega} \cdot \mathbb{I}_Q \cdot \vec{\omega} \ .
+ & = \dfrac{1}{2} m |\vec{v}_Q|^2 + \dfrac{1}{2} \vec{v}_Q \cdot \mathbb{S}_Q \cdot \vec{\omega} + \dfrac{1}{2} \vec{\omega} \cdot \mathbb{S}^T \cdot \vec{v}_Q + \dfrac{1}{2} \vec{\omega} \cdot \mathbb{I}_Q \cdot \vec{\omega} = \\
+ & = \dfrac{1}{2} \vec{v}_Q \cdot \left[ m \vec{v}_Q + \mathbb{S}_Q \cdot \vec{\omega} \right] + \dfrac{1}{2} \vec{\omega} \cdot \left[  \mathbb{S}_Q^T \cdot \vec{v}_Q + \mathbb{I}_Q \cdot \vec{\omega} \right] = \\
+ & = \dfrac{1}{2} \vec{v}_Q \cdot \vec{Q} + \dfrac{1}{2} \vec{\omega} \cdot \vec{L}_Q \ .
 \end{aligned}\end{split}
 \end{equation*}
 \sphinxAtStartPar
@@ -1131,10 +1309,8 @@ having used the vector identities
 \begin{split}\vec{a} \times \vec{b} = - \vec{b} \times \vec{a}\end{split}
 \end{equation*}
 \sphinxAtStartPar
-Comparing the expression of the kinetic energy with those of the momentum and angular momentum, it readily follows that
-\begin{equation*}
-\begin{split}K = \dfrac{1}{2} \vec{v}_Q \cdot \vec{Q} + \dfrac{1}{2} \vec{\omega} \cdot \vec{L}_Q \ .\end{split}
-\end{equation*}
+and having introduced the expression of momentum and angular momentum in the last step.
+
 \begin{sphinxadmonition}{note}{Note:}
 \sphinxAtStartPar
 The components of static moment of inertia and tensor of inertia in a material basis \sphinxhyphen{} following the motion of the system \sphinxhyphen{} are constant.
@@ -1324,6 +1500,82 @@ with \(I_{ii}^0 \ge 0\).
 or w.r.t. the center of mass \(G\),
 \begin{equation*}
 \begin{split} \mathbb{I}_Q = \mathbb{I}_G - m (Q-G)_\times (Q-G)_\times \ .\end{split}
+\end{equation*}
+
+\subsection{Time derivatives of dynamical quantities}
+\label{\detokenize{ch/inertia:time-derivatives-of-dynamical-quantities}}
+\sphinxAtStartPar
+Time derivatives of dynamical quantities are easily evaluated using a Cartesian material reference frame.
+
+\sphinxAtStartPar
+\sphinxstylestrong{Momentum.}
+\begin{equation*}
+\begin{split}\begin{aligned}
+\dfrac{d}{dt} \vec{Q} 
+  & = \dfrac{d}{dt} \left( m \vec{v}_Q + \mathbb{S}_Q \cdot \vec{\omega} \right) =  \\
+  & =  m \dot{\vec{v}}_Q + \dfrac{d}{dt} \left( \vec{E}^0_i S^0_{ij} \omega^0_j \right) = \\
+  & =  m \dot{\vec{v}}_Q + \dfrac{d\vec{E}^0_i }{dt} S^0_{ij} \omega^0_j + \vec{E}^0_i S^0_{ij} \dfrac{d} \omega^0_j{dt} = \\
+  & =  m \dot{\vec{v}}_Q + \vec{\omega} \times \vec{E}^0_i S^0_{ij} \omega^0_j + \vec{E}^0_i S^0_{ij} \dfrac{d}{dt}\omega^0_j = \\
+  & =  m \dot{\vec{v}}_Q + \vec{\omega} \times \left( \mathbb{S}_Q \cdot \vec{\omega} \right) + \mathbb{S}_Q \cdot \dot{\vec{\omega}} \ .
+\end{aligned}\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}\begin{aligned}
+ \dfrac{d}{dt} \vec{\omega} 
+ & = \dfrac{d}{dt} \left( \hat{E}^0_i \omega_i^0 \right) = \\
+ & = \vec{\omega} \times \hat{E}^0_i \omega_i^0 + \hat{E}^0_i \dfrac{d \omega^0_i}{dt} = \\
+ & = \underbrace{\vec{\omega} \times \vec{\omega}}_{=\vec{0}} + \hat{E}^0_i \dfrac{d \omega^0_i}{dt} \ .
+\end{aligned}\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}\begin{aligned}
+ \dfrac{d}{dt} \vec{v} 
+ & = \dfrac{d}{dt} \left( \hat{E}^0_i v_i^0 \right) = \\
+ & = \vec{\omega} \times \hat{E}^0_i v_i^0 + \hat{E}^0_i \dfrac{d v^0_i}{dt} = \\
+ & = \vec{\omega} \times \vec{v}  + \dfrac{{}^0 d}{dt} \vec{v} \\
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Angular momentum.}
+\begin{equation*}
+\begin{split}\begin{aligned}
+\dfrac{d}{dt} \vec{L}_H
+& =  \dfrac{d}{dt} \left( (Q-H) \times \vec{Q} + \vec{L}_Q  \right) \ ,
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+and
+\begin{equation*}
+\begin{split}\dfrac{d}{dt} \left( (Q-H) \times \vec{Q} \right) = ( \vec{v}_Q - \dot{\vec{x}}_H ) \times \vec{Q} + ( Q - H ) \times \dot{\vec{Q}}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+and
+\begin{equation*}
+\begin{split}\begin{aligned}
+ \dfrac{d \vec{L}_Q}{dt} 
+ & = \dfrac{d}{dt} \left( \mathbb{S}^T_Q \cdot \vec{v}_Q + \mathbb{I}_Q \cdot \vec{\omega} \right) = \\
+ & = \dfrac{d}{dt} \left[ \hat{E}_i^0 \left( S^0_{ji} v^0_{Q,j} + I^0_{ij} \omega^0_j \right) \right] = \\
+ & = \vec{\omega} \times \hat{E}_i^0 \left( S^0_{ji} v^0_{Q,j} + I^0_{ij} \omega^0_j \right)
+   + \hat{E}^0_i \left( S_{ji}^0 \dot{v}^0_{Q,j} + I^0_{ij} \dot{\omega}^0_j \right) = \\
+ & = \vec{\omega} \times ( \mathbb{S}_Q^T \cdot \vec{v}_Q + \mathbb{I}_Q \cdot \vec{\omega} )
+   + \left( \mathbb{S}_Q^T \cdot \dfrac{{}^0 d}{dt} \vec{v}_Q + \mathbb{I} \cdot \dot{\vec{\omega}} \right) = \\
+ & = \vec{\omega} \times ( \mathbb{S}_Q^T \cdot \vec{v}_Q + \mathbb{I}_Q \cdot \vec{\omega} )
+   + \left( \mathbb{S}_Q^T \cdot \left( \dot{v}_Q - \vec{\omega} \times \vec{v}_Q \right) + \mathbb{I} \cdot \dot{\vec{\omega}} \right) \\
+ & = \left( \mathbb{S}_Q^T \cdot \left( \dot{v}_Q - \vec{\omega} \times \vec{v}_Q \right) + \mathbb{I} \cdot \dot{\vec{\omega}} \right) 
+    + \vec{\omega} \times ( \mathbb{S}_Q^T \cdot \vec{v}_Q + \mathbb{I}_Q \cdot \vec{\omega} )
+\end{aligned}\end{split}
+\end{equation*}
+
+\subsubsection{Dynamical quantities and time derivatives with \protect\(G\protect\) as reference point}
+\label{\detokenize{ch/inertia:dynamical-quantities-and-time-derivatives-with-g-as-reference-point}}\begin{equation*}
+\begin{split}
+\begin{cases}
+  \vec{Q} = m \vec{v}_G \\
+  \vec{L}_G = \mathbb{I}_G \cdot \vec{\omega}
+\end{cases}
+\qquad , \qquad
+\begin{cases}
+  \dot{\vec{Q}} = m \dot{\vec{v}}_G \\
+  \dot{\vec{L}}_G = \mathbb{I}_G \cdot \dot{\vec{\omega}} + \vec{\omega} \times \mathbb{I}_G \cdot \vec{\omega}
+\end{cases}\end{split}
 \end{equation*}
 \sphinxstepscope
 
@@ -1598,223 +1850,185 @@ While internal forces and moments have zero net resultant in momentum and angula
 \section{Equations of motion of a rigid body}
 \label{\detokenize{ch/dynamics-eom-rigid:equations-of-motion-of-a-rigid-body}}\label{\detokenize{ch/dynamics-eom-rigid:classical-mechanics-dynamics-eom-rigid}}\label{\detokenize{ch/dynamics-eom-rigid::doc}}
 \sphinxAtStartPar
-\sphinxstylestrong{Momentum balance equation.}
+With different choices of the reference point \(H\), the general expression of dynamical equations may have different, but equivalent, forms.
 
+
+\subsection{General equations}
+\label{\detokenize{ch/dynamics-eom-rigid:general-equations}}
+\sphinxAtStartPar
+\sphinxstylestrong{Momentum balance equation.}
+\begin{equation*}
+\begin{split}\dfrac{d}{dt} \vec{Q} = \vec{R}^e\end{split}
+\end{equation*}
 \sphinxAtStartPar
 \sphinxstylestrong{Angular momentum balance equation.}
+\begin{equation*}
+\begin{split}\dfrac{d}{dt} \vec{L}_H + \dot{\vec{x}}_H \times \vec{Q} = \vec{M}_H^e\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Kinetic energy balance equation.}
+\begin{equation*}
+\begin{split}\dfrac{d}{dt} K = P^{tot}\end{split}
+\end{equation*}
+
+\subsection{Dynamical equations w.r.t. the center of mass \protect\(G\protect\)}
+\label{\detokenize{ch/dynamics-eom-rigid:dynamical-equations-w-r-t-the-center-of-mass-g}}
+\sphinxAtStartPar
+\sphinxstylestrong{Momentum, angular momentum and kinetic energy}
+\begin{equation*}
+\begin{split}
+\begin{cases}
+ \vec{Q} = m \vec{v}_G \\
+ \vec{L}_G = \mathbb{I}_G \cdot \vec{\omega} \\
+ K = \frac{1}{2} m |\vec{v}_G|^2 + \frac{1}{2} \vec{\omega} \cdot \mathbb{I}_G \cdot \vec{\omega} \\
+\end{cases}
+\qquad , \qquad
+\begin{cases}
+ \dot{\vec{Q}} = m \dot{\vec{v}}_G \\
+ \dot{\vec{L}}_G = \mathbb{I}_G \cdot \dot{\vec{\omega}} + \vec{\omega} \times \mathbb{I}_G \cdot \vec{\omega} \\
+ \dot{K} = m \vec{v}_G \cdot \dot{\vec{v}}_G + \vec{\omega} \cdot \mathbb{I}_G \cdot \dot{\vec{\omega}}
+\end{cases}
+\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Equations of motion.}
+\begin{equation*}
+\begin{split}
+\begin{cases}
+ \dot{\vec{Q}} = \vec{R}^e \\
+ \dot{\vec{L}}_G = \vec{M}_G^e \\
+\end{cases}
+\qquad , \qquad
+\begin{cases}
+ m \dot{\vec{v}}_G = \vec{R}^e \\
+ \mathbb{I}_G \cdot \dot{\vec{\omega}} + \vec{\omega} \times \mathbb{I}_G \cdot \vec{\omega} = \vec{M}_G^e \\
+\end{cases}
+\end{split}
+\end{equation*}\subsubsection*{Time derivative of kinetic energy}
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \dfrac{d K}{dt}
+  & = \dfrac{1}{2} \dfrac{d}{dt} \left( \vec{v}_G \cdot \vec{Q} + \vec{\omega}_G \cdot \vec{L}_G \right) = \\
+  & = \dfrac{1}{2} \left( \dot{\vec{v}}_G \cdot m \vec{v}_G + \vec{v}_G \cdot m \dot{\vec{v}}_G + \dot{\vec{\omega}} \cdot \mathbb{I}_G \cdot \vec{\omega} + \vec{\omega} \cdot \left(  \mathbb{I} \cdot \dot{\vec{\omega}} + \vec{\omega} \times \mathbb{I}_G \cdot \vec{\omega} \right) \right) \\
+  & = \vec{v}_G \cdot m \dot{\vec{v}}_G + \vec{\omega} \cdot \mathbb{I}_G \cdot \dot{\vec{\omega}} \\
+  & = \vec{v}_G \cdot \dot{\vec{Q}} + \vec{\omega} \cdot \dot{\vec{L}}_G \\
+  & = \dot{\vec{v}}_G \cdot \vec{Q} + \dot{\vec{\omega}} \cdot \vec{L}_G \ .
+\end{aligned}\end{split}
+\end{equation*}
+
+\subsection{Dynamical equations w.r.t. a material point \protect\(Q\protect\)}
+\label{\detokenize{ch/dynamics-eom-rigid:dynamical-equations-w-r-t-a-material-point-q}}
+\sphinxAtStartPar
+\sphinxstylestrong{Momentum, angular momentum and kinetic energy}
+\begin{equation*}
+\begin{split}
+\begin{cases}
+ \vec{Q} = m \vec{v}_Q + \mathbb{S}_Q \cdot \vec{\omega} \\
+ \vec{L}_Q = \mathbb{S}_Q^T \cdot \vec{v}_Q + \mathbb{I}_Q \cdot \vec{\omega} \\
+ K = \dfrac{1}{2} \vec{v}_Q \cdot \vec{Q} + \dfrac{1}{2} \vec{\omega} \cdot \vec{L}_Q
+\end{cases}
+\qquad , \qquad
+\begin{cases}
+ \dot{\vec{Q}} = m \dot{\vec{v}}_Q + \mathbb{S}_Q \cdot \dot{\vec{\omega}} + \vec{\omega} \times \mathbb{S}_Q \cdot \vec{\omega} \\
+ \dot{\vec{L}}_Q =
+   \left[ \mathbb{S}_Q^T \cdot \left( \dot{v}_Q - \vec{\omega} \times \vec{v}_Q \right) + \mathbb{I} \cdot \dot{\vec{\omega}} \right] 
+ + \vec{\omega} \times ( \mathbb{S}_Q^T \cdot \vec{v}_Q + \mathbb{I}_Q \cdot \vec{\omega} ) \\
+ \dot{K} = \dots
+\end{cases}
+\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Equations of motion.}
+\begin{equation*}
+\begin{split}
+\begin{cases}
+ \dot{\vec{Q}} = \vec{R}^e \\
+ \dot{\vec{L}}_Q + \vec{v}_Q \times \vec{Q} = \vec{M}_Q^e \\
+\end{cases}
+\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}
+\begin{cases}
+ m \dot{\vec{v}}_Q + \mathbb{S}_Q \cdot \dot{\vec{\omega}} + \vec{\omega} \times \mathbb{S}_Q \cdot \vec{\omega} = \vec{R}^e \\
+ \left[ \mathbb{S}_Q^T \cdot \left( \dot{v}_Q - \vec{\omega} \times \vec{v}_Q \right) + \mathbb{I} \cdot \dot{\vec{\omega}} \right] 
+ + \vec{\omega} \times ( \mathbb{S}_Q^T \cdot \vec{v}_Q + \mathbb{I}_Q \cdot \vec{\omega} ) + \vec{v}_Q \times \left[  m \vec{v}_Q + \mathbb{S}_Q \cdot \vec{\omega}   \right] = \vec{M}_Q^e \\
+\end{cases}
+\end{split}
+\end{equation*}
+\sphinxAtStartPar
+or using the “material time derivative”
+\begin{equation*}
+\begin{split}\dfrac{{}^0 d}{dt} \underline{\hspace{10pt}} = \dfrac{d}{dt} \underline{\hspace{10pt}} - \vec{\omega} \times \underline{\hspace{10pt}} \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+and matrix formalism to write these two vector equations
+\begin{equation*}
+\begin{split}
+\begin{bmatrix} m \mathbb{I} & \mathbb{S}_Q \\ \mathbb{S}_Q^T & \mathbb{I}_Q \end{bmatrix} \, \dfrac{{}^0 d}{dt} \begin{bmatrix} \vec{v}_Q \\ \vec{\omega} \end{bmatrix} + \begin{bmatrix} \vec{\omega}_\times & \vec{0} \\ \vec{v}_{Q \times} & \vec{\omega}_{\times} \end{bmatrix} \begin{bmatrix} m \mathbb{I} & \mathbb{S}_Q \\ \mathbb{S}_Q^T & \mathbb{I}_Q \end{bmatrix} \begin{bmatrix} \vec{v}_Q \\ \vec{\omega} \end{bmatrix} = \begin{bmatrix} \vec{R}^e \\ \vec{M}_Q^e \end{bmatrix} \ .
+\end{split}
+\end{equation*}\subsubsection*{Starting from differential equations}
 
 \sphinxAtStartPar
-\sphinxstylestrong{Kineric energy balance equation.}
-\subsubsection*{Starting from differential equations}
+\sphinxstylestrong{todo}
 
 \sphinxstepscope
 
-\begin{sphinxuseclass}{sd-container-fluid}
-\begin{sphinxuseclass}{sd-sphinx-override}
-\begin{sphinxuseclass}{sd-p-0}
-\begin{sphinxuseclass}{sd-mt-2}
-\begin{sphinxuseclass}{sd-mb-4}
-\begin{sphinxuseclass}{sd-row}
-\begin{sphinxuseclass}{sd-row-cols-2}
-\begin{sphinxuseclass}{sd-gx-2}
-\begin{sphinxuseclass}{sd-gy-1}
-\begin{sphinxuseclass}{sd-col}
-\begin{sphinxuseclass}{sd-d-flex-row}
-\begin{sphinxuseclass}{sd-align-minor-center}
-\begin{sphinxuseclass}{sd-container-fluid}
-\begin{sphinxuseclass}{sd-sphinx-override}
-\begin{sphinxuseclass}{sd-row}
-\begin{sphinxuseclass}{sd-row-cols-2}
-\begin{sphinxuseclass}{sd-row-cols-xs-2}
-\begin{sphinxuseclass}{sd-row-cols-sm-3}
-\begin{sphinxuseclass}{sd-row-cols-md-3}
-\begin{sphinxuseclass}{sd-row-cols-lg-3}
-\begin{sphinxuseclass}{sd-gx-3}
-\begin{sphinxuseclass}{sd-gy-1}
-\begin{sphinxuseclass}{sd-col}
-\begin{sphinxuseclass}{sd-col-auto}
-\begin{sphinxuseclass}{sd-d-flex-row}
-\begin{sphinxuseclass}{sd-align-minor-center}
-\sphinxAtStartPar
-basics
 
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\begin{sphinxuseclass}{sd-col}
-\begin{sphinxuseclass}{sd-col-auto}
-\begin{sphinxuseclass}{sd-d-flex-row}
-\begin{sphinxuseclass}{sd-align-minor-center}
-\sphinxAtStartPar
-Jan 21, 2025
 
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\begin{sphinxuseclass}{sd-col}
-\begin{sphinxuseclass}{sd-col-auto}
-\begin{sphinxuseclass}{sd-d-flex-row}
-\begin{sphinxuseclass}{sd-align-minor-center}
-\sphinxAtStartPar
-0 min read
 
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-
-\section{Equazioni cardinali della dinamica: mezzi continui}
-\label{\detokenize{ch/dynamics-eom-continuum:equazioni-cardinali-della-dinamica-mezzi-continui}}\label{\detokenize{ch/dynamics-eom-continuum:classical-mechanics-dynamics-eom-continuum}}\label{\detokenize{ch/dynamics-eom-continuum::doc}}
+\section{Equations of motion for continuous media}
+\label{\detokenize{ch/dynamics-eom-continuum:equations-of-motion-for-continuous-media}}\label{\detokenize{ch/dynamics-eom-continuum:classical-mechanics-dynamics-eom-continuum}}\label{\detokenize{ch/dynamics-eom-continuum::doc}}
 \sphinxstepscope
 
-\begin{sphinxuseclass}{sd-container-fluid}
-\begin{sphinxuseclass}{sd-sphinx-override}
-\begin{sphinxuseclass}{sd-p-0}
-\begin{sphinxuseclass}{sd-mt-2}
-\begin{sphinxuseclass}{sd-mb-4}
-\begin{sphinxuseclass}{sd-row}
-\begin{sphinxuseclass}{sd-row-cols-2}
-\begin{sphinxuseclass}{sd-gx-2}
-\begin{sphinxuseclass}{sd-gy-1}
-\begin{sphinxuseclass}{sd-col}
-\begin{sphinxuseclass}{sd-d-flex-row}
-\begin{sphinxuseclass}{sd-align-minor-center}
-\begin{sphinxuseclass}{sd-container-fluid}
-\begin{sphinxuseclass}{sd-sphinx-override}
-\begin{sphinxuseclass}{sd-row}
-\begin{sphinxuseclass}{sd-row-cols-2}
-\begin{sphinxuseclass}{sd-row-cols-xs-2}
-\begin{sphinxuseclass}{sd-row-cols-sm-3}
-\begin{sphinxuseclass}{sd-row-cols-md-3}
-\begin{sphinxuseclass}{sd-row-cols-lg-3}
-\begin{sphinxuseclass}{sd-gx-3}
-\begin{sphinxuseclass}{sd-gy-1}
-\begin{sphinxuseclass}{sd-col}
-\begin{sphinxuseclass}{sd-col-auto}
-\begin{sphinxuseclass}{sd-d-flex-row}
-\begin{sphinxuseclass}{sd-align-minor-center}
-\sphinxAtStartPar
-basics
 
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\begin{sphinxuseclass}{sd-col}
-\begin{sphinxuseclass}{sd-col-auto}
-\begin{sphinxuseclass}{sd-d-flex-row}
-\begin{sphinxuseclass}{sd-align-minor-center}
-\sphinxAtStartPar
-Jan 21, 2025
 
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\begin{sphinxuseclass}{sd-col}
-\begin{sphinxuseclass}{sd-col-auto}
-\begin{sphinxuseclass}{sd-d-flex-row}
-\begin{sphinxuseclass}{sd-align-minor-center}
-\sphinxAtStartPar
-1 min read
 
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-
-\section{Moti particolari}
-\label{\detokenize{ch/dynamics-motions:moti-particolari}}\label{\detokenize{ch/dynamics-motions:classical-mechanics-dynamics-motions}}\label{\detokenize{ch/dynamics-motions::doc}}
+\section{Particular Motions}
+\label{\detokenize{ch/dynamics-motions:particular-motions}}\label{\detokenize{ch/dynamics-motions:classical-mechanics-dynamics-motions}}\label{\detokenize{ch/dynamics-motions::doc}}
 \sphinxAtStartPar
-In questa sezione verranno studiati alcuni moti particolari, interessanti e utili da analizzare per motivi didattici, storici, e applicativi.
+In this section, we will study certain particular motions that are interesting and useful to analyze for educational, historical, and practical reasons.
 \begin{itemize}
 \item {} 
 \sphinxAtStartPar
-moto rettilineo uniforme
+Uniform rectilinear motion
 
 \item {} 
 \sphinxAtStartPar
-moto uniformemente accelerato
+Uniformly accelerated motion
 
 \item {} 
 \sphinxAtStartPar
-moto circolare uniforme
+Uniform circular motion
 
 \item {} 
 \sphinxAtStartPar
-moti oscillatori e oscillatori smorzati:
+Oscillatory and damped oscillatory motions:
 \begin{itemize}
 \item {} 
 \sphinxAtStartPar
-oscillazioni libere:
+Free oscillations:
 \begin{itemize}
 \item {} 
 \sphinxAtStartPar
-sistema massa\sphinxhyphen{}molla(\sphinxhyphen{}smorzatore)
+Mass\sphinxhyphen{}spring(\sphinxhyphen{}damper) system
 
 \item {} 
 \sphinxAtStartPar
-pendolo
+Pendulum
 
 \end{itemize}
 
 \item {} 
 \sphinxAtStartPar
-oscillazioni forzate:
+Forced oscillations:
 \begin{itemize}
 \item {} 
 \sphinxAtStartPar
-primo passo verso l’analisi strutturale e non solo (“ogni sistema fisico è un sistema di tanti oscillatori armonici”)
+A first step towards structural analysis and beyond (“every physical system is a system of many harmonic oscillators”)
 
 \item {} 
 \sphinxAtStartPar
-concetti di risposta in frequenza e risonanza. \sphinxstylestrong{todo} video e/o script su risposta in frequenza di strutture e strutture antisismiche, mass\sphinxhyphen{}damper,…
+Concepts of frequency response and resonance. \sphinxstylestrong{todo} video and/or script on frequency response of structures and seismic structures, mass\sphinxhyphen{}damper,…
 
 \end{itemize}
 
@@ -1822,11 +2036,11 @@ concetti di risposta in frequenza e risonanza. \sphinxstylestrong{todo} video e/
 
 \item {} 
 \sphinxAtStartPar
-\sphinxstylestrong{Gravitazione}: partendo dalla legge di gravitazione universale fornita da Newton, si studia il moto dei corpi celesti in sistemi a due corpi, scoprendo che le loro traiettorie descrivono le sezioni coniche (cerchio, ellisse, parabola, iperbole), e dimostrando le leggi di Keplero
+\sphinxstylestrong{Gravitation}: Starting from Newton’s universal law of gravitation, we study the motion of celestial bodies in two\sphinxhyphen{}body systems, discovering that their trajectories describe conic sections (circle, ellipse, parabola, hyperbola), and demonstrating Kepler’s laws.
 
 \item {} 
 \sphinxAtStartPar
-rotazione di un corpo attorno a un punto fisso, moti di Poinsot
+Rotation of a body around a fixed point, Poinsot’s motions
 
 \end{itemize}
 
@@ -1835,88 +2049,20 @@ rotazione di un corpo attorno a un punto fisso, moti di Poinsot
 
 \section{Equilibrium and Stability}
 \label{\detokenize{ch/dynamics-equilibrium-stability:equilibrium-and-stability}}\label{\detokenize{ch/dynamics-equilibrium-stability:classical-mechanics-dynamics-equilibrium-and-stability}}\label{\detokenize{ch/dynamics-equilibrium-stability::doc}}
-\sphinxstepscope
-
-\begin{sphinxuseclass}{sd-container-fluid}
-\begin{sphinxuseclass}{sd-sphinx-override}
-\begin{sphinxuseclass}{sd-p-0}
-\begin{sphinxuseclass}{sd-mt-2}
-\begin{sphinxuseclass}{sd-mb-4}
-\begin{sphinxuseclass}{sd-row}
-\begin{sphinxuseclass}{sd-row-cols-2}
-\begin{sphinxuseclass}{sd-gx-2}
-\begin{sphinxuseclass}{sd-gy-1}
-\begin{sphinxuseclass}{sd-col}
-\begin{sphinxuseclass}{sd-d-flex-row}
-\begin{sphinxuseclass}{sd-align-minor-center}
-\begin{sphinxuseclass}{sd-container-fluid}
-\begin{sphinxuseclass}{sd-sphinx-override}
-\begin{sphinxuseclass}{sd-row}
-\begin{sphinxuseclass}{sd-row-cols-2}
-\begin{sphinxuseclass}{sd-row-cols-xs-2}
-\begin{sphinxuseclass}{sd-row-cols-sm-3}
-\begin{sphinxuseclass}{sd-row-cols-md-3}
-\begin{sphinxuseclass}{sd-row-cols-lg-3}
-\begin{sphinxuseclass}{sd-gx-3}
-\begin{sphinxuseclass}{sd-gy-1}
-\begin{sphinxuseclass}{sd-col}
-\begin{sphinxuseclass}{sd-col-auto}
-\begin{sphinxuseclass}{sd-d-flex-row}
-\begin{sphinxuseclass}{sd-align-minor-center}
 \sphinxAtStartPar
-basics
+A system is in equilibrium is all its components are in equilibrium, and thus there exists a reference frame w.r.t. which the momentum and the angular momentum of all its components are equal to zero.
 
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\begin{sphinxuseclass}{sd-col}
-\begin{sphinxuseclass}{sd-col-auto}
-\begin{sphinxuseclass}{sd-d-flex-row}
-\begin{sphinxuseclass}{sd-align-minor-center}
+
+\subsection{Eigenvalue stability}
+\label{\detokenize{ch/dynamics-equilibrium-stability:eigenvalue-stability}}
 \sphinxAtStartPar
-Jan 21, 2025
+…
+\begin{equation*}
+\begin{split}\delta \vec{Q} = m \delta \vec{v}_G\end{split}
+\end{equation*}
 
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\begin{sphinxuseclass}{sd-col}
-\begin{sphinxuseclass}{sd-col-auto}
-\begin{sphinxuseclass}{sd-d-flex-row}
-\begin{sphinxuseclass}{sd-align-minor-center}
-\sphinxAtStartPar
-0 min read
-
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-
-\subsection{Gravitazione: problema dei due corpi}
-\label{\detokenize{ch/dynamics-motions-gravitation-2bodies:gravitazione-problema-dei-due-corpi}}\label{\detokenize{ch/dynamics-motions-gravitation-2bodies:classical-mechanics-dynamics-motions-gravitation-2bodies}}\label{\detokenize{ch/dynamics-motions-gravitation-2bodies::doc}}
+\subsection{}
+\label{\detokenize{ch/dynamics-equilibrium-stability:id1}}
 \sphinxstepscope
 
 
@@ -2221,6 +2367,12 @@ Recasting Lagrange equations as
 \renewcommand{\indexname}{Proof Index}
 \begin{sphinxtheindex}
 \let\bigletter\sphinxstyleindexlettergroup
+\bigletter{definition\sphinxhyphen{}0}
+\item\relax\sphinxstyleindexentry{definition\sphinxhyphen{}0}\sphinxstyleindexextra{ch/kinematics}\sphinxstyleindexpageref{ch/kinematics:\detokenize{definition-0}}
+\indexspace
+\bigletter{definition\sphinxhyphen{}1}
+\item\relax\sphinxstyleindexentry{definition\sphinxhyphen{}1}\sphinxstyleindexextra{ch/kinematics}\sphinxstyleindexpageref{ch/kinematics:\detokenize{definition-1}}
+\indexspace
 \bigletter{example\sphinxhyphen{}0}
 \item\relax\sphinxstyleindexentry{example\sphinxhyphen{}0}\sphinxstyleindexextra{ch/actions\sphinxhyphen{}conservative}\sphinxstyleindexpageref{ch/actions-conservative:\detokenize{example-0}}
 \end{sphinxtheindex}
