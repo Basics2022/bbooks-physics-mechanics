@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>4.2. Equations of Motion &#8212; Classical Mechanics</title>
+    <title>4.2. Equations of Motion and Conservation Principles &#8212; Classical Mechanics</title>
   
   
   
@@ -186,9 +186,9 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="inertia.html">3. Inertia</a></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="dynamics.html">4. Dynamics</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="dynamics-principles.html">4.1. Principles of Newtonian Mechanics</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">4.2. Equations of Motion</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">4.2. Equations of Motion and Conservation Principles</a></li>
 <li class="toctree-l2"><a class="reference internal" href="dynamics-eom-point.html">4.3. Equations of motion of a point mass</a></li>
-<li class="toctree-l2"><a class="reference internal" href="dynamics-eom-points.html">4.4. Cardinal Equations of Dynamics: Discrete Systems of Point Masses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dynamics-eom-points.html">4.4. Equations of motion of a discrete system of point masses</a></li>
 <li class="toctree-l2"><a class="reference internal" href="dynamics-eom-rigid.html">4.5. Equations of motion of a rigid body</a></li>
 <li class="toctree-l2"><a class="reference internal" href="dynamics-eom-continuum.html">4.6. Equations of motion for continuous media</a></li>
 <li class="toctree-l2"><a class="reference internal" href="dynamics-motions.html">4.7. Particular Motions</a></li>
@@ -343,7 +343,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Equations of Motion</h1>
+    <h1>Equations of Motion and Conservation Principles</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -353,7 +353,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cardinal-equations">4.2.1. Cardinal Equations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#equations-of-motion">4.2.1. Equations of Motion</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conservation-principles">4.2.2. Conservation Principles</a></li>
 </ul>
             </nav>
@@ -366,8 +366,8 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <div class="tex2jax_ignore mathjax_ignore section" id="equations-of-motion">
-<span id="classical-mechanics-dynamics-eom"></span><h1><span class="section-number">4.2. </span>Equations of Motion<a class="headerlink" href="#equations-of-motion" title="Permalink to this heading">#</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="equations-of-motion-and-conservation-principles">
+<span id="classical-mechanics-dynamics-eom"></span><h1><span class="section-number">4.2. </span>Equations of Motion and Conservation Principles<a class="headerlink" href="#equations-of-motion-and-conservation-principles" title="Permalink to this heading">#</a></h1>
 <p>Starting from the <a class="reference internal" href="dynamics-principles.html#classical-mechanics-dynamics-principles"><span class="std std-ref">principles of Newtonian mechanics</span></a>, it is possible to derive the dynamical equations governing the motion of mechanical systems. These equations governs the change of dynamical quantities, <strong>momentum</strong>, <strong>angular momentum</strong>, <strong>kinetic energy</strong>, linking them to (external) <strong>forces</strong>, (external) <strong>moments</strong> and (total) <strong>power</strong>. Under certain conditions, and only in these cases, the <a class="reference internal" href="#classical-mechanics-dynamics-eom-eom"><span class="std std-ref">cardinal equations</span></a> of dynamics become<a class="reference internal" href="#classical-mechanics-dynamics-eom-conservation"><span class="std std-ref">principles of conservation of dynamic quantities</span></a>: by observing the expressions of the cardinal equations, it is easy to infer that the condition to obtain a conservation principle is the vanishing of all terms except for the time derivative of the conserved quantity.</p>
 <!--
 The general form of these equations is easily expressed in terms of the dynamical quantities discussed in the inertia section,
@@ -382,8 +382,8 @@ for every mechanical (closed) system. These equations will be derived for differ
 
 Using the concepts of momentum, angular momentum, and the kinetic energy of a system, we can write the 3 cardinal equations of dynamics in a form valid for **every closed system**. Under certain conditions, and only in these cases, the cardinal equations of dynamics represent principles of conservation of dynamic quantities: by observing the expressions of the cardinal equations, it is easy to infer that the condition to obtain a conservation principle is the vanishing of all terms except for the time derivative of the conserved quantity.
 -->
-<div class="section" id="cardinal-equations">
-<span id="classical-mechanics-dynamics-eom-eom"></span><h2><span class="section-number">4.2.1. </span>Cardinal Equations<a class="headerlink" href="#cardinal-equations" title="Permalink to this heading">#</a></h2>
+<div class="section" id="equations-of-motion">
+<span id="classical-mechanics-dynamics-eom-eom"></span><h2><span class="section-number">4.2.1. </span>Equations of Motion<a class="headerlink" href="#equations-of-motion" title="Permalink to this heading">#</a></h2>
 <p>The general form of these equations is easily expressed in terms of the dynamical quantities discussed in the section about <span class="xref myst">inertia</span>. Cardinal equations, or equations of motion, are collected here in their most general form for closed systems, and derived in the following sectinos for different systems: <a class="reference internal" href="dynamics-eom-point.html#classical-mechanics-dynamics-eom-point"><span class="std std-ref">point mass</span></a>, <a class="reference internal" href="dynamics-eom-points.html#classical-mechanics-dynamics-eom-points"><span class="std std-ref">systems of point masses</span></a>, <a class="reference internal" href="dynamics-eom-rigid.html#classical-mechanics-dynamics-eom-rigid"><span class="std std-ref">rigid body</span></a>,…</p>
 <p><strong>Momentum Balance.</strong> The time derivative of the momentum is equal to the resultant of the external forces,</p>
 <div class="math notranslate nohighlight" id="equation-principle-q">
@@ -482,7 +482,7 @@ Using the concepts of momentum, angular momentum, and the kinetic energy of a sy
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cardinal-equations">4.2.1. Cardinal Equations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#equations-of-motion">4.2.1. Equations of Motion</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conservation-principles">4.2.2. Conservation Principles</a></li>
 </ul>
   </nav></div>
