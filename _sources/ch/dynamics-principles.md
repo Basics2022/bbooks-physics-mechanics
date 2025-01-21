@@ -1,29 +1,22 @@
-<!--
-```{article-info}
-:author: basics
-:date: "{sub-ref}`today`"
-:read-time: "{sub-ref}`wordcount-minutes` min read"
-```
--->
-
 (classical-mechanics:dynamics:principles)=
-# Principles of Newton mechanics
+# Principles of Newtonian Mechanics
 
-**Primo principio della dinamica.**
-Un corpo (o meglio, il baricentro di un corpo) sul quale agisce una forza netta nulla, persevera nel suo stato di quiete o di moto rettilineo uniforme rispetto a un sistema di riferimento inerziale.
+**First Principle of Dynamics (Newton's First Law): inertia and Galileian invariance.**  
+A body (more precisely, the center of mass of a body) on which no net force acts remains in its state of rest or uniform rectilinear motion relative to an inertial reference frame.
 
-**Secondo principio della dinamica.** Rispetto a un sistema di riferimento inerziale, la variazione della quantità di moto di un sistema è uguale all'impulso delle forze esterne agenti su di esso,
+**Second Principle of Dynamics (Newton's Second Law): momentum balance.**  
+Relative to an inertial reference frame, the change in momentum of a system is equal to the impulse of the external forces acting on it,
 
-$$\Delta \mathbf{Q} = \mathbf{I}^e \ .$$
+$$\Delta \vec{Q} = \vec{I}^e \ .$$
 
-Nel caso di moto regolare, in cui la quantità di moto può essere rappresentata da una funzione continua e differenziabile in funzione del tempo, si può scrivere il secondo principio della dinamica in forma differenziale,
+In the case of smooth motion, where the momentum can be represented as a continuous and differentiable function of time, the second principle of dynamics can be expressed in differential form,
 
-$$\dot{\mathbf{Q}} = \mathbf{R}^e \ ,$$
+$$\dot{\vec{Q}} = \vec{R}^e \ ,$$
 
-essendo la risultante delle forze esterne, $\mathbf{R}^e = \frac{d \mathbf{I}^e}{dt}$, la derivata nel tempo dell'impulso.
+where the resultant of the external forces, $\vec{R}^e = \frac{d \vec{I}^e}{dt}$, is the time derivative of the impulse.
 
-**Terzo principio della dinamica.** Se un sistema $i$ esercita su un sistema $j$ una forza $\mathbf{F}_{ji}$, allora il sistema $j$ esercita sul sistema $i$ una forza $\mathbf{F}_{ij}$ "uguale e contraria", con modulo uguale e verso opposto,
+**Third Principle of Dynamics (Newton's Third Law): action-reaction.**  
+If a system $i$ exerts a force $\vec{F}_{ji}$ on a system $j$, then system $j$ exerts an "equal and opposite" force $\vec{F}_{ij}$ on system $i$, with equal magnitude and opposite direction,
 
-$$\mathbf{F}_{ij} = - \mathbf{F}_{ji} \ .$$
-
+$$\vec{F}_{ij} = - \vec{F}_{ji} \ .$$
 
