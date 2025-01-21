@@ -84,8 +84,8 @@
         % End of preamble defined in sphinx-jupyterbook-latex %
         
 
-\title{Meccanica classica}
-\date{Jan 17, 2025}
+\title{Classical Mechanics}
+\date{Jan 21, 2025}
 \release{}
 \author{basics}
 \newcommand{\sphinxlogo}{\vbox{}}
@@ -100,6 +100,9 @@
 \pagestyle{normal}
 \phantomsection\label{\detokenize{intro::doc}}
 
+
+\sphinxAtStartPar
+This material is part of the \sphinxhref{https://basics2022.github.io/bbooks}{\sphinxstylestrong{basics\sphinxhyphen{}books project}}. It is also available as a \DUrole{xref,download,myst}{.pdf document}.
 
 \sphinxAtStartPar
 Classical mechanics deal with the motion of systems and its causes.
@@ -435,641 +438,532 @@ i.e. the position vector \(P-O\) of the point \(P\) w.r.t. point \(O\) \sphinxhy
 \chapter{Actions}
 \label{\detokenize{ch/actions:actions}}\label{\detokenize{ch/actions:classical-mechanics-actions}}\label{\detokenize{ch/actions::doc}}
 \sphinxAtStartPar
-\sphinxstylestrong{Cos’è una forza?}
-Newton lega il concetto di azione, che comprende i concetti di forza e momento, alle cause che distinguono il \sphinxstyleemphasis{moto vero} dal \sphinxstyleemphasis{moto relativo}: per Newton, queste cause sono le forze.
+\sphinxstylestrong{What’s an action?} Newton conceives the concept of an action, including both forces and moments, as the \sphinxstylestrong{causes of changes of the true motion} of mechanical systems, or \sphinxstylestrong{causes of difference of true motion w.r.t. a {\hyperref[\detokenize{ch/kinematics-relative:classical-mechanics-kinematics-relative}]{\sphinxcrossref{\DUrole{std,std-ref}{general relative motion}}}}}.
 
 \sphinxAtStartPar
-\sphinxstylestrong{Argomenti.}
-\begin{itemize}
-\item {} 
-\sphinxAtStartPar
-Forza
+Newton’s concept of \sphinxstyleemphasis{true motion} is meant as the motion w.r.t. an inertial reference frame. So what is an \sphinxstylestrong{inertial reference frame}? In an inertial reference frame, dynamometers measure no force and moment associated with uniform motion.
 
-\item {} 
-\sphinxAtStartPar
-Momento di una forza e coppia di forze
 
-\item {} 
-\sphinxAtStartPar
-Azioni distribuite: cenni su sforzo e pressione
 
-\item {} 
-\sphinxAtStartPar
-Lavoro e potenza
 
-\item {} 
-\sphinxAtStartPar
-Azioni conservative
-
-\item {} 
-\sphinxAtStartPar
-\sphinxstylestrong{Reazioni vincolari}
-
-\item {} 
-\sphinxAtStartPar
-Esempi di forze:
-\begin{itemize}
-\item {} 
-\sphinxAtStartPar
-legge di attrazione di gravità generale
-
-\item {} 
-\sphinxAtStartPar
-forza di gravità nei pressi della superficie terrestre
-
-\item {} 
-\sphinxAtStartPar
-legge costitutiva elastica della molla e molle senza massa
-
-\item {} 
-\sphinxAtStartPar
-attrito
-
-\item {} 
-\sphinxAtStartPar
-legge costitutiva di smorzatori lineari
-
-\item {} 
-\sphinxAtStartPar
-reazioni vincolari
-
-\end{itemize}
-
-\end{itemize}
 
 \sphinxstepscope
 
-\begin{sphinxuseclass}{sd-container-fluid}
-\begin{sphinxuseclass}{sd-sphinx-override}
-\begin{sphinxuseclass}{sd-p-0}
-\begin{sphinxuseclass}{sd-mt-2}
-\begin{sphinxuseclass}{sd-mb-4}
-\begin{sphinxuseclass}{sd-row}
-\begin{sphinxuseclass}{sd-row-cols-2}
-\begin{sphinxuseclass}{sd-gx-2}
-\begin{sphinxuseclass}{sd-gy-1}
-\begin{sphinxuseclass}{sd-col}
-\begin{sphinxuseclass}{sd-d-flex-row}
-\begin{sphinxuseclass}{sd-align-minor-center}
-\begin{sphinxuseclass}{sd-container-fluid}
-\begin{sphinxuseclass}{sd-sphinx-override}
-\begin{sphinxuseclass}{sd-row}
-\begin{sphinxuseclass}{sd-row-cols-2}
-\begin{sphinxuseclass}{sd-row-cols-xs-2}
-\begin{sphinxuseclass}{sd-row-cols-sm-3}
-\begin{sphinxuseclass}{sd-row-cols-md-3}
-\begin{sphinxuseclass}{sd-row-cols-lg-3}
-\begin{sphinxuseclass}{sd-gx-3}
-\begin{sphinxuseclass}{sd-gy-1}
-\begin{sphinxuseclass}{sd-col}
-\begin{sphinxuseclass}{sd-col-auto}
-\begin{sphinxuseclass}{sd-d-flex-row}
-\begin{sphinxuseclass}{sd-align-minor-center}
-\sphinxAtStartPar
-basics
 
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\begin{sphinxuseclass}{sd-col}
-\begin{sphinxuseclass}{sd-col-auto}
-\begin{sphinxuseclass}{sd-d-flex-row}
-\begin{sphinxuseclass}{sd-align-minor-center}
-\sphinxAtStartPar
-Jan 17, 2025
+\section{Force, Moment of a Force, Distributed Actions}
+\label{\detokenize{ch/actions-types:force-moment-of-a-force-distributed-actions}}\label{\detokenize{ch/actions-types:physics-hs-mechanics-actions-def}}\label{\detokenize{ch/actions-types::doc}}
 
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\begin{sphinxuseclass}{sd-col}
-\begin{sphinxuseclass}{sd-col-auto}
-\begin{sphinxuseclass}{sd-d-flex-row}
-\begin{sphinxuseclass}{sd-align-minor-center}
+\subsection{Concentrated Force}
+\label{\detokenize{ch/actions-types:concentrated-force}}
 \sphinxAtStartPar
-0 min read
-
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-
-\section{Forze, momenti, forze distribuite}
-\label{\detokenize{ch/actions-types:forze-momenti-forze-distribuite}}\label{\detokenize{ch/actions-types:classical-mechanics-actions-density}}\label{\detokenize{ch/actions-types::doc}}
-\sphinxAtStartPar
-\sphinxstylestrong{Forza.} Grandezza vettoriale, caratterizzata da intensità, direzione, verso, e punto di applicazione.
-
-\sphinxAtStartPar
-\sphinxstylestrong{Momento.} Il momento di una forza rispetto a un polo \(H\)
+A (concentrated) force is a vector quantity with physical dimensions,
 \begin{equation*}
-\begin{split}\mathbf{M}_H = (\mathbf{r}_P - \mathbf{r}_H) \times \mathbf{F} \ .\end{split}
+\begin{split}[\text{force}] = \frac{\text{[mass]}\text{[length]}}{\text{[time]}^2}\end{split}
 \end{equation*}
 \sphinxAtStartPar
-\sphinxstylestrong{Forze distribuite.} \sphinxstylestrong{todo}
+which can be measured using a dynamometer, and whose effect can alter the equilibrium or motion conditions of a physical system.
 
-\sphinxstepscope
-
-\begin{sphinxuseclass}{sd-container-fluid}
-\begin{sphinxuseclass}{sd-sphinx-override}
-\begin{sphinxuseclass}{sd-p-0}
-\begin{sphinxuseclass}{sd-mt-2}
-\begin{sphinxuseclass}{sd-mb-4}
-\begin{sphinxuseclass}{sd-row}
-\begin{sphinxuseclass}{sd-row-cols-2}
-\begin{sphinxuseclass}{sd-gx-2}
-\begin{sphinxuseclass}{sd-gy-1}
-\begin{sphinxuseclass}{sd-col}
-\begin{sphinxuseclass}{sd-d-flex-row}
-\begin{sphinxuseclass}{sd-align-minor-center}
-\begin{sphinxuseclass}{sd-container-fluid}
-\begin{sphinxuseclass}{sd-sphinx-override}
-\begin{sphinxuseclass}{sd-row}
-\begin{sphinxuseclass}{sd-row-cols-2}
-\begin{sphinxuseclass}{sd-row-cols-xs-2}
-\begin{sphinxuseclass}{sd-row-cols-sm-3}
-\begin{sphinxuseclass}{sd-row-cols-md-3}
-\begin{sphinxuseclass}{sd-row-cols-lg-3}
-\begin{sphinxuseclass}{sd-gx-3}
-\begin{sphinxuseclass}{sd-gy-1}
-\begin{sphinxuseclass}{sd-col}
-\begin{sphinxuseclass}{sd-col-auto}
-\begin{sphinxuseclass}{sd-d-flex-row}
-\begin{sphinxuseclass}{sd-align-minor-center}
 \sphinxAtStartPar
-basics
+In addition to the typical information of a vector quantity \sphinxhyphen{} magnitude, direction, and sense \sphinxhyphen{} contained in the force vector \(\vec{F}\), it is often necessary to know the \sphinxstylestrong{point of application} or the line of application of the force.
 
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\begin{sphinxuseclass}{sd-col}
-\begin{sphinxuseclass}{sd-col-auto}
-\begin{sphinxuseclass}{sd-d-flex-row}
-\begin{sphinxuseclass}{sd-align-minor-center}
+
+\subsection{Moment of a Concentrated Force}
+\label{\detokenize{ch/actions-types:moment-of-a-concentrated-force}}
 \sphinxAtStartPar
-Jan 17, 2025
-
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\begin{sphinxuseclass}{sd-col}
-\begin{sphinxuseclass}{sd-col-auto}
-\begin{sphinxuseclass}{sd-d-flex-row}
-\begin{sphinxuseclass}{sd-align-minor-center}
-\sphinxAtStartPar
-1 min read
-
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-
-\section{Lavoro e potenza}
-\label{\detokenize{ch/actions-work-power:lavoro-e-potenza}}\label{\detokenize{ch/actions-work-power:classical-mechanics-actions-work-power}}\label{\detokenize{ch/actions-work-power::doc}}
-
-\subsection{Lavoro e potenza di una forza}
-\label{\detokenize{ch/actions-work-power:lavoro-e-potenza-di-una-forza}}
-\sphinxAtStartPar
-\sphinxstylestrong{Lavoro.} Il lavoro elementare di una forza \(\mathbf{F}\) applicata in un punto di applicazione \(\mathbf{r}_P\) che subisce uno spostamento \(d\mathbf{r}\) viene definito come
+The moment of a force \(\vec{F}\) applied at point \(P\), or with a line of application passing through \(P\), relative to point \(H\) is defined as the vector product,
 \begin{equation*}
-\begin{split}\delta L = \mathbf{F} \cdot d \mathbf{r} \ .\end{split}
-\end{equation*}
-\sphinxAtStartPar
-Per uno spostamento finito del punto \(P\) dal punto \(\mathbf{r}_A\) al punto \(\mathbf{r}_B\) lungo la linea \(\ell_{AB}\), è necessario sommare i contributi elementari (e quindi integrare) lungo il percorso \(\ell_{AB}\)
-\begin{equation*}
-\begin{split}L = \int_{\ell_{AB}} \delta L = \int_{\ell_{AB}} \mathbf{F} \cdot d \mathbf{r}_P \ .\end{split}
-\end{equation*}
-\sphinxAtStartPar
-\sphinxstylestrong{todo} In generale il lavoro di una forza o di un campo di forze \sphinxstylestrong{dipende dal percorso di integrazione} \(\ell_{AB}\). Sarebbe meglio usare \(\delta L\) per ricordare questa proprietà del lavoro, che quindi non è un \sphinxstylestrong{differenziale esatto}.
-
-\sphinxAtStartPar
-\sphinxstylestrong{Potenza.} La potenza di una forza \(\mathbf{F}\) applicata in un punto di applicazione \(\mathbf{r}_P\) che ha velocità \(\mathbf{v}_P\) viene definita come
-\begin{equation*}
-\begin{split}P = \mathbf{F} \cdot \mathbf{v}_P \ ,\end{split}
-\end{equation*}
-\sphinxAtStartPar
-cioè come la derivata nel tempo del lavoro,
-\begin{equation*}
-\begin{split}\dfrac{dL}{dt} = \mathbf{F} \cdot \dfrac{d \mathbf{r}_P}{d t} = \mathbf{F} \cdot \mathbf{v}_P = P \ .\end{split}
+\begin{split}\vec{M}_H = (P - H) \times \vec{F}\end{split}
 \end{equation*}
 
-\subsection{Lavoro e potenza di una coppia di forze}
-\label{\detokenize{ch/actions-work-power:lavoro-e-potenza-di-una-coppia-di-forze}}
+\subsection{System of Forces, Resultant of Actions, and Equivalent Loads}
+\label{\detokenize{ch/actions-types:system-of-forces-resultant-of-actions-and-equivalent-loads}}
 \sphinxAtStartPar
-Una coppia di forze è definita come il momento generato da due forze con uguale intensità e verso opposto, \(\mathbf{F}_1 = - \mathbf{F}_2\),
+Given a system of \(N\) forces \(\left\{ \vec{F}_n \right\}_{n=1:N}\), applied at points \(P_n\), we define:
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{resultant} of the system of forces: the sum of the forces,
 \begin{equation*}
-\begin{split}\mathbf{C} = (\mathbf{r}_1 - \mathbf{r}_2) \times \mathbf{F}_1 \ .\end{split}
+\begin{split}\vec{R} = \sum_{n=1}^{N} \vec{F}_n \ ,\end{split}
 \end{equation*}
+\item {} 
 \sphinxAtStartPar
-\sphinxstylestrong{Potenza.} La potenza di una coppia di forze è la somma della potenza generata da entrambe le forze,
+resultant of the moments with respect to a point \(H\): the sum of the moments
 \begin{equation*}
-\begin{split}P = P_1 + P_2 = \mathbf{F}_1 \cdot \mathbf{v}_1 + \mathbf{F}_2 \cdot \mathbf{v}_2 = \mathbf{F}_1 \cdot (\mathbf{v}_1 - \mathbf{v}_2) \ .\end{split}
+\begin{split}\vec{M}_H = \sum_{n=1}^{N} (P_n - H) \times \vec{F}_n \ ,\end{split}
 \end{equation*}
+\item {} 
 \sphinxAtStartPar
-Se la coppia di forze è applicata a una coppia di punti che descrivono un atto di moto rigido,
-\begin{equation*}
-\begin{split}\mathbf{v}_1 - \mathbf{v}_2 = \symbf{\omega} \times (\mathbf{r}_1 - \mathbf{r}_2) \ ,\end{split}
-\end{equation*}
-\sphinxAtStartPar
-si può riscrivere la potenza della coppia di forze come
+an \sphinxstylestrong{equivalent load}: a system of forces that has the same resultant of forces and moments; for a system of forces, an equivalent load can be defined as a single force, the resultant of the forces \(\vec{R}\) applied at point \(Q\) derived from the equivalence of moments
 \begin{equation*}
 \begin{split}\begin{aligned}
-P & = \mathbf{F}_1 \cdot \symbf{\omega} \times (\mathbf{r}_1 - \mathbf{r}_2) = \\
-  & = \symbf{\omega} \cdot ( \mathbf{r}_1 - \mathbf{r}_2 ) \times \mathbf{F}_1 = \\
-  & = \symbf{\omega} \cdot \mathbf{C}
-\end {aligned}\end{split}
+    \vec{R} & = \sum_{n=1}^{N} \vec{F}_n \\
+    (Q - H) \times \vec{R} & = \sum_{n=1}^{N} (P_n - H) \times \vec{F}_n \\
+  \end{aligned}\end{split}
 \end{equation*}
-\sphinxstepscope
-
-\begin{sphinxuseclass}{sd-container-fluid}
-\begin{sphinxuseclass}{sd-sphinx-override}
-\begin{sphinxuseclass}{sd-p-0}
-\begin{sphinxuseclass}{sd-mt-2}
-\begin{sphinxuseclass}{sd-mb-4}
-\begin{sphinxuseclass}{sd-row}
-\begin{sphinxuseclass}{sd-row-cols-2}
-\begin{sphinxuseclass}{sd-gx-2}
-\begin{sphinxuseclass}{sd-gy-1}
-\begin{sphinxuseclass}{sd-col}
-\begin{sphinxuseclass}{sd-d-flex-row}
-\begin{sphinxuseclass}{sd-align-minor-center}
-\begin{sphinxuseclass}{sd-container-fluid}
-\begin{sphinxuseclass}{sd-sphinx-override}
-\begin{sphinxuseclass}{sd-row}
-\begin{sphinxuseclass}{sd-row-cols-2}
-\begin{sphinxuseclass}{sd-row-cols-xs-2}
-\begin{sphinxuseclass}{sd-row-cols-sm-3}
-\begin{sphinxuseclass}{sd-row-cols-md-3}
-\begin{sphinxuseclass}{sd-row-cols-lg-3}
-\begin{sphinxuseclass}{sd-gx-3}
-\begin{sphinxuseclass}{sd-gy-1}
-\begin{sphinxuseclass}{sd-col}
-\begin{sphinxuseclass}{sd-col-auto}
-\begin{sphinxuseclass}{sd-d-flex-row}
-\begin{sphinxuseclass}{sd-align-minor-center}
-\sphinxAtStartPar
-basics
-
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\begin{sphinxuseclass}{sd-col}
-\begin{sphinxuseclass}{sd-col-auto}
-\begin{sphinxuseclass}{sd-d-flex-row}
-\begin{sphinxuseclass}{sd-align-minor-center}
-\sphinxAtStartPar
-Jan 17, 2025
-
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\begin{sphinxuseclass}{sd-col}
-\begin{sphinxuseclass}{sd-col-auto}
-\begin{sphinxuseclass}{sd-d-flex-row}
-\begin{sphinxuseclass}{sd-align-minor-center}
-\sphinxAtStartPar
-1 min read
-
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-
-\section{Azioni conservative}
-\label{\detokenize{ch/actions-conservative:azioni-conservative}}\label{\detokenize{ch/actions-conservative:classical-mechanics-actions-conservative}}\label{\detokenize{ch/actions-conservative::doc}}
-\sphinxAtStartPar
-In generale, il lavoro di una forza o di un campo di forze dipende dalla traiettoria \(\ell_{AB}\) del punto di applicazione tra i punti iniziale e finale \(\mathbf{r}_A\), \(\mathbf{r}_B\).
-
-\sphinxAtStartPar
-In alcuni casi, il lavoro è indipendente dal percorso \(\ell_{AB}\), ma dipende solo dai suoi punti estremi. Se questo è vero per tutti i percorsi, il lavoro è svolto da una \sphinxstylestrong{forza conservativa}.
-
-\sphinxAtStartPar
-In questo caso, l’integrale di linea può essere riscritto senza indicare esplicitamente la dipendenza dal percorso \(\ell_{AB}\), ma indicandone solo gli estremi
-\begin{equation*}
-\begin{split}L = \int_{\mathbf{r}_A}^{\mathbf{r}_B} \mathbf{F} \cdot d\mathbf{r} \ ,\end{split}
-\end{equation*}
-\sphinxAtStartPar
-e il suo valore può essere calcolato come differenza di una funzione scalare della variabile spaziale \(U(\mathbf{r}) = -V(\mathbf{r})\) valutata nei due estremi del percorso,
-\begin{equation*}
-\begin{split}L_{AB} = U(\mathbf{r}_B) - U(\mathbf{r}_A) = - V(\mathbf{r}_B) + V(\mathbf{r}_A) .\end{split}
-\end{equation*}
-\sphinxAtStartPar
-o in forma differenziale,
-\begin{equation*}
-\begin{split}\delta L = dU = - dV \ .\end{split}
-\end{equation*}
-\sphinxAtStartPar
-Sotto l’ipotesi di sufficiente regolarità (\sphinxstylestrong{todo}), e confrontando le espressioni del lavoro infinitesimale di un campo di forze \(\mathbf{F}(\mathbf{r})\),
-\begin{equation*}
-\begin{split}\delta L = dU = \mathbf{F} \cdot \mathbf{r} \ ,\end{split}
-\end{equation*}
-\sphinxAtStartPar
-si può scrivere il campo di forze come il gradiente della funzione \(U\),
-\begin{equation*}
-\begin{split}\mathbf{F}(\mathbf{r}) = \nabla U(\mathbf{r}) = - \nabla V(\mathbf{r} )\ .\end{split}
-\end{equation*}
-\sphinxAtStartPar
-Per le proprietà dei campi e degli operatori vettoriali, se un campo vettoriale può essere scritto come gradiente di una funzione scalare, il suo rotore è nullo,
-\begin{equation*}
-\begin{split}\nabla \times \mathbf{F}(\mathbf{r}) = \mathbf{0} \ .\end{split}
-\end{equation*}
-\sphinxstepscope
-
-\begin{sphinxuseclass}{sd-container-fluid}
-\begin{sphinxuseclass}{sd-sphinx-override}
-\begin{sphinxuseclass}{sd-p-0}
-\begin{sphinxuseclass}{sd-mt-2}
-\begin{sphinxuseclass}{sd-mb-4}
-\begin{sphinxuseclass}{sd-row}
-\begin{sphinxuseclass}{sd-row-cols-2}
-\begin{sphinxuseclass}{sd-gx-2}
-\begin{sphinxuseclass}{sd-gy-1}
-\begin{sphinxuseclass}{sd-col}
-\begin{sphinxuseclass}{sd-d-flex-row}
-\begin{sphinxuseclass}{sd-align-minor-center}
-\begin{sphinxuseclass}{sd-container-fluid}
-\begin{sphinxuseclass}{sd-sphinx-override}
-\begin{sphinxuseclass}{sd-row}
-\begin{sphinxuseclass}{sd-row-cols-2}
-\begin{sphinxuseclass}{sd-row-cols-xs-2}
-\begin{sphinxuseclass}{sd-row-cols-sm-3}
-\begin{sphinxuseclass}{sd-row-cols-md-3}
-\begin{sphinxuseclass}{sd-row-cols-lg-3}
-\begin{sphinxuseclass}{sd-gx-3}
-\begin{sphinxuseclass}{sd-gy-1}
-\begin{sphinxuseclass}{sd-col}
-\begin{sphinxuseclass}{sd-col-auto}
-\begin{sphinxuseclass}{sd-d-flex-row}
-\begin{sphinxuseclass}{sd-align-minor-center}
-\sphinxAtStartPar
-basics
-
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\begin{sphinxuseclass}{sd-col}
-\begin{sphinxuseclass}{sd-col-auto}
-\begin{sphinxuseclass}{sd-d-flex-row}
-\begin{sphinxuseclass}{sd-align-minor-center}
-\sphinxAtStartPar
-Jan 17, 2025
-
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\begin{sphinxuseclass}{sd-col}
-\begin{sphinxuseclass}{sd-col-auto}
-\begin{sphinxuseclass}{sd-d-flex-row}
-\begin{sphinxuseclass}{sd-align-minor-center}
-\sphinxAtStartPar
-1 min read
-
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-
-\section{Reazioni vincolari}
-\label{\detokenize{ch/actions-reactions:reazioni-vincolari}}\label{\detokenize{ch/actions-reactions:classical-mechanics-actions-reactions}}\label{\detokenize{ch/actions-reactions::doc}}
-\sphinxAtStartPar
-I vincoli cinematici agiscono su un sistema limitandone la possibilità di movimento, esercitando forze e momenti su di esso, definibili come reazioni vincolari.
-
-\sphinxAtStartPar
-In generale, in corrispondenza di un vincolo \sphinxstylestrong{ideale} (\sphinxstylestrong{todo} dare definizione di vincolo ideale, e trattare/accennare/rimandare all’attrito) nasce un’azione vincolare corrispondente a ogni grado di libertà vincolato: così ad esempio il vincolo della traslazione di un punto in una direzione ha come reazione corrispondente una forza in quella direzione; il vincolo della rotazione attorno a un asse ha come azione corrispondente un momento allineato con quell’asse.
-
-\sphinxAtStartPar
-Queste condizioni possono essere ricavate dalle equazioni della dinamica per sistemi senza massa, come spesso considerato nel modello ideale dei vincoli.
-
-
-\subsection{Esempi 2D}
-\label{\detokenize{ch/actions-reactions:esempi-2d}}\begin{itemize}
-\item {} 
-\sphinxAtStartPar
-Incastro
-
-\item {} 
-\sphinxAtStartPar
-Cerniera
-
-\item {} 
-\sphinxAtStartPar
-Pattino
-
-\item {} 
-\sphinxAtStartPar
-Carrello
-
-\item {} 
-\sphinxAtStartPar
-Manicotto
-
 \end{itemize}
 
 
-\subsection{Esempi 3D}
-\label{\detokenize{ch/actions-reactions:esempi-3d}}\begin{itemize}
-\item {} 
+\subsection{Couple of Forces}
+\label{\detokenize{ch/actions-types:couple-of-forces}}
 \sphinxAtStartPar
-Incastro
+A couple of forces is an equivalent load to two forces of equal magnitude and opposite sense, \(\vec{F}_2 = - \vec{F}_1\), applied at two points \(P_1\), \(P_2\) not aligned along the line of application of the forces to have non\sphinxhyphen{}zero effects.
 
-\item {} 
 \sphinxAtStartPar
-Cerniera sferica
+\sphinxstylestrong{todo} \sphinxstyleemphasis{image}
 
-\item {} 
 \sphinxAtStartPar
-Cerniera cilindrica
-
-\item {} 
+The resultant of the forces is zero,
+\begin{equation*}
+\begin{split}\vec{R} = \vec{F}_1 + \vec{F}_2 = \vec{F}_1 - \vec{F}_1 = \vec{0} \ ,\end{split}
+\end{equation*}
 \sphinxAtStartPar
-Pattino
+while the resultant of the moments does not depend on the moment pole,
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \vec{M}_H & = (P_1 - H) \times \vec{F}_1 + (P_2 - H) \times \vec{F}_2 = \\
+  & = (P_1 - H) \times \vec{F}_1 - (P_2 - H) \times \vec{F}_1 = \\
+  & = (P_1 - P_2) \times \vec{F}_1 =: \vec{C} \ .
+\end{aligned}\end{split}
+\end{equation*}
 
-\item {} 
+\subsection{Force Fields}
+\label{\detokenize{ch/actions-types:force-fields}}
 \sphinxAtStartPar
-Carrello
+\sphinxstylestrong{todo}
 
-\item {} 
+
+\subsection{Distributed Actions}
+\label{\detokenize{ch/actions-types:distributed-actions}}
 \sphinxAtStartPar
-Manicotto
-
-\end{itemize}
+\sphinxstylestrong{todo}
 
 \sphinxstepscope
 
-\begin{sphinxuseclass}{sd-container-fluid}
-\begin{sphinxuseclass}{sd-sphinx-override}
-\begin{sphinxuseclass}{sd-p-0}
-\begin{sphinxuseclass}{sd-mt-2}
-\begin{sphinxuseclass}{sd-mb-4}
-\begin{sphinxuseclass}{sd-row}
-\begin{sphinxuseclass}{sd-row-cols-2}
-\begin{sphinxuseclass}{sd-gx-2}
-\begin{sphinxuseclass}{sd-gy-1}
-\begin{sphinxuseclass}{sd-col}
-\begin{sphinxuseclass}{sd-d-flex-row}
-\begin{sphinxuseclass}{sd-align-minor-center}
-\begin{sphinxuseclass}{sd-container-fluid}
-\begin{sphinxuseclass}{sd-sphinx-override}
-\begin{sphinxuseclass}{sd-row}
-\begin{sphinxuseclass}{sd-row-cols-2}
-\begin{sphinxuseclass}{sd-row-cols-xs-2}
-\begin{sphinxuseclass}{sd-row-cols-sm-3}
-\begin{sphinxuseclass}{sd-row-cols-md-3}
-\begin{sphinxuseclass}{sd-row-cols-lg-3}
-\begin{sphinxuseclass}{sd-gx-3}
-\begin{sphinxuseclass}{sd-gy-1}
-\begin{sphinxuseclass}{sd-col}
-\begin{sphinxuseclass}{sd-col-auto}
-\begin{sphinxuseclass}{sd-d-flex-row}
-\begin{sphinxuseclass}{sd-align-minor-center}
+
+\section{Work and Power}
+\label{\detokenize{ch/actions-work:work-and-power}}\label{\detokenize{ch/actions-work:classical-mechanics-actions-work}}\label{\detokenize{ch/actions-work::doc}}
 \sphinxAtStartPar
-basics
+In mechanics, as will become clearer later (\sphinxstylestrong{todo} add reference), the concept of work is linked to the concept of energy. \sphinxstylestrong{todo}
 
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\begin{sphinxuseclass}{sd-col}
-\begin{sphinxuseclass}{sd-col-auto}
-\begin{sphinxuseclass}{sd-d-flex-row}
-\begin{sphinxuseclass}{sd-align-minor-center}
+
+\subsection{Work and Power of a Force}
+\label{\detokenize{ch/actions-work:work-and-power-of-a-force}}
 \sphinxAtStartPar
-Jan 17, 2025
-
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\begin{sphinxuseclass}{sd-col}
-\begin{sphinxuseclass}{sd-col-auto}
-\begin{sphinxuseclass}{sd-d-flex-row}
-\begin{sphinxuseclass}{sd-align-minor-center}
+\sphinxstylestrong{Work.} The elementary work of a force \(\vec{F}\) applied at point \(P\) that undergoes an elementary displacement \(d \vec{r}_P\) is defined as the dot product between the force and the displacement,
+\begin{equation*}
+\begin{split}\delta W := \vec{F} \cdot d \vec{r}_P \ .\end{split}
+\end{equation*}
 \sphinxAtStartPar
-0 min read
+The work done by the force \(\vec{F}\) applied at point \(P\) moving from point \(A\) to point \(B\) along the path \(\ell_{AB}\) is the sum of all elementary contributions \sphinxhyphen{} and hence, in the limit for elementary displacements \(\rightarrow 0\) for continuous variations, the line integral,
+\begin{equation*}
+\begin{split}W_{\ell_{AB}} = \int_{\ell_{AB}} \delta W = \int_{\ell_{AB}} \vec{F} \cdot d \vec{r}_{P} \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+In general, the work of a force or a field of forces depends on the path \({\ell}_{AB}\). In cases where the work is independent of the path but depends only on the endpoints, we talk about {\hyperref[\detokenize{ch/actions-conservative:classical-mechanics-actions-conservative}]{\sphinxcrossref{\DUrole{std,std-ref}{conservative actions}}}}.
 
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
+\sphinxAtStartPar
+\sphinxstylestrong{Power.} The power of the force is defined as the time derivative of the work,
+\begin{equation*}
+\begin{split}P := \frac{\delta W}{dt} = \vec{F} \cdot \frac{d \vec{r}_P}{d t} = \vec{F} \cdot \vec{v}_P \ , \end{split}
+\end{equation*}
+\sphinxAtStartPar
+and coincides with the dot product between the force and the velocity of the point of application. Be cautious if a force is applied to geometric points rather than material points, such as in the case of a disk rolling without slipping on a surface: at every instant, the (new) material contact point has zero velocity, while the geometric contact point is the projection of the center of the disk and moves with the same velocity, \(v = R \theta\)
 
-\section{Esempi}
-\label{\detokenize{ch/actions-examples:esempi}}\label{\detokenize{ch/actions-examples:classical-mechanics-actions-examples}}\label{\detokenize{ch/actions-examples::doc}}
+
+\subsection{Work and Power of a System of Forces}
+\label{\detokenize{ch/actions-work:work-and-power-of-a-system-of-forces}}
+\sphinxAtStartPar
+\sphinxstylestrong{Work.} The work of a system of forces is the sum of the works of the individual forces,
+\begin{equation*}
+\begin{split}\delta W = \sum_{n=1}^{N} \delta W_n = \sum_{n=1}^{N} \vec{F}_n \cdot d \vec{r}_n\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Power.} The power of a system of forces is the sum of the powers of the individual forces,
+\begin{equation*}
+\begin{split}P = \sum_{n=1}^{N} P_n = \sum_{n=1}^{N} \vec{F}_n \cdot \vec{v}_n \ .\end{split}
+\end{equation*}
+
+\subsection{Work and Power of a Couple of Forces}
+\label{\detokenize{ch/actions-work:work-and-power-of-a-couple-of-forces}}
+\sphinxAtStartPar
+\sphinxstylestrong{Work.} The elementary work of a couple of forces is the sum of the elementary works,
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \delta W & = \vec{F}_1 \cdot d \vec{r}_1 + \vec{F}_2 \cdot d \vec{r}_2 = \\
+           & = \vec{F}_1 \cdot ( d \vec{r}_1 - d \vec{r}_2 ) = 
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Power.} The power of a couple of forces,
+\begin{equation*}
+\begin{split}P = \vec{F}_1 \cdot (\vec{v}_1 - \vec{v}_2)\end{split}
+\end{equation*}
+\sphinxAtStartPar
+can be rewritten if the points of application perform a rigid motion act (\sphinxstylestrong{todo} verify the definition of motion act and if it should be introduced),
+\begin{equation*}
+\begin{split}\vec{v}_1 - \vec{v}_2 = \vec{\omega} \times (P_1 - P_2) \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+as
+\begin{equation*}
+\begin{split}\begin{aligned}
+  P & =  \vec{F}_1 \cdot (\vec{v}_1 - \vec{v}_2) = \\
+    & =  \vec{F}_1 \cdot \left[ \vec{\omega} \times (P_1 - P_2) \right] = \\
+    & =  \vec{\omega} \cdot \left[ (P_1 - P_2) \times \vec{F}_1\right] = \\
+    & =  \vec{\omega} \cdot \vec{C} \ . 
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxstepscope
+
+
+\section{Conservative Actions}
+\label{\detokenize{ch/actions-conservative:conservative-actions}}\label{\detokenize{ch/actions-conservative:classical-mechanics-actions-conservative}}\label{\detokenize{ch/actions-conservative::doc}}
+\sphinxAtStartPar
+A conservative force field is defined by the work it performs. In general, the work of a force field acting on a point \(P\) moving in space from point \(A\) to point \(B\) along a path \(\ell_{AB}\) depends on the path. (\sphinxstylestrong{todo} add reference)
+
+\sphinxAtStartPar
+If the work of a force field does not depend on the path \(\ell_{AB}\) but only on the endpoints \(A\), \(B\), for all pairs of points within a region of space \(\Omega\), the \sphinxstylestrong{force field} is said to be \sphinxstylestrong{conservative} in the region \(\Omega\) of space.
+
+\sphinxAtStartPar
+In this case, the work done can be expressed as the difference of a scalar field, \(U(P)\) or its opposite \(V(P) := - U(P)\),
+\begin{equation*}
+\begin{split}\begin{aligned}
+  W_{AB} &  = U(B) - U(A) = \Delta_{AB} U  \\
+         &  = V(A) - V(B) = -\Delta_{AB} V  \\
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+The functions \(U\), \(V\) are respectively defined as the \sphinxstylestrong{potential} and \sphinxstylestrong{potential energy} of the force field.
+
+\sphinxAtStartPar
+The elementary work can thus be expressed in terms of the differential of these functions,
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \delta W & = \ \ \ d U =\ \ \ d \vec{r} \cdot \nabla U  = \\
+           & =     - d V =    - d \vec{r} \cdot \nabla V \\
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Comparing this relation with the definition of work \(\delta W = d \vec{r} \cdot \vec{F}\), it is possible to identify the force field with the gradient of the potential function, and the opposite of the gradient of the potential energy,
+\begin{equation*}
+\begin{split}\vec{F} = \nabla U = - \nabla V \ .\end{split}
+\end{equation*}
+\sphinxstepscope
+
+
+\section{Examples of Forces}
+\label{\detokenize{ch/actions-examples:examples-of-forces}}\label{\detokenize{ch/actions-examples:classical-mechanics-actions-examples}}\label{\detokenize{ch/actions-examples::doc}}
+
+\subsection{Gravitation}
+\label{\detokenize{ch/actions-examples:gravitation}}\label{\detokenize{ch/actions-examples:classical-mechanics-actions-gravitation}}
+
+\subsubsection{Universal Law of Gravitation}
+\label{\detokenize{ch/actions-examples:universal-law-of-gravitation}}\label{\detokenize{ch/actions-examples:classical-mechanics-actions-gravitation-newton}}
+\sphinxAtStartPar
+The force \(\vec{F}_{12}\) exerted by a mass \(m_2\) at \(P_2\) on a mass \(m_1\) at \(P_1\) is described by \sphinxstylestrong{Newton’s Universal Law of Gravitation},
+\begin{equation*}
+\begin{split}\vec{F}_{12} = G \, m_1 \, m_2 \dfrac{P_2 - P_1}{|P_2 - P_1|^3} \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+or
+\begin{equation*}
+\begin{split}\vec{F}_{12} = G \, m_1 \, m_2 \dfrac{\hat{r}_{12}}{|\vec{r}_{12}|^2} \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+where \(\vec{r}_{12} = (P_2 - P_1)\) is the vector pointing from point \(P_1\) to point \(P_2\), \(r_{12} = |\vec{r}_{12}|\) is its magnitude, and \(\hat{r}_{12} = \frac{\vec{r}_{12}}{|\vec{r}_{12}|}\) is the unit vector in the same direction. The \sphinxstylestrong{universal gravitational constant} \(G\) is
+\begin{equation*}
+\begin{split}G = 6.67 \cdot 10^{-11} \frac{N \, m^2}{kg^2}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+and is considered a constant of nature.
+
+\sphinxAtStartPar
+\sphinxstylestrong{Principle of Superposition of Causes and Effects (PSCE).} Principle of superposition holds, i.e. the force acting on a mass \(m\) placed in \(P\) due to a set of \(N\) masses \(\{ m_k \}_{k=1:N}\) placed in \(P_k\) is the sum of individual forces \(\vec{F}_{k}\),
+\begin{equation}\label{equation:ch/actions-examples:eq:gravitation:force:psce}
+\begin{split}\vec{F} = \sum_{k=1}^N \vec{F}_{k} = G \, m \, \sum_{k=1}^N m_k \dfrac{P_k - P}{|P_k - P|^3} \ .\end{split}
+\end{equation}
+
+\subsubsection{Gravitational Field}
+\label{\detokenize{ch/actions-examples:gravitational-field}}\label{\detokenize{ch/actions-examples:classical-mechanics-actions-gravitation-field}}
+\sphinxAtStartPar
+The gravitational field generated by a set of masses \(\{ m_k \}_{k=1:N}\) located at \(P_k\) is a vector field associating a vector with physical dimensions \(\frac{\text{[force]}}{\text{[mass]}}\) to each point in space \(P\), that can be thought as the force per unit\sphinxhyphen{}mass acting on a \sphinxstylestrong{test mass} \(m\) placed in \(P\), whose expression directly follows from \eqref{equation:ch/actions-examples:eq:gravitation:force:psce}
+\begin{equation*}
+\begin{split}\vec{g}(P) = \dfrac{\vec{F}}{m} = G \, \sum_{k=1}^N m_k \dfrac{P_k - P}{|P_k - P|^3} \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Given the gravitational field \(\vec{g}(P)\), the gravitational force experienced by a system of mass \(m\) at \(P\) can be written as
+\begin{equation*}
+\begin{split}\vec{F}_g = m \vec{g}(P)\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Gravitational Potential Energy.} Gravitational potential of a system of 2 masses reads
+\begin{equation*}
+\begin{split}V(P) = - G \, m \, m_1 \frac{1}{|P - P_1|} \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+as it can be easily shown evaluating its gradient,
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \nabla V(P)
+  & = - G \, m \, m_1 \, \hat{x}_k \, \dfrac{\partial}{\partial x_k} \dfrac{1}{|P - P_1|} = \\
+  & = - G \, m \, m_1 \, \hat{x}_k \, \left( - \dfrac{1}{|P - P_1|^2} \right) \dfrac{\partial}{\partial x_k} |P - P_1| = \\
+  & =   G \, m \, m_1 \, \hat{x}_k \, \left(   \dfrac{1}{|P - P_1|^2} \right) \dfrac{x_k - x_{1,k}}{|P - P_1|} = \\
+  & =   G \, m \, m_1 \, \dfrac{x_k - x_{1,k}}{|P - P_1|^3}  \, \hat{x}_k= \\
+  & =   G \, m \, m_1 \, \dfrac{P-P_1}{|P - P_1|^3} \ .
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Potential energy stored in a system of \(N\) point masses \(\{ m_k \}_{k=1:N}\) coincides with the work needed to build the system \sphinxhyphen{} a common choice to set the arbitrary additional constant of the energy is setting it equal to zero when masses are at infinite distances \sphinxhyphen{}, namely
+\begin{equation*}
+\begin{split}V(P_k) = \sum_{\{i,k\}, i \ne k} G \, m_i \, m_k \frac{1}{|P_i - P_k|} \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+summing over different unordered pairs, i.e. \(\{ 1, 2 \}\) and \(\{2,1\}\) are the same pair and thus considered only once, or
+\begin{equation*}
+\begin{split}V(P_k) = \frac{1}{2} \sum_{(i,k),  i\ne k} G \, m_i \, m_k \frac{1}{|P_i - P_k|} \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+summing over different ordered pairs, i.e. \((1,2)\) and \((2,1)\) are different pairs.
+
+
+\subsubsection{Gravitational Field Near Earth’s Surface}
+\label{\detokenize{ch/actions-examples:gravitational-field-near-earth-s-surface}}
+\sphinxAtStartPar
+Within a limited domain near Earth’s surface, it is common to approximate Earth’s gravitational field as a uniform field, directed along the local vertical toward the center of the Earth, with intensity \(g = G \frac{M_E}{R_E^2}\).
+
+\sphinxAtStartPar
+This model can be derived by approximating the position vector relative to the Earth’s center \(P - P_E \sim R_E \hat{r}\) and the unit vector identifying the direction from a point in the domain to the Earth’s center with the local vertical \(\hat{r}_{12} \sim - \hat{z}\),
+\begin{equation*}
+\begin{split}\vec{g}(\vec{r}) = - G \dfrac{M_E}{R_E^2} \hat{z} = - g \hat{z} \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+The gravitational force experienced by a body of mass \(m\) near Earth’s surface is thus
+\begin{equation*}
+\begin{split}\vec{F}_g = - m g \hat{z} \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+commonly referred to as \sphinxstylestrong{weight}.
+
+\sphinxAtStartPar
+\sphinxstylestrong{Gravitational Potential Energy.} It can be shown that the gravitational potential near Earth’s surface becomes
+\begin{equation*}
+\begin{split}V(P) = m \, g \, z_P \ .\end{split}
+\end{equation*}\subsubsection*{Proof.}
+
+\sphinxAtStartPar
+With the series expansion, with \(P - P_E = R_E \hat{r} + \vec{d}\), and \(|\vec{d}| \ll R_E\),
+\begin{equation*}
+\begin{split}\begin{aligned}
+  V(P) & = - G \, m \, M_E \frac{1}{|P - P_E|} = \\
+       & \approx G M_E \, m \left[ - \frac{1}{R_E} + \frac{R_E \hat{r} \cdot \vec{d}}{R_E^3}  \right]   = \\
+       & = \underbrace{- m \, \frac{ G M_E}{R_E}}_{\text{const}} + m \, \underbrace{\frac{G \, M_E}{R_E^2}}_{= g} \underbrace{\hat{r} \cdot \vec{d}}_{= z}
+\end{aligned}\end{split}
+\end{equation*}
+
+\subsection{Elastic Actions: Linear Springs}
+\label{\detokenize{ch/actions-examples:elastic-actions-linear-springs}}
+\sphinxAtStartPar
+According to Hooke’s law, the behavior of an ideal linear elastic spring is described by the constitutive equation
+\begin{equation*}
+\begin{split}F = k (\ell - \ell_0) \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+where \(F\) is the absolute value of the force transmitted by the spring, \(k\) is the spring constant, \(\ell_0\) is the spring’s rest length, and \(\ell\) is the length in the considered configuration.
+
+\sphinxAtStartPar
+\sphinxstylestrong{Potential Energy.}
+
+\sphinxAtStartPar
+The elemental work done by the spring is given by
+\begin{equation*}
+\begin{split}\delta W =  F d \ell = k (\ell - \ell_0) d \ell.\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Integrating this from \(\ell_1\) to \(\ell_2\), we get
+\begin{equation*}
+\begin{split}W = \int_{\ell_1}^{\ell_2} k (\ell - \ell_0) d \ell = \left[ \frac{1}{2} k \ell^2 - k \ell_0 \, \ell \right]\bigg|_{\ell_1}^{\ell_2}.\end{split}
+\end{equation*}
+\sphinxAtStartPar
+The potential energy stored in the spring is
+\begin{equation*}
+\begin{split}V = \frac{1}{2} k (\ell - \ell_0)^2.\end{split}
+\end{equation*}
+\sphinxAtStartPar
+This energy represents the work done to stretch or compress the spring from its rest position.
+
+\sphinxstepscope
+
+
+\section{Constraint Reactions}
+\label{\detokenize{ch/actions-reactions:constraint-reactions}}\label{\detokenize{ch/actions-reactions:classical-mechanics-actions-reactions}}\label{\detokenize{ch/actions-reactions::doc}}
+\sphinxAtStartPar
+Kinematic constraints act on a system by limiting its possible movements, exerting forces and moments, which are defined as constraint reactions.
+
+\sphinxAtStartPar
+In general, at an \sphinxstylestrong{ideal} constraint (\sphinxstylestrong{todo} provide definition of ideal constraint and discuss/mention/refer to friction), a constraint reaction corresponds to each constrained degree of freedom: for example, the constraint of translation of a point in a direction has a corresponding reaction force in that direction; the constraint of rotation around an axis has a corresponding moment aligned with that axis.
+
+\sphinxAtStartPar
+These conditions can be derived from the equations of dynamics for massless systems, as often considered in the ideal constraint model.
+
+
+\subsection{Contact Actions}
+\label{\detokenize{ch/actions-reactions:contact-actions}}
+
+\subsubsection{Constraint Reactions of Ideal Constraints}
+\label{\detokenize{ch/actions-reactions:constraint-reactions-of-ideal-constraints}}
+\sphinxAtStartPar
+Ideal constraints are models that \sphinxstylestrong{do not perform net work}, and are thus \sphinxstylestrong{conservative elements}. As should become evident in the subsequent sections from the expressions of relative velocities and exchanged actions,
+\begin{equation*}
+\begin{split}\begin{aligned}
+P & = \vec{v}_1     \cdot \vec{F}_{21} + \vec{v}_2     \cdot \vec{F}_{12} 
+    + \vec{\omega}_1 \cdot \vec{M}_{21} + \vec{\omega}_2 \cdot \vec{M}_{12} = \\ 
+  & = ( \vec{v}_1 - \vec{v}_2 ) \cdot \vec{F}_{21}
+    + ( \vec{\omega}_1 - \vec{\omega}_2 ) \cdot \vec{M}_{21} = \\ 
+  & = \vec{v}^{rel}_{21} \cdot \vec{F}_{21}
+    + \vec{\omega}^{rel}_{21} \cdot \vec{M}_{21} \ ,
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+both terms are zero either because the relative motion is zero, or the actions act orthogonally to the relative motions.
+
+
+\paragraph{Fixed Joint}
+\label{\detokenize{ch/actions-reactions:fixed-joint}}
+\sphinxAtStartPar
+The fixed joint constraint prevents both relative motion and relative rotation,
+\begin{equation*}
+\begin{split}
+\begin{cases}
+  \vec{0} = \vec{v}^{rel}_{21}     = \vec{v}_{2}     - \vec{v}_{1} \\
+  \vec{0} = \vec{\omega}^{rel}_{21} = \vec{\omega}_{2} - \vec{\omega}_{1} \\
+\end{cases}
+\qquad , \qquad
+\begin{cases}
+  \qquad \vec{F}_{12} = - \vec{F}_{21} \\
+  \qquad \vec{M}_{12} = - \vec{M}_{21} \\
+\end{cases}
+\end{split}
+\end{equation*}
+
+\paragraph{Slider}
+\label{\detokenize{ch/actions-reactions:slider}}
+\sphinxAtStartPar
+The slider constraint prevents relative motion in one direction and relative rotation.
+\begin{equation*}
+\begin{split}
+\begin{cases}
+  \quad \forall \ \vec{v}^{rel}_{\hat{t},21}     = \vec{v}_{\hat{t},2}     - \vec{v}_{\hat{t},1} \\
+          0  = v^{rel}_{\hat{n},21}     = v_{\hat{n},2}     - v_{\hat{n},1} \\
+  \vec{0} = \vec{\omega}^{rel}_{21} = \vec{\omega}_{2} - \vec{\omega}_{1} \\
+\end{cases}
+\qquad , \qquad
+\begin{cases}
+  \vec{0} = \vec{F}_{\hat{t},12} = \vec{F}_{\hat{t},21} \\
+  \qquad F_{\hat{n},12} = - F_{\hat{n},21} \\
+  \qquad \vec{M}_{12} = - \vec{M}_{21} \\
+\end{cases}
+\end{split}
+\end{equation*}
+
+\paragraph{Cylindrical Joint}
+\label{\detokenize{ch/actions-reactions:cylindrical-joint}}
+\sphinxAtStartPar
+The cylindrical joint constraint prevents relative motion and allows rotation around one axis.
+\begin{equation*}
+\begin{split}
+\begin{cases}
+  \vec{0} = \vec{v}^{rel}_{21}     = \vec{v}_{2}     - \vec{v}_{1} \\
+  \quad \forall \ \omega^{rel}_{\hat{t},21} = \omega_{\hat{t},2} - \omega_{\hat{t},1} \\
+  \vec{0} = \vec{\omega}^{rel}_{\hat{n},21} = \vec{\omega}_{\hat{n},2} - \vec{\omega}_{\hat{n},1} \\
+\end{cases}
+\qquad , \qquad
+\begin{cases}
+  \qquad \vec{F}_{12} = - \vec{F}_{21} \\
+  0 =  M_{\hat{t},12} = M_{\hat{t},21} \\
+  \qquad \vec{M}_{\hat{n},12} = - \vec{M}_{\hat{n},21} \\
+\end{cases}
+\end{split}
+\end{equation*}
+
+\paragraph{Spherical Joint}
+\label{\detokenize{ch/actions-reactions:spherical-joint}}
+\sphinxAtStartPar
+The spherical joint constraint prevents relative motion but allows general rotation.
+\begin{equation*}
+\begin{split}
+\begin{cases}
+  \vec{0} = \vec{v}^{rel}_{21}     = \vec{v}_{2}     - \vec{v}_{1} \\
+  \quad \forall \vec{\omega}^{rel}_{21} = \vec{\omega}_{2} - \vec{\omega}_{1} \\
+\end{cases}
+\qquad , \qquad
+\begin{cases}
+  \qquad \vec{F}_{12} = - \vec{F}_{21} \\
+  \vec{0} =  \vec{M}_{12} = \vec{M}_{21} \\
+\end{cases}
+\end{split}
+\end{equation*}
+
+\paragraph{Roller}
+\label{\detokenize{ch/actions-reactions:roller}}
+\sphinxAtStartPar
+The roller constraint can be thought of as a combination of a slider and a cylindrical joint.
+\begin{equation*}
+\begin{split}
+\begin{cases}
+  \quad \forall \ \vec{v}^{rel}_{\hat{t},21}     = \vec{v}_{\hat{t},2}     - \vec{v}_{\hat{t},1} \\
+          0  = v^{rel}_{\hat{n},21}     = v_{\hat{n},2}     - v_{\hat{n},1} \\
+  \quad \forall \ \omega^{rel}_{\hat{t},21} = \omega_{\hat{t},2} - \omega_{\hat{t},1} \\
+  \vec{0} = \vec{\omega}^{rel}_{\hat{n},21} = \vec{\omega}_{\hat{n},2} - \vec{\omega}_{\hat{n},1} \\
+\end{cases}
+\qquad , \qquad
+\begin{cases}
+  \vec{0} = \vec{F}_{\hat{t},12} = \vec{F}_{\hat{t},21} \\
+  \qquad F_{\hat{n},12} = - F_{\hat{n},21} \\
+  0 =  M_{\hat{t},12} = M_{\hat{t},21} \\
+  \qquad \vec{M}_{\hat{n},12} = - \vec{M}_{\hat{n},21} \\
+\end{cases}
+\end{split}
+\end{equation*}
+
+\paragraph{Support}
+\label{\detokenize{ch/actions-reactions:support}}
+\sphinxAtStartPar
+The support constraint is a unilateral constraint \sphinxstylestrong{todo} \sphinxstyleemphasis{add description}
+
+
+\subsubsection{Friction}
+\label{\detokenize{ch/actions-reactions:friction}}
+
+\paragraph{Static Friction}
+\label{\detokenize{ch/actions-reactions:static-friction}}
+\sphinxAtStartPar
+Static friction is the type of friction that occurs between two bodies when there is no relative motion between them, acting as a tangential force to the contact surface. The simplest model of static friction assumes that the maximum static friction force \(F^s_{max}\) that can be exerted between two bodies is proportional to the normal reaction between them, \(N\),
+\begin{equation*}
+\begin{split}F^s_{max} = \mu^s \, N \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+The proportionality constant \(\mu^s\) is defined as the \sphinxstylestrong{coefficient of static friction}. Generally, static friction forces are determined by the equilibrium conditions of the body, if these conditions can be met, and the relation
+\begin{equation*}
+\begin{split}|F^s| \ge F^s_{max} \ .\end{split}
+\end{equation*}
+
+\paragraph{Dynamic Friction}
+\label{\detokenize{ch/actions-reactions:dynamic-friction}}
+\sphinxAtStartPar
+Dynamic friction occurs between two bodies in contact and in relative motion, acting as a tangential force to the contact surface. The simplest model of dynamic friction assumes that the dynamic friction force is proportional to the normal reaction between the two bodies and directed opposite to the relative velocity,
+\begin{equation*}
+\begin{split}\vec{F}_{12} = - \mu^d N \frac{\vec{v}_{12}}{|\vec{v}_{12}|} \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+where \(\vec{F}_{12}\) is the force acting on body 1 due to body 2, and \(\vec{v}_{12} = \vec{v}_1 - \vec{v}_2\) is the velocity of body 1 relative to body 2.
+
+
+\paragraph{Pure Rolling}
+\label{\detokenize{ch/actions-reactions:pure-rolling}}
+\sphinxAtStartPar
+\sphinxstylestrong{todo} \sphinxstyleemphasis{add description}
+
 \sphinxstepscope
 
 
@@ -1079,15 +973,15 @@ Jan 17, 2025
 Inertia deals with mass and mass distribution of systems.
 
 \sphinxAtStartPar
-But what is mass? Mass is a physical quantity, a property of the system, that manifests itself:
+\sphinxstylestrong{But what is mass?} Mass is a physical quantity, a property of the system, that manifests itself:
 \begin{itemize}
 \item {} 
 \sphinxAtStartPar
-in gravitational attraction (being both the origin of gravitational force and the property that makes a system sensible to gravitational attraction),
+in {\hyperref[\detokenize{ch/actions-examples:classical-mechanics-actions-gravitation}]{\sphinxcrossref{\DUrole{std,std-ref}{gravitational attraction}}}} (being both the origin of gravitational force and the property that makes a system sensible to gravitational attraction),
 
 \item {} 
 \sphinxAtStartPar
-in resistance to change of motion of a system under external {\hyperref[\detokenize{ch/dynamics:classical-mechanics-dynamics}]{\sphinxcrossref{\DUrole{std,std-ref}{actions}}}}, as it will be clear in {\hyperref[\detokenize{ch/dynamics:classical-mechanics-dynamics}]{\sphinxcrossref{\DUrole{std,std-ref}{dynamics}}}}
+in resistance to change of motion of a system under external {\hyperref[\detokenize{ch/actions:classical-mechanics-actions}]{\sphinxcrossref{\DUrole{std,std-ref}{actions}}}}, as it will be clear from principles and equations of motions in {\hyperref[\detokenize{ch/dynamics:classical-mechanics-dynamics}]{\sphinxcrossref{\DUrole{std,std-ref}{dynamics}}}}
 
 \end{itemize}
 
@@ -1156,7 +1050,7 @@ Starting from {\hyperref[\detokenize{ch/dynamics-principles:classical-mechanics-
 \end{aligned}\end{split}
 \end{equation*}
 \sphinxAtStartPar
-for every mechanical (closed) mechanical system.
+for every mechanical (closed) mechanical system. These equations will be derived for different systems in the following sections: point, system of points, rigid body.
 
 \sphinxAtStartPar
 Utilizzando i concetti di quantità di moto, momento della quantità di moto ed energia cinetica di un sistema, si possono scrivere le 3 equazioni cardinali della dinamica in una forma valida per \sphinxstylestrong{ogni sistema chiuso}. Nel caso siano soddisfatte alcune condizioni, e solo in questo caso, le equazioni cardinali della dinamica rappresentano dei principi di conservazione delle quantità dinamiche: osservando le espressioni delle equazioni cardinali, è facile intuire che la condizione da soddisfare per otenere un principio di conservazione è l’annullamento di tutti i termini ad eccezione della derivata temporale della quantità conservata.
@@ -1252,7 +1146,7 @@ basics
 \begin{sphinxuseclass}{sd-d-flex-row}
 \begin{sphinxuseclass}{sd-align-minor-center}
 \sphinxAtStartPar
-Jan 17, 2025
+Jan 21, 2025
 
 \end{sphinxuseclass}
 \end{sphinxuseclass}
@@ -1368,7 +1262,7 @@ basics
 \begin{sphinxuseclass}{sd-d-flex-row}
 \begin{sphinxuseclass}{sd-align-minor-center}
 \sphinxAtStartPar
-Jan 17, 2025
+Jan 21, 2025
 
 \end{sphinxuseclass}
 \end{sphinxuseclass}
@@ -1552,7 +1446,7 @@ basics
 \begin{sphinxuseclass}{sd-d-flex-row}
 \begin{sphinxuseclass}{sd-align-minor-center}
 \sphinxAtStartPar
-Jan 17, 2025
+Jan 21, 2025
 
 \end{sphinxuseclass}
 \end{sphinxuseclass}
@@ -1634,7 +1528,7 @@ basics
 \begin{sphinxuseclass}{sd-d-flex-row}
 \begin{sphinxuseclass}{sd-align-minor-center}
 \sphinxAtStartPar
-Jan 17, 2025
+Jan 21, 2025
 
 \end{sphinxuseclass}
 \end{sphinxuseclass}
@@ -1716,7 +1610,7 @@ basics
 \begin{sphinxuseclass}{sd-d-flex-row}
 \begin{sphinxuseclass}{sd-align-minor-center}
 \sphinxAtStartPar
-Jan 17, 2025
+Jan 21, 2025
 
 \end{sphinxuseclass}
 \end{sphinxuseclass}
@@ -1862,7 +1756,7 @@ basics
 \begin{sphinxuseclass}{sd-d-flex-row}
 \begin{sphinxuseclass}{sd-align-minor-center}
 \sphinxAtStartPar
-Jan 17, 2025
+Jan 21, 2025
 
 \end{sphinxuseclass}
 \end{sphinxuseclass}

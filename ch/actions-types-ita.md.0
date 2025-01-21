@@ -1,0 +1,65 @@
+<!--
+```{article-info}
+:author: basics
+:date: "{sub-ref}`today`"
+:read-time: "{sub-ref}`wordcount-minutes` min read"
+```
+-->
+
+(physics-hs:mechanics:actions:def)=
+# Forza, momento di una forza, azioni distribuite
+
+## Forza concentrata
+
+Una forza (concentrata) è una quantità vettoriale di dimensioni fisiche,
+
+$$[\text{forza}] = \frac{\text{[massa]}\text{[lunghezza]}}{\text{[tempo]}^2}$$
+
+che può essere misurata tramite un dinamometro, e il cui effetto può alterare le condizioni di equilibrio o di moto di un sistema fisico.
+
+Oltre alle informazioni tipiche di una quantità vettoriale - intensità, direzione e verso - contenute nel vettore forza $\vec{F}$, è spesso necessario conoscere il **punto di applicazione**, o la retta di applicazione, della forza.
+
+## Momento di una forza concentrata
+Il momento di una forza $\vec{F}$ applicata nel punto $P$, o con retta di applicazione passante per $P$, rispetto al punto $H$ viene definito come il prodotto vettoriale,
+
+$$\vec{M}_H = (P - H) \times \vec{F}$$
+
+## Sistema di forze, risultante delle azioni e carichi equivalenti
+Dato un sistema di $N$ forze $\left\{ \vec{F}_n \right\}_{n=1:N}$, applicate nei punti $P_n$, si definiscono:
+- **risultante** del sistema di forze: la somma delle forze,
+
+  $$\vec{R} = \sum_{n=1}^{N} \vec{F}_n \ ,$$
+
+- risultante dei momenti rispetto a un punto $H$: la somma dei momenti
+
+  $$\vec{M}_H = \sum_{n=1}^{N} (P_n - H) \times \vec{F}_n \ ,$$
+
+- un **carico equivalente**: un sistema di forze che ha la stessa risultante di forze e momenti; per un sistema di forze, è possibile definire un carico equivalente formato da una sola forza, la risultante delle forze $\vec{R}$ applicata nel punto $Q$ ricavato dall'equivalenza ai momenti
+
+  $$\begin{aligned}
+    \vec{R} & = \sum_{n=1}^{N} \vec{F}_n \\
+    (Q - H) \times \vec{R} & = \sum_{n=1}^{N} (P_n - H) \times \vec{F}_n \\
+  \end{aligned}$$
+
+## Coppia di forze
+Una coppia di forze è un carico equivalente a due forze di uguale intensità e verso opposto, $\vec{F}_2 = - \vec{F}_1$, applicate in due punti $P_1$, $P_2$ non allineati lungo la retta di applicazione delle forze per avere effetti non nulli.
+
+**todo** *immagine*
+
+La risultante delle forze è nulla,
+
+$$\vec{R} = \vec{F}_1 + \vec{F}_2 = \vec{F}_1 - \vec{F}_1 = \vec{0} \ ,$$
+
+mentre la risultante dei momenti non dipende dal polo dei momenti,
+
+$$\begin{aligned}
+  \vec{M}_H & = (P_1 - H) \times \vec{F}_1 + (P_2 - H) \times \vec{F}_2 = \\
+  & = (P_1 - H) \times \vec{F}_1 - (P_2 - H) \times \vec{F}_1 = \\
+  & = (P_1 - P_2) \times \vec{F}_1 =: \vec{C} \ .
+\end{aligned}$$
+
+## Campi di forze
+**todo**
+
+## Azioni distribuite
+**todo**

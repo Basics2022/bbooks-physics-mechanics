@@ -9,9 +9,16 @@
 (classical-mechanics:actions)=
 # Actions
 
+**What's an action?** Newton conceives the concept of an action, including both forces and moments, as the **causes of changes of the true motion** of mechanical systems, or **causes of difference of true motion w.r.t. a [general relative motion](classical-mechanics:kinematics:relative)**.
+
+Newton's concept of *true motion* is meant as the motion w.r.t. an inertial reference frame. So what is an **inertial reference frame**? In an inertial reference frame, dynamometers measure no force and moment associated with uniform motion.
+
+<!--
 **Cos'è una forza?**
 Newton lega il concetto di azione, che comprende i concetti di forza e momento, alle cause che distinguono il *moto vero* dal *moto relativo*: per Newton, queste cause sono le forze.
+-->
 
+<!--
 **Argomenti.**
 - Forza
 - Momento di una forza e coppia di forze
@@ -27,5 +34,5 @@ Newton lega il concetto di azione, che comprende i concetti di forza e momento, 
   - attrito
   - legge costitutiva di smorzatori lineari
   - reazioni vincolari
-
+-->
 

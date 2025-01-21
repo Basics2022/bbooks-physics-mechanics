@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>2.1. Forze, momenti, forze distribuite &#8212; Meccanica classica</title>
+    <title>2.1. Force, Moment of a Force, Distributed Actions &#8212; Classical Mechanics</title>
   
   
   
@@ -70,7 +70,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../_static/favicon.svg"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="2.2. Lavoro e potenza" href="actions-work-power.html" />
+    <link rel="next" title="2.2. Work and Power" href="actions-work.html" />
     <link rel="prev" title="2. Actions" href="actions.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -158,8 +158,8 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="../_static/logo.svg" class="logo__image only-light" alt="Meccanica classica - Home"/>
-    <script>document.write(`<img src="../_static/logo-dark.svg" class="logo__image only-dark" alt="Meccanica classica - Home"/>`);</script>
+    <img src="../_static/logo.svg" class="logo__image only-light" alt="Classical Mechanics - Home"/>
+    <script>document.write(`<img src="../_static/logo-dark.svg" class="logo__image only-dark" alt="Classical Mechanics - Home"/>`);</script>
   
   
 </a></div>
@@ -178,11 +178,11 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="actions.html">2. Actions</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">2.1. Forze, momenti, forze distribuite</a></li>
-<li class="toctree-l2"><a class="reference internal" href="actions-work-power.html">2.2. Lavoro e potenza</a></li>
-<li class="toctree-l2"><a class="reference internal" href="actions-conservative.html">2.3. Azioni conservative</a></li>
-<li class="toctree-l2"><a class="reference internal" href="actions-reactions.html">2.4. Reazioni vincolari</a></li>
-<li class="toctree-l2"><a class="reference internal" href="actions-examples.html">2.5. Esempi</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">2.1. Force, Moment of a Force, Distributed Actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="actions-work.html">2.2. Work and Power</a></li>
+<li class="toctree-l2"><a class="reference internal" href="actions-conservative.html">2.3. Conservative Actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="actions-examples.html">2.4. Examples of Forces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="actions-reactions.html">2.5. Constraint Reactions</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="inertia.html">3. Inertia</a></li>
@@ -337,7 +337,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -348,11 +350,24 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Forze, momenti, forze distribuite</h1>
+    <h1>Force, Moment of a Force, Distributed Actions</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#concentrated-force">2.1.1. Concentrated Force</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#moment-of-a-concentrated-force">2.1.2. Moment of a Concentrated Force</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#system-of-forces-resultant-of-actions-and-equivalent-loads">2.1.3. System of Forces, Resultant of Actions, and Equivalent Loads</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#couple-of-forces">2.1.4. Couple of Forces</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#force-fields">2.1.5. Force Fields</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#distributed-actions">2.1.6. Distributed Actions</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -362,32 +377,66 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <div class="sd-container-fluid sd-sphinx-override sd-p-0 sd-mt-2 sd-mb-4 docutils">
-<div class="sd-row sd-row-cols-2 sd-gx-2 sd-gy-1 docutils">
-<div class="sd-col sd-d-flex-row sd-align-minor-center docutils">
-<div class="sd-container-fluid sd-sphinx-override docutils">
-<div class="sd-row sd-row-cols-2 sd-row-cols-xs-2 sd-row-cols-sm-3 sd-row-cols-md-3 sd-row-cols-lg-3 sd-gx-3 sd-gy-1 docutils">
-<div class="sd-col sd-col-auto sd-d-flex-row sd-align-minor-center docutils">
-<p class="sd-p-0 sd-m-0">basics</p>
-</div>
-<div class="sd-col sd-col-auto sd-d-flex-row sd-align-minor-center docutils">
-<p class="sd-p-0 sd-m-0"><span class="sd-pr-2"><svg version="1.1" width="16.0px" height="16.0px" class="sd-octicon sd-octicon-calendar" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M4.75 0a.75.75 0 01.75.75V2h5V.75a.75.75 0 011.5 0V2h1.25c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0113.25 16H2.75A1.75 1.75 0 011 14.25V3.75C1 2.784 1.784 2 2.75 2H4V.75A.75.75 0 014.75 0zm0 3.5h8.5a.25.25 0 01.25.25V6h-11V3.75a.25.25 0 01.25-.25h2zm-2.25 4v6.75c0 .138.112.25.25.25h10.5a.25.25 0 00.25-.25V7.5h-11z"></path></svg></span>Jan 17, 2025</p>
-</div>
-<div class="sd-col sd-col-auto sd-d-flex-row sd-align-minor-center docutils">
-<p class="sd-p-0 sd-m-0"><span class="sd-pr-2"><svg version="1.1" width="16.0px" height="16.0px" class="sd-octicon sd-octicon-clock" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0zM8 0a8 8 0 100 16A8 8 0 008 0zm.5 4.75a.75.75 0 00-1.5 0v3.5a.75.75 0 00.471.696l2.5 1a.75.75 0 00.557-1.392L8.5 7.742V4.75z"></path></svg></span>0 min read</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="tex2jax_ignore mathjax_ignore section" id="forze-momenti-forze-distribuite">
-<span id="classical-mechanics-actions-density"></span><h1><span class="section-number">2.1. </span>Forze, momenti, forze distribuite<a class="headerlink" href="#forze-momenti-forze-distribuite" title="Permalink to this heading">#</a></h1>
-<p><strong>Forza.</strong> Grandezza vettoriale, caratterizzata da intensità, direzione, verso, e punto di applicazione.</p>
-<p><strong>Momento.</strong> Il momento di una forza rispetto a un polo <span class="math notranslate nohighlight">\(H\)</span></p>
+  <div class="tex2jax_ignore mathjax_ignore section" id="force-moment-of-a-force-distributed-actions">
+<span id="physics-hs-mechanics-actions-def"></span><h1><span class="section-number">2.1. </span>Force, Moment of a Force, Distributed Actions<a class="headerlink" href="#force-moment-of-a-force-distributed-actions" title="Permalink to this heading">#</a></h1>
+<div class="section" id="concentrated-force">
+<h2><span class="section-number">2.1.1. </span>Concentrated Force<a class="headerlink" href="#concentrated-force" title="Permalink to this heading">#</a></h2>
+<p>A (concentrated) force is a vector quantity with physical dimensions,</p>
 <div class="math notranslate nohighlight">
-\[\mathbf{M}_H = (\mathbf{r}_P - \mathbf{r}_H) \times \mathbf{F} \ .\]</div>
-<p><strong>Forze distribuite.</strong> <strong>todo</strong></p>
+\[[\text{force}] = \frac{\text{[mass]}\text{[length]}}{\text{[time]}^2}\]</div>
+<p>which can be measured using a dynamometer, and whose effect can alter the equilibrium or motion conditions of a physical system.</p>
+<p>In addition to the typical information of a vector quantity - magnitude, direction, and sense - contained in the force vector <span class="math notranslate nohighlight">\(\vec{F}\)</span>, it is often necessary to know the <strong>point of application</strong> or the line of application of the force.</p>
+</div>
+<div class="section" id="moment-of-a-concentrated-force">
+<h2><span class="section-number">2.1.2. </span>Moment of a Concentrated Force<a class="headerlink" href="#moment-of-a-concentrated-force" title="Permalink to this heading">#</a></h2>
+<p>The moment of a force <span class="math notranslate nohighlight">\(\vec{F}\)</span> applied at point <span class="math notranslate nohighlight">\(P\)</span>, or with a line of application passing through <span class="math notranslate nohighlight">\(P\)</span>, relative to point <span class="math notranslate nohighlight">\(H\)</span> is defined as the vector product,</p>
+<div class="math notranslate nohighlight">
+\[\vec{M}_H = (P - H) \times \vec{F}\]</div>
+</div>
+<div class="section" id="system-of-forces-resultant-of-actions-and-equivalent-loads">
+<h2><span class="section-number">2.1.3. </span>System of Forces, Resultant of Actions, and Equivalent Loads<a class="headerlink" href="#system-of-forces-resultant-of-actions-and-equivalent-loads" title="Permalink to this heading">#</a></h2>
+<p>Given a system of <span class="math notranslate nohighlight">\(N\)</span> forces <span class="math notranslate nohighlight">\(\left\{ \vec{F}_n \right\}_{n=1:N}\)</span>, applied at points <span class="math notranslate nohighlight">\(P_n\)</span>, we define:</p>
+<ul>
+<li><p><strong>resultant</strong> of the system of forces: the sum of the forces,</p>
+<div class="math notranslate nohighlight">
+\[\vec{R} = \sum_{n=1}^{N} \vec{F}_n \ ,\]</div>
+</li>
+<li><p>resultant of the moments with respect to a point <span class="math notranslate nohighlight">\(H\)</span>: the sum of the moments</p>
+<div class="math notranslate nohighlight">
+\[\vec{M}_H = \sum_{n=1}^{N} (P_n - H) \times \vec{F}_n \ ,\]</div>
+</li>
+<li><p>an <strong>equivalent load</strong>: a system of forces that has the same resultant of forces and moments; for a system of forces, an equivalent load can be defined as a single force, the resultant of the forces <span class="math notranslate nohighlight">\(\vec{R}\)</span> applied at point <span class="math notranslate nohighlight">\(Q\)</span> derived from the equivalence of moments</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+    \vec{R} &amp; = \sum_{n=1}^{N} \vec{F}_n \\
+    (Q - H) \times \vec{R} &amp; = \sum_{n=1}^{N} (P_n - H) \times \vec{F}_n \\
+  \end{aligned}\end{split}\]</div>
+</li>
+</ul>
+</div>
+<div class="section" id="couple-of-forces">
+<h2><span class="section-number">2.1.4. </span>Couple of Forces<a class="headerlink" href="#couple-of-forces" title="Permalink to this heading">#</a></h2>
+<p>A couple of forces is an equivalent load to two forces of equal magnitude and opposite sense, <span class="math notranslate nohighlight">\(\vec{F}_2 = - \vec{F}_1\)</span>, applied at two points <span class="math notranslate nohighlight">\(P_1\)</span>, <span class="math notranslate nohighlight">\(P_2\)</span> not aligned along the line of application of the forces to have non-zero effects.</p>
+<p><strong>todo</strong> <em>image</em></p>
+<p>The resultant of the forces is zero,</p>
+<div class="math notranslate nohighlight">
+\[\vec{R} = \vec{F}_1 + \vec{F}_2 = \vec{F}_1 - \vec{F}_1 = \vec{0} \ ,\]</div>
+<p>while the resultant of the moments does not depend on the moment pole,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \vec{M}_H &amp; = (P_1 - H) \times \vec{F}_1 + (P_2 - H) \times \vec{F}_2 = \\
+  &amp; = (P_1 - H) \times \vec{F}_1 - (P_2 - H) \times \vec{F}_1 = \\
+  &amp; = (P_1 - P_2) \times \vec{F}_1 =: \vec{C} \ .
+\end{aligned}\end{split}\]</div>
+</div>
+<div class="section" id="force-fields">
+<h2><span class="section-number">2.1.5. </span>Force Fields<a class="headerlink" href="#force-fields" title="Permalink to this heading">#</a></h2>
+<p><strong>todo</strong></p>
+</div>
+<div class="section" id="distributed-actions">
+<h2><span class="section-number">2.1.6. </span>Distributed Actions<a class="headerlink" href="#distributed-actions" title="Permalink to this heading">#</a></h2>
+<p><strong>todo</strong></p>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -430,11 +479,11 @@ document.write(`
       </div>
     </a>
     <a class="right-next"
-       href="actions-work-power.html"
+       href="actions-work.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">2.2. </span>Lavoro e potenza</p>
+        <p class="prev-next-title"><span class="section-number">2.2. </span>Work and Power</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -444,6 +493,25 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#concentrated-force">2.1.1. Concentrated Force</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#moment-of-a-concentrated-force">2.1.2. Moment of a Concentrated Force</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#system-of-forces-resultant-of-actions-and-equivalent-loads">2.1.3. System of Forces, Resultant of Actions, and Equivalent Loads</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#couple-of-forces">2.1.4. Couple of Forces</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#force-fields">2.1.5. Force Fields</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#distributed-actions">2.1.6. Distributed Actions</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

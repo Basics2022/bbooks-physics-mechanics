@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>2. Actions &#8212; Meccanica classica</title>
+    <title>2. Actions &#8212; Classical Mechanics</title>
   
   
   
@@ -68,7 +68,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../_static/favicon.svg"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="2.1. Forze, momenti, forze distribuite" href="actions-types.html" />
+    <link rel="next" title="2.1. Force, Moment of a Force, Distributed Actions" href="actions-types.html" />
     <link rel="prev" title="1.7. Relative Kinematics" href="kinematics-relative.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -156,8 +156,8 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="../_static/logo.svg" class="logo__image only-light" alt="Meccanica classica - Home"/>
-    <script>document.write(`<img src="../_static/logo-dark.svg" class="logo__image only-dark" alt="Meccanica classica - Home"/>`);</script>
+    <img src="../_static/logo.svg" class="logo__image only-light" alt="Classical Mechanics - Home"/>
+    <script>document.write(`<img src="../_static/logo-dark.svg" class="logo__image only-dark" alt="Classical Mechanics - Home"/>`);</script>
   
   
 </a></div>
@@ -176,11 +176,11 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">2. Actions</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="actions-types.html">2.1. Forze, momenti, forze distribuite</a></li>
-<li class="toctree-l2"><a class="reference internal" href="actions-work-power.html">2.2. Lavoro e potenza</a></li>
-<li class="toctree-l2"><a class="reference internal" href="actions-conservative.html">2.3. Azioni conservative</a></li>
-<li class="toctree-l2"><a class="reference internal" href="actions-reactions.html">2.4. Reazioni vincolari</a></li>
-<li class="toctree-l2"><a class="reference internal" href="actions-examples.html">2.5. Esempi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="actions-types.html">2.1. Force, Moment of a Force, Distributed Actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="actions-work.html">2.2. Work and Power</a></li>
+<li class="toctree-l2"><a class="reference internal" href="actions-conservative.html">2.3. Conservative Actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="actions-examples.html">2.4. Examples of Forces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="actions-reactions.html">2.5. Constraint Reactions</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="inertia.html">3. Inertia</a></li>
@@ -369,27 +369,29 @@ document.write(`
 -->
 <div class="tex2jax_ignore mathjax_ignore section" id="actions">
 <span id="classical-mechanics-actions"></span><h1><span class="section-number">2. </span>Actions<a class="headerlink" href="#actions" title="Permalink to this heading">#</a></h1>
-<p><strong>Cos’è una forza?</strong>
-Newton lega il concetto di azione, che comprende i concetti di forza e momento, alle cause che distinguono il <em>moto vero</em> dal <em>moto relativo</em>: per Newton, queste cause sono le forze.</p>
-<p><strong>Argomenti.</strong></p>
-<ul class="simple">
-<li><p>Forza</p></li>
-<li><p>Momento di una forza e coppia di forze</p></li>
-<li><p>Azioni distribuite: cenni su sforzo e pressione</p></li>
-<li><p>Lavoro e potenza</p></li>
-<li><p>Azioni conservative</p></li>
-<li><p><strong>Reazioni vincolari</strong></p></li>
-<li><p>Esempi di forze:</p>
-<ul>
-<li><p>legge di attrazione di gravità generale</p></li>
-<li><p>forza di gravità nei pressi della superficie terrestre</p></li>
-<li><p>legge costitutiva elastica della molla e molle senza massa</p></li>
-<li><p>attrito</p></li>
-<li><p>legge costitutiva di smorzatori lineari</p></li>
-<li><p>reazioni vincolari</p></li>
-</ul>
-</li>
-</ul>
+<p><strong>What’s an action?</strong> Newton conceives the concept of an action, including both forces and moments, as the <strong>causes of changes of the true motion</strong> of mechanical systems, or <strong>causes of difference of true motion w.r.t. a <a class="reference internal" href="kinematics-relative.html#classical-mechanics-kinematics-relative"><span class="std std-ref">general relative motion</span></a></strong>.</p>
+<p>Newton’s concept of <em>true motion</em> is meant as the motion w.r.t. an inertial reference frame. So what is an <strong>inertial reference frame</strong>? In an inertial reference frame, dynamometers measure no force and moment associated with uniform motion.</p>
+<!--
+**Cos'è una forza?**
+Newton lega il concetto di azione, che comprende i concetti di forza e momento, alle cause che distinguono il *moto vero* dal *moto relativo*: per Newton, queste cause sono le forze.
+-->
+<!--
+**Argomenti.**
+- Forza
+- Momento di una forza e coppia di forze
+- Azioni distribuite: cenni su sforzo e pressione
+- Lavoro e potenza
+- Azioni conservative
+- **Reazioni vincolari**
+
+- Esempi di forze:
+  - legge di attrazione di gravità generale
+  - forza di gravità nei pressi della superficie terrestre
+  - legge costitutiva elastica della molla e molle senza massa
+  - attrito
+  - legge costitutiva di smorzatori lineari
+  - reazioni vincolari
+-->
 <div class="toctree-wrapper compound">
 </div>
 </div>
@@ -438,7 +440,7 @@ Newton lega il concetto di azione, che comprende i concetti di forza e momento, 
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">2.1. </span>Forze, momenti, forze distribuite</p>
+        <p class="prev-next-title"><span class="section-number">2.1. </span>Force, Moment of a Force, Distributed Actions</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
