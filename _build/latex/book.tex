@@ -213,7 +213,9 @@ While space and time are absolute, the motion of a system is usually the \sphinx
 
 
 \section{Rigid Body}
-\label{\detokenize{ch/kinematics-rigid:rigid-body}}\label{\detokenize{ch/kinematics-rigid:classical-mechanics-kinematics-rigid-body}}\label{\detokenize{ch/kinematics-rigid::doc}}
+\label{\detokenize{ch/kinematics-rigid:rigid-body}}\label{\detokenize{ch/kinematics-rigid:classical-mechanics-kinematics-rigid-body}}\label{\detokenize{ch/kinematics-rigid::doc}}\begin{equation}\label{equation:ch/kinematics-rigid:eq:kin:rigid:vel}
+\begin{split}\vec{v}_Q - \vec{v}_P = \vec{\omega} \times (Q-P)\end{split}
+\end{equation}
 
 \subsection{Rigid motion}
 \label{\detokenize{ch/kinematics-rigid:rigid-motion}}
@@ -551,14 +553,14 @@ In mechanics, as will become clearer later (\sphinxstylestrong{todo} add referen
 \label{\detokenize{ch/actions-work:work-and-power-of-a-force}}
 \sphinxAtStartPar
 \sphinxstylestrong{Work.} The elementary work of a force \(\vec{F}\) applied at point \(P\) that undergoes an elementary displacement \(d \vec{r}_P\) is defined as the dot product between the force and the displacement,
-\begin{equation*}
+\begin{equation}\label{equation:ch/actions-work:eq:work:diff}
 \begin{split}\delta W := \vec{F} \cdot d \vec{r}_P \ .\end{split}
-\end{equation*}
+\end{equation}
 \sphinxAtStartPar
 The work done by the force \(\vec{F}\) applied at point \(P\) moving from point \(A\) to point \(B\) along the path \(\ell_{AB}\) is the sum of all elementary contributions \sphinxhyphen{} and hence, in the limit for elementary displacements \(\rightarrow 0\) for continuous variations, the line integral,
-\begin{equation*}
+\begin{equation}\label{equation:ch/actions-work:eq:work:int}
 \begin{split}W_{\ell_{AB}} = \int_{\ell_{AB}} \delta W = \int_{\ell_{AB}} \vec{F} \cdot d \vec{r}_{P} \ .\end{split}
-\end{equation*}
+\end{equation}
 \sphinxAtStartPar
 In general, the work of a force or a field of forces depends on the path \({\ell}_{AB}\). In cases where the work is independent of the path but depends only on the endpoints, we talk about {\hyperref[\detokenize{ch/actions-conservative:classical-mechanics-actions-conservative}]{\sphinxcrossref{\DUrole{std,std-ref}{conservative actions}}}}.
 
@@ -620,22 +622,23 @@ as
 \section{Conservative Actions}
 \label{\detokenize{ch/actions-conservative:conservative-actions}}\label{\detokenize{ch/actions-conservative:classical-mechanics-actions-conservative}}\label{\detokenize{ch/actions-conservative::doc}}
 \sphinxAtStartPar
-A conservative force field is defined by the work it performs. In general, the work of a force field acting on a point \(P\) moving in space from point \(A\) to point \(B\) along a path \(\ell_{AB}\) depends on the path. (\sphinxstylestrong{todo} add reference)
+In general, the work of a force field acting on a point \(P\) moving in space from point \(A\) to point \(B\) along a path \(\ell_{AB}\) represented by integral \eqref{equation:ch/actions-work:eq:work:int} depends on the path, and this dependence on the path is usually highlighted with the use of the symbol \(\delta\) in the elementary work \eqref{equation:ch/actions-work:eq:work:diff}.
 
 \sphinxAtStartPar
-If the work of a force field does not depend on the path \(\ell_{AB}\) but only on the endpoints \(A\), \(B\), for all pairs of points within a region of space \(\Omega\), the \sphinxstylestrong{force field} is said to be \sphinxstylestrong{conservative} in the region \(\Omega\) of space.
-
-\sphinxAtStartPar
-In this case, the work done can be expressed as the difference of a scalar field, \(U(P)\) or its opposite \(V(P) := - U(P)\),
+If the work of a force field does not depend on the path \(\ell_{AB}\) but only on the endpoints \(A\), \(B\), for all pairs of points within a region of space \(\Omega\), the \sphinxstylestrong{force field} is said to be \sphinxstylestrong{conservative} in the region \(\Omega\) of space. In this case, the work integral can be written as the difference of a scalar field, \(U(P)\) or its opposite \(V(P) := - U(P)\),
 \begin{equation*}
 \begin{split}\begin{aligned}
-  W_{AB} &  = U(B) - U(A) = \Delta_{AB} U  \\
+  W_{AB} &  = \int_{\ell_{AB}} \vec{F} \cdot d \vec{r} = \\
+         &  = \int_{\ell_{AB}} \delta W = \\
+         &  = U(B) - U(A) = \Delta_{AB} U  \\
          &  = V(A) - V(B) = -\Delta_{AB} V  \\
 \end{aligned}\end{split}
 \end{equation*}
 \sphinxAtStartPar
-The functions \(U\), \(V\) are respectively defined as the \sphinxstylestrong{potential} and \sphinxstylestrong{potential energy} of the force field.
-
+The functions \(U\), \(V\) are respectively defined as the \sphinxstylestrong{potential} and \sphinxstylestrong{potential energy} of the force field. From the definition of a conservative force field it readily follows that
+\begin{equation*}
+\begin{split}\oint_{\ell} \vec{F} \cdot d \vec{r} = 0 \ .\end{split}
+\end{equation*}
 \sphinxAtStartPar
 The elementary work can thus be expressed in terms of the differential of these functions,
 \begin{equation*}
@@ -649,6 +652,34 @@ Comparing this relation with the definition of work \(\delta W = d \vec{r} \cdot
 \begin{equation*}
 \begin{split}\vec{F} = \nabla U = - \nabla V \ .\end{split}
 \end{equation*}
+\sphinxAtStartPar
+Since the force field can be written as the gradient of a scalar field, and the curl of a gradient is identically zero, the curl of a potential force field is identically zero,
+\begin{equation*}
+\begin{split}\nabla \times \vec{F} = \vec{0} \ .\end{split}
+\end{equation*}
+\begin{sphinxadmonition}{note}{Note:}
+\sphinxAtStartPar
+The reverse logical process \sphinxhyphen{} \(\nabla \times \vec{F} = \vec{0}\) implies \(\vec{F} = \nabla U\) implies \(\vec{F}\) conservative, i.e. independence of the work from the path \sphinxhyphen{} requires the domain continaing the integration path \(\ell\) to be simply connected.
+\end{sphinxadmonition}
+\label{ch/actions-conservative:example-0}
+\begin{sphinxadmonition}{note}{Example 2.3.1 (Force fields in non\sphinxhyphen{}simply connected domains)}
+
+
+
+\sphinxAtStartPar
+In a region of \(E^2\), described with Cartesian coordinates, containing the origin \(O \equiv (x_0, y_0) \equiv (0,0)\) the vector field
+\begin{equation*}
+\begin{split}\vec{F}_1(\vec{r}) = \frac{x}{x^2 + y^2} \hat{x} + \frac{y}{x^2+y^2} \hat{y}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+is conservative, while the vector field
+\begin{equation*}
+\begin{split}\vec{F}_2(\vec{r}) = -\frac{y}{x^2 + y^2} \hat{x} + \frac{x}{x^2+y^2} \hat{y}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+is not conservative, even though their curl is zero in all the points of the domain where the field is defined \sphinxhyphen{} they’re not defined in the origin.
+\end{sphinxadmonition}
+
 \sphinxstepscope
 
 
@@ -988,6 +1019,312 @@ in resistance to change of motion of a system under external {\hyperref[\detoken
 \sphinxAtStartPar
 In the range of application of classical mechanics \sphinxstylestrong{mass conservation} holds, as stated by \sphinxstylestrong{Lavoisier principle}: the mass of a closed system is constant.
 
+\sphinxAtStartPar
+Beside mass, three main \sphinxstylestrong{additive dynamical quantities} are introduced: \sphinxstylestrong{momentum}, \sphinxstylestrong{angular momentum}, and \sphinxstylestrong{kinetic energy}. Even though their meaning could not be clear in this chapter, it would be clear in the following chapters, in the derivation of {\hyperref[\detokenize{ch/dynamics-eom:classical-mechanics-dynamics-eom-eom}]{\sphinxcrossref{\DUrole{std,std-ref}{equations of motion}}}} of mechanical systems, like {\hyperref[\detokenize{ch/dynamics-eom-point:classical-mechanics-dynamics-eom-point}]{\sphinxcrossref{\DUrole{std,std-ref}{point mass}}}}, {\hyperref[\detokenize{ch/dynamics-eom-points:classical-mechanics-dynamics-eom-points}]{\sphinxcrossref{\DUrole{std,std-ref}{system of point masses}}}} and {\hyperref[\detokenize{ch/dynamics-eom-rigid:classical-mechanics-dynamics-eom-rigid}]{\sphinxcrossref{\DUrole{std,std-ref}{rigid bodies}}}},…
+
+
+\section{Point mass}
+\label{\detokenize{ch/inertia:point-mass}}
+
+\section{Discrete masses}
+\label{\detokenize{ch/inertia:discrete-masses}}
+\sphinxAtStartPar
+\sphinxstylestrong{Momentum.}
+\begin{equation*}
+\begin{split}\vec{Q} := \sum_k m_k \vec{v}_k \end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Angular momentum.}
+\begin{equation*}
+\begin{split}\vec{L}_H := \int_{V_t} (P_k - H) \times m_k \vec{v}_k \end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Kinetic energy.}
+\begin{equation*}
+\begin{split}K := \sum_k \dfrac{1}{2} m_k |\vec{v}_k|^2\end{split}
+\end{equation*}
+
+\section{Continuous systems}
+\label{\detokenize{ch/inertia:continuous-systems}}
+\sphinxAtStartPar
+\sphinxstylestrong{Momentum.}
+\begin{equation*}
+\begin{split}\vec{Q} := \int_{V_t} \rho \vec{v} \end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Angular momentum.}
+\begin{equation*}
+\begin{split}\vec{L}_H := \int_{V_t} (P - H) \times \rho \vec{v} \end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Kinetic energy.}
+\begin{equation*}
+\begin{split}K := \int_{V_t} \dfrac{1}{2} \rho |\vec{v}|^2\end{split}
+\end{equation*}
+
+\section{Rigid systems}
+\label{\detokenize{ch/inertia:rigid-systems}}
+\sphinxAtStartPar
+The expression of dynamical quantities for rigid bodies can be written in terms of the velocity \(\vec{v}_Q\) of a point \(Q\) of the rigid body and its angular velocity \(\vec{\omega}\), exploiting the law of rigid motion \eqref{equation:ch/kinematics-rigid:eq:kin:rigid:vel} to write the velocity of each points of the rigid system as functions of \(\vec{v}_Q\) and \(\vec{\omega}\),
+\begin{equation*}
+\begin{split}\vec{v}_P = \vec{v}_Q + \vec{\omega} \times (P - Q) \ .\end{split}
+\end{equation*}
+
+\subsection{Discrete systems}
+\label{\detokenize{ch/inertia:discrete-systems}}
+\sphinxAtStartPar
+\sphinxstylestrong{Momentum.}
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \vec{Q} = \sum_k m_k \vec{v}_k 
+  & = \sum_k m_k \left( \vec{v}_Q + \vec{\omega} \times (P_k - Q) \right) = \\
+  & = m \vec{v}_Q - \sum_k m_k (P_k - Q) \times \vec{\omega} = \\
+  & = m \vec{v}_Q + \mathbb{S}_Q \cdot \vec{\omega} \ ,
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+having defined the static moment of inertia (a \(2^{nd}\)\sphinxhyphen{}order antisymmetric tensor)
+\begin{equation*}
+\begin{split}\mathbb{S}_Q := \vec{s}_{P \times} := - \sum_k m_k (P_k - Q)_{\times} \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Angular momentum.}
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \vec{L}_H = \sum_k (P_k-H) \times  m_k \vec{v}_k 
+  & = \underbrace{\sum_k (P_k-Q) \times m_k \vec{v}_k}_{\vec{L}_Q} + (Q - H) \times \vec{Q}
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+and
+\begin{equation*}
+\begin{split}\begin{aligned}
+\vec{L}_Q = \sum_k (P_k - Q) \times m_k \vec{v}_k 
+ & = \sum_k (P_k - Q) \times m_k \left( \vec{v}_Q - (P_k - Q) \times \vec{\omega} \right) = \\
+ & = \mathbb{S}_Q^T \cdot \vec{v}_Q + \mathbb{I}_Q \cdot \vec{\omega}  \ ,
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+having recognized the transpose of the static moment of inertia, and introduced the tensor of inertia w.r.t. reference point \(Q\)
+\begin{equation*}
+\begin{split}\mathbb{I}_Q := - \sum_k m_k \left( P_k - Q \right)_{\times} \left( P_k - Q \right)_{\times} \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Kinetic energy.}
+\begin{equation*}
+\begin{split}\begin{aligned}
+ K = \sum_k \dfrac{1}{2} m_k |\vec{v}_k|^2 
+ & = \sum_k \dfrac{1}{2} m_k \left( \vec{v}_Q + \vec{\omega} \times (P_k - Q)  \right) \cdot \left( \vec{v}_Q + \vec{\omega} \times (P_k - Q) \right) = \\
+ & = \sum_k \dfrac{1}{2} m_k | \vec{v}_Q |^2 + \dfrac{1}{2} \sum_k 2 m_k \vec{v}_Q \cdot \left( - (P_k - Q) \times \vec{\omega} \right) + \dfrac{1}{2} \sum_k \vec{\omega} \cdot (P_k - Q)_{\times} (P_k - Q)_\times \cdot \vec{\omega} = \\
+ & = \dfrac{1}{2} \left[\sum_k m_k \right] | \vec{v}_Q |^2 
+   + \dfrac{1}{2} \vec{v}_Q \cdot \left[ - \sum_k m_k (P_k - Q)_\times \right] \cdot \vec{\omega} + \\
+ & + \dfrac{1}{2} \vec{\omega} \cdot \left[ \sum_k m_k (P_k - Q)_\times \right] \cdot \vec{v}_Q
+   + \dfrac{1}{2} \vec{\omega} \cdot \left[ \sum_k m_k (P_k - Q)_{\times} (P_k - Q)_\times \right] \cdot \vec{\omega} = \\
+ & = \dfrac{1}{2} m |\vec{v}_Q|^2 + \dfrac{1}{2} \vec{v}_Q \cdot \mathbb{S}_Q \cdot \vec{\omega} + \dfrac{1}{2} \vec{\omega} \cdot \mathbb{S}^T \cdot \vec{v}_Q + \dfrac{1}{2} \vec{\omega} \cdot \mathbb{I}_Q \cdot \vec{\omega} \ .
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+having used the vector identities
+\begin{equation*}
+\begin{split}\vec{a} \cdot \vec{b} \times \vec{c} = \vec{b} \cdot \vec{c} \times \vec{a}\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}\vec{a} \times \vec{b} = - \vec{b} \times \vec{a}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Comparing the expression of the kinetic energy with those of the momentum and angular momentum, it readily follows that
+\begin{equation*}
+\begin{split}K = \dfrac{1}{2} \vec{v}_Q \cdot \vec{Q} + \dfrac{1}{2} \vec{\omega} \cdot \vec{L}_Q \ .\end{split}
+\end{equation*}
+\begin{sphinxadmonition}{note}{Note:}
+\sphinxAtStartPar
+The components of static moment of inertia and tensor of inertia in a material basis \sphinxhyphen{} following the motion of the system \sphinxhyphen{} are constant.
+\end{sphinxadmonition}
+
+
+\subsection{Continuous systems}
+\label{\detokenize{ch/inertia:id1}}
+\sphinxAtStartPar
+\sphinxstylestrong{Momentum.}
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \vec{Q} = \int_{V_t} \rho \vec{v}
+  & = \int_{V_t} \rho \left( \vec{v}_Q + \vec{\omega} \times (P - Q) \right) = \\
+  & = m \vec{v}_Q - \int_{V_t} \rho (P_k - Q) \times \vec{\omega} = \\
+  & = m \vec{v}_Q + \mathbb{S}_Q \cdot \vec{\omega} \ ,
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+having defined the static moment of inertia (a \(2^{nd}\)\sphinxhyphen{}order antisymmetric tensor) for continuous systems,
+\begin{equation*}
+\begin{split}\mathbb{S}_Q := \vec{s}_{P \times} := - \int_{V_t} \rho (P - Q)_{\times} \ .\end{split}
+\end{equation*}
+\begin{sphinxadmonition}{note}{Note:}
+\sphinxAtStartPar
+Using the definition of the center of mass \(G\),
+\begin{equation*}
+\begin{split}G = \dfrac{1}{m} \int_{V_t} \rho P \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+the static moment of inertia can be written as
+\begin{equation*}
+\begin{split}\mathbb{S}_Q = - \int_{V_t} \rho (P-Q)_{\times} = - m (G - Q)_{\times} \ .\end{split}
+\end{equation*}\end{sphinxadmonition}
+
+\begin{sphinxadmonition}{note}{Note:}
+\sphinxAtStartPar
+The components of static moment of inertia w.r.t. a material reference frame are constant. Using a material Carteisan reference frame the tensor reads
+\begin{equation*}
+\begin{split}\begin{aligned}
+\mathbb{S}_{Q} 
+ & = - \int_{V_t} \rho (P - Q)_{\times} = \\
+ & = - \int_{V_t} \rho \left[ ( x^0 - x_Q^0 ) \hat{x}^0 +  ( y^0 - y_Q^0 ) \hat{y}^0 +  ( z^0 - z_Q^0 ) \hat{z}^0 \right]_\times
+ = S_{ij} \hat{e}^0_i \hat{e}^0_j \ ,
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+whose components can be collected in the \sphinxstylestrong{antisymmetric matrix}
+\begin{equation*}
+\begin{split}\underline{\underline{S}}_Q = \left[ S_{Q,ij} \right] = - \int_{V_0} \rho \begin{bmatrix} 0 & -(z^0-z^0_Q) & (y^0-y^0_Q) \\ (z^0 - z_Q^0) & 0 & -(x^0-x_Q^0) \\ -(y^0-y^0_Q) & (x^0-x^0_Q) & 0 \end{bmatrix} \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+so that the vector product between \(-\int_V \rho (P-Q)\) and a vector \(\vec{a}\) reads
+\begin{equation*}
+\begin{split}\begin{aligned}
+  - \int_{V} \rho (P-Q) \times a
+  & = - \int_V \rho \left[ \hat{x}^0 \left( \Delta y^0 a_z - \Delta z^0 a_y \right) + \hat{y}^0 \left( \Delta z^0 a_x - \Delta x^0 a_z \right) + \hat{z}^0 \left( \Delta x^0 a_y - \Delta y^0 a_x  \right) \right] \\
+  & = \mathbb{S} \cdot \vec{a} \ .
+\end{aligned}\end{split}
+\end{equation*}\end{sphinxadmonition}
+
+\sphinxAtStartPar
+\sphinxstylestrong{Angular momentum.}
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \vec{L}_H = \int_{V_t} (P-H) \times  \rho \vec{v}
+  & = \underbrace{\int_{V_t}(P-Q) \times \rho \vec{v}_k}_{\vec{L}_Q} + (Q - H) \times \vec{Q}
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+and
+\begin{equation*}
+\begin{split}\begin{aligned}
+\vec{L}_Q = \int_{V_t} (P - Q) \times \rho \vec{v}
+ & = \int_{V_t} (P - Q) \times \rho \left( \vec{v}_Q - (P - Q) \times \vec{\omega} \right) = \\
+ & = \mathbb{S}_Q^T \cdot \vec{v}_Q + \mathbb{I}_Q \cdot \vec{\omega}  \ ,
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+having recognized the transpose of the static moment of inertia, and introduced the tensor of inertia w.r.t. reference point \(Q\)
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \mathbb{I}_Q
+  & := - \int_{V_t} \rho \left( P - Q \right)_{\times} \left( P - Q \right)_{\times}  = \\
+  & := \int_{V_t} \rho \left[ |P-Q|^2 \mathbb{I} - (P-Q) \otimes (P-Q) \right] \ ,
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+having used the tensor identity
+\begin{equation*}
+\begin{split}- \vec{a}_{\times} \cdot \vec{a}_{\times} = |\vec{a}|^2 \mathbb{I} - \vec{a} \otimes \vec{a}\end{split}
+\end{equation*}
+\begin{sphinxadmonition}{note}{Note:}
+\sphinxAtStartPar
+The components of tensor of inertia w.r.t. a material reference frame are constant. Using a material Carteisan reference frame the tensor reads
+\begin{equation*}
+\begin{split}\begin{aligned}
+\mathbb{I}_{Q} 
+ & = - \int_{V_t} \rho (P - Q)_{\times} (P-Q)_{\times} = \\
+ & = - \int_{V_t} \rho \left[ |P-Q|^2 \mathbb{I} - (P-Q) \otimes (P-Q) \right] = \\
+ & = I^0_{Q,ij} \hat{e}^0_i \hat{e}^0_j \ ,
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+whose components can be collected in the \sphinxstylestrong{symmetric matrix}
+\begin{equation*}
+\begin{split}\underline{\underline{I}}^0_Q = \left[ I^0_{Q,ij} \right] = \int_{V_0} \rho \begin{bmatrix} \Delta y_0^2 + \Delta z_0^2 & -\Delta x_0 \Delta y_0 & -\Delta x_0 \Delta z_0 \\ -\Delta y_0 \Delta x_0 & \Delta x_0^2 + \Delta y_0^2 & -\Delta y_0 \Delta z_0 \\ -\Delta z_0 \Delta x_0 & - \Delta z_0 \Delta y_0 & \Delta x_0^2 + \Delta z_0^2 \end{bmatrix} \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+being \(\Delta x^0 := x^0_P - x_Q^0\).
+\end{sphinxadmonition}
+
+
+\subsection{Properties of inertia tensors of rigid bodies}
+\label{\detokenize{ch/inertia:properties-of-inertia-tensors-of-rigid-bodies}}
+
+\subsubsection{Static inertia}
+\label{\detokenize{ch/inertia:static-inertia}}
+\sphinxAtStartPar
+\sphinxstylestrong{Center of mass, \(G\).} Center of mass of of a rigid body is defined as the point \(G\) for which \(\mathbb{S}_G \equiv \mathbb{0}\), whose coordinates are given by
+\begin{equation*}
+\begin{split}G = \dfrac{1}{m} \int_{V_t} \rho \, P\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Anti\sphinxhyphen{}symmetric.} From the definition of the static inertia tensor
+\begin{equation*}
+\begin{split}\mathbb{S}_Q \cdot \vec{a} = \int_{V_t} \rho (P-Q) \times \vec{a} = - \vec{a} \times \int_{V_t} \rho (P-Q) = - \vec{a} \cdot \mathbb{S}_Q = - \mathbb{S}^T \cdot \vec{a} \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Transport.}
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \mathbb{S}_Q 
+  & = - \int_{V_t} \rho (P - Q)_{\times} = \\
+  & = - \int_{V_t} \rho (P - R)_{\times} - \int_{V_t} \rho (R - Q)_{\times} = \\
+  & = \mathbb{S}_R - m (R-Q)_{\times} \ ,
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+or w.r.t. the center of mass \(G\),
+\begin{equation*}
+\begin{split}\mathbb{S}_Q = \mathbb{S}_G - m (G-Q)_{\times} \ .\end{split}
+\end{equation*}
+
+\subsubsection{Tensor of inertia}
+\label{\detokenize{ch/inertia:tensor-of-inertia}}
+\sphinxAtStartPar
+\sphinxstylestrong{Symmetric (semi)\sphinxhyphen{}definite positive.} Inertia tensor is symmetric
+\begin{equation*}
+\begin{split}\vec{v} \cdot \mathbb{I}_Q \cdot \vec{w} = \vec{v} \cdot \int_{V_t} \rho \left[ |\Delta \vec{r}|^2 \mathbb{I} - \Delta \vec{r} \otimes \Delta \vec{r} \right] \cdot \vec{w} = \vec{w} \cdot \mathbb{I}_Q \cdot \vec{v} \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+for all \(\forall \vec{v}, \vec{w}\), and semi\sphinxhyphen{}definite positive
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \vec{v} \cdot \mathbb{I}_Q \cdot \vec{v} 
+  & = - \vec{v} \cdot \int_{V_t} \rho \Delta \vec{r}_{\times} \Delta \vec{r}_{\times} \cdot \vec{v} = \\
+  & = - \int_{V_t} \rho \vec{v} \cdot \Delta \vec{r}_{\times} \Delta \vec{r}_{\times} \cdot \vec{v} = \\
+  & = - \int_{V_t} \rho \vec{v} \cdot \left[ \Delta \vec{r} \times \left( \Delta \vec{r} \times \cdot \vec{v} \right) \right] = \\
+  & = - \int_{V_t} \rho \left( \Delta \vec{r} \times \vec{v} \right) \cdot \left( \vec{v} \times  \Delta \vec{r} \right) = \\
+  & =   \int_{V_t} \rho \left( \Delta \vec{r} \times \vec{v} \right) \cdot \left( \Delta \vec{r} \times \vec{v} \right) = \\
+  & =   \int_{V_t} \rho | \Delta \vec{r} \times \vec{v} |^2 \ge 0 \\
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Principal axes of inertia.} As the tensor of inertia is symmetric and definite positive, a set of orthogonal vectors \(\hat{E}^0_i\) so that it can be written in diagonal form,
+\begin{equation*}
+\begin{split}\mathbb{I}_Q = I^0_{XX} \, \hat{E}^0_X \otimes \hat{E}^0_X +  I^0_{YY} \, \hat{E}^0_Y \otimes \hat{E}^0_Y + I^0_{ZZ} \, \hat{E}^0_Z \otimes \hat{E}^0_Z \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+with \(I_{ii}^0 \ge 0\).
+
+\sphinxAtStartPar
+\sphinxstylestrong{Transport \sphinxhyphen{} Huygens’ theorem.}
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \mathbb{I}_Q 
+  & = - \int_{V_t} \rho (P - Q)_{\times} (P-Q)_{\times} = \\
+  & =    - \int_{V_t} \rho (P - R)_{\times} (P - R)_{\times}     
+         - \int_{V_t} \rho (P - R)_{\times} (R - Q)_{\times} \\  
+& \quad  - \int_{V_t} \rho (R - Q)_{\times} (P - R)_{\times}     
+         - \int_{V_t} \rho (R - Q)_{\times} (R - Q)_{\times} = \\ 
+  & = \mathbb{I}_R + \mathbb{S}_R \cdot (R-Q)_{\times} + (R-Q)_{\times} \cdot \mathbb{S}_R - m (R - Q)_{\times} (R - Q)_{\times}
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+or w.r.t. the center of mass \(G\),
+\begin{equation*}
+\begin{split} \mathbb{I}_Q = \mathbb{I}_G - m (Q-G)_\times (Q-G)_\times \ .\end{split}
+\end{equation*}
 \sphinxstepscope
 
 
@@ -996,7 +1333,7 @@ In the range of application of classical mechanics \sphinxstylestrong{mass conse
 \chapter{Dynamics}
 \label{\detokenize{ch/dynamics:dynamics}}\label{\detokenize{ch/dynamics:classical-mechanics-dynamics}}\label{\detokenize{ch/dynamics::doc}}
 \sphinxAtStartPar
-Dynamics provides the link between the motion of a body and the forces causing that motion.
+Dynamics provides the link between the motion of a body, described by {\hyperref[\detokenize{ch/kinematics:classical-mechanics-kinematics}]{\sphinxcrossref{\DUrole{std,std-ref}{kinematics}}}}, and the \DUrole{xref,myst}{actions} causing that motion.
 
 \sphinxAtStartPar
 Newton’s principles of dynamics and the cardinal equations of dynamics are the physical laws that govern the motion of mechanical systems: {\hyperref[\detokenize{ch/dynamics-principles:classical-mechanics-dynamics-principles}]{\sphinxcrossref{\DUrole{std,std-ref}{Newton’s principles}}}} agree with the experimental observations (for systems with negligible quantum and Einstein relativity effects) and are the starting point \sphinxhyphen{} the principles \sphinxhyphen{} of Newton’s formulation of mechanics; from these principles, {\hyperref[\detokenize{ch/dynamics-eom:classical-mechanics-dynamics-eom}]{\sphinxcrossref{\DUrole{std,std-ref}{equations of motion}}}} of mechanical systems are derived.
@@ -1007,405 +1344,269 @@ These physical laws are formulated in terms of certain physical quantities, such
 \sphinxstepscope
 
 
-
-
-\section{Principles of Newton mechanics}
-\label{\detokenize{ch/dynamics-principles:principles-of-newton-mechanics}}\label{\detokenize{ch/dynamics-principles:classical-mechanics-dynamics-principles}}\label{\detokenize{ch/dynamics-principles::doc}}
+\section{Principles of Newtonian Mechanics}
+\label{\detokenize{ch/dynamics-principles:principles-of-newtonian-mechanics}}\label{\detokenize{ch/dynamics-principles:classical-mechanics-dynamics-principles}}\label{\detokenize{ch/dynamics-principles::doc}}
 \sphinxAtStartPar
-\sphinxstylestrong{Primo principio della dinamica.}
-Un corpo (o meglio, il baricentro di un corpo) sul quale agisce una forza netta nulla, persevera nel suo stato di quiete o di moto rettilineo uniforme rispetto a un sistema di riferimento inerziale.
+\sphinxstylestrong{First Principle of Dynamics (Newton’s First Law): inertia and Galileian invariance.} A body (more precisely, the center of mass of a body) on which no net force acts remains in its state of rest or uniform rectilinear motion relative to an inertial reference frame.
 
 \sphinxAtStartPar
-\sphinxstylestrong{Secondo principio della dinamica.} Rispetto a un sistema di riferimento inerziale, la variazione della quantità di moto di un sistema è uguale all’impulso delle forze esterne agenti su di esso,
+\sphinxstylestrong{todo} discuss the role/definition of \sphinxstylestrong{inertial reference frames} in classical mechanics and \sphinxstylestrong{Galileian invariance} (equations of motions are invariant under Galileian transformations)
+
+\sphinxAtStartPar
+\sphinxstylestrong{Second Principle of Dynamics (Newton’s Second Law): momentum balance.} Relative to an inertial reference frame, the change in momentum of a system is equal to the impulse of the external forces acting on it,
 \begin{equation*}
-\begin{split}\Delta \mathbf{Q} = \mathbf{I}^e \ .\end{split}
+\begin{split}\Delta \vec{Q} = \vec{I}^e \ .\end{split}
 \end{equation*}
 \sphinxAtStartPar
-Nel caso di moto regolare, in cui la quantità di moto può essere rappresentata da una funzione continua e differenziabile in funzione del tempo, si può scrivere il secondo principio della dinamica in forma differenziale,
+In the case of smooth motion, where the momentum can be represented as a continuous and differentiable function of time, the second principle of dynamics can be expressed in differential form,
 \begin{equation*}
-\begin{split}\dot{\mathbf{Q}} = \mathbf{R}^e \ ,\end{split}
+\begin{split}\dot{\vec{Q}} = \vec{R}^e \ ,\end{split}
 \end{equation*}
 \sphinxAtStartPar
-essendo la risultante delle forze esterne, \(\mathbf{R}^e = \frac{d \mathbf{I}^e}{dt}\), la derivata nel tempo dell’impulso.
+where the resultant of the external forces, \(\vec{R}^e = \frac{d \vec{I}^e}{dt}\), is the time derivative of the impulse.
 
 \sphinxAtStartPar
-\sphinxstylestrong{Terzo principio della dinamica.} Se un sistema \(i\) esercita su un sistema \(j\) una forza \(\mathbf{F}_{ji}\), allora il sistema \(j\) esercita sul sistema \(i\) una forza \(\mathbf{F}_{ij}\) “uguale e contraria”, con modulo uguale e verso opposto,
+\sphinxstylestrong{Third Principle of Dynamics (Newton’s Third Law): action\sphinxhyphen{}reaction.} If a system \(i\) exerts a force \(\vec{F}_{ji}\) on a system \(j\), then system \(j\) exerts an “equal and opposite” force \(\vec{F}_{ij}\) on system \(i\), with equal magnitude and opposite direction,
 \begin{equation*}
-\begin{split}\mathbf{F}_{ij} = - \mathbf{F}_{ji} \ .\end{split}
+\begin{split}\vec{F}_{ij} = - \vec{F}_{ji} \ .\end{split}
 \end{equation*}
 \sphinxstepscope
 
 
-
-
-\section{Equations of motion}
+\section{Equations of Motion}
 \label{\detokenize{ch/dynamics-eom:equations-of-motion}}\label{\detokenize{ch/dynamics-eom:classical-mechanics-dynamics-eom}}\label{\detokenize{ch/dynamics-eom::doc}}
 \sphinxAtStartPar
-Starting from {\hyperref[\detokenize{ch/dynamics-principles:classical-mechanics-dynamics-principles}]{\sphinxcrossref{\DUrole{std,std-ref}{principles of Newton mechanics}}}}, it’s possible to derive dynamical equations governing the motion of mechanical systems. The general form of these equations are easily expressed in terms of dynamical quantities discussed in the inertia section,
-\begin{equation*}
-\begin{split}\begin{aligned}
- \dfrac{d \vec{Q}       }{dt} & = \vec{R}^e                               & \qquad \text{(momentum balance equation)} \\
- \dfrac{d \vec{\Gamma}_H}{dt} & = -\vec{r}_H \times \vec{Q} + \vec{M}^e_H & \qquad \text{(angular momentum balance equation)} \\
- \dfrac{d      K        }{dt} & = P^{tot}                                 & \qquad \text{(kinetic energy balance equation)} \\
-\end{aligned}\end{split}
-\end{equation*}
-\sphinxAtStartPar
-for every mechanical (closed) mechanical system. These equations will be derived for different systems in the following sections: point, system of points, rigid body.
-
-\sphinxAtStartPar
-Utilizzando i concetti di quantità di moto, momento della quantità di moto ed energia cinetica di un sistema, si possono scrivere le 3 equazioni cardinali della dinamica in una forma valida per \sphinxstylestrong{ogni sistema chiuso}. Nel caso siano soddisfatte alcune condizioni, e solo in questo caso, le equazioni cardinali della dinamica rappresentano dei principi di conservazione delle quantità dinamiche: osservando le espressioni delle equazioni cardinali, è facile intuire che la condizione da soddisfare per otenere un principio di conservazione è l’annullamento di tutti i termini ad eccezione della derivata temporale della quantità conservata.
+Starting from the {\hyperref[\detokenize{ch/dynamics-principles:classical-mechanics-dynamics-principles}]{\sphinxcrossref{\DUrole{std,std-ref}{principles of Newtonian mechanics}}}}, it is possible to derive the dynamical equations governing the motion of mechanical systems. These equations governs the change of dynamical quantities, \sphinxstylestrong{momentum}, \sphinxstylestrong{angular momentum}, \sphinxstylestrong{kinetic energy}, linking them to (external) \sphinxstylestrong{forces}, (external) \sphinxstylestrong{moments} and (total) \sphinxstylestrong{power}. Under certain conditions, and only in these cases, the {\hyperref[\detokenize{ch/dynamics-eom:classical-mechanics-dynamics-eom-eom}]{\sphinxcrossref{\DUrole{std,std-ref}{cardinal equations}}}} of dynamics become{\hyperref[\detokenize{ch/dynamics-eom:classical-mechanics-dynamics-eom-conservation}]{\sphinxcrossref{\DUrole{std,std-ref}{principles of conservation of dynamic quantities}}}}: by observing the expressions of the cardinal equations, it is easy to infer that the condition to obtain a conservation principle is the vanishing of all terms except for the time derivative of the conserved quantity.
 
 
-\subsection{Equazioni cardinali}
-\label{\detokenize{ch/dynamics-eom:equazioni-cardinali}}
+
+
+\subsection{Cardinal Equations}
+\label{\detokenize{ch/dynamics-eom:cardinal-equations}}\label{\detokenize{ch/dynamics-eom:classical-mechanics-dynamics-eom-eom}}
 \sphinxAtStartPar
-\sphinxstylestrong{Bilancio della quantità di moto.} La derivata nel tempo della quantità di moto è uguale alla risultante delle forze esterne,
+The general form of these equations is easily expressed in terms of the dynamical quantities discussed in the section about \DUrole{xref,myst}{inertia}. Cardinal equations, or equations of motion, are collected here in their most general form for closed systems, and derived in the following sectinos for different systems: {\hyperref[\detokenize{ch/dynamics-eom-point:classical-mechanics-dynamics-eom-point}]{\sphinxcrossref{\DUrole{std,std-ref}{point mass}}}}, {\hyperref[\detokenize{ch/dynamics-eom-points:classical-mechanics-dynamics-eom-points}]{\sphinxcrossref{\DUrole{std,std-ref}{systems of point masses}}}}, {\hyperref[\detokenize{ch/dynamics-eom-rigid:classical-mechanics-dynamics-eom-rigid}]{\sphinxcrossref{\DUrole{std,std-ref}{rigid body}}}},…
+
+\sphinxAtStartPar
+\sphinxstylestrong{Momentum Balance.} The time derivative of the momentum is equal to the resultant of the external forces,
 \begin{equation}\label{equation:ch/dynamics-eom:principle:q}
-\begin{split}\dot{\mathbf{Q}} = \mathbf{R}^e \ .\end{split}
+\begin{split}\dot{\vec{Q}} = \vec{R}^e \ .\end{split}
 \end{equation}
 \sphinxAtStartPar
-\sphinxstylestrong{Bilancio del momento della quantità di moto rispetto a un polo \(H\).} La derivata nel tempo del momento della quantità di moto rispetto a un punto \(H\), a meno di “un termine di trasporto” è uguale alla risultate dei momenti esterni rispetto al polo \(H\)
+\sphinxstylestrong{Angular Momentum Balance with respect to a point \(H\).} The time derivative of the angular momentum with respect to a point \(H\), minus the “transport term,” is equal to the resultant of the external moments with respect to the point \(H\),
 \begin{equation}\label{equation:ch/dynamics-eom:principle:l}
-\begin{split}\dot{\mathbf{L}}_H + \dot{\mathbf{x}}_H \times \mathbf{Q} = \mathbf{M}_H^e \ .\end{split}
+\begin{split}\dot{\vec{L}}_H + \dot{\vec{x}}_H \times \vec{Q} = \vec{M}_H^e \ .\end{split}
 \end{equation}
 \sphinxAtStartPar
-\sphinxstylestrong{Bilancio dell’energia cinetica.} La derivata nel tempo dell’energia cinetica è uguale alla potenza totale agente sul sistema, risultato della somma della potenza delle azioni esterne e della potenza delle azioni interne al sistema
+\sphinxstylestrong{Kinetic Energy Balance.} The time derivative of the kinetic energy is equal to the total power acting on the system, which is the sum of the power of the external actions and the power of the internal actions within the system,
 \begin{equation}\label{equation:ch/dynamics-eom:principle:k}
 \begin{split}\dot{K} = P^{tot} = P^e + P^i\end{split}
 \end{equation}
 
-\subsection{Principi di conservazione}
-\label{\detokenize{ch/dynamics-eom:principi-di-conservazione}}
+\subsection{Conservation Principles}
+\label{\detokenize{ch/dynamics-eom:conservation-principles}}\label{\detokenize{ch/dynamics-eom:classical-mechanics-dynamics-eom-conservation}}
 \sphinxAtStartPar
-\sphinxstylestrong{Conservazione della quantità di moto, in presenza di forze esterne con risultante nulla.} Se la risultante delle forze esterne è nulla, \(\mathbf{R}^e = \mathbf{0}\), dal bilancio della quantità di moto segue immediatamente
+Under certain condiitons, equations of motion become principles of conservation of dynamical quantities. These conditions are easily derived by inspection of the equations of motion, nullyfing the causes of change of the dynamical quantities. Beside the conservation of momentum, angular momentum and kinetic energy, a \sphinxstylestrong{principle of conservation of mechanical energy} arises when actions acting on the system are {\hyperref[\detokenize{ch/actions-conservative:classical-mechanics-actions-conservative}]{\sphinxcrossref{\DUrole{std,std-ref}{conservative}}}}, so that its power can be written as a time derivative of a potential energy.
+
+\sphinxAtStartPar
+\sphinxstylestrong{Conservation of Momentum in the presence of zero net external forces.} If the resultant of the external forces is zero, \(\vec{R}^e = \vec{0}\), from the momentum balance, we immediately obtain
 \begin{equation*}
-\begin{split}\dot{\mathbf{Q}} = \mathbf{0} \qquad \rightarrow \qquad \mathbf{Q} = \bar{\mathbf{Q}} = \text{cost.}\end{split}
+\begin{split}\dot{\vec{Q}} = \vec{0} \qquad \rightarrow \qquad \vec{Q} = \bar{\vec{Q}} = \text{const.}\end{split}
 \end{equation*}
 \sphinxAtStartPar
-\sphinxstylestrong{Conservazione del momento della quantità di moto, in presenza di momenti esterni con risultante nulla.} Se la scelta del polo \(H\) rende nullo il termine di trasporto, \(\dot{\mathbf{r}}_H \times \mathbf{Q} = \mathbf{0}\), se la risultante dei momenti esterni è nulla, \(\mathbf{M}^e_H = \mathbf{0}\), dal bilancio del momento della quantità di moto segue immediatamente
+\sphinxstylestrong{Conservation of Angular Momentum in the presence of zero net external moments.} If the choice of the point \(H\) nullifies the transport term, \(\dot{\vec{r}}_H \times \vec{Q} = \vec{0}\), and if the resultant of the external moments is zero, \(\vec{M}^e_H = \vec{0}\), from the angular momentum balance, we immediately obtain
 \begin{equation*}
-\begin{split}\dot{\mathbf{L}}_H = \mathbf{0} \qquad \rightarrow \qquad \mathbf{L}_H = \bar{\mathbf{L}}_H = \text{cost.}\end{split}
+\begin{split}\dot{\vec{L}}_H = \vec{0} \qquad \rightarrow \qquad \vec{L}_H = \bar{\vec{L}}_H = \text{const.}\end{split}
 \end{equation*}
 \sphinxAtStartPar
-\sphinxstylestrong{Conservazione dell’energia cinetica, in presenza di potenza totale nulla.} Se la potenza totale delle azioni sul sistema è nulla, \(P^{tot} = 0\), dal bilancio dell’energia cinetica segue immediatamente
+\sphinxstylestrong{Conservation of Kinetic Energy in the presence of zero total power.} If the total power of the actions on the system is zero, \(P^{tot} = 0\), from the kinetic energy balance, we immediately obtain
 \begin{equation*}
-\begin{split}\dot{K} = 0 \qquad \rightarrow \qquad K = \bar{K} = \text{cost.}\end{split}
+\begin{split}\dot{K} = 0 \qquad \rightarrow \qquad K = \bar{K} = \text{const.}\end{split}
 \end{equation*}
 \sphinxAtStartPar
-\sphinxstylestrong{Conservazione dell’energia meccanica, in assenza di azioni non conservative.} Ai tre principi di conservazione direttamente ottenibili dalle equazioni cardinali, si aggiunge il principio della conservazione dell’energia meccanica, somma dell’energia cinetica e dell’energia potenziale del sistema,
+\sphinxstylestrong{Conservation of Mechanical Energy in the absence of non\sphinxhyphen{}conservative forces.} In addition to the three conservation principles directly derived from the cardinal equations, we add the principle of the conservation of mechanical energy, which is the sum of the system’s kinetic and potential energy,
 \begin{equation*}
 \begin{split}E^{mech} = K + V \ ,\end{split}
 \end{equation*}
 \sphinxAtStartPar
-in assenza di azioni non conservative. Se non ci sono forze non conervative, la potenza delle azioni agenti sul sistema può essere scritta come l’opposto della derivata nel tempo dell’energia potenziale del sistema,
+in the absence of non\sphinxhyphen{}conservative actions. If there are no non\sphinxhyphen{}conservative forces, the power of the actions on the system can be written as the negative of the time derivative of the system’s potential energy,
 \begin{equation*}
 \begin{split}P^{tot} = -\dot{V}\end{split}
 \end{equation*}
 \sphinxAtStartPar
-Dal bilancio dell’energia cinetica segue
+From the kinetic energy balance, we get
 \begin{equation*}
-\begin{split}\dot{K} = - \dot{V} \qquad \rightarrow \qquad \dfrac{d}{dt}(K+V) = 0 \qquad \rightarrow \qquad \dot{E}^{mech = 0} \qquad \rightarrow \qquad E^{mech} = \bar{E}^{mech} = \text{const.}\end{split}
+\begin{split}\dot{K} = - \dot{V} \qquad \rightarrow \qquad \dfrac{d}{dt}(K+V) = 0 \qquad \rightarrow \qquad \dot{E}^{mech} = 0 \qquad \rightarrow \qquad E^{mech} = \bar{E}^{mech} = \text{const.}\end{split}
 \end{equation*}
 \sphinxstepscope
 
-\begin{sphinxuseclass}{sd-container-fluid}
-\begin{sphinxuseclass}{sd-sphinx-override}
-\begin{sphinxuseclass}{sd-p-0}
-\begin{sphinxuseclass}{sd-mt-2}
-\begin{sphinxuseclass}{sd-mb-4}
-\begin{sphinxuseclass}{sd-row}
-\begin{sphinxuseclass}{sd-row-cols-2}
-\begin{sphinxuseclass}{sd-gx-2}
-\begin{sphinxuseclass}{sd-gy-1}
-\begin{sphinxuseclass}{sd-col}
-\begin{sphinxuseclass}{sd-d-flex-row}
-\begin{sphinxuseclass}{sd-align-minor-center}
-\begin{sphinxuseclass}{sd-container-fluid}
-\begin{sphinxuseclass}{sd-sphinx-override}
-\begin{sphinxuseclass}{sd-row}
-\begin{sphinxuseclass}{sd-row-cols-2}
-\begin{sphinxuseclass}{sd-row-cols-xs-2}
-\begin{sphinxuseclass}{sd-row-cols-sm-3}
-\begin{sphinxuseclass}{sd-row-cols-md-3}
-\begin{sphinxuseclass}{sd-row-cols-lg-3}
-\begin{sphinxuseclass}{sd-gx-3}
-\begin{sphinxuseclass}{sd-gy-1}
-\begin{sphinxuseclass}{sd-col}
-\begin{sphinxuseclass}{sd-col-auto}
-\begin{sphinxuseclass}{sd-d-flex-row}
-\begin{sphinxuseclass}{sd-align-minor-center}
-\sphinxAtStartPar
-basics
 
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\begin{sphinxuseclass}{sd-col}
-\begin{sphinxuseclass}{sd-col-auto}
-\begin{sphinxuseclass}{sd-d-flex-row}
-\begin{sphinxuseclass}{sd-align-minor-center}
+\section{Equations of motion of a point mass}
+\label{\detokenize{ch/dynamics-eom-point:equations-of-motion-of-a-point-mass}}\label{\detokenize{ch/dynamics-eom-point:classical-mechanics-dynamics-eom-point}}\label{\detokenize{ch/dynamics-eom-point::doc}}
 \sphinxAtStartPar
-Jan 21, 2025
-
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\begin{sphinxuseclass}{sd-col}
-\begin{sphinxuseclass}{sd-col-auto}
-\begin{sphinxuseclass}{sd-d-flex-row}
-\begin{sphinxuseclass}{sd-align-minor-center}
-\sphinxAtStartPar
-0 min read
-
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-
-\subsection{Equazioni cardinali della dinamica: punto materiale}
-\label{\detokenize{ch/dynamics-eom-point:equazioni-cardinali-della-dinamica-punto-materiale}}\label{\detokenize{ch/dynamics-eom-point:classical-mechanics-dynamics-eom-point}}\label{\detokenize{ch/dynamics-eom-point::doc}}
-\sphinxAtStartPar
-\sphinxstylestrong{Quantità dinamiche.}
+\sphinxstylestrong{Dynamic quantities.}
 \begin{equation*}
 \begin{split}\begin{aligned}
-  \mathbf{Q}_P & := m_P \mathbf{v}_P \\
-  \mathbf{L}_{P,H} & := (\mathbf{r}_P - \mathbf{r}_H) \times \mathbf{Q} = m_P (\mathbf{r}_P - \mathbf{r}_H) \times \mathbf{v}_P \\
-  K & := \frac{1}{2} m_P \mathbf{v}_P \cdot \mathbf{v}_P = \frac{1}{2} m_P |\mathbf{v}_P|^2
+  \vec{Q}_P & := m_P \vec{v}_P \\
+  \vec{L}_{P,H} & := (\vec{r}_P - \vec{r}_H) \times \vec{Q} = m_P (\vec{r}_P - \vec{r}_H) \times \vec{v}_P \\
+  K & := \frac{1}{2} m_P \vec{v}_P \cdot \vec{v}_P = \frac{1}{2} m_P |\vec{v}_P|^2
 \end{aligned}\end{split}
 \end{equation*}
 \sphinxAtStartPar
-\sphinxstylestrong{Bilancio della quantità di moto.} Il bilancio della quantità di moto di un punto materiale \(P\), \(\mathbf{Q}_P = m \mathbf{v}_P\) segue direttamente dal secondo principio della dinamica di Newton,
+\sphinxstylestrong{Momentum balance equation.} The balance equation of momentum of a point \(P\) with mass \(m\), \(\vec{Q}_P = m \vec{v}_P\) readily follows the second principle of dynamics,
 \begin{equation*}
-\begin{split}\dot{\mathbf{Q}}_P = \mathbf{R}^e_P\end{split}
+\begin{split}\dot{\vec{Q}}_P = \vec{R}^e_P\end{split}
 \end{equation*}
 \sphinxAtStartPar
-\sphinxstylestrong{Bilancio del momento della quantità di moto.} La derivata nel tempo del momento della quantità di moto viene calcolata usando la regola del prodotto,
+\sphinxstylestrong{Angular momentum balance equation.} Time derivative of the angular momentum is evaluated with the rule of derivative of product,
 \begin{equation*}
 \begin{split}\begin{aligned}
-\dot{\mathbf{L}}_{P,H} & = \dfrac{d}{dt} \left[ m_P (\mathbf{r}_P - \mathbf{r}_H) \times \mathbf{v}_P \right] = \\
-& = m \left[ ( \dot{\mathbf{r}}_P - \dot{\mathbf{r}}_H ) \times \mathbf{v}_P + m_P (\mathbf{r}_P - \mathbf{r}_H) \times \dot{\mathbf{v}}_P \right] = \\
-& = - m_P \dot{\mathbf{r}}_H \times \mathbf{v}_P + m_P (\mathbf{r}_P - \mathbf{r}_H) \times \dot{\mathbf{v}}_P = \\
-& = - \dot{\mathbf{r}}_H \times \mathbf{Q} + \mathbf{M}_H^{ext} \ .
+\dot{\vec{L}}_{P,H} & = \dfrac{d}{dt} \left[ m_P (\vec{r}_P - \vec{r}_H) \times \vec{v}_P \right] = \\
+& = m \left[ ( \dot{\vec{r}}_P - \dot{\vec{r}}_H ) \times \vec{v}_P + m_P (\vec{r}_P - \vec{r}_H) \times \dot{\vec{v}}_P \right] = \\
+& = - m_P \dot{\vec{r}}_H \times \vec{v}_P + m_P (\vec{r}_P - \vec{r}_H) \times \dot{\vec{v}}_P = \\
+& = - \dot{\vec{r}}_H \times \vec{Q} + \vec{M}_H^{ext} \ .
 \end{aligned}\end{split}
 \end{equation*}
 \sphinxAtStartPar
-\sphinxstylestrong{Bilancio dell’energia cinetica.}
+\sphinxstylestrong{Kinetic energy blanace equation.}
 \begin{equation*}
 \begin{split}\begin{aligned}
-\dot{K}_{P} & = \dfrac{d}{dt} \left( \frac{1}{2} m_P \mathbf{v}_P \cdot \mathbf{v}_P \right) = \\
-            & = m_P \dot{\mathbf{v}}_P \cdot \mathbf{v}_P = \\
-            & = \mathbf{R}^e \cdot \mathbf{v}_P = \\
-            & = \mathbf{R}^{tot} \cdot \mathbf{v}_P = P^{tot} \ .
+\dot{K}_{P} & = \dfrac{d}{dt} \left( \frac{1}{2} m_P \vec{v}_P \cdot \vec{v}_P \right) = \\
+            & = m_P \dot{\vec{v}}_P \cdot \vec{v}_P = \\
+            & = \vec{R}^e \cdot \vec{v}_P = P^e = P^{tot} \\
 \end{aligned}\end{split}
 \end{equation*}
+\sphinxAtStartPar
+being the power of external actions \(P^e\) equal to the total power acting on the system, assuming there is no internal action in the point system, or at least they have zero net power.
+
 \sphinxstepscope
 
-\begin{sphinxuseclass}{sd-container-fluid}
-\begin{sphinxuseclass}{sd-sphinx-override}
-\begin{sphinxuseclass}{sd-p-0}
-\begin{sphinxuseclass}{sd-mt-2}
-\begin{sphinxuseclass}{sd-mb-4}
-\begin{sphinxuseclass}{sd-row}
-\begin{sphinxuseclass}{sd-row-cols-2}
-\begin{sphinxuseclass}{sd-gx-2}
-\begin{sphinxuseclass}{sd-gy-1}
-\begin{sphinxuseclass}{sd-col}
-\begin{sphinxuseclass}{sd-d-flex-row}
-\begin{sphinxuseclass}{sd-align-minor-center}
-\begin{sphinxuseclass}{sd-container-fluid}
-\begin{sphinxuseclass}{sd-sphinx-override}
-\begin{sphinxuseclass}{sd-row}
-\begin{sphinxuseclass}{sd-row-cols-2}
-\begin{sphinxuseclass}{sd-row-cols-xs-2}
-\begin{sphinxuseclass}{sd-row-cols-sm-3}
-\begin{sphinxuseclass}{sd-row-cols-md-3}
-\begin{sphinxuseclass}{sd-row-cols-lg-3}
-\begin{sphinxuseclass}{sd-gx-3}
-\begin{sphinxuseclass}{sd-gy-1}
-\begin{sphinxuseclass}{sd-col}
-\begin{sphinxuseclass}{sd-col-auto}
-\begin{sphinxuseclass}{sd-d-flex-row}
-\begin{sphinxuseclass}{sd-align-minor-center}
-\sphinxAtStartPar
-basics
 
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\begin{sphinxuseclass}{sd-col}
-\begin{sphinxuseclass}{sd-col-auto}
-\begin{sphinxuseclass}{sd-d-flex-row}
-\begin{sphinxuseclass}{sd-align-minor-center}
+\section{Cardinal Equations of Dynamics: Discrete Systems of Point Masses}
+\label{\detokenize{ch/dynamics-eom-points:cardinal-equations-of-dynamics-discrete-systems-of-point-masses}}\label{\detokenize{ch/dynamics-eom-points:classical-mechanics-dynamics-eom-points}}\label{\detokenize{ch/dynamics-eom-points::doc}}
 \sphinxAtStartPar
-Jan 21, 2025
-
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\begin{sphinxuseclass}{sd-col}
-\begin{sphinxuseclass}{sd-col-auto}
-\begin{sphinxuseclass}{sd-d-flex-row}
-\begin{sphinxuseclass}{sd-align-minor-center}
-\sphinxAtStartPar
-2 min read
-
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-
-\subsection{Equazioni cardinali della dinamica: sistemi discreti di punti materiali}
-\label{\detokenize{ch/dynamics-eom-points:equazioni-cardinali-della-dinamica-sistemi-discreti-di-punti-materiali}}\label{\detokenize{ch/dynamics-eom-points:classical-mechanics-dynamics-eom-points}}\label{\detokenize{ch/dynamics-eom-points::doc}}
-\sphinxAtStartPar
-Partendo dalle equazioni dinamiche per un punto, si calcolano le equazioni dinamiche per un sistema di punti, sfruttando il terzo principio della dinamica di azione/reazione. Lo sviluppo delle equazioni permette di comprendere che la natura additiva delle grandezze dinamiche (quantità di moto, momento della quantità di moto, energia cinetica) segue direttamente dalla loro definizione.
+Starting from the dynamic equations for a single point, the dynamic equations for a system of particles can be derived using the third principle of dynamics, action/reaction. The development of these equations helps us understand that the additive nature of dynamical quantities (momentum, angular momentum, kinetic energy) directly follows from their definition.
 
 \sphinxAtStartPar
-\sphinxstylestrong{Bilancio della quantità di moto.}
-E’ possibile scrivere il bilancio della quantità di moto per ogni punto \(i\) del sistema, scrivendo la risultante delle forze esterne agente sul punto come la somma delle forze esterne all’intero sistema agenti sul punto e le forze interne scambiate con gli altri punti del sistema,
+\sphinxstylestrong{Momentum Balance.}
+The momentum balance for each point \(i\) in the system can be written by expressing the resultant of the external forces acting on the point as the sum of the external forces acting on the entire system and the internal forces exchanged with the other points of the system,
 \begin{equation*}
-\begin{split}\mathbf{R}_i^{ext,i} = \mathbf{F}_i^{ext} + \sum_{j \ne i} \mathbf{F}_{ij} \ .\end{split}
+\begin{split}\vec{R}_i^{ext,i} = \vec{F}_i^{ext} + \sum_{j \ne i} \vec{F}_{ij} \ .\end{split}
 \end{equation*}
 \sphinxAtStartPar
-L’equazione di bilancio per la \(i\)\sphinxhyphen{}esima massa diventa quindi
+The momentum balance equation for the \(i\)\sphinxhyphen{}th mass thus becomes
 \begin{equation*}
-\begin{split}\dot{\mathbf{Q}}_i = \mathbf{R}_i^{ext,i} = \mathbf{F}_i^{ext} + \sum_{j \ne i} \mathbf{F}_{ij} \ .\end{split}
+\begin{split}\dot{\vec{Q}}_i = \vec{R}_i^{ext,i} = \vec{F}_i^{ext} + \sum_{j \ne i} \vec{F}_{ij} \ .\end{split}
 \end{equation*}
 \sphinxAtStartPar
-Sommando le equazioni di bilancio di tutte le masse, si ottiene
+By summing the momentum balance equations for all masses, we obtain
 \begin{equation*}
 \begin{split}\begin{aligned}
-\sum_{i} \dot{\mathbf{Q}}_i & = \sum_i \mathbf{F}_{i}^{ext} + \sum_i \sum_{j \ne i} \mathbf{F}_{ij} = \\
-                            & = \sum_i \mathbf{F}_{i}^{ext} + \sum_{\{i,j\}} \underbrace{\left( \mathbf{F}_{ij} + \mathbf{F}_{ji} \right)}_{=\mathbf{0}} 
+\sum_{i} \dot{\vec{Q}}_i & = \sum_i \vec{F}_{i}^{ext} + \sum_i \sum_{j \ne i} \vec{F}_{ij} = \\
+                            & = \sum_i \vec{F}_{i}^{ext} + \sum_{\{i,j\}} \underbrace{\left( \vec{F}_{ij} + \vec{F}_{ji} \right)}_{=\vec{0}} 
 \end{aligned}\end{split}
 \end{equation*}
 \sphinxAtStartPar
-e definendo la quantità di moto di un sistema come la somma delle quantità di moto delle sue parti e la risultante delle forze esterne come somma delle forze esterne agenti sulle parti del sistema,
+\sphinxstyleemphasis{Defining the momentum of the system as the sum of the momenta of its parts}, and the resultant of the external forces as the sum of the external forces acting on the parts of the system,
 \begin{equation*}
-\begin{split}\mathbf{Q} := \sum_i \mathbf{Q}\end{split}
+\begin{split}\vec{Q} := \sum_i \vec{Q}_i\end{split}
 \end{equation*}\begin{equation*}
-\begin{split}\mathbf{R}^e := \sum_i \mathbf{F}_i^{ext}\end{split}
+\begin{split}\vec{R}^e := \sum_i \vec{F}_i^{ext}\end{split}
 \end{equation*}
 \sphinxAtStartPar
-si ritrova la forma generale del bilancio della quantità di moto,
+we recover the general form of the momentum balance equation,
 \begin{equation*}
-\begin{split}\dot{\mathbf{Q}} = \mathbf{R}^e \ .\end{split}
+\begin{split}\dot{\vec{Q}} = \vec{R}^e \ .\end{split}
 \end{equation*}
 \sphinxAtStartPar
-\sphinxstylestrong{Bilancio del momento della quantità di moto.}
-E’ possibile scrivere il bilancio del momento della quantità di moto per ogni punto \(i\) del sistema, scrivendo la risultante dei momenti esterni agente sul punto come la somma dei momenti esterni all’intero sistema agenti sul punto e i momenti interni scambiati con gli altri punti del sistema,
+\sphinxstylestrong{Angular Momentum Balance.}
+The angular momentum balance for each point \(i\) in the system can be written by expressing the resultant of the external moments acting on the point as the sum of the external moments acting on the entire system and the internal moments exchanged with the other points of the system,
 \begin{equation*}
-\begin{split}\mathbf{M}_{H,i}^{ext,i} = \mathbf{M}_{H,i}^{ext} + \sum_{j \ne i} \mathbf{M}_{H,ij} \ .\end{split}
+\begin{split}\vec{M}_{H,i}^{ext,i} = \vec{M}_{H,i}^{ext} + \sum_{j \ne i} \vec{M}_{H,ij} \ .\end{split}
 \end{equation*}
 \sphinxAtStartPar
-Nel caso le parti del sistema interagiscano tramite forze, il momento rispetto al polo \(H\) generato dalla massa \(j\) sulla massa \(i\) vale
+In the case where parts of the system interact via forces, the moment with respect to a point \(H\) generated by mass \(j\) on mass \(i\) is given by
 \begin{equation*}
-\begin{split}\mathbf{M}_{H,ij} = (\mathbf{r}_i - \mathbf{r}_H) \times \mathbf{F}_{ij} \ .\end{split}
+\begin{split}\vec{M}_{H,ij} = (\vec{r}_i - \vec{r}_H) \times \vec{F}_{ij} \ .\end{split}
 \end{equation*}
 \sphinxAtStartPar
-L’equazione di bilancio per la \(i\)\sphinxhyphen{}esima massa diventa quindi
+The angular momentum balance equation for the \(i\)\sphinxhyphen{}th mass thus becomes
 \begin{equation*}
-\begin{split}\dot{\mathbf{L}}_{H,i} + \dot{\mathbf{r}}_H \times \mathbf{Q}_i = \mathbf{M}_{H,i}^{ext,i} = \mathbf{M}_{H,i}^{ext} + \sum_{j \ne i} \mathbf{M}_{H,ij} \ .\end{split}
+\begin{split}\dot{\vec{L}}_{H,i} + \dot{\vec{r}}_H \times \vec{Q}_i = \vec{M}_{H,i}^{ext,i} = \vec{M}_{H,i}^{ext} + \sum_{j \ne i} \vec{M}_{H,ij} \ .\end{split}
 \end{equation*}
 \sphinxAtStartPar
-Sommando le equazioni di bilancio di tutte le masse, si ottiene
+By summing the angular momentum balance equations for all masses, we obtain
 \begin{equation*}
 \begin{split}\begin{aligned}
-\sum_{i} \left( \dot{\mathbf{L}}_i + \dot{\mathbf{r}}_H \times \mathbf{Q}_i \right) & = \sum_i \mathbf{M}_{H,i}^{ext} + \sum_i \sum_{j \ne i} \mathbf{M}_{H,ij} = \\
-                            & = \sum_i \mathbf{M}_{H,i}^{ext} + \sum_{\{i,j\}} \underbrace{\left( \mathbf{M}_{H,ij} + \mathbf{M}_{H,ji} \right)}_{=\mathbf{0}} 
+\sum_{i} \left( \dot{\vec{L}}_i + \dot{\vec{r}}_H \times \vec{Q}_i \right) & = \sum_i \vec{M}_{H,i}^{ext} + \sum_i \sum_{j \ne i} \vec{M}_{H,ij} = \\
+                            & = \sum_i \vec{M}_{H,i}^{ext} + \sum_{\{i,j\}} \underbrace{\left( \vec{M}_{H,ij} + \vec{M}_{H,ji} \right)}_{=\vec{0}} 
 \end{aligned}\end{split}
 \end{equation*}
 \sphinxAtStartPar
-e riconoscendo la quantità di moto del sistema e definendo il momento della quantità di moto di un sistema come la somma del momento della quantità di moto delle sue parti e la risultante dei momenti esterni come somma dei momenti esterni agenti sulle parti del sistema,
+Recognizing the total momentum of the system, and \sphinxstyleemphasis{defining the angular momentum of the system as the sum of the angular momentum of its parts}, and the resultant of the external moments as the sum of the external moments acting on the parts of the system,
 \begin{equation*}
-\begin{split}\mathbf{L}_H := \sum_i \mathbf{L}_{H,i}\end{split}
+\begin{split}\vec{L}_H := \sum_i \vec{L}_{H,i}\end{split}
 \end{equation*}\begin{equation*}
-\begin{split}\mathbf{M}_H^e := \sum_i \mathbf{M}_{H,i}^{ext}\end{split}
+\begin{split}\vec{M}_H^e := \sum_i \vec{M}_{H,i}^{ext}\end{split}
 \end{equation*}
 \sphinxAtStartPar
-si ritrova la forma generale del bilancio del momento della quantità di moto,
+we recover the general form of the angular momentum balance equation,
 \begin{equation*}
-\begin{split}\dot{\mathbf{L}}_{H} + \dot{\mathbf{r}}_H \times \mathbf{Q} = \mathbf{M}_H^e \ .\end{split}
+\begin{split}\dot{\vec{L}}_{H} + \dot{\vec{r}}_H \times \vec{Q} = \vec{M}_H^e \ .\end{split}
 \end{equation*}
 \sphinxAtStartPar
-\sphinxstylestrong{Bilancio dell’energia cinetica.}
-E’ possibile ricavare il bilancio dell’energia cinetica del sistema, moltiplicando scalarmente il bilancio della quantità di moto di ogni punto,
+\sphinxstylestrong{Kinetic Energy Balance.}
+The kinetic energy balance of the system can be derived by taking the scalar product of the momentum balance equation for each point,
 \begin{equation*}
-\begin{split}\mathbf{v}_i \cdot m_i \dot{\mathbf{v}}_i = \mathbf{v}_i \cdot \left( \mathbf{F}_i^{e} + \sum_{j \ne i} \mathbf{F}_{ij} \right) \ ,\end{split}
+\begin{split}\vec{v}_i \cdot m_i \dot{\vec{v}}_i = \vec{v}_i \cdot \left( \vec{F}_i^{e} + \sum_{j \ne i} \vec{F}_{ij} \right) \ ,\end{split}
 \end{equation*}
 \sphinxAtStartPar
-riconoscendo nel primo termine la derivata nel tempo dell’energia cinetica dell’\(i\)\sphinxhyphen{}esimo punto,
+recognizing in the first term the time derivative of the kinetic energy of the \(i\)\sphinxhyphen{}th point,
 \begin{equation*}
-\begin{split}\dot{K}_i = \dfrac{d}{dt} \left( \frac{1}{2} m_i \mathbf{v}_i \cdot \mathbf{v}_i \right) = m_i \mathbf{v}_i \cdot \dot{\mathbf{v}}_i \ ,\end{split}
+\begin{split}\dot{K}_i = \dfrac{d}{dt} \left( \frac{1}{2} m_i \vec{v}_i \cdot \vec{v}_i \right) = m_i \vec{v}_i \cdot \dot{\vec{v}}_i \ ,\end{split}
 \end{equation*}
 \sphinxAtStartPar
-e sommando queste equazioni di bilancio per ottenere
+and summing these equations to obtain
 \begin{equation*}
 \begin{split}\begin{aligned}
-  \sum_i \dot{K}_i = \sum_i \mathbf{v}_i \cdot  \mathbf{F}_i^{e} + \sum_i \mathbf{v}_i \cdot \sum_{j \ne i} \mathbf{F}_{ij} \ . 
+  \sum_i \dot{K}_i = \sum_i \vec{v}_i \cdot  \vec{F}_i^{e} + \sum_i \vec{v}_i \cdot \sum_{j \ne i} \vec{F}_{ij} \ . 
 \end{aligned}\end{split}
 \end{equation*}
 \sphinxAtStartPar
-Definendo l’energia cinetica di un sistema come la somma dell’energia cinetica delle sue parti, e definendo la potenza delle forze esterne/interne agenti sul sistema come la somma della potenza di tutte le forze esterne/interni al sistema,
+\sphinxstyleemphasis{Defining the kinetic energy of the system as the sum of the kinetic energies of its parts}, and defining the power of the external/internal forces acting on the system as the sum of the power of all external/internal forces in the system,
 \begin{equation*}
 \begin{split}K :=  \sum_i K_i\end{split}
 \end{equation*}\begin{equation*}
-\begin{split}P^e := \sum_i P^{ext}_i = \sum_i \mathbf{v}_i \cdot  \mathbf{F}_i^{e} \end{split}
+\begin{split}P^e := \sum_i P^{ext}_i = \sum_i \vec{v}_i \cdot  \vec{F}_i^{e} \end{split}
 \end{equation*}\begin{equation*}
-\begin{split}P^i := \sum_i P^{int}_i = \sum_i \mathbf{v}_i \cdot \sum_{j \ne i} \mathbf{F}_{ij}\end{split}
+\begin{split}P^i := \sum_i P^{int}_i = \sum_i \vec{v}_i \cdot \sum_{j \ne i} \vec{F}_{ij}\end{split}
 \end{equation*}
 \sphinxAtStartPar
-si ritrova la forma generale del bilancio dell’energia cinetica,
+we recover the general form of the kinetic energy balance equation,
 \begin{equation*}
 \begin{split}\dot{K} = P^e + P^i = P^{tot} \ .\end{split}
 \end{equation*}
+\begin{sphinxadmonition}{note}{Note:}
+\sphinxAtStartPar
+While internal forces and moments have zero net resultant in momentum and angular momentum balance, this is not true for power of internal actions in kinetic energy equation.
+\end{sphinxadmonition}
+
+\sphinxstepscope
+
+
+
+
+\section{Equations of motion of a rigid body}
+\label{\detokenize{ch/dynamics-eom-rigid:equations-of-motion-of-a-rigid-body}}\label{\detokenize{ch/dynamics-eom-rigid:classical-mechanics-dynamics-eom-rigid}}\label{\detokenize{ch/dynamics-eom-rigid::doc}}
+\sphinxAtStartPar
+\sphinxstylestrong{Momentum balance equation.}
+
+\sphinxAtStartPar
+\sphinxstylestrong{Angular momentum balance equation.}
+
+\sphinxAtStartPar
+\sphinxstylestrong{Kineric energy balance equation.}
+\subsubsection*{Starting from differential equations}
+
 \sphinxstepscope
 
 \begin{sphinxuseclass}{sd-container-fluid}
@@ -1486,89 +1687,7 @@ Jan 21, 2025
 \end{sphinxuseclass}
 \end{sphinxuseclass}
 
-\subsection{Equazioni cardinali della dinamica: corpo rigido}
-\label{\detokenize{ch/dynamics-eom-rigid:equazioni-cardinali-della-dinamica-corpo-rigido}}\label{\detokenize{ch/dynamics-eom-rigid:classical-mechanics-dynamics-eom-rigid}}\label{\detokenize{ch/dynamics-eom-rigid::doc}}
-\sphinxstepscope
-
-\begin{sphinxuseclass}{sd-container-fluid}
-\begin{sphinxuseclass}{sd-sphinx-override}
-\begin{sphinxuseclass}{sd-p-0}
-\begin{sphinxuseclass}{sd-mt-2}
-\begin{sphinxuseclass}{sd-mb-4}
-\begin{sphinxuseclass}{sd-row}
-\begin{sphinxuseclass}{sd-row-cols-2}
-\begin{sphinxuseclass}{sd-gx-2}
-\begin{sphinxuseclass}{sd-gy-1}
-\begin{sphinxuseclass}{sd-col}
-\begin{sphinxuseclass}{sd-d-flex-row}
-\begin{sphinxuseclass}{sd-align-minor-center}
-\begin{sphinxuseclass}{sd-container-fluid}
-\begin{sphinxuseclass}{sd-sphinx-override}
-\begin{sphinxuseclass}{sd-row}
-\begin{sphinxuseclass}{sd-row-cols-2}
-\begin{sphinxuseclass}{sd-row-cols-xs-2}
-\begin{sphinxuseclass}{sd-row-cols-sm-3}
-\begin{sphinxuseclass}{sd-row-cols-md-3}
-\begin{sphinxuseclass}{sd-row-cols-lg-3}
-\begin{sphinxuseclass}{sd-gx-3}
-\begin{sphinxuseclass}{sd-gy-1}
-\begin{sphinxuseclass}{sd-col}
-\begin{sphinxuseclass}{sd-col-auto}
-\begin{sphinxuseclass}{sd-d-flex-row}
-\begin{sphinxuseclass}{sd-align-minor-center}
-\sphinxAtStartPar
-basics
-
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\begin{sphinxuseclass}{sd-col}
-\begin{sphinxuseclass}{sd-col-auto}
-\begin{sphinxuseclass}{sd-d-flex-row}
-\begin{sphinxuseclass}{sd-align-minor-center}
-\sphinxAtStartPar
-Jan 21, 2025
-
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\begin{sphinxuseclass}{sd-col}
-\begin{sphinxuseclass}{sd-col-auto}
-\begin{sphinxuseclass}{sd-d-flex-row}
-\begin{sphinxuseclass}{sd-align-minor-center}
-\sphinxAtStartPar
-0 min read
-
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-
-\subsection{Equazioni cardinali della dinamica: mezzi continui}
+\section{Equazioni cardinali della dinamica: mezzi continui}
 \label{\detokenize{ch/dynamics-eom-continuum:equazioni-cardinali-della-dinamica-mezzi-continui}}\label{\detokenize{ch/dynamics-eom-continuum:classical-mechanics-dynamics-eom-continuum}}\label{\detokenize{ch/dynamics-eom-continuum::doc}}
 \sphinxstepscope
 
@@ -2099,6 +2218,12 @@ Recasting Lagrange equations as
 
 
 
+\renewcommand{\indexname}{Proof Index}
+\begin{sphinxtheindex}
+\let\bigletter\sphinxstyleindexlettergroup
+\bigletter{example\sphinxhyphen{}0}
+\item\relax\sphinxstyleindexentry{example\sphinxhyphen{}0}\sphinxstyleindexextra{ch/actions\sphinxhyphen{}conservative}\sphinxstyleindexpageref{ch/actions-conservative:\detokenize{example-0}}
+\end{sphinxtheindex}
 
 \renewcommand{\indexname}{Index}
 \printindex

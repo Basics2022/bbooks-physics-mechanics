@@ -5,7 +5,7 @@
 \contentsline {section}{\numberline {1.2}Models}{5}{section.1.2}%
 \contentsline {section}{\numberline {1.3}Point}{5}{section.1.3}%
 \contentsline {section}{\numberline {1.4}Rigid Body}{5}{section.1.4}%
-\contentsline {subsection}{\numberline {1.4.1}Rigid motion}{5}{subsection.1.4.1}%
+\contentsline {subsection}{\numberline {1.4.1}Rigid motion}{6}{subsection.1.4.1}%
 \contentsline {subsection}{\numberline {1.4.2}Kinematics of rigid body}{6}{subsection.1.4.2}%
 \contentsline {section}{\numberline {1.5}Rotations}{6}{section.1.5}%
 \contentsline {subsection}{\numberline {1.5.1}Rotation tensor}{6}{subsection.1.5.1}%
@@ -29,41 +29,51 @@
 \contentsline {subsection}{\numberline {2.2.2}Work and Power of a System of Forces}{13}{subsection.2.2.2}%
 \contentsline {subsection}{\numberline {2.2.3}Work and Power of a Couple of Forces}{13}{subsection.2.2.3}%
 \contentsline {section}{\numberline {2.3}Conservative Actions}{14}{section.2.3}%
-\contentsline {section}{\numberline {2.4}Examples of Forces}{14}{section.2.4}%
-\contentsline {subsection}{\numberline {2.4.1}Gravitation}{14}{subsection.2.4.1}%
-\contentsline {subsubsection}{Universal Law of Gravitation}{14}{subsubsection*.5}%
+\contentsline {section}{\numberline {2.4}Examples of Forces}{15}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}Gravitation}{15}{subsection.2.4.1}%
+\contentsline {subsubsection}{Universal Law of Gravitation}{15}{subsubsection*.5}%
 \contentsline {subsubsection}{Gravitational Field}{15}{subsubsection*.6}%
 \contentsline {subsubsection}{Gravitational Field Near Earth’s Surface}{16}{subsubsection*.7}%
-\contentsline {subsection}{\numberline {2.4.2}Elastic Actions: Linear Springs}{16}{subsection.2.4.2}%
+\contentsline {subsection}{\numberline {2.4.2}Elastic Actions: Linear Springs}{17}{subsection.2.4.2}%
 \contentsline {section}{\numberline {2.5}Constraint Reactions}{17}{section.2.5}%
-\contentsline {subsection}{\numberline {2.5.1}Contact Actions}{17}{subsection.2.5.1}%
-\contentsline {subsubsection}{Constraint Reactions of Ideal Constraints}{17}{subsubsection*.8}%
-\contentsline {paragraph}{Fixed Joint}{17}{paragraph*.9}%
-\contentsline {paragraph}{Slider}{17}{paragraph*.10}%
+\contentsline {subsection}{\numberline {2.5.1}Contact Actions}{18}{subsection.2.5.1}%
+\contentsline {subsubsection}{Constraint Reactions of Ideal Constraints}{18}{subsubsection*.8}%
+\contentsline {paragraph}{Fixed Joint}{18}{paragraph*.9}%
+\contentsline {paragraph}{Slider}{18}{paragraph*.10}%
 \contentsline {paragraph}{Cylindrical Joint}{18}{paragraph*.11}%
 \contentsline {paragraph}{Spherical Joint}{18}{paragraph*.12}%
-\contentsline {paragraph}{Roller}{18}{paragraph*.13}%
-\contentsline {paragraph}{Support}{18}{paragraph*.14}%
-\contentsline {subsubsection}{Friction}{18}{subsubsection*.15}%
-\contentsline {paragraph}{Static Friction}{18}{paragraph*.16}%
+\contentsline {paragraph}{Roller}{19}{paragraph*.13}%
+\contentsline {paragraph}{Support}{19}{paragraph*.14}%
+\contentsline {subsubsection}{Friction}{19}{subsubsection*.15}%
+\contentsline {paragraph}{Static Friction}{19}{paragraph*.16}%
 \contentsline {paragraph}{Dynamic Friction}{19}{paragraph*.17}%
 \contentsline {paragraph}{Pure Rolling}{19}{paragraph*.18}%
 \contentsline {chapter}{\numberline {3}Inertia}{21}{chapter.3}%
-\contentsline {chapter}{\numberline {4}Dynamics}{23}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Principles of Newton mechanics}{23}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Equations of motion}{24}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Equazioni cardinali}{24}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Principi di conservazione}{24}{subsection.4.2.2}%
-\contentsline {subsection}{\numberline {4.2.3}Equazioni cardinali della dinamica: punto materiale}{25}{subsection.4.2.3}%
-\contentsline {subsection}{\numberline {4.2.4}Equazioni cardinali della dinamica: sistemi discreti di punti materiali}{26}{subsection.4.2.4}%
-\contentsline {subsection}{\numberline {4.2.5}Equazioni cardinali della dinamica: corpo rigido}{28}{subsection.4.2.5}%
-\contentsline {subsection}{\numberline {4.2.6}Equazioni cardinali della dinamica: mezzi continui}{28}{subsection.4.2.6}%
-\contentsline {section}{\numberline {4.3}Moti particolari}{28}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Equilibrium and Stability}{29}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}Gravitazione: problema dei due corpi}{29}{subsection.4.4.1}%
-\contentsline {part}{II\hspace {1em}Analytical Mechanics}{31}{part.2}%
-\contentsline {chapter}{\numberline {5}Lagrangian Mechanics}{33}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Point}{34}{section.5.1}%
-\contentsline {section}{\numberline {5.2}System of points}{35}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Rigid Body}{35}{section.5.3}%
-\contentsline {chapter}{\numberline {6}Hamiltonian Mechanics}{39}{chapter.6}%
+\contentsline {section}{\numberline {3.1}Point mass}{21}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Discrete masses}{21}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Continuous systems}{22}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Rigid systems}{22}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Discrete systems}{22}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}Continuous systems}{23}{subsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.4.3}Properties of inertia tensors of rigid bodies}{25}{subsection.3.4.3}%
+\contentsline {subsubsection}{Static inertia}{25}{subsubsection*.19}%
+\contentsline {subsubsection}{Tensor of inertia}{25}{subsubsection*.20}%
+\contentsline {chapter}{\numberline {4}Dynamics}{27}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Principles of Newtonian Mechanics}{27}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Equations of Motion}{28}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Cardinal Equations}{28}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Conservation Principles}{28}{subsection.4.2.2}%
+\contentsline {section}{\numberline {4.3}Equations of motion of a point mass}{29}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Cardinal Equations of Dynamics: Discrete Systems of Point Masses}{30}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Equations of motion of a rigid body}{32}{section.4.5}%
+\contentsline {section}{\numberline {4.6}Equazioni cardinali della dinamica: mezzi continui}{32}{section.4.6}%
+\contentsline {section}{\numberline {4.7}Moti particolari}{32}{section.4.7}%
+\contentsline {section}{\numberline {4.8}Equilibrium and Stability}{33}{section.4.8}%
+\contentsline {subsection}{\numberline {4.8.1}Gravitazione: problema dei due corpi}{33}{subsection.4.8.1}%
+\contentsline {part}{II\hspace {1em}Analytical Mechanics}{35}{part.2}%
+\contentsline {chapter}{\numberline {5}Lagrangian Mechanics}{37}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Point}{38}{section.5.1}%
+\contentsline {section}{\numberline {5.2}System of points}{39}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Rigid Body}{39}{section.5.3}%
+\contentsline {chapter}{\numberline {6}Hamiltonian Mechanics}{43}{chapter.6}%
+\contentsline {chapter}{Proof Index}{45}{section*.21}%

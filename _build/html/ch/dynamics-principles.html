@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>4.1. Principles of Newton mechanics &#8212; Classical Mechanics</title>
+    <title>4.1. Principles of Newtonian Mechanics &#8212; Classical Mechanics</title>
   
   
   
@@ -187,7 +187,7 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 <li class="toctree-l1"><a class="reference internal" href="inertia.html">3. Inertia</a></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="dynamics.html">4. Dynamics</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">4.1. Principles of Newton mechanics</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">4.1. Principles of Newtonian Mechanics</a></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="dynamics-eom.html">4.2. Equations of motion</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="dynamics-eom-point.html">4.2.3. Equazioni cardinali della dinamica: punto materiale</a></li>
 <li class="toctree-l3"><a class="reference internal" href="dynamics-eom-points.html">4.2.4. Equazioni cardinali della dinamica: sistemi discreti di punti materiali</a></li>
@@ -348,7 +348,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Principles of Newton mechanics</h1>
+    <h1>Principles of Newtonian Mechanics</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -362,27 +362,22 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <!--
-```{article-info}
-:author: basics
-:date: "{sub-ref}`today`"
-:read-time: "{sub-ref}`wordcount-minutes` min read"
-```
--->
-<div class="tex2jax_ignore mathjax_ignore section" id="principles-of-newton-mechanics">
-<span id="classical-mechanics-dynamics-principles"></span><h1><span class="section-number">4.1. </span>Principles of Newton mechanics<a class="headerlink" href="#principles-of-newton-mechanics" title="Permalink to this heading">#</a></h1>
-<p><strong>Primo principio della dinamica.</strong>
-Un corpo (o meglio, il baricentro di un corpo) sul quale agisce una forza netta nulla, persevera nel suo stato di quiete o di moto rettilineo uniforme rispetto a un sistema di riferimento inerziale.</p>
-<p><strong>Secondo principio della dinamica.</strong> Rispetto a un sistema di riferimento inerziale, la variazione della quantità di moto di un sistema è uguale all’impulso delle forze esterne agenti su di esso,</p>
+  <div class="tex2jax_ignore mathjax_ignore section" id="principles-of-newtonian-mechanics">
+<span id="classical-mechanics-dynamics-principles"></span><h1><span class="section-number">4.1. </span>Principles of Newtonian Mechanics<a class="headerlink" href="#principles-of-newtonian-mechanics" title="Permalink to this heading">#</a></h1>
+<p><strong>First Principle of Dynamics (Newton’s First Law): inertia and Galileian invariance.</strong><br />
+A body (more precisely, the center of mass of a body) on which no net force acts remains in its state of rest or uniform rectilinear motion relative to an inertial reference frame.</p>
+<p><strong>Second Principle of Dynamics (Newton’s Second Law): momentum balance.</strong><br />
+Relative to an inertial reference frame, the change in momentum of a system is equal to the impulse of the external forces acting on it,</p>
 <div class="math notranslate nohighlight">
-\[\Delta \mathbf{Q} = \mathbf{I}^e \ .\]</div>
-<p>Nel caso di moto regolare, in cui la quantità di moto può essere rappresentata da una funzione continua e differenziabile in funzione del tempo, si può scrivere il secondo principio della dinamica in forma differenziale,</p>
+\[\Delta \vec{Q} = \vec{I}^e \ .\]</div>
+<p>In the case of smooth motion, where the momentum can be represented as a continuous and differentiable function of time, the second principle of dynamics can be expressed in differential form,</p>
 <div class="math notranslate nohighlight">
-\[\dot{\mathbf{Q}} = \mathbf{R}^e \ ,\]</div>
-<p>essendo la risultante delle forze esterne, <span class="math notranslate nohighlight">\(\mathbf{R}^e = \frac{d \mathbf{I}^e}{dt}\)</span>, la derivata nel tempo dell’impulso.</p>
-<p><strong>Terzo principio della dinamica.</strong> Se un sistema <span class="math notranslate nohighlight">\(i\)</span> esercita su un sistema <span class="math notranslate nohighlight">\(j\)</span> una forza <span class="math notranslate nohighlight">\(\mathbf{F}_{ji}\)</span>, allora il sistema <span class="math notranslate nohighlight">\(j\)</span> esercita sul sistema <span class="math notranslate nohighlight">\(i\)</span> una forza <span class="math notranslate nohighlight">\(\mathbf{F}_{ij}\)</span> “uguale e contraria”, con modulo uguale e verso opposto,</p>
+\[\dot{\vec{Q}} = \vec{R}^e \ ,\]</div>
+<p>where the resultant of the external forces, <span class="math notranslate nohighlight">\(\vec{R}^e = \frac{d \vec{I}^e}{dt}\)</span>, is the time derivative of the impulse.</p>
+<p><strong>Third Principle of Dynamics (Newton’s Third Law): action-reaction.</strong><br />
+If a system <span class="math notranslate nohighlight">\(i\)</span> exerts a force <span class="math notranslate nohighlight">\(\vec{F}_{ji}\)</span> on a system <span class="math notranslate nohighlight">\(j\)</span>, then system <span class="math notranslate nohighlight">\(j\)</span> exerts an “equal and opposite” force <span class="math notranslate nohighlight">\(\vec{F}_{ij}\)</span> on system <span class="math notranslate nohighlight">\(i\)</span>, with equal magnitude and opposite direction,</p>
 <div class="math notranslate nohighlight">
-\[\mathbf{F}_{ij} = - \mathbf{F}_{ji} \ .\]</div>
+\[\vec{F}_{ij} = - \vec{F}_{ji} \ .\]</div>
 </div>
 
     <script type="text/x-thebe-config">
