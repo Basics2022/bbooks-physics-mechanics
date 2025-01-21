@@ -1,40 +1,35 @@
-```{article-info}
-:author: basics
-:date: "{sub-ref}`today`"
-:read-time: "{sub-ref}`wordcount-minutes` min read"
-```
-
 (classical-mechanics:dynamics:eom:point)=
-# Equazioni cardinali della dinamica: punto materiale
+# Equations of motion of a point mass
 
-**Quantità dinamiche.**
-
-$$\begin{aligned}
-  \mathbf{Q}_P & := m_P \mathbf{v}_P \\
-  \mathbf{L}_{P,H} & := (\mathbf{r}_P - \mathbf{r}_H) \times \mathbf{Q} = m_P (\mathbf{r}_P - \mathbf{r}_H) \times \mathbf{v}_P \\
-  K & := \frac{1}{2} m_P \mathbf{v}_P \cdot \mathbf{v}_P = \frac{1}{2} m_P |\mathbf{v}_P|^2
-\end{aligned}$$
-
-**Bilancio della quantità di moto.** Il bilancio della quantità di moto di un punto materiale $P$, $\mathbf{Q}_P = m \mathbf{v}_P$ segue direttamente dal secondo principio della dinamica di Newton,
-
-$$\dot{\mathbf{Q}}_P = \mathbf{R}^e_P$$
-
-**Bilancio del momento della quantità di moto.** La derivata nel tempo del momento della quantità di moto viene calcolata usando la regola del prodotto,
+**Dynamic quantities.**
 
 $$\begin{aligned}
-\dot{\mathbf{L}}_{P,H} & = \dfrac{d}{dt} \left[ m_P (\mathbf{r}_P - \mathbf{r}_H) \times \mathbf{v}_P \right] = \\
-& = m \left[ ( \dot{\mathbf{r}}_P - \dot{\mathbf{r}}_H ) \times \mathbf{v}_P + m_P (\mathbf{r}_P - \mathbf{r}_H) \times \dot{\mathbf{v}}_P \right] = \\
-& = - m_P \dot{\mathbf{r}}_H \times \mathbf{v}_P + m_P (\mathbf{r}_P - \mathbf{r}_H) \times \dot{\mathbf{v}}_P = \\
-& = - \dot{\mathbf{r}}_H \times \mathbf{Q} + \mathbf{M}_H^{ext} \ .
+  \vec{Q}_P & := m_P \vec{v}_P \\
+  \vec{L}_{P,H} & := (\vec{r}_P - \vec{r}_H) \times \vec{Q} = m_P (\vec{r}_P - \vec{r}_H) \times \vec{v}_P \\
+  K & := \frac{1}{2} m_P \vec{v}_P \cdot \vec{v}_P = \frac{1}{2} m_P |\vec{v}_P|^2
 \end{aligned}$$
 
-**Bilancio dell'energia cinetica.**
+**Momentum balance equation.** The balance equation of momentum of a point $P$ with mass $m$, $\vec{Q}_P = m \vec{v}_P$ readily follows the second principle of dynamics,
+
+$$\dot{\vec{Q}}_P = \vec{R}^e_P$$
+
+**Angular momentum balance equation.** Time derivative of the angular momentum is evaluated with the rule of derivative of product,
 
 $$\begin{aligned}
-\dot{K}_{P} & = \dfrac{d}{dt} \left( \frac{1}{2} m_P \mathbf{v}_P \cdot \mathbf{v}_P \right) = \\
-            & = m_P \dot{\mathbf{v}}_P \cdot \mathbf{v}_P = \\
-            & = \mathbf{R}^e \cdot \mathbf{v}_P = \\
-            & = \mathbf{R}^{tot} \cdot \mathbf{v}_P = P^{tot} \ .
+\dot{\vec{L}}_{P,H} & = \dfrac{d}{dt} \left[ m_P (\vec{r}_P - \vec{r}_H) \times \vec{v}_P \right] = \\
+& = m \left[ ( \dot{\vec{r}}_P - \dot{\vec{r}}_H ) \times \vec{v}_P + m_P (\vec{r}_P - \vec{r}_H) \times \dot{\vec{v}}_P \right] = \\
+& = - m_P \dot{\vec{r}}_H \times \vec{v}_P + m_P (\vec{r}_P - \vec{r}_H) \times \dot{\vec{v}}_P = \\
+& = - \dot{\vec{r}}_H \times \vec{Q} + \vec{M}_H^{ext} \ .
 \end{aligned}$$
+
+**Kinetic energy blanace equation.**
+
+$$\begin{aligned}
+\dot{K}_{P} & = \dfrac{d}{dt} \left( \frac{1}{2} m_P \vec{v}_P \cdot \vec{v}_P \right) = \\
+            & = m_P \dot{\vec{v}}_P \cdot \vec{v}_P = \\
+            & = \vec{R}^e \cdot \vec{v}_P = P^e = P^{tot} \\
+\end{aligned}$$
+
+being the power of external actions $P^e$ equal to the total power acting on the system, assuming there is no internal action in the point system, or at least they have zero net power.
 
 

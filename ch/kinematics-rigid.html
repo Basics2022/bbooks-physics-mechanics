@@ -187,17 +187,15 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 <li class="toctree-l1"><a class="reference internal" href="inertia.html">3. Inertia</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="dynamics.html">4. Dynamics</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="dynamics-principles.html">4.1. Principles of Newton mechanics</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="dynamics-eom.html">4.2. Equations of motion</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="dynamics-eom-point.html">4.2.3. Equazioni cardinali della dinamica: punto materiale</a></li>
-<li class="toctree-l3"><a class="reference internal" href="dynamics-eom-points.html">4.2.4. Equazioni cardinali della dinamica: sistemi discreti di punti materiali</a></li>
-<li class="toctree-l3"><a class="reference internal" href="dynamics-eom-rigid.html">4.2.5. Equazioni cardinali della dinamica: corpo rigido</a></li>
-<li class="toctree-l3"><a class="reference internal" href="dynamics-eom-continuum.html">4.2.6. Equazioni cardinali della dinamica: mezzi continui</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="dynamics-motions.html">4.3. Moti particolari</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="dynamics-equilibrium-stability.html">4.4. Equilibrium and Stability</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="dynamics-motions-gravitation-2bodies.html">4.4.1. Gravitazione: problema dei due corpi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dynamics-principles.html">4.1. Principles of Newtonian Mechanics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dynamics-eom.html">4.2. Equations of Motion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dynamics-eom-point.html">4.3. Equations of motion of a point mass</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dynamics-eom-points.html">4.4. Cardinal Equations of Dynamics: Discrete Systems of Point Masses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dynamics-eom-rigid.html">4.5. Equations of motion of a rigid body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dynamics-eom-continuum.html">4.6. Equazioni cardinali della dinamica: mezzi continui</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dynamics-motions.html">4.7. Moti particolari</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="dynamics-equilibrium-stability.html">4.8. Equilibrium and Stability</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="dynamics-motions-gravitation-2bodies.html">4.8.1. Gravitazione: problema dei due corpi</a></li>
 </ul>
 </li>
 </ul>
@@ -205,7 +203,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Analytical Mechanics</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="lagrange.html">5. Lagrangian Mechanics</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="lagrange.html">5. Lagrangian Mechanics</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="lagrange-point.html">5.1. Point</a></li>
 <li class="toctree-l2"><a class="reference internal" href="lagrange-points.html">5.2. System of points</a></li>
 <li class="toctree-l2"><a class="reference internal" href="lagrange-rigid-body.html">5.3. Rigid Body</a></li>
@@ -375,6 +373,8 @@ document.write(`
                   
   <div class="tex2jax_ignore mathjax_ignore section" id="rigid-body">
 <span id="classical-mechanics-kinematics-rigid-body"></span><h1><span class="section-number">1.4. </span>Rigid Body<a class="headerlink" href="#rigid-body" title="Permalink to this heading">#</a></h1>
+<div class="math notranslate nohighlight" id="equation-eq-kin-rigid-vel">
+<span class="eqno">(1.1)<a class="headerlink" href="#equation-eq-kin-rigid-vel" title="Permalink to this equation">#</a></span>\[\vec{v}_Q - \vec{v}_P = \vec{\omega} \times (Q-P)\]</div>
 <div class="section" id="rigid-motion">
 <h2><span class="section-number">1.4.1. </span>Rigid motion<a class="headerlink" href="#rigid-motion" title="Permalink to this heading">#</a></h2>
 <p>Rigid motion preserves distance between any pair of points, and thus angles. Rotations are described by rotation matrices.</p>
@@ -383,14 +383,14 @@ document.write(`
 \[\vec{a} = \mathbb{R} \cdot \vec{a}^0 \ .\]</div>
 <p>A rotation tensor is unitary to preserve distance,</p>
 <div class="math notranslate nohighlight" id="equation-eq-rot-unitary">
-<span class="eqno">(1.1)<a class="headerlink" href="#equation-eq-rot-unitary" title="Permalink to this equation">#</a></span>\[\mathbb{I} = \mathbb{R} \cdot \mathbb{R}^T = \mathbb{R}^T \cdot \mathbb{R}\]</div>
+<span class="eqno">(1.2)<a class="headerlink" href="#equation-eq-rot-unitary" title="Permalink to this equation">#</a></span>\[\mathbb{I} = \mathbb{R} \cdot \mathbb{R}^T = \mathbb{R}^T \cdot \mathbb{R}\]</div>
 <p>so that its time derivative reads,</p>
 <div class="math notranslate nohighlight">
 \[\mathbb{0} = \dfrac{d}{dt} \left( \mathbb{R} \cdot \mathbb{R}^T \right) = \dot{\mathbb{R}} \cdot \mathbb{R}^T + \mathbb{R} \cdot \dot{\mathbb{R}}^T\]</div>
 <p>It follows that the 2-nd order tensor <span class="math notranslate nohighlight">\(\dot{\mathbb{R}} \cdot \mathbb{R}^T = - \mathbb{R} \cdot \dot{\mathbb{R}}^T\)</span> is anti-symmetric, and thus it can be written as</p>
 <div class="math notranslate nohighlight" id="equation-eq-omegax-def">
-<span class="eqno">(1.2)<a class="headerlink" href="#equation-eq-omegax-def" title="Permalink to this equation">#</a></span>\[\dot{\mathbb{R}} \cdot \mathbb{R}^T =: \vec{\omega}_{\times} \ ,\]</div>
-<p>being the vector <span class="math notranslate nohighlight">\(\vec{\omega}\)</span> the angular velocity. Since <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> is unitary by <a class="reference internal" href="#equation-eq-rot-unitary">(1.1)</a>, multiplying <a class="reference internal" href="#equation-eq-omegax-def">(1.2)</a> with the dot-product on the right by <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>, it follows</p>
+<span class="eqno">(1.3)<a class="headerlink" href="#equation-eq-omegax-def" title="Permalink to this equation">#</a></span>\[\dot{\mathbb{R}} \cdot \mathbb{R}^T =: \vec{\omega}_{\times} \ ,\]</div>
+<p>being the vector <span class="math notranslate nohighlight">\(\vec{\omega}\)</span> the angular velocity. Since <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> is unitary by <a class="reference internal" href="#equation-eq-rot-unitary">(1.2)</a>, multiplying <a class="reference internal" href="#equation-eq-omegax-def">(1.3)</a> with the dot-product on the right by <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>, it follows</p>
 <div class="math notranslate nohighlight">
 \[\dot{\mathbb{R}} = \vec{\omega}_{\times} \cdot \mathbb{R} \ ,\]</div>
 <p>and the expression of the time derivative of a material vector <span class="math notranslate nohighlight">\(\vec{a}\)</span>,</p>

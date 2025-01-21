@@ -1,89 +1,89 @@
-```{article-info}
-:author: basics
-:date: "{sub-ref}`today`"
-:read-time: "{sub-ref}`wordcount-minutes` min read"
-```
-
 (classical-mechanics:dynamics:eom:points)=
-# Equazioni cardinali della dinamica: sistemi discreti di punti materiali
+# Cardinal Equations of Dynamics: Discrete Systems of Point Masses
 
-Partendo dalle equazioni dinamiche per un punto, si calcolano le equazioni dinamiche per un sistema di punti, sfruttando il terzo principio della dinamica di azione/reazione. Lo sviluppo delle equazioni permette di comprendere che la natura additiva delle grandezze dinamiche (quantità di moto, momento della quantità di moto, energia cinetica) segue direttamente dalla loro definizione.
+Starting from the dynamic equations for a single point, the dynamic equations for a system of particles can be derived using the third principle of dynamics, action/reaction. The development of these equations helps us understand that the additive nature of dynamical quantities (momentum, angular momentum, kinetic energy) directly follows from their definition.
 
-**Bilancio della quantità di moto.**
-E' possibile scrivere il bilancio della quantità di moto per ogni punto $i$ del sistema, scrivendo la risultante delle forze esterne agente sul punto come la somma delle forze esterne all'intero sistema agenti sul punto e le forze interne scambiate con gli altri punti del sistema,
+**Momentum Balance.**
+The momentum balance for each point $i$ in the system can be written by expressing the resultant of the external forces acting on the point as the sum of the external forces acting on the entire system and the internal forces exchanged with the other points of the system,
 
-$$\mathbf{R}_i^{ext,i} = \mathbf{F}_i^{ext} + \sum_{j \ne i} \mathbf{F}_{ij} \ .$$
+$$\vec{R}_i^{ext,i} = \vec{F}_i^{ext} + \sum_{j \ne i} \vec{F}_{ij} \ .$$
 
-L'equazione di bilancio per la $i$-esima massa diventa quindi
+The momentum balance equation for the $i$-th mass thus becomes
 
-$$\dot{\mathbf{Q}}_i = \mathbf{R}_i^{ext,i} = \mathbf{F}_i^{ext} + \sum_{j \ne i} \mathbf{F}_{ij} \ .$$
+$$\dot{\vec{Q}}_i = \vec{R}_i^{ext,i} = \vec{F}_i^{ext} + \sum_{j \ne i} \vec{F}_{ij} \ .$$
 
-Sommando le equazioni di bilancio di tutte le masse, si ottiene
-
-$$\begin{aligned}
-\sum_{i} \dot{\mathbf{Q}}_i & = \sum_i \mathbf{F}_{i}^{ext} + \sum_i \sum_{j \ne i} \mathbf{F}_{ij} = \\
-                            & = \sum_i \mathbf{F}_{i}^{ext} + \sum_{\{i,j\}} \underbrace{\left( \mathbf{F}_{ij} + \mathbf{F}_{ji} \right)}_{=\mathbf{0}} 
-\end{aligned}$$
-
-e definendo la quantità di moto di un sistema come la somma delle quantità di moto delle sue parti e la risultante delle forze esterne come somma delle forze esterne agenti sulle parti del sistema, 
-
-  $$\mathbf{Q} := \sum_i \mathbf{Q}$$
-  $$\mathbf{R}^e := \sum_i \mathbf{F}_i^{ext}$$
-
-si ritrova la forma generale del bilancio della quantità di moto,
-
-$$\dot{\mathbf{Q}} = \mathbf{R}^e \ .$$
-
-**Bilancio del momento della quantità di moto.**
-E' possibile scrivere il bilancio del momento della quantità di moto per ogni punto $i$ del sistema, scrivendo la risultante dei momenti esterni agente sul punto come la somma dei momenti esterni all'intero sistema agenti sul punto e i momenti interni scambiati con gli altri punti del sistema,
-
-$$\mathbf{M}_{H,i}^{ext,i} = \mathbf{M}_{H,i}^{ext} + \sum_{j \ne i} \mathbf{M}_{H,ij} \ .$$
-
-Nel caso le parti del sistema interagiscano tramite forze, il momento rispetto al polo $H$ generato dalla massa $j$ sulla massa $i$ vale
-
-$$\mathbf{M}_{H,ij} = (\mathbf{r}_i - \mathbf{r}_H) \times \mathbf{F}_{ij} \ .$$
-
-L'equazione di bilancio per la $i$-esima massa diventa quindi
-
-$$\dot{\mathbf{L}}_{H,i} + \dot{\mathbf{r}}_H \times \mathbf{Q}_i = \mathbf{M}_{H,i}^{ext,i} = \mathbf{M}_{H,i}^{ext} + \sum_{j \ne i} \mathbf{M}_{H,ij} \ .$$
-
-Sommando le equazioni di bilancio di tutte le masse, si ottiene
+By summing the momentum balance equations for all masses, we obtain
 
 $$\begin{aligned}
-\sum_{i} \left( \dot{\mathbf{L}}_i + \dot{\mathbf{r}}_H \times \mathbf{Q}_i \right) & = \sum_i \mathbf{M}_{H,i}^{ext} + \sum_i \sum_{j \ne i} \mathbf{M}_{H,ij} = \\
-                            & = \sum_i \mathbf{M}_{H,i}^{ext} + \sum_{\{i,j\}} \underbrace{\left( \mathbf{M}_{H,ij} + \mathbf{M}_{H,ji} \right)}_{=\mathbf{0}} 
+\sum_{i} \dot{\vec{Q}}_i & = \sum_i \vec{F}_{i}^{ext} + \sum_i \sum_{j \ne i} \vec{F}_{ij} = \\
+                            & = \sum_i \vec{F}_{i}^{ext} + \sum_{\{i,j\}} \underbrace{\left( \vec{F}_{ij} + \vec{F}_{ji} \right)}_{=\vec{0}} 
 \end{aligned}$$
 
-e riconoscendo la quantità di moto del sistema e definendo il momento della quantità di moto di un sistema come la somma del momento della quantità di moto delle sue parti e la risultante dei momenti esterni come somma dei momenti esterni agenti sulle parti del sistema, 
+*Defining the momentum of the system as the sum of the momenta of its parts*, and the resultant of the external forces as the sum of the external forces acting on the parts of the system,
 
-  $$\mathbf{L}_H := \sum_i \mathbf{L}_{H,i}$$
-  $$\mathbf{M}_H^e := \sum_i \mathbf{M}_{H,i}^{ext}$$
+  $$\vec{Q} := \sum_i \vec{Q}_i$$
+  $$\vec{R}^e := \sum_i \vec{F}_i^{ext}$$
 
-si ritrova la forma generale del bilancio del momento della quantità di moto,
+we recover the general form of the momentum balance equation,
 
-$$\dot{\mathbf{L}}_{H} + \dot{\mathbf{r}}_H \times \mathbf{Q} = \mathbf{M}_H^e \ .$$
+$$\dot{\vec{Q}} = \vec{R}^e \ .$$
 
-**Bilancio dell'energia cinetica.**
-E' possibile ricavare il bilancio dell'energia cinetica del sistema, moltiplicando scalarmente il bilancio della quantità di moto di ogni punto,
+**Angular Momentum Balance.**
+The angular momentum balance for each point $i$ in the system can be written by expressing the resultant of the external moments acting on the point as the sum of the external moments acting on the entire system and the internal moments exchanged with the other points of the system,
 
-$$\mathbf{v}_i \cdot m_i \dot{\mathbf{v}}_i = \mathbf{v}_i \cdot \left( \mathbf{F}_i^{e} + \sum_{j \ne i} \mathbf{F}_{ij} \right) \ ,$$
+$$\vec{M}_{H,i}^{ext,i} = \vec{M}_{H,i}^{ext} + \sum_{j \ne i} \vec{M}_{H,ij} \ .$$
 
-riconoscendo nel primo termine la derivata nel tempo dell'energia cinetica dell'$i$-esimo punto,
+In the case where parts of the system interact via forces, the moment with respect to a point $H$ generated by mass $j$ on mass $i$ is given by
 
-$$\dot{K}_i = \dfrac{d}{dt} \left( \frac{1}{2} m_i \mathbf{v}_i \cdot \mathbf{v}_i \right) = m_i \mathbf{v}_i \cdot \dot{\mathbf{v}}_i \ ,$$
+$$\vec{M}_{H,ij} = (\vec{r}_i - \vec{r}_H) \times \vec{F}_{ij} \ .$$
 
-e sommando queste equazioni di bilancio per ottenere
+The angular momentum balance equation for the $i$-th mass thus becomes
+
+$$\dot{\vec{L}}_{H,i} + \dot{\vec{r}}_H \times \vec{Q}_i = \vec{M}_{H,i}^{ext,i} = \vec{M}_{H,i}^{ext} + \sum_{j \ne i} \vec{M}_{H,ij} \ .$$
+
+By summing the angular momentum balance equations for all masses, we obtain
 
 $$\begin{aligned}
-  \sum_i \dot{K}_i = \sum_i \mathbf{v}_i \cdot  \mathbf{F}_i^{e} + \sum_i \mathbf{v}_i \cdot \sum_{j \ne i} \mathbf{F}_{ij} \ . 
+\sum_{i} \left( \dot{\vec{L}}_i + \dot{\vec{r}}_H \times \vec{Q}_i \right) & = \sum_i \vec{M}_{H,i}^{ext} + \sum_i \sum_{j \ne i} \vec{M}_{H,ij} = \\
+                            & = \sum_i \vec{M}_{H,i}^{ext} + \sum_{\{i,j\}} \underbrace{\left( \vec{M}_{H,ij} + \vec{M}_{H,ji} \right)}_{=\vec{0}} 
 \end{aligned}$$
 
-Definendo l'energia cinetica di un sistema come la somma dell'energia cinetica delle sue parti, e definendo la potenza delle forze esterne/interne agenti sul sistema come la somma della potenza di tutte le forze esterne/interni al sistema,
+Recognizing the total momentum of the system, and *defining the angular momentum of the system as the sum of the angular momentum of its parts*, and the resultant of the external moments as the sum of the external moments acting on the parts of the system,
+
+  $$\vec{L}_H := \sum_i \vec{L}_{H,i}$$
+  $$\vec{M}_H^e := \sum_i \vec{M}_{H,i}^{ext}$$
+
+we recover the general form of the angular momentum balance equation,
+
+$$\dot{\vec{L}}_{H} + \dot{\vec{r}}_H \times \vec{Q} = \vec{M}_H^e \ .$$
+
+**Kinetic Energy Balance.**
+The kinetic energy balance of the system can be derived by taking the scalar product of the momentum balance equation for each point,
+
+$$\vec{v}_i \cdot m_i \dot{\vec{v}}_i = \vec{v}_i \cdot \left( \vec{F}_i^{e} + \sum_{j \ne i} \vec{F}_{ij} \right) \ ,$$
+
+recognizing in the first term the time derivative of the kinetic energy of the $i$-th point,
+
+$$\dot{K}_i = \dfrac{d}{dt} \left( \frac{1}{2} m_i \vec{v}_i \cdot \vec{v}_i \right) = m_i \vec{v}_i \cdot \dot{\vec{v}}_i \ ,$$
+
+and summing these equations to obtain
+
+$$\begin{aligned}
+  \sum_i \dot{K}_i = \sum_i \vec{v}_i \cdot  \vec{F}_i^{e} + \sum_i \vec{v}_i \cdot \sum_{j \ne i} \vec{F}_{ij} \ . 
+\end{aligned}$$
+
+*Defining the kinetic energy of the system as the sum of the kinetic energies of its parts*, and defining the power of the external/internal forces acting on the system as the sum of the power of all external/internal forces in the system,
 
 $$K :=  \sum_i K_i$$
-$$P^e := \sum_i P^{ext}_i = \sum_i \mathbf{v}_i \cdot  \mathbf{F}_i^{e} $$
-$$P^i := \sum_i P^{int}_i = \sum_i \mathbf{v}_i \cdot \sum_{j \ne i} \mathbf{F}_{ij}$$
+$$P^e := \sum_i P^{ext}_i = \sum_i \vec{v}_i \cdot  \vec{F}_i^{e} $$
+$$P^i := \sum_i P^{int}_i = \sum_i \vec{v}_i \cdot \sum_{j \ne i} \vec{F}_{ij}$$
 
-si ritrova la forma generale del bilancio dell'energia cinetica,
+we recover the general form of the kinetic energy balance equation,
 
 $$\dot{K} = P^e + P^i = P^{tot} \ .$$
+
+```{note}
+While internal forces and moments have zero net resultant in momentum and angular momentum balance, this is not true for power of internal actions in kinetic energy equation.
+```
+
+

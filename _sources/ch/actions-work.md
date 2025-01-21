@@ -7,11 +7,11 @@ In mechanics, as will become clearer later (**todo** add reference), the concept
 
 **Work.** The elementary work of a force $\vec{F}$ applied at point $P$ that undergoes an elementary displacement $d \vec{r}_P$ is defined as the dot product between the force and the displacement,
 
-$$\delta W := \vec{F} \cdot d \vec{r}_P \ .$$
+$$\delta W := \vec{F} \cdot d \vec{r}_P \ .$$ (eq:work:diff)
 
 The work done by the force $\vec{F}$ applied at point $P$ moving from point $A$ to point $B$ along the path $\ell_{AB}$ is the sum of all elementary contributions - and hence, in the limit for elementary displacements $\rightarrow 0$ for continuous variations, the line integral,
 
-$$W_{\ell_{AB}} = \int_{\ell_{AB}} \delta W = \int_{\ell_{AB}} \vec{F} \cdot d \vec{r}_{P} \ .$$
+$$W_{\ell_{AB}} = \int_{\ell_{AB}} \delta W = \int_{\ell_{AB}} \vec{F} \cdot d \vec{r}_{P} \ .$$ (eq:work:int)
 
 In general, the work of a force or a field of forces depends on the path ${\ell}_{AB}$. In cases where the work is independent of the path but depends only on the endpoints, we talk about [conservative actions](classical-mechanics:actions:conservative).
 

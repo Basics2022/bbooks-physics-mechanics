@@ -70,7 +70,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../_static/favicon.svg"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="4.2. Equations of motion" href="dynamics-eom.html" />
+    <link rel="next" title="4.2. Equations of Motion" href="dynamics-eom.html" />
     <link rel="prev" title="4. Dynamics" href="dynamics.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -188,16 +188,14 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="inertia.html">3. Inertia</a></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="dynamics.html">4. Dynamics</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">4.1. Principles of Newtonian Mechanics</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="dynamics-eom.html">4.2. Equations of motion</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="dynamics-eom-point.html">4.2.3. Equazioni cardinali della dinamica: punto materiale</a></li>
-<li class="toctree-l3"><a class="reference internal" href="dynamics-eom-points.html">4.2.4. Equazioni cardinali della dinamica: sistemi discreti di punti materiali</a></li>
-<li class="toctree-l3"><a class="reference internal" href="dynamics-eom-rigid.html">4.2.5. Equazioni cardinali della dinamica: corpo rigido</a></li>
-<li class="toctree-l3"><a class="reference internal" href="dynamics-eom-continuum.html">4.2.6. Equazioni cardinali della dinamica: mezzi continui</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="dynamics-motions.html">4.3. Moti particolari</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="dynamics-equilibrium-stability.html">4.4. Equilibrium and Stability</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="dynamics-motions-gravitation-2bodies.html">4.4.1. Gravitazione: problema dei due corpi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dynamics-eom.html">4.2. Equations of Motion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dynamics-eom-point.html">4.3. Equations of motion of a point mass</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dynamics-eom-points.html">4.4. Cardinal Equations of Dynamics: Discrete Systems of Point Masses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dynamics-eom-rigid.html">4.5. Equations of motion of a rigid body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dynamics-eom-continuum.html">4.6. Equazioni cardinali della dinamica: mezzi continui</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dynamics-motions.html">4.7. Moti particolari</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="dynamics-equilibrium-stability.html">4.8. Equilibrium and Stability</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="dynamics-motions-gravitation-2bodies.html">4.8.1. Gravitazione: problema dei due corpi</a></li>
 </ul>
 </li>
 </ul>
@@ -205,7 +203,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Analytical Mechanics</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="lagrange.html">5. Lagrangian Mechanics</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="lagrange.html">5. Lagrangian Mechanics</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="lagrange-point.html">5.1. Point</a></li>
 <li class="toctree-l2"><a class="reference internal" href="lagrange-points.html">5.2. System of points</a></li>
 <li class="toctree-l2"><a class="reference internal" href="lagrange-rigid-body.html">5.3. Rigid Body</a></li>
@@ -364,18 +362,16 @@ document.write(`
                   
   <div class="tex2jax_ignore mathjax_ignore section" id="principles-of-newtonian-mechanics">
 <span id="classical-mechanics-dynamics-principles"></span><h1><span class="section-number">4.1. </span>Principles of Newtonian Mechanics<a class="headerlink" href="#principles-of-newtonian-mechanics" title="Permalink to this heading">#</a></h1>
-<p><strong>First Principle of Dynamics (Newton’s First Law): inertia and Galileian invariance.</strong><br />
-A body (more precisely, the center of mass of a body) on which no net force acts remains in its state of rest or uniform rectilinear motion relative to an inertial reference frame.</p>
-<p><strong>Second Principle of Dynamics (Newton’s Second Law): momentum balance.</strong><br />
-Relative to an inertial reference frame, the change in momentum of a system is equal to the impulse of the external forces acting on it,</p>
+<p><strong>First Principle of Dynamics (Newton’s First Law): inertia and Galileian invariance.</strong> A body (more precisely, the center of mass of a body) on which no net force acts remains in its state of rest or uniform rectilinear motion relative to an inertial reference frame.</p>
+<p><strong>todo</strong> discuss the role/definition of <strong>inertial reference frames</strong> in classical mechanics and <strong>Galileian invariance</strong> (equations of motions are invariant under Galileian transformations)</p>
+<p><strong>Second Principle of Dynamics (Newton’s Second Law): momentum balance.</strong> Relative to an inertial reference frame, the change in momentum of a system is equal to the impulse of the external forces acting on it,</p>
 <div class="math notranslate nohighlight">
 \[\Delta \vec{Q} = \vec{I}^e \ .\]</div>
 <p>In the case of smooth motion, where the momentum can be represented as a continuous and differentiable function of time, the second principle of dynamics can be expressed in differential form,</p>
 <div class="math notranslate nohighlight">
 \[\dot{\vec{Q}} = \vec{R}^e \ ,\]</div>
 <p>where the resultant of the external forces, <span class="math notranslate nohighlight">\(\vec{R}^e = \frac{d \vec{I}^e}{dt}\)</span>, is the time derivative of the impulse.</p>
-<p><strong>Third Principle of Dynamics (Newton’s Third Law): action-reaction.</strong><br />
-If a system <span class="math notranslate nohighlight">\(i\)</span> exerts a force <span class="math notranslate nohighlight">\(\vec{F}_{ji}\)</span> on a system <span class="math notranslate nohighlight">\(j\)</span>, then system <span class="math notranslate nohighlight">\(j\)</span> exerts an “equal and opposite” force <span class="math notranslate nohighlight">\(\vec{F}_{ij}\)</span> on system <span class="math notranslate nohighlight">\(i\)</span>, with equal magnitude and opposite direction,</p>
+<p><strong>Third Principle of Dynamics (Newton’s Third Law): action-reaction.</strong> If a system <span class="math notranslate nohighlight">\(i\)</span> exerts a force <span class="math notranslate nohighlight">\(\vec{F}_{ji}\)</span> on a system <span class="math notranslate nohighlight">\(j\)</span>, then system <span class="math notranslate nohighlight">\(j\)</span> exerts an “equal and opposite” force <span class="math notranslate nohighlight">\(\vec{F}_{ij}\)</span> on system <span class="math notranslate nohighlight">\(i\)</span>, with equal magnitude and opposite direction,</p>
 <div class="math notranslate nohighlight">
 \[\vec{F}_{ij} = - \vec{F}_{ji} \ .\]</div>
 </div>
@@ -424,7 +420,7 @@ If a system <span class="math notranslate nohighlight">\(i\)</span> exerts a for
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">4.2. </span>Equations of motion</p>
+        <p class="prev-next-title"><span class="section-number">4.2. </span>Equations of Motion</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

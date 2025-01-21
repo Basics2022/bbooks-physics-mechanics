@@ -187,17 +187,15 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 <li class="toctree-l1"><a class="reference internal" href="inertia.html">3. Inertia</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="dynamics.html">4. Dynamics</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="dynamics-principles.html">4.1. Principles of Newton mechanics</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="dynamics-eom.html">4.2. Equations of motion</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="dynamics-eom-point.html">4.2.3. Equazioni cardinali della dinamica: punto materiale</a></li>
-<li class="toctree-l3"><a class="reference internal" href="dynamics-eom-points.html">4.2.4. Equazioni cardinali della dinamica: sistemi discreti di punti materiali</a></li>
-<li class="toctree-l3"><a class="reference internal" href="dynamics-eom-rigid.html">4.2.5. Equazioni cardinali della dinamica: corpo rigido</a></li>
-<li class="toctree-l3"><a class="reference internal" href="dynamics-eom-continuum.html">4.2.6. Equazioni cardinali della dinamica: mezzi continui</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="dynamics-motions.html">4.3. Moti particolari</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="dynamics-equilibrium-stability.html">4.4. Equilibrium and Stability</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="dynamics-motions-gravitation-2bodies.html">4.4.1. Gravitazione: problema dei due corpi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dynamics-principles.html">4.1. Principles of Newtonian Mechanics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dynamics-eom.html">4.2. Equations of Motion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dynamics-eom-point.html">4.3. Equations of motion of a point mass</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dynamics-eom-points.html">4.4. Cardinal Equations of Dynamics: Discrete Systems of Point Masses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dynamics-eom-rigid.html">4.5. Equations of motion of a rigid body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dynamics-eom-continuum.html">4.6. Equazioni cardinali della dinamica: mezzi continui</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dynamics-motions.html">4.7. Moti particolari</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="dynamics-equilibrium-stability.html">4.8. Equilibrium and Stability</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="dynamics-motions-gravitation-2bodies.html">4.8.1. Gravitazione: problema dei due corpi</a></li>
 </ul>
 </li>
 </ul>
@@ -205,7 +203,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Analytical Mechanics</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="lagrange.html">5. Lagrangian Mechanics</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="lagrange.html">5. Lagrangian Mechanics</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="lagrange-point.html">5.1. Point</a></li>
 <li class="toctree-l2"><a class="reference internal" href="lagrange-points.html">5.2. System of points</a></li>
 <li class="toctree-l2"><a class="reference internal" href="lagrange-rigid-body.html">5.3. Rigid Body</a></li>
@@ -380,11 +378,11 @@ document.write(`
 <div class="section" id="work-and-power-of-a-force">
 <h2><span class="section-number">2.2.1. </span>Work and Power of a Force<a class="headerlink" href="#work-and-power-of-a-force" title="Permalink to this heading">#</a></h2>
 <p><strong>Work.</strong> The elementary work of a force <span class="math notranslate nohighlight">\(\vec{F}\)</span> applied at point <span class="math notranslate nohighlight">\(P\)</span> that undergoes an elementary displacement <span class="math notranslate nohighlight">\(d \vec{r}_P\)</span> is defined as the dot product between the force and the displacement,</p>
-<div class="math notranslate nohighlight">
-\[\delta W := \vec{F} \cdot d \vec{r}_P \ .\]</div>
+<div class="math notranslate nohighlight" id="equation-eq-work-diff">
+<span class="eqno">(2.1)<a class="headerlink" href="#equation-eq-work-diff" title="Permalink to this equation">#</a></span>\[\delta W := \vec{F} \cdot d \vec{r}_P \ .\]</div>
 <p>The work done by the force <span class="math notranslate nohighlight">\(\vec{F}\)</span> applied at point <span class="math notranslate nohighlight">\(P\)</span> moving from point <span class="math notranslate nohighlight">\(A\)</span> to point <span class="math notranslate nohighlight">\(B\)</span> along the path <span class="math notranslate nohighlight">\(\ell_{AB}\)</span> is the sum of all elementary contributions - and hence, in the limit for elementary displacements <span class="math notranslate nohighlight">\(\rightarrow 0\)</span> for continuous variations, the line integral,</p>
-<div class="math notranslate nohighlight">
-\[W_{\ell_{AB}} = \int_{\ell_{AB}} \delta W = \int_{\ell_{AB}} \vec{F} \cdot d \vec{r}_{P} \ .\]</div>
+<div class="math notranslate nohighlight" id="equation-eq-work-int">
+<span class="eqno">(2.2)<a class="headerlink" href="#equation-eq-work-int" title="Permalink to this equation">#</a></span>\[W_{\ell_{AB}} = \int_{\ell_{AB}} \delta W = \int_{\ell_{AB}} \vec{F} \cdot d \vec{r}_{P} \ .\]</div>
 <p>In general, the work of a force or a field of forces depends on the path <span class="math notranslate nohighlight">\({\ell}_{AB}\)</span>. In cases where the work is independent of the path but depends only on the endpoints, we talk about <a class="reference internal" href="actions-conservative.html#classical-mechanics-actions-conservative"><span class="std std-ref">conservative actions</span></a>.</p>
 <p><strong>Power.</strong> The power of the force is defined as the time derivative of the work,</p>
 <div class="math notranslate nohighlight">
