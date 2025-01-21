@@ -1,6 +1,23 @@
 (classical-mechanics:kinematics:point)=
 # Point
 
+The configuration of a point system is determined by its position in space, its state by its position and its velocity. Acceleration is usually required in mechanics, since equations of motions may be recast as a system of second-orde ordinary differential equations in the configuration of the system. These physical quantites are defined here w.r.t. a reference frame $O_o \hat{x}^0 \hat{y}^0 \hat{z}^0, t^0$, keeping constant the vectors of the base w.r.t. time $t^0$.
+
+**Position.**
+
+$$\vec{r}_P(t) = P - O_0 = x^0_{P,i}(t) \, \hat{e}^0_i$$
+
+**Velocity.**
+
+$$\vec{v}_P(t) = \dfrac{d \vec{r}_P}{dt} = \dot{x}^0_{P,i} \, \hat{e}^0_i$$
+
+**Acceleration.**
+
+$$\begin{aligned}
+  \vec{a}_P(t)
+  & = \dfrac{d \vec{v}_P}{dt}     = \dot{v}^0_{P,i} \, \hat{e}^0_i = \\
+  & = \dfrac{d^2 \vec{r}_P}{dt^2} =\ddot{x}^0_{P,i} \, \hat{e}^0_i 
+\end{aligned}$$
 
 <!--
 La cinematica di un punto generalmente si riduce alla determinazione della posizione, della velocità e dell'accelerazione del punto.

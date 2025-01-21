@@ -168,13 +168,11 @@ const thebe_selector_output = ".output, .cell_output"
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Newton Mechanics</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="kinematics.html">1. Kinematics</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="kinematics-space-time.html">1.1. Space and time</a></li>
-<li class="toctree-l2"><a class="reference internal" href="kinematics-models.html">1.2. Models</a></li>
 <li class="toctree-l2"><a class="reference internal" href="kinematics-point.html">1.3. Point</a></li>
 <li class="toctree-l2"><a class="reference internal" href="kinematics-rigid.html">1.4. Rigid Body</a></li>
-<li class="toctree-l2"><a class="reference internal" href="kinematics-rotations.html">1.5. Rotations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="kinematics-continuum.html">1.6. Continuous Medium</a></li>
-<li class="toctree-l2"><a class="reference internal" href="kinematics-relative.html">1.7. Relative Kinematics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kinematics-continuum.html">1.5. Continuous Medium</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kinematics-relative.html">1.6. Relative Kinematics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kinematics-rotations.html">1.7. Rotations</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="actions.html">2. Actions</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -192,18 +190,15 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="dynamics-eom-point.html">4.3. Equations of motion of a point mass</a></li>
 <li class="toctree-l2"><a class="reference internal" href="dynamics-eom-points.html">4.4. Cardinal Equations of Dynamics: Discrete Systems of Point Masses</a></li>
 <li class="toctree-l2"><a class="reference internal" href="dynamics-eom-rigid.html">4.5. Equations of motion of a rigid body</a></li>
-<li class="toctree-l2"><a class="reference internal" href="dynamics-eom-continuum.html">4.6. Equazioni cardinali della dinamica: mezzi continui</a></li>
-<li class="toctree-l2"><a class="reference internal" href="dynamics-motions.html">4.7. Moti particolari</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="dynamics-equilibrium-stability.html">4.8. Equilibrium and Stability</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="dynamics-motions-gravitation-2bodies.html">4.8.1. Gravitazione: problema dei due corpi</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="dynamics-eom-continuum.html">4.6. Equations of motion for continuous media</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dynamics-motions.html">4.7. Particular Motions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dynamics-equilibrium-stability.html">4.8. Equilibrium and Stability</a></li>
 </ul>
 </li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Analytical Mechanics</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="lagrange.html">5. Lagrangian Mechanics</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="lagrange.html">5. Lagrangian Mechanics</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="lagrange-point.html">5.1. Point</a></li>
 <li class="toctree-l2"><a class="reference internal" href="lagrange-points.html">5.2. System of points</a></li>
 <li class="toctree-l2"><a class="reference internal" href="lagrange-rigid-body.html">5.3. Rigid Body</a></li>
@@ -369,6 +364,10 @@ document.write(`
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tensor-of-inertia">3.4.3.2. Tensor of inertia</a></li>
 </ul>
 </li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#time-derivatives-of-dynamical-quantities">3.4.4. Time derivatives of dynamical quantities</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#dynamical-quantities-and-time-derivatives-with-g-as-reference-point">3.4.4.1. Dynamical quantities and time derivatives with <span class="math notranslate nohighlight">\(G\)</span> as reference point</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -463,16 +462,16 @@ document.write(`
    + \dfrac{1}{2} \vec{v}_Q \cdot \left[ - \sum_k m_k (P_k - Q)_\times \right] \cdot \vec{\omega} + \\
  &amp; + \dfrac{1}{2} \vec{\omega} \cdot \left[ \sum_k m_k (P_k - Q)_\times \right] \cdot \vec{v}_Q
    + \dfrac{1}{2} \vec{\omega} \cdot \left[ \sum_k m_k (P_k - Q)_{\times} (P_k - Q)_\times \right] \cdot \vec{\omega} = \\
- &amp; = \dfrac{1}{2} m |\vec{v}_Q|^2 + \dfrac{1}{2} \vec{v}_Q \cdot \mathbb{S}_Q \cdot \vec{\omega} + \dfrac{1}{2} \vec{\omega} \cdot \mathbb{S}^T \cdot \vec{v}_Q + \dfrac{1}{2} \vec{\omega} \cdot \mathbb{I}_Q \cdot \vec{\omega} \ .
+ &amp; = \dfrac{1}{2} m |\vec{v}_Q|^2 + \dfrac{1}{2} \vec{v}_Q \cdot \mathbb{S}_Q \cdot \vec{\omega} + \dfrac{1}{2} \vec{\omega} \cdot \mathbb{S}^T \cdot \vec{v}_Q + \dfrac{1}{2} \vec{\omega} \cdot \mathbb{I}_Q \cdot \vec{\omega} = \\
+ &amp; = \dfrac{1}{2} \vec{v}_Q \cdot \left[ m \vec{v}_Q + \mathbb{S}_Q \cdot \vec{\omega} \right] + \dfrac{1}{2} \vec{\omega} \cdot \left[  \mathbb{S}_Q^T \cdot \vec{v}_Q + \mathbb{I}_Q \cdot \vec{\omega} \right] = \\
+ &amp; = \dfrac{1}{2} \vec{v}_Q \cdot \vec{Q} + \dfrac{1}{2} \vec{\omega} \cdot \vec{L}_Q \ .
 \end{aligned}\end{split}\]</div>
 <p>having used the vector identities</p>
 <div class="math notranslate nohighlight">
 \[\vec{a} \cdot \vec{b} \times \vec{c} = \vec{b} \cdot \vec{c} \times \vec{a}\]</div>
 <div class="math notranslate nohighlight">
 \[\vec{a} \times \vec{b} = - \vec{b} \times \vec{a}\]</div>
-<p>Comparing the expression of the kinetic energy with those of the momentum and angular momentum, it readily follows that</p>
-<div class="math notranslate nohighlight">
-\[K = \dfrac{1}{2} \vec{v}_Q \cdot \vec{Q} + \dfrac{1}{2} \vec{\omega} \cdot \vec{L}_Q \ .\]</div>
+<p>and having introduced the expression of momentum and angular momentum in the last step.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The components of static moment of inertia and tensor of inertia in a material basis - following the motion of the system - are constant.</p>
@@ -618,6 +617,72 @@ document.write(`
 \[ \mathbb{I}_Q = \mathbb{I}_G - m (Q-G)_\times (Q-G)_\times \ .\]</div>
 </div>
 </div>
+<div class="section" id="time-derivatives-of-dynamical-quantities">
+<h3><span class="section-number">3.4.4. </span>Time derivatives of dynamical quantities<a class="headerlink" href="#time-derivatives-of-dynamical-quantities" title="Permalink to this heading">#</a></h3>
+<p>Time derivatives of dynamical quantities are easily evaluated using a Cartesian material reference frame.</p>
+<p><strong>Momentum.</strong></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\dfrac{d}{dt} \vec{Q} 
+  &amp; = \dfrac{d}{dt} \left( m \vec{v}_Q + \mathbb{S}_Q \cdot \vec{\omega} \right) =  \\
+  &amp; =  m \dot{\vec{v}}_Q + \dfrac{d}{dt} \left( \vec{E}^0_i S^0_{ij} \omega^0_j \right) = \\
+  &amp; =  m \dot{\vec{v}}_Q + \dfrac{d\vec{E}^0_i }{dt} S^0_{ij} \omega^0_j + \vec{E}^0_i S^0_{ij} \dfrac{d} \omega^0_j{dt} = \\
+  &amp; =  m \dot{\vec{v}}_Q + \vec{\omega} \times \vec{E}^0_i S^0_{ij} \omega^0_j + \vec{E}^0_i S^0_{ij} \dfrac{d}{dt}\omega^0_j = \\
+  &amp; =  m \dot{\vec{v}}_Q + \vec{\omega} \times \left( \mathbb{S}_Q \cdot \vec{\omega} \right) + \mathbb{S}_Q \cdot \dot{\vec{\omega}} \ .
+\end{aligned}\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+ \dfrac{d}{dt} \vec{\omega} 
+ &amp; = \dfrac{d}{dt} \left( \hat{E}^0_i \omega_i^0 \right) = \\
+ &amp; = \vec{\omega} \times \hat{E}^0_i \omega_i^0 + \hat{E}^0_i \dfrac{d \omega^0_i}{dt} = \\
+ &amp; = \underbrace{\vec{\omega} \times \vec{\omega}}_{=\vec{0}} + \hat{E}^0_i \dfrac{d \omega^0_i}{dt} \ .
+\end{aligned}\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+ \dfrac{d}{dt} \vec{v} 
+ &amp; = \dfrac{d}{dt} \left( \hat{E}^0_i v_i^0 \right) = \\
+ &amp; = \vec{\omega} \times \hat{E}^0_i v_i^0 + \hat{E}^0_i \dfrac{d v^0_i}{dt} = \\
+ &amp; = \vec{\omega} \times \vec{v}  + \dfrac{{}^0 d}{dt} \vec{v} \\
+\end{aligned}\end{split}\]</div>
+<p><strong>Angular momentum.</strong></p>
+<div class="math notranslate nohighlight">
+\[\begin{aligned}
+\dfrac{d}{dt} \vec{L}_H
+&amp; =  \dfrac{d}{dt} \left( (Q-H) \times \vec{Q} + \vec{L}_Q  \right) \ ,
+\end{aligned}\]</div>
+<p>and</p>
+<div class="math notranslate nohighlight">
+\[\dfrac{d}{dt} \left( (Q-H) \times \vec{Q} \right) = ( \vec{v}_Q - \dot{\vec{x}}_H ) \times \vec{Q} + ( Q - H ) \times \dot{\vec{Q}}\]</div>
+<p>and</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+ \dfrac{d \vec{L}_Q}{dt} 
+ &amp; = \dfrac{d}{dt} \left( \mathbb{S}^T_Q \cdot \vec{v}_Q + \mathbb{I}_Q \cdot \vec{\omega} \right) = \\
+ &amp; = \dfrac{d}{dt} \left[ \hat{E}_i^0 \left( S^0_{ji} v^0_{Q,j} + I^0_{ij} \omega^0_j \right) \right] = \\
+ &amp; = \vec{\omega} \times \hat{E}_i^0 \left( S^0_{ji} v^0_{Q,j} + I^0_{ij} \omega^0_j \right)
+   + \hat{E}^0_i \left( S_{ji}^0 \dot{v}^0_{Q,j} + I^0_{ij} \dot{\omega}^0_j \right) = \\
+ &amp; = \vec{\omega} \times ( \mathbb{S}_Q^T \cdot \vec{v}_Q + \mathbb{I}_Q \cdot \vec{\omega} )
+   + \left( \mathbb{S}_Q^T \cdot \dfrac{{}^0 d}{dt} \vec{v}_Q + \mathbb{I} \cdot \dot{\vec{\omega}} \right) = \\
+ &amp; = \vec{\omega} \times ( \mathbb{S}_Q^T \cdot \vec{v}_Q + \mathbb{I}_Q \cdot \vec{\omega} )
+   + \left( \mathbb{S}_Q^T \cdot \left( \dot{v}_Q - \vec{\omega} \times \vec{v}_Q \right) + \mathbb{I} \cdot \dot{\vec{\omega}} \right) \\
+ &amp; = \left( \mathbb{S}_Q^T \cdot \left( \dot{v}_Q - \vec{\omega} \times \vec{v}_Q \right) + \mathbb{I} \cdot \dot{\vec{\omega}} \right) 
+    + \vec{\omega} \times ( \mathbb{S}_Q^T \cdot \vec{v}_Q + \mathbb{I}_Q \cdot \vec{\omega} )
+\end{aligned}\end{split}\]</div>
+<div class="section" id="dynamical-quantities-and-time-derivatives-with-g-as-reference-point">
+<h4><span class="section-number">3.4.4.1. </span>Dynamical quantities and time derivatives with <span class="math notranslate nohighlight">\(G\)</span> as reference point<a class="headerlink" href="#dynamical-quantities-and-time-derivatives-with-g-as-reference-point" title="Permalink to this heading">#</a></h4>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{cases}
+  \vec{Q} = m \vec{v}_G \\
+  \vec{L}_G = \mathbb{I}_G \cdot \vec{\omega}
+\end{cases}
+\qquad , \qquad
+\begin{cases}
+  \dot{\vec{Q}} = m \dot{\vec{v}}_G \\
+  \dot{\vec{L}}_G = \mathbb{I}_G \cdot \dot{\vec{\omega}} + \vec{\omega} \times \mathbb{I}_G \cdot \vec{\omega}
+\end{cases}\end{split}\]</div>
+</div>
+</div>
 </div>
 </div>
 
@@ -693,6 +758,10 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#properties-of-inertia-tensors-of-rigid-bodies">3.4.3. Properties of inertia tensors of rigid bodies</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#static-inertia">3.4.3.1. Static inertia</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tensor-of-inertia">3.4.3.2. Tensor of inertia</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#time-derivatives-of-dynamical-quantities">3.4.4. Time derivatives of dynamical quantities</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#dynamical-quantities-and-time-derivatives-with-g-as-reference-point">3.4.4.1. Dynamical quantities and time derivatives with <span class="math notranslate nohighlight">\(G\)</span> as reference point</a></li>
 </ul>
 </li>
 </ul>

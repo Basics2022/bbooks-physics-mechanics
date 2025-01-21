@@ -1,24 +1,26 @@
+<!--
 ```{article-info}
 :author: basics
 :date: "{sub-ref}`today`"
 :read-time: "{sub-ref}`wordcount-minutes` min read"
 ```
+-->
 
 (classical-mechanics:dynamics:motions)=
-# Moti particolari
+# Particular Motions
 
-In questa sezione verranno studiati alcuni moti particolari, interessanti e utili da analizzare per motivi didattici, storici, e applicativi.
+In this section, we will study certain particular motions that are interesting and useful to analyze for educational, historical, and practical reasons.
 
-- moto rettilineo uniforme
-- moto uniformemente accelerato
-- moto circolare uniforme
-- moti oscillatori e oscillatori smorzati:
-  - oscillazioni libere:
-    - sistema massa-molla(-smorzatore)
-    - pendolo
-  - oscillazioni forzate:
-    - primo passo verso l'analisi strutturale e non solo ("ogni sistema fisico è un sistema di tanti oscillatori armonici")
-    - concetti di risposta in frequenza e risonanza. **todo** video e/o script su risposta in frequenza di strutture e strutture antisismiche, mass-damper,...
-- **Gravitazione**: partendo dalla legge di gravitazione universale fornita da Newton, si studia il moto dei corpi celesti in sistemi a due corpi, scoprendo che le loro traiettorie descrivono le sezioni coniche (cerchio, ellisse, parabola, iperbole), e dimostrando le leggi di Keplero
-- rotazione di un corpo attorno a un punto fisso, moti di Poinsot
+- Uniform rectilinear motion
+- Uniformly accelerated motion
+- Uniform circular motion
+- Oscillatory and damped oscillatory motions:
+  - Free oscillations:
+    - Mass-spring(-damper) system
+    - Pendulum
+  - Forced oscillations:
+    - A first step towards structural analysis and beyond ("every physical system is a system of many harmonic oscillators")
+    - Concepts of frequency response and resonance. **todo** video and/or script on frequency response of structures and seismic structures, mass-damper,...
+- **Gravitation**: Starting from Newton's universal law of gravitation, we study the motion of celestial bodies in two-body systems, discovering that their trajectories describe conic sections (circle, ellipse, parabola, hyperbola), and demonstrating Kepler's laws.
+- Rotation of a body around a fixed point, Poinsot's motions
 
