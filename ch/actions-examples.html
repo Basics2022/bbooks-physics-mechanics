@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>2.5. Esempi &#8212; Meccanica classica</title>
+    <title>2.4. Examples of Forces &#8212; Classical Mechanics</title>
   
   
   
@@ -64,12 +64,14 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'ch/actions-examples';</script>
     <link rel="shortcut icon" href="../_static/favicon.svg"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="3. Inertia" href="inertia.html" />
-    <link rel="prev" title="2.4. Reazioni vincolari" href="actions-reactions.html" />
+    <link rel="next" title="2.5. Constraint Reactions" href="actions-reactions.html" />
+    <link rel="prev" title="2.3. Conservative Actions" href="actions-conservative.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -156,8 +158,8 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="../_static/logo.svg" class="logo__image only-light" alt="Meccanica classica - Home"/>
-    <script>document.write(`<img src="../_static/logo-dark.svg" class="logo__image only-dark" alt="Meccanica classica - Home"/>`);</script>
+    <img src="../_static/logo.svg" class="logo__image only-light" alt="Classical Mechanics - Home"/>
+    <script>document.write(`<img src="../_static/logo-dark.svg" class="logo__image only-dark" alt="Classical Mechanics - Home"/>`);</script>
   
   
 </a></div>
@@ -176,11 +178,11 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="actions.html">2. Actions</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="actions-types.html">2.1. Forze, momenti, forze distribuite</a></li>
-<li class="toctree-l2"><a class="reference internal" href="actions-work-power.html">2.2. Lavoro e potenza</a></li>
-<li class="toctree-l2"><a class="reference internal" href="actions-conservative.html">2.3. Azioni conservative</a></li>
-<li class="toctree-l2"><a class="reference internal" href="actions-reactions.html">2.4. Reazioni vincolari</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">2.5. Esempi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="actions-types.html">2.1. Force, Moment of a Force, Distributed Actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="actions-work.html">2.2. Work and Power</a></li>
+<li class="toctree-l2"><a class="reference internal" href="actions-conservative.html">2.3. Conservative Actions</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">2.4. Examples of Forces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="actions-reactions.html">2.5. Constraint Reactions</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="inertia.html">3. Inertia</a></li>
@@ -335,7 +337,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -346,11 +350,25 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Esempi</h1>
+    <h1>Examples of Forces</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gravitation">2.4.1. Gravitation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#universal-law-of-gravitation">2.4.1.1. Universal Law of Gravitation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gravitational-field">2.4.1.2. Gravitational Field</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gravitational-field-near-earth-s-surface">2.4.1.3. Gravitational Field Near Earth’s Surface</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#elastic-actions-linear-springs">2.4.2. Elastic Actions: Linear Springs</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -360,27 +378,103 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <div class="sd-container-fluid sd-sphinx-override sd-p-0 sd-mt-2 sd-mb-4 docutils">
-<div class="sd-row sd-row-cols-2 sd-gx-2 sd-gy-1 docutils">
-<div class="sd-col sd-d-flex-row sd-align-minor-center docutils">
-<div class="sd-container-fluid sd-sphinx-override docutils">
-<div class="sd-row sd-row-cols-2 sd-row-cols-xs-2 sd-row-cols-sm-3 sd-row-cols-md-3 sd-row-cols-lg-3 sd-gx-3 sd-gy-1 docutils">
-<div class="sd-col sd-col-auto sd-d-flex-row sd-align-minor-center docutils">
-<p class="sd-p-0 sd-m-0">basics</p>
+  <div class="tex2jax_ignore mathjax_ignore section" id="examples-of-forces">
+<span id="classical-mechanics-actions-examples"></span><h1><span class="section-number">2.4. </span>Examples of Forces<a class="headerlink" href="#examples-of-forces" title="Permalink to this heading">#</a></h1>
+<div class="section" id="gravitation">
+<span id="classical-mechanics-actions-gravitation"></span><h2><span class="section-number">2.4.1. </span>Gravitation<a class="headerlink" href="#gravitation" title="Permalink to this heading">#</a></h2>
+<div class="section" id="universal-law-of-gravitation">
+<span id="classical-mechanics-actions-gravitation-newton"></span><h3><span class="section-number">2.4.1.1. </span>Universal Law of Gravitation<a class="headerlink" href="#universal-law-of-gravitation" title="Permalink to this heading">#</a></h3>
+<p>The force <span class="math notranslate nohighlight">\(\vec{F}_{12}\)</span> exerted by a mass <span class="math notranslate nohighlight">\(m_2\)</span> at <span class="math notranslate nohighlight">\(P_2\)</span> on a mass <span class="math notranslate nohighlight">\(m_1\)</span> at <span class="math notranslate nohighlight">\(P_1\)</span> is described by <strong>Newton’s Universal Law of Gravitation</strong>,</p>
+<div class="math notranslate nohighlight">
+\[\vec{F}_{12} = G \, m_1 \, m_2 \dfrac{P_2 - P_1}{|P_2 - P_1|^3} \ ,\]</div>
+<p>or</p>
+<div class="math notranslate nohighlight">
+\[\vec{F}_{12} = G \, m_1 \, m_2 \dfrac{\hat{r}_{12}}{|\vec{r}_{12}|^2} \ ,\]</div>
+<p>where <span class="math notranslate nohighlight">\(\vec{r}_{12} = (P_2 - P_1)\)</span> is the vector pointing from point <span class="math notranslate nohighlight">\(P_1\)</span> to point <span class="math notranslate nohighlight">\(P_2\)</span>, <span class="math notranslate nohighlight">\(r_{12} = |\vec{r}_{12}|\)</span> is its magnitude, and <span class="math notranslate nohighlight">\(\hat{r}_{12} = \frac{\vec{r}_{12}}{|\vec{r}_{12}|}\)</span> is the unit vector in the same direction. The <strong>universal gravitational constant</strong> <span class="math notranslate nohighlight">\(G\)</span> is</p>
+<div class="math notranslate nohighlight">
+\[G = 6.67 \cdot 10^{-11} \frac{N \, m^2}{kg^2}\]</div>
+<p>and is considered a constant of nature.</p>
+<p><strong>Principle of Superposition of Causes and Effects (PSCE).</strong> Principle of superposition holds, i.e. the force acting on a mass <span class="math notranslate nohighlight">\(m\)</span> placed in <span class="math notranslate nohighlight">\(P\)</span> due to a set of <span class="math notranslate nohighlight">\(N\)</span> masses <span class="math notranslate nohighlight">\(\{ m_k \}_{k=1:N}\)</span> placed in <span class="math notranslate nohighlight">\(P_k\)</span> is the sum of individual forces <span class="math notranslate nohighlight">\(\vec{F}_{k}\)</span>,</p>
+<div class="math notranslate nohighlight" id="equation-eq-gravitation-force-psce">
+<span class="eqno">(2.1)<a class="headerlink" href="#equation-eq-gravitation-force-psce" title="Permalink to this equation">#</a></span>\[\vec{F} = \sum_{k=1}^N \vec{F}_{k} = G \, m \, \sum_{k=1}^N m_k \dfrac{P_k - P}{|P_k - P|^3} \ .\]</div>
 </div>
-<div class="sd-col sd-col-auto sd-d-flex-row sd-align-minor-center docutils">
-<p class="sd-p-0 sd-m-0"><span class="sd-pr-2"><svg version="1.1" width="16.0px" height="16.0px" class="sd-octicon sd-octicon-calendar" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M4.75 0a.75.75 0 01.75.75V2h5V.75a.75.75 0 011.5 0V2h1.25c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0113.25 16H2.75A1.75 1.75 0 011 14.25V3.75C1 2.784 1.784 2 2.75 2H4V.75A.75.75 0 014.75 0zm0 3.5h8.5a.25.25 0 01.25.25V6h-11V3.75a.25.25 0 01.25-.25h2zm-2.25 4v6.75c0 .138.112.25.25.25h10.5a.25.25 0 00.25-.25V7.5h-11z"></path></svg></span>Jan 17, 2025</p>
+<div class="section" id="gravitational-field">
+<span id="classical-mechanics-actions-gravitation-field"></span><h3><span class="section-number">2.4.1.2. </span>Gravitational Field<a class="headerlink" href="#gravitational-field" title="Permalink to this heading">#</a></h3>
+<p>The gravitational field generated by a set of masses <span class="math notranslate nohighlight">\(\{ m_k \}_{k=1:N}\)</span> located at <span class="math notranslate nohighlight">\(P_k\)</span> is a vector field associating a vector with physical dimensions <span class="math notranslate nohighlight">\(\frac{\text{[force]}}{\text{[mass]}}\)</span> to each point in space <span class="math notranslate nohighlight">\(P\)</span>, that can be thought as the force per unit-mass acting on a <strong>test mass</strong> <span class="math notranslate nohighlight">\(m\)</span> placed in <span class="math notranslate nohighlight">\(P\)</span>, whose expression directly follows from <a class="reference internal" href="#equation-eq-gravitation-force-psce">(2.1)</a></p>
+<div class="math notranslate nohighlight">
+\[\vec{g}(P) = \dfrac{\vec{F}}{m} = G \, \sum_{k=1}^N m_k \dfrac{P_k - P}{|P_k - P|^3} \ .\]</div>
+<p>Given the gravitational field <span class="math notranslate nohighlight">\(\vec{g}(P)\)</span>, the gravitational force experienced by a system of mass <span class="math notranslate nohighlight">\(m\)</span> at <span class="math notranslate nohighlight">\(P\)</span> can be written as</p>
+<div class="math notranslate nohighlight">
+\[\vec{F}_g = m \vec{g}(P)\]</div>
+<p><strong>Gravitational Potential Energy.</strong> Gravitational potential of a system of 2 masses reads</p>
+<div class="math notranslate nohighlight">
+\[V(P) = - G \, m \, m_1 \frac{1}{|P - P_1|} \ ,\]</div>
+<p>as it can be easily shown evaluating its gradient,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \nabla V(P)
+  &amp; = - G \, m \, m_1 \, \hat{x}_k \, \dfrac{\partial}{\partial x_k} \dfrac{1}{|P - P_1|} = \\
+  &amp; = - G \, m \, m_1 \, \hat{x}_k \, \left( - \dfrac{1}{|P - P_1|^2} \right) \dfrac{\partial}{\partial x_k} |P - P_1| = \\
+  &amp; =   G \, m \, m_1 \, \hat{x}_k \, \left(   \dfrac{1}{|P - P_1|^2} \right) \dfrac{x_k - x_{1,k}}{|P - P_1|} = \\
+  &amp; =   G \, m \, m_1 \, \dfrac{x_k - x_{1,k}}{|P - P_1|^3}  \, \hat{x}_k= \\
+  &amp; =   G \, m \, m_1 \, \dfrac{P-P_1}{|P - P_1|^3} \ .
+\end{aligned}\end{split}\]</div>
+<p>Potential energy stored in a system of <span class="math notranslate nohighlight">\(N\)</span> point masses <span class="math notranslate nohighlight">\(\{ m_k \}_{k=1:N}\)</span> coincides with the work needed to build the system - a common choice to set the arbitrary additional constant of the energy is setting it equal to zero when masses are at infinite distances -, namely</p>
+<div class="math notranslate nohighlight">
+\[V(P_k) = \sum_{\{i,k\}, i \ne k} G \, m_i \, m_k \frac{1}{|P_i - P_k|} \ ,\]</div>
+<p>summing over different unordered pairs, i.e. <span class="math notranslate nohighlight">\(\{ 1, 2 \}\)</span> and <span class="math notranslate nohighlight">\(\{2,1\}\)</span> are the same pair and thus considered only once, or</p>
+<div class="math notranslate nohighlight">
+\[V(P_k) = \frac{1}{2} \sum_{(i,k),  i\ne k} G \, m_i \, m_k \frac{1}{|P_i - P_k|} \ ,\]</div>
+<p>summing over different ordered pairs, i.e. <span class="math notranslate nohighlight">\((1,2)\)</span> and <span class="math notranslate nohighlight">\((2,1)\)</span> are different pairs.</p>
 </div>
-<div class="sd-col sd-col-auto sd-d-flex-row sd-align-minor-center docutils">
-<p class="sd-p-0 sd-m-0"><span class="sd-pr-2"><svg version="1.1" width="16.0px" height="16.0px" class="sd-octicon sd-octicon-clock" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0zM8 0a8 8 0 100 16A8 8 0 008 0zm.5 4.75a.75.75 0 00-1.5 0v3.5a.75.75 0 00.471.696l2.5 1a.75.75 0 00.557-1.392L8.5 7.742V4.75z"></path></svg></span>0 min read</p>
+<div class="section" id="gravitational-field-near-earth-s-surface">
+<h3><span class="section-number">2.4.1.3. </span>Gravitational Field Near Earth’s Surface<a class="headerlink" href="#gravitational-field-near-earth-s-surface" title="Permalink to this heading">#</a></h3>
+<p>Within a limited domain near Earth’s surface, it is common to approximate Earth’s gravitational field as a uniform field, directed along the local vertical toward the center of the Earth, with intensity <span class="math notranslate nohighlight">\(g = G \frac{M_E}{R_E^2}\)</span>.</p>
+<p>This model can be derived by approximating the position vector relative to the Earth’s center <span class="math notranslate nohighlight">\(P - P_E \sim R_E \hat{r}\)</span> and the unit vector identifying the direction from a point in the domain to the Earth’s center with the local vertical <span class="math notranslate nohighlight">\(\hat{r}_{12} \sim - \hat{z}\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[\vec{g}(\vec{r}) = - G \dfrac{M_E}{R_E^2} \hat{z} = - g \hat{z} \ .\]</div>
+<p>The gravitational force experienced by a body of mass <span class="math notranslate nohighlight">\(m\)</span> near Earth’s surface is thus</p>
+<div class="math notranslate nohighlight">
+\[\vec{F}_g = - m g \hat{z} \ ,\]</div>
+<p>commonly referred to as <strong>weight</strong>.</p>
+<p><strong>Gravitational Potential Energy.</strong> It can be shown that the gravitational potential near Earth’s surface becomes</p>
+<div class="math notranslate nohighlight">
+\[V(P) = m \, g \, z_P \ .\]</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Proof.<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">With the series expansion, with <span class="math notranslate nohighlight">\(P - P_E = R_E \hat{r} + \vec{d}\)</span>, and <span class="math notranslate nohighlight">\(|\vec{d}| \ll R_E\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  V(P) &amp; = - G \, m \, M_E \frac{1}{|P - P_E|} = \\
+       &amp; \approx G M_E \, m \left[ - \frac{1}{R_E} + \frac{R_E \hat{r} \cdot \vec{d}}{R_E^3}  \right]   = \\
+       &amp; = \underbrace{- m \, \frac{ G M_E}{R_E}}_{\text{const}} + m \, \underbrace{\frac{G \, M_E}{R_E^2}}_{= g} \underbrace{\hat{r} \cdot \vec{d}}_{= z}
+\end{aligned}\end{split}\]</div>
 </div>
+</details></div>
 </div>
+<div class="section" id="elastic-actions-linear-springs">
+<h2><span class="section-number">2.4.2. </span>Elastic Actions: Linear Springs<a class="headerlink" href="#elastic-actions-linear-springs" title="Permalink to this heading">#</a></h2>
+<p>According to Hooke’s law, the behavior of an ideal linear elastic spring is described by the constitutive equation</p>
+<div class="math notranslate nohighlight">
+\[F = k (\ell - \ell_0) \ ,\]</div>
+<p>where <span class="math notranslate nohighlight">\(F\)</span> is the absolute value of the force transmitted by the spring, <span class="math notranslate nohighlight">\(k\)</span> is the spring constant, <span class="math notranslate nohighlight">\(\ell_0\)</span> is the spring’s rest length, and <span class="math notranslate nohighlight">\(\ell\)</span> is the length in the considered configuration.</p>
+<p><strong>Potential Energy.</strong></p>
+<p>The elemental work done by the spring is given by</p>
+<div class="math notranslate nohighlight">
+\[\delta W =  F d \ell = k (\ell - \ell_0) d \ell.\]</div>
+<p>Integrating this from <span class="math notranslate nohighlight">\(\ell_1\)</span> to <span class="math notranslate nohighlight">\(\ell_2\)</span>, we get</p>
+<div class="math notranslate nohighlight">
+\[W = \int_{\ell_1}^{\ell_2} k (\ell - \ell_0) d \ell = \left[ \frac{1}{2} k \ell^2 - k \ell_0 \, \ell \right]\bigg|_{\ell_1}^{\ell_2}.\]</div>
+<p>The potential energy stored in the spring is</p>
+<div class="math notranslate nohighlight">
+\[V = \frac{1}{2} k (\ell - \ell_0)^2.\]</div>
+<p>This energy represents the work done to stretch or compress the spring from its rest position.</p>
 </div>
-</div>
-</div>
-</div>
-<div class="tex2jax_ignore mathjax_ignore section" id="esempi">
-<span id="classical-mechanics-actions-examples"></span><h1><span class="section-number">2.5. </span>Esempi<a class="headerlink" href="#esempi" title="Permalink to this heading">#</a></h1>
 </div>
 
     <script type="text/x-thebe-config">
@@ -414,20 +508,20 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="actions-reactions.html"
+       href="actions-conservative.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">2.4. </span>Reazioni vincolari</p>
+        <p class="prev-next-title"><span class="section-number">2.3. </span>Conservative Actions</p>
       </div>
     </a>
     <a class="right-next"
-       href="inertia.html"
+       href="actions-reactions.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">3. </span>Inertia</p>
+        <p class="prev-next-title"><span class="section-number">2.5. </span>Constraint Reactions</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -437,6 +531,26 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gravitation">2.4.1. Gravitation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#universal-law-of-gravitation">2.4.1.1. Universal Law of Gravitation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gravitational-field">2.4.1.2. Gravitational Field</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gravitational-field-near-earth-s-surface">2.4.1.3. Gravitational Field Near Earth’s Surface</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#elastic-actions-linear-springs">2.4.2. Elastic Actions: Linear Springs</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

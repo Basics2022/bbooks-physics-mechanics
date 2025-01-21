@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>2.4. Reazioni vincolari &#8212; Meccanica classica</title>
+    <title>2.5. Constraint Reactions &#8212; Classical Mechanics</title>
   
   
   
@@ -64,12 +64,14 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'ch/actions-reactions';</script>
     <link rel="shortcut icon" href="../_static/favicon.svg"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="2.5. Esempi" href="actions-examples.html" />
-    <link rel="prev" title="2.3. Azioni conservative" href="actions-conservative.html" />
+    <link rel="next" title="3. Inertia" href="inertia.html" />
+    <link rel="prev" title="2.4. Examples of Forces" href="actions-examples.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -156,8 +158,8 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="../_static/logo.svg" class="logo__image only-light" alt="Meccanica classica - Home"/>
-    <script>document.write(`<img src="../_static/logo-dark.svg" class="logo__image only-dark" alt="Meccanica classica - Home"/>`);</script>
+    <img src="../_static/logo.svg" class="logo__image only-light" alt="Classical Mechanics - Home"/>
+    <script>document.write(`<img src="../_static/logo-dark.svg" class="logo__image only-dark" alt="Classical Mechanics - Home"/>`);</script>
   
   
 </a></div>
@@ -176,11 +178,11 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="actions.html">2. Actions</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="actions-types.html">2.1. Forze, momenti, forze distribuite</a></li>
-<li class="toctree-l2"><a class="reference internal" href="actions-work-power.html">2.2. Lavoro e potenza</a></li>
-<li class="toctree-l2"><a class="reference internal" href="actions-conservative.html">2.3. Azioni conservative</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">2.4. Reazioni vincolari</a></li>
-<li class="toctree-l2"><a class="reference internal" href="actions-examples.html">2.5. Esempi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="actions-types.html">2.1. Force, Moment of a Force, Distributed Actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="actions-work.html">2.2. Work and Power</a></li>
+<li class="toctree-l2"><a class="reference internal" href="actions-conservative.html">2.3. Conservative Actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="actions-examples.html">2.4. Examples of Forces</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">2.5. Constraint Reactions</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="inertia.html">3. Inertia</a></li>
@@ -348,7 +350,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Reazioni vincolari</h1>
+    <h1>Constraint Reactions</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -358,8 +360,24 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#esempi-2d">2.4.1. Esempi 2D</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#esempi-3d">2.4.2. Esempi 3D</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contact-actions">2.5.1. Contact Actions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#constraint-reactions-of-ideal-constraints">2.5.1.1. Constraint Reactions of Ideal Constraints</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fixed-joint">2.5.1.1.1. Fixed Joint</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#slider">2.5.1.1.2. Slider</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#cylindrical-joint">2.5.1.1.3. Cylindrical Joint</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#spherical-joint">2.5.1.1.4. Spherical Joint</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#roller">2.5.1.1.5. Roller</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#support">2.5.1.1.6. Support</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#friction">2.5.1.2. Friction</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#static-friction">2.5.1.2.1. Static Friction</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#dynamic-friction">2.5.1.2.2. Dynamic Friction</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pure-rolling">2.5.1.2.3. Pure Rolling</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -371,50 +389,142 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <div class="sd-container-fluid sd-sphinx-override sd-p-0 sd-mt-2 sd-mb-4 docutils">
-<div class="sd-row sd-row-cols-2 sd-gx-2 sd-gy-1 docutils">
-<div class="sd-col sd-d-flex-row sd-align-minor-center docutils">
-<div class="sd-container-fluid sd-sphinx-override docutils">
-<div class="sd-row sd-row-cols-2 sd-row-cols-xs-2 sd-row-cols-sm-3 sd-row-cols-md-3 sd-row-cols-lg-3 sd-gx-3 sd-gy-1 docutils">
-<div class="sd-col sd-col-auto sd-d-flex-row sd-align-minor-center docutils">
-<p class="sd-p-0 sd-m-0">basics</p>
+  <div class="tex2jax_ignore mathjax_ignore section" id="constraint-reactions">
+<span id="classical-mechanics-actions-reactions"></span><h1><span class="section-number">2.5. </span>Constraint Reactions<a class="headerlink" href="#constraint-reactions" title="Permalink to this heading">#</a></h1>
+<p>Kinematic constraints act on a system by limiting its possible movements, exerting forces and moments, which are defined as constraint reactions.</p>
+<p>In general, at an <strong>ideal</strong> constraint (<strong>todo</strong> provide definition of ideal constraint and discuss/mention/refer to friction), a constraint reaction corresponds to each constrained degree of freedom: for example, the constraint of translation of a point in a direction has a corresponding reaction force in that direction; the constraint of rotation around an axis has a corresponding moment aligned with that axis.</p>
+<p>These conditions can be derived from the equations of dynamics for massless systems, as often considered in the ideal constraint model.</p>
+<div class="section" id="contact-actions">
+<h2><span class="section-number">2.5.1. </span>Contact Actions<a class="headerlink" href="#contact-actions" title="Permalink to this heading">#</a></h2>
+<div class="section" id="constraint-reactions-of-ideal-constraints">
+<h3><span class="section-number">2.5.1.1. </span>Constraint Reactions of Ideal Constraints<a class="headerlink" href="#constraint-reactions-of-ideal-constraints" title="Permalink to this heading">#</a></h3>
+<p>Ideal constraints are models that <strong>do not perform net work</strong>, and are thus <strong>conservative elements</strong>. As should become evident in the subsequent sections from the expressions of relative velocities and exchanged actions,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+P &amp; = \vec{v}_1     \cdot \vec{F}_{21} + \vec{v}_2     \cdot \vec{F}_{12} 
+    + \vec{\omega}_1 \cdot \vec{M}_{21} + \vec{\omega}_2 \cdot \vec{M}_{12} = \\ 
+  &amp; = ( \vec{v}_1 - \vec{v}_2 ) \cdot \vec{F}_{21}
+    + ( \vec{\omega}_1 - \vec{\omega}_2 ) \cdot \vec{M}_{21} = \\ 
+  &amp; = \vec{v}^{rel}_{21} \cdot \vec{F}_{21}
+    + \vec{\omega}^{rel}_{21} \cdot \vec{M}_{21} \ ,
+\end{aligned}\end{split}\]</div>
+<p>both terms are zero either because the relative motion is zero, or the actions act orthogonally to the relative motions.</p>
+<div class="section" id="fixed-joint">
+<h4><span class="section-number">2.5.1.1.1. </span>Fixed Joint<a class="headerlink" href="#fixed-joint" title="Permalink to this heading">#</a></h4>
+<p>The fixed joint constraint prevents both relative motion and relative rotation,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{cases}
+  \vec{0} = \vec{v}^{rel}_{21}     = \vec{v}_{2}     - \vec{v}_{1} \\
+  \vec{0} = \vec{\omega}^{rel}_{21} = \vec{\omega}_{2} - \vec{\omega}_{1} \\
+\end{cases}
+\qquad , \qquad
+\begin{cases}
+  \qquad \vec{F}_{12} = - \vec{F}_{21} \\
+  \qquad \vec{M}_{12} = - \vec{M}_{21} \\
+\end{cases}
+\end{split}\]</div>
 </div>
-<div class="sd-col sd-col-auto sd-d-flex-row sd-align-minor-center docutils">
-<p class="sd-p-0 sd-m-0"><span class="sd-pr-2"><svg version="1.1" width="16.0px" height="16.0px" class="sd-octicon sd-octicon-calendar" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M4.75 0a.75.75 0 01.75.75V2h5V.75a.75.75 0 011.5 0V2h1.25c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0113.25 16H2.75A1.75 1.75 0 011 14.25V3.75C1 2.784 1.784 2 2.75 2H4V.75A.75.75 0 014.75 0zm0 3.5h8.5a.25.25 0 01.25.25V6h-11V3.75a.25.25 0 01.25-.25h2zm-2.25 4v6.75c0 .138.112.25.25.25h10.5a.25.25 0 00.25-.25V7.5h-11z"></path></svg></span>Jan 17, 2025</p>
+<div class="section" id="slider">
+<h4><span class="section-number">2.5.1.1.2. </span>Slider<a class="headerlink" href="#slider" title="Permalink to this heading">#</a></h4>
+<p>The slider constraint prevents relative motion in one direction and relative rotation.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{cases}
+  \quad \forall \ \vec{v}^{rel}_{\hat{t},21}     = \vec{v}_{\hat{t},2}     - \vec{v}_{\hat{t},1} \\
+          0  = v^{rel}_{\hat{n},21}     = v_{\hat{n},2}     - v_{\hat{n},1} \\
+  \vec{0} = \vec{\omega}^{rel}_{21} = \vec{\omega}_{2} - \vec{\omega}_{1} \\
+\end{cases}
+\qquad , \qquad
+\begin{cases}
+  \vec{0} = \vec{F}_{\hat{t},12} = \vec{F}_{\hat{t},21} \\
+  \qquad F_{\hat{n},12} = - F_{\hat{n},21} \\
+  \qquad \vec{M}_{12} = - \vec{M}_{21} \\
+\end{cases}
+\end{split}\]</div>
 </div>
-<div class="sd-col sd-col-auto sd-d-flex-row sd-align-minor-center docutils">
-<p class="sd-p-0 sd-m-0"><span class="sd-pr-2"><svg version="1.1" width="16.0px" height="16.0px" class="sd-octicon sd-octicon-clock" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0zM8 0a8 8 0 100 16A8 8 0 008 0zm.5 4.75a.75.75 0 00-1.5 0v3.5a.75.75 0 00.471.696l2.5 1a.75.75 0 00.557-1.392L8.5 7.742V4.75z"></path></svg></span>1 min read</p>
+<div class="section" id="cylindrical-joint">
+<h4><span class="section-number">2.5.1.1.3. </span>Cylindrical Joint<a class="headerlink" href="#cylindrical-joint" title="Permalink to this heading">#</a></h4>
+<p>The cylindrical joint constraint prevents relative motion and allows rotation around one axis.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{cases}
+  \vec{0} = \vec{v}^{rel}_{21}     = \vec{v}_{2}     - \vec{v}_{1} \\
+  \quad \forall \ \omega^{rel}_{\hat{t},21} = \omega_{\hat{t},2} - \omega_{\hat{t},1} \\
+  \vec{0} = \vec{\omega}^{rel}_{\hat{n},21} = \vec{\omega}_{\hat{n},2} - \vec{\omega}_{\hat{n},1} \\
+\end{cases}
+\qquad , \qquad
+\begin{cases}
+  \qquad \vec{F}_{12} = - \vec{F}_{21} \\
+  0 =  M_{\hat{t},12} = M_{\hat{t},21} \\
+  \qquad \vec{M}_{\hat{n},12} = - \vec{M}_{\hat{n},21} \\
+\end{cases}
+\end{split}\]</div>
+</div>
+<div class="section" id="spherical-joint">
+<h4><span class="section-number">2.5.1.1.4. </span>Spherical Joint<a class="headerlink" href="#spherical-joint" title="Permalink to this heading">#</a></h4>
+<p>The spherical joint constraint prevents relative motion but allows general rotation.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{cases}
+  \vec{0} = \vec{v}^{rel}_{21}     = \vec{v}_{2}     - \vec{v}_{1} \\
+  \quad \forall \vec{\omega}^{rel}_{21} = \vec{\omega}_{2} - \vec{\omega}_{1} \\
+\end{cases}
+\qquad , \qquad
+\begin{cases}
+  \qquad \vec{F}_{12} = - \vec{F}_{21} \\
+  \vec{0} =  \vec{M}_{12} = \vec{M}_{21} \\
+\end{cases}
+\end{split}\]</div>
+</div>
+<div class="section" id="roller">
+<h4><span class="section-number">2.5.1.1.5. </span>Roller<a class="headerlink" href="#roller" title="Permalink to this heading">#</a></h4>
+<p>The roller constraint can be thought of as a combination of a slider and a cylindrical joint.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{cases}
+  \quad \forall \ \vec{v}^{rel}_{\hat{t},21}     = \vec{v}_{\hat{t},2}     - \vec{v}_{\hat{t},1} \\
+          0  = v^{rel}_{\hat{n},21}     = v_{\hat{n},2}     - v_{\hat{n},1} \\
+  \quad \forall \ \omega^{rel}_{\hat{t},21} = \omega_{\hat{t},2} - \omega_{\hat{t},1} \\
+  \vec{0} = \vec{\omega}^{rel}_{\hat{n},21} = \vec{\omega}_{\hat{n},2} - \vec{\omega}_{\hat{n},1} \\
+\end{cases}
+\qquad , \qquad
+\begin{cases}
+  \vec{0} = \vec{F}_{\hat{t},12} = \vec{F}_{\hat{t},21} \\
+  \qquad F_{\hat{n},12} = - F_{\hat{n},21} \\
+  0 =  M_{\hat{t},12} = M_{\hat{t},21} \\
+  \qquad \vec{M}_{\hat{n},12} = - \vec{M}_{\hat{n},21} \\
+\end{cases}
+\end{split}\]</div>
+</div>
+<div class="section" id="support">
+<h4><span class="section-number">2.5.1.1.6. </span>Support<a class="headerlink" href="#support" title="Permalink to this heading">#</a></h4>
+<p>The support constraint is a unilateral constraint <strong>todo</strong> <em>add description</em></p>
 </div>
 </div>
+<div class="section" id="friction">
+<h3><span class="section-number">2.5.1.2. </span>Friction<a class="headerlink" href="#friction" title="Permalink to this heading">#</a></h3>
+<div class="section" id="static-friction">
+<h4><span class="section-number">2.5.1.2.1. </span>Static Friction<a class="headerlink" href="#static-friction" title="Permalink to this heading">#</a></h4>
+<p>Static friction is the type of friction that occurs between two bodies when there is no relative motion between them, acting as a tangential force to the contact surface. The simplest model of static friction assumes that the maximum static friction force <span class="math notranslate nohighlight">\(F^s_{max}\)</span> that can be exerted between two bodies is proportional to the normal reaction between them, <span class="math notranslate nohighlight">\(N\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[F^s_{max} = \mu^s \, N \ .\]</div>
+<p>The proportionality constant <span class="math notranslate nohighlight">\(\mu^s\)</span> is defined as the <strong>coefficient of static friction</strong>. Generally, static friction forces are determined by the equilibrium conditions of the body, if these conditions can be met, and the relation</p>
+<div class="math notranslate nohighlight">
+\[|F^s| \ge F^s_{max} \ .\]</div>
+</div>
+<div class="section" id="dynamic-friction">
+<h4><span class="section-number">2.5.1.2.2. </span>Dynamic Friction<a class="headerlink" href="#dynamic-friction" title="Permalink to this heading">#</a></h4>
+<p>Dynamic friction occurs between two bodies in contact and in relative motion, acting as a tangential force to the contact surface. The simplest model of dynamic friction assumes that the dynamic friction force is proportional to the normal reaction between the two bodies and directed opposite to the relative velocity,</p>
+<div class="math notranslate nohighlight">
+\[\vec{F}_{12} = - \mu^d N \frac{\vec{v}_{12}}{|\vec{v}_{12}|} \ ,\]</div>
+<p>where <span class="math notranslate nohighlight">\(\vec{F}_{12}\)</span> is the force acting on body 1 due to body 2, and <span class="math notranslate nohighlight">\(\vec{v}_{12} = \vec{v}_1 - \vec{v}_2\)</span> is the velocity of body 1 relative to body 2.</p>
+</div>
+<div class="section" id="pure-rolling">
+<h4><span class="section-number">2.5.1.2.3. </span>Pure Rolling<a class="headerlink" href="#pure-rolling" title="Permalink to this heading">#</a></h4>
+<p><strong>todo</strong> <em>add description</em></p>
 </div>
 </div>
-</div>
-</div>
-<div class="tex2jax_ignore mathjax_ignore section" id="reazioni-vincolari">
-<span id="classical-mechanics-actions-reactions"></span><h1><span class="section-number">2.4. </span>Reazioni vincolari<a class="headerlink" href="#reazioni-vincolari" title="Permalink to this heading">#</a></h1>
-<p>I vincoli cinematici agiscono su un sistema limitandone la possibilità di movimento, esercitando forze e momenti su di esso, definibili come reazioni vincolari.</p>
-<p>In generale, in corrispondenza di un vincolo <strong>ideale</strong> (<strong>todo</strong> dare definizione di vincolo ideale, e trattare/accennare/rimandare all’attrito) nasce un’azione vincolare corrispondente a ogni grado di libertà vincolato: così ad esempio il vincolo della traslazione di un punto in una direzione ha come reazione corrispondente una forza in quella direzione; il vincolo della rotazione attorno a un asse ha come azione corrispondente un momento allineato con quell’asse.</p>
-<p>Queste condizioni possono essere ricavate dalle equazioni della dinamica per sistemi senza massa, come spesso considerato nel modello ideale dei vincoli.</p>
-<div class="section" id="esempi-2d">
-<h2><span class="section-number">2.4.1. </span>Esempi 2D<a class="headerlink" href="#esempi-2d" title="Permalink to this heading">#</a></h2>
-<ul class="simple">
-<li><p>Incastro</p></li>
-<li><p>Cerniera</p></li>
-<li><p>Pattino</p></li>
-<li><p>Carrello</p></li>
-<li><p>Manicotto</p></li>
-</ul>
-</div>
-<div class="section" id="esempi-3d">
-<h2><span class="section-number">2.4.2. </span>Esempi 3D<a class="headerlink" href="#esempi-3d" title="Permalink to this heading">#</a></h2>
-<ul class="simple">
-<li><p>Incastro</p></li>
-<li><p>Cerniera sferica</p></li>
-<li><p>Cerniera cilindrica</p></li>
-<li><p>Pattino</p></li>
-<li><p>Carrello</p></li>
-<li><p>Manicotto</p></li>
-</ul>
 </div>
 </div>
 
@@ -449,20 +559,20 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="actions-conservative.html"
+       href="actions-examples.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">2.3. </span>Azioni conservative</p>
+        <p class="prev-next-title"><span class="section-number">2.4. </span>Examples of Forces</p>
       </div>
     </a>
     <a class="right-next"
-       href="actions-examples.html"
+       href="inertia.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">2.5. </span>Esempi</p>
+        <p class="prev-next-title"><span class="section-number">3. </span>Inertia</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -481,8 +591,24 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#esempi-2d">2.4.1. Esempi 2D</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#esempi-3d">2.4.2. Esempi 3D</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contact-actions">2.5.1. Contact Actions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#constraint-reactions-of-ideal-constraints">2.5.1.1. Constraint Reactions of Ideal Constraints</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fixed-joint">2.5.1.1.1. Fixed Joint</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#slider">2.5.1.1.2. Slider</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#cylindrical-joint">2.5.1.1.3. Cylindrical Joint</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#spherical-joint">2.5.1.1.4. Spherical Joint</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#roller">2.5.1.1.5. Roller</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#support">2.5.1.1.6. Support</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#friction">2.5.1.2. Friction</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#static-friction">2.5.1.2.1. Static Friction</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#dynamic-friction">2.5.1.2.2. Dynamic Friction</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pure-rolling">2.5.1.2.3. Pure Rolling</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
   </nav></div>
 

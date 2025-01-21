@@ -1,39 +1,27 @@
-```{article-info}
-:author: basics
-:date: "{sub-ref}`today`"
-:read-time: "{sub-ref}`wordcount-minutes` min read"
-```
-
 (classical-mechanics:actions:conservative)=
-# Azioni conservative
+# Conservative Actions
 
-In generale, il lavoro di una forza o di un campo di forze dipende dalla traiettoria $\ell_{AB}$ del punto di applicazione tra i punti iniziale e finale $\mathbf{r}_A$, $\mathbf{r}_B$.
+A conservative force field is defined by the work it performs. In general, the work of a force field acting on a point $P$ moving in space from point $A$ to point $B$ along a path $\ell_{AB}$ depends on the path. (**todo** add reference)
 
-In alcuni casi, il lavoro è indipendente dal percorso $\ell_{AB}$, ma dipende solo dai suoi punti estremi. Se questo è vero per tutti i percorsi, il lavoro è svolto da una **forza conservativa**.
+If the work of a force field does not depend on the path $\ell_{AB}$ but only on the endpoints $A$, $B$, for all pairs of points within a region of space $\Omega$, the **force field** is said to be **conservative** in the region $\Omega$ of space.
 
-In questo caso, l'integrale di linea può essere riscritto senza indicare esplicitamente la dipendenza dal percorso $\ell_{AB}$, ma indicandone solo gli estremi
+In this case, the work done can be expressed as the difference of a scalar field, $U(P)$ or its opposite $V(P) := - U(P)$,
 
-$$L = \int_{\mathbf{r}_A}^{\mathbf{r}_B} \mathbf{F} \cdot d\mathbf{r} \ ,$$
+$$\begin{aligned}
+  W_{AB} &  = U(B) - U(A) = \Delta_{AB} U  \\
+         &  = V(A) - V(B) = -\Delta_{AB} V  \\
+\end{aligned}$$
 
-e il suo valore può essere calcolato come differenza di una funzione scalare della variabile spaziale $U(\mathbf{r}) = -V(\mathbf{r})$ valutata nei due estremi del percorso,
+The functions $U$, $V$ are respectively defined as the **potential** and **potential energy** of the force field.
 
-$$L_{AB} = U(\mathbf{r}_B) - U(\mathbf{r}_A) = - V(\mathbf{r}_B) + V(\mathbf{r}_A) .$$
+The elementary work can thus be expressed in terms of the differential of these functions,
 
-o in forma differenziale,
+$$\begin{aligned}
+  \delta W & = \ \ \ d U =\ \ \ d \vec{r} \cdot \nabla U  = \\
+           & =     - d V =    - d \vec{r} \cdot \nabla V \\
+\end{aligned}$$
 
-$$\delta L = dU = - dV \ .$$
+Comparing this relation with the definition of work $\delta W = d \vec{r} \cdot \vec{F}$, it is possible to identify the force field with the gradient of the potential function, and the opposite of the gradient of the potential energy,
 
-Sotto l'ipotesi di sufficiente regolarità (**todo**), e confrontando le espressioni del lavoro infinitesimale di un campo di forze $\mathbf{F}(\mathbf{r})$,
-
-$$\delta L = dU = \mathbf{F} \cdot \mathbf{r} \ ,$$
-
-si può scrivere il campo di forze come il gradiente della funzione $U$,
-
-$$\mathbf{F}(\mathbf{r}) = \nabla U(\mathbf{r}) = - \nabla V(\mathbf{r} )\ .$$
-
-Per le proprietà dei campi e degli operatori vettoriali, se un campo vettoriale può essere scritto come gradiente di una funzione scalare, il suo rotore è nullo,
-
-$$\nabla \times \mathbf{F}(\mathbf{r}) = \mathbf{0} \ .$$
-
-
+$$\vec{F} = \nabla U = - \nabla V \ .$$
 

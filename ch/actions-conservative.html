@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>2.3. Azioni conservative &#8212; Meccanica classica</title>
+    <title>2.3. Conservative Actions &#8212; Classical Mechanics</title>
   
   
   
@@ -70,8 +70,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../_static/favicon.svg"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="2.4. Reazioni vincolari" href="actions-reactions.html" />
-    <link rel="prev" title="2.2. Lavoro e potenza" href="actions-work-power.html" />
+    <link rel="next" title="2.4. Examples of Forces" href="actions-examples.html" />
+    <link rel="prev" title="2.2. Work and Power" href="actions-work.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -158,8 +158,8 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="../_static/logo.svg" class="logo__image only-light" alt="Meccanica classica - Home"/>
-    <script>document.write(`<img src="../_static/logo-dark.svg" class="logo__image only-dark" alt="Meccanica classica - Home"/>`);</script>
+    <img src="../_static/logo.svg" class="logo__image only-light" alt="Classical Mechanics - Home"/>
+    <script>document.write(`<img src="../_static/logo-dark.svg" class="logo__image only-dark" alt="Classical Mechanics - Home"/>`);</script>
   
   
 </a></div>
@@ -178,11 +178,11 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="actions.html">2. Actions</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="actions-types.html">2.1. Forze, momenti, forze distribuite</a></li>
-<li class="toctree-l2"><a class="reference internal" href="actions-work-power.html">2.2. Lavoro e potenza</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">2.3. Azioni conservative</a></li>
-<li class="toctree-l2"><a class="reference internal" href="actions-reactions.html">2.4. Reazioni vincolari</a></li>
-<li class="toctree-l2"><a class="reference internal" href="actions-examples.html">2.5. Esempi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="actions-types.html">2.1. Force, Moment of a Force, Distributed Actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="actions-work.html">2.2. Work and Power</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">2.3. Conservative Actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="actions-examples.html">2.4. Examples of Forces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="actions-reactions.html">2.5. Constraint Reactions</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="inertia.html">3. Inertia</a></li>
@@ -348,7 +348,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Azioni conservative</h1>
+    <h1>Conservative Actions</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -362,47 +362,26 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <div class="sd-container-fluid sd-sphinx-override sd-p-0 sd-mt-2 sd-mb-4 docutils">
-<div class="sd-row sd-row-cols-2 sd-gx-2 sd-gy-1 docutils">
-<div class="sd-col sd-d-flex-row sd-align-minor-center docutils">
-<div class="sd-container-fluid sd-sphinx-override docutils">
-<div class="sd-row sd-row-cols-2 sd-row-cols-xs-2 sd-row-cols-sm-3 sd-row-cols-md-3 sd-row-cols-lg-3 sd-gx-3 sd-gy-1 docutils">
-<div class="sd-col sd-col-auto sd-d-flex-row sd-align-minor-center docutils">
-<p class="sd-p-0 sd-m-0">basics</p>
-</div>
-<div class="sd-col sd-col-auto sd-d-flex-row sd-align-minor-center docutils">
-<p class="sd-p-0 sd-m-0"><span class="sd-pr-2"><svg version="1.1" width="16.0px" height="16.0px" class="sd-octicon sd-octicon-calendar" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M4.75 0a.75.75 0 01.75.75V2h5V.75a.75.75 0 011.5 0V2h1.25c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0113.25 16H2.75A1.75 1.75 0 011 14.25V3.75C1 2.784 1.784 2 2.75 2H4V.75A.75.75 0 014.75 0zm0 3.5h8.5a.25.25 0 01.25.25V6h-11V3.75a.25.25 0 01.25-.25h2zm-2.25 4v6.75c0 .138.112.25.25.25h10.5a.25.25 0 00.25-.25V7.5h-11z"></path></svg></span>Jan 17, 2025</p>
-</div>
-<div class="sd-col sd-col-auto sd-d-flex-row sd-align-minor-center docutils">
-<p class="sd-p-0 sd-m-0"><span class="sd-pr-2"><svg version="1.1" width="16.0px" height="16.0px" class="sd-octicon sd-octicon-clock" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0zM8 0a8 8 0 100 16A8 8 0 008 0zm.5 4.75a.75.75 0 00-1.5 0v3.5a.75.75 0 00.471.696l2.5 1a.75.75 0 00.557-1.392L8.5 7.742V4.75z"></path></svg></span>1 min read</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="tex2jax_ignore mathjax_ignore section" id="azioni-conservative">
-<span id="classical-mechanics-actions-conservative"></span><h1><span class="section-number">2.3. </span>Azioni conservative<a class="headerlink" href="#azioni-conservative" title="Permalink to this heading">#</a></h1>
-<p>In generale, il lavoro di una forza o di un campo di forze dipende dalla traiettoria <span class="math notranslate nohighlight">\(\ell_{AB}\)</span> del punto di applicazione tra i punti iniziale e finale <span class="math notranslate nohighlight">\(\mathbf{r}_A\)</span>, <span class="math notranslate nohighlight">\(\mathbf{r}_B\)</span>.</p>
-<p>In alcuni casi, il lavoro è indipendente dal percorso <span class="math notranslate nohighlight">\(\ell_{AB}\)</span>, ma dipende solo dai suoi punti estremi. Se questo è vero per tutti i percorsi, il lavoro è svolto da una <strong>forza conservativa</strong>.</p>
-<p>In questo caso, l’integrale di linea può essere riscritto senza indicare esplicitamente la dipendenza dal percorso <span class="math notranslate nohighlight">\(\ell_{AB}\)</span>, ma indicandone solo gli estremi</p>
+  <div class="tex2jax_ignore mathjax_ignore section" id="conservative-actions">
+<span id="classical-mechanics-actions-conservative"></span><h1><span class="section-number">2.3. </span>Conservative Actions<a class="headerlink" href="#conservative-actions" title="Permalink to this heading">#</a></h1>
+<p>A conservative force field is defined by the work it performs. In general, the work of a force field acting on a point <span class="math notranslate nohighlight">\(P\)</span> moving in space from point <span class="math notranslate nohighlight">\(A\)</span> to point <span class="math notranslate nohighlight">\(B\)</span> along a path <span class="math notranslate nohighlight">\(\ell_{AB}\)</span> depends on the path. (<strong>todo</strong> add reference)</p>
+<p>If the work of a force field does not depend on the path <span class="math notranslate nohighlight">\(\ell_{AB}\)</span> but only on the endpoints <span class="math notranslate nohighlight">\(A\)</span>, <span class="math notranslate nohighlight">\(B\)</span>, for all pairs of points within a region of space <span class="math notranslate nohighlight">\(\Omega\)</span>, the <strong>force field</strong> is said to be <strong>conservative</strong> in the region <span class="math notranslate nohighlight">\(\Omega\)</span> of space.</p>
+<p>In this case, the work done can be expressed as the difference of a scalar field, <span class="math notranslate nohighlight">\(U(P)\)</span> or its opposite <span class="math notranslate nohighlight">\(V(P) := - U(P)\)</span>,</p>
 <div class="math notranslate nohighlight">
-\[L = \int_{\mathbf{r}_A}^{\mathbf{r}_B} \mathbf{F} \cdot d\mathbf{r} \ ,\]</div>
-<p>e il suo valore può essere calcolato come differenza di una funzione scalare della variabile spaziale <span class="math notranslate nohighlight">\(U(\mathbf{r}) = -V(\mathbf{r})\)</span> valutata nei due estremi del percorso,</p>
+\[\begin{split}\begin{aligned}
+  W_{AB} &amp;  = U(B) - U(A) = \Delta_{AB} U  \\
+         &amp;  = V(A) - V(B) = -\Delta_{AB} V  \\
+\end{aligned}\end{split}\]</div>
+<p>The functions <span class="math notranslate nohighlight">\(U\)</span>, <span class="math notranslate nohighlight">\(V\)</span> are respectively defined as the <strong>potential</strong> and <strong>potential energy</strong> of the force field.</p>
+<p>The elementary work can thus be expressed in terms of the differential of these functions,</p>
 <div class="math notranslate nohighlight">
-\[L_{AB} = U(\mathbf{r}_B) - U(\mathbf{r}_A) = - V(\mathbf{r}_B) + V(\mathbf{r}_A) .\]</div>
-<p>o in forma differenziale,</p>
+\[\begin{split}\begin{aligned}
+  \delta W &amp; = \ \ \ d U =\ \ \ d \vec{r} \cdot \nabla U  = \\
+           &amp; =     - d V =    - d \vec{r} \cdot \nabla V \\
+\end{aligned}\end{split}\]</div>
+<p>Comparing this relation with the definition of work <span class="math notranslate nohighlight">\(\delta W = d \vec{r} \cdot \vec{F}\)</span>, it is possible to identify the force field with the gradient of the potential function, and the opposite of the gradient of the potential energy,</p>
 <div class="math notranslate nohighlight">
-\[\delta L = dU = - dV \ .\]</div>
-<p>Sotto l’ipotesi di sufficiente regolarità (<strong>todo</strong>), e confrontando le espressioni del lavoro infinitesimale di un campo di forze <span class="math notranslate nohighlight">\(\mathbf{F}(\mathbf{r})\)</span>,</p>
-<div class="math notranslate nohighlight">
-\[\delta L = dU = \mathbf{F} \cdot \mathbf{r} \ ,\]</div>
-<p>si può scrivere il campo di forze come il gradiente della funzione <span class="math notranslate nohighlight">\(U\)</span>,</p>
-<div class="math notranslate nohighlight">
-\[\mathbf{F}(\mathbf{r}) = \nabla U(\mathbf{r}) = - \nabla V(\mathbf{r} )\ .\]</div>
-<p>Per le proprietà dei campi e degli operatori vettoriali, se un campo vettoriale può essere scritto come gradiente di una funzione scalare, il suo rotore è nullo,</p>
-<div class="math notranslate nohighlight">
-\[\nabla \times \mathbf{F}(\mathbf{r}) = \mathbf{0} \ .\]</div>
+\[\vec{F} = \nabla U = - \nabla V \ .\]</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -436,20 +415,20 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="actions-work-power.html"
+       href="actions-work.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">2.2. </span>Lavoro e potenza</p>
+        <p class="prev-next-title"><span class="section-number">2.2. </span>Work and Power</p>
       </div>
     </a>
     <a class="right-next"
-       href="actions-reactions.html"
+       href="actions-examples.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">2.4. </span>Reazioni vincolari</p>
+        <p class="prev-next-title"><span class="section-number">2.4. </span>Examples of Forces</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
