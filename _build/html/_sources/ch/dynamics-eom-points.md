@@ -1,5 +1,5 @@
 (classical-mechanics:dynamics:eom:points)=
-# Cardinal Equations of Dynamics: Discrete Systems of Point Masses
+# Equations of motion of a discrete system of point masses
 
 Starting from the dynamic equations for a single point, the dynamic equations for a system of particles can be derived using the third principle of dynamics, action/reaction. The development of these equations helps us understand that the additive nature of dynamical quantities (momentum, angular momentum, kinetic energy) directly follows from their definition.
 
