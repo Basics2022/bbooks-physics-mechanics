@@ -89,30 +89,66 @@ $$\begin{aligned}
 \end{aligned}$$
 ```
 
+### Gravitational field of a continuous mass distribution
+
+Mass density field $\rho(\vec{r}_0)$ for $\vec{r}_0 \in V_0$ produces the **gravitational field** in $\vec{r}$,
+
+$$\vec{g}(\vec{r}) = \int_{\vec{r}_0 \in V_0} d \vec{g}(\vec{r}, \vec{r}_0) = - \int_{\vec{r}_0 \in V_0} G \rho(\vec{r}_0) \dfrac{\vec{r} - \vec{r}_0}{\left|\vec{r} - \vec{r}_0\right|^3} \ .$$
+
+By direct computation, the **gravitational potential** $\phi(\vec{r})$, s.t. $\vec{g} = \nabla \phi$, reads
+
+$$\phi(\vec{r}) = \int_{\vec{r}_0 \in V_0} G \rho(\vec{r}_0) \dfrac{1}{|\vec{r}-\vec{r}_0|}$$
+
+#### Gauss' law for the gravitational field
+
+The flux of the gravitational field produced by mass distribution $\rho(\vec{r}_0)$ in volume $V_0$ thorugh a closed surface $\partial V$ reads
+
+$$\begin{aligned}
+  \oint_{\vec{r} \in \partial V} \vec{g}(\vec{r}) \cdot \hat{n}(\vec{r}) 
+  & = - G \oint_{\vec{r} \in \partial V} \int_{\vec{r}_0 \in V_0} \rho(\vec{r}_0) \dfrac{\vec{r} - \vec{r}_0}{\left|\vec{r} - \vec{r}_0\right|^3}  \cdot \hat{n}(\vec{r}) = \\
+  & = - G \int_{\vec{r}_0 \in V_0} \rho(\vec{r}_0) \oint_{\vec{r} \in \partial V} \dfrac{\vec{r} - \vec{r}_0}{\left|\vec{r} - \vec{r}_0\right|^3}  \cdot \hat{n}(\vec{r}) 
+\end{aligned}$$
+
+The inner integral can be written as the solid angle of the surface $\partial V$ as seen by the point $\vec{r}_0$, whose value is
+
+$$
+  \oint_{\vec{r} \in \partial V} \dfrac{\vec{r} - \vec{r}_0}{\left|\vec{r} - \vec{r}_0\right|^3}  \cdot \hat{n}(\vec{r}) = 4 \pi
+  \begin{cases}
+     1 & \quad \text{if $ \vec{r}_0 \in V$} \\
+     \theta(\vec{r}_0, \partial V) & \quad \text{if $ \vec{r}_0 \in \partial V$} \\
+     0 & \quad \text{if $ \vec{r}_0 \notin V \cup \partial V$} \\
+  \end{cases}
+$$
+
+Thus, net contributions of the flux of the gravitational field $\vec{g}(\vec{r})$ through $\partial V$ come only from points $\vec{r}_0$ inside $V$, $\vec{r}_0 \in V$.[^gravitation-integral] Thus the flux becomes
+
+[^gravitation-integral]: Contributions from points outside $\partial V$ are identically zero; contributions from surface $\partial V$ are zero if volume mass density $\rho(\vec{r}_0)$ is regular enough, i.e. it contains Dirac's $\delta$ representing surface distribution that would have non-negligible contributions in integration over $V$.
+
+$$
+  \oint_{\vec{r} \in \partial V} \vec{g}(\vec{r}) \cdot \hat{n}(\vec{r}) = - G \int_{\vec{r}_0 \in V_0 \cap V} 4 \pi \rho(\vec{r}_0) 
+$$
+
+or, setting $\rho(\vec{r}_0) = $ in all the points $\vec{r} \in V$, $\vec{r} \notin V_0$, and changing the name of the dummy integration variable $\vec{r}_0 \rightarrow \vec{r}$, 
+
+$$
+  \oint_{\vec{r} \in \partial V} \vec{g}(\vec{r}) \cdot \hat{n}(\vec{r}) = - G \int_{\vec{r} \in V} 4 \pi \rho(\vec{r}) \ .
+$$
+
+If the gravitational field $\vec{g}(\vec{r})$ is regular enough for the divergence theorem to hold, it follows
+
+$$
+  \oint_{\vec{r} \in \partial V} \vec{g}(\vec{r}) \cdot \hat{n}(\vec{r}) = \int_{\vec{r} \in V} \nabla \cdot \vec{g}(\vec{r}) \cdot \hat{n}(\vec{r})- G \int_{\vec{r} \in V} 4 \pi \rho(\vec{r}) \ ,
+$$
+
+or, for the arbitrariety of the volume $V$,
+
+$$- \nabla \cdot \vec{g} = 4 \pi G \rho \ .$$
+
+Introducing the gravitational potential $\phi(\vec{r})$, whose gradient equals the gravitational field $\nabla \phi = \vec{g}$ by definition, a **Poisson equation for the gravitational potential** follows
+
+$$- \nabla^2 \phi = 4 \pi G \rho \ .$$
+
+
 ## Elastic Actions: Linear Springs
 
-According to Hooke's law, the behavior of an ideal linear elastic spring is described by the constitutive equation
-
-$$F = k (\ell - \ell_0) \ ,$$
-
-where $F$ is the absolute value of the force transmitted by the spring, $k$ is the spring constant, $\ell_0$ is the spring's rest length, and $\ell$ is the length in the considered configuration.
-
-**Potential Energy.** 
-
-The elemental work done by the spring is given by
-
-$$\delta W =  F d \ell = k (\ell - \ell_0) d \ell.$$
-
-Integrating this from $\ell_1$ to $\ell_2$, we get
-
-$$W = \int_{\ell_1}^{\ell_2} k (\ell - \ell_0) d \ell = \left[ \frac{1}{2} k \ell^2 - k \ell_0 \, \ell \right]\bigg|_{\ell_1}^{\ell_2}.$$
-
-The potential energy stored in the spring is 
-
-$$V = \frac{1}{2} k (\ell - \ell_0)^2.$$ 
-
-This energy represents the work done to stretch or compress the spring from its rest position.
-
-
-
-
+**todo**
