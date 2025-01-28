@@ -36,20 +36,22 @@
 \contentsline {subsubsection}{Universal Law of Gravitation}{17}{subsubsection*.6}%
 \contentsline {subsubsection}{Gravitational Field}{17}{subsubsection*.7}%
 \contentsline {subsubsection}{Gravitational Field Near Earth’s Surface}{18}{subsubsection*.8}%
-\contentsline {subsection}{\numberline {2.4.2}Elastic Actions: Linear Springs}{19}{subsection.2.4.2}%
-\contentsline {section}{\numberline {2.5}Constraint Reactions}{19}{section.2.5}%
+\contentsline {subsubsection}{Gravitational field of a continuous mass distribution}{19}{subsubsection*.9}%
+\contentsline {paragraph}{Gauss’ law for the gravitational field}{19}{paragraph*.10}%
+\contentsline {subsection}{\numberline {2.4.2}Elastic Actions: Linear Springs}{20}{subsection.2.4.2}%
+\contentsline {section}{\numberline {2.5}Constraint Reactions}{20}{section.2.5}%
 \contentsline {subsection}{\numberline {2.5.1}Contact Actions}{20}{subsection.2.5.1}%
-\contentsline {subsubsection}{Constraint Reactions of Ideal Constraints}{20}{subsubsection*.9}%
-\contentsline {paragraph}{Fixed Joint}{20}{paragraph*.10}%
-\contentsline {paragraph}{Slider}{20}{paragraph*.11}%
-\contentsline {paragraph}{Cylindrical Joint}{20}{paragraph*.12}%
-\contentsline {paragraph}{Spherical Joint}{20}{paragraph*.13}%
-\contentsline {paragraph}{Roller}{21}{paragraph*.14}%
-\contentsline {paragraph}{Support}{21}{paragraph*.15}%
-\contentsline {subsubsection}{Friction}{21}{subsubsection*.16}%
-\contentsline {paragraph}{Static Friction}{21}{paragraph*.17}%
-\contentsline {paragraph}{Dynamic Friction}{21}{paragraph*.18}%
-\contentsline {paragraph}{Pure Rolling}{21}{paragraph*.19}%
+\contentsline {subsubsection}{Constraint Reactions of Ideal Constraints}{20}{subsubsection*.12}%
+\contentsline {paragraph}{Fixed Joint}{21}{paragraph*.13}%
+\contentsline {paragraph}{Slider}{21}{paragraph*.14}%
+\contentsline {paragraph}{Cylindrical Joint}{21}{paragraph*.15}%
+\contentsline {paragraph}{Spherical Joint}{21}{paragraph*.16}%
+\contentsline {paragraph}{Roller}{21}{paragraph*.17}%
+\contentsline {paragraph}{Support}{22}{paragraph*.18}%
+\contentsline {subsubsection}{Friction}{22}{subsubsection*.19}%
+\contentsline {paragraph}{Static Friction}{22}{paragraph*.20}%
+\contentsline {paragraph}{Dynamic Friction}{22}{paragraph*.21}%
+\contentsline {paragraph}{Pure Rolling}{22}{paragraph*.22}%
 \contentsline {chapter}{\numberline {3}Inertia}{23}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Point mass}{23}{section.3.1}%
 \contentsline {section}{\numberline {3.2}Discrete masses}{23}{section.3.2}%
@@ -58,10 +60,10 @@
 \contentsline {subsection}{\numberline {3.4.1}Discrete systems}{24}{subsection.3.4.1}%
 \contentsline {subsection}{\numberline {3.4.2}Continuous systems}{25}{subsection.3.4.2}%
 \contentsline {subsection}{\numberline {3.4.3}Properties of inertia tensors of rigid bodies}{27}{subsection.3.4.3}%
-\contentsline {subsubsection}{Static inertia}{27}{subsubsection*.20}%
-\contentsline {subsubsection}{Tensor of inertia}{27}{subsubsection*.21}%
+\contentsline {subsubsection}{Static inertia}{27}{subsubsection*.23}%
+\contentsline {subsubsection}{Tensor of inertia}{27}{subsubsection*.24}%
 \contentsline {subsection}{\numberline {3.4.4}Time derivatives of dynamical quantities}{28}{subsection.3.4.4}%
-\contentsline {subsubsection}{Dynamical quantities and time derivatives with \(G\) as reference point}{29}{subsubsection*.22}%
+\contentsline {subsubsection}{Dynamical quantities and time derivatives with \(G\) as reference point}{29}{subsubsection*.25}%
 \contentsline {chapter}{\numberline {4}Dynamics}{31}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Principles of Newtonian Mechanics}{31}{section.4.1}%
 \contentsline {section}{\numberline {4.2}Equations of Motion and Conservation Principles}{32}{section.4.2}%
@@ -84,4 +86,4 @@
 \contentsline {section}{\numberline {5.2}System of points}{43}{section.5.2}%
 \contentsline {section}{\numberline {5.3}Rigid Body}{43}{section.5.3}%
 \contentsline {chapter}{\numberline {6}Hamiltonian Mechanics}{47}{chapter.6}%
-\contentsline {chapter}{Proof Index}{49}{section*.23}%
+\contentsline {chapter}{Proof Index}{49}{section*.26}%
