@@ -211,18 +211,11 @@ $$\begin{aligned}
 ```
 
 <!-- Exercise -->
-```{exercise} Inverted pendulum
-```
-```{dropdown} Solution
-
-
-```
-<!-- Exercise -->
 ```{exercise} 
 ```
 ```{dropdown} Solution
 
-**Kinematics.** **todo** *check kinematics constraints. No influence of $\theta$?*
+**Kinematics.** **todo** *check kinematic constraints. No influence of $\theta$?*
 
 $$\varphi_2 = \frac{R_1}{R_2} \varphi_1 = r \varphi_1$$
 
@@ -232,13 +225,35 @@ $$\begin{aligned}
 K 
 & = \frac{1}{2} I_1 \omega_1^2 + \frac{1}{2} I_2 \omega_2^2 + \frac{1}{2} m_1 |\vec{v}_1|^2 = \\
 & = \frac{1}{2} I_1 \dot{\varphi}_1^2 + \frac{1}{2} I_2 \dot{\varphi}_2^2 + \frac{1}{2} m_1 \ell^2 \dot{\theta}^2 = \\
+& = \frac{1}{2} \left( I_1 + I_2 r^2 \right) \dot{\varphi}_1^2 + \frac{1}{2} m_1 \ell^2 \dot{\theta}^2 = \\
+\end{aligned}$$
+
+$$\begin{aligned}
+  U = - \frac{1}{2} k \theta^2 - m g \ell \sin \theta
+\end{aligned}$$
+
+Generalized forces read
+
+$$\begin{aligned}
+  Q_{\varphi_1} & = C - R_1 F \\
+  Q_{\theta} & = C
 \end{aligned}$$
 
 **Lagrange functions (II).**
 
+$$\begin{cases}
+  \left( I_1 + I_2 r^2 \right) \ddot{\varphi} = C - R_1 F \\
+  m_1 \ell^2 \ddot{\theta} + k \theta + m g \ell \cos \theta = C \\
+\end{cases}$$
 
 
 
+```
+
+<!-- Exercise -->
+```{exercise} Inverted pendulum
+```
+```{dropdown} Solution
 ```
 
 
