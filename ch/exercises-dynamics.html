@@ -1,0 +1,712 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>7. Dynamics &#8212; Classical Mechanics</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/style.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'ch/exercises-dynamics';</script>
+    <link rel="shortcut icon" href="../_static/favicon.svg"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="8. Gravitation" href="exercises-gravitation.html" />
+    <link rel="prev" title="6. Hamiltonian Mechanics" href="hamilton.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.svg" class="logo__image only-light" alt="Classical Mechanics - Home"/>
+    <script>document.write(`<img src="../_static/logo-dark.svg" class="logo__image only-dark" alt="Classical Mechanics - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Newton Mechanics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="kinematics.html">1. Kinematics</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="kinematics-point.html">1.3. Point</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kinematics-rigid.html">1.4. Rigid Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kinematics-continuum.html">1.5. Continuous Medium</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kinematics-relative.html">1.6. Relative Kinematics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kinematics-rotations.html">1.7. Rotations</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="actions.html">2. Actions</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="actions-types.html">2.1. Force, Moment of a Force, Distributed Actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="actions-work.html">2.2. Work and Power</a></li>
+<li class="toctree-l2"><a class="reference internal" href="actions-conservative.html">2.3. Conservative Actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="actions-examples.html">2.4. Examples of Forces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="actions-reactions.html">2.5. Constraint Reactions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="inertia.html">3. Inertia</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="dynamics.html">4. Dynamics</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="dynamics-principles.html">4.1. Principles of Newtonian Mechanics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dynamics-eom.html">4.2. Equations of Motion and Conservation Principles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dynamics-eom-point.html">4.3. Equations of motion of a point mass</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dynamics-eom-points.html">4.4. Equations of motion of a discrete system of point masses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dynamics-eom-rigid.html">4.5. Equations of motion of a rigid body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dynamics-eom-continuum.html">4.6. Equations of motion for continuous media</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dynamics-motions.html">4.7. Particular Motions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dynamics-equilibrium-stability.html">4.8. Equilibrium and Stability</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Analytical Mechanics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="lagrange.html">5. Lagrangian Mechanics</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="lagrange-point.html">5.1. Point</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lagrange-points.html">5.2. System of points</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lagrange-rigid-body.html">5.3. Rigid Body</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="hamilton.html">6. Hamiltonian Mechanics</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Exercises</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">7. Dynamics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exercises-gravitation.html">8. Gravitation</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/ch/exercises-dynamics.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Dynamics</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <div class="tex2jax_ignore mathjax_ignore section" id="dynamics">
+<span id="classical-mechanics-exercise-dynamics"></span><h1><span class="section-number">7. </span>Dynamics<a class="headerlink" href="#dynamics" title="Permalink to this heading">#</a></h1>
+<!-- Exercise -->
+<div class="exercise admonition" id="ch/exercises-dynamics-exercise-0">
+
+<p class="admonition-title"><span class="caption-number">Exercise 7.1 </span></p>
+<div class="section" id="exercise-content">
+<p><strong>todo</strong> Add description of the problem and image</p>
+<p>Find:</p>
+<ul class="simple">
+<li><p>the pure equations of motion (solution methods: dynamical equilibria, Lagrange II,…) <strong>done</strong></p></li>
+<li><p>constraint reactions (solution methods: dynamical equilibria, Lagrange I,…) <strong>todo</strong></p></li>
+<li><p>equilibria and their stability <strong>todo</strong></p></li>
+<li><p>evolution of the linear(ized) dynamics of the system around stable equilibria <strong>todo</strong></p></li>
+</ul>
+</div>
+</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Solution.<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><strong>Kinematics.</strong> Using <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(\theta\)</span> as generalized coordinates,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{cases}
+  \vec{r}_A = x \hat{x} \\
+  \vec{r}_B = ( x + \ell \sin \theta ) \hat{x} + \ell \cos \theta \hat{y} \\
+\end{cases}\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{cases}
+  \vec{v}_A = \dot{x} \hat{x} \\
+  \vec{v}_B = ( \dot{x} + \ell \dot{\theta} \cos \theta ) \hat{x} - \ell \dot{\theta} \sin \theta \hat{y} \\
+\end{cases}\end{split}\]</div>
+<p class="sd-card-text"><strong>Lagrangian function.</strong></p>
+<div class="math notranslate nohighlight">
+\[\mathscr{L} = K + U\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  K &amp; = \frac{1}{2} m_A |\vec{v}_A|^2 + \frac{1}{2} m_B |\vec{v}_B|^2 = \\
+    &amp; = \frac{1}{2} m_A \dot{x}^2 + \frac{1}{2} m_B \left( \dot{x}^2 + \ell^2 \dot{\theta}^2 + 2 \ell \dot{x} \dot{\theta} \cos \theta  \right) 
+\end{aligned}\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  U &amp; = - \frac{1}{2} k x_A^2 + m_B g y_B = \\
+    &amp; = - \frac{1}{2} k x^2 + m_B g \ell \cos \theta  
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text"><strong>Lagrange equations (II type)</strong> RHS of Lagrange equations read</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \dfrac{d}{dt}\left( \frac{\partial \mathscr{L}}{\partial \dot{x}} \right) &amp; = \dfrac{d}{dt} \left( m_A \dot{x} + m_B \dot{x} + m_B \ell \dot{\theta} \cos \theta \right) = \left( m_A + m_B \right) \ddot{x} + m_B \ell \ddot{\theta} \cos \theta - m_B \ell \dot{\theta}^2 \sin \theta \\
+                      \frac{\partial \mathscr{L}}{\partial      x }         &amp; = -k x \\
+\end{aligned}\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \dfrac{d}{dt}\left( \frac{\partial \mathscr{L}}{\partial \dot{\theta}} \right) &amp; = \dfrac{d}{dt} \left( m_B \ell^2 \dot{\theta} + m_B \ell \dot{x} \cos \theta \right) = m_B \ell^2 \ddot{\theta} + m_B \ell \ddot{x} \cos \theta - m_B \ell \dot{x} \dot{\theta} \sin \theta  \\
+                      \frac{\partial \mathscr{L}}{\partial      \theta }         &amp; = - m_B \ell \dot{x} \dot{\theta} \sin \theta - m_B g \ell \sin \theta  \\
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text">Generalized forces read</p>
+<div class="math notranslate nohighlight">
+\[Q_x = F\]</div>
+<div class="math notranslate nohighlight">
+\[Q_\theta = C\]</div>
+<p class="sd-card-text">so that the pure equations of motion follows from Lagrange equations <span class="math notranslate nohighlight">\(\frac{d}{dt} \left( \frac{\partial \mathscr{L}}{\partial \dot{q}} \right) - \frac{\partial \mathscr{L}}{\partial q} = Q_q\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{cases}
+  \left( m_A + m_B \right) \ddot{x} + m_B \ell \ddot{\theta} \cos \theta - m_B \ell \dot{\theta}^2 \sin \theta + k x = F \\ 
+  m_B \ell^2 \ddot{\theta} + m_B \ell \ddot{x} \cos \theta - m_B \ell \dot{x} \dot{\theta} \sin \theta + m_B \ell \dot{x} \dot{\theta} \sin \theta + m_B g \ell \sin \theta = C \\ 
+\end{cases}\end{split}\]</div>
+<p class="sd-card-text">and after the simplifications</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{cases}
+  \left( m_A + m_B \right) \ddot{x} + m_B \ell \ddot{\theta} \cos \theta - m_B \ell \dot{\theta}^2 \sin \theta + k x = F \\ 
+  m_B \ell \ddot{x} \cos \theta + m_B \ell^2 \ddot{\theta} + m_B g \ell \sin \theta = C \\ 
+\end{cases}\end{split}\]</div>
+<p class="sd-card-text"><strong>Obs.</strong> The first equation is the <span class="math notranslate nohighlight">\(x\)</span>-component of the momentum equation of the whole system. The second equation is the angular momentum equation of the rod around the hinge in <span class="math notranslate nohighlight">\(A\)</span>.</p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<summary class="sd-summary-title sd-card-header">
+Generalized forces on rigid bodies<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Following the derivation of the <a class="reference internal" href="lagrange-rigid-body.html#classical-mechanics-lagrange-rigid"><span class="std std-ref">Lagrange equations for rigid bodies</span></a>, generalized forces are</p>
+<div class="math notranslate nohighlight">
+\[Q_q = \frac{\partial \vec{r}_G}{\partial q} \cdot \vec{R}^e + \frac{\partial \vec{\theta}}{\partial q} \cdot \vec{M}_G^e\]</div>
+<p class="sd-card-text">With the definition of <span class="math notranslate nohighlight">\(\theta_{\delta}\)</span> in the increment of the rigid body motion</p>
+<div class="math notranslate nohighlight">
+\[d \vec{r}_A = d \vec{r}_B + \theta_{\delta} \times (A - B) \ ,\]</div>
+<p class="sd-card-text">and writing the resultant of forces and moments as</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \vec{R}^e   &amp; = \sum_i \vec{F}_i \\
+  \vec{M}^e_G &amp; = \sum_i \left( \vec{r}_G - \vec{r}_i \right) \times \vec{F}_i + \sum_i \vec{C}_i \\
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text">the generalized force can be recast as</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  Q_q 
+  &amp; = \frac{\partial \vec{r}_G}{\partial q} \cdot \vec{R}^e + \frac{\partial \vec{\theta}}{\partial q} \cdot \vec{M}_G^e = \\
+  &amp; = \frac{\partial \vec{r}_G}{\partial q} \cdot \sum_i \vec{F}_i + \frac{\partial \vec{\theta}}{\partial q} \cdot \left[ \sum_i \left( \vec{r}_G - \vec{r}_i \right) \times \vec{F}_i + \sum_i \vec{C}_i  \right] = \\
+  &amp; = \sum_i \left[ \frac{\partial \vec{r}_G}{\partial q} + \frac{\partial \vec{\theta}}{\partial q} \times \left( \vec{r}_G - \vec{r}_i \right) \right] \cdot \vec{F}_i + \sum_i \frac{\partial \vec{\theta}}{\partial q} \cdot \vec{C}_i = \\
+  &amp; = \sum_i \frac{\partial \vec{r}_i}{\partial q} \cdot \vec{F}_i + \sum_i \frac{\partial \vec{\theta}}{\partial q} \cdot \vec{C}_i \ ,
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text">i.e. as the contribution of the single forces <span class="math notranslate nohighlight">\(\vec{F}_i\)</span> acting on different points <span class="math notranslate nohighlight">\(\vec{r}_i\)</span> the rigid body and the overall contribution of the couples of forces <span class="math notranslate nohighlight">\(\vec{C}_i\)</span>.</p>
+<p class="sd-card-text">With <span class="math notranslate nohighlight">\(\vec{r}_C\left(q(t),t \right)\)</span> and <span class="math notranslate nohighlight">\(\mathbb{R}\left(q(t), t \right)\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[\vec{r}_i(q(t), t) - \vec{r}_C(q(t), t) = \mathbb{R}(q(t), t) \cdot \left( \vec{r}_i^0 - \vec{r}_C^0 \right)\]</div>
+<p class="sd-card-text">Time derivative becomes</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\vec{v}_i - \vec{v}_C
+ &amp; = \left[ \dot{q}(t) \, \frac{\partial \mathbb{R}}{\partial q} + \frac{\partial \mathbb{R}}{\partial t} \right] \cdot \left( \vec{r}_i^0 - \vec{r}_C^0 \right) = \\
+ &amp; =  \left[ \dot{q}(t) \, \frac{\partial \mathbb{R}}{\partial q} + \frac{\partial \mathbb{R}}{\partial t} \right] \cdot \mathbb{R}^T \cdot \underbrace{\mathbb{R} \cdot \left( \vec{r}_i^0 - \vec{r}_C^0 \right)}_{\vec{r}_i - \vec{r}_C}
+\end{aligned}\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \vec{\omega}_\times &amp; = \dot{\mathbb{R}} \cdot \mathbb{R}^T \\
+  \delta \vec{\theta}_{\times} &amp; = \delta \mathbb{R} \cdot \mathbb{R}^T \\
+  \frac{\partial \vec{\theta}_{\times}}{\partial q} &amp; = \dfrac{\partial \mathbb{R}}{\partial q} \cdot \mathbb{R}^T
+\end{aligned}\end{split}\]</div>
+</div>
+</details><!-- Exercise -->
+<div class="exercise admonition" id="ch/exercises-dynamics-exercise-1">
+
+<p class="admonition-title"><span class="caption-number">Exercise 7.2 </span></p>
+<div class="section" id="exercise-content">
+<p><strong>todo</strong> Add description of the problem and image</p>
+<p>Find:</p>
+<ul class="simple">
+<li><p>the pure equations of motion (solution methods: dynamical equilibria, Lagrange II, Kinetic energy theorem - energy conservation - since the problem has 1 dof,…) <strong>done</strong></p></li>
+<li><p>constraint reactions (solution methods: dynamical equilibria, Lagrange I,…) <strong>todo</strong></p></li>
+<li><p>equilibria and their stability <strong>todo</strong></p></li>
+<li><p>evolution of the linear(ized) dynamics of the system around stable equilibria <strong>todo</strong></p></li>
+</ul>
+</div>
+</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Solution<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><strong>Geometry.</strong></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  R &amp; = d \sin \alpha \\
+  b &amp; = d \cos^2 \alpha \\
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text">so that <span class="math notranslate nohighlight">\(\frac{b}{R} = \frac{\cos^2 \alpha}{\sin \alpha}\)</span>.</p>
+<p class="sd-card-text"><strong>Kinematics.</strong></p>
+<p class="sd-card-text">Position of the center of mass, <span class="math notranslate nohighlight">\(C\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \vec{r}_C &amp; = b \cos \theta \hat{x} + b \sin \theta \hat{y} - h \hat{z} \\
+  \vec{v}_C &amp; = -b \dot{\theta} \sin \theta \hat{x} + b \dot{\theta} \cos \theta \hat{y} = b \dot{\theta} \hat{y}_1 \\
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text">Angular velocity <span class="math notranslate nohighlight">\(\vec{\omega}\)</span> of the rigid body</p>
+<div class="math notranslate nohighlight">
+\[\vec{\omega} = \dot{\theta} \hat{z} + \dot{\varphi} \hat{x}_1\]</div>
+<p class="sd-card-text">Velocity of point contact point <span class="math notranslate nohighlight">\(A\)</span> is zero, <span class="math notranslate nohighlight">\(\vec{v}_A = \vec{0}\)</span> for <strong>pure rolling</strong> constraint. Being <span class="math notranslate nohighlight">\((A-C) = R \hat{z}_1\)</span>, the general expression of <span class="math notranslate nohighlight">\(\vec{v}_A\)</span> as function of <span class="math notranslate nohighlight">\(\theta\)</span> and <span class="math notranslate nohighlight">\(\varphi\)</span> reads</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+ \vec{v}_A
+ &amp; = \vec{v}_C + \vec{\omega} \times \left( A - C \right) = \\
+ &amp; = \hat{y}_1 b \dot{\theta} + \left( \dot{\theta} \hat{z} + \dot{\varphi} \hat{x}_1 \right) \times R \hat{z}_1 = \\
+ &amp; = \hat{y}_1 \left( b \dot{\theta} + R \dot{\theta} \sin \alpha - R \dot{\varphi} \right) = \\
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text">so that the kinetatic constraint (integrable, with arbitrary initial condition) between <span class="math notranslate nohighlight">\(\theta\)</span> and <span class="math notranslate nohighlight">\(\varphi\)</span> is</p>
+<div class="math notranslate nohighlight">
+\[R \varphi = \left( R \sin \alpha + b \right) \, \theta \ .\]</div>
+<p class="sd-card-text"><strong>Lagrangian function.</strong></p>
+<p class="sd-card-text">With</p>
+<div class="math notranslate nohighlight">
+\[\mathbb{I}_C = I_{x} \hat{x}_1 \hat{x}_1 + I_{y} \hat{y}_1 \hat{y}_1 + I_{z} \hat{z}_1 \hat{z}_1 \ ,\]</div>
+<div class="math notranslate nohighlight">
+\[\vec{\omega} = \dot{\theta} \hat{z} + \dot{\varphi} \hat{x}_1 = \left( \dot{\varphi} - \dot{\theta} \sin \alpha  \right) \hat{x}_1 + \dot{\theta} \cos \alpha \hat{z}_1 \]</div>
+<p class="sd-card-text">and using</p>
+<div class="math notranslate nohighlight">
+\[\dot{\varphi} - \dot{\theta} \sin \alpha = \frac{b}{R} \dot{\theta} \ ,\]</div>
+<p class="sd-card-text">the Lagrangian function becomes</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \mathscr{L} &amp; = K + U = \\
+  &amp; =\frac{1}{2} m |\vec{v}_C|^2 + \frac{1}{2} \vec{\omega} \cdot \mathbb{I}_C \cdot \vec{\omega} + m g x_C = \\
+  &amp; =\frac{1}{2} m b^2 \dot{\theta}^2 + \frac{1}{2} \left[ I_x \left( \dot{\varphi} - \dot{\theta} \sin \alpha \right)^2 + I_z \dot{\theta}^2 \cos^2 \alpha \right] + m g b \cos \theta = \\
+  &amp; =\frac{1}{2} m b^2 \dot{\theta}^2 + \frac{1}{2} \left[ I_x \left( \frac{b}{R} \right)^2 + I_z \cos^2 \alpha \right] \dot{\theta}^2 + m g b \cos \theta = \\
+  &amp; =\frac{1}{2} \widetilde{I} \dot{\theta}^2 + m g b \cos \theta  \ ,
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text">with the equivalent inertia</p>
+<div class="math notranslate nohighlight">
+\[\widetilde{I} = m b^2 + I_x \left( \frac{b}{R} \right)^2 + I_z \cos^2 \alpha \ .\]</div>
+<p class="sd-card-text"><strong>Method 1. Lagrange equation (II).</strong> Legrange equation gives a pure equation of motion</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  0 &amp; = \dfrac{d}{dt}\left( \frac{\partial \mathscr{L}}{\partial \dot{\theta}} \right) - \frac{\partial \mathscr{L}}{\partial \theta} = \widetilde{I} \ddot{\theta} + m g b \sin \theta \ . \\
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text"><strong>Method 2. Kinetic energy theorem - or energy conservation</strong></p>
+</div>
+</details><!-- Exercise -->
+<div class="exercise admonition" id="ch/exercises-dynamics-exercise-2">
+
+<p class="admonition-title"><span class="caption-number">Exercise 7.3 </span> (Inverted pendulum)</p>
+<div class="section" id="exercise-content">
+</div>
+</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Solution<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+</div>
+</details><!-- Exercise -->
+<div class="exercise admonition" id="ch/exercises-dynamics-exercise-3">
+
+<p class="admonition-title"><span class="caption-number">Exercise 7.4 </span></p>
+<div class="section" id="exercise-content">
+</div>
+</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Solution<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><strong>Kinematics.</strong> <strong>todo</strong> <em>check kinematics constraints. No influence of <span class="math notranslate nohighlight">\(\theta\)</span>?</em></p>
+<div class="math notranslate nohighlight">
+\[\varphi_2 = \frac{R_1}{R_2} \varphi_1 = r \varphi_1\]</div>
+<p class="sd-card-text"><strong>Lagrangian function.</strong></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+K 
+&amp; = \frac{1}{2} I_1 \omega_1^2 + \frac{1}{2} I_2 \omega_2^2 + \frac{1}{2} m_1 |\vec{v}_1|^2 = \\
+&amp; = \frac{1}{2} I_1 \dot{\varphi}_1^2 + \frac{1}{2} I_2 \dot{\varphi}_2^2 + \frac{1}{2} m_1 \ell^2 \dot{\theta}^2 = \\
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text"><strong>Lagrange functions (II).</strong></p>
+</div>
+</details></div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./ch"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="hamilton.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">6. </span>Hamiltonian Mechanics</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="exercises-gravitation.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">8. </span>Gravitation</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By basics
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
