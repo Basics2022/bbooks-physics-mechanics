@@ -85,7 +85,7 @@
         
 
 \title{Classical Mechanics}
-\date{Jan 28, 2025}
+\date{Feb 14, 2025}
 \release{}
 \author{basics}
 \newcommand{\sphinxlogo}{\vbox{}}
@@ -1024,11 +1024,11 @@ or, setting \(\rho(\vec{r}_0) = \) in all the points \(\vec{r} \in V\), \(\vec{r
 \end{equation*}
 \sphinxAtStartPar
 If the gravitational field \(\vec{g}(\vec{r})\) is regular enough for the divergence theorem to hold, it follows
-\begin{equation*}
+\begin{equation}\label{equation:ch/actions-examples:eq:g:flux:V}
 \begin{split}
-  \oint_{\vec{r} \in \partial V} \vec{g}(\vec{r}) \cdot \hat{n}(\vec{r}) = \int_{\vec{r} \in V} \nabla \cdot \vec{g}(\vec{r}) \cdot \hat{n}(\vec{r})- G \int_{\vec{r} \in V} 4 \pi \rho(\vec{r}) \ ,
+  \oint_{\vec{r} \in \partial V} \vec{g}(\vec{r}) \cdot \hat{n}(\vec{r}) = \int_{\vec{r} \in V} \nabla \cdot \vec{g}(\vec{r})  = - G \int_{\vec{r} \in V} 4 \pi \rho(\vec{r}) \ ,
 \end{split}
-\end{equation*}
+\end{equation}
 \sphinxAtStartPar
 or, for the arbitrariety of the volume \(V\),
 \begin{equation*}
@@ -1036,9 +1036,9 @@ or, for the arbitrariety of the volume \(V\),
 \end{equation*}
 \sphinxAtStartPar
 Introducing the gravitational potential \(\phi(\vec{r})\), whose gradient equals the gravitational field \(\nabla \phi = \vec{g}\) by definition, a \sphinxstylestrong{Poisson equation for the gravitational potential} follows
-\begin{equation*}
+\begin{equation}\label{equation:ch/actions-examples:eq:g:poisson}
 \begin{split}- \nabla^2 \phi = 4 \pi G \rho \ .\end{split}
-\end{equation*}
+\end{equation}
 
 \subsection{Elastic Actions: Linear Springs}
 \label{\detokenize{ch/actions-examples:elastic-actions-linear-springs}}
@@ -2409,6 +2409,386 @@ Recasting Lagrange equations as
  \dot{p}_k & =-\dfrac{\partial H}{\partial q^k} + Q_{q^k} \ .
 \end{cases}\end{split}
 \end{equation*}
+\sphinxstepscope
+
+
+\part{Exercises}
+
+\sphinxstepscope
+
+
+\chapter{Dynamics}
+\label{\detokenize{ch/exercises-dynamics:dynamics}}\label{\detokenize{ch/exercises-dynamics:classical-mechanics-exercise-dynamics}}\label{\detokenize{ch/exercises-dynamics::doc}}
+
+\phantomsection \label{exercise:ch/exercises-dynamics-exercise-0}
+
+\begin{sphinxadmonition}{note}{Exercise 7.1}
+
+
+
+\sphinxAtStartPar
+\sphinxstylestrong{todo} Add description of the problem and image
+
+\sphinxAtStartPar
+Find:
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+the pure equations of motion (solution methods: dynamical equilibria, Lagrange II,…) \sphinxstylestrong{done}
+
+\item {} 
+\sphinxAtStartPar
+constraint reactions (solution methods: dynamical equilibria, Lagrange I,…) \sphinxstylestrong{todo}
+
+\item {} 
+\sphinxAtStartPar
+equilibria and their stability \sphinxstylestrong{todo}
+
+\item {} 
+\sphinxAtStartPar
+evolution of the linear(ized) dynamics of the system around stable equilibria \sphinxstylestrong{todo}
+
+\end{itemize}
+\end{sphinxadmonition}
+\subsubsection*{Solution.}
+
+\sphinxAtStartPar
+\sphinxstylestrong{Kinematics.} Using \(x\), \(\theta\) as generalized coordinates,
+\begin{equation*}
+\begin{split}\begin{cases}
+  \vec{r}_A = x \hat{x} \\
+  \vec{r}_B = ( x + \ell \sin \theta ) \hat{x} + \ell \cos \theta \hat{y} \\
+\end{cases}\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}\begin{cases}
+  \vec{v}_A = \dot{x} \hat{x} \\
+  \vec{v}_B = ( \dot{x} + \ell \dot{\theta} \cos \theta ) \hat{x} - \ell \dot{\theta} \sin \theta \hat{y} \\
+\end{cases}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Lagrangian function.}
+\begin{equation*}
+\begin{split}\mathscr{L} = K + U\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}\begin{aligned}
+  K & = \frac{1}{2} m_A |\vec{v}_A|^2 + \frac{1}{2} m_B |\vec{v}_B|^2 = \\
+    & = \frac{1}{2} m_A \dot{x}^2 + \frac{1}{2} m_B \left( \dot{x}^2 + \ell^2 \dot{\theta}^2 + 2 \ell \dot{x} \dot{\theta} \cos \theta  \right) 
+\end{aligned}\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}\begin{aligned}
+  U & = - \frac{1}{2} k x_A^2 + m_B g y_B = \\
+    & = - \frac{1}{2} k x^2 + m_B g \ell \cos \theta  
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Lagrange equations (II type)} RHS of Lagrange equations read
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \dfrac{d}{dt}\left( \frac{\partial \mathscr{L}}{\partial \dot{x}} \right) & = \dfrac{d}{dt} \left( m_A \dot{x} + m_B \dot{x} + m_B \ell \dot{\theta} \cos \theta \right) = \left( m_A + m_B \right) \ddot{x} + m_B \ell \ddot{\theta} \cos \theta - m_B \ell \dot{\theta}^2 \sin \theta \\
+                      \frac{\partial \mathscr{L}}{\partial      x }         & = -k x \\
+\end{aligned}\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}\begin{aligned}
+  \dfrac{d}{dt}\left( \frac{\partial \mathscr{L}}{\partial \dot{\theta}} \right) & = \dfrac{d}{dt} \left( m_B \ell^2 \dot{\theta} + m_B \ell \dot{x} \cos \theta \right) = m_B \ell^2 \ddot{\theta} + m_B \ell \ddot{x} \cos \theta - m_B \ell \dot{x} \dot{\theta} \sin \theta  \\
+                      \frac{\partial \mathscr{L}}{\partial      \theta }         & = - m_B \ell \dot{x} \dot{\theta} \sin \theta - m_B g \ell \sin \theta  \\
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Generalized forces read
+\begin{equation*}
+\begin{split}Q_x = F\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}Q_\theta = C\end{split}
+\end{equation*}
+\sphinxAtStartPar
+so that the pure equations of motion follows from Lagrange equations \(\frac{d}{dt} \left( \frac{\partial \mathscr{L}}{\partial \dot{q}} \right) - \frac{\partial \mathscr{L}}{\partial q} = Q_q\)
+\begin{equation*}
+\begin{split}\begin{cases}
+  \left( m_A + m_B \right) \ddot{x} + m_B \ell \ddot{\theta} \cos \theta - m_B \ell \dot{\theta}^2 \sin \theta + k x = F \\ 
+  m_B \ell^2 \ddot{\theta} + m_B \ell \ddot{x} \cos \theta - m_B \ell \dot{x} \dot{\theta} \sin \theta + m_B \ell \dot{x} \dot{\theta} \sin \theta + m_B g \ell \sin \theta = C \\ 
+\end{cases}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+and after the simplifications
+\begin{equation*}
+\begin{split}\begin{cases}
+  \left( m_A + m_B \right) \ddot{x} + m_B \ell \ddot{\theta} \cos \theta - m_B \ell \dot{\theta}^2 \sin \theta + k x = F \\ 
+  m_B \ell \ddot{x} \cos \theta + m_B \ell^2 \ddot{\theta} + m_B g \ell \sin \theta = C \\ 
+\end{cases}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Obs.} The first equation is the \(x\)\sphinxhyphen{}component of the momentum equation of the whole system. The second equation is the angular momentum equation of the rod around the hinge in \(A\).
+\subsubsection*{Generalized forces on rigid bodies}
+
+\sphinxAtStartPar
+Following the derivation of the {\hyperref[\detokenize{ch/lagrange-rigid-body:classical-mechanics-lagrange-rigid}]{\sphinxcrossref{\DUrole{std,std-ref}{Lagrange equations for rigid bodies}}}}, generalized forces are
+\begin{equation*}
+\begin{split}Q_q = \frac{\partial \vec{r}_G}{\partial q} \cdot \vec{R}^e + \frac{\partial \vec{\theta}}{\partial q} \cdot \vec{M}_G^e\end{split}
+\end{equation*}
+\sphinxAtStartPar
+With the definition of \(\theta_{\delta}\) in the increment of the rigid body motion
+\begin{equation*}
+\begin{split}d \vec{r}_A = d \vec{r}_B + \theta_{\delta} \times (A - B) \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+and writing the resultant of forces and moments as
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \vec{R}^e   & = \sum_i \vec{F}_i \\
+  \vec{M}^e_G & = \sum_i \left( \vec{r}_G - \vec{r}_i \right) \times \vec{F}_i + \sum_i \vec{C}_i \\
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+the generalized force can be recast as
+\begin{equation*}
+\begin{split}\begin{aligned}
+  Q_q 
+  & = \frac{\partial \vec{r}_G}{\partial q} \cdot \vec{R}^e + \frac{\partial \vec{\theta}}{\partial q} \cdot \vec{M}_G^e = \\
+  & = \frac{\partial \vec{r}_G}{\partial q} \cdot \sum_i \vec{F}_i + \frac{\partial \vec{\theta}}{\partial q} \cdot \left[ \sum_i \left( \vec{r}_G - \vec{r}_i \right) \times \vec{F}_i + \sum_i \vec{C}_i  \right] = \\
+  & = \sum_i \left[ \frac{\partial \vec{r}_G}{\partial q} + \frac{\partial \vec{\theta}}{\partial q} \times \left( \vec{r}_G - \vec{r}_i \right) \right] \cdot \vec{F}_i + \sum_i \frac{\partial \vec{\theta}}{\partial q} \cdot \vec{C}_i = \\
+  & = \sum_i \frac{\partial \vec{r}_i}{\partial q} \cdot \vec{F}_i + \sum_i \frac{\partial \vec{\theta}}{\partial q} \cdot \vec{C}_i \ ,
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+i.e. as the contribution of the single forces \(\vec{F}_i\) acting on different points \(\vec{r}_i\) the rigid body and the overall contribution of the couples of forces \(\vec{C}_i\).
+
+\sphinxAtStartPar
+With \(\vec{r}_C\left(q(t),t \right)\) and \(\mathbb{R}\left(q(t), t \right)\),
+\begin{equation*}
+\begin{split}\vec{r}_i(q(t), t) - \vec{r}_C(q(t), t) = \mathbb{R}(q(t), t) \cdot \left( \vec{r}_i^0 - \vec{r}_C^0 \right)\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Time derivative becomes
+\begin{equation*}
+\begin{split}\begin{aligned}
+\vec{v}_i - \vec{v}_C
+ & = \left[ \dot{q}(t) \, \frac{\partial \mathbb{R}}{\partial q} + \frac{\partial \mathbb{R}}{\partial t} \right] \cdot \left( \vec{r}_i^0 - \vec{r}_C^0 \right) = \\
+ & =  \left[ \dot{q}(t) \, \frac{\partial \mathbb{R}}{\partial q} + \frac{\partial \mathbb{R}}{\partial t} \right] \cdot \mathbb{R}^T \cdot \underbrace{\mathbb{R} \cdot \left( \vec{r}_i^0 - \vec{r}_C^0 \right)}_{\vec{r}_i - \vec{r}_C}
+\end{aligned}\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}\begin{aligned}
+  \vec{\omega}_\times & = \dot{\mathbb{R}} \cdot \mathbb{R}^T \\
+  \delta \vec{\theta}_{\times} & = \delta \mathbb{R} \cdot \mathbb{R}^T \\
+  \frac{\partial \vec{\theta}_{\times}}{\partial q} & = \dfrac{\partial \mathbb{R}}{\partial q} \cdot \mathbb{R}^T
+\end{aligned}\end{split}
+\end{equation*}
+
+\phantomsection \label{exercise:ch/exercises-dynamics-exercise-1}
+
+\begin{sphinxadmonition}{note}{Exercise 7.2}
+
+
+
+\sphinxAtStartPar
+\sphinxstylestrong{todo} Add description of the problem and image
+
+\sphinxAtStartPar
+Find:
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+the pure equations of motion (solution methods: dynamical equilibria, Lagrange II, Kinetic energy theorem \sphinxhyphen{} energy conservation \sphinxhyphen{} since the problem has 1 dof,…) \sphinxstylestrong{done}
+
+\item {} 
+\sphinxAtStartPar
+constraint reactions (solution methods: dynamical equilibria, Lagrange I,…) \sphinxstylestrong{todo}
+
+\item {} 
+\sphinxAtStartPar
+equilibria and their stability \sphinxstylestrong{todo}
+
+\item {} 
+\sphinxAtStartPar
+evolution of the linear(ized) dynamics of the system around stable equilibria \sphinxstylestrong{todo}
+
+\end{itemize}
+\end{sphinxadmonition}
+\subsubsection*{Solution}
+
+\sphinxAtStartPar
+\sphinxstylestrong{Geometry.}
+\begin{equation*}
+\begin{split}\begin{aligned}
+  R & = d \sin \alpha \\
+  b & = d \cos^2 \alpha \\
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+so that \(\frac{b}{R} = \frac{\cos^2 \alpha}{\sin \alpha}\).
+
+\sphinxAtStartPar
+\sphinxstylestrong{Kinematics.}
+
+\sphinxAtStartPar
+Position of the center of mass, \(C\)
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \vec{r}_C & = b \cos \theta \hat{x} + b \sin \theta \hat{y} - h \hat{z} \\
+  \vec{v}_C & = -b \dot{\theta} \sin \theta \hat{x} + b \dot{\theta} \cos \theta \hat{y} = b \dot{\theta} \hat{y}_1 \\
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Angular velocity \(\vec{\omega}\) of the rigid body
+\begin{equation*}
+\begin{split}\vec{\omega} = \dot{\theta} \hat{z} + \dot{\varphi} \hat{x}_1\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Velocity of point contact point \(A\) is zero, \(\vec{v}_A = \vec{0}\) for \sphinxstylestrong{pure rolling} constraint. Being \((A-C) = R \hat{z}_1\), the general expression of \(\vec{v}_A\) as function of \(\theta\) and \(\varphi\) reads
+\begin{equation*}
+\begin{split}\begin{aligned}
+ \vec{v}_A
+ & = \vec{v}_C + \vec{\omega} \times \left( A - C \right) = \\
+ & = \hat{y}_1 b \dot{\theta} + \left( \dot{\theta} \hat{z} + \dot{\varphi} \hat{x}_1 \right) \times R \hat{z}_1 = \\
+ & = \hat{y}_1 \left( b \dot{\theta} + R \dot{\theta} \sin \alpha - R \dot{\varphi} \right) = \\
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+so that the kinetatic constraint (integrable, with arbitrary initial condition) between \(\theta\) and \(\varphi\) is
+\begin{equation*}
+\begin{split}R \varphi = \left( R \sin \alpha + b \right) \, \theta \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Lagrangian function.}
+
+\sphinxAtStartPar
+With
+\begin{equation*}
+\begin{split}\mathbb{I}_C = I_{x} \hat{x}_1 \hat{x}_1 + I_{y} \hat{y}_1 \hat{y}_1 + I_{z} \hat{z}_1 \hat{z}_1 \ ,\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}\vec{\omega} = \dot{\theta} \hat{z} + \dot{\varphi} \hat{x}_1 = \left( \dot{\varphi} - \dot{\theta} \sin \alpha  \right) \hat{x}_1 + \dot{\theta} \cos \alpha \hat{z}_1 \end{split}
+\end{equation*}
+\sphinxAtStartPar
+and using
+\begin{equation*}
+\begin{split}\dot{\varphi} - \dot{\theta} \sin \alpha = \frac{b}{R} \dot{\theta} \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+the Lagrangian function becomes
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \mathscr{L} & = K + U = \\
+  & =\frac{1}{2} m |\vec{v}_C|^2 + \frac{1}{2} \vec{\omega} \cdot \mathbb{I}_C \cdot \vec{\omega} + m g x_C = \\
+  & =\frac{1}{2} m b^2 \dot{\theta}^2 + \frac{1}{2} \left[ I_x \left( \dot{\varphi} - \dot{\theta} \sin \alpha \right)^2 + I_z \dot{\theta}^2 \cos^2 \alpha \right] + m g b \cos \theta = \\
+  & =\frac{1}{2} m b^2 \dot{\theta}^2 + \frac{1}{2} \left[ I_x \left( \frac{b}{R} \right)^2 + I_z \cos^2 \alpha \right] \dot{\theta}^2 + m g b \cos \theta = \\
+  & =\frac{1}{2} \widetilde{I} \dot{\theta}^2 + m g b \cos \theta  \ ,
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+with the equivalent inertia
+\begin{equation*}
+\begin{split}\widetilde{I} = m b^2 + I_x \left( \frac{b}{R} \right)^2 + I_z \cos^2 \alpha \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Method 1. Lagrange equation (II).} Legrange equation gives a pure equation of motion
+\begin{equation*}
+\begin{split}\begin{aligned}
+  0 & = \dfrac{d}{dt}\left( \frac{\partial \mathscr{L}}{\partial \dot{\theta}} \right) - \frac{\partial \mathscr{L}}{\partial \theta} = \widetilde{I} \ddot{\theta} + m g b \sin \theta \ . \\
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Method 2. Kinetic energy theorem \sphinxhyphen{} or energy conservation}
+
+
+\phantomsection \label{exercise:ch/exercises-dynamics-exercise-2}
+
+\begin{sphinxadmonition}{note}{Exercise 7.3 (Inverted pendulum)}
+
+
+\end{sphinxadmonition}
+\subsubsection*{Solution}
+
+
+\phantomsection \label{exercise:ch/exercises-dynamics-exercise-3}
+
+\begin{sphinxadmonition}{note}{Exercise 7.4}
+
+
+\end{sphinxadmonition}
+\subsubsection*{Solution}
+
+\sphinxstepscope
+
+
+\chapter{Gravitation}
+\label{\detokenize{ch/exercises-gravitation:gravitation}}\label{\detokenize{ch/exercises-gravitation:classical-mechanics-exercise-gravitation}}\label{\detokenize{ch/exercises-gravitation::doc}}\phantomsection \label{exercise:ch/exercises-gravitation-exercise-0}
+
+\begin{sphinxadmonition}{note}{Exercise 8.1 (Ball falling in a tunnel through a planet)}
+
+
+
+\sphinxAtStartPar
+A ball of mass \(m\) moves through a tunnel drilled through a planet of radius \(R\), mass \(M\) and uniform mass distribution. Neglecting the “mas defect” due to the tunnel in the planet,
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+provide the expression of the force acting on the ball in the tunnel
+
+\item {} 
+\sphinxAtStartPar
+assuming no rotation of the planet, and zero initial velocity of the ball, provide the dynamical equation governing the motion of the ball and integrate it to find the lwa of motion
+
+\end{itemize}
+\end{sphinxadmonition}
+
+\sphinxAtStartPar
+Uniform mass density reads \(\rho = \frac{M}{V} = \frac{M}{\frac{4}{3}\pi R^3}\).
+Exploiting symmetry, the gravitational field can be a function of the distance \(r\) of the center of the planet only, and have radial direction,
+\begin{equation}\label{equation:ch/exercises-gravitation:eq:g:radial}
+\begin{split}\vec{g} = - g(r) \hat{r} \ .\end{split}
+\end{equation}
+\sphinxAtStartPar
+Formula \eqref{equation:ch/actions-examples:eq:g:flux:V} of the flux of the gravitational field,
+\begin{equation*}
+\begin{split}  \oint_{\vec{r} \in \partial V} \vec{g}(\vec{r}) \cdot \hat{n}(\vec{r}) = - G \int_{\vec{r} \in V} 4 \pi \rho(\vec{r}) \end{split}
+\end{equation*}
+\sphinxAtStartPar
+across the surface of a sphere of radius \(r\) \sphinxhyphen{} that has outward pointing unit normal vector \(\hat{n}(\vec{r}) = \hat{r}(\vec{r})\) \sphinxhyphen{}, exploting expression \eqref{equation:ch/exercises-gravitation:eq:g:radial} from symmetry, becomes for \(r < R\)
+\begin{equation*}
+\begin{split}- g(r) 4 \pi r^2 = - G \, 4  \pi \rho \frac{4}{3} \pi r^3 = - 4 \pi G M \frac{r^3}{R^3}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+and thus
+\begin{equation*}
+\begin{split}g(r) = \frac{GM}{R^3} r \ \qquad \rightarrow \qquad \vec{g}(\vec{r}) = - m \frac{G M}{R^3} r \hat{r} = - m \frac{GM}{R^3} \vec{r} \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Force acting on the ball of mass \(m\) thus reads \(\vec{F}(\vec{r}) = m \vec{g}(\vec{r})\). The equation of motion becomes
+\begin{equation*}
+\begin{split}m \ddot{\vec{r}} = \vec{F}(\vec{r}) = - m \frac{G M}{R^3} \vec{r} \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+a linear second\sphinxhyphen{}order ODE with constant coefficients, whose solution provides an harmonic motion with pulsation \(\Omega = \sqrt{\frac{GM}{R^3}}\).
+The solution of this equation, with initial conditions at rest on the surface of the planet,
+\begin{equation*}
+\begin{split}\begin{cases}
+  \vec{r}(0) = \vec{r}_0 = R \hat{r} \\
+  \dot{\vec{r}}(0) = \vec{0}
+\end{cases}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+reads
+\begin{equation*}
+\begin{split}\vec{r}(t) = \vec{r}_0 \cos \left( \sqrt{\dfrac{GM}{R^3}} \, t \right) = \hat{r} \, R \cos \left( \sqrt{\dfrac{GM}{R^3}} \, t \right) \ .\end{split}
+\end{equation*}\phantomsection \label{exercise:ch/exercises-gravitation-exercise-1}
+
+\begin{sphinxadmonition}{note}{Exercise 8.2}
+
+
+
+\sphinxAtStartPar
+Investigate the dynamics of the ball in the previous problem, if the rotational motion of the planet around its axis is considered and if the ball is thrown in the tunnel with non\sphinxhyphen{}zero velocity.
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+Normal actions of the wall of the tunnel on the ball
+
+\item {} 
+\sphinxAtStartPar
+At the end of the tunnel, the ball moves above the planet surface while it’s attracted “downwards”. When the ball comes back to the planet surface, does it target the tunnel?
+
+\end{itemize}
+\end{sphinxadmonition}
+
 
 
 

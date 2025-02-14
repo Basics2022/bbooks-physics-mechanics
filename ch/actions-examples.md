@@ -137,8 +137,8 @@ $$
 If the gravitational field $\vec{g}(\vec{r})$ is regular enough for the divergence theorem to hold, it follows
 
 $$
-  \oint_{\vec{r} \in \partial V} \vec{g}(\vec{r}) \cdot \hat{n}(\vec{r}) = \int_{\vec{r} \in V} \nabla \cdot \vec{g}(\vec{r}) \cdot \hat{n}(\vec{r})- G \int_{\vec{r} \in V} 4 \pi \rho(\vec{r}) \ ,
-$$
+  \oint_{\vec{r} \in \partial V} \vec{g}(\vec{r}) \cdot \hat{n}(\vec{r}) = \int_{\vec{r} \in V} \nabla \cdot \vec{g}(\vec{r})  = - G \int_{\vec{r} \in V} 4 \pi \rho(\vec{r}) \ ,
+$$ (eq:g:flux:V)
 
 or, for the arbitrariety of the volume $V$,
 
@@ -146,7 +146,7 @@ $$- \nabla \cdot \vec{g} = 4 \pi G \rho \ .$$
 
 Introducing the gravitational potential $\phi(\vec{r})$, whose gradient equals the gravitational field $\nabla \phi = \vec{g}$ by definition, a **Poisson equation for the gravitational potential** follows
 
-$$- \nabla^2 \phi = 4 \pi G \rho \ .$$
+$$- \nabla^2 \phi = 4 \pi G \rho \ .$$ (eq:g:poisson)
 
 
 ## Elastic Actions: Linear Springs

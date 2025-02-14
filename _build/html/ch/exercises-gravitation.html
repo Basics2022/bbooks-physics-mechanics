@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>4.2. Equations of Motion and Conservation Principles &#8212; Classical Mechanics</title>
+    <title>8. Gravitation &#8212; Classical Mechanics</title>
   
   
   
@@ -66,12 +66,11 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'ch/dynamics-eom';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'ch/exercises-gravitation';</script>
     <link rel="shortcut icon" href="../_static/favicon.svg"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="4.3. Equations of motion of a point mass" href="dynamics-eom-point.html" />
-    <link rel="prev" title="4.1. Principles of Newtonian Mechanics" href="dynamics-principles.html" />
+    <link rel="prev" title="7. Dynamics" href="exercises-dynamics.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -166,7 +165,7 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Newton Mechanics</span></p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="kinematics.html">1. Kinematics</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="kinematics-point.html">1.3. Point</a></li>
 <li class="toctree-l2"><a class="reference internal" href="kinematics-rigid.html">1.4. Rigid Body</a></li>
@@ -184,9 +183,9 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="inertia.html">3. Inertia</a></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="dynamics.html">4. Dynamics</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l1 has-children"><a class="reference internal" href="dynamics.html">4. Dynamics</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="dynamics-principles.html">4.1. Principles of Newtonian Mechanics</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">4.2. Equations of Motion and Conservation Principles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dynamics-eom.html">4.2. Equations of Motion and Conservation Principles</a></li>
 <li class="toctree-l2"><a class="reference internal" href="dynamics-eom-point.html">4.3. Equations of motion of a point mass</a></li>
 <li class="toctree-l2"><a class="reference internal" href="dynamics-eom-points.html">4.4. Equations of motion of a discrete system of point masses</a></li>
 <li class="toctree-l2"><a class="reference internal" href="dynamics-eom-rigid.html">4.5. Equations of motion of a rigid body</a></li>
@@ -207,9 +206,9 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="hamilton.html">6. Hamiltonian Mechanics</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Exercises</span></p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="exercises-dynamics.html">7. Dynamics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="exercises-gravitation.html">8. Gravitation</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">8. Gravitation</a></li>
 </ul>
 
     </div>
@@ -264,7 +263,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/ch/dynamics-eom.md" target="_blank"
+      <li><a href="../_sources/ch/exercises-gravitation.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -335,9 +334,7 @@ document.write(`
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</label>
+
 </div></div>
       
     </div>
@@ -348,20 +345,11 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Equations of Motion and Conservation Principles</h1>
+    <h1>Gravitation</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#equations-of-motion">4.2.1. Equations of Motion</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conservation-principles">4.2.2. Conservation Principles</a></li>
-</ul>
-            </nav>
         </div>
     </div>
 </div>
@@ -371,56 +359,55 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <div class="tex2jax_ignore mathjax_ignore section" id="equations-of-motion-and-conservation-principles">
-<span id="classical-mechanics-dynamics-eom"></span><h1><span class="section-number">4.2. </span>Equations of Motion and Conservation Principles<a class="headerlink" href="#equations-of-motion-and-conservation-principles" title="Permalink to this heading">#</a></h1>
-<p>Starting from the <a class="reference internal" href="dynamics-principles.html#classical-mechanics-dynamics-principles"><span class="std std-ref">principles of Newtonian mechanics</span></a>, it is possible to derive the dynamical equations governing the motion of mechanical systems. These equations governs the change of dynamical quantities, <strong>momentum</strong>, <strong>angular momentum</strong>, <strong>kinetic energy</strong>, linking them to (external) <strong>forces</strong>, (external) <strong>moments</strong> and (total) <strong>power</strong>. Under certain conditions, and only in these cases, the <a class="reference internal" href="#classical-mechanics-dynamics-eom-eom"><span class="std std-ref">cardinal equations</span></a> of dynamics become<a class="reference internal" href="#classical-mechanics-dynamics-eom-conservation"><span class="std std-ref">principles of conservation of dynamic quantities</span></a>: by observing the expressions of the cardinal equations, it is easy to infer that the condition to obtain a conservation principle is the vanishing of all terms except for the time derivative of the conserved quantity.</p>
-<!--
-The general form of these equations is easily expressed in terms of the dynamical quantities discussed in the inertia section,
+  <div class="tex2jax_ignore mathjax_ignore section" id="gravitation">
+<span id="classical-mechanics-exercise-gravitation"></span><h1><span class="section-number">8. </span>Gravitation<a class="headerlink" href="#gravitation" title="Permalink to this heading">#</a></h1>
+<div class="exercise admonition" id="ch/exercises-gravitation-exercise-0">
 
-$$\begin{aligned}
- \dfrac{d \vec{Q}       }{dt} & = \vec{R}^e                               & \qquad \text{(momentum balance equation)} \\
- \dfrac{d \vec{\Gamma}_H}{dt} & = -\vec{r}_H \times \vec{Q} + \vec{M}^e_H & \qquad \text{(angular momentum balance equation)} \\
- \dfrac{d      K        }{dt} & = P^{tot}                                 & \qquad \text{(kinetic energy balance equation)} \\
-\end{aligned}$$
-
-for every mechanical (closed) system. These equations will be derived for different systems in the following sections: point mass, system of particles, rigid body.
-
-Using the concepts of momentum, angular momentum, and the kinetic energy of a system, we can write the 3 cardinal equations of dynamics in a form valid for **every closed system**. Under certain conditions, and only in these cases, the cardinal equations of dynamics represent principles of conservation of dynamic quantities: by observing the expressions of the cardinal equations, it is easy to infer that the condition to obtain a conservation principle is the vanishing of all terms except for the time derivative of the conserved quantity.
--->
-<div class="section" id="equations-of-motion">
-<span id="classical-mechanics-dynamics-eom-eom"></span><h2><span class="section-number">4.2.1. </span>Equations of Motion<a class="headerlink" href="#equations-of-motion" title="Permalink to this heading">#</a></h2>
-<p>The general form of these equations is easily expressed in terms of the dynamical quantities discussed in the section about <span class="xref myst">inertia</span>. Cardinal equations, or equations of motion, are collected here in their most general form for closed systems, and derived in the following sectinos for different systems: <a class="reference internal" href="dynamics-eom-point.html#classical-mechanics-dynamics-eom-point"><span class="std std-ref">point mass</span></a>, <a class="reference internal" href="dynamics-eom-points.html#classical-mechanics-dynamics-eom-points"><span class="std std-ref">systems of point masses</span></a>, <a class="reference internal" href="dynamics-eom-rigid.html#classical-mechanics-dynamics-eom-rigid"><span class="std std-ref">rigid body</span></a>,…</p>
-<p><strong>Momentum Balance.</strong> The time derivative of the momentum is equal to the resultant of the external forces,</p>
-<div class="math notranslate nohighlight" id="equation-principle-q">
-<span class="eqno">(4.1)<a class="headerlink" href="#equation-principle-q" title="Permalink to this equation">#</a></span>\[\dot{\vec{Q}} = \vec{R}^e \ .\]</div>
-<p><strong>Angular Momentum Balance with respect to a point <span class="math notranslate nohighlight">\(H\)</span>.</strong> The time derivative of the angular momentum with respect to a point <span class="math notranslate nohighlight">\(H\)</span>, minus the “transport term,” is equal to the resultant of the external moments with respect to the point <span class="math notranslate nohighlight">\(H\)</span>,</p>
-<div class="math notranslate nohighlight" id="equation-principle-l">
-<span class="eqno">(4.2)<a class="headerlink" href="#equation-principle-l" title="Permalink to this equation">#</a></span>\[\dot{\vec{L}}_H + \dot{\vec{x}}_H \times \vec{Q} = \vec{M}_H^e \ .\]</div>
-<p><strong>Kinetic Energy Balance.</strong> The time derivative of the kinetic energy is equal to the total power acting on the system, which is the sum of the power of the external actions and the power of the internal actions within the system,</p>
-<div class="math notranslate nohighlight" id="equation-principle-k">
-<span class="eqno">(4.3)<a class="headerlink" href="#equation-principle-k" title="Permalink to this equation">#</a></span>\[\dot{K} = P^{tot} = P^e + P^i\]</div>
+<p class="admonition-title"><span class="caption-number">Exercise 8.1 </span> (Ball falling in a tunnel through a planet)</p>
+<div class="section" id="exercise-content">
+<p>A ball of mass <span class="math notranslate nohighlight">\(m\)</span> moves through a tunnel drilled through a planet of radius <span class="math notranslate nohighlight">\(R\)</span>, mass <span class="math notranslate nohighlight">\(M\)</span> and uniform mass distribution. Neglecting the “mas defect” due to the tunnel in the planet,</p>
+<ul class="simple">
+<li><p>provide the expression of the force acting on the ball in the tunnel</p></li>
+<li><p>assuming no rotation of the planet, and zero initial velocity of the ball, provide the dynamical equation governing the motion of the ball and integrate it to find the lwa of motion</p></li>
+</ul>
 </div>
-<div class="section" id="conservation-principles">
-<span id="classical-mechanics-dynamics-eom-conservation"></span><h2><span class="section-number">4.2.2. </span>Conservation Principles<a class="headerlink" href="#conservation-principles" title="Permalink to this heading">#</a></h2>
-<p>Under certain condiitons, equations of motion become principles of conservation of dynamical quantities. These conditions are easily derived by inspection of the equations of motion, nullyfing the causes of change of the dynamical quantities. Beside the conservation of momentum, angular momentum and kinetic energy, a <strong>principle of conservation of mechanical energy</strong> arises when actions acting on the system are <a class="reference internal" href="actions-conservative.html#classical-mechanics-actions-conservative"><span class="std std-ref">conservative</span></a>, so that its power can be written as a time derivative of a potential energy.</p>
-<p><strong>Conservation of Momentum in the presence of zero net external forces.</strong> If the resultant of the external forces is zero, <span class="math notranslate nohighlight">\(\vec{R}^e = \vec{0}\)</span>, from the momentum balance, we immediately obtain</p>
+</div>
+<p>Uniform mass density reads <span class="math notranslate nohighlight">\(\rho = \frac{M}{V} = \frac{M}{\frac{4}{3}\pi R^3}\)</span>.
+Exploiting symmetry, the gravitational field can be a function of the distance <span class="math notranslate nohighlight">\(r\)</span> of the center of the planet only, and have radial direction,</p>
+<div class="math notranslate nohighlight" id="equation-eq-g-radial">
+<span class="eqno">(8.1)<a class="headerlink" href="#equation-eq-g-radial" title="Permalink to this equation">#</a></span>\[\vec{g} = - g(r) \hat{r} \ .\]</div>
+<p>Formula <a class="reference internal" href="actions-examples.html#equation-eq-g-flux-v">(2.4)</a> of the flux of the gravitational field,</p>
 <div class="math notranslate nohighlight">
-\[\dot{\vec{Q}} = \vec{0} \qquad \rightarrow \qquad \vec{Q} = \bar{\vec{Q}} = \text{const.}\]</div>
-<p><strong>Conservation of Angular Momentum in the presence of zero net external moments.</strong> If the choice of the point <span class="math notranslate nohighlight">\(H\)</span> nullifies the transport term, <span class="math notranslate nohighlight">\(\dot{\vec{r}}_H \times \vec{Q} = \vec{0}\)</span>, and if the resultant of the external moments is zero, <span class="math notranslate nohighlight">\(\vec{M}^e_H = \vec{0}\)</span>, from the angular momentum balance, we immediately obtain</p>
+\[  \oint_{\vec{r} \in \partial V} \vec{g}(\vec{r}) \cdot \hat{n}(\vec{r}) = - G \int_{\vec{r} \in V} 4 \pi \rho(\vec{r}) \]</div>
+<p>across the surface of a sphere of radius <span class="math notranslate nohighlight">\(r\)</span> - that has outward pointing unit normal vector <span class="math notranslate nohighlight">\(\hat{n}(\vec{r}) = \hat{r}(\vec{r})\)</span> -, exploting expression <a class="reference internal" href="#equation-eq-g-radial">(8.1)</a> from symmetry, becomes for <span class="math notranslate nohighlight">\(r &lt; R\)</span></p>
 <div class="math notranslate nohighlight">
-\[\dot{\vec{L}}_H = \vec{0} \qquad \rightarrow \qquad \vec{L}_H = \bar{\vec{L}}_H = \text{const.}\]</div>
-<p><strong>Conservation of Kinetic Energy in the presence of zero total power.</strong> If the total power of the actions on the system is zero, <span class="math notranslate nohighlight">\(P^{tot} = 0\)</span>, from the kinetic energy balance, we immediately obtain</p>
+\[- g(r) 4 \pi r^2 = - G \, 4  \pi \rho \frac{4}{3} \pi r^3 = - 4 \pi G M \frac{r^3}{R^3}\]</div>
+<p>and thus</p>
 <div class="math notranslate nohighlight">
-\[\dot{K} = 0 \qquad \rightarrow \qquad K = \bar{K} = \text{const.}\]</div>
-<p><strong>Conservation of Mechanical Energy in the absence of non-conservative forces.</strong> In addition to the three conservation principles directly derived from the cardinal equations, we add the principle of the conservation of mechanical energy, which is the sum of the system’s kinetic and potential energy,</p>
+\[g(r) = \frac{GM}{R^3} r \ \qquad \rightarrow \qquad \vec{g}(\vec{r}) = - m \frac{G M}{R^3} r \hat{r} = - m \frac{GM}{R^3} \vec{r} \ .\]</div>
+<p>Force acting on the ball of mass <span class="math notranslate nohighlight">\(m\)</span> thus reads <span class="math notranslate nohighlight">\(\vec{F}(\vec{r}) = m \vec{g}(\vec{r})\)</span>. The equation of motion becomes</p>
 <div class="math notranslate nohighlight">
-\[E^{mech} = K + V \ ,\]</div>
-<p>in the absence of non-conservative actions. If there are no non-conservative forces, the power of the actions on the system can be written as the negative of the time derivative of the system’s potential energy,</p>
+\[m \ddot{\vec{r}} = \vec{F}(\vec{r}) = - m \frac{G M}{R^3} \vec{r} \ ,\]</div>
+<p>a linear second-order ODE with constant coefficients, whose solution provides an harmonic motion with pulsation <span class="math notranslate nohighlight">\(\Omega = \sqrt{\frac{GM}{R^3}}\)</span>.
+The solution of this equation, with initial conditions at rest on the surface of the planet,</p>
 <div class="math notranslate nohighlight">
-\[P^{tot} = -\dot{V}\]</div>
-<p>From the kinetic energy balance, we get</p>
+\[\begin{split}\begin{cases}
+  \vec{r}(0) = \vec{r}_0 = R \hat{r} \\
+  \dot{\vec{r}}(0) = \vec{0}
+\end{cases}\end{split}\]</div>
+<p>reads</p>
 <div class="math notranslate nohighlight">
-\[\dot{K} = - \dot{V} \qquad \rightarrow \qquad \dfrac{d}{dt}(K+V) = 0 \qquad \rightarrow \qquad \dot{E}^{mech} = 0 \qquad \rightarrow \qquad E^{mech} = \bar{E}^{mech} = \text{const.}\]</div>
+\[\vec{r}(t) = \vec{r}_0 \cos \left( \sqrt{\dfrac{GM}{R^3}} \, t \right) = \hat{r} \, R \cos \left( \sqrt{\dfrac{GM}{R^3}} \, t \right) \ .\]</div>
+<div class="exercise admonition" id="ch/exercises-gravitation-exercise-1">
+
+<p class="admonition-title"><span class="caption-number">Exercise 8.2 </span></p>
+<div class="section" id="exercise-content">
+<p>Investigate the dynamics of the ball in the previous problem, if the rotational motion of the planet around its axis is considered and if the ball is thrown in the tunnel with non-zero velocity.</p>
+<ul class="simple">
+<li><p>Normal actions of the wall of the tunnel on the ball</p></li>
+<li><p>At the end of the tunnel, the ball moves above the planet surface while it’s attracted “downwards”. When the ball comes back to the planet surface, does it target the tunnel?</p></li>
+</ul>
+</div>
 </div>
 </div>
 
@@ -455,22 +442,13 @@ Using the concepts of momentum, angular momentum, and the kinetic energy of a sy
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="dynamics-principles.html"
+       href="exercises-dynamics.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">4.1. </span>Principles of Newtonian Mechanics</p>
+        <p class="prev-next-title"><span class="section-number">7. </span>Dynamics</p>
       </div>
-    </a>
-    <a class="right-next"
-       href="dynamics-eom-point.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">4.3. </span>Equations of motion of a point mass</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
@@ -478,21 +456,6 @@ Using the concepts of momentum, angular momentum, and the kinetic energy of a sy
             </div>
             
             
-              
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#equations-of-motion">4.2.1. Equations of Motion</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conservation-principles">4.2.2. Conservation Principles</a></li>
-</ul>
-  </nav></div>
-
-</div></div>
               
             
           </div>

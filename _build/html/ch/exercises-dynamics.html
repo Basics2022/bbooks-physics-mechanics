@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>4.5. Equations of motion of a rigid body &#8212; Classical Mechanics</title>
+    <title>7. Dynamics &#8212; Classical Mechanics</title>
   
   
   
@@ -66,12 +66,12 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'ch/dynamics-eom-rigid';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'ch/exercises-dynamics';</script>
     <link rel="shortcut icon" href="../_static/favicon.svg"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="4.6. Equations of motion for continuous media" href="dynamics-eom-continuum.html" />
-    <link rel="prev" title="4.4. Equations of motion of a discrete system of point masses" href="dynamics-eom-points.html" />
+    <link rel="next" title="8. Gravitation" href="exercises-gravitation.html" />
+    <link rel="prev" title="6. Hamiltonian Mechanics" href="hamilton.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -166,7 +166,7 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Newton Mechanics</span></p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="kinematics.html">1. Kinematics</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="kinematics-point.html">1.3. Point</a></li>
 <li class="toctree-l2"><a class="reference internal" href="kinematics-rigid.html">1.4. Rigid Body</a></li>
@@ -184,12 +184,12 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="inertia.html">3. Inertia</a></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="dynamics.html">4. Dynamics</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l1 has-children"><a class="reference internal" href="dynamics.html">4. Dynamics</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="dynamics-principles.html">4.1. Principles of Newtonian Mechanics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="dynamics-eom.html">4.2. Equations of Motion and Conservation Principles</a></li>
 <li class="toctree-l2"><a class="reference internal" href="dynamics-eom-point.html">4.3. Equations of motion of a point mass</a></li>
 <li class="toctree-l2"><a class="reference internal" href="dynamics-eom-points.html">4.4. Equations of motion of a discrete system of point masses</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">4.5. Equations of motion of a rigid body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dynamics-eom-rigid.html">4.5. Equations of motion of a rigid body</a></li>
 <li class="toctree-l2"><a class="reference internal" href="dynamics-eom-continuum.html">4.6. Equations of motion for continuous media</a></li>
 <li class="toctree-l2"><a class="reference internal" href="dynamics-motions.html">4.7. Particular Motions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="dynamics-equilibrium-stability.html">4.8. Equilibrium and Stability</a></li>
@@ -207,8 +207,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="hamilton.html">6. Hamiltonian Mechanics</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Exercises</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="exercises-dynamics.html">7. Dynamics</a></li>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">7. Dynamics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="exercises-gravitation.html">8. Gravitation</a></li>
 </ul>
 
@@ -264,7 +264,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/ch/dynamics-eom-rigid.md" target="_blank"
+      <li><a href="../_sources/ch/exercises-dynamics.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -335,9 +335,7 @@ document.write(`
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</label>
+
 </div></div>
       
     </div>
@@ -348,21 +346,11 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Equations of motion of a rigid body</h1>
+    <h1>Dynamics</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-equations">4.5.1. General equations</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dynamical-equations-w-r-t-the-center-of-mass-g">4.5.2. Dynamical equations w.r.t. the center of mass <span class="math notranslate nohighlight">\(G\)</span></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dynamical-equations-w-r-t-a-material-point-q">4.5.3. Dynamical equations w.r.t. a material point <span class="math notranslate nohighlight">\(Q\)</span></a></li>
-</ul>
-            </nav>
         </div>
     </div>
 </div>
@@ -372,130 +360,239 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <!--
-```{article-info}
-:author: basics
-:date: "{sub-ref}`today`"
-:read-time: "{sub-ref}`wordcount-minutes` min read"
-```
--->
-<div class="tex2jax_ignore mathjax_ignore section" id="equations-of-motion-of-a-rigid-body">
-<span id="classical-mechanics-dynamics-eom-rigid"></span><h1><span class="section-number">4.5. </span>Equations of motion of a rigid body<a class="headerlink" href="#equations-of-motion-of-a-rigid-body" title="Permalink to this heading">#</a></h1>
-<p>With different choices of the reference point <span class="math notranslate nohighlight">\(H\)</span>, the general expression of dynamical equations may have different, but equivalent, forms.</p>
-<div class="section" id="general-equations">
-<h2><span class="section-number">4.5.1. </span>General equations<a class="headerlink" href="#general-equations" title="Permalink to this heading">#</a></h2>
-<p><strong>Momentum balance equation.</strong></p>
-<div class="math notranslate nohighlight">
-\[\dfrac{d}{dt} \vec{Q} = \vec{R}^e\]</div>
-<p><strong>Angular momentum balance equation.</strong></p>
-<div class="math notranslate nohighlight">
-\[\dfrac{d}{dt} \vec{L}_H + \dot{\vec{x}}_H \times \vec{Q} = \vec{M}_H^e\]</div>
-<p><strong>Kinetic energy balance equation.</strong></p>
-<div class="math notranslate nohighlight">
-\[\dfrac{d}{dt} K = P^{tot}\]</div>
+  <div class="tex2jax_ignore mathjax_ignore section" id="dynamics">
+<span id="classical-mechanics-exercise-dynamics"></span><h1><span class="section-number">7. </span>Dynamics<a class="headerlink" href="#dynamics" title="Permalink to this heading">#</a></h1>
+<!-- Exercise -->
+<div class="exercise admonition" id="ch/exercises-dynamics-exercise-0">
+
+<p class="admonition-title"><span class="caption-number">Exercise 7.1 </span></p>
+<div class="section" id="exercise-content">
+<p><strong>todo</strong> Add description of the problem and image</p>
+<p>Find:</p>
+<ul class="simple">
+<li><p>the pure equations of motion (solution methods: dynamical equilibria, Lagrange II,…) <strong>done</strong></p></li>
+<li><p>constraint reactions (solution methods: dynamical equilibria, Lagrange I,…) <strong>todo</strong></p></li>
+<li><p>equilibria and their stability <strong>todo</strong></p></li>
+<li><p>evolution of the linear(ized) dynamics of the system around stable equilibria <strong>todo</strong></p></li>
+</ul>
 </div>
-<div class="section" id="dynamical-equations-w-r-t-the-center-of-mass-g">
-<h2><span class="section-number">4.5.2. </span>Dynamical equations w.r.t. the center of mass <span class="math notranslate nohighlight">\(G\)</span><a class="headerlink" href="#dynamical-equations-w-r-t-the-center-of-mass-g" title="Permalink to this heading">#</a></h2>
-<p><strong>Momentum, angular momentum and kinetic energy</strong></p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{cases}
- \vec{Q} = m \vec{v}_G \\
- \vec{L}_G = \mathbb{I}_G \cdot \vec{\omega} \\
- K = \frac{1}{2} m |\vec{v}_G|^2 + \frac{1}{2} \vec{\omega} \cdot \mathbb{I}_G \cdot \vec{\omega} \\
-\end{cases}
-\qquad , \qquad
-\begin{cases}
- \dot{\vec{Q}} = m \dot{\vec{v}}_G \\
- \dot{\vec{L}}_G = \mathbb{I}_G \cdot \dot{\vec{\omega}} + \vec{\omega} \times \mathbb{I}_G \cdot \vec{\omega} \\
- \dot{K} = m \vec{v}_G \cdot \dot{\vec{v}}_G + \vec{\omega} \cdot \mathbb{I}_G \cdot \dot{\vec{\omega}}
-\end{cases}
-\end{split}\]</div>
-<p><strong>Equations of motion.</strong></p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{cases}
- \dot{\vec{Q}} = \vec{R}^e \\
- \dot{\vec{L}}_G = \vec{M}_G^e \\
-\end{cases}
-\qquad , \qquad
-\begin{cases}
- m \dot{\vec{v}}_G = \vec{R}^e \\
- \mathbb{I}_G \cdot \dot{\vec{\omega}} + \vec{\omega} \times \mathbb{I}_G \cdot \vec{\omega} = \vec{M}_G^e \\
-\end{cases}
-\end{split}\]</div>
+</div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-Time derivative of kinetic energy<div class="sd-summary-down docutils">
+Solution.<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><strong>Kinematics.</strong> Using <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(\theta\)</span> as generalized coordinates,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{cases}
+  \vec{r}_A = x \hat{x} \\
+  \vec{r}_B = ( x + \ell \sin \theta ) \hat{x} + \ell \cos \theta \hat{y} \\
+\end{cases}\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{cases}
+  \vec{v}_A = \dot{x} \hat{x} \\
+  \vec{v}_B = ( \dot{x} + \ell \dot{\theta} \cos \theta ) \hat{x} - \ell \dot{\theta} \sin \theta \hat{y} \\
+\end{cases}\end{split}\]</div>
+<p class="sd-card-text"><strong>Lagrangian function.</strong></p>
+<div class="math notranslate nohighlight">
+\[\mathscr{L} = K + U\]</div>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
-  \dfrac{d K}{dt}
-  &amp; = \dfrac{1}{2} \dfrac{d}{dt} \left( \vec{v}_G \cdot \vec{Q} + \vec{\omega}_G \cdot \vec{L}_G \right) = \\
-  &amp; = \dfrac{1}{2} \left( \dot{\vec{v}}_G \cdot m \vec{v}_G + \vec{v}_G \cdot m \dot{\vec{v}}_G + \dot{\vec{\omega}} \cdot \mathbb{I}_G \cdot \vec{\omega} + \vec{\omega} \cdot \left(  \mathbb{I} \cdot \dot{\vec{\omega}} + \vec{\omega} \times \mathbb{I}_G \cdot \vec{\omega} \right) \right) \\
-  &amp; = \vec{v}_G \cdot m \dot{\vec{v}}_G + \vec{\omega} \cdot \mathbb{I}_G \cdot \dot{\vec{\omega}} \\
-  &amp; = \vec{v}_G \cdot \dot{\vec{Q}} + \vec{\omega} \cdot \dot{\vec{L}}_G \\
-  &amp; = \dot{\vec{v}}_G \cdot \vec{Q} + \dot{\vec{\omega}} \cdot \vec{L}_G \ .
+  K &amp; = \frac{1}{2} m_A |\vec{v}_A|^2 + \frac{1}{2} m_B |\vec{v}_B|^2 = \\
+    &amp; = \frac{1}{2} m_A \dot{x}^2 + \frac{1}{2} m_B \left( \dot{x}^2 + \ell^2 \dot{\theta}^2 + 2 \ell \dot{x} \dot{\theta} \cos \theta  \right) 
 \end{aligned}\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  U &amp; = - \frac{1}{2} k x_A^2 + m_B g y_B = \\
+    &amp; = - \frac{1}{2} k x^2 + m_B g \ell \cos \theta  
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text"><strong>Lagrange equations (II type)</strong> RHS of Lagrange equations read</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \dfrac{d}{dt}\left( \frac{\partial \mathscr{L}}{\partial \dot{x}} \right) &amp; = \dfrac{d}{dt} \left( m_A \dot{x} + m_B \dot{x} + m_B \ell \dot{\theta} \cos \theta \right) = \left( m_A + m_B \right) \ddot{x} + m_B \ell \ddot{\theta} \cos \theta - m_B \ell \dot{\theta}^2 \sin \theta \\
+                      \frac{\partial \mathscr{L}}{\partial      x }         &amp; = -k x \\
+\end{aligned}\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \dfrac{d}{dt}\left( \frac{\partial \mathscr{L}}{\partial \dot{\theta}} \right) &amp; = \dfrac{d}{dt} \left( m_B \ell^2 \dot{\theta} + m_B \ell \dot{x} \cos \theta \right) = m_B \ell^2 \ddot{\theta} + m_B \ell \ddot{x} \cos \theta - m_B \ell \dot{x} \dot{\theta} \sin \theta  \\
+                      \frac{\partial \mathscr{L}}{\partial      \theta }         &amp; = - m_B \ell \dot{x} \dot{\theta} \sin \theta - m_B g \ell \sin \theta  \\
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text">Generalized forces read</p>
+<div class="math notranslate nohighlight">
+\[Q_x = F\]</div>
+<div class="math notranslate nohighlight">
+\[Q_\theta = C\]</div>
+<p class="sd-card-text">so that the pure equations of motion follows from Lagrange equations <span class="math notranslate nohighlight">\(\frac{d}{dt} \left( \frac{\partial \mathscr{L}}{\partial \dot{q}} \right) - \frac{\partial \mathscr{L}}{\partial q} = Q_q\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{cases}
+  \left( m_A + m_B \right) \ddot{x} + m_B \ell \ddot{\theta} \cos \theta - m_B \ell \dot{\theta}^2 \sin \theta + k x = F \\ 
+  m_B \ell^2 \ddot{\theta} + m_B \ell \ddot{x} \cos \theta - m_B \ell \dot{x} \dot{\theta} \sin \theta + m_B \ell \dot{x} \dot{\theta} \sin \theta + m_B g \ell \sin \theta = C \\ 
+\end{cases}\end{split}\]</div>
+<p class="sd-card-text">and after the simplifications</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{cases}
+  \left( m_A + m_B \right) \ddot{x} + m_B \ell \ddot{\theta} \cos \theta - m_B \ell \dot{\theta}^2 \sin \theta + k x = F \\ 
+  m_B \ell \ddot{x} \cos \theta + m_B \ell^2 \ddot{\theta} + m_B g \ell \sin \theta = C \\ 
+\end{cases}\end{split}\]</div>
+<p class="sd-card-text"><strong>Obs.</strong> The first equation is the <span class="math notranslate nohighlight">\(x\)</span>-component of the momentum equation of the whole system. The second equation is the angular momentum equation of the rod around the hinge in <span class="math notranslate nohighlight">\(A\)</span>.</p>
 </div>
-</details></div>
-<div class="section" id="dynamical-equations-w-r-t-a-material-point-q">
-<h2><span class="section-number">4.5.3. </span>Dynamical equations w.r.t. a material point <span class="math notranslate nohighlight">\(Q\)</span><a class="headerlink" href="#dynamical-equations-w-r-t-a-material-point-q" title="Permalink to this heading">#</a></h2>
-<p><strong>Momentum, angular momentum and kinetic energy</strong></p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{cases}
- \vec{Q} = m \vec{v}_Q + \mathbb{S}_Q \cdot \vec{\omega} \\
- \vec{L}_Q = \mathbb{S}_Q^T \cdot \vec{v}_Q + \mathbb{I}_Q \cdot \vec{\omega} \\
- K = \dfrac{1}{2} \vec{v}_Q \cdot \vec{Q} + \dfrac{1}{2} \vec{\omega} \cdot \vec{L}_Q
-\end{cases}
-\qquad , \qquad
-\begin{cases}
- \dot{\vec{Q}} = m \dot{\vec{v}}_Q + \mathbb{S}_Q \cdot \dot{\vec{\omega}} + \vec{\omega} \times \mathbb{S}_Q \cdot \vec{\omega} \\
- \dot{\vec{L}}_Q =
-   \left[ \mathbb{S}_Q^T \cdot \left( \dot{v}_Q - \vec{\omega} \times \vec{v}_Q \right) + \mathbb{I} \cdot \dot{\vec{\omega}} \right] 
- + \vec{\omega} \times ( \mathbb{S}_Q^T \cdot \vec{v}_Q + \mathbb{I}_Q \cdot \vec{\omega} ) \\
- \dot{K} = \dots
-\end{cases}
-\end{split}\]</div>
-<p><strong>Equations of motion.</strong></p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{cases}
- \dot{\vec{Q}} = \vec{R}^e \\
- \dot{\vec{L}}_Q + \vec{v}_Q \times \vec{Q} = \vec{M}_Q^e \\
-\end{cases}
-\end{split}\]</div>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{cases}
- m \dot{\vec{v}}_Q + \mathbb{S}_Q \cdot \dot{\vec{\omega}} + \vec{\omega} \times \mathbb{S}_Q \cdot \vec{\omega} = \vec{R}^e \\
- \left[ \mathbb{S}_Q^T \cdot \left( \dot{v}_Q - \vec{\omega} \times \vec{v}_Q \right) + \mathbb{I} \cdot \dot{\vec{\omega}} \right] 
- + \vec{\omega} \times ( \mathbb{S}_Q^T \cdot \vec{v}_Q + \mathbb{I}_Q \cdot \vec{\omega} ) + \vec{v}_Q \times \left[  m \vec{v}_Q + \mathbb{S}_Q \cdot \vec{\omega}   \right] = \vec{M}_Q^e \\
-\end{cases}
-\end{split}\]</div>
-<p>or using the “material time derivative”</p>
-<div class="math notranslate nohighlight">
-\[\dfrac{{}^0 d}{dt} \underline{\hspace{10pt}} = \dfrac{d}{dt} \underline{\hspace{10pt}} - \vec{\omega} \times \underline{\hspace{10pt}} \ ,\]</div>
-<p>and matrix formalism to write these two vector equations</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{bmatrix} m \mathbb{I} &amp; \mathbb{S}_Q \\ \mathbb{S}_Q^T &amp; \mathbb{I}_Q \end{bmatrix} \, \dfrac{{}^0 d}{dt} \begin{bmatrix} \vec{v}_Q \\ \vec{\omega} \end{bmatrix} + \begin{bmatrix} \vec{\omega}_\times &amp; \vec{0} \\ \vec{v}_{Q \times} &amp; \vec{\omega}_{\times} \end{bmatrix} \begin{bmatrix} m \mathbb{I} &amp; \mathbb{S}_Q \\ \mathbb{S}_Q^T &amp; \mathbb{I}_Q \end{bmatrix} \begin{bmatrix} \vec{v}_Q \\ \vec{\omega} \end{bmatrix} = \begin{bmatrix} \vec{R}^e \\ \vec{M}_Q^e \end{bmatrix} \ .
-\end{split}\]</div>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
 <summary class="sd-summary-title sd-card-header">
-Starting from differential equations<div class="sd-summary-down docutils">
+Generalized forces on rigid bodies<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text"><strong>todo</strong></p>
+<p class="sd-card-text">Following the derivation of the <a class="reference internal" href="lagrange-rigid-body.html#classical-mechanics-lagrange-rigid"><span class="std std-ref">Lagrange equations for rigid bodies</span></a>, generalized forces are</p>
+<div class="math notranslate nohighlight">
+\[Q_q = \frac{\partial \vec{r}_G}{\partial q} \cdot \vec{R}^e + \frac{\partial \vec{\theta}}{\partial q} \cdot \vec{M}_G^e\]</div>
+<p class="sd-card-text">With the definition of <span class="math notranslate nohighlight">\(\theta_{\delta}\)</span> in the increment of the rigid body motion</p>
+<div class="math notranslate nohighlight">
+\[d \vec{r}_A = d \vec{r}_B + \theta_{\delta} \times (A - B) \ ,\]</div>
+<p class="sd-card-text">and writing the resultant of forces and moments as</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \vec{R}^e   &amp; = \sum_i \vec{F}_i \\
+  \vec{M}^e_G &amp; = \sum_i \left( \vec{r}_G - \vec{r}_i \right) \times \vec{F}_i + \sum_i \vec{C}_i \\
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text">the generalized force can be recast as</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  Q_q 
+  &amp; = \frac{\partial \vec{r}_G}{\partial q} \cdot \vec{R}^e + \frac{\partial \vec{\theta}}{\partial q} \cdot \vec{M}_G^e = \\
+  &amp; = \frac{\partial \vec{r}_G}{\partial q} \cdot \sum_i \vec{F}_i + \frac{\partial \vec{\theta}}{\partial q} \cdot \left[ \sum_i \left( \vec{r}_G - \vec{r}_i \right) \times \vec{F}_i + \sum_i \vec{C}_i  \right] = \\
+  &amp; = \sum_i \left[ \frac{\partial \vec{r}_G}{\partial q} + \frac{\partial \vec{\theta}}{\partial q} \times \left( \vec{r}_G - \vec{r}_i \right) \right] \cdot \vec{F}_i + \sum_i \frac{\partial \vec{\theta}}{\partial q} \cdot \vec{C}_i = \\
+  &amp; = \sum_i \frac{\partial \vec{r}_i}{\partial q} \cdot \vec{F}_i + \sum_i \frac{\partial \vec{\theta}}{\partial q} \cdot \vec{C}_i \ ,
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text">i.e. as the contribution of the single forces <span class="math notranslate nohighlight">\(\vec{F}_i\)</span> acting on different points <span class="math notranslate nohighlight">\(\vec{r}_i\)</span> the rigid body and the overall contribution of the couples of forces <span class="math notranslate nohighlight">\(\vec{C}_i\)</span>.</p>
+<p class="sd-card-text">With <span class="math notranslate nohighlight">\(\vec{r}_C\left(q(t),t \right)\)</span> and <span class="math notranslate nohighlight">\(\mathbb{R}\left(q(t), t \right)\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[\vec{r}_i(q(t), t) - \vec{r}_C(q(t), t) = \mathbb{R}(q(t), t) \cdot \left( \vec{r}_i^0 - \vec{r}_C^0 \right)\]</div>
+<p class="sd-card-text">Time derivative becomes</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\vec{v}_i - \vec{v}_C
+ &amp; = \left[ \dot{q}(t) \, \frac{\partial \mathbb{R}}{\partial q} + \frac{\partial \mathbb{R}}{\partial t} \right] \cdot \left( \vec{r}_i^0 - \vec{r}_C^0 \right) = \\
+ &amp; =  \left[ \dot{q}(t) \, \frac{\partial \mathbb{R}}{\partial q} + \frac{\partial \mathbb{R}}{\partial t} \right] \cdot \mathbb{R}^T \cdot \underbrace{\mathbb{R} \cdot \left( \vec{r}_i^0 - \vec{r}_C^0 \right)}_{\vec{r}_i - \vec{r}_C}
+\end{aligned}\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \vec{\omega}_\times &amp; = \dot{\mathbb{R}} \cdot \mathbb{R}^T \\
+  \delta \vec{\theta}_{\times} &amp; = \delta \mathbb{R} \cdot \mathbb{R}^T \\
+  \frac{\partial \vec{\theta}_{\times}}{\partial q} &amp; = \dfrac{\partial \mathbb{R}}{\partial q} \cdot \mathbb{R}^T
+\end{aligned}\end{split}\]</div>
+</div>
+</details><!-- Exercise -->
+<div class="exercise admonition" id="ch/exercises-dynamics-exercise-1">
+
+<p class="admonition-title"><span class="caption-number">Exercise 7.2 </span></p>
+<div class="section" id="exercise-content">
+<p><strong>todo</strong> Add description of the problem and image</p>
+<p>Find:</p>
+<ul class="simple">
+<li><p>the pure equations of motion (solution methods: dynamical equilibria, Lagrange II, Kinetic energy theorem - energy conservation - since the problem has 1 dof,…) <strong>done</strong></p></li>
+<li><p>constraint reactions (solution methods: dynamical equilibria, Lagrange I,…) <strong>todo</strong></p></li>
+<li><p>equilibria and their stability <strong>todo</strong></p></li>
+<li><p>evolution of the linear(ized) dynamics of the system around stable equilibria <strong>todo</strong></p></li>
+</ul>
+</div>
+</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Solution<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><strong>Geometry.</strong></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  R &amp; = d \sin \alpha \\
+  b &amp; = d \cos^2 \alpha \\
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text">so that <span class="math notranslate nohighlight">\(\frac{b}{R} = \frac{\cos^2 \alpha}{\sin \alpha}\)</span>.</p>
+<p class="sd-card-text"><strong>Kinematics.</strong></p>
+<p class="sd-card-text">Position of the center of mass, <span class="math notranslate nohighlight">\(C\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \vec{r}_C &amp; = b \cos \theta \hat{x} + b \sin \theta \hat{y} - h \hat{z} \\
+  \vec{v}_C &amp; = -b \dot{\theta} \sin \theta \hat{x} + b \dot{\theta} \cos \theta \hat{y} = b \dot{\theta} \hat{y}_1 \\
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text">Angular velocity <span class="math notranslate nohighlight">\(\vec{\omega}\)</span> of the rigid body</p>
+<div class="math notranslate nohighlight">
+\[\vec{\omega} = \dot{\theta} \hat{z} + \dot{\varphi} \hat{x}_1\]</div>
+<p class="sd-card-text">Velocity of point contact point <span class="math notranslate nohighlight">\(A\)</span> is zero, <span class="math notranslate nohighlight">\(\vec{v}_A = \vec{0}\)</span> for <strong>pure rolling</strong> constraint. Being <span class="math notranslate nohighlight">\((A-C) = R \hat{z}_1\)</span>, the general expression of <span class="math notranslate nohighlight">\(\vec{v}_A\)</span> as function of <span class="math notranslate nohighlight">\(\theta\)</span> and <span class="math notranslate nohighlight">\(\varphi\)</span> reads</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+ \vec{v}_A
+ &amp; = \vec{v}_C + \vec{\omega} \times \left( A - C \right) = \\
+ &amp; = \hat{y}_1 b \dot{\theta} + \left( \dot{\theta} \hat{z} + \dot{\varphi} \hat{x}_1 \right) \times R \hat{z}_1 = \\
+ &amp; = \hat{y}_1 \left( b \dot{\theta} + R \dot{\theta} \sin \alpha - R \dot{\varphi} \right) = \\
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text">so that the kinetatic constraint (integrable, with arbitrary initial condition) between <span class="math notranslate nohighlight">\(\theta\)</span> and <span class="math notranslate nohighlight">\(\varphi\)</span> is</p>
+<div class="math notranslate nohighlight">
+\[R \varphi = \left( R \sin \alpha + b \right) \, \theta \ .\]</div>
+<p class="sd-card-text"><strong>Lagrangian function.</strong></p>
+<p class="sd-card-text">With</p>
+<div class="math notranslate nohighlight">
+\[\mathbb{I}_C = I_{x} \hat{x}_1 \hat{x}_1 + I_{y} \hat{y}_1 \hat{y}_1 + I_{z} \hat{z}_1 \hat{z}_1 \ ,\]</div>
+<div class="math notranslate nohighlight">
+\[\vec{\omega} = \dot{\theta} \hat{z} + \dot{\varphi} \hat{x}_1 = \left( \dot{\varphi} - \dot{\theta} \sin \alpha  \right) \hat{x}_1 + \dot{\theta} \cos \alpha \hat{z}_1 \]</div>
+<p class="sd-card-text">and using</p>
+<div class="math notranslate nohighlight">
+\[\dot{\varphi} - \dot{\theta} \sin \alpha = \frac{b}{R} \dot{\theta} \ ,\]</div>
+<p class="sd-card-text">the Lagrangian function becomes</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \mathscr{L} &amp; = K + U = \\
+  &amp; =\frac{1}{2} m |\vec{v}_C|^2 + \frac{1}{2} \vec{\omega} \cdot \mathbb{I}_C \cdot \vec{\omega} + m g x_C = \\
+  &amp; =\frac{1}{2} m b^2 \dot{\theta}^2 + \frac{1}{2} \left[ I_x \left( \dot{\varphi} - \dot{\theta} \sin \alpha \right)^2 + I_z \dot{\theta}^2 \cos^2 \alpha \right] + m g b \cos \theta = \\
+  &amp; =\frac{1}{2} m b^2 \dot{\theta}^2 + \frac{1}{2} \left[ I_x \left( \frac{b}{R} \right)^2 + I_z \cos^2 \alpha \right] \dot{\theta}^2 + m g b \cos \theta = \\
+  &amp; =\frac{1}{2} \widetilde{I} \dot{\theta}^2 + m g b \cos \theta  \ ,
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text">with the equivalent inertia</p>
+<div class="math notranslate nohighlight">
+\[\widetilde{I} = m b^2 + I_x \left( \frac{b}{R} \right)^2 + I_z \cos^2 \alpha \ .\]</div>
+<p class="sd-card-text"><strong>Method 1. Lagrange equation (II).</strong> Legrange equation gives a pure equation of motion</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  0 &amp; = \dfrac{d}{dt}\left( \frac{\partial \mathscr{L}}{\partial \dot{\theta}} \right) - \frac{\partial \mathscr{L}}{\partial \theta} = \widetilde{I} \ddot{\theta} + m g b \sin \theta \ . \\
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text"><strong>Method 2. Kinetic energy theorem - or energy conservation</strong></p>
+</div>
+</details><!-- Exercise -->
+<div class="exercise admonition" id="ch/exercises-dynamics-exercise-2">
+
+<p class="admonition-title"><span class="caption-number">Exercise 7.3 </span> (Inverted pendulum)</p>
+<div class="section" id="exercise-content">
+</div>
+</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Solution<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+</div>
+</details><!-- Exercise -->
+<div class="exercise admonition" id="ch/exercises-dynamics-exercise-3">
+
+<p class="admonition-title"><span class="caption-number">Exercise 7.4 </span></p>
+<div class="section" id="exercise-content">
+</div>
+</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Solution<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
 </div>
 </details></div>
-</div>
 
     <script type="text/x-thebe-config">
     {
@@ -528,20 +625,20 @@ Starting from differential equations<div class="sd-summary-down docutils">
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="dynamics-eom-points.html"
+       href="hamilton.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">4.4. </span>Equations of motion of a discrete system of point masses</p>
+        <p class="prev-next-title"><span class="section-number">6. </span>Hamiltonian Mechanics</p>
       </div>
     </a>
     <a class="right-next"
-       href="dynamics-eom-continuum.html"
+       href="exercises-gravitation.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">4.6. </span>Equations of motion for continuous media</p>
+        <p class="prev-next-title"><span class="section-number">8. </span>Gravitation</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -551,22 +648,6 @@ Starting from differential equations<div class="sd-summary-down docutils">
             </div>
             
             
-              
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-equations">4.5.1. General equations</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dynamical-equations-w-r-t-the-center-of-mass-g">4.5.2. Dynamical equations w.r.t. the center of mass <span class="math notranslate nohighlight">\(G\)</span></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dynamical-equations-w-r-t-a-material-point-q">4.5.3. Dynamical equations w.r.t. a material point <span class="math notranslate nohighlight">\(Q\)</span></a></li>
-</ul>
-  </nav></div>
-
-</div></div>
               
             
           </div>

@@ -86,4 +86,7 @@
 \contentsline {section}{\numberline {5.2}System of points}{43}{section.5.2}%
 \contentsline {section}{\numberline {5.3}Rigid Body}{43}{section.5.3}%
 \contentsline {chapter}{\numberline {6}Hamiltonian Mechanics}{47}{chapter.6}%
-\contentsline {chapter}{Proof Index}{49}{section*.26}%
+\contentsline {part}{III\hspace {1em}Exercises}{49}{part.3}%
+\contentsline {chapter}{\numberline {7}Dynamics}{51}{chapter.7}%
+\contentsline {chapter}{\numberline {8}Gravitation}{57}{chapter.8}%
+\contentsline {chapter}{Proof Index}{59}{section*.32}%

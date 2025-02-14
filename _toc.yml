@@ -45,3 +45,8 @@ parts:
     - file: ch/lagrange-points
     - file: ch/lagrange-rigid-body
   - file: ch/hamilton
+- caption: Exercises
+  numbered: true
+  chapters:
+  - file: ch/exercises-dynamics
+  - file: ch/exercises-gravitation
