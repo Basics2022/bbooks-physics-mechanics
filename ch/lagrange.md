@@ -9,7 +9,7 @@
 (classical-mechanics:lagrange)=
 # Lagrangian Mechanics
 
-Classical mechanics can be re-formulated starting principles of [calculus of variations]()https://basics2022.github.io/bbooks-math-miscellanea/ch/calculus-variations/intro.html, usually referred as **analytical mechanics**. Under some assumptions, that will be discussed during the derivation, analytical mechanics is equivalent to Newton mechanics.
+Classical mechanics can be re-formulated starting principles of [calculus of variations](https://basics2022.github.io/bbooks-math-miscellanea/ch/calculus-variations/intro.html), usually referred as **analytical mechanics**. Under some assumptions, that will be discussed during the derivation, analytical mechanics is equivalent to Newton mechanics.
 
 Here, the equivalence of analytical mechanics and Newton mechanics is stressed, by means of the derivation of the principle of analytical mechanics starting from the equations of motions derived in Newtonian mechanics, relying on the conservation of mass and the three principles of Newton mechanics. The process is shown in the following sections for [point systems](classical-mechanics:lagrange:point), [systems of points](classical-mechanics:lagrange:points), [extended rigid bodies](classical-mechanics:lagrange:rigid) and follows these steps:
 - **strong form of equations.** Starting point is the dynamical equations of Newton mechanics, here also referred as the strong form of equations

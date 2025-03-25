@@ -85,7 +85,7 @@
         
 
 \title{Classical Mechanics}
-\date{Feb 14, 2025}
+\date{Mar 25, 2025}
 \release{}
 \author{basics}
 \newcommand{\sphinxlogo}{\vbox{}}
@@ -1672,6 +1672,12 @@ where the resultant of the external forces, \(\vec{R}^e = \frac{d \vec{I}^e}{dt}
 \begin{equation*}
 \begin{split}\vec{F}_{ij} = - \vec{F}_{ji} \ .\end{split}
 \end{equation*}
+
+\subsection{Inertial reference frame}
+\label{\detokenize{ch/dynamics-principles:inertial-reference-frame}}\label{\detokenize{ch/dynamics-principles:classical-mehcanics-dynamics-principles-inertial-ref-frame}}
+\sphinxAtStartPar
+Force sensors in an inertial reference frame measure only “true forces”. But what’s a “true force”? In classical mechanics, true forces are due to gravitational interactions and electromagnetic interactions. Electromangetic interactions between charged systems; electromangetic interactions between electrically neutral systems as contact forces…
+
 \sphinxstepscope
 
 
@@ -2126,7 +2132,7 @@ A system is in equilibrium is all its components are in equilibrium, and thus th
 \chapter{Lagrangian Mechanics}
 \label{\detokenize{ch/lagrange:lagrangian-mechanics}}\label{\detokenize{ch/lagrange:classical-mechanics-lagrange}}\label{\detokenize{ch/lagrange::doc}}
 \sphinxAtStartPar
-Classical mechanics can be re\sphinxhyphen{}formulated starting from variational principles, usually referred as \sphinxstylestrong{analytical mechanics}. Under some assumptions, that will be discussed during the derivation, analytical mechanics is equivalent to Newton mechanics.
+Classical mechanics can be re\sphinxhyphen{}formulated starting principles of \sphinxhref{https://basics2022.github.io/bbooks-math-miscellanea/ch/calculus-variations/intro.html}{calculus of variations}, usually referred as \sphinxstylestrong{analytical mechanics}. Under some assumptions, that will be discussed during the derivation, analytical mechanics is equivalent to Newton mechanics.
 
 \sphinxAtStartPar
 Here, the equivalence of analytical mechanics and Newton mechanics is stressed, by means of the derivation of the principle of analytical mechanics starting from the equations of motions derived in Newtonian mechanics, relying on the conservation of mass and the three principles of Newton mechanics. The process is shown in the following sections for {\hyperref[\detokenize{ch/lagrange-point:classical-mechanics-lagrange-point}]{\sphinxcrossref{\DUrole{std,std-ref}{point systems}}}}, {\hyperref[\detokenize{ch/lagrange-points:classical-mechanics-lagrange-points}]{\sphinxcrossref{\DUrole{std,std-ref}{systems of points}}}}, {\hyperref[\detokenize{ch/lagrange-rigid-body:classical-mechanics-lagrange-rigid}]{\sphinxcrossref{\DUrole{std,std-ref}{extended rigid bodies}}}} and follows these steps:
@@ -2691,16 +2697,51 @@ with the equivalent inertia
 
 \phantomsection \label{exercise:ch/exercises-dynamics-exercise-2}
 
-\begin{sphinxadmonition}{note}{Exercise 7.3 (Inverted pendulum)}
+\begin{sphinxadmonition}{note}{Exercise 7.3}
 
 
 \end{sphinxadmonition}
 \subsubsection*{Solution}
 
+\sphinxAtStartPar
+\sphinxstylestrong{Kinematics.} \sphinxstylestrong{todo} \sphinxstyleemphasis{check kinematic constraints. No influence of \(\theta\)?}
+\begin{equation*}
+\begin{split}\varphi_2 = \frac{R_1}{R_2} \varphi_1 = r \varphi_1\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Lagrangian function.}
+\begin{equation*}
+\begin{split}\begin{aligned}
+K 
+& = \frac{1}{2} I_1 \omega_1^2 + \frac{1}{2} I_2 \omega_2^2 + \frac{1}{2} m_1 |\vec{v}_1|^2 = \\
+& = \frac{1}{2} I_1 \dot{\varphi}_1^2 + \frac{1}{2} I_2 \dot{\varphi}_2^2 + \frac{1}{2} m_1 \ell^2 \dot{\theta}^2 = \\
+& = \frac{1}{2} \left( I_1 + I_2 r^2 \right) \dot{\varphi}_1^2 + \frac{1}{2} m_1 \ell^2 \dot{\theta}^2 = \\
+\end{aligned}\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}\begin{aligned}
+  U = - \frac{1}{2} k \theta^2 - m g \ell \sin \theta
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Generalized forces read
+\begin{equation*}
+\begin{split}\begin{aligned}
+  Q_{\varphi_1} & = C - R_1 F \\
+  Q_{\theta} & = C
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Lagrange functions (II).}
+\begin{equation*}
+\begin{split}\begin{cases}
+  \left( I_1 + I_2 r^2 \right) \ddot{\varphi} = C - R_1 F \\
+  m_1 \ell^2 \ddot{\theta} + k \theta + m g \ell \cos \theta = C \\
+\end{cases}\end{split}
+\end{equation*}
 
 \phantomsection \label{exercise:ch/exercises-dynamics-exercise-3}
 
-\begin{sphinxadmonition}{note}{Exercise 7.4}
+\begin{sphinxadmonition}{note}{Exercise 7.4 (Inverted pendulum)}
 
 
 \end{sphinxadmonition}

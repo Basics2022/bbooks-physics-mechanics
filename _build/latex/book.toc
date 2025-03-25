@@ -66,6 +66,7 @@
 \contentsline {subsubsection}{Dynamical quantities and time derivatives with \(G\) as reference point}{29}{subsubsection*.25}%
 \contentsline {chapter}{\numberline {4}Dynamics}{31}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Principles of Newtonian Mechanics}{31}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Inertial reference frame}{32}{subsection.4.1.1}%
 \contentsline {section}{\numberline {4.2}Equations of Motion and Conservation Principles}{32}{section.4.2}%
 \contentsline {subsection}{\numberline {4.2.1}Equations of Motion}{32}{subsection.4.2.1}%
 \contentsline {subsection}{\numberline {4.2.2}Conservation Principles}{32}{subsection.4.2.2}%
