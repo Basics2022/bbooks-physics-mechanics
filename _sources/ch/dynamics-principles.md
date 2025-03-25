@@ -19,3 +19,8 @@ where the resultant of the external forces, $\vec{R}^e = \frac{d \vec{I}^e}{dt}$
 
 $$\vec{F}_{ij} = - \vec{F}_{ji} \ .$$
 
+
+(classical-mehcanics:dynamics:principles:inertial-ref-frame)=
+## Inertial reference frame
+
+Force sensors in an inertial reference frame measure only "true forces". But what's a "true force"? In classical mechanics, true forces are due to gravitational interactions and electromagnetic interactions. Electromangetic interactions between charged systems; electromangetic interactions between electrically neutral systems as contact forces...
