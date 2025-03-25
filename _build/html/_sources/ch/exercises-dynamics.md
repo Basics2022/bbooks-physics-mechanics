@@ -215,7 +215,7 @@ $$\begin{aligned}
 ```
 ```{dropdown} Solution
 
-**Kinematics.** **todo** *check kinematics constraints. No influence of $\theta$?*
+**Kinematics.** **todo** *check kinematic constraints. No influence of $\theta$?*
 
 $$\varphi_2 = \frac{R_1}{R_2} \varphi_1 = r \varphi_1$$
 
