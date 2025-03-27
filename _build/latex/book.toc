@@ -63,7 +63,7 @@
 \contentsline {subsubsection}{Static inertia}{27}{subsubsection*.23}%
 \contentsline {subsubsection}{Tensor of inertia}{27}{subsubsection*.24}%
 \contentsline {subsection}{\numberline {3.4.4}Time derivatives of dynamical quantities}{28}{subsection.3.4.4}%
-\contentsline {subsubsection}{Dynamical quantities and time derivatives with \(G\) as reference point}{29}{subsubsection*.25}%
+\contentsline {subsubsection}{Dynamical quantities and time derivatives with \(G\) as reference point}{30}{subsubsection*.25}%
 \contentsline {chapter}{\numberline {4}Dynamics}{31}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Principles of Newtonian Mechanics}{31}{section.4.1}%
 \contentsline {subsection}{\numberline {4.1.1}Inertial reference frame}{32}{subsection.4.1.1}%
