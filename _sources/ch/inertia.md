@@ -253,9 +253,10 @@ $$\begin{aligned}
 
 $$\mathbb{I}_Q = I^0_{XX} \, \hat{E}^0_X \otimes \hat{E}^0_X +  I^0_{YY} \, \hat{E}^0_Y \otimes \hat{E}^0_Y + I^0_{ZZ} \, \hat{E}^0_Z \otimes \hat{E}^0_Z \ ,$$
 
-with $I_{ii}^0 \ge 0$.
+with $I_{ii}^0 \ge 0$ (no sum).
 
-**Transport - Huygens' theorem.**
+```{prf:theorem} Transport - Huygens' theorem.
+:label: thm:huygens
 
 $$\begin{aligned}
   \mathbb{I}_Q 
@@ -271,6 +272,7 @@ or w.r.t. the center of mass $G$,
 
 $$ \mathbb{I}_Q = \mathbb{I}_G - m (Q-G)_\times (Q-G)_\times \ .$$
 
+```
 
 ### Time derivatives of dynamical quantities
 
