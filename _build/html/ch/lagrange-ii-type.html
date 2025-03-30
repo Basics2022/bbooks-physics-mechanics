@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>5.1.1. Point &#8212; Classical Mechanics</title>
+    <title>5.1. Lagrange Equations of the Second Kind &#8212; Classical Mechanics</title>
   
   
   
@@ -64,14 +64,12 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'ch/lagrange-point';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'ch/lagrange-ii-type';</script>
     <link rel="shortcut icon" href="../_static/favicon.svg"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="5.1.2. System of points" href="lagrange-points.html" />
-    <link rel="prev" title="5.1. Lagrange Equations of the Second Kind" href="lagrange-ii-type.html" />
+    <link rel="next" title="5.1.1. Point" href="lagrange-point.html" />
+    <link rel="prev" title="5. Lagrangian Mechanics" href="lagrange.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -208,8 +206,8 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Analytical Mechanics</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="lagrange.html">5. Lagrangian Mechanics</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2 current active has-children"><a class="reference internal" href="lagrange-ii-type.html">5.1. Lagrange Equations of the Second Kind</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l3 current active"><a class="current reference internal" href="#">5.1.1. Point</a></li>
+<li class="toctree-l2 current active has-children"><a class="current reference internal" href="#">5.1. Lagrange Equations of the Second Kind</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="lagrange-point.html">5.1.1. Point</a></li>
 <li class="toctree-l3"><a class="reference internal" href="lagrange-points.html">5.1.2. System of points</a></li>
 <li class="toctree-l3"><a class="reference internal" href="lagrange-rigid-body.html">5.1.3. Rigid Body</a></li>
 </ul>
@@ -277,7 +275,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/ch/lagrange-point.md" target="_blank"
+      <li><a href="../_sources/ch/lagrange-ii-type.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -359,7 +357,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Point</h1>
+    <h1>Lagrange Equations of the Second Kind</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -373,49 +371,11 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <!--
-```{article-info}
-:author: basics
-:date: "{sub-ref}`today`"
-:read-time: "{sub-ref}`wordcount-minutes` min read"
-```
--->
-<div class="tex2jax_ignore mathjax_ignore section" id="point">
-<span id="classical-mechanics-lagrange-point"></span><h1><span class="section-number">5.1.1. </span>Point<a class="headerlink" href="#point" title="Permalink to this heading">#</a></h1>
-<p><strong>Newton dynamical equations - strong form.</strong> Dynamical equation governing the motion of a point <span class="math notranslate nohighlight">\(P\)</span> reads</p>
-<div class="math notranslate nohighlight">
-\[m \dot{\vec{v}}_P = \vec{R}^e \ ,\]</div>
-<p>being <span class="math notranslate nohighlight">\(m\)</span> the mass of the system, <span class="math notranslate nohighlight">\(\vec{v}_P\)</span> the velocity of point <span class="math notranslate nohighlight">\(P\)</span>, <span class="math notranslate nohighlight">\(\vec{a}_P = \dot{\vec{v}}_P\)</span> its acceleration and <span class="math notranslate nohighlight">\(\vec{R}^{e}\)</span> the net external force acting on the system..</p>
-<p><strong>Weak form.</strong> Weak form of dynamical equations is derived with scalar multiplication of the strong form by an arbitrary test function <span class="math notranslate nohighlight">\(\vec{w}\)</span>,</p>
-<div class="math notranslate nohighlight" id="equation-eq-lagrange-point-weak">
-<span class="eqno">(5.1)<a class="headerlink" href="#equation-eq-lagrange-point-weak" title="Permalink to this equation">#</a></span>\[\vec{0} = \vec{w} \cdot \left( m \dot{\vec{v}} - \vec{R}^e\right)  \qquad \forall \vec{w}\]</div>
-<p><strong>Lagrange equations.</strong> Lagrange equations are derived from a proper choice of the test function. The position of the point <span class="math notranslate nohighlight">\(P\)</span> is written as a function of the generalized coordinates <span class="math notranslate nohighlight">\(q^k(t)\)</span> and time <span class="math notranslate nohighlight">\(t\)</span></p>
-<div class="math notranslate nohighlight">
-\[\vec{r}_P(t) = \vec{r}(q^k(t),t) \ ,\]</div>
-<p>so that its velocity can be written as</p>
-<div class="math notranslate nohighlight">
-\[\vec{v}_P(t) := \frac{d\vec{r}_P}{dt} = \dot{q}^k(t) \underbrace{\frac{\partial \vec{r}}{\partial q^k}}_{\frac{\partial \vec{v}}{\partial \dot{q}^k}}(q^l(t), t) + \frac{\partial \vec{r}}{\partial t}(q^l(t), t) = \vec{v}\left(\dot{q}^k(t), q^k(t), t \right) \ ,\]</div>
-<p>from which the relation between partial derivatives</p>
-<div class="math notranslate nohighlight" id="equation-classical-mechanics-lagrange-point-mixed-der">
-<span class="eqno">(5.2)<a class="headerlink" href="#equation-classical-mechanics-lagrange-point-mixed-der" title="Permalink to this equation">#</a></span>\[\dfrac{\partial \vec{r}}{\partial q^k} = \dfrac{\partial \vec{v}}{\partial \dot{q}^k} \ .\]</div>
-<p>follows. Choosing the test function <span class="math notranslate nohighlight">\(\vec{w}\)</span> as</p>
-<div class="math notranslate nohighlight">
-\[\vec{w} = \dfrac{\partial \vec{r}}{\partial q^k} = \dfrac{\partial \vec{v}}{\partial \dot{q}^k} \ ,\]</div>
-<p>applying the rule of derivative of product, using Schwartz theorem to switch order of derivation, and exploiting relation <a class="reference internal" href="#equation-classical-mechanics-lagrange-point-mixed-der">(5.2)</a> it’s possible to recast weak form <a class="reference internal" href="#equation-eq-lagrange-point-weak">(5.1)</a> as</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{aligned}
-\vec{0} &amp; = \frac{\partial \vec{v}}{\partial \dot{q}^k} \cdot \left( m \dot{\vec{v}} - \vec{R}^e \right) = \\
-&amp; = \frac{d}{dt} \left( \frac{\partial \vec{v}}{\partial \dot{q}^k} \cdot m \vec{v} \right) - \frac{d}{dt} \frac{\partial \vec{r}}{\partial q^k} \cdot m \vec{v} - \frac{\partial \vec{r}}{\partial q^k} \cdot ( \vec{R}^{e,c} + \vec{R}^{e,nc} ) \\
-&amp; = \frac{d}{dt} \left( \frac{\partial \vec{v}}{\partial \dot{q}^k} \cdot m \vec{v} \right) - \frac{\partial \vec{v}}{\partial q^k} \cdot m \vec{v} - \frac{\partial \vec{r}}{\partial q^k} \cdot ( \nabla U + \vec{R}^{e,nc} ) \\
-&amp; = \frac{d}{dt} \left( \frac{\partial K}{\partial \dot{q}^k} \right) - \frac{\partial K}{\partial q^k} - \frac{\partial U}{\partial q^k} - \underbrace{\frac{\partial \vec{r}}{\partial q^k} \cdot \vec{R}^{e,nc}}_{=: Q^k} \ . \\
-\end{aligned}\end{split}\]</div>
-<p>Introducing the <strong>Lagrangian function</strong></p>
-<div class="math notranslate nohighlight">
-\[\mathscr{L}(\dot{q}^k(t), q^k(t), t) := K(\dot{q}^k(t), q^k(t), t) + U(q^k(t),t) \ ,\]</div>
-<p>and recalling that potential function <span class="math notranslate nohighlight">\(U\)</span> is not a function of velocity and thus of time derivatives of the generalized coordinates <span class="math notranslate nohighlight">\(\dot{q}^k\)</span>, it’s possible to recast the dynamical equation as the <strong>Lagrange equations</strong></p>
-<div class="math notranslate nohighlight">
-\[\frac{d}{dt}\left(\frac{\partial \mathscr{L}}{\partial \dot{q}^k} \right) - \frac{\partial \mathscr{L}}{\partial q^k} = Q^k \ ,\]</div>
-<p>being <span class="math notranslate nohighlight">\(Q^k\)</span> the <strong>generalized force</strong> not included in the gradient of the potential <span class="math notranslate nohighlight">\(\nabla U\)</span> - usually a non conservative contribution -, <span class="math notranslate nohighlight">\(Q^k = \dfrac{\partial \vec{r}}{\partial q^k} \cdot \vec{R}^{e,nc}\)</span>.</p>
+  <div class="tex2jax_ignore mathjax_ignore section" id="lagrange-equations-of-the-second-kind">
+<span id="classical-mechanics-lagrange-ii-type"></span><h1><span class="section-number">5.1. </span>Lagrange Equations of the Second Kind<a class="headerlink" href="#lagrange-equations-of-the-second-kind" title="Permalink to this heading">#</a></h1>
+<p>For ideal constraints…</p>
+<div class="toctree-wrapper compound">
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -449,20 +409,20 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="lagrange-ii-type.html"
+       href="lagrange.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">5.1. </span>Lagrange Equations of the Second Kind</p>
+        <p class="prev-next-title"><span class="section-number">5. </span>Lagrangian Mechanics</p>
       </div>
     </a>
     <a class="right-next"
-       href="lagrange-points.html"
+       href="lagrange-point.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">5.1.2. </span>System of points</p>
+        <p class="prev-next-title"><span class="section-number">5.1.1. </span>Point</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

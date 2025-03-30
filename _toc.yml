@@ -41,9 +41,12 @@ parts:
   chapters:
   - file: ch/lagrange
     sections:
-    - file: ch/lagrange-point
-    - file: ch/lagrange-points
-    - file: ch/lagrange-rigid-body
+    - file: ch/lagrange-ii-type
+      sections:
+      - file: ch/lagrange-point
+      - file: ch/lagrange-points
+      - file: ch/lagrange-rigid-body
+    - file: ch/lagrange-i-type
   - file: ch/hamilton
 - caption: Exercises
   numbered: true
