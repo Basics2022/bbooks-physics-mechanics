@@ -407,7 +407,7 @@ document.write(`
     = \mathbb{R}^{0\rightarrow 1} \cdot \hat{e}^0_i  \ .
 \end{aligned}\end{split}\]</div>
 <div class="section" id="points">
-<h2><span class="section-number">1.6.1. </span>Points<a class="headerlink" href="#points" title="Permalink to this heading">#</a></h2>
+<span id="classical-mechanics-kinematics-relative-points"></span><h2><span class="section-number">1.6.1. </span>Points<a class="headerlink" href="#points" title="Permalink to this heading">#</a></h2>
 <p><strong>Position.</strong>
 Given two reference frames <span class="math notranslate nohighlight">\(Ox^i\)</span>, <span class="math notranslate nohighlight">\(O' x^{i'}\)</span>, for the position of a point <span class="math notranslate nohighlight">\(P\)</span> reads</p>
 <div class="math notranslate nohighlight" id="equation-eq-relative-point-pos">
@@ -437,10 +437,16 @@ Given two reference frames <span class="math notranslate nohighlight">\(Ox^i\)</
   &amp; = \vec{a}^0_{O_1/O_0} + \vec{a}^{1}_{P/O_1} + 2 \vec{\omega}_{1/0} \times \vec{v}^1_{P/O_1} + \vec{\alpha}_{1/0} \times (P - O_1) + \vec{\omega}_{1/0} \times [ \, \vec{\omega}_{1/0} \times (P - O_1) \, ]
 \end{aligned}\end{split}\]</div>
 <p>so that</p>
-<div class="math notranslate nohighlight">
-\[
+<div class="math notranslate nohighlight" id="equation-eq-relative-point-acc">
+<span class="eqno">(1.9)<a class="headerlink" href="#equation-eq-relative-point-acc" title="Permalink to this equation">#</a></span>\[
 \vec{a}^0_{P/O_0} = \vec{a}^0_{O_1/O_0} + \vec{a}^{1}_{P/O_1} + \underbrace{\vec{\alpha}_{1/0} \times (P - O_1)}_{\text{tangential}} + \underbrace{2 \vec{\omega}_{1/0} \times \vec{v}^1_{P/O_1}}_{\text{Coriolis}} + \underbrace{\vec{\omega}_{1/0} \times [ \, \vec{\omega}_{1/0} \times (P - O_1) \, ]}_{\text{centripetal}} \ .
 \]</div>
+<p>where:</p>
+<ul class="simple">
+<li><p>the “tangential component” is orthogonal to the instantaneous angular acceleration and radius,</p></li>
+<li><p>the “centripetal component” is orthogonal w.r.t. the instantaneous angular velocity</p></li>
+</ul>
+<p><strong>todo</strong> <em>tangent to what, centripetal w.r.t. what?</em> <strong>state it clearly, otherwise delete this</strong></p>
 </div>
 <div class="section" id="rigid-bodies">
 <h2><span class="section-number">1.6.2. </span>Rigid bodies<a class="headerlink" href="#rigid-bodies" title="Permalink to this heading">#</a></h2>

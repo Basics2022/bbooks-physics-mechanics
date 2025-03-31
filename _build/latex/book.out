@@ -32,25 +32,25 @@
 \BOOKMARK [1][-]{section.2.3}{Conservative\040Actions}{chapter.2}% 32
 \BOOKMARK [1][-]{section.2.4}{Examples\040of\040Forces}{chapter.2}% 33
 \BOOKMARK [2][-]{subsection.2.4.1}{Gravitation}{section.2.4}% 34
-\BOOKMARK [3][-]{subsubsection*.6}{Universal\040Law\040of\040Gravitation}{subsection.2.4.1}% 35
-\BOOKMARK [3][-]{subsubsection*.7}{Gravitational\040Field}{subsection.2.4.1}% 36
-\BOOKMARK [3][-]{subsubsection*.8}{Gravitational Field Near Earth’s Surface}{subsection.2.4.1}% 37
-\BOOKMARK [3][-]{subsubsection*.9}{Gravitational\040field\040of\040a\040continuous\040mass\040distribution}{subsection.2.4.1}% 38
-\BOOKMARK [4][-]{paragraph*.10}{Gauss’ law for the gravitational field}{subsubsection*.9}% 39
+\BOOKMARK [3][-]{subsubsection*.7}{Universal\040Law\040of\040Gravitation}{subsection.2.4.1}% 35
+\BOOKMARK [3][-]{subsubsection*.8}{Gravitational\040Field}{subsection.2.4.1}% 36
+\BOOKMARK [3][-]{subsubsection*.9}{Gravitational Field Near Earth’s Surface}{subsection.2.4.1}% 37
+\BOOKMARK [3][-]{subsubsection*.10}{Gravitational\040field\040of\040a\040continuous\040mass\040distribution}{subsection.2.4.1}% 38
+\BOOKMARK [4][-]{paragraph*.11}{Gauss’ law for the gravitational field}{subsubsection*.10}% 39
 \BOOKMARK [2][-]{subsection.2.4.2}{Elastic\040Actions:\040Linear\040Springs}{section.2.4}% 40
 \BOOKMARK [1][-]{section.2.5}{Constraint\040Reactions}{chapter.2}% 41
 \BOOKMARK [2][-]{subsection.2.5.1}{Contact\040Actions}{section.2.5}% 42
-\BOOKMARK [3][-]{subsubsection*.12}{Constraint\040Reactions\040of\040Ideal\040Constraints}{subsection.2.5.1}% 43
-\BOOKMARK [4][-]{paragraph*.13}{Fixed\040Joint}{subsubsection*.12}% 44
-\BOOKMARK [4][-]{paragraph*.14}{Slider}{subsubsection*.12}% 45
-\BOOKMARK [4][-]{paragraph*.15}{Cylindrical\040Joint}{subsubsection*.12}% 46
-\BOOKMARK [4][-]{paragraph*.16}{Spherical\040Joint}{subsubsection*.12}% 47
-\BOOKMARK [4][-]{paragraph*.17}{Roller}{subsubsection*.12}% 48
-\BOOKMARK [4][-]{paragraph*.18}{Support}{subsubsection*.12}% 49
-\BOOKMARK [3][-]{subsubsection*.19}{Friction}{subsection.2.5.1}% 50
-\BOOKMARK [4][-]{paragraph*.20}{Static\040Friction}{subsubsection*.19}% 51
-\BOOKMARK [4][-]{paragraph*.21}{Dynamic\040Friction}{subsubsection*.19}% 52
-\BOOKMARK [4][-]{paragraph*.22}{Pure\040Rolling}{subsubsection*.19}% 53
+\BOOKMARK [3][-]{subsubsection*.13}{Constraint\040Reactions\040of\040Ideal\040Constraints}{subsection.2.5.1}% 43
+\BOOKMARK [4][-]{paragraph*.14}{Fixed\040Joint}{subsubsection*.13}% 44
+\BOOKMARK [4][-]{paragraph*.15}{Slider}{subsubsection*.13}% 45
+\BOOKMARK [4][-]{paragraph*.16}{Cylindrical\040Joint}{subsubsection*.13}% 46
+\BOOKMARK [4][-]{paragraph*.17}{Spherical\040Joint}{subsubsection*.13}% 47
+\BOOKMARK [4][-]{paragraph*.18}{Roller}{subsubsection*.13}% 48
+\BOOKMARK [4][-]{paragraph*.19}{Support}{subsubsection*.13}% 49
+\BOOKMARK [3][-]{subsubsection*.20}{Friction}{subsection.2.5.1}% 50
+\BOOKMARK [4][-]{paragraph*.21}{Static\040Friction}{subsubsection*.20}% 51
+\BOOKMARK [4][-]{paragraph*.22}{Dynamic\040Friction}{subsubsection*.20}% 52
+\BOOKMARK [4][-]{paragraph*.23}{Pure\040Rolling}{subsubsection*.20}% 53
 \BOOKMARK [0][-]{chapter.3}{Inertia}{part.1}% 54
 \BOOKMARK [1][-]{section.3.1}{Point\040mass}{chapter.3}% 55
 \BOOKMARK [1][-]{section.3.2}{Discrete\040masses}{chapter.3}% 56
@@ -59,10 +59,10 @@
 \BOOKMARK [2][-]{subsection.3.4.1}{Discrete\040systems}{section.3.4}% 59
 \BOOKMARK [2][-]{subsection.3.4.2}{Continuous\040systems}{section.3.4}% 60
 \BOOKMARK [2][-]{subsection.3.4.3}{Properties\040of\040inertia\040tensors\040of\040rigid\040bodies}{section.3.4}% 61
-\BOOKMARK [3][-]{subsubsection*.23}{Static\040inertia}{subsection.3.4.3}% 62
-\BOOKMARK [3][-]{subsubsection*.24}{Tensor\040of\040inertia}{subsection.3.4.3}% 63
+\BOOKMARK [3][-]{subsubsection*.24}{Static\040inertia}{subsection.3.4.3}% 62
+\BOOKMARK [3][-]{subsubsection*.25}{Tensor\040of\040inertia}{subsection.3.4.3}% 63
 \BOOKMARK [2][-]{subsection.3.4.4}{Time\040derivatives\040of\040dynamical\040quantities}{section.3.4}% 64
-\BOOKMARK [3][-]{subsubsection*.25}{Dynamical\040quantities\040and\040time\040derivatives\040with\040G\040as\040reference\040point}{subsection.3.4.4}% 65
+\BOOKMARK [3][-]{subsubsection*.26}{Dynamical\040quantities\040and\040time\040derivatives\040with\040G\040as\040reference\040point}{subsection.3.4.4}% 65
 \BOOKMARK [0][-]{chapter.4}{Dynamics}{part.1}% 66
 \BOOKMARK [1][-]{section.4.1}{Principles\040of\040Newtonian\040Mechanics}{chapter.4}% 67
 \BOOKMARK [2][-]{subsection.4.1.1}{Inertial\040reference\040frame}{section.4.1}% 68
@@ -89,10 +89,12 @@
 \BOOKMARK [1][-]{section.5.2}{Lagrange\040Equations\040of\040the\040First\040Kind}{chapter.5}% 89
 \BOOKMARK [1][-]{section.5.3}{Lagrangian\040functions\040and\040time\040dependence}{chapter.5}% 90
 \BOOKMARK [2][-]{subsection.5.3.1}{Lagrangian\040function\040with\040no\040explicit\040dependence\040on\040time}{section.5.3}% 91
-\BOOKMARK [3][-]{subsubsection*.26}{Properties\040of\040kinetic\040energy\040and\040potential}{subsection.5.3.1}% 92
+\BOOKMARK [3][-]{subsubsection*.28}{Properties\040of\040kinetic\040energy\040and\040potential}{subsection.5.3.1}% 92
 \BOOKMARK [2][-]{subsection.5.3.2}{Lagrangian\040function\040with\040explicit\040dependence\040on\040time}{section.5.3}% 93
-\BOOKMARK [0][-]{chapter.6}{Hamiltonian\040Mechanics}{part.2}% 94
-\BOOKMARK [-1][-]{part.3}{III\040Exercises}{}% 95
-\BOOKMARK [0][-]{chapter.7}{Dynamics}{part.3}% 96
-\BOOKMARK [0][-]{chapter.8}{Gravitation}{part.3}% 97
-\BOOKMARK [0][-]{section*.33}{Proof\040Index}{part.3}% 98
+\BOOKMARK [3][-]{subsubsection*.29}{Energy\040balance}{subsection.5.3.2}% 94
+\BOOKMARK [3][-]{subsubsection*.30}{Properties\040of\040kinetic\040energy\040and\040potential}{subsection.5.3.2}% 95
+\BOOKMARK [0][-]{chapter.6}{Hamiltonian\040Mechanics}{part.2}% 96
+\BOOKMARK [-1][-]{part.3}{III\040Exercises}{}% 97
+\BOOKMARK [0][-]{chapter.7}{Dynamics}{part.3}% 98
+\BOOKMARK [0][-]{chapter.8}{Gravitation}{part.3}% 99
+\BOOKMARK [0][-]{section*.37}{Proof\040Index}{part.3}% 100

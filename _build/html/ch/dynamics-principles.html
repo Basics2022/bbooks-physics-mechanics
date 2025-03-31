@@ -390,9 +390,14 @@ document.write(`
                   
   <div class="tex2jax_ignore mathjax_ignore section" id="principles-of-newtonian-mechanics">
 <span id="classical-mechanics-dynamics-principles"></span><h1><span class="section-number">4.1. </span>Principles of Newtonian Mechanics<a class="headerlink" href="#principles-of-newtonian-mechanics" title="Permalink to this heading">#</a></h1>
-<p><strong>First Principle of Dynamics (Newton’s First Law): inertia and Galileian invariance.</strong> A body (more precisely, the center of mass of a body) on which no net force acts remains in its state of rest or uniform rectilinear motion relative to an inertial reference frame.</p>
-<p><strong>todo</strong> discuss the role/definition of <strong>inertial reference frames</strong> in classical mechanics and <strong>Galileian invariance</strong> (equations of motions are invariant under Galileian transformations)</p>
-<p><strong>Second Principle of Dynamics (Newton’s Second Law): momentum balance.</strong> Relative to an inertial reference frame, the change in momentum of a system is equal to the impulse of the external forces acting on it,</p>
+<p>Newton’s principle of dynamics are first established for <strong>closed systems</strong>, i.e. systems that don’t exchange mass with the external environment and thus have constant mass.
+Balance equations for mass, momentum, angular momentum and other quantities for arbitary systems (closed or open) are derived in <a class="reference external" href="https://basics2022.github.io/bbooks-physics-continuum-mechanics/intro.html">Continuum Mechanics</a>:<a class="reference external" href="https://basics2022.github.io/bbooks-physics-continuum-mechanics/ch/continuum/governing-equations.html">Governing Equations</a>, exploiting <a class="reference external" href="https://basics2022.github.io/bbooks-math-miscellanea/ch/tensor-algebra-calculus/time-derivative-of-integrals.html#volume-density">Reynolds’ transport theorem</a>.<a class="footnote-reference brackets" href="#reynolds-transport" id="id1">1</a></p>
+<p><strong>Mass conservation.</strong> In the regime of classical mechanics, Lavoisier principle states that the mass of a closed system is constant. Roughly speaking “nothing is created nothing is destroyed”.</p>
+<p><strong>First Principle of Dynamics (Newton’s First Law): inertia and Galileian invariance.</strong> A body (more precisely, the center of mass of a body) on which no net force acts remains in its state of rest or uniform rectilinear motion relative to an <a class="reference internal" href="#classical-mehcanics-dynamics-principles-inertial-ref-frame"><span class="std std-ref">inertial reference frame</span></a>.</p>
+<!--
+**todo** discuss the role/definition of **inertial reference frames** in classical mechanics and **Galileian invariance** (equations of motions are invariant under Galileian transformations)
+-->
+<p><strong>Second Principle of Dynamics (Newton’s Second Law): momentum balance.</strong> Relative to an <a class="reference internal" href="#classical-mehcanics-dynamics-principles-inertial-ref-frame"><span class="std std-ref">inertial reference frame</span></a>, the change in momentum of a system is equal to the impulse of <em>true external forces</em> (see <a class="reference internal" href="actions.html#def:true-forces">Definition 2.2</a>) acting on it,</p>
 <div class="math notranslate nohighlight">
 \[\Delta \vec{Q} = \vec{I}^e \ .\]</div>
 <p>In the case of smooth motion, where the momentum can be represented as a continuous and differentiable function of time, the second principle of dynamics can be expressed in differential form,</p>
@@ -404,7 +409,42 @@ document.write(`
 \[\vec{F}_{ij} = - \vec{F}_{ji} \ .\]</div>
 <div class="section" id="inertial-reference-frame">
 <span id="classical-mehcanics-dynamics-principles-inertial-ref-frame"></span><h2><span class="section-number">4.1.1. </span>Inertial reference frame<a class="headerlink" href="#inertial-reference-frame" title="Permalink to this heading">#</a></h2>
-<p>Force sensors in an inertial reference frame measure only “true forces”. But what’s a “true force”? In classical mechanics, true forces are due to gravitational interactions and electromagnetic interactions. Electromangetic interactions between charged systems; electromangetic interactions between electrically neutral systems as contact forces…</p>
+<p>Force sensors in an inertial reference frame measure only <em>true forces</em>, as defined in <a class="reference internal" href="actions.html#def:true-forces">Definition 2.2</a>.</p>
+<!--
+But what's a "true force"? In classical mechanics, true forces are due to gravitational interactions and electromagnetic interactions. Electromangetic interactions between charged systems; electromangetic interactions between electrically neutral systems as contact forces...
+-->
+<p>Here the effect of non-inertial reference frame in the description of the motion is shown on the <strong>dynamics of a point system</strong>, using <span class="math notranslate nohighlight">\(2^{nd}\)</span> principle for the description of the dynamics for an inertial observer, and the rules for the <a class="reference internal" href="kinematics-relative.html#classical-mechanics-kinematics-relative-points"><span class="std std-ref">relative kinematics of a point</span></a>.</p>
+<p>Here, an inertial reference frame is referred as 0, while the generic reference frame is referred as 1. The equation of motion of a point system <span class="math notranslate nohighlight">\(P\)</span> w.r.t. the inertial reference frame is governed by Newton’s second principle,</p>
+<div class="math notranslate nohighlight">
+\[m \vec{a}^{0}_{P/O_0} = \vec{F} \ ,\]</div>
+<p>being <span class="math notranslate nohighlight">\(\vec{a}^0_{P/O_0}\)</span> the acceleration of point <span class="math notranslate nohighlight">\(P\)</span> w.r.t. the origin <span class="math notranslate nohighlight">\(O_0\)</span> of the inertial reference frame <span class="math notranslate nohighlight">\(0\)</span>, as seen by the same reference frame <span class="math notranslate nohighlight">\(0\)</span> (the meaning of the apex).
+From relative kinematics, <a class="reference internal" href="kinematics-relative.html#equation-eq-relative-point-acc">(1.9)</a></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  m \vec{a}^{1}_{P/O_1} &amp; =  \vec{F}  + \\
+   &amp; \quad - m \left[ \vec{a}^0_{O_1/O_0} + \vec{\alpha}_{1/0} \times (P - O_1) + 2 \vec{\omega}_{1/0} \times \vec{v}^1_{P/O_1} + \vec{\omega}_{1/0} \times [ \, \vec{\omega}_{1/0} \times (P - O_1) \right]
+\end{aligned}\end{split}\]</div>
+<p>In order for the reference frame <span class="math notranslate nohighlight">\(1\)</span> to agree with the acceleration of any point <span class="math notranslate nohighlight">\(P\)</span> with the inertial reference frame <span class="math notranslate nohighlight">\(0\)</span>, the content of the square brackets must vanish, and thus:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\vec{a}^0_{O_1/O_0} = \vec{0}\)</span>, i.e. the acceleration of the origin of the reference frame <span class="math notranslate nohighlight">\(O_1\)</span> w.r.t. to the reference frame <span class="math notranslate nohighlight">\(0\)</span> must be zero</p></li>
+<li><p><span class="math notranslate nohighlight">\(\vec{\omega}_{1/0} = \vec{0}\)</span>, and thus implying <span class="math notranslate nohighlight">\(\vec{\alpha}_{1/0}= \vec{0}\)</span>, i.e. the angular velocity of the reference frame <span class="math notranslate nohighlight">\(1\)</span> w.r.t. the reference frame <span class="math notranslate nohighlight">\(0\)</span> are zero.</p></li>
+</ul>
+<p>Thus, reference frame <span class="math notranslate nohighlight">\(1\)</span> agrees with the measurements of accelerations and forces of an inertial reference frame if:</p>
+<ul class="simple">
+<li><p>its origin <span class="math notranslate nohighlight">\(O_1\)</span> is in uniform motion w.r.t. <span class="math notranslate nohighlight">\(O_0\)</span></p></li>
+<li><p>its orientation <span class="math notranslate nohighlight">\(\mathbb{R}^{1/0}\)</span> is constant in time, so that angular velocity and acceleration are identically zero.</p></li>
+</ul>
+<div class="proof definition admonition" id="definition-0">
+<p class="admonition-title"><span class="caption-number">Definition 4.1 </span> (Class of inertial reference frames)</p>
+<div class="definition-content section" id="proof-content">
+<p>If these conditions hold, it’s not possible to find which reference frame is “more absolute” than the other, but all the reference frames with constant relative orientation and origin in uniform relative motion are inertial reference frames, w.r.t. which the governing equations have the same expression.</p>
+</div>
+</div><hr class="footnotes docutils" />
+<dl class="footnote brackets">
+<dt class="label" id="reynolds-transport"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>Reynolds’s transport theorem provides the rules for time derivatives of integrals on arbitrary domains in Euclidean space, that allows to change representation to and from closed systems (material volume, a geometric volume moving with the physical system) and open systems (usually control volumes of some regions of the system that can exchage mass with the exterrnal environment).</p>
+</dd>
+</dl>
 </div>
 </div>
 

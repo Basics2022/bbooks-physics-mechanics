@@ -85,7 +85,7 @@
         
 
 \title{Classical Mechanics}
-\date{Mar 31, 2025}
+\date{Apr 01, 2025}
 \release{}
 \author{basics}
 \newcommand{\sphinxlogo}{\vbox{}}
@@ -407,7 +407,7 @@ Relative kinematics is discussed here using two Cartesian reference frames.
 \end{equation*}
 
 \subsection{Points}
-\label{\detokenize{ch/kinematics-relative:points}}
+\label{\detokenize{ch/kinematics-relative:points}}\label{\detokenize{ch/kinematics-relative:classical-mechanics-kinematics-relative-points}}
 \sphinxAtStartPar
 \sphinxstylestrong{Position.}
 Given two reference frames \(Ox^i\), \(O' x^{i'}\), for the position of a point \(P\) reads
@@ -448,11 +448,27 @@ so that
 \end{equation*}
 \sphinxAtStartPar
 so that
-\begin{equation*}
+\begin{equation}\label{equation:ch/kinematics-relative:eq:relative:point:acc}
 \begin{split}
 \vec{a}^0_{P/O_0} = \vec{a}^0_{O_1/O_0} + \vec{a}^{1}_{P/O_1} + \underbrace{\vec{\alpha}_{1/0} \times (P - O_1)}_{\text{tangential}} + \underbrace{2 \vec{\omega}_{1/0} \times \vec{v}^1_{P/O_1}}_{\text{Coriolis}} + \underbrace{\vec{\omega}_{1/0} \times [ \, \vec{\omega}_{1/0} \times (P - O_1) \, ]}_{\text{centripetal}} \ .
 \end{split}
-\end{equation*}
+\end{equation}
+\sphinxAtStartPar
+where:
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+the “tangential component” is orthogonal to the instantaneous angular acceleration and radius,
+
+\item {} 
+\sphinxAtStartPar
+the “centripetal component” is orthogonal w.r.t. the instantaneous angular velocity
+
+\end{itemize}
+
+\sphinxAtStartPar
+\sphinxstylestrong{todo} \sphinxstyleemphasis{tangent to what, centripetal w.r.t. what?} \sphinxstylestrong{state it clearly, otherwise delete this}
+
 
 \subsection{Rigid bodies}
 \label{\detokenize{ch/kinematics-relative:rigid-bodies}}
@@ -615,14 +631,61 @@ Minimal sets of parameters to represent rotations have 3 parameters. However the
 
 \chapter{Actions}
 \label{\detokenize{ch/actions:actions}}\label{\detokenize{ch/actions:classical-mechanics-actions}}\label{\detokenize{ch/actions::doc}}
+
+
 \sphinxAtStartPar
-\sphinxstylestrong{What’s an action?} Newton conceives the concept of an action, including both forces and moments, as the \sphinxstylestrong{causes of changes of the true motion} of mechanical systems, or \sphinxstylestrong{causes of difference of true motion w.r.t. a {\hyperref[\detokenize{ch/kinematics-relative:classical-mechanics-kinematics-relative}]{\sphinxcrossref{\DUrole{std,std-ref}{general relative motion}}}}}.
+\sphinxstylestrong{What is an action?}%
+\begin{footnote}[1]\sphinxAtStartFootnote
+The answer to the question “what is an action?” might imply a “true” knowledge—whatever that means—of the object\sphinxhyphen{}concept “action.” Here too, as in other cases, the question “what is…?” can be replaced with “what do we mean by…?”, and an “operational answer” can be considered satisfactory, as it reflects the mode of knowledge and formation of understanding in the scientific field: without delving into more abstract philosophical domains, in physics, we are content to define something through its interactions and effects on other systems, its properties, and a reliable process for its measurement.
+%
+\end{footnote} Following the introduction of fundamental mechanics concepts in his \sphinxstyleemphasis{Principia Naturalis}, Newton conceived the concept of action—including both \sphinxstylestrong{forces} and \sphinxstylestrong{moments}—as the possible \sphinxstylestrong{causes of variation in the “true motion”} of a mechanical system or, equivalently, the causes of the \sphinxstylestrong{difference between true motion and a} {\hyperref[\detokenize{ch/kinematics-relative:classical-mechanics-kinematics-relative}]{\sphinxcrossref{\DUrole{std,std-ref}{\sphinxstylestrong{generic relative motion}}}}}.
+\label{ch/actions:def:true-motion}
+\begin{sphinxadmonition}{note}{Definition 2.1 (“True motion”)}
+
+
 
 \sphinxAtStartPar
-Newton’s concept of \sphinxstyleemphasis{true motion} is meant as the motion w.r.t. an inertial reference frame. So what is an \sphinxstylestrong{inertial reference frame}? In an inertial reference frame, dynamometers measure no force and moment associated with uniform motion.
+Newton’s concept of \sphinxstyleemphasis{true motion} is meant as the motion w.r.t. an inertial reference frame. So what is an {\hyperref[\detokenize{ch/dynamics-principles:classical-mehcanics-dynamics-principles-inertial-ref-frame}]{\sphinxcrossref{\DUrole{std,std-ref}{\sphinxstylestrong{inertial reference frame}}}}}? From an operational point of view, dynamometers measure no force and moment associated with uniform motion w.r.t. a inertial reference frame.
+\end{sphinxadmonition}
+
+\sphinxAtStartPar
+A force is a vectorial physical quantity that, from an operational point of view, can be measured with a \sphinxstylestrong{3\sphinxhyphen{}axis force sensor} (which measures its three components in a 3\sphinxhyphen{}dimensional space) or with a \sphinxstylestrong{dynamometer} (which measures its intensity), provided it is free to orient itself along the force direction or if the force direction is known and the instrument is aligned with it.
+
+
+\label{ch/actions:def:true-forces}
+\begin{sphinxadmonition}{note}{Definition 2.2 (True forces in classical mechanics)}
 
 
 
+\sphinxAtStartPar
+Referring to the \DUrole{xref,myst}{four fundamental interactions}, the significant interactions in the realm of classical mechanics are only those of {\hyperref[\detokenize{ch/actions-examples:classical-mechanics-actions-gravitation}]{\sphinxcrossref{\DUrole{std,std-ref}{\sphinxstylestrong{gravitational}}}}} and \sphinxstylestrong{electromagnetic} nature. Electromagnetic interactions can manifest with bodies having a net charge or, more frequently in classical mechanics, between bodies with no net charge. Among the latter cases, in classical mechanics, it is common to observe the macroscopic manifestation of the microscopic electromagnetic interaction between the elementary components of matter in the form of:
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+{\hyperref[\detokenize{ch/actions-reactions:classical-mechanics-actions-reactions-contact}]{\sphinxcrossref{\DUrole{std,std-ref}{\sphinxstylestrong{contact}}}}} interactions, where it is possible to distinguish:
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+a \sphinxstylestrong{normal} component to the contact surfaces responsible for the impenetrability of bodies,
+
+\item {} 
+\sphinxAtStartPar
+and a tangential component to the surfaces that manifests as {\hyperref[\detokenize{ch/actions-reactions:classical-mechanics-actions-reactions-contact-friction}]{\sphinxcrossref{\DUrole{std,std-ref}{\sphinxstylestrong{friction}}}}}
+
+\end{itemize}
+
+\item {} 
+\sphinxAtStartPar
+material response to stresses, such as in the elastic constitutive law for {\hyperref[\detokenize{ch/actions-examples:classical-mechanics-actions-spring}]{\sphinxcrossref{\DUrole{std,std-ref}{springs}}}}
+
+\end{itemize}
+\end{sphinxadmonition}
+
+\sphinxAtStartPar
+A measured action that is not a result of the fundamental interactions is due to non\sphinxhyphen{}inertial motion of the dynamometer \sphinxhyphen{} or, very unlikely, to a new interaction you’ve just discover. If you experience this situation, please remember to send me an invitation for the Nobel cerimony.
+
+
+\bigskip\hrule\bigskip
 
 
 \sphinxstepscope
@@ -1041,7 +1104,7 @@ Introducing the gravitational potential \(\phi(\vec{r})\), whose gradient equals
 \end{equation}
 
 \subsection{Elastic Actions: Linear Springs}
-\label{\detokenize{ch/actions-examples:elastic-actions-linear-springs}}
+\label{\detokenize{ch/actions-examples:elastic-actions-linear-springs}}\label{\detokenize{ch/actions-examples:classical-mechanics-actions-spring}}
 \sphinxAtStartPar
 \sphinxstylestrong{todo}
 
@@ -1065,10 +1128,10 @@ These conditions can be derived from the equations of dynamics for massless syst
 
 
 \subsection{Contact Actions}
-\label{\detokenize{ch/actions-reactions:contact-actions}}
+\label{\detokenize{ch/actions-reactions:contact-actions}}\label{\detokenize{ch/actions-reactions:classical-mechanics-actions-reactions-contact}}
 
 \subsubsection{Constraint Reactions of Ideal Constraints}
-\label{\detokenize{ch/actions-reactions:constraint-reactions-of-ideal-constraints}}
+\label{\detokenize{ch/actions-reactions:constraint-reactions-of-ideal-constraints}}\label{\detokenize{ch/actions-reactions:classical-mechanics-actions-reactions-contact-ideal}}
 \sphinxAtStartPar
 Ideal constraints are models that \sphinxstylestrong{do not perform net work}, and are thus \sphinxstylestrong{conservative elements}. As should become evident in the subsequent sections from the expressions of relative velocities and exchanged actions,
 \begin{equation*}
@@ -1190,10 +1253,10 @@ The support constraint is a unilateral constraint \sphinxstylestrong{todo} \sphi
 
 
 \subsubsection{Friction}
-\label{\detokenize{ch/actions-reactions:friction}}
+\label{\detokenize{ch/actions-reactions:friction}}\label{\detokenize{ch/actions-reactions:classical-mechanics-actions-reactions-contact-friction}}
 
 \paragraph{Static Friction}
-\label{\detokenize{ch/actions-reactions:static-friction}}
+\label{\detokenize{ch/actions-reactions:static-friction}}\label{\detokenize{ch/actions-reactions:classical-mechanics-actions-reactions-contact-friction-static}}
 \sphinxAtStartPar
 Static friction is the type of friction that occurs between two bodies when there is no relative motion between them, acting as a tangential force to the contact surface. The simplest model of static friction assumes that the maximum static friction force \(F^s_{max}\) that can be exerted between two bodies is proportional to the normal reaction between them, \(N\),
 \begin{equation*}
@@ -1206,7 +1269,7 @@ The proportionality constant \(\mu^s\) is defined as the \sphinxstylestrong{coef
 \end{equation*}
 
 \paragraph{Dynamic Friction}
-\label{\detokenize{ch/actions-reactions:dynamic-friction}}
+\label{\detokenize{ch/actions-reactions:dynamic-friction}}\label{\detokenize{ch/actions-reactions:classical-mechanics-actions-reactions-contact-friction-dynamic}}
 \sphinxAtStartPar
 Dynamic friction occurs between two bodies in contact and in relative motion, acting as a tangential force to the contact surface. The simplest model of dynamic friction assumes that the dynamic friction force is proportional to the normal reaction between the two bodies and directed opposite to the relative velocity,
 \begin{equation*}
@@ -1217,7 +1280,7 @@ where \(\vec{F}_{12}\) is the force acting on body 1 due to body 2, and \(\vec{v
 
 
 \paragraph{Pure Rolling}
-\label{\detokenize{ch/actions-reactions:pure-rolling}}
+\label{\detokenize{ch/actions-reactions:pure-rolling}}\label{\detokenize{ch/actions-reactions:classical-mechanics-actions-reactions-contact-friction-pure-rolling}}
 \sphinxAtStartPar
 \sphinxstylestrong{todo} \sphinxstyleemphasis{add description}
 
@@ -1651,13 +1714,23 @@ These physical laws are formulated in terms of certain physical quantities, such
 \section{Principles of Newtonian Mechanics}
 \label{\detokenize{ch/dynamics-principles:principles-of-newtonian-mechanics}}\label{\detokenize{ch/dynamics-principles:classical-mechanics-dynamics-principles}}\label{\detokenize{ch/dynamics-principles::doc}}
 \sphinxAtStartPar
-\sphinxstylestrong{First Principle of Dynamics (Newton’s First Law): inertia and Galileian invariance.} A body (more precisely, the center of mass of a body) on which no net force acts remains in its state of rest or uniform rectilinear motion relative to an inertial reference frame.
+Newton’s principle of dynamics are first established for \sphinxstylestrong{closed systems}, i.e. systems that don’t exchange mass with the external environment and thus have constant mass.
+Balance equations for mass, momentum, angular momentum and other quantities for arbitary systems (closed or open) are derived in \sphinxhref{https://basics2022.github.io/bbooks-physics-continuum-mechanics/intro.html}{Continuum Mechanics}:\sphinxhref{https://basics2022.github.io/bbooks-physics-continuum-mechanics/ch/continuum/governing-equations.html}{Governing Equations}, exploiting \sphinxhref{https://basics2022.github.io/bbooks-math-miscellanea/ch/tensor-algebra-calculus/time-derivative-of-integrals.html\#volume-density}{Reynolds’ transport theorem}.%
+\begin{footnote}[1]\sphinxAtStartFootnote
+Reynolds’s transport theorem provides the rules for time derivatives of integrals on arbitrary domains in Euclidean space, that allows to change representation to and from closed systems (material volume, a geometric volume moving with the physical system) and open systems (usually control volumes of some regions of the system that can exchage mass with the exterrnal environment).
+%
+\end{footnote}
 
 \sphinxAtStartPar
-\sphinxstylestrong{todo} discuss the role/definition of \sphinxstylestrong{inertial reference frames} in classical mechanics and \sphinxstylestrong{Galileian invariance} (equations of motions are invariant under Galileian transformations)
+\sphinxstylestrong{Mass conservation.} In the regime of classical mechanics, Lavoisier principle states that the mass of a closed system is constant. Roughly speaking “nothing is created nothing is destroyed”.
 
 \sphinxAtStartPar
-\sphinxstylestrong{Second Principle of Dynamics (Newton’s Second Law): momentum balance.} Relative to an inertial reference frame, the change in momentum of a system is equal to the impulse of the external forces acting on it,
+\sphinxstylestrong{First Principle of Dynamics (Newton’s First Law): inertia and Galileian invariance.} A body (more precisely, the center of mass of a body) on which no net force acts remains in its state of rest or uniform rectilinear motion relative to an {\hyperref[\detokenize{ch/dynamics-principles:classical-mehcanics-dynamics-principles-inertial-ref-frame}]{\sphinxcrossref{\DUrole{std,std-ref}{inertial reference frame}}}}.
+
+
+
+\sphinxAtStartPar
+\sphinxstylestrong{Second Principle of Dynamics (Newton’s Second Law): momentum balance.} Relative to an {\hyperref[\detokenize{ch/dynamics-principles:classical-mehcanics-dynamics-principles-inertial-ref-frame}]{\sphinxcrossref{\DUrole{std,std-ref}{inertial reference frame}}}}, the change in momentum of a system is equal to the impulse of \sphinxstyleemphasis{true external forces} (see {\hyperref[\detokenize{ch/actions:def:true-forces}]{\sphinxcrossref{Definition 2.2}}}) acting on it,
 \begin{equation*}
 \begin{split}\Delta \vec{Q} = \vec{I}^e \ .\end{split}
 \end{equation*}
@@ -1678,7 +1751,64 @@ where the resultant of the external forces, \(\vec{R}^e = \frac{d \vec{I}^e}{dt}
 \subsection{Inertial reference frame}
 \label{\detokenize{ch/dynamics-principles:inertial-reference-frame}}\label{\detokenize{ch/dynamics-principles:classical-mehcanics-dynamics-principles-inertial-ref-frame}}
 \sphinxAtStartPar
-Force sensors in an inertial reference frame measure only “true forces”. But what’s a “true force”? In classical mechanics, true forces are due to gravitational interactions and electromagnetic interactions. Electromangetic interactions between charged systems; electromangetic interactions between electrically neutral systems as contact forces…
+Force sensors in an inertial reference frame measure only \sphinxstyleemphasis{true forces}, as defined in {\hyperref[\detokenize{ch/actions:def:true-forces}]{\sphinxcrossref{Definition 2.2}}}.
+
+
+
+\sphinxAtStartPar
+Here the effect of non\sphinxhyphen{}inertial reference frame in the description of the motion is shown on the \sphinxstylestrong{dynamics of a point system}, using \(2^{nd}\) principle for the description of the dynamics for an inertial observer, and the rules for the {\hyperref[\detokenize{ch/kinematics-relative:classical-mechanics-kinematics-relative-points}]{\sphinxcrossref{\DUrole{std,std-ref}{relative kinematics of a point}}}}.
+
+\sphinxAtStartPar
+Here, an inertial reference frame is referred as 0, while the generic reference frame is referred as 1. The equation of motion of a point system \(P\) w.r.t. the inertial reference frame is governed by Newton’s second principle,
+\begin{equation*}
+\begin{split}m \vec{a}^{0}_{P/O_0} = \vec{F} \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+being \(\vec{a}^0_{P/O_0}\) the acceleration of point \(P\) w.r.t. the origin \(O_0\) of the inertial reference frame \(0\), as seen by the same reference frame \(0\) (the meaning of the apex).
+From relative kinematics, \eqref{equation:ch/kinematics-relative:eq:relative:point:acc}
+\begin{equation*}
+\begin{split}\begin{aligned}
+  m \vec{a}^{1}_{P/O_1} & =  \vec{F}  + \\
+   & \quad - m \left[ \vec{a}^0_{O_1/O_0} + \vec{\alpha}_{1/0} \times (P - O_1) + 2 \vec{\omega}_{1/0} \times \vec{v}^1_{P/O_1} + \vec{\omega}_{1/0} \times [ \, \vec{\omega}_{1/0} \times (P - O_1) \right]
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+In order for the reference frame \(1\) to agree with the acceleration of any point \(P\) with the inertial reference frame \(0\), the content of the square brackets must vanish, and thus:
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+\(\vec{a}^0_{O_1/O_0} = \vec{0}\), i.e. the acceleration of the origin of the reference frame \(O_1\) w.r.t. to the reference frame \(0\) must be zero
+
+\item {} 
+\sphinxAtStartPar
+\(\vec{\omega}_{1/0} = \vec{0}\), and thus implying \(\vec{\alpha}_{1/0}= \vec{0}\), i.e. the angular velocity of the reference frame \(1\) w.r.t. the reference frame \(0\) are zero.
+
+\end{itemize}
+
+\sphinxAtStartPar
+Thus, reference frame \(1\) agrees with the measurements of accelerations and forces of an inertial reference frame if:
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+its origin \(O_1\) is in uniform motion w.r.t. \(O_0\)
+
+\item {} 
+\sphinxAtStartPar
+its orientation \(\mathbb{R}^{1/0}\) is constant in time, so that angular velocity and acceleration are identically zero.
+
+\end{itemize}
+\label{ch/dynamics-principles:definition-0}
+\begin{sphinxadmonition}{note}{Definition 4.1.1 (Class of inertial reference frames)}
+
+
+
+\sphinxAtStartPar
+If these conditions hold, it’s not possible to find which reference frame is “more absolute” than the other, but all the reference frames with constant relative orientation and origin in uniform relative motion are inertial reference frames, w.r.t. which the governing equations have the same expression.
+\end{sphinxadmonition}
+
+
+\bigskip\hrule\bigskip
+
 
 \sphinxstepscope
 
@@ -2576,6 +2706,82 @@ and
 
 \subsection{Lagrangian function with explicit dependence on time}
 \label{\detokenize{ch/lagrange-t-explicit:lagrangian-function-with-explicit-dependence-on-time}}\label{\detokenize{ch/lagrange-t-explicit:classical-mechanics-lagrange-time-dependent}}\label{\detokenize{ch/lagrange-t-explicit::doc}}
+\sphinxAtStartPar
+Some problems may have a Lagrangian function with an explicit dependence on time,
+\begin{equation*}
+\begin{split}\mathscr{L}\left(\dot{q}^k(t),q^k(t),t\right) \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+in some cases like:
+\begin{enumerate}
+\sphinxsetlistlabels{\arabic}{enumi}{enumii}{}{.}%
+\item {} 
+\sphinxAtStartPar
+time\sphinxhyphen{}dependent contraints, whose motion is prescribed
+
+\item {} 
+\sphinxAtStartPar
+time\sphinxhyphen{}dependent forces that can be included in the potential energy
+
+\item {} 
+\sphinxAtStartPar
+choice of coordinates \(q^k(t)\) that gives an explicit dependence on time of the physical coordinates, like positions and orientations of rigid bodies
+\begin{equation*}
+\begin{split}\vec{r}_P\left(q^k(t),t \right) \quad , \quad \mathbb{R}_P\left( q^{k}(t), t \right)\end{split}
+\end{equation*}
+\sphinxAtStartPar
+and leading to an explicit dependence on time of the velocities and angular velocities
+\begin{equation*}
+\begin{split}\begin{aligned}
+      \vec{v}_P\left(\dot{q}^k(t), q^k(t),t \right)  = \dot{q}^i(t) \dfrac{\partial \vec{r}_P}{\partial q^i} \left(q^k(t),t \right) + \dfrac{\partial \vec{r}_P}{\partial t} \left(q^k(t),t \right)  \\
+      \vec{\omega}_P\left(\dot{q}^k(t), q^{k}(t), t \right) = \dot{q}^i(t) \dfrac{\partial \vec{\theta}_P}{\partial q^i} \left(q^k(t),t \right) + \dfrac{\partial \vec{\theta}_P}{\partial t}\left(q^k(t),t \right) 
+    \end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+and thus of the kinetic energy.
+
+\end{enumerate}
+
+\sphinxAtStartPar
+In general, external actions with net power are required for conditions 1., 2., i.e. for moving constraints or for changing potential fields acting on the system: even if variable constraints or external forcing acting on a system are prescribed and thus add no degree of freedom to the system, they’re not free in general but requires external actions and power, as it can be realized looking at the balance equation of mechanica energy.
+
+\sphinxAtStartPar
+Condition 3. is usually a result of a choice of coordinates in a non\sphinxhyphen{}inertial reference frame, whose motion is not described by the coordinates themselves.
+
+
+\subsubsection{Energy balance}
+\label{\detokenize{ch/lagrange-t-explicit:energy-balance}}\begin{equation*}
+\begin{split}\begin{aligned}
+  \dfrac{d E}{d t}
+  & = \dfrac{d K}{d t} - \dfrac{d U}{d t} = \\
+  & = 2 \dfrac{d K}{d t} - \dfrac{d \mathscr{L}}{dt} = \\
+  & = 2 \dfrac{d K}{d t} - \ddot{q}^k \dfrac{\partial \mathscr{L}}{\partial \dot{q}^k} - \dot{q}^k \dfrac{\partial \mathscr{L}}{\partial q^k} - \dfrac{\partial \mathscr{L}}{\partial t} = \\
+  & = 2 \dfrac{d K}{d t} - \dfrac{d}{dt} \left( \dot{q}^k \dfrac{\partial \mathscr{L}}{\partial \dot{q}^k} \right) + \dot{q}^k \dfrac{d}{dt}\dfrac{\partial \mathscr{L}}{\partial \dot{q}^k} - \dot{q}^k \dfrac{\partial \mathscr{L}}{\partial q^k} - \dfrac{\partial \mathscr{L}}{\partial t} = \\
+  & = \dfrac{d }{d t} \left[ 2 K - \dot{q}^k \dfrac{\partial \mathscr{L}}{\partial \dot{q}^k} \right] + \dot{q}^k \underbrace{ \left[ \dfrac{d}{dt}\dfrac{\partial \mathscr{L}}{\partial \dot{q}^k} - \dfrac{\partial \mathscr{L}}{\partial q^k} \right]}_{= Q_k} - \dfrac{\partial \mathscr{L}}{\partial t} = \\
+  & = \dot{q}^k Q_k - \dfrac{\partial \mathscr{L}}{\partial t} + \dfrac{d}{dt} \left[ \dot{q}^k B_k + 2C \right]
+\end{aligned}\end{split}
+\end{equation*}
+
+\subsubsection{Properties of kinetic energy and potential}
+\label{\detokenize{ch/lagrange-t-explicit:properties-of-kinetic-energy-and-potential}}
+\sphinxAtStartPar
+The kinetic energy has a general expression
+\begin{equation*}
+\begin{split}K = \frac{1}{2} \dot{q}^i \dot{q}^j A_{ij}\left(q^k(t),t\right) + \dot{q}^i B_{i}\left(q^k(t),t\right) + C\left(q^k(t),t\right)\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}\dot{q}^k \dfrac{\partial K}{\partial \dot{q}^k} = \dot{q}^k \left( A_{kj} \dot{q}^j + B_k \right)\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}\begin{aligned}
+  2K - \dot{q}^k \dfrac{\partial K}{\partial \dot{q}^k}
+  & = \dot{q}^k A_{kj} \dot{q}^j + 2 \dot{q}^k B_k + 2 C - \left[ \dot{q}^k \left( A_{kj} \dot{q}^j + B_k \right) \right] = \\
+  & = \dot{q}^k B_k + 2 C
+\end{aligned}\end{split}
+\end{equation*}\label{ch/lagrange-t-explicit:example-0}
+\begin{sphinxadmonition}{note}{Example 5.3.1}
+
+
+\end{sphinxadmonition}
+
 \sphinxstepscope
 
 
@@ -3055,14 +3261,20 @@ At the end of the tunnel, the ball moves above the planet surface while it’s a
 \renewcommand{\indexname}{Proof Index}
 \begin{sphinxtheindex}
 \let\bigletter\sphinxstyleindexlettergroup
+\bigletter{def:true\sphinxhyphen{}forces}
+\item\relax\sphinxstyleindexentry{def:true\sphinxhyphen{}forces}\sphinxstyleindexextra{ch/actions}\sphinxstyleindexpageref{ch/actions:\detokenize{def:true-forces}}
+\indexspace
+\bigletter{def:true\sphinxhyphen{}motion}
+\item\relax\sphinxstyleindexentry{def:true\sphinxhyphen{}motion}\sphinxstyleindexextra{ch/actions}\sphinxstyleindexpageref{ch/actions:\detokenize{def:true-motion}}
+\indexspace
 \bigletter{definition\sphinxhyphen{}0}
-\item\relax\sphinxstyleindexentry{definition\sphinxhyphen{}0}\sphinxstyleindexextra{ch/kinematics}\sphinxstyleindexpageref{ch/kinematics:\detokenize{definition-0}}
+\item\relax\sphinxstyleindexentry{definition\sphinxhyphen{}0}\sphinxstyleindexextra{ch/dynamics\sphinxhyphen{}principles}\sphinxstyleindexpageref{ch/dynamics-principles:\detokenize{definition-0}}
 \indexspace
 \bigletter{definition\sphinxhyphen{}1}
 \item\relax\sphinxstyleindexentry{definition\sphinxhyphen{}1}\sphinxstyleindexextra{ch/kinematics}\sphinxstyleindexpageref{ch/kinematics:\detokenize{definition-1}}
 \indexspace
 \bigletter{example\sphinxhyphen{}0}
-\item\relax\sphinxstyleindexentry{example\sphinxhyphen{}0}\sphinxstyleindexextra{ch/lagrange\sphinxhyphen{}i\sphinxhyphen{}type}\sphinxstyleindexpageref{ch/lagrange-i-type:\detokenize{example-0}}
+\item\relax\sphinxstyleindexentry{example\sphinxhyphen{}0}\sphinxstyleindexextra{ch/lagrange\sphinxhyphen{}t\sphinxhyphen{}explicit}\sphinxstyleindexpageref{ch/lagrange-t-explicit:\detokenize{example-0}}
 \indexspace
 \bigletter{thm:huygens}
 \item\relax\sphinxstyleindexentry{thm:huygens}\sphinxstyleindexextra{ch/inertia}\sphinxstyleindexpageref{ch/inertia:\detokenize{thm:huygens}}

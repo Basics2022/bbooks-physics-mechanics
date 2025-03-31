@@ -15,6 +15,7 @@ $$\begin{aligned}
     = \mathbb{R}^{0\rightarrow 1} \cdot \hat{e}^0_i  \ .
 \end{aligned}$$
 
+(classical-mechanics:kinematics:relative:points)=
 ## Points
 
 **Position.**
@@ -54,7 +55,13 @@ so that
 
 $$
 \vec{a}^0_{P/O_0} = \vec{a}^0_{O_1/O_0} + \vec{a}^{1}_{P/O_1} + \underbrace{\vec{\alpha}_{1/0} \times (P - O_1)}_{\text{tangential}} + \underbrace{2 \vec{\omega}_{1/0} \times \vec{v}^1_{P/O_1}}_{\text{Coriolis}} + \underbrace{\vec{\omega}_{1/0} \times [ \, \vec{\omega}_{1/0} \times (P - O_1) \, ]}_{\text{centripetal}} \ .
-$$
+$$ (eq:relative:point:acc)
+
+where:
+- the "tangential component" is orthogonal to the instantaneous angular acceleration and radius,
+- the "centripetal component" is orthogonal w.r.t. the instantaneous angular velocity
+
+**todo** *tangent to what, centripetal w.r.t. what?* **state it clearly, otherwise delete this**
 
 ## Rigid bodies
 
