@@ -412,18 +412,28 @@ document.write(`
 <span class="eqno">(5.5)<a class="headerlink" href="#equation-eq-euler-beltrami" title="Permalink to this equation">#</a></span>\[\dfrac{d}{dt} \left[ \dot{q}^k \dfrac{\partial \mathscr{L}}{\partial \dot{q}^k} - \mathscr{L} \right] = \dot{q}^k Q_k - \dfrac{\partial \mathscr{L}}{\partial t} \ ,\]</div>
 <p>i.e. time derivative of a physical quantity equals the power of actions not included in the potential, <span class="math notranslate nohighlight">\(\dot{q}^k Q_k\)</span> and a contribution of partial derivative of the Lagrangian function, <span class="math notranslate nohighlight">\(\partial_t \mathscr{L}\)</span>.</p>
 <p>As it’s discusseed below, <strong>when the Lagrangian function of the system is not an explicit function of time</strong> <strong>todo</strong> *discuss the cases when <span class="math notranslate nohighlight">\(\partial_t \mathscr{L} \ne 0\)</span>, the equation <a class="reference internal" href="#equation-eq-euler-beltrami">(5.5)</a> is nothing but the balance equation of mechanical energy.</p>
+<p>When there is no generalized force, that can’t be included in the potential, <span class="math notranslate nohighlight">\(Q_k  = 0\)</span>, and no explicit dependence of Lagrangian function on time, <span class="math notranslate nohighlight">\(\partial_t \mathscr{L} = 0\)</span>, the equation <a class="reference internal" href="#equation-eq-euler-beltrami">(5.5)</a> can be recast as an <a class="reference external" href="https://basics2022.github.io/bbooks-math-miscellanea/ch/calculus-variations/intro.html#euler-beltrami-equation">Euler-Beltrami equation</a>,</p>
+<div class="math notranslate nohighlight">
+\[\dot{q}^k \dfrac{\partial \mathscr{L}}{\partial \dot{q}^k} - \mathscr{L} = \overline{E} \quad \text{const.}\]</div>
+<p>describing the conservation of mechanical energy w.r.t. an inertial reference frame, in absence of non-conservative forces, as discussed <a class="reference internal" href="#classical-mechanics-lagrange-time-independent"><span class="std std-ref">below</span></a>.</p>
 <div class="section" id="lagrangian-function-with-no-explicit-dependence-on-time">
 <span id="classical-mechanics-lagrange-time-independent"></span><h2><span class="section-number">5.3.1. </span>Lagrangian function with no explicit dependence on time<a class="headerlink" href="#lagrangian-function-with-no-explicit-dependence-on-time" title="Permalink to this heading">#</a></h2>
 <p>Let’s analyse first some properties of systems, whose Lagrangian function are not an explicit function of time,</p>
 <div class="math notranslate nohighlight">
 \[\mathscr{L}(\dot{q}^k(t), q^k(t)) = K(\dot{q}^k(t), q^k(t)) + U(q^k(t)) \ ,\]</div>
-<p>and then go back to the most general case.</p>
-<p>As the Lagrange equation is not an explicit function of time, <a class="reference external" href="https://basics2022.github.io/bbooks-math-miscellanea/ch/calculus-variations/intro.html#euler-beltrami-equation">Euler-Beltrami equations</a> hold,</p>
+<p>and then go back to the most general case.
+As the Lagrange equation is not an explicit function of time, relation <a class="reference internal" href="#equation-eq-euler-beltrami">(5.5)</a> reads</p>
 <div class="math notranslate nohighlight">
-\[\mathscr{L} - \dot{q}^k \dfrac{\partial \mathscr{L}}{\partial \dot{q}^k} = C \quad \text{const.}\]</div>
-<p>Since the Lagrangian doesn’t expliclty depend on time, and potential is not a function of time, relation <a class="reference internal" href="#equation-eq-lagrange-time-ind-dqdk-dq">(5.6)</a> gives <span class="math notranslate nohighlight">\(\dfrac{\partial \mathscr{L}}{\partial \dot{q}^k} = 2 T\)</span>, and thus</p>
+\[\dfrac{d}{dt} \left[ \dot{q}^k \dfrac{\partial \mathscr{L}}{\partial \dot{q}^k} - \mathscr{L} \right] = \dot{q}^k Q_k \ .\]</div>
+<p>Since the Lagrangian doesn’t expliclty depend on time, and potential is not a function of time, relation <a class="reference internal" href="#equation-eq-lagrange-time-ind-dqdk-dq">(5.6)</a> gives <span class="math notranslate nohighlight">\(\dot{q}^k \frac{\partial \mathscr{L}}{\partial \dot{q}^k} = 2 K\)</span>, and thus the content of the braces is the mechanical energy of the system,</p>
 <div class="math notranslate nohighlight">
-\[C = \mathscr{L} - \dot{q}^k \dfrac{\partial \mathscr{L}}{\partial \dot{q}^k} = T + U - 2 T = - T + U =: - E^{mec}\]</div>
+\[2 K - \mathscr{L} = 2 K - K - U = K - U = E^{mec} \ ,\]</div>
+<p>and it becomes clear that the relation is nothhing but the balance equation of mechanical energy</p>
+<div class="math notranslate nohighlight">
+\[\dfrac{d E^{mec}}{dt} = \dot{q}^k Q_k \ ,\]</div>
+<p>that becomes conservation of mechanical energy, in absence of non-conservative actions, <span class="math notranslate nohighlight">\(Q_k = 0\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[E^{mec} = \overline{E}^{mec} \quad \text{const.}\]</div>
 <div class="section" id="properties-of-kinetic-energy-and-potential">
 <h3><span class="section-number">5.3.1.1. </span>Properties of kinetic energy and potential<a class="headerlink" href="#properties-of-kinetic-energy-and-potential" title="Permalink to this heading">#</a></h3>
 <p>This section collects some properties of the kinetic energy and potential of systems, where physical coordinates of the system are written as a function of generalized coordinates only, <span class="math notranslate nohighlight">\(q^k(t)\)</span>. As an example, coordinates of point masses, material points of rigid bodies and the rotation tensor representing their orientation in space can be written as</p>

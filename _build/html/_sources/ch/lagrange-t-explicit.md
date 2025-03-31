@@ -28,6 +28,12 @@ i.e. time derivative of a physical quantity equals the power of actions not incl
 
 As it's discusseed below, **when the Lagrangian function of the system is not an explicit function of time** **todo** *discuss the cases when $\partial_t \mathscr{L} \ne 0$, the equation {eq}`eq:euler-beltrami` is nothing but the balance equation of mechanical energy. 
 
+When there is no generalized force, that can't be included in the potential, $Q_k  = 0$, and no explicit dependence of Lagrangian function on time, $\partial_t \mathscr{L} = 0$, the equation {eq}`eq:euler-beltrami` can be recast as an [Euler-Beltrami equation](https://basics2022.github.io/bbooks-math-miscellanea/ch/calculus-variations/intro.html#euler-beltrami-equation),
+
+$$\dot{q}^k \dfrac{\partial \mathscr{L}}{\partial \dot{q}^k} - \mathscr{L} = \overline{E} \quad \text{const.}$$
+
+describing the conservation of mechanical energy w.r.t. an inertial reference frame, in absence of non-conservative forces, as discussed [below](classical-mechanics:lagrange:time:independent).
+
 (classical-mechanics:lagrange:time:independent)=
 ## Lagrangian function with no explicit dependence on time
 Let's analyse first some properties of systems, whose Lagrangian function are not an explicit function of time,
@@ -35,14 +41,21 @@ Let's analyse first some properties of systems, whose Lagrangian function are no
 $$\mathscr{L}(\dot{q}^k(t), q^k(t)) = K(\dot{q}^k(t), q^k(t)) + U(q^k(t)) \ ,$$
 
 and then go back to the most general case. 
+As the Lagrange equation is not an explicit function of time, relation {eq}`eq:euler-beltrami` reads
 
-As the Lagrange equation is not an explicit function of time, [Euler-Beltrami equations](https://basics2022.github.io/bbooks-math-miscellanea/ch/calculus-variations/intro.html#euler-beltrami-equation) hold,
+$$\dfrac{d}{dt} \left[ \dot{q}^k \dfrac{\partial \mathscr{L}}{\partial \dot{q}^k} - \mathscr{L} \right] = \dot{q}^k Q_k \ .$$
 
-$$\mathscr{L} - \dot{q}^k \dfrac{\partial \mathscr{L}}{\partial \dot{q}^k} = C \quad \text{const.}$$
+Since the Lagrangian doesn't expliclty depend on time, and potential is not a function of time, relation {eq}`eq:lagrange:time:ind:dqdK_dq` gives $\dot{q}^k \frac{\partial \mathscr{L}}{\partial \dot{q}^k} = 2 K$, and thus the content of the braces is the mechanical energy of the system, 
 
-Since the Lagrangian doesn't expliclty depend on time, and potential is not a function of time, relation {eq}`eq:lagrange:time:ind:dqdK_dq` gives $\dfrac{\partial \mathscr{L}}{\partial \dot{q}^k} = 2 T$, and thus
+$$2 K - \mathscr{L} = 2 K - K - U = K - U = E^{mec} \ ,$$
 
-$$C = \mathscr{L} - \dot{q}^k \dfrac{\partial \mathscr{L}}{\partial \dot{q}^k} = T + U - 2 T = - T + U =: - E^{mec}$$
+and it becomes clear that the relation is nothhing but the balance equation of mechanical energy
+
+$$\dfrac{d E^{mec}}{dt} = \dot{q}^k Q_k \ ,$$
+
+that becomes conservation of mechanical energy, in absence of non-conservative actions, $Q_k = 0$,
+
+$$E^{mec} = \overline{E}^{mec} \quad \text{const.}$$
 
 
 ### Properties of kinetic energy and potential

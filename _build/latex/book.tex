@@ -2492,6 +2492,14 @@ i.e. time derivative of a physical quantity equals the power of actions not incl
 \sphinxAtStartPar
 As it’s discusseed below, \sphinxstylestrong{when the Lagrangian function of the system is not an explicit function of time} \sphinxstylestrong{todo} *discuss the cases when \(\partial_t \mathscr{L} \ne 0\), the equation \eqref{equation:ch/lagrange-t-explicit:eq:euler-beltrami} is nothing but the balance equation of mechanical energy.
 
+\sphinxAtStartPar
+When there is no generalized force, that can’t be included in the potential, \(Q_k  = 0\), and no explicit dependence of Lagrangian function on time, \(\partial_t \mathscr{L} = 0\), the equation \eqref{equation:ch/lagrange-t-explicit:eq:euler-beltrami} can be recast as an \sphinxhref{https://basics2022.github.io/bbooks-math-miscellanea/ch/calculus-variations/intro.html\#euler-beltrami-equation}{Euler\sphinxhyphen{}Beltrami equation},
+\begin{equation*}
+\begin{split}\dot{q}^k \dfrac{\partial \mathscr{L}}{\partial \dot{q}^k} - \mathscr{L} = \overline{E} \quad \text{const.}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+describing the conservation of mechanical energy w.r.t. an inertial reference frame, in absence of non\sphinxhyphen{}conservative forces, as discussed {\hyperref[\detokenize{ch/lagrange-t-explicit:classical-mechanics-lagrange-time-independent}]{\sphinxcrossref{\DUrole{std,std-ref}{below}}}}.
+
 
 \subsection{Lagrangian function with no explicit dependence on time}
 \label{\detokenize{ch/lagrange-t-explicit:lagrangian-function-with-no-explicit-dependence-on-time}}\label{\detokenize{ch/lagrange-t-explicit:classical-mechanics-lagrange-time-independent}}
@@ -2502,16 +2510,24 @@ Let’s analyse first some properties of systems, whose Lagrangian function are 
 \end{equation*}
 \sphinxAtStartPar
 and then go back to the most general case.
-
-\sphinxAtStartPar
-As the Lagrange equation is not an explicit function of time, \sphinxhref{https://basics2022.github.io/bbooks-math-miscellanea/ch/calculus-variations/intro.html\#euler-beltrami-equation}{Euler\sphinxhyphen{}Beltrami equations} hold,
+As the Lagrange equation is not an explicit function of time, relation \eqref{equation:ch/lagrange-t-explicit:eq:euler-beltrami} reads
 \begin{equation*}
-\begin{split}\mathscr{L} - \dot{q}^k \dfrac{\partial \mathscr{L}}{\partial \dot{q}^k} = C \quad \text{const.}\end{split}
+\begin{split}\dfrac{d}{dt} \left[ \dot{q}^k \dfrac{\partial \mathscr{L}}{\partial \dot{q}^k} - \mathscr{L} \right] = \dot{q}^k Q_k \ .\end{split}
 \end{equation*}
 \sphinxAtStartPar
-Since the Lagrangian doesn’t expliclty depend on time, and potential is not a function of time, relation \eqref{equation:ch/lagrange-t-explicit:eq:lagrange:time:ind:dqdK_dq} gives \(\dfrac{\partial \mathscr{L}}{\partial \dot{q}^k} = 2 T\), and thus
+Since the Lagrangian doesn’t expliclty depend on time, and potential is not a function of time, relation \eqref{equation:ch/lagrange-t-explicit:eq:lagrange:time:ind:dqdK_dq} gives \(\dot{q}^k \frac{\partial \mathscr{L}}{\partial \dot{q}^k} = 2 K\), and thus the content of the braces is the mechanical energy of the system,
 \begin{equation*}
-\begin{split}C = \mathscr{L} - \dot{q}^k \dfrac{\partial \mathscr{L}}{\partial \dot{q}^k} = T + U - 2 T = - T + U =: - E^{mec}\end{split}
+\begin{split}2 K - \mathscr{L} = 2 K - K - U = K - U = E^{mec} \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+and it becomes clear that the relation is nothhing but the balance equation of mechanical energy
+\begin{equation*}
+\begin{split}\dfrac{d E^{mec}}{dt} = \dot{q}^k Q_k \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+that becomes conservation of mechanical energy, in absence of non\sphinxhyphen{}conservative actions, \(Q_k = 0\),
+\begin{equation*}
+\begin{split}E^{mec} = \overline{E}^{mec} \quad \text{const.}\end{split}
 \end{equation*}
 
 \subsubsection{Properties of kinetic energy and potential}
