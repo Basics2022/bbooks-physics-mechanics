@@ -47,6 +47,7 @@ parts:
       - file: ch/lagrange-points
       - file: ch/lagrange-rigid-body
     - file: ch/lagrange-i-type
+    - file: ch/lagrange-t-explicit
   - file: ch/hamilton
 - caption: Exercises
   numbered: true

@@ -215,6 +215,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="lagrange-i-type.html">5.2. Lagrange Equations of the First Kind</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lagrange-t-explicit.html">5.3. Lagrangian functions and time dependence</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="hamilton.html">6. Hamiltonian Mechanics</a></li>
@@ -388,7 +389,7 @@ document.write(`
 <p>being <span class="math notranslate nohighlight">\(m\)</span> the mass of the system, <span class="math notranslate nohighlight">\(\vec{v}_P\)</span> the velocity of point <span class="math notranslate nohighlight">\(P\)</span>, <span class="math notranslate nohighlight">\(\vec{a}_P = \dot{\vec{v}}_P\)</span> its acceleration and <span class="math notranslate nohighlight">\(\vec{R}^{e}\)</span> the net external force acting on the system..</p>
 <p><strong>Weak form.</strong> Weak form of dynamical equations is derived with scalar multiplication of the strong form by an arbitrary test function <span class="math notranslate nohighlight">\(\vec{w}\)</span>,</p>
 <div class="math notranslate nohighlight" id="equation-eq-lagrange-point-weak">
-<span class="eqno">(5.1)<a class="headerlink" href="#equation-eq-lagrange-point-weak" title="Permalink to this equation">#</a></span>\[\vec{0} = \vec{w} \cdot \left( m \dot{\vec{v}} - \vec{R}^e\right)  \qquad \forall \vec{w}\]</div>
+<span class="eqno">(5.2)<a class="headerlink" href="#equation-eq-lagrange-point-weak" title="Permalink to this equation">#</a></span>\[\vec{0} = \vec{w} \cdot \left( m \dot{\vec{v}} - \vec{R}^e\right)  \qquad \forall \vec{w}\]</div>
 <p><strong>Lagrange equations.</strong> Lagrange equations are derived from a proper choice of the test function. The position of the point <span class="math notranslate nohighlight">\(P\)</span> is written as a function of the generalized coordinates <span class="math notranslate nohighlight">\(q^k(t)\)</span> and time <span class="math notranslate nohighlight">\(t\)</span></p>
 <div class="math notranslate nohighlight">
 \[\vec{r}_P(t) = \vec{r}(q^k(t),t) \ ,\]</div>
@@ -397,11 +398,11 @@ document.write(`
 \[\vec{v}_P(t) := \frac{d\vec{r}_P}{dt} = \dot{q}^k(t) \underbrace{\frac{\partial \vec{r}}{\partial q^k}}_{\frac{\partial \vec{v}}{\partial \dot{q}^k}}(q^l(t), t) + \frac{\partial \vec{r}}{\partial t}(q^l(t), t) = \vec{v}\left(\dot{q}^k(t), q^k(t), t \right) \ ,\]</div>
 <p>from which the relation between partial derivatives</p>
 <div class="math notranslate nohighlight" id="equation-classical-mechanics-lagrange-point-mixed-der">
-<span class="eqno">(5.2)<a class="headerlink" href="#equation-classical-mechanics-lagrange-point-mixed-der" title="Permalink to this equation">#</a></span>\[\dfrac{\partial \vec{r}}{\partial q^k} = \dfrac{\partial \vec{v}}{\partial \dot{q}^k} \ .\]</div>
+<span class="eqno">(5.3)<a class="headerlink" href="#equation-classical-mechanics-lagrange-point-mixed-der" title="Permalink to this equation">#</a></span>\[\dfrac{\partial \vec{r}}{\partial q^k} = \dfrac{\partial \vec{v}}{\partial \dot{q}^k} \ .\]</div>
 <p>follows. Choosing the test function <span class="math notranslate nohighlight">\(\vec{w}\)</span> as</p>
 <div class="math notranslate nohighlight">
 \[\vec{w} = \dfrac{\partial \vec{r}}{\partial q^k} = \dfrac{\partial \vec{v}}{\partial \dot{q}^k} \ ,\]</div>
-<p>applying the rule of derivative of product, using Schwartz theorem to switch order of derivation, and exploiting relation <a class="reference internal" href="#equation-classical-mechanics-lagrange-point-mixed-der">(5.2)</a> it’s possible to recast weak form <a class="reference internal" href="#equation-eq-lagrange-point-weak">(5.1)</a> as</p>
+<p>applying the rule of derivative of product, using Schwartz theorem to switch order of derivation, and exploiting relation <a class="reference internal" href="#equation-classical-mechanics-lagrange-point-mixed-der">(5.3)</a> it’s possible to recast weak form <a class="reference internal" href="#equation-eq-lagrange-point-weak">(5.2)</a> as</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
 \vec{0} &amp; = \frac{\partial \vec{v}}{\partial \dot{q}^k} \cdot \left( m \dot{\vec{v}} - \vec{R}^e \right) = \\

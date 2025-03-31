@@ -85,7 +85,7 @@
         
 
 \title{Classical Mechanics}
-\date{Mar 27, 2025}
+\date{Mar 31, 2025}
 \release{}
 \author{basics}
 \newcommand{\sphinxlogo}{\vbox{}}
@@ -2137,6 +2137,9 @@ A system is in equilibrium is all its components are in equilibrium, and thus th
 Classical mechanics can be re\sphinxhyphen{}formulated starting principles of \sphinxhref{https://basics2022.github.io/bbooks-math-miscellanea/ch/calculus-variations/intro.html}{calculus of variations}, usually referred as \sphinxstylestrong{analytical mechanics}. Under some assumptions, that will be discussed during the derivation, analytical mechanics is equivalent to Newton mechanics.
 
 \sphinxAtStartPar
+\sphinxstylestrong{Symmetric system.} Lagrange mechanics provides a symmetric form of the (linearised?) governing equations, without any additional effort. This could be quite useful, especially for exploiting numerical methods for symmetric (and definite positive, sometimes) matrices.
+
+\sphinxAtStartPar
 Here, the equivalence of analytical mechanics and Newton mechanics is stressed, by means of the derivation of the principle of analytical mechanics starting from the equations of motions derived in Newtonian mechanics, relying on the conservation of mass and the three principles of Newton mechanics. The process is shown in the following sections for {\hyperref[\detokenize{ch/lagrange-point:classical-mechanics-lagrange-point}]{\sphinxcrossref{\DUrole{std,std-ref}{point systems}}}}, {\hyperref[\detokenize{ch/lagrange-points:classical-mechanics-lagrange-points}]{\sphinxcrossref{\DUrole{std,std-ref}{systems of points}}}}, {\hyperref[\detokenize{ch/lagrange-rigid-body:classical-mechanics-lagrange-rigid}]{\sphinxcrossref{\DUrole{std,std-ref}{extended rigid bodies}}}} and follows these steps:
 \begin{itemize}
 \item {} 
@@ -2150,37 +2153,61 @@ Here, the equivalence of analytical mechanics and Newton mechanics is stressed, 
 \item {} 
 \sphinxAtStartPar
 \sphinxstylestrong{Lagrange equations.} A proper choice of test functions as a function of generalized coordinates, and some manipulation, leads to Lagrange equations. While the choice of test functions depends on the nature of the system, their expression always reads
-\begin{equation*}
+\begin{equation}\label{equation:ch/lagrange:eq:lagrange-eq}
 \begin{split}\dfrac{d}{dt}\left( \frac{\partial \mathscr{L}}{\partial \dot{q}^k} \right) - \frac{\partial \mathscr{L}}{\partial q^k} = Q_{q^k} \ ,\end{split}
-\end{equation*}
+\end{equation}
 \sphinxAtStartPar
 being \(q^k(t)\) the generalized coordinates, \(\mathscr{L}\left(\dot{q}^k(t), q?k(t), t \right) = K\left(\dot{q}^k(t), q^k(t), t\right) + U(q^k(t), t)\) the Lagrangian function of the system, defined as the sum of the kinetic energy \(K\) and the potential function \(U = - V\), being \(V\) the potential energy \sphinxhyphen{} s.t. the conservative vector field reads \(\vec{F} = - \nabla V\), and \(Q_q\) the generalized force.
 
 \item {} 
 \sphinxAtStartPar
-Lagrange equations can be interpreted as a result of a stationary principle of a functional, \(S\), defined \sphinxstylestrong{action functional}, as it can be shown with the tools of \sphinxhref{https://basics2022.github.io/bbooks-math-miscellanea/ch/calculus-variations/intro.html}{calculus of variations}. Here, \sphinxstylestrong{assuming \(Q_{q^{k}} = 0\)}, and multiplying by \(w^k(t)\), integrating over time from \(t_0\), \(t_1\), and assuming that \(w(t_0) = w(t_1) = 0\),
+Lagrange equations can be interpreted as a result of a stationary principle of a functional, \(S\), defined \sphinxstylestrong{action functional}, as it can be shown with the tools of \sphinxhref{https://basics2022.github.io/bbooks-math-miscellanea/ch/calculus-variations/intro.html}{calculus of variations}.
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{If \(Q_{q^{k}} = 0\)}, multiplying by \(w^k(t)\), integrating over time from \(t_0\), \(t_1\), and assuming that \(w(t_0) = w(t_1) = 0\),
 \begin{equation*}
 \begin{split}\begin{aligned}
-     0 & = \int_{t_0}^{t_1} w^k (t) \left[ \dfrac{d}{dt}\left( \frac{\partial \mathscr{L}}{\partial \dot{q}^k} \right) - \frac{\partial \mathscr{L}}{\partial q} \right] \, dt = \\
-       & = w^k(t) \left.\left( \frac{\partial \mathscr{L}}{\partial \dot{q}^k} \right)\right|_{t_0}^{t_1} - \int_{t_0}^{t_1} \left[ \dot{w}^k(t) \, \frac{\partial \mathscr{L}}{\partial \dot{q}^k} + w^k(t) \, \frac{\partial \mathscr{L}}{\partial q^k} \right] \, dt \ . \\
-   \end{aligned}\end{split}
+         0 & = \int_{t_0}^{t_1} w^k (t) \left[ \dfrac{d}{dt}\left( \frac{\partial \mathscr{L}}{\partial \dot{q}^k} \right) - \frac{\partial \mathscr{L}}{\partial q} \right] \, dt = \\
+           & = w^k(t) \left.\left( \frac{\partial \mathscr{L}}{\partial \dot{q}^k} \right)\right|_{t_0}^{t_1} - \int_{t_0}^{t_1} \left[ \dot{w}^k(t) \, \frac{\partial \mathscr{L}}{\partial \dot{q}^k} + w^k(t) \, \frac{\partial \mathscr{L}}{\partial q^k} \right] \, dt \ . \\
+     \end{aligned}\end{split}
 \end{equation*}
 \sphinxAtStartPar
 If \(w^k(t)\) is equal to zero for \(t\) equal to \(t_0\) and \(t_1\), first term vanishes
 \begin{equation*}
 \begin{split}\begin{aligned}
-       0 & = - \int_{t_0}^{t_1} \left[ \dot{w}^k(t) \, \frac{\partial \mathscr{L}}{\partial \dot{q}^k} + w^k(t) \, \frac{\partial \mathscr{L}}{\partial q^k} \right] \, dt \\
-       & = - \frac{1}{\varepsilon} \int_{t_0}^{t_1} \varepsilon \left[ \dot{w}^k(t) \, \frac{\partial \mathscr{L}}{\partial \dot{q}^k}\left(\dot{q}^l(t), q^l(t), t \right) + w^k(t) \, \frac{\partial \mathscr{L}}{\partial q^k}\left(\dot{q}^l(t), q^l(t), t \right) \right] \, dt = \\
-       & = - \lim_{\varepsilon \rightarrow 0} \left\{ \frac{1}{\varepsilon} \int_{t_0}^{t_1} \varepsilon \left[ \dot{w}^k(t) \, \frac{\partial \mathscr{L}}{\partial \dot{q}^k}\left(\dot{q}^l(t), q^l(t), t \right) + w^k(t) \, \frac{\partial \mathscr{L}}{\partial q^k}\left(\dot{q}^l(t), q^l(t), t \right) \right] \, dt \right\}= \\
-       & = - \lim_{\varepsilon \rightarrow 0} \left\{ \frac{1}{\varepsilon} \int_{t_0}^{t_1} \left[ \mathscr{L}\left(\dot{q}^l(t)+\varepsilon \dot{w}^l(t), q^l(t) + \varepsilon w^l(t), t \right) - \mathscr{L}\left(\dot{q}^l(t), q^l(t), t \right) \right] \, dt + o(\varepsilon) \right\}= \\
-       & = - \delta \int_{t_0}^{t_1} \mathscr{L}(\dot{q}^l(t), q^l(t), t) \, dt =: - \delta S[q^k(t)] \ ,
-   \end{aligned}\end{split}
+           0 & = - \int_{t_0}^{t_1} \left[ \dot{w}^k(t) \, \frac{\partial \mathscr{L}}{\partial \dot{q}^k} + w^k(t) \, \frac{\partial \mathscr{L}}{\partial q^k} \right] \, dt \\
+           & = - \frac{1}{\varepsilon} \int_{t_0}^{t_1} \varepsilon \left[ \dot{w}^k(t) \, \frac{\partial \mathscr{L}}{\partial \dot{q}^k}\left(\dot{q}^l(t), q^l(t), t \right) + w^k(t) \, \frac{\partial \mathscr{L}}{\partial q^k}\left(\dot{q}^l(t), q^l(t), t \right) \right] \, dt = \\
+           & = - \lim_{\varepsilon \rightarrow 0} \left\{ \frac{1}{\varepsilon} \int_{t_0}^{t_1} \varepsilon \left[ \dot{w}^k(t) \, \frac{\partial \mathscr{L}}{\partial \dot{q}^k}\left(\dot{q}^l(t), q^l(t), t \right) + w^k(t) \, \frac{\partial \mathscr{L}}{\partial q^k}\left(\dot{q}^l(t), q^l(t), t \right) \right] \, dt \right\}= \\
+           & = - \lim_{\varepsilon \rightarrow 0} \left\{ \frac{1}{\varepsilon} \int_{t_0}^{t_1} \left[ \mathscr{L}\left(\dot{q}^l(t)+\varepsilon \dot{w}^l(t), q^l(t) + \varepsilon w^l(t), t \right) - \mathscr{L}\left(\dot{q}^l(t), q^l(t), t \right) \right] \, dt + o(\varepsilon) \right\}= \\
+           & = - \delta \int_{t_0}^{t_1} \mathscr{L}(\dot{q}^l(t), q^l(t), t) \, dt =: - \delta S[q^k(t)] \ ,
+       \end{aligned}\end{split}
 \end{equation*}
 \sphinxAtStartPar
 i.e. Lagrange equations are equivalent to the stationary condition of the action functional
 \begin{equation*}
 \begin{split}S[q^k(t)]:= \int_{t_0}^{t_1} \mathscr{L}\left(\dot{q}^l(t), q^l(t), t\right) \, dt \ .\end{split}
 \end{equation*}
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{If \(Q_k \ne 0\)}, the variational principle becomes
+\begin{equation*}
+\begin{split}\begin{aligned}
+           0 & = \int_{t_0}^{t_1} w^k (t) \left[ \dfrac{d}{dt}\left( \frac{\partial \mathscr{L}}{\partial \dot{q}^k} \right) - \frac{\partial \mathscr{L}}{\partial q^k} - Q_k \right] \, dt = \\
+             & = w^k(t) \left.\left( \frac{\partial \mathscr{L}}{\partial \dot{q}^k} \right)\right|_{t_0}^{t_1} - \int_{t_0}^{t_1} \left[ \dot{w}^k(t) \, \frac{\partial \mathscr{L}}{\partial \dot{q}^k} + w^k(t) \, \frac{\partial \mathscr{L}}{\partial q^k} \right] \, dt 
+             + \int_{t_0}^{t_1} w^k(t) Q_k \, dt \ . \\
+             & = \dots \\
+             & = - \delta \int_{t_0}^{t_1} \mathscr{L}\left(\dot{q}^l(t), q^l(t), t\right) \, dt + \int_{t_0}^{t_1} \delta q^k(t) Q_k \, dt \ ,
+       \end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+having written the arbitrary test function as \(w^k(t) =: \delta q^k(t)\) to keep in mind that they’re used as variations of functions \(q^k(t)\).
+
+\sphinxAtStartPar
+The second contribution is usually defined \sphinxstylestrong{virtual work} of generalized forces \(Q_k\) \sphinxhyphen{} that is equal to the virtual work of actions not included in the potential \(U\left(q^k(t),t\right)\). For the very nature of variation, it can be thought as the \sphinxstyleemphasis{infinitesimal work done by forces for small displacements compatible with constraints, keeping time constant}.
+
+\end{itemize}
+
 \end{itemize}
 
 
@@ -2188,9 +2215,17 @@ i.e. Lagrange equations are equivalent to the stationary condition of the action
 \sphinxstepscope
 
 
+\section{Lagrange Equations of the Second Kind}
+\label{\detokenize{ch/lagrange-ii-type:lagrange-equations-of-the-second-kind}}\label{\detokenize{ch/lagrange-ii-type:classical-mechanics-lagrange-ii-type}}\label{\detokenize{ch/lagrange-ii-type::doc}}
+\sphinxAtStartPar
+For ideal constraints…
+
+\sphinxstepscope
 
 
-\section{Point}
+
+
+\subsection{Point}
 \label{\detokenize{ch/lagrange-point:point}}\label{\detokenize{ch/lagrange-point:classical-mechanics-lagrange-point}}\label{\detokenize{ch/lagrange-point::doc}}
 \sphinxAtStartPar
 \sphinxstylestrong{Newton dynamical equations \sphinxhyphen{} strong form.} Dynamical equation governing the motion of a point \(P\) reads
@@ -2253,7 +2288,7 @@ being \(Q^k\) the \sphinxstylestrong{generalized force} not included in the grad
 
 
 
-\section{System of points}
+\subsection{System of points}
 \label{\detokenize{ch/lagrange-points:system-of-points}}\label{\detokenize{ch/lagrange-points:classical-mechanics-lagrange-points}}\label{\detokenize{ch/lagrange-points::doc}}
 \sphinxAtStartPar
 \sphinxstylestrong{Newton dynamical equations \sphinxhyphen{} strong form.}
@@ -2267,7 +2302,7 @@ being \(Q^k\) the \sphinxstylestrong{generalized force} not included in the grad
 \sphinxstepscope
 
 
-\section{Rigid Body}
+\subsection{Rigid Body}
 \label{\detokenize{ch/lagrange-rigid-body:rigid-body}}\label{\detokenize{ch/lagrange-rigid-body:classical-mechanics-lagrange-rigid}}\label{\detokenize{ch/lagrange-rigid-body::doc}}
 \sphinxAtStartPar
 \sphinxstylestrong{Newton dynamical equations \sphinxhyphen{} strong form.} Dynamical equations governing the motion of a rigid body, referred to its center of mass \(G\) read
@@ -2361,6 +2396,166 @@ being \(\mathscr{L} = K + U\) the Lagrangian function of the system, and \(K = K
 
 
 
+\sphinxstepscope
+
+
+\section{Lagrange Equations of the First Kind}
+\label{\detokenize{ch/lagrange-i-type:lagrange-equations-of-the-first-kind}}\label{\detokenize{ch/lagrange-i-type:classical-mechanics-lagrange-ii-type}}\label{\detokenize{ch/lagrange-i-type::doc}}
+\sphinxAtStartPar
+Explicitly making appear constraint forces, due to constraints
+\begin{equation*}
+\begin{split}\begin{aligned}
+ & \dfrac{d}{dt}\frac{\partial L}{\partial \dot{q}^k} - \frac{\partial L}{\partial q^k} = Q^e_k + Q^c_k \\
+ & g^j \left(q^k(t), t\right) = 0
+\end{aligned}\end{split}
+\end{equation*}\label{ch/lagrange-i-type:example-0}
+\begin{sphinxadmonition}{note}{Example 5.2.1}
+
+
+
+\sphinxAtStartPar
+Pendulum with point mass \(m\) and length \(\ell\), with hinge position \(x_H(t)\) w.r.t. an inertial reference frame, in a gravitational field \(\vec{g} = g \hat{y}\)
+
+\sphinxAtStartPar
+Position, and velocity of the point mass in \(P\)
+\begin{equation*}
+\begin{split}\begin{aligned}
+  & \vec{r}_P(t) = x_P(t) \, \hat{x} + y_P(t) \, \hat{y} = \left( x_H(t) + \ell \sin \theta(t) \right) \, \hat{x} + \ell \cos \theta(t) \, \hat{y} \\
+  & \vec{v}_P(t) = \dot{x}_P(t) \, \hat{x} + \dot{y}_P(t) \, \hat{y} = (\dot{x}_H + \ell \dot{\theta}(t) \cos \theta(t)) \, \hat{x} - \ell \dot{\theta}(t) \sin \theta(t) \, \hat{y} \\
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Approach 1. LE of the II Kind.} LE of the II Kind provides free equations of motion. The system has one degree of freedom. Here the angle \(\theta(t)\) is chosen as the generalized dof. Kinetic energy \(K\) and potential function \(U\),
+\begin{equation*}
+\begin{split}\begin{aligned}
+  K & = \frac{1}{2} m \left( \dot{x}_H^2 + 2 \ell \dot{x}_H \dot \theta \cos \theta + \ell^2 \dot{\theta}^2  \right) \\
+  U & = m g \ell \cos \theta \\
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+and Lagrange equation of the II\sphinxhyphen{}kind provides a free equation of motion, that immediately follows from direct evaluation of the required derivatives
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \dfrac{d}{dt}\frac{\partial L}{\partial \dot{\theta}}
+  & = \dfrac{d}{dt} \left[ m (\ell \dot{x}_H \cos \theta + \ell^2 \dot{\theta} ) \right]
+    = m \ell \ddot{x}_H \cos \theta - m \ell \dot{x}_H \dot{\theta} \sin \theta + m \ell^2 \ddot{\theta} \\
+  \frac{\partial L}{\partial \theta}
+  & = - m \ell \dot{x}_H \dot{\theta} \sin \theta - m g \ell \sin \theta
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Thus, Lagrange equation reads
+\begin{equation*}
+\begin{split}
+  0 = \dfrac{d}{d t} \frac{\partial L}{\partial \dot{\theta}} - \frac{\partial L}{\partial \theta}
+    = m \ell^2 \ddot{\theta} + m g \ell \sin \theta - m \ell \ddot{x}_H (t) \cos \theta
+\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Approach 2. LE of the I Kind.}
+\end{sphinxadmonition}
+
+\sphinxstepscope
+
+
+\section{Lagrangian functions and time dependence}
+\label{\detokenize{ch/lagrange-t-explicit:lagrangian-functions-and-time-dependence}}\label{\detokenize{ch/lagrange-t-explicit:classical-mechanics-lagrange-time-dependent}}\label{\detokenize{ch/lagrange-t-explicit::doc}}
+\sphinxAtStartPar
+Some problems may have a Lagrangian function with an explicit dependence on time,
+\begin{equation*}
+\begin{split}\mathscr{L}(\dot{q}^k(t),q^k(t),t) \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Using the general form \eqref{equation:ch/lagrange:eq:lagrange-eq} of Lagrange equations, the time derivative of the Lagrange function reads
+\begin{equation*}
+\begin{split}\begin{aligned}
+\dfrac{d \mathscr{L}}{dt}
+ & =
+  \ddot{q}^k \dfrac{\partial \mathscr{L}}{\partial \dot{q}^k}
+ + \dot{q}^k \dfrac{\partial \mathscr{L}}{\partial       q^k}
+ + \dfrac{\partial \mathscr{L}}{\partial  t} = && \qquad \text{(IxP)} \\
+ & = \dfrac{d}{dt} \left( \dot{q}^k \dfrac{\partial \mathscr{L}}{\partial \dot{q}^k} \right) - \dot{q}^k \dfrac{d}{dt} \dfrac{\partial \mathscr{L}}{\partial \dot{q}^k}
+ + \dot{q}^k \dfrac{\partial \mathscr{L}}{\partial       q^k}
+ + \dfrac{\partial \mathscr{L}}{\partial  t} = && \qquad \text{(Lagrange eq.)} \\
+ & = \dfrac{d}{dt} \left( \dot{q}^k \dfrac{\partial \mathscr{L}}{\partial \dot{q}^k} \right) - \dot{q}^k Q_k
+ + \dfrac{\partial \mathscr{L}}{\partial  t} \ .
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+This latter relation can be recast as
+\begin{equation}\label{equation:ch/lagrange-t-explicit:eq:euler-beltrami}
+\begin{split}\dfrac{d}{dt} \left[ \dot{q}^k \dfrac{\partial \mathscr{L}}{\partial \dot{q}^k} - \mathscr{L} \right] = \dot{q}^k Q_k - \dfrac{\partial \mathscr{L}}{\partial t} \ ,\end{split}
+\end{equation}
+\sphinxAtStartPar
+i.e. time derivative of a physical quantity equals the power of actions not included in the potential, \(\dot{q}^k Q_k\) and a contribution of partial derivative of the Lagrangian function, \(\partial_t \mathscr{L}\).
+
+\sphinxAtStartPar
+As it’s discusseed below, \sphinxstylestrong{when the Lagrangian function of the system is not an explicit function of time} \sphinxstylestrong{todo} *discuss the cases when \(\partial_t \mathscr{L} \ne 0\), the equation \eqref{equation:ch/lagrange-t-explicit:eq:euler-beltrami} is nothing but the balance equation of mechanical energy.
+
+
+\subsection{Lagrangian function with no explicit dependence on time}
+\label{\detokenize{ch/lagrange-t-explicit:lagrangian-function-with-no-explicit-dependence-on-time}}\label{\detokenize{ch/lagrange-t-explicit:classical-mechanics-lagrange-time-independent}}
+\sphinxAtStartPar
+Let’s analyse first some properties of systems, whose Lagrangian function are not an explicit function of time,
+\begin{equation*}
+\begin{split}\mathscr{L}(\dot{q}^k(t), q^k(t)) = K(\dot{q}^k(t), q^k(t)) + U(q^k(t)) \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+and then go back to the most general case.
+
+\sphinxAtStartPar
+As the Lagrange equation is not an explicit function of time, \sphinxhref{https://basics2022.github.io/bbooks-math-miscellanea/ch/calculus-variations/intro.html\#euler-beltrami-equation}{Euler\sphinxhyphen{}Beltrami equations} hold,
+\begin{equation*}
+\begin{split}\mathscr{L} - \dot{q}^k \dfrac{\partial \mathscr{L}}{\partial \dot{q}^k} = C \quad \text{const.}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Since the Lagrangian doesn’t expliclty depend on time, and potential is not a function of time, relation \eqref{equation:ch/lagrange-t-explicit:eq:lagrange:time:ind:dqdK_dq} gives \(\dfrac{\partial \mathscr{L}}{\partial \dot{q}^k} = 2 T\), and thus
+\begin{equation*}
+\begin{split}C = \mathscr{L} - \dot{q}^k \dfrac{\partial \mathscr{L}}{\partial \dot{q}^k} = T + U - 2 T = - T + U =: - E^{mec}\end{split}
+\end{equation*}
+
+\subsubsection{Properties of kinetic energy and potential}
+\label{\detokenize{ch/lagrange-t-explicit:properties-of-kinetic-energy-and-potential}}
+\sphinxAtStartPar
+This section collects some properties of the kinetic energy and potential of systems, where physical coordinates of the system are written as a function of generalized coordinates only, \(q^k(t)\). As an example, coordinates of point masses, material points of rigid bodies and the rotation tensor representing their orientation in space can be written as
+\begin{equation*}
+\begin{split}\vec{r}_P\left(q^k(t)\right) \quad , \quad \mathbb{R} \left( q^k(t) \right) \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+so that velocities and angular velocities become
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \vec{v}_P\left(\dot{q}^k(t), q^k(t)\right) & = \dfrac{d \vec{r}_P}{dt} = \dot{q}^k \dfrac{\partial \vec{r}}{\partial q^k}\left(q^k(t)\right) \\ 
+  \vec{\omega}_{\times}\left(\dot{q}^k(t), q^k(t)\right) & = \dfrac{d \mathbb{R}}{d t} \cdot \mathbb{R}^T = \dot{q}^k(t) \, \dfrac{\partial \mathbb{R}}{\partial q^k} \cdot \mathbb{R}^T = \dot{q}^k(t) \, \dfrac{\partial \vec{\theta}_{\times}}{\partial q^k}\left(q^k(t)\right) \ ,
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+As the kinetic energy of a mechanical system is a quadratic function of velocity and angular velocity of its sub\sphinxhyphen{}systems, the kinetice energy can be written as
+\begin{equation*}
+\begin{split}K\left( \dot{q}^k(t), q^k(t) \right) = \frac{1}{2} A_{ij}\left(q^k(t)\right) \, \dot{q}^i(t) \, \dot{q}^j(t) \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Since \(A_{ij}\) is symmetric w.r.t. the swap of indices (or it can be written in a symmetric form), partial derivative of the kinetic energy w.r.t. \(\dot{q}^l\) reads
+\begin{equation*}
+\begin{split}\dfrac{\partial K}{\partial \dot{q}^l} = A_{lj} \dot{q}^j \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+and
+\begin{equation}\label{equation:ch/lagrange-t-explicit:eq:lagrange:time:ind:dqdK_dq}
+\begin{split}\dot{q}^l \dfrac{\partial K}{\partial \dot{q}^l} = \dot{q}^l A_{lj} \dot{q}^j = 2 T \ .\end{split}
+\end{equation}\subsubsection*{Proofs}
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \dfrac{\partial K}{\partial \dot{q}^l} 
+    = \dfrac{\partial }{\partial \dot{q}^l} \left[ \frac{1}{2} A_{ij} \dot{q}^i \dot{q}^j \right] 
+    = \frac{1}{2} A_{ij} \bigg[ \underbrace{ \dfrac{\partial \dot{q}^i}{\partial \dot{q}^l} }_{\delta^i_l} \dot{q}^j + \dot{q}^i \underbrace{ \dfrac{\partial \dot{q}^j}{\partial \dot{q}^l}}_{\delta^j_l} \bigg]  
+    = \frac{1}{2} \left[ A_{lj} \dot{q}^j + A_{il} \dot{q}^i \right]
+    = A_{lj} \dot{q}^j
+\end{aligned}\end{split}
+\end{equation*}
+
+\subsection{Lagrangian function with explicit dependence on time}
+\label{\detokenize{ch/lagrange-t-explicit:lagrangian-function-with-explicit-dependence-on-time}}\label{\detokenize{ch/lagrange-t-explicit:id1}}
 \sphinxstepscope
 
 
@@ -2847,7 +3042,7 @@ At the end of the tunnel, the ball moves above the planet surface while it’s a
 \item\relax\sphinxstyleindexentry{definition\sphinxhyphen{}1}\sphinxstyleindexextra{ch/kinematics}\sphinxstyleindexpageref{ch/kinematics:\detokenize{definition-1}}
 \indexspace
 \bigletter{example\sphinxhyphen{}0}
-\item\relax\sphinxstyleindexentry{example\sphinxhyphen{}0}\sphinxstyleindexextra{ch/actions\sphinxhyphen{}conservative}\sphinxstyleindexpageref{ch/actions-conservative:\detokenize{example-0}}
+\item\relax\sphinxstyleindexentry{example\sphinxhyphen{}0}\sphinxstyleindexextra{ch/lagrange\sphinxhyphen{}i\sphinxhyphen{}type}\sphinxstyleindexpageref{ch/lagrange-i-type:\detokenize{example-0}}
 \indexspace
 \bigletter{thm:huygens}
 \item\relax\sphinxstyleindexentry{thm:huygens}\sphinxstyleindexextra{ch/inertia}\sphinxstyleindexpageref{ch/inertia:\detokenize{thm:huygens}}
