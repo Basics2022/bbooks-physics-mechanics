@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>5. Lagrangian Mechanics &#8212; Classical Mechanics</title>
+    <title>5.3. Lagrangian functions and time dependence &#8212; Classical Mechanics</title>
   
   
   
@@ -66,12 +66,12 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'ch/lagrange';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'ch/lagrange-t';</script>
     <link rel="shortcut icon" href="../_static/favicon.svg"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="5.1. Lagrange Equations of the Second Kind" href="lagrange-ii-type.html" />
-    <link rel="prev" title="4.8. Equilibrium and Stability" href="dynamics-equilibrium-stability.html" />
+    <link rel="next" title="5.3.1. Lagrangian function with no explicit dependence on time" href="lagrange-t-no.html" />
+    <link rel="prev" title="5.2. Lagrange Equations of the First Kind" href="lagrange-i-type.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -198,7 +198,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Analytical Mechanics</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">5. Lagrangian Mechanics</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="lagrange.html">5. Lagrangian Mechanics</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2 has-children"><a class="reference internal" href="lagrange-ii-type.html">5.1. Lagrange Equations of the Second Kind</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="lagrange-point.html">5.1.1. Point</a></li>
 <li class="toctree-l3"><a class="reference internal" href="lagrange-points.html">5.1.2. System of points</a></li>
@@ -206,7 +206,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="lagrange-i-type.html">5.2. Lagrange Equations of the First Kind</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="lagrange-t.html">5.3. Lagrangian functions and time dependence</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 current active has-children"><a class="current reference internal" href="#">5.3. Lagrangian functions and time dependence</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="lagrange-t-no.html">5.3.1. Lagrangian function with no explicit dependence on time</a></li>
 <li class="toctree-l3"><a class="reference internal" href="lagrange-t-explicit.html">5.3.2. Lagrangian function with explicit dependence on time</a></li>
 </ul>
@@ -273,7 +273,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/ch/lagrange.md" target="_blank"
+      <li><a href="../_sources/ch/lagrange-t.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -355,7 +355,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Lagrangian Mechanics</h1>
+    <h1>Lagrangian functions and time dependence</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -369,89 +369,34 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <!--
-```{article-info}
-:author: basics
-:date: "{sub-ref}`today`"
-:read-time: "{sub-ref}`wordcount-minutes` min read"
-```
--->
-<div class="tex2jax_ignore mathjax_ignore section" id="lagrangian-mechanics">
-<span id="classical-mechanics-lagrange"></span><h1><span class="section-number">5. </span>Lagrangian Mechanics<a class="headerlink" href="#lagrangian-mechanics" title="Permalink to this heading">#</a></h1>
-<p>Classical mechanics can be re-formulated starting principles of <a class="reference external" href="https://basics2022.github.io/bbooks-math-miscellanea/ch/calculus-variations/intro.html">calculus of variations</a>, usually referred as <strong>analytical mechanics</strong>. Under some assumptions, that will be discussed during the derivation, analytical mechanics is equivalent to Newton mechanics.</p>
-<p><strong>Symmetric system.</strong> Lagrange mechanics provides a symmetric form of the (linearised?) governing equations, without any additional effort. This could be quite useful, especially for exploiting numerical methods for symmetric (and definite positive, sometimes) matrices.</p>
-<p>Here, the equivalence of analytical mechanics and Newton mechanics is stressed, by means of the derivation of the principle of analytical mechanics starting from the equations of motions derived in Newtonian mechanics, relying on the conservation of mass and the three principles of Newton mechanics. The process is shown in the following sections for <a class="reference internal" href="lagrange-point.html#classical-mechanics-lagrange-point"><span class="std std-ref">point systems</span></a>, <a class="reference internal" href="lagrange-points.html#classical-mechanics-lagrange-points"><span class="std std-ref">systems of points</span></a>, <a class="reference internal" href="lagrange-rigid-body.html#classical-mechanics-lagrange-rigid"><span class="std std-ref">extended rigid bodies</span></a> and follows these steps:</p>
-<ul>
-<li><p><strong>strong form of equations.</strong> Starting point is the dynamical equations of Newton mechanics, here also referred as the strong form of equations</p></li>
-<li><p><strong>weak form of equations.</strong> Strong form are recast in weak form, also referred as <strong>D’Alembert approach</strong> or <strong>virtual work formulation</strong>, multiplying strong form of equations for arbitrary test functions</p></li>
-<li><p><strong>Lagrange equations.</strong> A proper choice of test functions as a function of generalized coordinates, and some manipulation, leads to Lagrange equations. While the choice of test functions depends on the nature of the system, their expression always reads</p>
-<div class="math notranslate nohighlight" id="equation-eq-lagrange-eq">
-<span class="eqno">(5.1)<a class="headerlink" href="#equation-eq-lagrange-eq" title="Permalink to this equation">#</a></span>\[\dfrac{d}{dt}\left( \frac{\partial \mathscr{L}}{\partial \dot{q}^k} \right) - \frac{\partial \mathscr{L}}{\partial q^k} = Q_{q^k} \ ,\]</div>
-<p>being <span class="math notranslate nohighlight">\(q^k(t)\)</span> the generalized coordinates, <span class="math notranslate nohighlight">\(\mathscr{L}\left(\dot{q}^k(t), q?k(t), t \right) = K\left(\dot{q}^k(t), q^k(t), t\right) + U(q^k(t), t)\)</span> the Lagrangian function of the system, defined as the sum of the kinetic energy <span class="math notranslate nohighlight">\(K\)</span> and the potential function <span class="math notranslate nohighlight">\(U = - V\)</span>, being <span class="math notranslate nohighlight">\(V\)</span> the potential energy - s.t. the conservative vector field reads <span class="math notranslate nohighlight">\(\vec{F} = - \nabla V\)</span>, and <span class="math notranslate nohighlight">\(Q_q\)</span> the generalized force.</p>
-</li>
-<li><p>Lagrange equations can be interpreted as a result of a stationary principle of a functional, <span class="math notranslate nohighlight">\(S\)</span>, defined <strong>action functional</strong>, as it can be shown with the tools of <a class="reference external" href="https://basics2022.github.io/bbooks-math-miscellanea/ch/calculus-variations/intro.html">calculus of variations</a>.</p>
-<ul>
-<li><p><strong>If <span class="math notranslate nohighlight">\(Q_{q^{k}} = 0\)</span></strong>, multiplying by <span class="math notranslate nohighlight">\(w^k(t)\)</span>, integrating over time from <span class="math notranslate nohighlight">\(t_0\)</span>, <span class="math notranslate nohighlight">\(t_1\)</span>, and assuming that <span class="math notranslate nohighlight">\(w(t_0) = w(t_1) = 0\)</span>,</p>
+  <div class="tex2jax_ignore mathjax_ignore section" id="lagrangian-functions-and-time-dependence">
+<span id="classical-mechanics-lagrange-time"></span><h1><span class="section-number">5.3. </span>Lagrangian functions and time dependence<a class="headerlink" href="#lagrangian-functions-and-time-dependence" title="Permalink to this heading">#</a></h1>
+<p>Some problems may have a Lagrangian function with an explicit dependence on time,</p>
+<div class="math notranslate nohighlight">
+\[\mathscr{L}(\dot{q}^k(t),q^k(t),t) \ .\]</div>
+<p>Using the general form <a class="reference internal" href="lagrange.html#equation-eq-lagrange-eq">(5.1)</a> of Lagrange equations, the time derivative of the Lagrange function reads</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
-         0 &amp; = \int_{t_0}^{t_1} w^k (t) \left[ \dfrac{d}{dt}\left( \frac{\partial \mathscr{L}}{\partial \dot{q}^k} \right) - \frac{\partial \mathscr{L}}{\partial q} \right] \, dt = \\
-           &amp; = w^k(t) \left.\left( \frac{\partial \mathscr{L}}{\partial \dot{q}^k} \right)\right|_{t_0}^{t_1} - \int_{t_0}^{t_1} \left[ \dot{w}^k(t) \, \frac{\partial \mathscr{L}}{\partial \dot{q}^k} + w^k(t) \, \frac{\partial \mathscr{L}}{\partial q^k} \right] \, dt \ . \\
-     \end{aligned}\end{split}\]</div>
-<p>If <span class="math notranslate nohighlight">\(w^k(t)\)</span> is equal to zero for <span class="math notranslate nohighlight">\(t\)</span> equal to <span class="math notranslate nohighlight">\(t_0\)</span> and <span class="math notranslate nohighlight">\(t_1\)</span>, first term vanishes</p>
+\dfrac{d \mathscr{L}}{dt}
+ &amp; =
+  \ddot{q}^k \dfrac{\partial \mathscr{L}}{\partial \dot{q}^k}
+ + \dot{q}^k \dfrac{\partial \mathscr{L}}{\partial       q^k}
+ + \dfrac{\partial \mathscr{L}}{\partial  t} = &amp;&amp; \qquad \text{(IxP)} \\
+ &amp; = \dfrac{d}{dt} \left( \dot{q}^k \dfrac{\partial \mathscr{L}}{\partial \dot{q}^k} \right) - \dot{q}^k \dfrac{d}{dt} \dfrac{\partial \mathscr{L}}{\partial \dot{q}^k}
+ + \dot{q}^k \dfrac{\partial \mathscr{L}}{\partial       q^k}
+ + \dfrac{\partial \mathscr{L}}{\partial  t} = &amp;&amp; \qquad \text{(Lagrange eq.)} \\
+ &amp; = \dfrac{d}{dt} \left( \dot{q}^k \dfrac{\partial \mathscr{L}}{\partial \dot{q}^k} \right) - \dot{q}^k Q_k
+ + \dfrac{\partial \mathscr{L}}{\partial  t} \ .
+\end{aligned}\end{split}\]</div>
+<p>This latter relation can be recast as</p>
+<div class="math notranslate nohighlight" id="equation-eq-euler-beltrami">
+<span class="eqno">(5.5)<a class="headerlink" href="#equation-eq-euler-beltrami" title="Permalink to this equation">#</a></span>\[\dfrac{d}{dt} \left[ \dot{q}^k \dfrac{\partial \mathscr{L}}{\partial \dot{q}^k} - \mathscr{L} \right] = \dot{q}^k Q_k - \dfrac{\partial \mathscr{L}}{\partial t} \ ,\]</div>
+<p>i.e. time derivative of a physical quantity equals the power of actions not included in the potential, <span class="math notranslate nohighlight">\(\dot{q}^k Q_k\)</span> and a contribution of partial derivative of the Lagrangian function, <span class="math notranslate nohighlight">\(\partial_t \mathscr{L}\)</span>.</p>
+<p>As it’s discusseed in the <a class="reference internal" href="lagrange-t-no.html#classical-mechanics-lagrange-time-independent"><span class="std std-ref">section for systems with Lagrangian function with no explicit dependence on time</span></a>  <strong>when the Lagrangian function of the system is not an explicit function of time</strong> <strong>todo</strong> *discuss the cases when <span class="math notranslate nohighlight">\(\partial_t \mathscr{L} \ne 0\)</span>, the equation <a class="reference internal" href="#equation-eq-euler-beltrami">(5.5)</a> is nothing but the <strong>balance equation of mechanical energy</strong>.</p>
+<p>When there is no generalized force, that can’t be included in the potential, <span class="math notranslate nohighlight">\(Q_k  = 0\)</span>, and no explicit dependence of Lagrangian function on time, <span class="math notranslate nohighlight">\(\partial_t \mathscr{L} = 0\)</span>, the equation <a class="reference internal" href="#equation-eq-euler-beltrami">(5.5)</a> can be recast as an <a class="reference external" href="https://basics2022.github.io/bbooks-math-miscellanea/ch/calculus-variations/intro.html#euler-beltrami-equation">Euler-Beltrami equation</a>,</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\begin{aligned}
-           0 &amp; = - \int_{t_0}^{t_1} \left[ \dot{w}^k(t) \, \frac{\partial \mathscr{L}}{\partial \dot{q}^k} + w^k(t) \, \frac{\partial \mathscr{L}}{\partial q^k} \right] \, dt \\
-           &amp; = - \frac{1}{\varepsilon} \int_{t_0}^{t_1} \varepsilon \left[ \dot{w}^k(t) \, \frac{\partial \mathscr{L}}{\partial \dot{q}^k}\left(\dot{q}^l(t), q^l(t), t \right) + w^k(t) \, \frac{\partial \mathscr{L}}{\partial q^k}\left(\dot{q}^l(t), q^l(t), t \right) \right] \, dt = \\
-           &amp; = - \lim_{\varepsilon \rightarrow 0} \left\{ \frac{1}{\varepsilon} \int_{t_0}^{t_1} \varepsilon \left[ \dot{w}^k(t) \, \frac{\partial \mathscr{L}}{\partial \dot{q}^k}\left(\dot{q}^l(t), q^l(t), t \right) + w^k(t) \, \frac{\partial \mathscr{L}}{\partial q^k}\left(\dot{q}^l(t), q^l(t), t \right) \right] \, dt \right\}= \\
-           &amp; = - \lim_{\varepsilon \rightarrow 0} \left\{ \frac{1}{\varepsilon} \int_{t_0}^{t_1} \left[ \mathscr{L}\left(\dot{q}^l(t)+\varepsilon \dot{w}^l(t), q^l(t) + \varepsilon w^l(t), t \right) - \mathscr{L}\left(\dot{q}^l(t), q^l(t), t \right) \right] \, dt + o(\varepsilon) \right\}= \\
-           &amp; = - \delta \int_{t_0}^{t_1} \mathscr{L}(\dot{q}^l(t), q^l(t), t) \, dt =: - \delta S[q^k(t)] \ ,
-       \end{aligned}\end{split}\]</div>
-<p>i.e. Lagrange equations are equivalent to the stationary condition of the action functional</p>
-<div class="math notranslate nohighlight">
-\[S[q^k(t)]:= \int_{t_0}^{t_1} \mathscr{L}\left(\dot{q}^l(t), q^l(t), t\right) \, dt \ .\]</div>
-</li>
-<li><p><strong>If <span class="math notranslate nohighlight">\(Q_k \ne 0\)</span></strong>, the variational principle becomes</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{aligned}
-           0 &amp; = \int_{t_0}^{t_1} w^k (t) \left[ \dfrac{d}{dt}\left( \frac{\partial \mathscr{L}}{\partial \dot{q}^k} \right) - \frac{\partial \mathscr{L}}{\partial q^k} - Q_k \right] \, dt = \\
-             &amp; = w^k(t) \left.\left( \frac{\partial \mathscr{L}}{\partial \dot{q}^k} \right)\right|_{t_0}^{t_1} - \int_{t_0}^{t_1} \left[ \dot{w}^k(t) \, \frac{\partial \mathscr{L}}{\partial \dot{q}^k} + w^k(t) \, \frac{\partial \mathscr{L}}{\partial q^k} \right] \, dt 
-             + \int_{t_0}^{t_1} w^k(t) Q_k \, dt \ . \\
-             &amp; = \dots \\
-             &amp; = - \delta \int_{t_0}^{t_1} \mathscr{L}\left(\dot{q}^l(t), q^l(t), t\right) \, dt + \int_{t_0}^{t_1} \delta q^k(t) Q_k \, dt \ ,
-       \end{aligned}\end{split}\]</div>
-<p>having written the arbitrary test function as <span class="math notranslate nohighlight">\(w^k(t) =: \delta q^k(t)\)</span> to keep in mind that they’re used as variations of functions <span class="math notranslate nohighlight">\(q^k(t)\)</span>.</p>
-<p>The second contribution is usually defined <strong>virtual work</strong> of generalized forces <span class="math notranslate nohighlight">\(Q_k\)</span> - that is equal to the virtual work of actions not included in the potential <span class="math notranslate nohighlight">\(U\left(q^k(t),t\right)\)</span>. For the very nature of variation, it can be thought as the <em>infinitesimal work done by forces for small displacements compatible with constraints, keeping time constant</em>.</p>
-</li>
-</ul>
-</li>
-</ul>
-<!--
-Riformulazione della meccanica di Newton:
-- **forma debole** delle equazioni: approccio di D'Alembert, lavori virtuali
-- **equazioni di Lagrange**
-
-con $\mathscr{L}(\dot{q}(t), q(t), t) = K(\dot{q}(t), q(t), t) + U(q(t), t)$.
-
-- **principi di stazionarietà del funzionale azione $S$**
-
-Nel caso non ci siano azioni non conservative, $Q_q = 0$, è possibile interpretare le equazioni di Lagrange come risultato di un principio di stazionarietà. Chiamando $\delta q(t)$ la variazione della funzion $q(t)$, moltiplicandola per le equazioni di Lagrange e integrando in tempo per $t \in [t_0, t_1]$,
-
-$$\begin{aligned}
-  0 & = \int_{t_0}^{t_1} \delta q (t) \left[ \dfrac{d}{dt}\left( \frac{\partial \mathscr{L}}{\partial \dot{q}} \right) - \frac{\partial \mathscr{L}}{\partial q} \right] \, dt = \\
-    & = \delta q(t) \left.\left( \frac{\partial \mathscr{L}}{\partial \dot{q}} \right)\right|_{t_0}^{t_1} - \int_{t_0}^{t_1} \left[ \delta \dot{q}(t) \, \frac{\partial \mathscr{L}}{\partial \dot{q}} + \delta q(t) \, \frac{\partial \mathscr{L}}{\partial q} \right] \, dt \ . \\
-\end{aligned}$$
-
-Imponendo che la variazione $\delta q(t)$ sia nulla per $t_0$ e $t_1$, il primo termine si annulla, e si può dimostrare che
-
-$$\begin{aligned}
-    0 & = - \int_{t_0}^{t_1} \left[ \delta \dot{q}(t) \, \frac{\partial \mathscr{L}}{\partial \dot{q}} + \delta q(t) \, \frac{\partial \mathscr{L}}{\partial q} \right] \, dt \\
-    & = - \delta \int_{t_0}^{t_1} \mathscr{L}(\dot{q}(t), q(t), t) \, dt =: - \delta S \ ,
-\end{aligned}$$
-
-cioè le equazioni di Lagrange sono equivalenti alla condizione di stazionarietà del funzionale **azione**
-
-$$S:= \int_{t_0}^{t_1} \mathscr{L}(\dot{q}(t), q(t), t) \, dt \ .$$
--->
+\[\dot{q}^k \dfrac{\partial \mathscr{L}}{\partial \dot{q}^k} - \mathscr{L} = \overline{E} \quad \text{const.}\]</div>
+<p>describing the conservation of mechanical energy w.r.t. an inertial reference frame, in absence of non-conservative forces, as discussed in the .</p>
 <div class="toctree-wrapper compound">
 </div>
 </div>
@@ -487,20 +432,20 @@ $$S:= \int_{t_0}^{t_1} \mathscr{L}(\dot{q}(t), q(t), t) \, dt \ .$$
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="dynamics-equilibrium-stability.html"
+       href="lagrange-i-type.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">4.8. </span>Equilibrium and Stability</p>
+        <p class="prev-next-title"><span class="section-number">5.2. </span>Lagrange Equations of the First Kind</p>
       </div>
     </a>
     <a class="right-next"
-       href="lagrange-ii-type.html"
+       href="lagrange-t-no.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">5.1. </span>Lagrange Equations of the Second Kind</p>
+        <p class="prev-next-title"><span class="section-number">5.3.1. </span>Lagrangian function with no explicit dependence on time</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
