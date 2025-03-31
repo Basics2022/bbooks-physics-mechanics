@@ -7,8 +7,10 @@ In general, at an **ideal** constraint (**todo** provide definition of ideal con
 
 These conditions can be derived from the equations of dynamics for massless systems, as often considered in the ideal constraint model.
 
+(classical-mechanics:actions:reactions:contact)=
 ## Contact Actions
 
+(classical-mechanics:actions:reactions:contact:ideal)=
 ### Constraint Reactions of Ideal Constraints
 Ideal constraints are models that **do not perform net work**, and are thus **conservative elements**. As should become evident in the subsequent sections from the expressions of relative velocities and exchanged actions,
 
@@ -109,7 +111,9 @@ $$
 #### Support
 The support constraint is a unilateral constraint **todo** *add description*
 
+(classical-mechanics:actions:reactions:contact:friction)=
 ### Friction
+(classical-mechanics:actions:reactions:contact:friction:static)=
 #### Static Friction
 
 Static friction is the type of friction that occurs between two bodies when there is no relative motion between them, acting as a tangential force to the contact surface. The simplest model of static friction assumes that the maximum static friction force $F^s_{max}$ that can be exerted between two bodies is proportional to the normal reaction between them, $N$,
@@ -120,6 +124,7 @@ The proportionality constant $\mu^s$ is defined as the **coefficient of static f
 
 $$|F^s| \ge F^s_{max} \ .$$
 
+(classical-mechanics:actions:reactions:contact:friction:dynamic)=
 #### Dynamic Friction
 
 Dynamic friction occurs between two bodies in contact and in relative motion, acting as a tangential force to the contact surface. The simplest model of dynamic friction assumes that the dynamic friction force is proportional to the normal reaction between the two bodies and directed opposite to the relative velocity,
@@ -128,6 +133,7 @@ $$\vec{F}_{12} = - \mu^d N \frac{\vec{v}_{12}}{|\vec{v}_{12}|} \ ,$$
 
 where $\vec{F}_{12}$ is the force acting on body 1 due to body 2, and $\vec{v}_{12} = \vec{v}_1 - \vec{v}_2$ is the velocity of body 1 relative to body 2.
 
+(classical-mechanics:actions:reactions:contact:friction:pure-rolling)=
 #### Pure Rolling
 **todo** *add description*
 

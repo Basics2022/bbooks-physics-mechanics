@@ -64,6 +64,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'ch/lagrange-t-explicit';</script>
     <link rel="shortcut icon" href="../_static/favicon.svg"/>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -73,15 +75,6 @@ const thebe_selector_output = ".output, .cell_output"
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-NM2E14MQG1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-NM2E14MQG1');
-</script>
-
   
   
   <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
@@ -351,7 +344,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -367,6 +362,15 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#energy-balance">5.3.2.1. Energy balance</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#properties-of-kinetic-energy-and-potential">5.3.2.2. Properties of kinetic energy and potential</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -378,6 +382,58 @@ document.write(`
                   
   <div class="tex2jax_ignore mathjax_ignore section" id="lagrangian-function-with-explicit-dependence-on-time">
 <span id="classical-mechanics-lagrange-time-dependent"></span><h1><span class="section-number">5.3.2. </span>Lagrangian function with explicit dependence on time<a class="headerlink" href="#lagrangian-function-with-explicit-dependence-on-time" title="Permalink to this heading">#</a></h1>
+<p>Some problems may have a Lagrangian function with an explicit dependence on time,</p>
+<div class="math notranslate nohighlight">
+\[\mathscr{L}\left(\dot{q}^k(t),q^k(t),t\right) \ ,\]</div>
+<p>in some cases like:</p>
+<ol class="arabic">
+<li><p>time-dependent contraints, whose motion is prescribed</p></li>
+<li><p>time-dependent forces that can be included in the potential energy</p></li>
+<li><p>choice of coordinates <span class="math notranslate nohighlight">\(q^k(t)\)</span> that gives an explicit dependence on time of the physical coordinates, like positions and orientations of rigid bodies</p>
+<div class="math notranslate nohighlight">
+\[\vec{r}_P\left(q^k(t),t \right) \quad , \quad \mathbb{R}_P\left( q^{k}(t), t \right)\]</div>
+<p>and leading to an explicit dependence on time of the velocities and angular velocities</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+      \vec{v}_P\left(\dot{q}^k(t), q^k(t),t \right)  = \dot{q}^i(t) \dfrac{\partial \vec{r}_P}{\partial q^i} \left(q^k(t),t \right) + \dfrac{\partial \vec{r}_P}{\partial t} \left(q^k(t),t \right)  \\
+      \vec{\omega}_P\left(\dot{q}^k(t), q^{k}(t), t \right) = \dot{q}^i(t) \dfrac{\partial \vec{\theta}_P}{\partial q^i} \left(q^k(t),t \right) + \dfrac{\partial \vec{\theta}_P}{\partial t}\left(q^k(t),t \right) 
+    \end{aligned}\end{split}\]</div>
+<p>and thus of the kinetic energy.</p>
+</li>
+</ol>
+<p>In general, external actions with net power are required for conditions 1., 2., i.e. for moving constraints or for changing potential fields acting on the system: even if variable constraints or external forcing acting on a system are prescribed and thus add no degree of freedom to the system, they’re not free in general but requires external actions and power, as it can be realized looking at the balance equation of mechanica energy.</p>
+<p>Condition 3. is usually a result of a choice of coordinates in a non-inertial reference frame, whose motion is not described by the coordinates themselves.</p>
+<div class="section" id="energy-balance">
+<h2><span class="section-number">5.3.2.1. </span>Energy balance<a class="headerlink" href="#energy-balance" title="Permalink to this heading">#</a></h2>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \dfrac{d E}{d t}
+  &amp; = \dfrac{d K}{d t} - \dfrac{d U}{d t} = \\
+  &amp; = 2 \dfrac{d K}{d t} - \dfrac{d \mathscr{L}}{dt} = \\
+  &amp; = 2 \dfrac{d K}{d t} - \ddot{q}^k \dfrac{\partial \mathscr{L}}{\partial \dot{q}^k} - \dot{q}^k \dfrac{\partial \mathscr{L}}{\partial q^k} - \dfrac{\partial \mathscr{L}}{\partial t} = \\
+  &amp; = 2 \dfrac{d K}{d t} - \dfrac{d}{dt} \left( \dot{q}^k \dfrac{\partial \mathscr{L}}{\partial \dot{q}^k} \right) + \dot{q}^k \dfrac{d}{dt}\dfrac{\partial \mathscr{L}}{\partial \dot{q}^k} - \dot{q}^k \dfrac{\partial \mathscr{L}}{\partial q^k} - \dfrac{\partial \mathscr{L}}{\partial t} = \\
+  &amp; = \dfrac{d }{d t} \left[ 2 K - \dot{q}^k \dfrac{\partial \mathscr{L}}{\partial \dot{q}^k} \right] + \dot{q}^k \underbrace{ \left[ \dfrac{d}{dt}\dfrac{\partial \mathscr{L}}{\partial \dot{q}^k} - \dfrac{\partial \mathscr{L}}{\partial q^k} \right]}_{= Q_k} - \dfrac{\partial \mathscr{L}}{\partial t} = \\
+  &amp; = \dot{q}^k Q_k - \dfrac{\partial \mathscr{L}}{\partial t} + \dfrac{d}{dt} \left[ \dot{q}^k B_k + 2C \right]
+\end{aligned}\end{split}\]</div>
+</div>
+<div class="section" id="properties-of-kinetic-energy-and-potential">
+<h2><span class="section-number">5.3.2.2. </span>Properties of kinetic energy and potential<a class="headerlink" href="#properties-of-kinetic-energy-and-potential" title="Permalink to this heading">#</a></h2>
+<p>The kinetic energy has a general expression</p>
+<div class="math notranslate nohighlight">
+\[K = \frac{1}{2} \dot{q}^i \dot{q}^j A_{ij}\left(q^k(t),t\right) + \dot{q}^i B_{i}\left(q^k(t),t\right) + C\left(q^k(t),t\right)\]</div>
+<div class="math notranslate nohighlight">
+\[\dot{q}^k \dfrac{\partial K}{\partial \dot{q}^k} = \dot{q}^k \left( A_{kj} \dot{q}^j + B_k \right)\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  2K - \dot{q}^k \dfrac{\partial K}{\partial \dot{q}^k}
+  &amp; = \dot{q}^k A_{kj} \dot{q}^j + 2 \dot{q}^k B_k + 2 C - \left[ \dot{q}^k \left( A_{kj} \dot{q}^j + B_k \right) \right] = \\
+  &amp; = \dot{q}^k B_k + 2 C
+\end{aligned}\end{split}\]</div>
+<div class="proof example admonition" id="example-0">
+<p class="admonition-title"><span class="caption-number">Example 5.2 </span></p>
+<div class="example-content section" id="proof-content">
+</div>
+</div></div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -434,6 +490,21 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#energy-balance">5.3.2.1. Energy balance</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#properties-of-kinetic-energy-and-potential">5.3.2.2. Properties of kinetic energy and potential</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

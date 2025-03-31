@@ -148,7 +148,7 @@ Introducing the gravitational potential $\phi(\vec{r})$, whose gradient equals t
 
 $$- \nabla^2 \phi = 4 \pi G \rho \ .$$ (eq:g:poisson)
 
-
+(classical-mechanics:actions:spring)=
 ## Elastic Actions: Linear Springs
 
 **todo**
