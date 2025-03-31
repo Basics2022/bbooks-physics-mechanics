@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>4.3. Equations of motion of a point mass &#8212; Classical Mechanics</title>
+    <title>5.3. Lagrangian functions and time dependence &#8212; Classical Mechanics</title>
   
   
   
@@ -66,12 +66,12 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'ch/dynamics-eom-point';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'ch/lagrange-t-explicit';</script>
     <link rel="shortcut icon" href="../_static/favicon.svg"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="4.4. Equations of motion of a discrete system of point masses" href="dynamics-eom-points.html" />
-    <link rel="prev" title="4.2. Equations of Motion and Conservation Principles" href="dynamics-eom.html" />
+    <link rel="next" title="6. Hamiltonian Mechanics" href="hamilton.html" />
+    <link rel="prev" title="5.2. Lagrange Equations of the First Kind" href="lagrange-i-type.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -175,7 +175,7 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Newton Mechanics</span></p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="kinematics.html">1. Kinematics</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="kinematics-point.html">1.3. Point</a></li>
 <li class="toctree-l2"><a class="reference internal" href="kinematics-rigid.html">1.4. Rigid Body</a></li>
@@ -193,10 +193,10 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="inertia.html">3. Inertia</a></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="dynamics.html">4. Dynamics</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l1 has-children"><a class="reference internal" href="dynamics.html">4. Dynamics</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="dynamics-principles.html">4.1. Principles of Newtonian Mechanics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="dynamics-eom.html">4.2. Equations of Motion and Conservation Principles</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">4.3. Equations of motion of a point mass</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dynamics-eom-point.html">4.3. Equations of motion of a point mass</a></li>
 <li class="toctree-l2"><a class="reference internal" href="dynamics-eom-points.html">4.4. Equations of motion of a discrete system of point masses</a></li>
 <li class="toctree-l2"><a class="reference internal" href="dynamics-eom-rigid.html">4.5. Equations of motion of a rigid body</a></li>
 <li class="toctree-l2"><a class="reference internal" href="dynamics-eom-continuum.html">4.6. Equations of motion for continuous media</a></li>
@@ -206,8 +206,8 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Analytical Mechanics</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="lagrange.html">5. Lagrangian Mechanics</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="lagrange.html">5. Lagrangian Mechanics</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2 has-children"><a class="reference internal" href="lagrange-ii-type.html">5.1. Lagrange Equations of the Second Kind</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="lagrange-point.html">5.1.1. Point</a></li>
 <li class="toctree-l3"><a class="reference internal" href="lagrange-points.html">5.1.2. System of points</a></li>
@@ -215,7 +215,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="lagrange-i-type.html">5.2. Lagrange Equations of the First Kind</a></li>
-<li class="toctree-l2"><a class="reference internal" href="lagrange-t-explicit.html">5.3. Lagrangian functions and time dependence</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">5.3. Lagrangian functions and time dependence</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="hamilton.html">6. Hamiltonian Mechanics</a></li>
@@ -278,7 +278,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/ch/dynamics-eom-point.md" target="_blank"
+      <li><a href="../_sources/ch/lagrange-t-explicit.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -349,7 +349,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -360,11 +362,23 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Equations of motion of a point mass</h1>
+    <h1>Lagrangian functions and time dependence</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lagrangian-function-with-no-explicit-dependence-on-time">5.3.1. Lagrangian function with no explicit dependence on time</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#properties-of-kinetic-energy-and-potential">5.3.1.1. Properties of kinetic energy and potential</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lagrangian-function-with-explicit-dependence-on-time">5.3.2. Lagrangian function with explicit dependence on time</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -374,34 +388,83 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <div class="tex2jax_ignore mathjax_ignore section" id="equations-of-motion-of-a-point-mass">
-<span id="classical-mechanics-dynamics-eom-point"></span><h1><span class="section-number">4.3. </span>Equations of motion of a point mass<a class="headerlink" href="#equations-of-motion-of-a-point-mass" title="Permalink to this heading">#</a></h1>
-<p><strong>Dynamic quantities.</strong></p>
+  <div class="tex2jax_ignore mathjax_ignore section" id="lagrangian-functions-and-time-dependence">
+<span id="classical-mechanics-lagrange-time-dependent"></span><h1><span class="section-number">5.3. </span>Lagrangian functions and time dependence<a class="headerlink" href="#lagrangian-functions-and-time-dependence" title="Permalink to this heading">#</a></h1>
+<p>Some problems may have a Lagrangian function with an explicit dependence on time,</p>
+<div class="math notranslate nohighlight">
+\[\mathscr{L}(\dot{q}^k(t),q^k(t),t) \ .\]</div>
+<p>Using the general form <a class="reference internal" href="lagrange.html#equation-eq-lagrange-eq">(5.1)</a> of Lagrange equations, the time derivative of the Lagrange function reads</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
-  \vec{Q}_P &amp; := m_P \vec{v}_P \\
-  \vec{L}_{P,H} &amp; := (\vec{r}_P - \vec{r}_H) \times \vec{Q} = m_P (\vec{r}_P - \vec{r}_H) \times \vec{v}_P \\
-  K &amp; := \frac{1}{2} m_P \vec{v}_P \cdot \vec{v}_P = \frac{1}{2} m_P |\vec{v}_P|^2
+\dfrac{d \mathscr{L}}{dt}
+ &amp; =
+  \ddot{q}^k \dfrac{\partial \mathscr{L}}{\partial \dot{q}^k}
+ + \dot{q}^k \dfrac{\partial \mathscr{L}}{\partial       q^k}
+ + \dfrac{\partial \mathscr{L}}{\partial  t} = &amp;&amp; \qquad \text{(IxP)} \\
+ &amp; = \dfrac{d}{dt} \left( \dot{q}^k \dfrac{\partial \mathscr{L}}{\partial \dot{q}^k} \right) - \dot{q}^k \dfrac{d}{dt} \dfrac{\partial \mathscr{L}}{\partial \dot{q}^k}
+ + \dot{q}^k \dfrac{\partial \mathscr{L}}{\partial       q^k}
+ + \dfrac{\partial \mathscr{L}}{\partial  t} = &amp;&amp; \qquad \text{(Lagrange eq.)} \\
+ &amp; = \dfrac{d}{dt} \left( \dot{q}^k \dfrac{\partial \mathscr{L}}{\partial \dot{q}^k} \right) - \dot{q}^k Q_k
+ + \dfrac{\partial \mathscr{L}}{\partial  t} \ .
 \end{aligned}\end{split}\]</div>
-<p><strong>Momentum balance equation.</strong> The balance equation of momentum of a point <span class="math notranslate nohighlight">\(P\)</span> with mass <span class="math notranslate nohighlight">\(m\)</span>, <span class="math notranslate nohighlight">\(\vec{Q}_P = m \vec{v}_P\)</span> readily follows the second principle of dynamics,</p>
+<p>This latter relation can be recast as</p>
+<div class="math notranslate nohighlight" id="equation-eq-euler-beltrami">
+<span class="eqno">(5.5)<a class="headerlink" href="#equation-eq-euler-beltrami" title="Permalink to this equation">#</a></span>\[\dfrac{d}{dt} \left[ \dot{q}^k \dfrac{\partial \mathscr{L}}{\partial \dot{q}^k} - \mathscr{L} \right] = \dot{q}^k Q_k - \dfrac{\partial \mathscr{L}}{\partial t} \ ,\]</div>
+<p>i.e. time derivative of a physical quantity equals the power of actions not included in the potential, <span class="math notranslate nohighlight">\(\dot{q}^k Q_k\)</span> and a contribution of partial derivative of the Lagrangian function, <span class="math notranslate nohighlight">\(\partial_t \mathscr{L}\)</span>.</p>
+<p>As it’s discusseed below, <strong>when the Lagrangian function of the system is not an explicit function of time</strong> <strong>todo</strong> *discuss the cases when <span class="math notranslate nohighlight">\(\partial_t \mathscr{L} \ne 0\)</span>, the equation <a class="reference internal" href="#equation-eq-euler-beltrami">(5.5)</a> is nothing but the balance equation of mechanical energy.</p>
+<div class="section" id="lagrangian-function-with-no-explicit-dependence-on-time">
+<span id="classical-mechanics-lagrange-time-independent"></span><h2><span class="section-number">5.3.1. </span>Lagrangian function with no explicit dependence on time<a class="headerlink" href="#lagrangian-function-with-no-explicit-dependence-on-time" title="Permalink to this heading">#</a></h2>
+<p>Let’s analyse first some properties of systems, whose Lagrangian function are not an explicit function of time,</p>
 <div class="math notranslate nohighlight">
-\[\dot{\vec{Q}}_P = \vec{R}^e_P\]</div>
-<p><strong>Angular momentum balance equation.</strong> Time derivative of the angular momentum is evaluated with the rule of derivative of product,</p>
+\[\mathscr{L}(\dot{q}^k(t), q^k(t)) = K(\dot{q}^k(t), q^k(t)) + U(q^k(t)) \ ,\]</div>
+<p>and then go back to the most general case.</p>
+<p>As the Lagrange equation is not an explicit function of time, <a class="reference external" href="https://basics2022.github.io/bbooks-math-miscellanea/ch/calculus-variations/intro.html#euler-beltrami-equation">Euler-Beltrami equations</a> hold,</p>
+<div class="math notranslate nohighlight">
+\[\mathscr{L} - \dot{q}^k \dfrac{\partial \mathscr{L}}{\partial \dot{q}^k} = C \quad \text{const.}\]</div>
+<p>Since the Lagrangian doesn’t expliclty depend on time, and potential is not a function of time, relation <a class="reference internal" href="#equation-eq-lagrange-time-ind-dqdk-dq">(5.6)</a> gives <span class="math notranslate nohighlight">\(\dfrac{\partial \mathscr{L}}{\partial \dot{q}^k} = 2 T\)</span>, and thus</p>
+<div class="math notranslate nohighlight">
+\[C = \mathscr{L} - \dot{q}^k \dfrac{\partial \mathscr{L}}{\partial \dot{q}^k} = T + U - 2 T = - T + U =: - E^{mec}\]</div>
+<div class="section" id="properties-of-kinetic-energy-and-potential">
+<h3><span class="section-number">5.3.1.1. </span>Properties of kinetic energy and potential<a class="headerlink" href="#properties-of-kinetic-energy-and-potential" title="Permalink to this heading">#</a></h3>
+<p>This section collects some properties of the kinetic energy and potential of systems, where physical coordinates of the system are written as a function of generalized coordinates only, <span class="math notranslate nohighlight">\(q^k(t)\)</span>. As an example, coordinates of point masses, material points of rigid bodies and the rotation tensor representing their orientation in space can be written as</p>
+<div class="math notranslate nohighlight">
+\[\vec{r}_P\left(q^k(t)\right) \quad , \quad \mathbb{R} \left( q^k(t) \right) \ ,\]</div>
+<p>so that velocities and angular velocities become</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
-\dot{\vec{L}}_{P,H} &amp; = \dfrac{d}{dt} \left[ m_P (\vec{r}_P - \vec{r}_H) \times \vec{v}_P \right] = \\
-&amp; = m \left[ ( \dot{\vec{r}}_P - \dot{\vec{r}}_H ) \times \vec{v}_P + m_P (\vec{r}_P - \vec{r}_H) \times \dot{\vec{v}}_P \right] = \\
-&amp; = - m_P \dot{\vec{r}}_H \times \vec{v}_P + m_P (\vec{r}_P - \vec{r}_H) \times \dot{\vec{v}}_P = \\
-&amp; = - \dot{\vec{r}}_H \times \vec{Q} + \vec{M}_H^{ext} \ .
+  \vec{v}_P\left(\dot{q}^k(t), q^k(t)\right) &amp; = \dfrac{d \vec{r}_P}{dt} = \dot{q}^k \dfrac{\partial \vec{r}}{\partial q^k}\left(q^k(t)\right) \\ 
+  \vec{\omega}_{\times}\left(\dot{q}^k(t), q^k(t)\right) &amp; = \dfrac{d \mathbb{R}}{d t} \cdot \mathbb{R}^T = \dot{q}^k(t) \, \dfrac{\partial \mathbb{R}}{\partial q^k} \cdot \mathbb{R}^T = \dot{q}^k(t) \, \dfrac{\partial \vec{\theta}_{\times}}{\partial q^k}\left(q^k(t)\right) \ ,
 \end{aligned}\end{split}\]</div>
-<p><strong>Kinetic energy blanace equation.</strong></p>
+<p>As the kinetic energy of a mechanical system is a quadratic function of velocity and angular velocity of its sub-systems, the kinetice energy can be written as</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\begin{aligned}
-\dot{K}_{P} &amp; = \dfrac{d}{dt} \left( \frac{1}{2} m_P \vec{v}_P \cdot \vec{v}_P \right) = \\
-            &amp; = m_P \dot{\vec{v}}_P \cdot \vec{v}_P = \\
-            &amp; = \vec{R}^e \cdot \vec{v}_P = P^e = P^{tot} \\
-\end{aligned}\end{split}\]</div>
-<p>being the power of external actions <span class="math notranslate nohighlight">\(P^e\)</span> equal to the total power acting on the system, assuming there is no internal action in the point system, or at least they have zero net power.</p>
+\[K\left( \dot{q}^k(t), q^k(t) \right) = \frac{1}{2} A_{ij}\left(q^k(t)\right) \, \dot{q}^i(t) \, \dot{q}^j(t) \ .\]</div>
+<p>Since <span class="math notranslate nohighlight">\(A_{ij}\)</span> is symmetric w.r.t. the swap of indices (or it can be written in a symmetric form), partial derivative of the kinetic energy w.r.t. <span class="math notranslate nohighlight">\(\dot{q}^l\)</span> reads</p>
+<div class="math notranslate nohighlight">
+\[\dfrac{\partial K}{\partial \dot{q}^l} = A_{lj} \dot{q}^j \ ,\]</div>
+<p>and</p>
+<div class="math notranslate nohighlight" id="equation-eq-lagrange-time-ind-dqdk-dq">
+<span class="eqno">(5.6)<a class="headerlink" href="#equation-eq-lagrange-time-ind-dqdk-dq" title="Permalink to this equation">#</a></span>\[\dot{q}^l \dfrac{\partial K}{\partial \dot{q}^l} = \dot{q}^l A_{lj} \dot{q}^j = 2 T \ .\]</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Proofs<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<div class="math notranslate nohighlight">
+\[\begin{aligned}
+  \dfrac{\partial K}{\partial \dot{q}^l} 
+    = \dfrac{\partial }{\partial \dot{q}^l} \left[ \frac{1}{2} A_{ij} \dot{q}^i \dot{q}^j \right] 
+    = \frac{1}{2} A_{ij} \bigg[ \underbrace{ \dfrac{\partial \dot{q}^i}{\partial \dot{q}^l} }_{\delta^i_l} \dot{q}^j + \dot{q}^i \underbrace{ \dfrac{\partial \dot{q}^j}{\partial \dot{q}^l}}_{\delta^j_l} \bigg]  
+    = \frac{1}{2} \left[ A_{lj} \dot{q}^j + A_{il} \dot{q}^i \right]
+    = A_{lj} \dot{q}^j
+\end{aligned}\]</div>
+</div>
+</details></div>
+</div>
+<div class="section" id="lagrangian-function-with-explicit-dependence-on-time">
+<span id="id1"></span><h2><span class="section-number">5.3.2. </span>Lagrangian function with explicit dependence on time<a class="headerlink" href="#lagrangian-function-with-explicit-dependence-on-time" title="Permalink to this heading">#</a></h2>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -435,20 +498,20 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="dynamics-eom.html"
+       href="lagrange-i-type.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">4.2. </span>Equations of Motion and Conservation Principles</p>
+        <p class="prev-next-title"><span class="section-number">5.2. </span>Lagrange Equations of the First Kind</p>
       </div>
     </a>
     <a class="right-next"
-       href="dynamics-eom-points.html"
+       href="hamilton.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">4.4. </span>Equations of motion of a discrete system of point masses</p>
+        <p class="prev-next-title"><span class="section-number">6. </span>Hamiltonian Mechanics</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -458,6 +521,24 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lagrangian-function-with-no-explicit-dependence-on-time">5.3.1. Lagrangian function with no explicit dependence on time</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#properties-of-kinetic-energy-and-potential">5.3.1.1. Properties of kinetic energy and potential</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lagrangian-function-with-explicit-dependence-on-time">5.3.2. Lagrangian function with explicit dependence on time</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

@@ -215,6 +215,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="lagrange-i-type.html">5.2. Lagrange Equations of the First Kind</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lagrange-t-explicit.html">5.3. Lagrangian functions and time dependence</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="hamilton.html">6. Hamiltonian Mechanics</a></li>
@@ -384,7 +385,7 @@ document.write(`
 <p>with momentum <span class="math notranslate nohighlight">\(\vec{Q} = m \vec{v}_G\)</span> and angular momentum <span class="math notranslate nohighlight">\(\vec{\Gamma}_G = \mathbb{I}_G \cdot \vec{\omega}\)</span>.</p>
 <p><strong>Weak form.</strong> Weak form of dynamical equations is derived with scalar multiplication of the strong form by an arbitrary test functions <span class="math notranslate nohighlight">\(\vec{w}_t\)</span>, <span class="math notranslate nohighlight">\(\vec{w}_r\)</span></p>
 <div class="math notranslate nohighlight" id="equation-eq-lagrange-rigid-weak">
-<span class="eqno">(5.3)<a class="headerlink" href="#equation-eq-lagrange-rigid-weak" title="Permalink to this equation">#</a></span>\[\vec{0} = \vec{w}_t \cdot \left( m \dot{\vec{v}}_G - \vec{R}^e\right) + \vec{w}_r \cdot \left( \dot{\vec{\Gamma}}_G - \vec{M}^e_G \right) \qquad \forall \vec{w}_t, \, \vec{w}_r\]</div>
+<span class="eqno">(5.4)<a class="headerlink" href="#equation-eq-lagrange-rigid-weak" title="Permalink to this equation">#</a></span>\[\vec{0} = \vec{w}_t \cdot \left( m \dot{\vec{v}}_G - \vec{R}^e\right) + \vec{w}_r \cdot \left( \dot{\vec{\Gamma}}_G - \vec{M}^e_G \right) \qquad \forall \vec{w}_t, \, \vec{w}_r\]</div>
 <p><strong>Lagrange equations.</strong> Lagrange equations are derived from the weak form, with a proper choice of the weak test functions. The “translational part” is recasted after choosing</p>
 <div class="math notranslate nohighlight">
 \[\vec{w}_t = \frac{\partial \vec{r}}{\partial q^k} = \frac{\partial \vec{v}}{\partial \dot{q}^k} \ .\]</div>
