@@ -47,7 +47,7 @@ $$\dfrac{d}{dt} \left[ \dot{q}^k \dfrac{\partial \mathscr{L}}{\partial \dot{q}^k
 
 Since the Lagrangian doesn't expliclty depend on time, and potential is not a function of time, relation {eq}`eq:lagrange:time:ind:dqdK_dq` gives $\dot{q}^k \frac{\partial \mathscr{L}}{\partial \dot{q}^k} = 2 K$, and thus the content of the braces is the mechanical energy of the system, 
 
-$$2 K - \mathscr{L} = 2 K - K - U = K - U = E^{mec} \ ,$$
+$$\dot{q}^k \dfrac{\partial \mathscr{L}}{\partial \dot{q}^k} - \mathscr{L} = 2 K - \mathscr{L} = 2 K - K - U = K - U = E^{mec} \ ,$$
 
 and it becomes clear that the relation is nothhing but the balance equation of mechanical energy
 
@@ -80,7 +80,7 @@ $$\dfrac{\partial K}{\partial \dot{q}^l} = A_{lj} \dot{q}^j \ ,$$
 
 and 
 
-$$\dot{q}^l \dfrac{\partial K}{\partial \dot{q}^l} = \dot{q}^l A_{lj} \dot{q}^j = 2 T \ .$$ (eq:lagrange:time:ind:dqdK_dq)
+$$\dot{q}^l \dfrac{\partial K}{\partial \dot{q}^l} = \dot{q}^l A_{lj} \dot{q}^j = 2 K \ .$$ (eq:lagrange:time:ind:dqdK_dq)
 
 
 ```{dropdown} Proofs
