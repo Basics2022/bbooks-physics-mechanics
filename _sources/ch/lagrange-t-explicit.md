@@ -80,7 +80,7 @@ $$\dfrac{\partial K}{\partial \dot{q}^l} = A_{lj} \dot{q}^j \ ,$$
 
 and 
 
-$$\dot{q}^l \dfrac{\partial K}{\partial \dot{q}^l} = \dot{q}^l A_{lj} \dot{q}^j = 2 T \ .$$ (eq:lagrange:time:ind:dqdK_dq)
+$$\dot{q}^l \dfrac{\partial K}{\partial \dot{q}^l} = \dot{q}^l A_{lj} \dot{q}^j = 2 K \ .$$ (eq:lagrange:time:ind:dqdK_dq)
 
 
 ```{dropdown} Proofs
