@@ -85,7 +85,7 @@
         
 
 \title{Classical Mechanics}
-\date{Apr 13, 2025}
+\date{May 08, 2025}
 \release{}
 \author{basics}
 \newcommand{\sphinxlogo}{\vbox{}}
@@ -102,7 +102,7 @@
 
 
 \sphinxAtStartPar
-This material is part of the \sphinxhref{https://basics2022.github.io/bbooks}{\sphinxstylestrong{basics\sphinxhyphen{}books project}}. It is also available as a \DUrole{xref,download,myst}{.pdf document}.
+This material is part of the \sphinxhref{https://basics2022.github.io/bbooks}{\sphinxstylestrong{basics\sphinxhyphen{}books project}}. It is also available as a \DUrole{xref,myst}{.pdf document}.
 
 \sphinxAtStartPar
 Classical mechanics deal with the motion of systems and its causes.
@@ -161,20 +161,18 @@ Classical mechanics treats time and space as individually absolute physical quan
 Kinematics deals with the motion of mechanical systems, without taking into account the causes of motion.
 
 
-\section{Space and time}
-\label{\detokenize{ch/kinematics:space-and-time}}\label{\detokenize{ch/kinematics:classical-mechanics-kinematics-space-time}}
+
 \sphinxAtStartPar
 Classical mechanics relies on the concepts of \sphinxstylestrong{absolute 3\sphinxhyphen{}dimensional Euclidean space}, \(E^3\), and \sphinxstylestrong{absolute time}.
 
 \sphinxAtStartPar
-Briefly, what is space? It’s something you can measure with ruler (for distances) and square (for angles), or other space\sphinxhyphen{}measurment devices.
-What is time? It’s something you can measure with a clock or other timekeeping devices.
+\sphinxstylestrong{Space and time.} Briefly, what is space? It’s something you can measure with ruler (for distances) and square (for angles), or other space\sphinxhyphen{}measurment devices. Newton mechanics relies on space modeled as \sphinxstylestrong{Euclidean space}, a physical entity where the Euclidean geometry holds.
+What is time? It’s something you can measure with a clock or other timekeeping devices, that can be related to order of events, and causality (cause comes before consequences).
 
 
-\section{Models}
-\label{\detokenize{ch/kinematics:models}}\label{\detokenize{ch/kinematics:classical-mechanics-kinematics-models}}
+
 \sphinxAtStartPar
-Different models of physical systems can be derived with an abstraction and modelling process, depending on the characteristics of the system under investigation and on the level of detail required by the analysis.
+\sphinxstylestrong{Models.} Different models of physical systems can be derived with an abstraction and modelling process, depending on the characteristics of the system under investigation and on the level of detail required by the analysis.
 
 \sphinxAtStartPar
 These models can be classified by:
@@ -198,12 +196,12 @@ Here, the focus goes to the kinematics of {\hyperref[\detokenize{ch/kinematics-p
 \sphinxAtStartPar
 While space and time are absolute, the motion of a system is usually the \sphinxstylestrong{motion relative to an observer} or to a reference frame. After treating the kinematics of points and rigid bodies w.r.t. a given reference frame, {\hyperref[\detokenize{ch/kinematics-relative:classical-mechanics-kinematics-relative}]{\sphinxcrossref{\DUrole{std,std-ref}{relative kinematics}}}} provides the description of the motion of the same system w.r.t. 2 different observers/reference frames in relative motion.
 \label{ch/kinematics:definition-0}
-\begin{sphinxadmonition}{note}{Definition 1.2.1 (Configuration)}
+\begin{sphinxadmonition}{note}{Definition 1.1 (Configuration)}
 
 
 \end{sphinxadmonition}
 \label{ch/kinematics:definition-1}
-\begin{sphinxadmonition}{note}{Definition 1.2.2 (State)}
+\begin{sphinxadmonition}{note}{Definition 1.2 (State)}
 
 
 \end{sphinxadmonition}
@@ -368,7 +366,7 @@ Time derivative of the relation \eqref{equation:ch/kinematics-rigid:eq:rigid:pos
 \end{equation}
 \sphinxAtStartPar
 \sphinxstylestrong{Acceleration and Angular acceleration.}
-Time derivatives of the relation \{eq\}`eq:rigid:vel\} gives
+Time derivatives of the relation \eqref{equation:ch/kinematics-rigid:eq:rigid:vel} gives
 \begin{equation*}
 \begin{split}\begin{aligned}
 \vec{a}_P 
@@ -2267,8 +2265,40 @@ A system is in equilibrium is all its components are in equilibrium, and thus th
 Classical mechanics can be re\sphinxhyphen{}formulated starting principles of \sphinxhref{https://basics2022.github.io/bbooks-math-miscellanea/ch/calculus-variations/intro.html}{calculus of variations}, usually referred as \sphinxstylestrong{analytical mechanics}. Under some assumptions, that will be discussed during the derivation, analytical mechanics is equivalent to Newton mechanics.
 
 \sphinxAtStartPar
-\sphinxstylestrong{Symmetric system.} Lagrange mechanics provides a symmetric form of the (linearised?) governing equations, without any additional effort. This could be quite useful, especially for exploiting numerical methods for symmetric (and definite positive, sometimes) matrices.
+{\hyperref[\detokenize{ch/lagrange-ii-type:classical-mechanics-lagrange-ii-type}]{\sphinxcrossref{\DUrole{std,std-ref}{\sphinxstylestrong{Lagrange equations \sphinxhyphen{} II kind}}}}}. Lagrange equations of the II kind provides \sphinxstylestrong{pure equations of motion}, in which constraint forces do not appear. Given a system with \(N\) degrees of freedom, that can be described with \(N\) independent generalized coordinates \(\{ q^k \}_{k=1:N}\), Lagrange equations of the II kind are a set of \(N\) \sphinxstylestrong{\(2^{nd}\) order ODEs} in the generalized coordinates.
 
+\sphinxAtStartPar
+The equivalence with Newton’s approach to classical mechanics is discussed in detail for different kind of systems (points, rigid bodies,…): starting from Newton’s dynamical equations of motion (strong form), D’Alembert approach (weak form) is derived, and Lagrange equations are derived from that with a proper choice of test functions. Lagrange equations are then recast as the stationariety condition of a functional, providing a variational approach to classical mechanics.
+
+\begin{sphinxadmonition}{tip}{Tip:}
+\sphinxAtStartPar
+Lagrange equations of the II kind could be the best approach for small\sphinxhyphen{}dimensional problems, when there’s no interest in evaluating constraint reactions.
+\end{sphinxadmonition}
+
+\sphinxAtStartPar
+{\hyperref[\detokenize{ch/lagrange-i-type:classical-mechanics-lagrange-i-type}]{\sphinxcrossref{\DUrole{std,std-ref}{\sphinxstylestrong{Lagrange equations \sphinxhyphen{} I kind}}}}}. Lagrange equations of the I kind provides a set of \sphinxstylestrong{DAEs}, explicitly including constraints as independent equations and adding their effects \sphinxhyphen{} their constraint reactions \sphinxhyphen{} in the dynamical equations of the degrees of freedom as \sphinxstylestrong{Lagrange multipliers}.
+
+\begin{sphinxadmonition}{tip}{Tip:}
+\sphinxAtStartPar
+Lagrange equations of the I kind could be the best approach for numerical approach to generic mechanical systems, as it is a less problem\sphinxhyphen{}dependent approach, without any case\sphinxhyphen{}dependent manipulation.
+\end{sphinxadmonition}
+
+\sphinxAtStartPar
+{\hyperref[\detokenize{ch/lagrange-t-explicit:classical-mechanics-lagrange-time-dependent}]{\sphinxcrossref{\DUrole{std,std-ref}{\sphinxstylestrong{Lagrangian mechanics, with expliicitly time\sphinxhyphen{}dependent Lagrangian function}}}}}. Energy conservation is related to explicit time independent of its Lagrangian function, and can be related \sphinxhyphen{} beside the absence of non\sphinxhyphen{}conservative actions \sphinxhyphen{} to the absence of any time\sphinxhyphen{}dependent external input, or the choice of an inertial reference frame. Consequence of explicit time dependence in the Lagrangian functions are discussed, with examples.
+
+\sphinxAtStartPar
+{\hyperref[\detokenize{ch/lagrange-constraints:classical-mechanics-lagrange-constraints}]{\sphinxcrossref{\DUrole{std,std-ref}{\sphinxstylestrong{Constraints in Lagrangian mechanics}}}}}. Constraints in Lagrangian mechanics are discussed: holonomic and non\sphinxhyphen{}holonomic are discussed, and an approach to ideal non\sphinxhyphen{}holonomic (semi\sphinxhyphen{}linear?) constraints in Lagrange mechanics is outlined.
+
+\sphinxAtStartPar
+{\hyperref[\detokenize{ch/lagrange-properties:classical-mechanics-lagrange-properties}]{\sphinxcrossref{\DUrole{std,std-ref}{\sphinxstylestrong{Properties}}}}}. Some properties of Lagrangian approach to mechanics are discussed. As an example, Lagrange mechanics provides a \sphinxstylestrong{symmetric form} of the (linearised?) governing equations, without any additional effort. This could be quite useful, especially for exploiting numerical methods for symmetric (and definite positive, sometimes) matrices.
+
+
+
+\sphinxstepscope
+
+
+\section{Lagrange Equations of the Second Kind}
+\label{\detokenize{ch/lagrange-ii-type:lagrange-equations-of-the-second-kind}}\label{\detokenize{ch/lagrange-ii-type:classical-mechanics-lagrange-ii-type}}\label{\detokenize{ch/lagrange-ii-type::doc}}
 \sphinxAtStartPar
 Here, the equivalence of analytical mechanics and Newton mechanics is stressed, by means of the derivation of the principle of analytical mechanics starting from the equations of motions derived in Newtonian mechanics, relying on the conservation of mass and the three principles of Newton mechanics. The process is shown in the following sections for {\hyperref[\detokenize{ch/lagrange-point:classical-mechanics-lagrange-point}]{\sphinxcrossref{\DUrole{std,std-ref}{point systems}}}}, {\hyperref[\detokenize{ch/lagrange-points:classical-mechanics-lagrange-points}]{\sphinxcrossref{\DUrole{std,std-ref}{systems of points}}}}, {\hyperref[\detokenize{ch/lagrange-rigid-body:classical-mechanics-lagrange-rigid}]{\sphinxcrossref{\DUrole{std,std-ref}{extended rigid bodies}}}} and follows these steps:
 \begin{itemize}
@@ -2283,7 +2313,7 @@ Here, the equivalence of analytical mechanics and Newton mechanics is stressed, 
 \item {} 
 \sphinxAtStartPar
 \sphinxstylestrong{Lagrange equations.} A proper choice of test functions as a function of generalized coordinates, and some manipulation, leads to Lagrange equations. While the choice of test functions depends on the nature of the system, their expression always reads
-\begin{equation}\label{equation:ch/lagrange:eq:lagrange-eq}
+\begin{equation}\label{equation:ch/lagrange-ii-type:eq:lagrange-eq}
 \begin{split}\dfrac{d}{dt}\left( \frac{\partial \mathscr{L}}{\partial \dot{q}^k} \right) - \frac{\partial \mathscr{L}}{\partial q^k} = Q_{q^k} \ ,\end{split}
 \end{equation}
 \sphinxAtStartPar
@@ -2339,16 +2369,6 @@ The second contribution is usually defined \sphinxstylestrong{virtual work} of g
 \end{itemize}
 
 \end{itemize}
-
-
-
-\sphinxstepscope
-
-
-\section{Lagrange Equations of the Second Kind}
-\label{\detokenize{ch/lagrange-ii-type:lagrange-equations-of-the-second-kind}}\label{\detokenize{ch/lagrange-ii-type:classical-mechanics-lagrange-ii-type}}\label{\detokenize{ch/lagrange-ii-type::doc}}
-\sphinxAtStartPar
-For ideal constraints…
 
 \sphinxstepscope
 
@@ -2530,7 +2550,7 @@ being \(\mathscr{L} = K + U\) the Lagrangian function of the system, and \(K = K
 
 
 \section{Lagrange Equations of the First Kind}
-\label{\detokenize{ch/lagrange-i-type:lagrange-equations-of-the-first-kind}}\label{\detokenize{ch/lagrange-i-type:classical-mechanics-lagrange-ii-type}}\label{\detokenize{ch/lagrange-i-type::doc}}
+\label{\detokenize{ch/lagrange-i-type:lagrange-equations-of-the-first-kind}}\label{\detokenize{ch/lagrange-i-type:classical-mechanics-lagrange-i-type}}\label{\detokenize{ch/lagrange-i-type::doc}}
 \sphinxAtStartPar
 Explicitly making appear constraint forces, due to constraints
 \begin{equation*}
@@ -2596,7 +2616,7 @@ Some problems may have a Lagrangian function with an explicit dependence on time
 \begin{split}\mathscr{L}(\dot{q}^k(t),q^k(t),t) \ .\end{split}
 \end{equation*}
 \sphinxAtStartPar
-Using the general form \eqref{equation:ch/lagrange:eq:lagrange-eq} of Lagrange equations, the time derivative of the Lagrange function reads
+Using the general form \eqref{equation:ch/lagrange-ii-type:eq:lagrange-eq} of Lagrange equations, the time derivative of the Lagrange function reads
 \begin{equation*}
 \begin{split}\begin{aligned}
 \dfrac{d \mathscr{L}}{dt}
@@ -2630,6 +2650,140 @@ When there is no generalized force, that can’t be included in the potential, \
 \sphinxAtStartPar
 describing the conservation of mechanical energy w.r.t. an inertial reference frame, in absence of non\sphinxhyphen{}conservative forces, as discussed in the .
 
+\sphinxstepscope
+
+
+\section{Constraints classification}
+\label{\detokenize{ch/lagrange-constraints:constraints-classification}}\label{\detokenize{ch/lagrange-constraints:classical-mechanics-lagrange-constraints}}\label{\detokenize{ch/lagrange-constraints::doc}}
+
+\subsection{Holonomic vs. non\sphinxhyphen{}holonomic constraints}
+\label{\detokenize{ch/lagrange-constraints:holonomic-vs-non-holonomic-constraints}}\label{ch/lagrange-constraints:holonomic-constraint}
+\begin{sphinxadmonition}{note}{Definition 5.4.1 (Holonomic constraint)}
+
+
+
+\sphinxAtStartPar
+A holonomic constraints can be written in a form
+\begin{equation*}
+\begin{split}g(q^k(t), t) = 0 \ .\end{split}
+\end{equation*}\end{sphinxadmonition}
+\label{ch/lagrange-constraints:non-holonomic-constraint}
+\begin{sphinxadmonition}{note}{Definition 5.4.2 (Non\sphinxhyphen{}holonomic constraint)}
+
+
+
+\sphinxAtStartPar
+Every constraint that is not holonomic, is non\sphinxhyphen{}holonomic. (\sphinxstylestrong{wow!})
+\end{sphinxadmonition}
+
+\sphinxAtStartPar
+\sphinxstylestrong{todo} \sphinxstyleemphasis{Add some examples…; even some constraints that looks like a non\sphinxhyphen{}holonomic constraint that are holonomic: “integrable constraints”, Pfaffian method?…}
+
+
+\subsection{Ideal constraints}
+\label{\detokenize{ch/lagrange-constraints:classical-mechanics-lagrange-constraints-ideal}}\label{\detokenize{ch/lagrange-constraints:ideal-constraints}}\label{ch/lagrange-constraints:definition-2}
+\begin{sphinxadmonition}{note}{Definition 5.4.3 (Ideal constraint)}
+
+
+
+\sphinxAtStartPar
+An ideal constraint produces no net power.
+\end{sphinxadmonition}
+
+\sphinxAtStartPar
+Given the generalized actions \(\mathbf{f}_c\) introduced in the dynamical systems by constraints,
+\begin{equation*}
+\begin{split}\mathbf{M} \ddot{\mathbf{q}} = \mathbf{f} + \mathbf{f}_c \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+power of ideal constraints reads
+\begin{equation*}
+\begin{split}\dot{\mathbf{q}}^T \mathbf{f}_c = 0 \ .\end{split}
+\end{equation*}
+
+\subsubsection{Ideal holonomic constraints}
+\label{\detokenize{ch/lagrange-constraints:classical-mechanics-lagrange-constraints-ideal-holonomic}}\label{\detokenize{ch/lagrange-constraints:ideal-holonomic-constraints}}
+\sphinxAtStartPar
+If constraints don’t have explicit dependence (what happens if there’s explicit {\hyperref[\detokenize{ch/lagrange-t-explicit:classical-mechanics-lagrange-time-dependent}]{\sphinxcrossref{\DUrole{std,std-ref}{time dependence}}}}? Treat in the proper section…) from time \(t\)
+\begin{equation*}
+\begin{split}\begin{aligned}
+  & \mathbf{M} \ddot{\mathbf{q}} = \mathbf{f} + \mathbf{f}_c \\
+  & \mathbf{g}(\mathbf{q}(t)) = \mathbf{0}
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+with \(\mathbf{q} \in \mathbb{R}^N\), \(\mathbf{g} \in \mathbb{R}^C\).
+
+\sphinxAtStartPar
+\sphinxstylestrong{Power of ideal constraint.} Power of ideal constraints is zero, and this condition provides the most general form of constraint reactions \(\mathbf{f}_c\) as a linear combination of the gradient of the constraints, and a set of well\sphinxhyphen{}defined (\sphinxstyleemphasis{extra conditions?}) and determined DAEs, with equal number of equations and unknowns. Power of contraint reactions of ideal constrains is zero,
+\begin{equation*}
+\begin{split}0 = \dot{\mathbf{q}}^T \mathbf{f}_c\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Time derivative of the constraint equation reads \(0 = g_i (q^k) = \dot{q}^k \frac{\partial g_i}{\partial q^k}\), and thus for every \(\mathbf{s} \in \mathbb{R}^C\),
+\begin{equation}\label{equation:ch/lagrange-constraints:eq:constraint:reaction:holonomic}
+\begin{split}0 = \dot{\mathbf{q}}^T \nabla_{\mathbf{q}} \mathbf{g} \, \mathbf{s} \ ,\end{split}
+\end{equation}
+\sphinxAtStartPar
+and thus constraint reactions can be written as a linear combination of the (columns of the) gradient of the constraint equation w.r.t. the generalized coordiantes,
+\begin{equation*}
+\begin{split}\mathbf{f}_c = \nabla_\mathbf{q} \mathbf{g} \, \mathbf{s}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+or
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \mathbf{f}_c = \nabla_{\mathbf{q}} g_i \, s_i \qquad , \qquad
+  f_{c,k}      = \dfrac{\partial\mathbf{g}^T}{\partial q^k} \mathbf{s} = \dfrac{\partial g^i}{\partial q^k} \, s_i \ .
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Determined set of DAEs.} Introducing the expression \eqref{equation:ch/lagrange-constraints:eq:constraint:reaction:holonomic} of the constraint reactions in the original set of DAEs, the set of equations governing the constrained system reads
+\begin{equation*}
+\begin{split}\begin{aligned}
+  & \mathbf{M} \ddot{\mathbf{q}} = \mathbf{f} + \nabla_{\mathbf{q}} \mathbf{g} \, \mathbf{s} \\
+  & \mathbf{g}(\mathbf{q}) = \mathbf{0}
+\end{aligned}\end{split}
+\end{equation*}
+
+\subsubsection{Ideal non\sphinxhyphen{}holonomic constraints}
+\label{\detokenize{ch/lagrange-constraints:classical-mechanics-lagrange-constraints-ideal-non-holonomic}}\label{\detokenize{ch/lagrange-constraints:ideal-non-holonomic-constraints}}
+\sphinxAtStartPar
+The equations of a constrained system with non\sphinxhyphen{}holonomic constraints in semi\sphinxhyphen{}linear form and no explicit time dependence reads
+\begin{equation*}
+\begin{split}\begin{aligned}
+  & \mathbf{M} \ddot{\mathbf{q}} = \mathbf{f} + \mathbf{f}_c \\
+  & \mathbf{a}(\mathbf{q}(t)) \, \dot{\mathbf{q}}(t) = \mathbf{0}
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Power of ideal constraints.} As done in the {\hyperref[\detokenize{ch/lagrange-constraints:classical-mechanics-lagrange-constraints-ideal-holonomic}]{\sphinxcrossref{\DUrole{std,std-ref}{section about holonomic constraints}}}}, the condition of zero power of ideal constraints provides the most general form of constraint reactions \(\mathbf{f}_c\) as a linear combination of the gradient of the constraints, and thus a determined set of DAEs.
+\begin{equation*}
+\begin{split}0 = \dot{\mathbf{q}}^T \, \mathbf{f}_c\end{split}
+\end{equation*}
+\sphinxAtStartPar
+compared with the (transpose of the) non\sphinxhyphen{}holonomic constraint,
+\begin{equation*}
+\begin{split}0 = \dot{\mathbf{q}}^T \mathbf{a}^T(\mathbf{q}) \mathbf{s}  \ , \qquad \forall \mathbf{s} \in \mathbb{R}^C\end{split}
+\end{equation*}
+\sphinxAtStartPar
+and thus constraint reactions can be written as the linear combination of the columns of the transpose of matrix \(\mathbf{a}(\mathbf{q})\),
+\begin{equation}\label{equation:ch/lagrange-constraints:eq:constraint:reaction:non-holonomic}
+\begin{split}\mathbf{f} = \mathbf{a}^T(\mathbf{q}) \mathbf{s} \ .\end{split}
+\end{equation}
+\sphinxAtStartPar
+\sphinxstylestrong{Determined set of DAEs.} Introducing the expression \eqref{equation:ch/lagrange-constraints:eq:constraint:reaction:non-holonomic} of the constraint reactions in the original set of DAEs, the determined set of equations governing the constrained system reads
+\begin{equation*}
+\begin{split}\begin{aligned}
+  & \mathbf{M} \ddot{\mathbf{q}} = \mathbf{f} + \mathbf{a}^T(\mathbf{q}) \, \mathbf{s} \\
+  & \mathbf{a}(\mathbf{q}) \, \dot{\mathbf{q}}(t) = \mathbf{0}
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxstepscope
+
+
+\section{Properties of the Lagrangian approach to classical mechanics}
+\label{\detokenize{ch/lagrange-properties:properties-of-the-lagrangian-approach-to-classical-mechanics}}\label{\detokenize{ch/lagrange-properties:classical-mechanics-lagrange-properties}}\label{\detokenize{ch/lagrange-properties::doc}}
 \sphinxstepscope
 
 
@@ -2777,7 +2931,7 @@ The kinetic energy has a general expression
   & = \dot{q}^k B_k + 2 C
 \end{aligned}\end{split}
 \end{equation*}\label{ch/lagrange-t-explicit:example-0}
-\begin{sphinxadmonition}{note}{Example 5.3.1}
+\begin{sphinxadmonition}{note}{Example 5.5.1}
 
 
 \end{sphinxadmonition}
@@ -3273,8 +3427,17 @@ At the end of the tunnel, the ball moves above the planet surface while it’s a
 \bigletter{definition\sphinxhyphen{}1}
 \item\relax\sphinxstyleindexentry{definition\sphinxhyphen{}1}\sphinxstyleindexextra{ch/kinematics}\sphinxstyleindexpageref{ch/kinematics:\detokenize{definition-1}}
 \indexspace
+\bigletter{definition\sphinxhyphen{}2}
+\item\relax\sphinxstyleindexentry{definition\sphinxhyphen{}2}\sphinxstyleindexextra{ch/lagrange\sphinxhyphen{}constraints}\sphinxstyleindexpageref{ch/lagrange-constraints:\detokenize{definition-2}}
+\indexspace
 \bigletter{example\sphinxhyphen{}0}
 \item\relax\sphinxstyleindexentry{example\sphinxhyphen{}0}\sphinxstyleindexextra{ch/lagrange\sphinxhyphen{}t\sphinxhyphen{}explicit}\sphinxstyleindexpageref{ch/lagrange-t-explicit:\detokenize{example-0}}
+\indexspace
+\bigletter{holonomic\sphinxhyphen{}constraint}
+\item\relax\sphinxstyleindexentry{holonomic\sphinxhyphen{}constraint}\sphinxstyleindexextra{ch/lagrange\sphinxhyphen{}constraints}\sphinxstyleindexpageref{ch/lagrange-constraints:\detokenize{holonomic-constraint}}
+\indexspace
+\bigletter{non\sphinxhyphen{}holonomic\sphinxhyphen{}constraint}
+\item\relax\sphinxstyleindexentry{non\sphinxhyphen{}holonomic\sphinxhyphen{}constraint}\sphinxstyleindexextra{ch/lagrange\sphinxhyphen{}constraints}\sphinxstyleindexpageref{ch/lagrange-constraints:\detokenize{non-holonomic-constraint}}
 \indexspace
 \bigletter{thm:huygens}
 \item\relax\sphinxstyleindexentry{thm:huygens}\sphinxstyleindexextra{ch/inertia}\sphinxstyleindexpageref{ch/inertia:\detokenize{thm:huygens}}

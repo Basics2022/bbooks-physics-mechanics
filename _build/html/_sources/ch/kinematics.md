@@ -3,17 +3,22 @@
 
 Kinematics deals with the motion of mechanical systems, without taking into account the causes of motion.
 
+<!--
 (classical-mechanics:kinematics:space-time)=
 ## Space and time
+-->
 Classical mechanics relies on the concepts of **absolute 3-dimensional Euclidean space**, $E^3$, and **absolute time**.
 
-Briefly, what is space? It's something you can measure with ruler (for distances) and square (for angles), or other space-measurment devices. 
-What is time? It's something you can measure with a clock or other timekeeping devices.
+**Space and time.** Briefly, what is space? It's something you can measure with ruler (for distances) and square (for angles), or other space-measurment devices. Newton mechanics relies on space modeled as **Euclidean space**, a physical entity where the Euclidean geometry holds.
+What is time? It's something you can measure with a clock or other timekeeping devices, that can be related to order of events, and causality (cause comes before consequences).
 
 
+<!--
 (classical-mechanics:kinematics:models)=
 ## Models
-Different models of physical systems can be derived with an abstraction and modelling process, depending on the characteristics of the system under investigation and on the level of detail required by the analysis.
+-->
+
+**Models.** Different models of physical systems can be derived with an abstraction and modelling process, depending on the characteristics of the system under investigation and on the level of detail required by the analysis.
 
 These models can be classified by:
 - dimensions: 0: point; 1: line; 2: surfaces; 3: volume solid

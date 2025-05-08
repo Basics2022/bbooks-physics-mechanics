@@ -109,7 +109,7 @@ $$\begin{aligned}
 \end{aligned}$$ (eq:rigid:vel)
 
 **Acceleration and Angular acceleration.**
-Time derivatives of the relation {eq}`eq:rigid:vel} gives
+Time derivatives of the relation {eq}`eq:rigid:vel` gives
 
 $$\begin{aligned}
 \vec{a}_P 

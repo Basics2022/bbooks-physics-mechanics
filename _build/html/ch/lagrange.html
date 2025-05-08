@@ -177,11 +177,11 @@ const thebe_selector_output = ".output, .cell_output"
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Newton Mechanics</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="kinematics.html">1. Kinematics</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="kinematics-point.html">1.3. Point</a></li>
-<li class="toctree-l2"><a class="reference internal" href="kinematics-rigid.html">1.4. Rigid Body</a></li>
-<li class="toctree-l2"><a class="reference internal" href="kinematics-continuum.html">1.5. Continuous Medium</a></li>
-<li class="toctree-l2"><a class="reference internal" href="kinematics-relative.html">1.6. Relative Kinematics</a></li>
-<li class="toctree-l2"><a class="reference internal" href="kinematics-rotations.html">1.7. Rotations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kinematics-point.html">1.1. Point</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kinematics-rigid.html">1.2. Rigid Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kinematics-continuum.html">1.3. Continuous Medium</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kinematics-relative.html">1.4. Relative Kinematics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kinematics-rotations.html">1.5. Rotations</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="actions.html">2. Actions</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -215,9 +215,11 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="lagrange-i-type.html">5.2. Lagrange Equations of the First Kind</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="lagrange-t.html">5.3. Lagrangian functions and time dependence</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="lagrange-t-no.html">5.3.1. Lagrangian function with no explicit dependence on time</a></li>
-<li class="toctree-l3"><a class="reference internal" href="lagrange-t-explicit.html">5.3.2. Lagrangian function with explicit dependence on time</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lagrange-t.html">5.3. Lagrangian functions and time dependence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lagrange-constraints.html">5.4. Constraints classification</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="lagrange-properties.html">5.5. Properties of the Lagrangian approach to classical mechanics</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="lagrange-t-no.html">5.5.1. Lagrangian function with no explicit dependence on time</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lagrange-t-explicit.html">5.5.2. Lagrangian function with explicit dependence on time</a></li>
 </ul>
 </li>
 </ul>
@@ -388,52 +390,20 @@ document.write(`
 <div class="tex2jax_ignore mathjax_ignore section" id="lagrangian-mechanics">
 <span id="classical-mechanics-lagrange"></span><h1><span class="section-number">5. </span>Lagrangian Mechanics<a class="headerlink" href="#lagrangian-mechanics" title="Permalink to this heading">#</a></h1>
 <p>Classical mechanics can be re-formulated starting principles of <a class="reference external" href="https://basics2022.github.io/bbooks-math-miscellanea/ch/calculus-variations/intro.html">calculus of variations</a>, usually referred as <strong>analytical mechanics</strong>. Under some assumptions, that will be discussed during the derivation, analytical mechanics is equivalent to Newton mechanics.</p>
-<p><strong>Symmetric system.</strong> Lagrange mechanics provides a symmetric form of the (linearised?) governing equations, without any additional effort. This could be quite useful, especially for exploiting numerical methods for symmetric (and definite positive, sometimes) matrices.</p>
-<p>Here, the equivalence of analytical mechanics and Newton mechanics is stressed, by means of the derivation of the principle of analytical mechanics starting from the equations of motions derived in Newtonian mechanics, relying on the conservation of mass and the three principles of Newton mechanics. The process is shown in the following sections for <a class="reference internal" href="lagrange-point.html#classical-mechanics-lagrange-point"><span class="std std-ref">point systems</span></a>, <a class="reference internal" href="lagrange-points.html#classical-mechanics-lagrange-points"><span class="std std-ref">systems of points</span></a>, <a class="reference internal" href="lagrange-rigid-body.html#classical-mechanics-lagrange-rigid"><span class="std std-ref">extended rigid bodies</span></a> and follows these steps:</p>
-<ul>
-<li><p><strong>strong form of equations.</strong> Starting point is the dynamical equations of Newton mechanics, here also referred as the strong form of equations</p></li>
-<li><p><strong>weak form of equations.</strong> Strong form are recast in weak form, also referred as <strong>D’Alembert approach</strong> or <strong>virtual work formulation</strong>, multiplying strong form of equations for arbitrary test functions</p></li>
-<li><p><strong>Lagrange equations.</strong> A proper choice of test functions as a function of generalized coordinates, and some manipulation, leads to Lagrange equations. While the choice of test functions depends on the nature of the system, their expression always reads</p>
-<div class="math notranslate nohighlight" id="equation-eq-lagrange-eq">
-<span class="eqno">(5.1)<a class="headerlink" href="#equation-eq-lagrange-eq" title="Permalink to this equation">#</a></span>\[\dfrac{d}{dt}\left( \frac{\partial \mathscr{L}}{\partial \dot{q}^k} \right) - \frac{\partial \mathscr{L}}{\partial q^k} = Q_{q^k} \ ,\]</div>
-<p>being <span class="math notranslate nohighlight">\(q^k(t)\)</span> the generalized coordinates, <span class="math notranslate nohighlight">\(\mathscr{L}\left(\dot{q}^k(t), q?k(t), t \right) = K\left(\dot{q}^k(t), q^k(t), t\right) + U(q^k(t), t)\)</span> the Lagrangian function of the system, defined as the sum of the kinetic energy <span class="math notranslate nohighlight">\(K\)</span> and the potential function <span class="math notranslate nohighlight">\(U = - V\)</span>, being <span class="math notranslate nohighlight">\(V\)</span> the potential energy - s.t. the conservative vector field reads <span class="math notranslate nohighlight">\(\vec{F} = - \nabla V\)</span>, and <span class="math notranslate nohighlight">\(Q_q\)</span> the generalized force.</p>
-</li>
-<li><p>Lagrange equations can be interpreted as a result of a stationary principle of a functional, <span class="math notranslate nohighlight">\(S\)</span>, defined <strong>action functional</strong>, as it can be shown with the tools of <a class="reference external" href="https://basics2022.github.io/bbooks-math-miscellanea/ch/calculus-variations/intro.html">calculus of variations</a>.</p>
-<ul>
-<li><p><strong>If <span class="math notranslate nohighlight">\(Q_{q^{k}} = 0\)</span></strong>, multiplying by <span class="math notranslate nohighlight">\(w^k(t)\)</span>, integrating over time from <span class="math notranslate nohighlight">\(t_0\)</span>, <span class="math notranslate nohighlight">\(t_1\)</span>, and assuming that <span class="math notranslate nohighlight">\(w(t_0) = w(t_1) = 0\)</span>,</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{aligned}
-         0 &amp; = \int_{t_0}^{t_1} w^k (t) \left[ \dfrac{d}{dt}\left( \frac{\partial \mathscr{L}}{\partial \dot{q}^k} \right) - \frac{\partial \mathscr{L}}{\partial q} \right] \, dt = \\
-           &amp; = w^k(t) \left.\left( \frac{\partial \mathscr{L}}{\partial \dot{q}^k} \right)\right|_{t_0}^{t_1} - \int_{t_0}^{t_1} \left[ \dot{w}^k(t) \, \frac{\partial \mathscr{L}}{\partial \dot{q}^k} + w^k(t) \, \frac{\partial \mathscr{L}}{\partial q^k} \right] \, dt \ . \\
-     \end{aligned}\end{split}\]</div>
-<p>If <span class="math notranslate nohighlight">\(w^k(t)\)</span> is equal to zero for <span class="math notranslate nohighlight">\(t\)</span> equal to <span class="math notranslate nohighlight">\(t_0\)</span> and <span class="math notranslate nohighlight">\(t_1\)</span>, first term vanishes</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{aligned}
-           0 &amp; = - \int_{t_0}^{t_1} \left[ \dot{w}^k(t) \, \frac{\partial \mathscr{L}}{\partial \dot{q}^k} + w^k(t) \, \frac{\partial \mathscr{L}}{\partial q^k} \right] \, dt \\
-           &amp; = - \frac{1}{\varepsilon} \int_{t_0}^{t_1} \varepsilon \left[ \dot{w}^k(t) \, \frac{\partial \mathscr{L}}{\partial \dot{q}^k}\left(\dot{q}^l(t), q^l(t), t \right) + w^k(t) \, \frac{\partial \mathscr{L}}{\partial q^k}\left(\dot{q}^l(t), q^l(t), t \right) \right] \, dt = \\
-           &amp; = - \lim_{\varepsilon \rightarrow 0} \left\{ \frac{1}{\varepsilon} \int_{t_0}^{t_1} \varepsilon \left[ \dot{w}^k(t) \, \frac{\partial \mathscr{L}}{\partial \dot{q}^k}\left(\dot{q}^l(t), q^l(t), t \right) + w^k(t) \, \frac{\partial \mathscr{L}}{\partial q^k}\left(\dot{q}^l(t), q^l(t), t \right) \right] \, dt \right\}= \\
-           &amp; = - \lim_{\varepsilon \rightarrow 0} \left\{ \frac{1}{\varepsilon} \int_{t_0}^{t_1} \left[ \mathscr{L}\left(\dot{q}^l(t)+\varepsilon \dot{w}^l(t), q^l(t) + \varepsilon w^l(t), t \right) - \mathscr{L}\left(\dot{q}^l(t), q^l(t), t \right) \right] \, dt + o(\varepsilon) \right\}= \\
-           &amp; = - \delta \int_{t_0}^{t_1} \mathscr{L}(\dot{q}^l(t), q^l(t), t) \, dt =: - \delta S[q^k(t)] \ ,
-       \end{aligned}\end{split}\]</div>
-<p>i.e. Lagrange equations are equivalent to the stationary condition of the action functional</p>
-<div class="math notranslate nohighlight">
-\[S[q^k(t)]:= \int_{t_0}^{t_1} \mathscr{L}\left(\dot{q}^l(t), q^l(t), t\right) \, dt \ .\]</div>
-</li>
-<li><p><strong>If <span class="math notranslate nohighlight">\(Q_k \ne 0\)</span></strong>, the variational principle becomes</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{aligned}
-           0 &amp; = \int_{t_0}^{t_1} w^k (t) \left[ \dfrac{d}{dt}\left( \frac{\partial \mathscr{L}}{\partial \dot{q}^k} \right) - \frac{\partial \mathscr{L}}{\partial q^k} - Q_k \right] \, dt = \\
-             &amp; = w^k(t) \left.\left( \frac{\partial \mathscr{L}}{\partial \dot{q}^k} \right)\right|_{t_0}^{t_1} - \int_{t_0}^{t_1} \left[ \dot{w}^k(t) \, \frac{\partial \mathscr{L}}{\partial \dot{q}^k} + w^k(t) \, \frac{\partial \mathscr{L}}{\partial q^k} \right] \, dt 
-             + \int_{t_0}^{t_1} w^k(t) Q_k \, dt \ . \\
-             &amp; = \dots \\
-             &amp; = - \delta \int_{t_0}^{t_1} \mathscr{L}\left(\dot{q}^l(t), q^l(t), t\right) \, dt + \int_{t_0}^{t_1} \delta q^k(t) Q_k \, dt \ ,
-       \end{aligned}\end{split}\]</div>
-<p>having written the arbitrary test function as <span class="math notranslate nohighlight">\(w^k(t) =: \delta q^k(t)\)</span> to keep in mind that they’re used as variations of functions <span class="math notranslate nohighlight">\(q^k(t)\)</span>.</p>
-<p>The second contribution is usually defined <strong>virtual work</strong> of generalized forces <span class="math notranslate nohighlight">\(Q_k\)</span> - that is equal to the virtual work of actions not included in the potential <span class="math notranslate nohighlight">\(U\left(q^k(t),t\right)\)</span>. For the very nature of variation, it can be thought as the <em>infinitesimal work done by forces for small displacements compatible with constraints, keeping time constant</em>.</p>
-</li>
-</ul>
-</li>
-</ul>
+<p><a class="reference internal" href="lagrange-ii-type.html#classical-mechanics-lagrange-ii-type"><span class="std std-ref"><strong>Lagrange equations - II kind</strong></span></a>. Lagrange equations of the II kind provides <strong>pure equations of motion</strong>, in which constraint forces do not appear. Given a system with <span class="math notranslate nohighlight">\(N\)</span> degrees of freedom, that can be described with <span class="math notranslate nohighlight">\(N\)</span> independent generalized coordinates <span class="math notranslate nohighlight">\(\{ q^k \}_{k=1:N}\)</span>, Lagrange equations of the II kind are a set of <span class="math notranslate nohighlight">\(N\)</span> <strong><span class="math notranslate nohighlight">\(2^{nd}\)</span> order ODEs</strong> in the generalized coordinates.</p>
+<p>The equivalence with Newton’s approach to classical mechanics is discussed in detail for different kind of systems (points, rigid bodies,…): starting from Newton’s dynamical equations of motion (strong form), D’Alembert approach (weak form) is derived, and Lagrange equations are derived from that with a proper choice of test functions. Lagrange equations are then recast as the stationariety condition of a functional, providing a variational approach to classical mechanics.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Lagrange equations of the II kind could be the best approach for small-dimensional problems, when there’s no interest in evaluating constraint reactions.</p>
+</div>
+<p><a class="reference internal" href="lagrange-i-type.html#classical-mechanics-lagrange-i-type"><span class="std std-ref"><strong>Lagrange equations - I kind</strong></span></a>. Lagrange equations of the I kind provides a set of <strong>DAEs</strong>, explicitly including constraints as independent equations and adding their effects - their constraint reactions - in the dynamical equations of the degrees of freedom as <strong>Lagrange multipliers</strong>.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Lagrange equations of the I kind could be the best approach for numerical approach to generic mechanical systems, as it is a less problem-dependent approach, without any case-dependent manipulation.</p>
+</div>
+<p><a class="reference internal" href="lagrange-t-explicit.html#classical-mechanics-lagrange-time-dependent"><span class="std std-ref"><strong>Lagrangian mechanics, with expliicitly time-dependent Lagrangian function</strong></span></a>. Energy conservation is related to explicit time independent of its Lagrangian function, and can be related - beside the absence of non-conservative actions - to the absence of any time-dependent external input, or the choice of an inertial reference frame. Consequence of explicit time dependence in the Lagrangian functions are discussed, with examples.</p>
+<p><a class="reference internal" href="lagrange-constraints.html#classical-mechanics-lagrange-constraints"><span class="std std-ref"><strong>Constraints in Lagrangian mechanics</strong></span></a>. Constraints in Lagrangian mechanics are discussed: holonomic and non-holonomic are discussed, and an approach to ideal non-holonomic (semi-linear?) constraints in Lagrange mechanics is outlined.</p>
+<p><a class="reference internal" href="lagrange-properties.html#classical-mechanics-lagrange-properties"><span class="std std-ref"><strong>Properties</strong></span></a>. Some properties of Lagrangian approach to mechanics are discussed. As an example, Lagrange mechanics provides a <strong>symmetric form</strong> of the (linearised?) governing equations, without any additional effort. This could be quite useful, especially for exploiting numerical methods for symmetric (and definite positive, sometimes) matrices.</p>
 <!--
 Riformulazione della meccanica di Newton:
 - **forma debole** delle equazioni: approccio di D'Alembert, lavori virtuali

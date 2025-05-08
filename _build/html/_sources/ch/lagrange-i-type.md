@@ -1,4 +1,4 @@
-(classical-mechanics:lagrange:ii-type)=
+(classical-mechanics:lagrange:i-type)=
 # Lagrange Equations of the First Kind
 
 Explicitly making appear constraint forces, due to constraints

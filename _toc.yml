@@ -48,6 +48,8 @@ parts:
       - file: ch/lagrange-rigid-body
     - file: ch/lagrange-i-type
     - file: ch/lagrange-t
+    - file: ch/lagrange-constraints
+    - file: ch/lagrange-properties
       sections:
       - file: ch/lagrange-t-no
       - file: ch/lagrange-t-explicit
