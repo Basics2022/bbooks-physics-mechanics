@@ -106,13 +106,43 @@ Q_i (\mathbf{q})
 $$\begin{aligned}
     M_{ij}(\overline{\mathbf{q}}) \ddot{q}'_j + \left[ - \partial_{ij} U(\overline{\mathbf{q}}) - \partial_j Q_i(\overline{\mathbf{q}}) \right] q'_j  & = 0 \\
     \mathbf{M}(\overline{\mathbf{q}}) \ddot{\mathbf{q}}' + \left[ - \nabla \nabla U(\overline{\mathbf{q}}) \right] \mathbf{q}' & = \nabla \mathbf{Q}^T (\overline{\mathbf{q}}) \mathbf{q}' \\
-    \mathbf{M}(\overline{\mathbf{q}}) \ddot{\mathbf{q}}' + \mathbf{K}(\overline{\mathbf{q}}) \mathbf{q}' = \nabla \mathbf{Q}^T(\overline{\mathbf{q}})\mathbf{q}' \ .
+    \mathbf{M}(\overline{\mathbf{q}}) \ddot{\mathbf{q}}' + \mathbf{K}(\overline{\mathbf{q}}) \mathbf{q}' & = \nabla \mathbf{Q}^T(\overline{\mathbf{q}})\mathbf{q}' \ .
 \end{aligned}$$
 
 **Matrices are symmetric.** Mass matrix is symmetric by construction, as already proved. Stiffness matrix is symmetric as well, due to Schwarz's theorem, as its the Hessian of a scalar function, $\left[ \nabla \nabla U \right]_{ij} = \partial_{ij} U$
 
 **Matrices are (semi)-definite positive.** Mass matrix is definite positive by definition, $\mathbf{M} > 0$, as already proved above as the kinetic energy is a non-negative scalar physical quantity. Stiffness matrix is definite positive if the **equilibrium $\overline{\mathbf{q}}$ is stable**: $\nabla \nabla U(\overline{\mathbf{q}}) < 0$ implies $\mathbf{K} > 0$.
 
+**Spectrum of a stable system.** **todo** *add a link to structure mechanics in continuum mechanics, and modal approach*
+
+
 (classical-mechanics:lagrange:properties:lagrange-equations:i)=
 ### Lagrange equations of the I kind
+
+Recasting the expression of the dynamical equations of an "uncostrained" system (or with some constraints treated implicitly with Lagrange equations of II kind),
+
+$$\mathbf{M}(\mathbf{q}) \ddot{\mathbf{q}} = \mathbf{f}(\mathbf{q}, \dot{\mathbf{q}}) \ ,$$
+
+and then adding constraints - at least holonomic or semi-linear non-holonomic constraints - and the costraint reactions, the system becomes
+
+$$\begin{aligned}
+  & \mathbf{M}(\mathbf{q}) \ddot{\mathbf{q}} = \mathbf{f}(\mathbf{q}, \dot{\mathbf{q}}) + \nabla_\mathbf{q} \mathbf{g}(\mathbf{q}) \, \mathbf{s} \\
+  & \mathbf{g}(\mathbf{q}, \dot{\mathbf{q}}) = \mathbf{0}
+\end{aligned}$$
+
+with either $\mathbf{g}(\mathbf{q}) = \mathbf{0}$ for holonomic time-independent constraints, or $\mathbf{g}(\mathbf{q}, \dot{\mathbf{q}}) = \mathbf{a}(\mathbf{q}) \dot{\mathbf{q}} = \mathbf{0}$ for semi-linear non-holonomic time-independent constraints, with the forcing term $\mathbf{f}$ containing the non-conservative forces $\mathbf{Q}$ (or at least contributions not included in the potential $U(\mathbf{q})$), the conservative forces $\nabla_{\mathbf{q}} U(\mathbf{q})$, and the (*quadratic!* Important for neglecting them in linearization) contributions from time derivative of kinetic energy,
+
+$$\mathbf{f}(\mathbf{q}, \dot{\mathbf{q}}) = \mathbf{Q} + \nabla_{\mathbf{q}} U(\mathbf{q}) - \dot{\mathbf{q}}^T \nabla_{\mathbf{q}} \left( \mathbf{M}(\mathbf{q}) \dot{\mathbf{q}} \right) + \frac{1}{2} \nabla_{\mathbf{q}} \left( \dot{\mathbf{q}}^T \mathbf{M}(\mathbf{q}) \dot{\mathbf{q}} \right) \ .$$
+
+**Linearized equations** become
+
+$$\begin{aligned}
+ & \mathbf{M}(\overline{\mathbf{q}}) \ddot{\mathbf{q}}' + \mathbf{K}(\overline{\mathbf{q}}) \mathbf{q}' = \mathbf{Q}' + \nabla_{\mathbf{q}} \mathbf{g}(\overline{\mathbf{q}}) \mathbf{s}' + \mathbf{q}' \nabla_{\mathbf{q}} \nabla_{\mathbf{q}} \mathbf{g}(\overline{\mathbf{q}}) \mathbf{s} \\
+ & \nabla_{\dot{\mathbf{q}}}^T \mathbf{g}(\overline{\mathbf{q}}, \mathbf{0}) \, \dot{\mathbf{q}}' + \nabla_{\mathbf{q}}^T \mathbf{g}(\overline{\mathbf{q}}, \mathbf{0}) \, \mathbf{q}' = \mathbf{0}
+\end{aligned}$$
+
+
+
+
+
 
