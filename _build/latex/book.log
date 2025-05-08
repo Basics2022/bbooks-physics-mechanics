@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Debian) (preloaded format=xelatex 2024.9.16)  8 MAY 2025 17:38
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Debian) (preloaded format=xelatex 2024.9.16)  8 MAY 2025 18:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1896,21 +1896,21 @@ LaTeX Info: Redefining \rmfamily on input line 3008.
 LaTeX Info: Redefining \sffamily on input line 3008.
 LaTeX Info: Redefining \ttfamily on input line 3008.
  [56]
-LaTeX Info: Redefining \rmfamily on input line 3073.
-LaTeX Info: Redefining \sffamily on input line 3073.
-LaTeX Info: Redefining \ttfamily on input line 3073.
+LaTeX Info: Redefining \rmfamily on input line 3086.
+LaTeX Info: Redefining \sffamily on input line 3086.
+LaTeX Info: Redefining \ttfamily on input line 3086.
  [57]
-LaTeX Info: Redefining \rmfamily on input line 3073.
-LaTeX Info: Redefining \sffamily on input line 3073.
-LaTeX Info: Redefining \ttfamily on input line 3073.
- [58
+LaTeX Info: Redefining \rmfamily on input line 3102.
+LaTeX Info: Redefining \sffamily on input line 3102.
+LaTeX Info: Redefining \ttfamily on input line 3102.
+ [58]
+Chapter 6.
+[59
 
 ]
-Chapter 6.
-[59]
-LaTeX Info: Redefining \rmfamily on input line 3127.
-LaTeX Info: Redefining \sffamily on input line 3127.
-LaTeX Info: Redefining \ttfamily on input line 3127.
+LaTeX Info: Redefining \rmfamily on input line 3156.
+LaTeX Info: Redefining \sffamily on input line 3156.
+LaTeX Info: Redefining \ttfamily on input line 3156.
  [60
 
 ] [61] [62]
@@ -1918,41 +1918,41 @@ Chapter 7.
 [63
 
 ]
-LaTeX Info: Redefining \rmfamily on input line 3280.
-LaTeX Info: Redefining \sffamily on input line 3280.
-LaTeX Info: Redefining \ttfamily on input line 3280.
+LaTeX Info: Redefining \rmfamily on input line 3309.
+LaTeX Info: Redefining \sffamily on input line 3309.
+LaTeX Info: Redefining \ttfamily on input line 3309.
  [64]
-LaTeX Info: Redefining \rmfamily on input line 3361.
-LaTeX Info: Redefining \sffamily on input line 3361.
-LaTeX Info: Redefining \ttfamily on input line 3361.
+LaTeX Info: Redefining \rmfamily on input line 3390.
+LaTeX Info: Redefining \sffamily on input line 3390.
+LaTeX Info: Redefining \ttfamily on input line 3390.
  [65]
-LaTeX Info: Redefining \rmfamily on input line 3438.
-LaTeX Info: Redefining \sffamily on input line 3438.
-LaTeX Info: Redefining \ttfamily on input line 3438.
+LaTeX Info: Redefining \rmfamily on input line 3467.
+LaTeX Info: Redefining \sffamily on input line 3467.
+LaTeX Info: Redefining \ttfamily on input line 3467.
  [66]
-LaTeX Info: Redefining \rmfamily on input line 3459.
-LaTeX Info: Redefining \sffamily on input line 3459.
-LaTeX Info: Redefining \ttfamily on input line 3459.
+LaTeX Info: Redefining \rmfamily on input line 3488.
+LaTeX Info: Redefining \sffamily on input line 3488.
+LaTeX Info: Redefining \ttfamily on input line 3488.
  [67]
-LaTeX Info: Redefining \rmfamily on input line 3459.
-LaTeX Info: Redefining \sffamily on input line 3459.
-LaTeX Info: Redefining \ttfamily on input line 3459.
+LaTeX Info: Redefining \rmfamily on input line 3488.
+LaTeX Info: Redefining \sffamily on input line 3488.
+LaTeX Info: Redefining \ttfamily on input line 3488.
  [68
 
 ]
 Chapter 8.
 [69]
-LaTeX Info: Redefining \rmfamily on input line 3545.
-LaTeX Info: Redefining \sffamily on input line 3545.
-LaTeX Info: Redefining \ttfamily on input line 3545.
+LaTeX Info: Redefining \rmfamily on input line 3574.
+LaTeX Info: Redefining \sffamily on input line 3574.
+LaTeX Info: Redefining \ttfamily on input line 3574.
  [70]
-Underfull \hbox (badness 10000) in paragraph at lines 3566--3567
+Underfull \hbox (badness 10000) in paragraph at lines 3595--3596
 []\TU/FreeMono(0)/m/n/10 holonomic-constraint \TU/FreeSerif(0)/m/n/10 (\TU/Free
 Serif(0)/m/it/10 ch/lagrange-constraints\TU/FreeSerif(0)/m/n/10 ),
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3569--3570
+Underfull \hbox (badness 10000) in paragraph at lines 3598--3599
 []\TU/FreeMono(0)/m/n/10 non-holonomic-constraint \TU/FreeSerif(0)/m/n/10 (\TU/
 FreeSerif(0)/m/it/10 ch/lagrange-
  []
@@ -1996,22 +1996,22 @@ braces):
 >  {english/babelname}  =>  {american}
 >  {english/localnumeral}  =>  {polyglossia@C@localnumeral}
 >  {english/Localnumeral}  =>  {polyglossia@C@localnumeral}.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 3577.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 3577.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 3606.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 3606.
  (./book.aux
 LaTeX Info: Redefining \rmfamily on input line 19.
 LaTeX Info: Redefining \sffamily on input line 19.
 LaTeX Info: Redefining \ttfamily on input line 19.
 )
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 3577.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 3577.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 3606.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 3606.
 
 Package rerunfilecheck Info: File `book.out' has not changed.
-(rerunfilecheck)             Checksum: 0B16429CE571EEA3E86EFB68E1A669D5;8934.
+(rerunfilecheck)             Checksum: 856D65008A638CAD14C4CF1E9C6EED77;8933.
  ) 
 Here is how much of TeX's memory you used:
  42321 strings out of 481789
- 957015 string characters out of 5937152
+ 957101 string characters out of 5937152
  1684963 words of memory out of 5000000
  58502 multiletter control sequences out of 15000+600000
  540120 words of font info for 123 fonts, out of 8000000 for 9000

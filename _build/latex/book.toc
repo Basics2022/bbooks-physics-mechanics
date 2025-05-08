@@ -101,7 +101,7 @@
 \contentsline {subsection}{\numberline {5.5.1}Kinetic energy \(K\) and potential function \(U\)}{55}{subsection.5.5.1}%
 \contentsline {subsection}{\numberline {5.5.2}Lagrange equations}{56}{subsection.5.5.2}%
 \contentsline {subsubsection}{Lagrange equations of the II kind}{57}{subsubsection*.33}%
-\contentsline {subsubsection}{Lagrange equations of the II kind}{57}{subsubsection*.34}%
+\contentsline {subsubsection}{Lagrange equations of the I kind}{57}{subsubsection*.34}%
 \contentsline {chapter}{\numberline {6}Hamiltonian Mechanics}{59}{chapter.6}%
 \contentsline {part}{III\hspace {1em}Exercises}{61}{part.3}%
 \contentsline {chapter}{\numberline {7}Dynamics}{63}{chapter.7}%
