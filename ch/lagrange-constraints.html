@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lagrangian function as an explicit function of time &#8212; Classical Mechanics</title>
+    <title>5.4. Constraints classification &#8212; Classical Mechanics</title>
   
   
   
@@ -66,10 +66,12 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'ch/lagrage-t-explicit';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'ch/lagrange-constraints';</script>
     <link rel="shortcut icon" href="../_static/favicon.svg"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="5.5. Properties of the Lagrangian approach to classical mechanics" href="lagrange-properties.html" />
+    <link rel="prev" title="5.3. Lagrangian functions and time dependence" href="lagrange-t.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -175,11 +177,11 @@ const thebe_selector_output = ".output, .cell_output"
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Newton Mechanics</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="kinematics.html">1. Kinematics</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="kinematics-point.html">1.3. Point</a></li>
-<li class="toctree-l2"><a class="reference internal" href="kinematics-rigid.html">1.4. Rigid Body</a></li>
-<li class="toctree-l2"><a class="reference internal" href="kinematics-continuum.html">1.5. Continuous Medium</a></li>
-<li class="toctree-l2"><a class="reference internal" href="kinematics-relative.html">1.6. Relative Kinematics</a></li>
-<li class="toctree-l2"><a class="reference internal" href="kinematics-rotations.html">1.7. Rotations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kinematics-point.html">1.1. Point</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kinematics-rigid.html">1.2. Rigid Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kinematics-continuum.html">1.3. Continuous Medium</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kinematics-relative.html">1.4. Relative Kinematics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kinematics-rotations.html">1.5. Rotations</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="actions.html">2. Actions</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -204,8 +206,8 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Analytical Mechanics</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="lagrange.html">5. Lagrangian Mechanics</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="lagrange.html">5. Lagrangian Mechanics</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2 has-children"><a class="reference internal" href="lagrange-ii-type.html">5.1. Lagrange Equations of the Second Kind</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="lagrange-point.html">5.1.1. Point</a></li>
 <li class="toctree-l3"><a class="reference internal" href="lagrange-points.html">5.1.2. System of points</a></li>
@@ -213,6 +215,13 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="lagrange-i-type.html">5.2. Lagrange Equations of the First Kind</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lagrange-t.html">5.3. Lagrangian functions and time dependence</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">5.4. Constraints classification</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="lagrange-properties.html">5.5. Properties of the Lagrangian approach to classical mechanics</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="lagrange-t-no.html">5.5.1. Lagrangian function with no explicit dependence on time</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lagrange-t-explicit.html">5.5.2. Lagrangian function with explicit dependence on time</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="hamilton.html">6. Hamiltonian Mechanics</a></li>
@@ -275,7 +284,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/ch/lagrage-t-explicit.md" target="_blank"
+      <li><a href="../_sources/ch/lagrange-constraints.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -346,7 +355,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -357,11 +368,24 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Lagrangian function as an explicit function of time</h1>
+    <h1>Constraints classification</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#holonomic-vs-non-holonomic-constraints">5.4.1. Holonomic vs. non-holonomic constraints</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#classical-mechanics-lagrange-constraints-ideal">5.4.2. Ideal constraints</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#classical-mechanics-lagrange-constraints-ideal-holonomic">5.4.2.1. Ideal holonomic constraints</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#classical-mechanics-lagrange-constraints-ideal-non-holonomic">5.4.2.2. Ideal non-holonomic constraints</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -371,11 +395,93 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <div class="tex2jax_ignore mathjax_ignore section" id="lagrangian-function-as-an-explicit-function-of-time">
-<span id="classical-mechanics-lagrange-time-dependent"></span><h1>Lagrangian function as an explicit function of time<a class="headerlink" href="#lagrangian-function-as-an-explicit-function-of-time" title="Permalink to this heading">#</a></h1>
-<p>Some problems may have a Lagrangian function with an explicit dependence on time,</p>
+  <div class="tex2jax_ignore mathjax_ignore section" id="constraints-classification">
+<span id="classical-mechanics-lagrange-constraints"></span><h1><span class="section-number">5.4. </span>Constraints classification<a class="headerlink" href="#constraints-classification" title="Permalink to this heading">#</a></h1>
+<div class="section" id="holonomic-vs-non-holonomic-constraints">
+<h2><span class="section-number">5.4.1. </span>Holonomic vs. non-holonomic constraints<a class="headerlink" href="#holonomic-vs-non-holonomic-constraints" title="Permalink to this heading">#</a></h2>
+<div class="proof definition admonition" id="holonomic-constraint">
+<p class="admonition-title"><span class="caption-number">Definition 5.1 </span> (Holonomic constraint)</p>
+<div class="definition-content section" id="proof-content">
+<p>A holonomic constraints can be written in a form</p>
 <div class="math notranslate nohighlight">
-\[\mathsc{L}(\dot{q}^k(t),q^k(t),t) \ .\]</div>
+\[g(q^k(t), t) = 0 \ .\]</div>
+</div>
+</div><div class="proof definition admonition" id="non-holonomic-constraint">
+<p class="admonition-title"><span class="caption-number">Definition 5.2 </span> (Non-holonomic constraint)</p>
+<div class="definition-content section" id="proof-content">
+<p>Every constraint that is not holonomic, is non-holonomic. (<strong>wow!</strong>)</p>
+</div>
+</div><p><strong>todo</strong> <em>Add some examples…; even some constraints that looks like a non-holonomic constraint that are holonomic: “integrable constraints”, Pfaffian method?…</em></p>
+</div>
+<div class="section" id="classical-mechanics-lagrange-constraints-ideal">
+<span id="ideal-constraints"></span><h2><span class="section-number">5.4.2. </span>Ideal constraints<a class="headerlink" href="#classical-mechanics-lagrange-constraints-ideal" title="Permalink to this heading">#</a></h2>
+<div class="proof definition admonition" id="definition-2">
+<p class="admonition-title"><span class="caption-number">Definition 5.3 </span> (Ideal constraint)</p>
+<div class="definition-content section" id="proof-content">
+<p>An ideal constraint produces no net power.</p>
+</div>
+</div><p>Given the generalized actions <span class="math notranslate nohighlight">\(\mathbf{f}_c\)</span> introduced in the dynamical systems by constraints,</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{M} \ddot{\mathbf{q}} = \mathbf{f} + \mathbf{f}_c \ ,\]</div>
+<p>power of ideal constraints reads</p>
+<div class="math notranslate nohighlight">
+\[\dot{\mathbf{q}}^T \mathbf{f}_c = 0 \ .\]</div>
+<div class="section" id="classical-mechanics-lagrange-constraints-ideal-holonomic">
+<span id="ideal-holonomic-constraints"></span><h3><span class="section-number">5.4.2.1. </span>Ideal holonomic constraints<a class="headerlink" href="#classical-mechanics-lagrange-constraints-ideal-holonomic" title="Permalink to this heading">#</a></h3>
+<p>If constraints don’t have explicit dependence (what happens if there’s explicit <a class="reference internal" href="lagrange-t-explicit.html#classical-mechanics-lagrange-time-dependent"><span class="std std-ref">time dependence</span></a>? Treat in the proper section…) from time <span class="math notranslate nohighlight">\(t\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  &amp; \mathbf{M} \ddot{\mathbf{q}} = \mathbf{f} + \mathbf{f}_c \\
+  &amp; \mathbf{g}(\mathbf{q}(t)) = \mathbf{0}
+\end{aligned}\end{split}\]</div>
+<p>with <span class="math notranslate nohighlight">\(\mathbf{q} \in \mathbb{R}^N\)</span>, <span class="math notranslate nohighlight">\(\mathbf{g} \in \mathbb{R}^C\)</span>.</p>
+<p><strong>Power of ideal constraint.</strong> Power of ideal constraints is zero, and this condition provides the most general form of constraint reactions <span class="math notranslate nohighlight">\(\mathbf{f}_c\)</span> as a linear combination of the gradient of the constraints, and a set of well-defined (<em>extra conditions?</em>) and determined DAEs, with equal number of equations and unknowns. Power of contraint reactions of ideal constrains is zero,</p>
+<div class="math notranslate nohighlight">
+\[0 = \dot{\mathbf{q}}^T \mathbf{f}_c\]</div>
+<p>Time derivative of the constraint equation reads <span class="math notranslate nohighlight">\(0 = g_i (q^k) = \dot{q}^k \frac{\partial g_i}{\partial q^k}\)</span>, and thus for every <span class="math notranslate nohighlight">\(\mathbf{s} \in \mathbb{R}^C\)</span>,</p>
+<div class="math notranslate nohighlight" id="equation-eq-constraint-reaction-holonomic">
+<span class="eqno">(5.6)<a class="headerlink" href="#equation-eq-constraint-reaction-holonomic" title="Permalink to this equation">#</a></span>\[0 = \dot{\mathbf{q}}^T \nabla_{\mathbf{q}} \mathbf{g} \, \mathbf{s} \ ,\]</div>
+<p>and thus constraint reactions can be written as a linear combination of the (columns of the) gradient of the constraint equation w.r.t. the generalized coordiantes,</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{f}_c = \nabla_\mathbf{q} \mathbf{g} \, \mathbf{s}\]</div>
+<p>or</p>
+<div class="math notranslate nohighlight">
+\[\begin{aligned}
+  \mathbf{f}_c = \nabla_{\mathbf{q}} g_i \, s_i \qquad , \qquad
+  f_{c,k}      = \dfrac{\partial\mathbf{g}^T}{\partial q^k} \mathbf{s} = \dfrac{\partial g^i}{\partial q^k} \, s_i \ .
+\end{aligned}\]</div>
+<p><strong>Determined set of DAEs.</strong> Introducing the expression <a class="reference internal" href="#equation-eq-constraint-reaction-holonomic">(5.6)</a> of the constraint reactions in the original set of DAEs, the set of equations governing the constrained system reads</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  &amp; \mathbf{M} \ddot{\mathbf{q}} = \mathbf{f} + \nabla_{\mathbf{q}} \mathbf{g} \, \mathbf{s} \\
+  &amp; \mathbf{g}(\mathbf{q}) = \mathbf{0}
+\end{aligned}\end{split}\]</div>
+</div>
+<div class="section" id="classical-mechanics-lagrange-constraints-ideal-non-holonomic">
+<span id="ideal-non-holonomic-constraints"></span><h3><span class="section-number">5.4.2.2. </span>Ideal non-holonomic constraints<a class="headerlink" href="#classical-mechanics-lagrange-constraints-ideal-non-holonomic" title="Permalink to this heading">#</a></h3>
+<p>The equations of a constrained system with non-holonomic constraints in semi-linear form and no explicit time dependence reads</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  &amp; \mathbf{M} \ddot{\mathbf{q}} = \mathbf{f} + \mathbf{f}_c \\
+  &amp; \mathbf{a}(\mathbf{q}(t)) \, \dot{\mathbf{q}}(t) = \mathbf{0}
+\end{aligned}\end{split}\]</div>
+<p><strong>Power of ideal constraints.</strong> As done in the <a class="reference internal" href="#classical-mechanics-lagrange-constraints-ideal-holonomic"><span class="std std-ref">section about holonomic constraints</span></a>, the condition of zero power of ideal constraints provides the most general form of constraint reactions <span class="math notranslate nohighlight">\(\mathbf{f}_c\)</span> as a linear combination of the gradient of the constraints, and thus a determined set of DAEs.</p>
+<div class="math notranslate nohighlight">
+\[0 = \dot{\mathbf{q}}^T \, \mathbf{f}_c\]</div>
+<p>compared with the (transpose of the) non-holonomic constraint,</p>
+<div class="math notranslate nohighlight">
+\[0 = \dot{\mathbf{q}}^T \mathbf{a}^T(\mathbf{q}) \mathbf{s}  \ , \qquad \forall \mathbf{s} \in \mathbb{R}^C\]</div>
+<p>and thus constraint reactions can be written as the linear combination of the columns of the transpose of matrix <span class="math notranslate nohighlight">\(\mathbf{a}(\mathbf{q})\)</span>,</p>
+<div class="math notranslate nohighlight" id="equation-eq-constraint-reaction-non-holonomic">
+<span class="eqno">(5.7)<a class="headerlink" href="#equation-eq-constraint-reaction-non-holonomic" title="Permalink to this equation">#</a></span>\[\mathbf{f} = \mathbf{a}^T(\mathbf{q}) \mathbf{s} \ .\]</div>
+<p><strong>Determined set of DAEs.</strong> Introducing the expression <a class="reference internal" href="#equation-eq-constraint-reaction-non-holonomic">(5.7)</a> of the constraint reactions in the original set of DAEs, the determined set of equations governing the constrained system reads</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  &amp; \mathbf{M} \ddot{\mathbf{q}} = \mathbf{f} + \mathbf{a}^T(\mathbf{q}) \, \mathbf{s} \\
+  &amp; \mathbf{a}(\mathbf{q}) \, \dot{\mathbf{q}}(t) = \mathbf{0}
+\end{aligned}\end{split}\]</div>
+</div>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -408,12 +514,49 @@ document.write(`
                 <footer class="prev-next-footer">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="lagrange-t.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">5.3. </span>Lagrangian functions and time dependence</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="lagrange-properties.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">5.5. </span>Properties of the Lagrangian approach to classical mechanics</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#holonomic-vs-non-holonomic-constraints">5.4.1. Holonomic vs. non-holonomic constraints</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#classical-mechanics-lagrange-constraints-ideal">5.4.2. Ideal constraints</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#classical-mechanics-lagrange-constraints-ideal-holonomic">5.4.2.1. Ideal holonomic constraints</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#classical-mechanics-lagrange-constraints-ideal-non-holonomic">5.4.2.2. Ideal non-holonomic constraints</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

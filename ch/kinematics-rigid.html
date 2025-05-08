@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>1.4. Rigid Body &#8212; Classical Mechanics</title>
+    <title>1.2. Rigid Body &#8212; Classical Mechanics</title>
   
   
   
@@ -70,8 +70,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../_static/favicon.svg"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="1.5. Continuous Medium" href="kinematics-continuum.html" />
-    <link rel="prev" title="1.3. Point" href="kinematics-point.html" />
+    <link rel="next" title="1.3. Continuous Medium" href="kinematics-continuum.html" />
+    <link rel="prev" title="1.1. Point" href="kinematics-point.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -177,11 +177,11 @@ const thebe_selector_output = ".output, .cell_output"
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Newton Mechanics</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="kinematics.html">1. Kinematics</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="kinematics-point.html">1.3. Point</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">1.4. Rigid Body</a></li>
-<li class="toctree-l2"><a class="reference internal" href="kinematics-continuum.html">1.5. Continuous Medium</a></li>
-<li class="toctree-l2"><a class="reference internal" href="kinematics-relative.html">1.6. Relative Kinematics</a></li>
-<li class="toctree-l2"><a class="reference internal" href="kinematics-rotations.html">1.7. Rotations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kinematics-point.html">1.1. Point</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">1.2. Rigid Body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kinematics-continuum.html">1.3. Continuous Medium</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kinematics-relative.html">1.4. Relative Kinematics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kinematics-rotations.html">1.5. Rotations</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="actions.html">2. Actions</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -215,9 +215,11 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="lagrange-i-type.html">5.2. Lagrange Equations of the First Kind</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="lagrange-t.html">5.3. Lagrangian functions and time dependence</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="lagrange-t-no.html">5.3.1. Lagrangian function with no explicit dependence on time</a></li>
-<li class="toctree-l3"><a class="reference internal" href="lagrange-t-explicit.html">5.3.2. Lagrangian function with explicit dependence on time</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lagrange-t.html">5.3. Lagrangian functions and time dependence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lagrange-constraints.html">5.4. Constraints classification</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="lagrange-properties.html">5.5. Properties of the Lagrangian approach to classical mechanics</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="lagrange-t-no.html">5.5.1. Lagrangian function with no explicit dependence on time</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lagrange-t-explicit.html">5.5.2. Lagrangian function with explicit dependence on time</a></li>
 </ul>
 </li>
 </ul>
@@ -376,7 +378,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rigid-motion">1.4.1. Rigid motion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rigid-motion">1.2.1. Rigid motion</a></li>
 </ul>
             </nav>
         </div>
@@ -389,9 +391,9 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <div class="tex2jax_ignore mathjax_ignore section" id="rigid-body">
-<span id="classical-mechanics-kinematics-rigid-body"></span><h1><span class="section-number">1.4. </span>Rigid Body<a class="headerlink" href="#rigid-body" title="Permalink to this heading">#</a></h1>
+<span id="classical-mechanics-kinematics-rigid-body"></span><h1><span class="section-number">1.2. </span>Rigid Body<a class="headerlink" href="#rigid-body" title="Permalink to this heading">#</a></h1>
 <div class="section" id="rigid-motion">
-<h2><span class="section-number">1.4.1. </span>Rigid motion<a class="headerlink" href="#rigid-motion" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">1.2.1. </span>Rigid motion<a class="headerlink" href="#rigid-motion" title="Permalink to this heading">#</a></h2>
 <p>Rigid motion preserves distance between any pair of points, and thus angles. The motion of two material points <span class="math notranslate nohighlight">\(P\)</span>, <span class="math notranslate nohighlight">\(Q\)</span> performing a rigid motion obeys</p>
 <div class="math notranslate nohighlight" id="equation-eq-kin-rigid-vel">
 <span class="eqno">(1.1)<a class="headerlink" href="#equation-eq-kin-rigid-vel" title="Permalink to this equation">#</a></span>\[\vec{v}_P - \vec{v}_Q = \vec{\omega} \times (P - Q) \ ,\]</div>
@@ -487,7 +489,7 @@ Time derivative of the relation <a class="reference internal" href="#equation-eq
   &amp; = \vec{v}_Q + \vec{\omega} \times (P-Q)
 \end{aligned}\end{split}\]</div>
 <p><strong>Acceleration and Angular acceleration.</strong>
-Time derivatives of the relation {eq}`eq:rigid:vel} gives</p>
+Time derivatives of the relation <a class="reference internal" href="#equation-eq-rigid-vel">(1.6)</a> gives</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
 \vec{a}_P 
@@ -592,7 +594,7 @@ $$\begin{aligned}
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">1.3. </span>Point</p>
+        <p class="prev-next-title"><span class="section-number">1.1. </span>Point</p>
       </div>
     </a>
     <a class="right-next"
@@ -600,7 +602,7 @@ $$\begin{aligned}
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">1.5. </span>Continuous Medium</p>
+        <p class="prev-next-title"><span class="section-number">1.3. </span>Continuous Medium</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -619,7 +621,7 @@ $$\begin{aligned}
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rigid-motion">1.4.1. Rigid motion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rigid-motion">1.2.1. Rigid motion</a></li>
 </ul>
   </nav></div>
 
