@@ -64,6 +64,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'ch/lagrange-properties';</script>
     <link rel="shortcut icon" href="../_static/favicon.svg"/>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -353,7 +355,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -369,6 +373,19 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kinetic-energy-k-and-potential-function-u">5.5.1. Kinetic energy <span class="math notranslate nohighlight">\(K\)</span> and potential function <span class="math notranslate nohighlight">\(U\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lagrange-equations">5.5.2. Lagrange equations</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lagrange-equations-of-the-ii-kind">5.5.2.1. Lagrange equations of the II kind</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lagrange-equations-of-the-i-kind">5.5.2.2. Lagrange equations of the I kind</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -380,6 +397,108 @@ document.write(`
                   
   <div class="tex2jax_ignore mathjax_ignore section" id="properties-of-the-lagrangian-approach-to-classical-mechanics">
 <span id="classical-mechanics-lagrange-properties"></span><h1><span class="section-number">5.5. </span>Properties of the Lagrangian approach to classical mechanics<a class="headerlink" href="#properties-of-the-lagrangian-approach-to-classical-mechanics" title="Permalink to this heading">#</a></h1>
+<div class="section" id="kinetic-energy-k-and-potential-function-u">
+<span id="classical-mechanics-lagrange-properties-kinetic-energy"></span><h2><span class="section-number">5.5.1. </span>Kinetic energy <span class="math notranslate nohighlight">\(K\)</span> and potential function <span class="math notranslate nohighlight">\(U\)</span><a class="headerlink" href="#kinetic-energy-k-and-potential-function-u" title="Permalink to this heading">#</a></h2>
+<p>Kinetic energy of each component is a symmetric function of the velocity of its reference point <span class="math notranslate nohighlight">\(P\)</span> and its angular velocity <span class="math notranslate nohighlight">\(\vec{\omega}\)</span>, as shown as an example by the expression of the kinetic energy of a rigid body,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  K_P 
+  &amp; = \dfrac{1}{2} \vec{v}_P \cdot \vec{Q} + \dfrac{1}{2} \vec{\omega} \cdot \vec{L}_P \\
+  &amp; = \dfrac{1}{2} \vec{v}_P \cdot \left[ m \vec{v}_P + \mathbb{S}_P \cdot \vec{\omega} \right] 
+    + \dfrac{1}{2} \vec{\omega} \cdot \left[ \mathbb{S}_P^T \cdot \vec{v}_P + \mathbb{I}_P \cdot \vec{\omega} \right] \ ,
+\end{aligned}\end{split}\]</div>
+<p>as the tensor of inertia <span class="math notranslate nohighlight">\(\mathbb{I}_P\)</span> is symmetric, i.e. <span class="math notranslate nohighlight">\(\vec{a} \cdot \mathbb{I}_P \cdot \vec{b} = \vec{b} \cdot \mathbb{I}_P \cdot \vec{a}\)</span>, <span class="math notranslate nohighlight">\(\forall \vec{a}, \vec{b}\)</span>.</p>
+<p><strong>todo</strong> <em>Treat continuous deformable systems.</em></p>
+<p><strong>Kinetic energy of a system</strong>, with no explicit dependence of time of the degrees of freedom is a symmetric positive definite quadratic function.</p>
+<div class="math notranslate nohighlight">
+\[K = \dfrac{1}{2} \sum_{ik} M_{ik}\left(q^l(t)\right) \dot{q}^i \dot{q}^k = \dfrac{1}{2} \dot{\mathbf{q}}^T \mathbf{M}(\mathbf{q}) \dot{\mathbf{q}} \ ,\]</div>
+<p>with <span class="math notranslate nohighlight">\(M_{ik} = M_{ki}\)</span>, and <span class="math notranslate nohighlight">\(K \ge 0\)</span>.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Kinetic energy symmetric quadratic form of generalized coordinates.<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">If degrees of freedom of the system can be written as functions of  the generalized coordinates <span class="math notranslate nohighlight">\(q^k(t)\)</span>, with no explicit dependence on time <span class="math notranslate nohighlight">\(t\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[\vec{r}_P\left( q^k(t)\right) \qquad , \qquad \mathbb{R}\left( q^k(t) \right) \ ,\]</div>
+<p class="sd-card-text">velocities and angular velocities becomes</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+       \vec{v}_P\left( \dot{q}^k(t), q^k(t) \right) &amp; = \dot{q}^k \dfrac{\partial \vec{r}_P}{\partial q^k}\left( q^k(t) \right) \\
+  \vec{\omega}_P\left( \dot{q}^k(t), q^k(t) \right) &amp; = \dot{q}^k \dfrac{\partial \vec{\theta}_P}{\partial q^k}\left( q^k(t) \right) \\
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text">The kinetic energy of the system is the sum of the kinetic energy of its parts and thus</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  K = \sum_P K_P 
+  &amp; = \sum_P \left\{ \dfrac{1}{2} \vec{v}_P \cdot \left[ m \vec{v}_P + \mathbb{S}_P \cdot \vec{\omega} \right] 
+                   + \dfrac{1}{2} \vec{\omega} \cdot \left[ \mathbb{S}_P^T \cdot \vec{v}_P + \mathbb{I}_P \cdot \vec{\omega} \right]  \right\} = \\
+  &amp; = \sum_P \left\{ \dfrac{1}{2} \sum_i \dot{q}^i \partial_{q^i} \vec{r}_P \cdot \left[ m \sum_k \dot{q}^k \partial_{q^k} \vec{r}_P + \mathbb{S}_P \cdot \sum_k \dot{q}^k \partial_{q^k} \vec{\theta}_P \right] \right. + \\ 
+  &amp;  \qquad \left. + \dfrac{1}{2} \sum_i \dot{q}^i \partial_{q^i} \vec{\theta}_P  \cdot \left[ \mathbb{S}_P^T \cdot \sum_k \dot{q}^k \partial_{q^k} \vec{r}_P + \mathbb{I}_P \cdot \sum_k \dot{q}^k \partial_{q^k} \vec{\theta}_P \right]  \right\} = \\
+  &amp; = \dfrac{1}{2} \sum_{i,k} \sum_P \left\{ m \partial_i \vec{r}_P \cdot \partial_k \vec{r}_P + \partial_i \vec{r}_P \cdot \mathbb{S}_P \cdot \partial_k \vec{\theta}_P + \partial_i \vec{\theta}_P \cdot \mathbb{S}_P^T \cdot \partial_k \vec{r}_P + \partial_i \vec{\theta}_P \cdot \mathbb{I}_P \cdot \partial_k \vec{\theta}_P  \right\} \dot{q}^i \dot{q}^k = \\
+  &amp; = \dfrac{1}{2} \sum_{ik} M_{ik} \dot{q}^i \, \dot{q}^k \ ,
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text">with the coefficients <span class="math notranslate nohighlight">\(M_{ik}(q^l(t))\)</span> symmetric w.r.t. a swap of the indices <span class="math notranslate nohighlight">\(i\)</span>, <span class="math notranslate nohighlight">\(k\)</span> by definition.</p>
+</div>
+</details><p><strong>Potential function</strong> is a function of generalized coordinates only, <span class="math notranslate nohighlight">\(U(\mathbf{q})\)</span>.</p>
+</div>
+<div class="section" id="lagrange-equations">
+<span id="classical-mechanics-lagrange-properties-lagrange-equations"></span><h2><span class="section-number">5.5.2. </span>Lagrange equations<a class="headerlink" href="#lagrange-equations" title="Permalink to this heading">#</a></h2>
+<p><strong>Lagrangian function</strong> is</p>
+<div class="math notranslate nohighlight">
+\[L(\dot{\mathbf{q}}, \mathbf{q}) = K(\dot{\mathbf{q}}, \mathbf{q}) + U(\mathbf{q}) = \dfrac{1}{2} \dot{\mathbf{q}}^T \mathbf{M}(\mathbf{q}) \dot{\mathbf{q}} + U\left(\mathbf{q} \right)\]</div>
+<div class="section" id="lagrange-equations-of-the-ii-kind">
+<span id="classical-mechanics-lagrange-properties-lagrange-equations-ii"></span><h3><span class="section-number">5.5.2.1. </span>Lagrange equations of the II kind<a class="headerlink" href="#lagrange-equations-of-the-ii-kind" title="Permalink to this heading">#</a></h3>
+<p><strong>Lagrange equations of the II kind</strong> read</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \mathbf{Q}_{\mathbf{q}}
+  &amp; = \dfrac{d}{dt} \left( \partial_{\dot{\mathbf{q}}} L  \right) - \partial_{\mathbf{q}} L =  \\
+  &amp; = \dfrac{d}{dt} \left( \mathbf{M}(\mathbf{q}) \dot{\mathbf{q}} \right) - \partial_{\mathbf{q}} \left( \dfrac{1}{2} \dot{\mathbf{q}}^T \mathbf{M}(\mathbf{q}) \dot{\mathbf{q}} + U (\mathbf{q}) \right) \ ,
+\end{aligned}\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+ Q_i 
+ &amp; = \dfrac{d}{dt} \left( M_{ij}(q^k) \dot{q}^j \right) - \partial_{q^i} \left( \dfrac{1}{2} \dot{q}^a M_{ab}(q^k) \dot{q}^b + U(q^k) \right) = \\
+ &amp; = \partial_{q^k} M_{ij}(q^l) \dot{q}^k \dot{q}^j + M_{ij} \ddot{q}^j - \dfrac{1}{2} \partial_{q^i} M_{kj}(q^l) \dot{q}^k \dot{q}^j - \partial_{q^i} U(q^l) \\
+\end{aligned}\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  M_{ij} (q^l) \ddot{q}^j - \partial_{q^i} U(q^l) + \partial_{q^k} M_{ij}(q^l) \dot{q}^k \dot{q}^j - \frac{1}{2} \partial_{q^i} M_{kj}(q^l) \dot{q}^k \dot{q}^j &amp; = Q_i \\
+  \mathbf{M}(\mathbf{q}) \ddot{\mathbf{q}} - \nabla_{\mathbf{q}} U(\mathbf{q}) + \dot{\mathbf{q}}^T \nabla_{\mathbf{q}} \left( \mathbf{M} \dot{\mathbf{q}} \right) - \frac{1}{2} \nabla_{\mathbf{q}} \left( \dot{\mathbf{q}}^T \mathbf{M} \dot{\mathbf{q}} \right) &amp; = \mathbf{Q}
+\end{aligned}\end{split}\]</div>
+<p><strong>Equilibrium conditions</strong> correspond to steady solutions of the equations of motion,</p>
+<div class="math notranslate nohighlight">
+\[-\nabla_{\mathbf{q}} U (\overline{\mathbf{q}}) = \mathbf{Q}(\overline{\mathbf{q}}) \ .\]</div>
+<p><strong>Linearized system</strong> around a (stable) equilibrium follows from the approximation</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \mathbf{q}        &amp; = \overline{\mathbf{q}} + \mathbf{q}'  \\
+  \dot{\mathbf{q}}  &amp; =                    \dot{\mathbf{q}}' \\
+  \ddot{\mathbf{q}} &amp; =                   \ddot{\mathbf{q}}' \ ,
+\end{aligned}\end{split}\]</div>
+<p>and neglecting higher-order contributions in <span class="math notranslate nohighlight">\(\mathbf{q}'\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+Q_i (\mathbf{q})
+  &amp; = M_{ij}(\mathbf{q}) \ddot{q}^j - \partial_i U(\mathbf{q}) + \dot{q}^k \partial_k M_{ij}(\mathbf{q}) \dot{q}^j - \frac{1}{2} \partial_i M_{jk}(\mathbf{q}) \dot{q}^j \dot{q}^k  \\
+  Q_i(\overline{\mathbf{q}}) + {q^{k}}' \partial_{q^k} Q_i(\overline{\mathbf{q}}) &amp; \sim M_{ij}(\overline{\mathbf{q}}) \ddot{q}^j - \partial_i U(\overline{\mathbf{q}}) - q^{j'} \partial_{ij} U(\overline{\mathbf{q}}) \\
+\end{aligned}\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+    M_{ij}(\overline{\mathbf{q}}) \ddot{q}'_j + \left[ - \partial_{ij} U(\overline{\mathbf{q}}) - \partial_j Q_i(\overline{\mathbf{q}}) \right] q'_j  &amp; = 0 \\
+    \mathbf{M}(\overline{\mathbf{q}}) \ddot{\mathbf{q}}' + \left[ - \nabla \nabla U(\overline{\mathbf{q}}) \right] \mathbf{q}' &amp; = \nabla \mathbf{Q}^T (\overline{\mathbf{q}}) \mathbf{q}' \\
+    \mathbf{M}(\overline{\mathbf{q}}) \ddot{\mathbf{q}}' + \mathbf{K}(\overline{\mathbf{q}}) \mathbf{q}' = \nabla \mathbf{Q}^T(\overline{\mathbf{q}})\mathbf{q}' \ .
+\end{aligned}\end{split}\]</div>
+<p><strong>Matrices are symmetric.</strong> Mass matrix is symmetric by construction, as already proved. Stiffness matrix is symmetric as well, due to Schwarz’s theorem, as its the Hessian of a scalar function, <span class="math notranslate nohighlight">\(\left[ \nabla \nabla U \right]_{ij} = \partial_{ij} U\)</span></p>
+<p><strong>Matrices are (semi)-definite positive.</strong> Mass matrix is definite positive by definition, <span class="math notranslate nohighlight">\(\mathbf{M} &gt; 0\)</span>, as already proved above as the kinetic energy is a non-negative scalar physical quantity. Stiffness matrix is definite positive if the <strong>equilibrium <span class="math notranslate nohighlight">\(\overline{\mathbf{q}}\)</span> is stable</strong>: <span class="math notranslate nohighlight">\(\nabla \nabla U(\overline{\mathbf{q}}) &lt; 0\)</span> implies <span class="math notranslate nohighlight">\(\mathbf{K} &gt; 0\)</span>.</p>
+</div>
+<div class="section" id="lagrange-equations-of-the-i-kind">
+<span id="classical-mechanics-lagrange-properties-lagrange-equations-i"></span><h3><span class="section-number">5.5.2.2. </span>Lagrange equations of the I kind<a class="headerlink" href="#lagrange-equations-of-the-i-kind" title="Permalink to this heading">#</a></h3>
+</div>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -436,6 +555,25 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kinetic-energy-k-and-potential-function-u">5.5.1. Kinetic energy <span class="math notranslate nohighlight">\(K\)</span> and potential function <span class="math notranslate nohighlight">\(U\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lagrange-equations">5.5.2. Lagrange equations</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lagrange-equations-of-the-ii-kind">5.5.2.1. Lagrange equations of the II kind</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lagrange-equations-of-the-i-kind">5.5.2.2. Lagrange equations of the I kind</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

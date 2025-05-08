@@ -34,7 +34,7 @@ $$\begin{aligned}
   \vec{\omega}_{\times}\left(\dot{q}^k(t), q^k(t)\right) & = \dfrac{d \mathbb{R}}{d t} \cdot \mathbb{R}^T = \dot{q}^k(t) \, \dfrac{\partial \mathbb{R}}{\partial q^k} \cdot \mathbb{R}^T = \dot{q}^k(t) \, \dfrac{\partial \vec{\theta}_{\times}}{\partial q^k}\left(q^k(t)\right) \ ,
 \end{aligned}$$
 
-As the kinetic energy of a mechanical system is a quadratic function of velocity and angular velocity of its sub-systems, the kinetice energy can be written as
+As the kinetic energy of a mechanical system is a quadratic function of velocity and angular velocity of its sub-systems, the kinetic energy can be written as
 
 $$K\left( \dot{q}^k(t), q^k(t) \right) = \frac{1}{2} A_{ij}\left(q^k(t)\right) \, \dot{q}^i(t) \, \dot{q}^j(t) \ .$$
 

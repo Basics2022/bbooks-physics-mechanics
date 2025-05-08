@@ -98,8 +98,12 @@
 \contentsline {subsubsection}{Ideal holonomic constraints}{54}{subsubsection*.31}%
 \contentsline {subsubsection}{Ideal non\sphinxhyphen {}holonomic constraints}{55}{subsubsection*.32}%
 \contentsline {section}{\numberline {5.5}Properties of the Lagrangian approach to classical mechanics}{55}{section.5.5}%
-\contentsline {chapter}{\numberline {6}Hamiltonian Mechanics}{57}{chapter.6}%
-\contentsline {part}{III\hspace {1em}Exercises}{59}{part.3}%
-\contentsline {chapter}{\numberline {7}Dynamics}{61}{chapter.7}%
-\contentsline {chapter}{\numberline {8}Gravitation}{67}{chapter.8}%
-\contentsline {chapter}{Proof Index}{69}{section*.39}%
+\contentsline {subsection}{\numberline {5.5.1}Kinetic energy \(K\) and potential function \(U\)}{55}{subsection.5.5.1}%
+\contentsline {subsection}{\numberline {5.5.2}Lagrange equations}{56}{subsection.5.5.2}%
+\contentsline {subsubsection}{Lagrange equations of the II kind}{57}{subsubsection*.33}%
+\contentsline {subsubsection}{Lagrange equations of the II kind}{57}{subsubsection*.34}%
+\contentsline {chapter}{\numberline {6}Hamiltonian Mechanics}{59}{chapter.6}%
+\contentsline {part}{III\hspace {1em}Exercises}{61}{part.3}%
+\contentsline {chapter}{\numberline {7}Dynamics}{63}{chapter.7}%
+\contentsline {chapter}{\numberline {8}Gravitation}{69}{chapter.8}%
+\contentsline {chapter}{Proof Index}{71}{section*.41}%
