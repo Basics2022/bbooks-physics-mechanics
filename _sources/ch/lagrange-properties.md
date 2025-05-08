@@ -1,6 +1,9 @@
 (classical-mechanics:lagrange:properties)=
 # Properties of the Lagrangian approach to classical mechanics
 
+(classical-mechanics:lagrange:properties:kinetic-energy)=
+## Kinetic energy $K$ and potential function $U$
+
 Kinetic energy of each component is a symmetric function of the velocity of its reference point $P$ and its angular velocity $\vec{\omega}$, as shown as an example by the expression of the kinetic energy of a rigid body,
 
 $$\begin{aligned}
@@ -51,11 +54,17 @@ with the coefficients $M_{ik}(q^l(t))$ symmetric w.r.t. a swap of the indices $i
 
 **Potential function** is a function of generalized coordinates only, $U(\mathbf{q})$.
 
+(classical-mechanics:lagrange:properties:lagrange-equations)=
+## Lagrange equations
+
 **Lagrangian function** is
 
 $$L(\dot{\mathbf{q}}, \mathbf{q}) = K(\dot{\mathbf{q}}, \mathbf{q}) + U(\mathbf{q}) = \dfrac{1}{2} \dot{\mathbf{q}}^T \mathbf{M}(\mathbf{q}) \dot{\mathbf{q}} + U\left(\mathbf{q} \right)$$
 
-**Lagrange equations** read
+(classical-mechanics:lagrange:properties:lagrange-equations:ii)=
+### Lagrange equations of the II kind
+
+**Lagrange equations of the II kind** read
 
 $$\begin{aligned}
   \mathbf{Q}_{\mathbf{q}}
@@ -96,7 +105,14 @@ Q_i (\mathbf{q})
 
 $$\begin{aligned}
     M_{ij}(\overline{\mathbf{q}}) \ddot{q}'_j + \left[ - \partial_{ij} U(\overline{\mathbf{q}}) - \partial_j Q_i(\overline{\mathbf{q}}) \right] q'_j  & = 0 \\
-    \mathbf{M}(\overline{\mathbf{q}}) \ddot{\mathbf{q}}' + \left[ - \nabla \nabla U(\overline{\mathbf{q}}) - \nabla \mathbf{Q}^T (\overline{\mathbf{q}}) \right] \mathbf{q}' & = \mathbf{0} \\
-    \mathbf{M}(\overline{\mathbf{q}}) \ddot{\mathbf{q}}' + \mathbf{K}(\overline{\mathbf{q}}) \mathbf{q}' = \mathbf{0} \ .
+    \mathbf{M}(\overline{\mathbf{q}}) \ddot{\mathbf{q}}' + \left[ - \nabla \nabla U(\overline{\mathbf{q}}) \right] \mathbf{q}' & = \nabla \mathbf{Q}^T (\overline{\mathbf{q}}) \mathbf{q}' \\
+    \mathbf{M}(\overline{\mathbf{q}}) \ddot{\mathbf{q}}' + \mathbf{K}(\overline{\mathbf{q}}) \mathbf{q}' = \nabla \mathbf{Q}^T(\overline{\mathbf{q}})\mathbf{q}' \ .
 \end{aligned}$$
+
+**Matrices are symmetric.** Mass matrix is symmetric by construction, as already proved. Stiffness matrix is symmetric as well, due to Schwarz's theorem, as its the Hessian of a scalar function, $\left[ \nabla \nabla U \right]_{ij} = \partial_{ij} U$
+
+**Matrices are (semi)-definite positive.** Mass matrix is definite positive by definition, $\mathbf{M} > 0$, as already proved above as the kinetic energy is a non-negative scalar physical quantity. Stiffness matrix is definite positive if the **equilibrium $\overline{\mathbf{q}}$ is stable**: $\nabla \nabla U(\overline{\mathbf{q}}) < 0$ implies $\mathbf{K} > 0$.
+
+(classical-mechanics:lagrange:properties:lagrange-equations:i)=
+### Lagrange equations of the I kind
 

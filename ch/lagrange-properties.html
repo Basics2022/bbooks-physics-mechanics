@@ -75,6 +75,15 @@ const thebe_selector_output = ".output, .cell_output"
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NM2E14MQG1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-NM2E14MQG1');
+</script>
+
   
   
   <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
@@ -346,7 +355,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -362,6 +373,19 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kinetic-energy-k-and-potential-function-u">5.5.1. Kinetic energy <span class="math notranslate nohighlight">\(K\)</span> and potential function <span class="math notranslate nohighlight">\(U\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lagrange-equations">5.5.2. Lagrange equations</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lagrange-equations-of-the-ii-kind">5.5.2.1. Lagrange equations of the II kind</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lagrange-equations-of-the-i-kind">5.5.2.2. Lagrange equations of the I kind</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -373,6 +397,8 @@ document.write(`
                   
   <div class="tex2jax_ignore mathjax_ignore section" id="properties-of-the-lagrangian-approach-to-classical-mechanics">
 <span id="classical-mechanics-lagrange-properties"></span><h1><span class="section-number">5.5. </span>Properties of the Lagrangian approach to classical mechanics<a class="headerlink" href="#properties-of-the-lagrangian-approach-to-classical-mechanics" title="Permalink to this heading">#</a></h1>
+<div class="section" id="kinetic-energy-k-and-potential-function-u">
+<span id="classical-mechanics-lagrange-properties-kinetic-energy"></span><h2><span class="section-number">5.5.1. </span>Kinetic energy <span class="math notranslate nohighlight">\(K\)</span> and potential function <span class="math notranslate nohighlight">\(U\)</span><a class="headerlink" href="#kinetic-energy-k-and-potential-function-u" title="Permalink to this heading">#</a></h2>
 <p>Kinetic energy of each component is a symmetric function of the velocity of its reference point <span class="math notranslate nohighlight">\(P\)</span> and its angular velocity <span class="math notranslate nohighlight">\(\vec{\omega}\)</span>, as shown as an example by the expression of the kinetic energy of a rigid body,</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
@@ -417,10 +443,15 @@ Kinetic energy symmetric quadratic form of generalized coordinates.<div class="s
 <p class="sd-card-text">with the coefficients <span class="math notranslate nohighlight">\(M_{ik}(q^l(t))\)</span> symmetric w.r.t. a swap of the indices <span class="math notranslate nohighlight">\(i\)</span>, <span class="math notranslate nohighlight">\(k\)</span> by definition.</p>
 </div>
 </details><p><strong>Potential function</strong> is a function of generalized coordinates only, <span class="math notranslate nohighlight">\(U(\mathbf{q})\)</span>.</p>
+</div>
+<div class="section" id="lagrange-equations">
+<span id="classical-mechanics-lagrange-properties-lagrange-equations"></span><h2><span class="section-number">5.5.2. </span>Lagrange equations<a class="headerlink" href="#lagrange-equations" title="Permalink to this heading">#</a></h2>
 <p><strong>Lagrangian function</strong> is</p>
 <div class="math notranslate nohighlight">
 \[L(\dot{\mathbf{q}}, \mathbf{q}) = K(\dot{\mathbf{q}}, \mathbf{q}) + U(\mathbf{q}) = \dfrac{1}{2} \dot{\mathbf{q}}^T \mathbf{M}(\mathbf{q}) \dot{\mathbf{q}} + U\left(\mathbf{q} \right)\]</div>
-<p><strong>Lagrange equations</strong> read</p>
+<div class="section" id="lagrange-equations-of-the-ii-kind">
+<span id="classical-mechanics-lagrange-properties-lagrange-equations-ii"></span><h3><span class="section-number">5.5.2.1. </span>Lagrange equations of the II kind<a class="headerlink" href="#lagrange-equations-of-the-ii-kind" title="Permalink to this heading">#</a></h3>
+<p><strong>Lagrange equations of the II kind</strong> read</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
   \mathbf{Q}_{\mathbf{q}}
@@ -458,9 +489,16 @@ Q_i (\mathbf{q})
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
     M_{ij}(\overline{\mathbf{q}}) \ddot{q}'_j + \left[ - \partial_{ij} U(\overline{\mathbf{q}}) - \partial_j Q_i(\overline{\mathbf{q}}) \right] q'_j  &amp; = 0 \\
-    \mathbf{M}(\overline{\mathbf{q}}) \ddot{\mathbf{q}}' + \left[ - \nabla \nabla U(\overline{\mathbf{q}}) - \nabla \mathbf{Q}^T (\overline{\mathbf{q}}) \right] \mathbf{q}' &amp; = \mathbf{0} \\
-    \mathbf{M}(\overline{\mathbf{q}}) \ddot{\mathbf{q}}' + \mathbf{K}(\overline{\mathbf{q}}) \mathbf{q}' = \mathbf{0} \ .
+    \mathbf{M}(\overline{\mathbf{q}}) \ddot{\mathbf{q}}' + \left[ - \nabla \nabla U(\overline{\mathbf{q}}) \right] \mathbf{q}' &amp; = \nabla \mathbf{Q}^T (\overline{\mathbf{q}}) \mathbf{q}' \\
+    \mathbf{M}(\overline{\mathbf{q}}) \ddot{\mathbf{q}}' + \mathbf{K}(\overline{\mathbf{q}}) \mathbf{q}' = \nabla \mathbf{Q}^T(\overline{\mathbf{q}})\mathbf{q}' \ .
 \end{aligned}\end{split}\]</div>
+<p><strong>Matrices are symmetric.</strong> Mass matrix is symmetric by construction, as already proved. Stiffness matrix is symmetric as well, due to Schwarz’s theorem, as its the Hessian of a scalar function, <span class="math notranslate nohighlight">\(\left[ \nabla \nabla U \right]_{ij} = \partial_{ij} U\)</span></p>
+<p><strong>Matrices are (semi)-definite positive.</strong> Mass matrix is definite positive by definition, <span class="math notranslate nohighlight">\(\mathbf{M} &gt; 0\)</span>, as already proved above as the kinetic energy is a non-negative scalar physical quantity. Stiffness matrix is definite positive if the <strong>equilibrium <span class="math notranslate nohighlight">\(\overline{\mathbf{q}}\)</span> is stable</strong>: <span class="math notranslate nohighlight">\(\nabla \nabla U(\overline{\mathbf{q}}) &lt; 0\)</span> implies <span class="math notranslate nohighlight">\(\mathbf{K} &gt; 0\)</span>.</p>
+</div>
+<div class="section" id="lagrange-equations-of-the-i-kind">
+<span id="classical-mechanics-lagrange-properties-lagrange-equations-i"></span><h3><span class="section-number">5.5.2.2. </span>Lagrange equations of the I kind<a class="headerlink" href="#lagrange-equations-of-the-i-kind" title="Permalink to this heading">#</a></h3>
+</div>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -517,6 +555,25 @@ Q_i (\mathbf{q})
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kinetic-energy-k-and-potential-function-u">5.5.1. Kinetic energy <span class="math notranslate nohighlight">\(K\)</span> and potential function <span class="math notranslate nohighlight">\(U\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lagrange-equations">5.5.2. Lagrange equations</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lagrange-equations-of-the-ii-kind">5.5.2.1. Lagrange equations of the II kind</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lagrange-equations-of-the-i-kind">5.5.2.2. Lagrange equations of the I kind</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
