@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>5.5.1. Lagrangian function with no explicit dependence on time &#8212; Classical Mechanics</title>
+    <title>5.3.1. Lagrangian function with no explicit dependence on time &#8212; Classical Mechanics</title>
   
   
   
@@ -70,8 +70,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../_static/favicon.svg"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="5.5.2. Lagrangian function with explicit dependence on time" href="lagrange-t-explicit.html" />
-    <link rel="prev" title="5.5. Properties of the Lagrangian approach to classical mechanics" href="lagrange-properties.html" />
+    <link rel="next" title="5.3.2. Lagrangian function with explicit dependence on time" href="lagrange-t-explicit.html" />
+    <link rel="prev" title="5.3. Lagrangian functions and time dependence" href="lagrange-t.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -215,13 +215,13 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="lagrange-i-type.html">5.2. Lagrange Equations of the First Kind</a></li>
-<li class="toctree-l2"><a class="reference internal" href="lagrange-t.html">5.3. Lagrangian functions and time dependence</a></li>
-<li class="toctree-l2"><a class="reference internal" href="lagrange-constraints.html">5.4. Constraints classification</a></li>
-<li class="toctree-l2 current active has-children"><a class="reference internal" href="lagrange-properties.html">5.5. Properties of the Lagrangian approach to classical mechanics</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l3 current active"><a class="current reference internal" href="#">5.5.1. Lagrangian function with no explicit dependence on time</a></li>
-<li class="toctree-l3"><a class="reference internal" href="lagrange-t-explicit.html">5.5.2. Lagrangian function with explicit dependence on time</a></li>
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="lagrange-t.html">5.3. Lagrangian functions and time dependence</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">5.3.1. Lagrangian function with no explicit dependence on time</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lagrange-t-explicit.html">5.3.2. Lagrangian function with explicit dependence on time</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="lagrange-constraints.html">5.4. Constraints classification</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lagrange-properties.html">5.5. Properties of the Lagrangian approach to classical mechanics</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="hamilton.html">6. Hamiltonian Mechanics</a></li>
@@ -378,7 +378,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#properties-of-kinetic-energy-and-potential">5.5.1.1. Properties of kinetic energy and potential</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#properties-of-kinetic-energy-and-potential">5.3.1.1. Properties of kinetic energy and potential</a></li>
 </ul>
             </nav>
         </div>
@@ -391,7 +391,7 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <div class="tex2jax_ignore mathjax_ignore section" id="lagrangian-function-with-no-explicit-dependence-on-time">
-<span id="classical-mechanics-lagrange-time-independent"></span><h1><span class="section-number">5.5.1. </span>Lagrangian function with no explicit dependence on time<a class="headerlink" href="#lagrangian-function-with-no-explicit-dependence-on-time" title="Permalink to this heading">#</a></h1>
+<span id="classical-mechanics-lagrange-time-independent"></span><h1><span class="section-number">5.3.1. </span>Lagrangian function with no explicit dependence on time<a class="headerlink" href="#lagrangian-function-with-no-explicit-dependence-on-time" title="Permalink to this heading">#</a></h1>
 <p>Let’s analyse first some properties of systems, whose Lagrangian function are not an explicit function of time,</p>
 <div class="math notranslate nohighlight">
 \[\mathscr{L}(\dot{q}^k(t), q^k(t)) = K(\dot{q}^k(t), q^k(t)) + U(q^k(t)) \ ,\]</div>
@@ -399,7 +399,7 @@ document.write(`
 As the Lagrange equation is not an explicit function of time, relation <a class="reference internal" href="lagrange-t.html#equation-eq-euler-beltrami">(5.5)</a> reads</p>
 <div class="math notranslate nohighlight">
 \[\dfrac{d}{dt} \left[ \dot{q}^k \dfrac{\partial \mathscr{L}}{\partial \dot{q}^k} - \mathscr{L} \right] = \dot{q}^k Q_k \ .\]</div>
-<p>Since the Lagrangian doesn’t expliclty depend on time, and potential is not a function of time, relation <a class="reference internal" href="#equation-eq-lagrange-time-ind-dqdk-dq">(5.8)</a> gives <span class="math notranslate nohighlight">\(\dot{q}^k \frac{\partial \mathscr{L}}{\partial \dot{q}^k} = 2 K\)</span>, and thus the content of the braces is the mechanical energy of the system,</p>
+<p>Since the Lagrangian doesn’t expliclty depend on time, and potential is not a function of time, relation <a class="reference internal" href="#equation-eq-lagrange-time-ind-dqdk-dq">(5.6)</a> gives <span class="math notranslate nohighlight">\(\dot{q}^k \frac{\partial \mathscr{L}}{\partial \dot{q}^k} = 2 K\)</span>, and thus the content of the braces is the mechanical energy of the system,</p>
 <div class="math notranslate nohighlight">
 \[\dot{q}^k \dfrac{\partial \mathscr{L}}{\partial \dot{q}^k} - \mathscr{L} = 2 K - \mathscr{L} = 2 K - K - U = K - U = E^{mec} \ ,\]</div>
 <p>and it becomes clear that the relation is nothhing but the balance equation of mechanical energy</p>
@@ -409,7 +409,7 @@ As the Lagrange equation is not an explicit function of time, relation <a class=
 <div class="math notranslate nohighlight">
 \[E^{mec} = \overline{E}^{mec} \quad \text{const.}\]</div>
 <div class="section" id="properties-of-kinetic-energy-and-potential">
-<h2><span class="section-number">5.5.1.1. </span>Properties of kinetic energy and potential<a class="headerlink" href="#properties-of-kinetic-energy-and-potential" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">5.3.1.1. </span>Properties of kinetic energy and potential<a class="headerlink" href="#properties-of-kinetic-energy-and-potential" title="Permalink to this heading">#</a></h2>
 <p>This section collects some properties of the kinetic energy and potential of systems, where physical coordinates of the system are written as a function of generalized coordinates only, <span class="math notranslate nohighlight">\(q^k(t)\)</span>. As an example, coordinates of point masses, material points of rigid bodies and the rotation tensor representing their orientation in space can be written as</p>
 <div class="math notranslate nohighlight">
 \[\vec{r}_P\left(q^k(t)\right) \quad , \quad \mathbb{R} \left( q^k(t) \right) \ ,\]</div>
@@ -427,7 +427,7 @@ As the Lagrange equation is not an explicit function of time, relation <a class=
 \[\dfrac{\partial K}{\partial \dot{q}^l} = A_{lj} \dot{q}^j \ ,\]</div>
 <p>and</p>
 <div class="math notranslate nohighlight" id="equation-eq-lagrange-time-ind-dqdk-dq">
-<span class="eqno">(5.8)<a class="headerlink" href="#equation-eq-lagrange-time-ind-dqdk-dq" title="Permalink to this equation">#</a></span>\[\dot{q}^l \dfrac{\partial K}{\partial \dot{q}^l} = \dot{q}^l A_{lj} \dot{q}^j = 2 K \ .\]</div>
+<span class="eqno">(5.6)<a class="headerlink" href="#equation-eq-lagrange-time-ind-dqdk-dq" title="Permalink to this equation">#</a></span>\[\dot{q}^l \dfrac{\partial K}{\partial \dot{q}^l} = \dot{q}^l A_{lj} \dot{q}^j = 2 K \ .\]</div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Proofs<div class="sd-summary-down docutils">
@@ -478,12 +478,12 @@ Proofs<div class="sd-summary-down docutils">
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="lagrange-properties.html"
+       href="lagrange-t.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">5.5. </span>Properties of the Lagrangian approach to classical mechanics</p>
+        <p class="prev-next-title"><span class="section-number">5.3. </span>Lagrangian functions and time dependence</p>
       </div>
     </a>
     <a class="right-next"
@@ -491,7 +491,7 @@ Proofs<div class="sd-summary-down docutils">
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">5.5.2. </span>Lagrangian function with explicit dependence on time</p>
+        <p class="prev-next-title"><span class="section-number">5.3.2. </span>Lagrangian function with explicit dependence on time</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -510,7 +510,7 @@ Proofs<div class="sd-summary-down docutils">
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#properties-of-kinetic-energy-and-potential">5.5.1.1. Properties of kinetic energy and potential</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#properties-of-kinetic-energy-and-potential">5.3.1.1. Properties of kinetic energy and potential</a></li>
 </ul>
   </nav></div>
 

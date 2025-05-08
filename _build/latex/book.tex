@@ -102,7 +102,7 @@
 
 
 \sphinxAtStartPar
-This material is part of the \sphinxhref{https://basics2022.github.io/bbooks}{\sphinxstylestrong{basics\sphinxhyphen{}books project}}. It is also available as a \DUrole{xref,myst}{.pdf document}.
+This material is part of the \sphinxhref{https://basics2022.github.io/bbooks}{\sphinxstylestrong{basics\sphinxhyphen{}books project}}. It is also available as a \DUrole{xref,download,myst}{.pdf document}.
 
 \sphinxAtStartPar
 Classical mechanics deal with the motion of systems and its causes.
@@ -2653,140 +2653,6 @@ describing the conservation of mechanical energy w.r.t. an inertial reference fr
 \sphinxstepscope
 
 
-\section{Constraints classification}
-\label{\detokenize{ch/lagrange-constraints:constraints-classification}}\label{\detokenize{ch/lagrange-constraints:classical-mechanics-lagrange-constraints}}\label{\detokenize{ch/lagrange-constraints::doc}}
-
-\subsection{Holonomic vs. non\sphinxhyphen{}holonomic constraints}
-\label{\detokenize{ch/lagrange-constraints:holonomic-vs-non-holonomic-constraints}}\label{ch/lagrange-constraints:holonomic-constraint}
-\begin{sphinxadmonition}{note}{Definition 5.4.1 (Holonomic constraint)}
-
-
-
-\sphinxAtStartPar
-A holonomic constraints can be written in a form
-\begin{equation*}
-\begin{split}g(q^k(t), t) = 0 \ .\end{split}
-\end{equation*}\end{sphinxadmonition}
-\label{ch/lagrange-constraints:non-holonomic-constraint}
-\begin{sphinxadmonition}{note}{Definition 5.4.2 (Non\sphinxhyphen{}holonomic constraint)}
-
-
-
-\sphinxAtStartPar
-Every constraint that is not holonomic, is non\sphinxhyphen{}holonomic. (\sphinxstylestrong{wow!})
-\end{sphinxadmonition}
-
-\sphinxAtStartPar
-\sphinxstylestrong{todo} \sphinxstyleemphasis{Add some examples…; even some constraints that looks like a non\sphinxhyphen{}holonomic constraint that are holonomic: “integrable constraints”, Pfaffian method?…}
-
-
-\subsection{Ideal constraints}
-\label{\detokenize{ch/lagrange-constraints:classical-mechanics-lagrange-constraints-ideal}}\label{\detokenize{ch/lagrange-constraints:ideal-constraints}}\label{ch/lagrange-constraints:definition-2}
-\begin{sphinxadmonition}{note}{Definition 5.4.3 (Ideal constraint)}
-
-
-
-\sphinxAtStartPar
-An ideal constraint produces no net power.
-\end{sphinxadmonition}
-
-\sphinxAtStartPar
-Given the generalized actions \(\mathbf{f}_c\) introduced in the dynamical systems by constraints,
-\begin{equation*}
-\begin{split}\mathbf{M} \ddot{\mathbf{q}} = \mathbf{f} + \mathbf{f}_c \ ,\end{split}
-\end{equation*}
-\sphinxAtStartPar
-power of ideal constraints reads
-\begin{equation*}
-\begin{split}\dot{\mathbf{q}}^T \mathbf{f}_c = 0 \ .\end{split}
-\end{equation*}
-
-\subsubsection{Ideal holonomic constraints}
-\label{\detokenize{ch/lagrange-constraints:classical-mechanics-lagrange-constraints-ideal-holonomic}}\label{\detokenize{ch/lagrange-constraints:ideal-holonomic-constraints}}
-\sphinxAtStartPar
-If constraints don’t have explicit dependence (what happens if there’s explicit {\hyperref[\detokenize{ch/lagrange-t-explicit:classical-mechanics-lagrange-time-dependent}]{\sphinxcrossref{\DUrole{std,std-ref}{time dependence}}}}? Treat in the proper section…) from time \(t\)
-\begin{equation*}
-\begin{split}\begin{aligned}
-  & \mathbf{M} \ddot{\mathbf{q}} = \mathbf{f} + \mathbf{f}_c \\
-  & \mathbf{g}(\mathbf{q}(t)) = \mathbf{0}
-\end{aligned}\end{split}
-\end{equation*}
-\sphinxAtStartPar
-with \(\mathbf{q} \in \mathbb{R}^N\), \(\mathbf{g} \in \mathbb{R}^C\).
-
-\sphinxAtStartPar
-\sphinxstylestrong{Power of ideal constraint.} Power of ideal constraints is zero, and this condition provides the most general form of constraint reactions \(\mathbf{f}_c\) as a linear combination of the gradient of the constraints, and a set of well\sphinxhyphen{}defined (\sphinxstyleemphasis{extra conditions?}) and determined DAEs, with equal number of equations and unknowns. Power of contraint reactions of ideal constrains is zero,
-\begin{equation*}
-\begin{split}0 = \dot{\mathbf{q}}^T \mathbf{f}_c\end{split}
-\end{equation*}
-\sphinxAtStartPar
-Time derivative of the constraint equation reads \(0 = g_i (q^k) = \dot{q}^k \frac{\partial g_i}{\partial q^k}\), and thus for every \(\mathbf{s} \in \mathbb{R}^C\),
-\begin{equation}\label{equation:ch/lagrange-constraints:eq:constraint:reaction:holonomic}
-\begin{split}0 = \dot{\mathbf{q}}^T \nabla_{\mathbf{q}} \mathbf{g} \, \mathbf{s} \ ,\end{split}
-\end{equation}
-\sphinxAtStartPar
-and thus constraint reactions can be written as a linear combination of the (columns of the) gradient of the constraint equation w.r.t. the generalized coordiantes,
-\begin{equation*}
-\begin{split}\mathbf{f}_c = \nabla_\mathbf{q} \mathbf{g} \, \mathbf{s}\end{split}
-\end{equation*}
-\sphinxAtStartPar
-or
-\begin{equation*}
-\begin{split}\begin{aligned}
-  \mathbf{f}_c = \nabla_{\mathbf{q}} g_i \, s_i \qquad , \qquad
-  f_{c,k}      = \dfrac{\partial\mathbf{g}^T}{\partial q^k} \mathbf{s} = \dfrac{\partial g^i}{\partial q^k} \, s_i \ .
-\end{aligned}\end{split}
-\end{equation*}
-\sphinxAtStartPar
-\sphinxstylestrong{Determined set of DAEs.} Introducing the expression \eqref{equation:ch/lagrange-constraints:eq:constraint:reaction:holonomic} of the constraint reactions in the original set of DAEs, the set of equations governing the constrained system reads
-\begin{equation*}
-\begin{split}\begin{aligned}
-  & \mathbf{M} \ddot{\mathbf{q}} = \mathbf{f} + \nabla_{\mathbf{q}} \mathbf{g} \, \mathbf{s} \\
-  & \mathbf{g}(\mathbf{q}) = \mathbf{0}
-\end{aligned}\end{split}
-\end{equation*}
-
-\subsubsection{Ideal non\sphinxhyphen{}holonomic constraints}
-\label{\detokenize{ch/lagrange-constraints:classical-mechanics-lagrange-constraints-ideal-non-holonomic}}\label{\detokenize{ch/lagrange-constraints:ideal-non-holonomic-constraints}}
-\sphinxAtStartPar
-The equations of a constrained system with non\sphinxhyphen{}holonomic constraints in semi\sphinxhyphen{}linear form and no explicit time dependence reads
-\begin{equation*}
-\begin{split}\begin{aligned}
-  & \mathbf{M} \ddot{\mathbf{q}} = \mathbf{f} + \mathbf{f}_c \\
-  & \mathbf{a}(\mathbf{q}(t)) \, \dot{\mathbf{q}}(t) = \mathbf{0}
-\end{aligned}\end{split}
-\end{equation*}
-\sphinxAtStartPar
-\sphinxstylestrong{Power of ideal constraints.} As done in the {\hyperref[\detokenize{ch/lagrange-constraints:classical-mechanics-lagrange-constraints-ideal-holonomic}]{\sphinxcrossref{\DUrole{std,std-ref}{section about holonomic constraints}}}}, the condition of zero power of ideal constraints provides the most general form of constraint reactions \(\mathbf{f}_c\) as a linear combination of the gradient of the constraints, and thus a determined set of DAEs.
-\begin{equation*}
-\begin{split}0 = \dot{\mathbf{q}}^T \, \mathbf{f}_c\end{split}
-\end{equation*}
-\sphinxAtStartPar
-compared with the (transpose of the) non\sphinxhyphen{}holonomic constraint,
-\begin{equation*}
-\begin{split}0 = \dot{\mathbf{q}}^T \mathbf{a}^T(\mathbf{q}) \mathbf{s}  \ , \qquad \forall \mathbf{s} \in \mathbb{R}^C\end{split}
-\end{equation*}
-\sphinxAtStartPar
-and thus constraint reactions can be written as the linear combination of the columns of the transpose of matrix \(\mathbf{a}(\mathbf{q})\),
-\begin{equation}\label{equation:ch/lagrange-constraints:eq:constraint:reaction:non-holonomic}
-\begin{split}\mathbf{f} = \mathbf{a}^T(\mathbf{q}) \mathbf{s} \ .\end{split}
-\end{equation}
-\sphinxAtStartPar
-\sphinxstylestrong{Determined set of DAEs.} Introducing the expression \eqref{equation:ch/lagrange-constraints:eq:constraint:reaction:non-holonomic} of the constraint reactions in the original set of DAEs, the determined set of equations governing the constrained system reads
-\begin{equation*}
-\begin{split}\begin{aligned}
-  & \mathbf{M} \ddot{\mathbf{q}} = \mathbf{f} + \mathbf{a}^T(\mathbf{q}) \, \mathbf{s} \\
-  & \mathbf{a}(\mathbf{q}) \, \dot{\mathbf{q}}(t) = \mathbf{0}
-\end{aligned}\end{split}
-\end{equation*}
-\sphinxstepscope
-
-
-\section{Properties of the Lagrangian approach to classical mechanics}
-\label{\detokenize{ch/lagrange-properties:properties-of-the-lagrangian-approach-to-classical-mechanics}}\label{\detokenize{ch/lagrange-properties:classical-mechanics-lagrange-properties}}\label{\detokenize{ch/lagrange-properties::doc}}
-\sphinxstepscope
-
-
 \subsection{Lagrangian function with no explicit dependence on time}
 \label{\detokenize{ch/lagrange-t-no:lagrangian-function-with-no-explicit-dependence-on-time}}\label{\detokenize{ch/lagrange-t-no:classical-mechanics-lagrange-time-independent}}\label{\detokenize{ch/lagrange-t-no::doc}}
 \sphinxAtStartPar
@@ -2931,11 +2797,145 @@ The kinetic energy has a general expression
   & = \dot{q}^k B_k + 2 C
 \end{aligned}\end{split}
 \end{equation*}\label{ch/lagrange-t-explicit:example-0}
-\begin{sphinxadmonition}{note}{Example 5.5.1}
+\begin{sphinxadmonition}{note}{Example 5.3.1}
 
 
 \end{sphinxadmonition}
 
+\sphinxstepscope
+
+
+\section{Constraints classification}
+\label{\detokenize{ch/lagrange-constraints:constraints-classification}}\label{\detokenize{ch/lagrange-constraints:classical-mechanics-lagrange-constraints}}\label{\detokenize{ch/lagrange-constraints::doc}}
+
+\subsection{Holonomic vs. non\sphinxhyphen{}holonomic constraints}
+\label{\detokenize{ch/lagrange-constraints:holonomic-vs-non-holonomic-constraints}}\label{ch/lagrange-constraints:holonomic-constraint}
+\begin{sphinxadmonition}{note}{Definition 5.4.1 (Holonomic constraint)}
+
+
+
+\sphinxAtStartPar
+A holonomic constraints can be written in a form
+\begin{equation*}
+\begin{split}g(q^k(t), t) = 0 \ .\end{split}
+\end{equation*}\end{sphinxadmonition}
+\label{ch/lagrange-constraints:non-holonomic-constraint}
+\begin{sphinxadmonition}{note}{Definition 5.4.2 (Non\sphinxhyphen{}holonomic constraint)}
+
+
+
+\sphinxAtStartPar
+Every constraint that is not holonomic, is non\sphinxhyphen{}holonomic. (\sphinxstylestrong{wow!})
+\end{sphinxadmonition}
+
+\sphinxAtStartPar
+\sphinxstylestrong{todo} \sphinxstyleemphasis{Add some examples…; even some constraints that looks like a non\sphinxhyphen{}holonomic constraint that are holonomic: “integrable constraints”, Pfaffian method?…}
+
+
+\subsection{Ideal constraints}
+\label{\detokenize{ch/lagrange-constraints:classical-mechanics-lagrange-constraints-ideal}}\label{\detokenize{ch/lagrange-constraints:ideal-constraints}}\label{ch/lagrange-constraints:definition-2}
+\begin{sphinxadmonition}{note}{Definition 5.4.3 (Ideal constraint)}
+
+
+
+\sphinxAtStartPar
+An ideal constraint produces no net power.
+\end{sphinxadmonition}
+
+\sphinxAtStartPar
+Given the generalized actions \(\mathbf{f}_c\) introduced in the dynamical systems by constraints,
+\begin{equation*}
+\begin{split}\mathbf{M} \ddot{\mathbf{q}} = \mathbf{f} + \mathbf{f}_c \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+power of ideal constraints reads
+\begin{equation*}
+\begin{split}\dot{\mathbf{q}}^T \mathbf{f}_c = 0 \ .\end{split}
+\end{equation*}
+
+\subsubsection{Ideal holonomic constraints}
+\label{\detokenize{ch/lagrange-constraints:classical-mechanics-lagrange-constraints-ideal-holonomic}}\label{\detokenize{ch/lagrange-constraints:ideal-holonomic-constraints}}
+\sphinxAtStartPar
+If constraints don’t have explicit dependence (what happens if there’s explicit {\hyperref[\detokenize{ch/lagrange-t-explicit:classical-mechanics-lagrange-time-dependent}]{\sphinxcrossref{\DUrole{std,std-ref}{time dependence}}}}? Treat in the proper section…) from time \(t\)
+\begin{equation*}
+\begin{split}\begin{aligned}
+  & \mathbf{M} \ddot{\mathbf{q}} = \mathbf{f} + \mathbf{f}_c \\
+  & \mathbf{g}(\mathbf{q}(t)) = \mathbf{0}
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+with \(\mathbf{q} \in \mathbb{R}^N\), \(\mathbf{g} \in \mathbb{R}^C\).
+
+\sphinxAtStartPar
+\sphinxstylestrong{Power of ideal constraint.} Power of ideal constraints is zero, and this condition provides the most general form of constraint reactions \(\mathbf{f}_c\) as a linear combination of the gradient of the constraints, and a set of well\sphinxhyphen{}defined (\sphinxstyleemphasis{extra conditions?}) and determined DAEs, with equal number of equations and unknowns. Power of contraint reactions of ideal constrains is zero,
+\begin{equation*}
+\begin{split}0 = \dot{\mathbf{q}}^T \mathbf{f}_c\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Time derivative of the constraint equation reads \(0 = g_i (q^k) = \dot{q}^k \frac{\partial g_i}{\partial q^k}\), and thus for every \(\mathbf{s} \in \mathbb{R}^C\),
+\begin{equation}\label{equation:ch/lagrange-constraints:eq:constraint:reaction:holonomic}
+\begin{split}0 = \dot{\mathbf{q}}^T \nabla_{\mathbf{q}} \mathbf{g} \, \mathbf{s} \ ,\end{split}
+\end{equation}
+\sphinxAtStartPar
+and thus constraint reactions can be written as a linear combination of the (columns of the) gradient of the constraint equation w.r.t. the generalized coordiantes,
+\begin{equation*}
+\begin{split}\mathbf{f}_c = \nabla_\mathbf{q} \mathbf{g} \, \mathbf{s}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+or
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \mathbf{f}_c = \nabla_{\mathbf{q}} g_i \, s_i \qquad , \qquad
+  f_{c,k}      = \dfrac{\partial\mathbf{g}^T}{\partial q^k} \mathbf{s} = \dfrac{\partial g^i}{\partial q^k} \, s_i \ .
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Determined set of DAEs.} Introducing the expression \eqref{equation:ch/lagrange-constraints:eq:constraint:reaction:holonomic} of the constraint reactions in the original set of DAEs, the set of equations governing the constrained system reads
+\begin{equation*}
+\begin{split}\begin{aligned}
+  & \mathbf{M} \ddot{\mathbf{q}} = \mathbf{f} + \nabla_{\mathbf{q}} \mathbf{g} \, \mathbf{s} \\
+  & \mathbf{g}(\mathbf{q}) = \mathbf{0}
+\end{aligned}\end{split}
+\end{equation*}
+
+\subsubsection{Ideal non\sphinxhyphen{}holonomic constraints}
+\label{\detokenize{ch/lagrange-constraints:classical-mechanics-lagrange-constraints-ideal-non-holonomic}}\label{\detokenize{ch/lagrange-constraints:ideal-non-holonomic-constraints}}
+\sphinxAtStartPar
+The equations of a constrained system with non\sphinxhyphen{}holonomic constraints in semi\sphinxhyphen{}linear form and no explicit time dependence reads
+\begin{equation*}
+\begin{split}\begin{aligned}
+  & \mathbf{M} \ddot{\mathbf{q}} = \mathbf{f} + \mathbf{f}_c \\
+  & \mathbf{a}(\mathbf{q}(t)) \, \dot{\mathbf{q}}(t) = \mathbf{0}
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Power of ideal constraints.} As done in the {\hyperref[\detokenize{ch/lagrange-constraints:classical-mechanics-lagrange-constraints-ideal-holonomic}]{\sphinxcrossref{\DUrole{std,std-ref}{section about holonomic constraints}}}}, the condition of zero power of ideal constraints provides the most general form of constraint reactions \(\mathbf{f}_c\) as a linear combination of the gradient of the constraints, and thus a determined set of DAEs.
+\begin{equation*}
+\begin{split}0 = \dot{\mathbf{q}}^T \, \mathbf{f}_c\end{split}
+\end{equation*}
+\sphinxAtStartPar
+compared with the (transpose of the) non\sphinxhyphen{}holonomic constraint,
+\begin{equation*}
+\begin{split}0 = \dot{\mathbf{q}}^T \mathbf{a}^T(\mathbf{q}) \mathbf{s}  \ , \qquad \forall \mathbf{s} \in \mathbb{R}^C\end{split}
+\end{equation*}
+\sphinxAtStartPar
+and thus constraint reactions can be written as the linear combination of the columns of the transpose of matrix \(\mathbf{a}(\mathbf{q})\),
+\begin{equation}\label{equation:ch/lagrange-constraints:eq:constraint:reaction:non-holonomic}
+\begin{split}\mathbf{f} = \mathbf{a}^T(\mathbf{q}) \mathbf{s} \ .\end{split}
+\end{equation}
+\sphinxAtStartPar
+\sphinxstylestrong{Determined set of DAEs.} Introducing the expression \eqref{equation:ch/lagrange-constraints:eq:constraint:reaction:non-holonomic} of the constraint reactions in the original set of DAEs, the determined set of equations governing the constrained system reads
+\begin{equation*}
+\begin{split}\begin{aligned}
+  & \mathbf{M} \ddot{\mathbf{q}} = \mathbf{f} + \mathbf{a}^T(\mathbf{q}) \, \mathbf{s} \\
+  & \mathbf{a}(\mathbf{q}) \, \dot{\mathbf{q}}(t) = \mathbf{0}
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxstepscope
+
+
+\section{Properties of the Lagrangian approach to classical mechanics}
+\label{\detokenize{ch/lagrange-properties:properties-of-the-lagrangian-approach-to-classical-mechanics}}\label{\detokenize{ch/lagrange-properties:classical-mechanics-lagrange-properties}}\label{\detokenize{ch/lagrange-properties::doc}}
 \sphinxstepscope
 
 

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Debian) (preloaded format=xelatex 2024.9.16)  8 MAY 2025 15:45
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Debian) (preloaded format=xelatex 2024.9.16)  8 MAY 2025 15:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1864,21 +1864,21 @@ LaTeX Info: Redefining \rmfamily on input line 2611.
 LaTeX Info: Redefining \sffamily on input line 2611.
 LaTeX Info: Redefining \ttfamily on input line 2611.
  [50]
-LaTeX Info: Redefining \rmfamily on input line 2683.
-LaTeX Info: Redefining \sffamily on input line 2683.
-LaTeX Info: Redefining \ttfamily on input line 2683.
+LaTeX Info: Redefining \rmfamily on input line 2685.
+LaTeX Info: Redefining \sffamily on input line 2685.
+LaTeX Info: Redefining \ttfamily on input line 2685.
  [51]
-LaTeX Info: Redefining \rmfamily on input line 2749.
-LaTeX Info: Redefining \sffamily on input line 2749.
-LaTeX Info: Redefining \ttfamily on input line 2749.
+LaTeX Info: Redefining \rmfamily on input line 2763.
+LaTeX Info: Redefining \sffamily on input line 2763.
+LaTeX Info: Redefining \ttfamily on input line 2763.
  [52]
-LaTeX Info: Redefining \rmfamily on input line 2819.
-LaTeX Info: Redefining \sffamily on input line 2819.
-LaTeX Info: Redefining \ttfamily on input line 2819.
+LaTeX Info: Redefining \rmfamily on input line 2808.
+LaTeX Info: Redefining \sffamily on input line 2808.
+LaTeX Info: Redefining \ttfamily on input line 2808.
  [53]
-LaTeX Info: Redefining \rmfamily on input line 2897.
-LaTeX Info: Redefining \sffamily on input line 2897.
-LaTeX Info: Redefining \ttfamily on input line 2897.
+LaTeX Info: Redefining \rmfamily on input line 2883.
+LaTeX Info: Redefining \sffamily on input line 2883.
+LaTeX Info: Redefining \ttfamily on input line 2883.
  [54]
 LaTeX Info: Redefining \rmfamily on input line 2944.
 LaTeX Info: Redefining \sffamily on input line 2944.
@@ -1991,7 +1991,7 @@ Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 3448.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 3448.
 
 Package rerunfilecheck Info: File `book.out' has not changed.
-(rerunfilecheck)             Checksum: 5BCE54F3BC25AD1D26F9C1E137BF772F;8526.
+(rerunfilecheck)             Checksum: F83161C218EA3B0FEB0B5E0B024D5670;8526.
  ) 
 Here is how much of TeX's memory you used:
  42306 strings out of 481789
