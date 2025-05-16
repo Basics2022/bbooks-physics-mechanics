@@ -85,7 +85,7 @@
         
 
 \title{Classical Mechanics}
-\date{May 08, 2025}
+\date{May 16, 2025}
 \release{}
 \author{basics}
 \newcommand{\sphinxlogo}{\vbox{}}
@@ -484,9 +484,33 @@ the “centripetal component” is orthogonal w.r.t. the instantaneous angular v
 
 \section{Rotations}
 \label{\detokenize{ch/kinematics-rotations:rotations}}\label{\detokenize{ch/kinematics-rotations:classical-mechanics-kinematics-rotations}}\label{\detokenize{ch/kinematics-rotations::doc}}
+\sphinxAtStartPar
+A rotation in 3\sphinxhyphen{}dimensional spaces can be represented by a \sphinxstylestrong{rotation tensor}, \(\mathbb{R}\). A rotation tensor has some mathematical properties: it’s a \sphinxstylestrong{unitary tensor}, \(\mathbb{R}^T \cdot \mathbb{R} = \mathbb{R} \cdot \mathbb{R}^T = \mathbb{I}\), and unit determinant, \(|\mathbb{R}| = 1\).
+From these properties, it immediately follows the definition of \sphinxstylestrong{angular velocity}, and angular acceleration. A rotation can be represented as \sphinxstylestrong{compositions of successive rotations}, \(\mathbb{R}^{0\rightarrow 2} = \mathbb{R}^{1\rightarrow 2} \cdot \mathbb{R}^{0\rightarrow 1}\), while summation of relative angular velocity (and acceleration) of successive rotations holds, \(\vec{\omega}^{0 \rightarrow 2} = \vec{\omega}^{1 \rightarrow 2} + \vec{\omega}^{0 \rightarrow 1}\). For small rotations, \sphinxstylestrong{linearization} provides a small\sphinxhyphen{}amplitude approximation: in the linearization limit, composition of rotations reduces to summation.
 
-\subsection{Rotation tensor}
-\label{\detokenize{ch/kinematics-rotations:rotation-tensor}}
+\sphinxAtStartPar
+This section of kinematic deals with rotations in details, first in absolute tensor notation, and then introducing parametrizations to describe rotations like axis and angle \((\hat{n}, \theta)\), Euler’s angles \((\phi, \theta, \psi)\) for successive simple rotations, and unitary quaternions \(q = q_0 + \vec{q}\), with \(1 = q_0^2 + |\vec{q}|^2\).
+
+\sphinxAtStartPar
+{\hyperref[\detokenize{ch/kinematics-rotations-tensors:classical-mechanics-kinematics-rotations-tensor}]{\sphinxcrossref{\DUrole{std,std-ref}{\sphinxstylestrong{Tensors}}}}}.
+
+\sphinxAtStartPar
+{\hyperref[\detokenize{ch/kinematics-rotations-param-axis-angle:classical-mechanics-kinematics-rotations-axis-angle}]{\sphinxcrossref{\DUrole{std,std-ref}{\sphinxstylestrong{Parametrizations: axis and angle}}}}}.
+
+\sphinxAtStartPar
+{\hyperref[\detokenize{ch/kinematics-rotations-param-euler:classical-mechanics-kinematics-rotations-euler}]{\sphinxcrossref{\DUrole{std,std-ref}{\sphinxstylestrong{Parametrizations: Euler’s equations}}}}}.
+
+\sphinxAtStartPar
+{\hyperref[\detokenize{ch/kinematics-rotations-param-quaternions:classical-mechanics-kinematics-rotations-quaternions}]{\sphinxcrossref{\DUrole{std,std-ref}{\sphinxstylestrong{Parametrizations: quaternions}}}}}.
+
+\sphinxstepscope
+
+
+\subsection{Tensor formalism for rotations}
+\label{\detokenize{ch/kinematics-rotations-tensors:tensor-formalism-for-rotations}}\label{\detokenize{ch/kinematics-rotations-tensors:classical-mechanics-kinematics-rotations-tensor}}\label{\detokenize{ch/kinematics-rotations-tensors::doc}}
+
+\subsubsection{Rotation tensor}
+\label{\detokenize{ch/kinematics-rotations-tensors:rotation-tensor}}
 \sphinxAtStartPar
 Given 2 Cartesian bases \(\{ \hat{e}^0_i \}_{i=1:3}\), \(\{ \hat{e}^1_j \}_{j=1:3}\), the rotation tensor providing the transformation
 \begin{equation*}
@@ -535,8 +559,8 @@ it follows
 \begin{split}\vec{\alpha} = \dot{\vec{\omega}} \ .\end{split}
 \end{equation*}
 
-\subsection{Successive rotations}
-\label{\detokenize{ch/kinematics-rotations:successive-rotations}}
+\subsubsection{Successive rotations}
+\label{\detokenize{ch/kinematics-rotations-tensors:successive-rotations}}
 \sphinxAtStartPar
 \sphinxstylestrong{Orientation.} Given 3 Cartesian bases \(\{ \hat{e}^0_i \}_{i=1:3}\), \(\{ \hat{e}^1_j \}_{j=1:3}\), \(\{ \hat{e}^2_k \}_{k=1:3}\),
 \begin{equation*}
@@ -588,8 +612,8 @@ or
 \begin{split}\vec{\alpha}_{2/0} = \vec{\alpha}_{2/1} + \vec{\alpha}_{1/0} \ .\end{split}
 \end{equation*}
 
-\subsection{Linearization of rotations}
-\label{\detokenize{ch/kinematics-rotations:linearization-of-rotations}}\begin{equation*}
+\subsubsection{Linearization of rotations}
+\label{\detokenize{ch/kinematics-rotations-tensors:linearization-of-rotations}}\begin{equation*}
 \begin{split}\mathbb{I} = \mathbb{R} \cdot \mathbb{R}^T\end{split}
 \end{equation*}
 \sphinxAtStartPar
@@ -608,20 +632,244 @@ so that
 \begin{split}\delta \theta_l = -\frac{1}{2} \varepsilon_{lij} \delta R_{ik} \, R_{jk} = - \frac{1}{2} \varepsilon_{lij} \delta \Theta_{ij}\end{split}
 \end{equation*}
 
-\subsection{Parametrizations}
-\label{\detokenize{ch/kinematics-rotations:parametrizations}}\label{\detokenize{ch/kinematics-rotations:classical-mechanics-kinematics-rotations-param}}
+\subsubsection{Parametrizations}
+\label{\detokenize{ch/kinematics-rotations-tensors:parametrizations}}\label{\detokenize{ch/kinematics-rotations-tensors:classical-mechanics-kinematics-rotations-param}}
 \sphinxAtStartPar
-Minimal sets of parameters to represent rotations have 3 parameters. However these sets of parameters are not regular over all the possible rotations, and the transformation becomes singular somewhere. {\hyperref[\detokenize{ch/kinematics-rotations:classical-mechanics-kinematics-rotations-param-quaternions}]{\sphinxcrossref{\DUrole{std,std-ref}{Quaternions}}}} provide a set of 4 parameters for a regular parametrization of rotations
+Minimal sets of parameters to represent rotations have 3 parameters. However these sets of parameters are not regular over all the possible rotations, and the transformation becomes singular somewhere. {\hyperref[\detokenize{ch/kinematics-rotations-tensors:classical-mechanics-kinematics-rotations-param-quaternions}]{\sphinxcrossref{\DUrole{std,std-ref}{Quaternions}}}} provide a set of 4 parameters for a regular parametrization of rotations
 
 
-\subsubsection{Euler angles}
-\label{\detokenize{ch/kinematics-rotations:euler-angles}}\label{\detokenize{ch/kinematics-rotations:classical-mechanics-kinematics-rotations-param-euler}}
+\paragraph{Euler angles}
+\label{\detokenize{ch/kinematics-rotations-tensors:euler-angles}}\label{\detokenize{ch/kinematics-rotations-tensors:classical-mechanics-kinematics-rotations-param-euler}}
 
-\subsubsection{Axis and rotation angle}
-\label{\detokenize{ch/kinematics-rotations:axis-and-rotation-angle}}\label{\detokenize{ch/kinematics-rotations:classical-mechanics-kinematics-rotations-param-axis}}
+\paragraph{Axis and rotation angle}
+\label{\detokenize{ch/kinematics-rotations-tensors:axis-and-rotation-angle}}\label{\detokenize{ch/kinematics-rotations-tensors:classical-mechanics-kinematics-rotations-param-axis}}
 
-\subsubsection{Quaternions}
-\label{\detokenize{ch/kinematics-rotations:quaternions}}\label{\detokenize{ch/kinematics-rotations:classical-mechanics-kinematics-rotations-param-quaternions}}
+\paragraph{Quaternions}
+\label{\detokenize{ch/kinematics-rotations-tensors:quaternions}}\label{\detokenize{ch/kinematics-rotations-tensors:classical-mechanics-kinematics-rotations-param-quaternions}}
+\sphinxstepscope
+
+
+\subsection{Rotation parametrization: axis and angle}
+\label{\detokenize{ch/kinematics-rotations-param-axis-angle:rotation-parametrization-axis-and-angle}}\label{\detokenize{ch/kinematics-rotations-param-axis-angle:classical-mechanics-kinematics-rotations-axis-angle}}\label{\detokenize{ch/kinematics-rotations-param-axis-angle::doc}}
+\sphinxAtStartPar
+Rotation tensor
+\begin{equation}\label{equation:ch/kinematics-rotations-param-axis-angle:eq:R:aa}
+\begin{split}\mathbb{R} = \mathbb{I} + \sin \theta \, \hat{n}_\times + ( 1 - \cos \theta ) \, \hat{n}_\times \hat{n}_\times \ ,\end{split}
+\end{equation}
+\sphinxAtStartPar
+Angular velocity
+\begin{equation*}
+\begin{split}\vec{\omega}_\times = \dot{\mathbb{R}} \cdot \mathbb{R}^T = \end{split}
+\end{equation*}
+\sphinxAtStartPar
+Linearization
+
+
+\subsubsection{Rotation tensor}
+\label{\detokenize{ch/kinematics-rotations-param-axis-angle:rotation-tensor}}\label{\detokenize{ch/kinematics-rotations-param-axis-angle:classical-mechanics-kinematics-rotations-axis-angle-rotation-tensor}}
+\sphinxAtStartPar
+The expression of the rotation tensor \(\mathbb{R}\) that rotates vector \(\vec{v}^0\) into \(\vec{v}\),
+\begin{equation*}
+\begin{split}\vec{v} = \mathbb{R} \cdot \vec{v}^0 \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+comes from little geometry and vector algebra. The rotation of an angle \(\theta\) around the axis determined by the  unit vector \(\hat{n}\) reads
+\begin{equation}\label{equation:ch/kinematics-rotations-param-axis-angle:eq:rotation:angle-axis:0}
+\begin{split}\vec{v} = \hat{n} v^0_{\parallel} + \hat{x} v^0_{\perp} \cos \theta + \hat{y} v^0_{\perp} \sin \theta \ ,\end{split}
+\end{equation}
+\sphinxAtStartPar
+with
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+\(v^0_{\parallel} = \hat{n} \cdot \vec{v}^0\),
+
+\item {} 
+\sphinxAtStartPar
+\(\hat{n} \times \vec{v}^0 = \hat{y} v^0_{\perp}\), and thus \(\hat{y} = \frac{\hat{n} \times \vec{v}^0}{v^0_{\perp}}\),
+
+\item {} 
+\sphinxAtStartPar
+\(\hat{x} = \hat{y} \times \hat{n}\), and thus \(v^0_{\perp} \hat{x} = v^0_{\perp} \frac{(\hat{n} \times \vec{v}^0)}{v^0_{\perp}} \times \hat{n} = - \hat{n} \times \left( \hat{n} \times \vec{v}^0 \right) = - \hat{n}_{\times} \hat{n}_{\times} \cdot \vec{v}^0\), where the dot product is meant between the \(\hat{n}_\times\) tensors representing vector products.
+
+\end{itemize}
+
+\sphinxAtStartPar
+Exploiting these expressions, the relation \eqref{equation:ch/kinematics-rotations-param-axis-angle:eq:rotation:angle-axis:0} between the vectors \(\vec{v}\), \(\vec{v}^0\) can be written in implicit tensor form. Different equivalent tensor expressions follows from the identity \(\hat{v}_\times \hat{v}_\times =  \vec{v} \otimes \vec{v} - |\vec{v}|^2 \mathbb{I} \),
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \vec{v}
+  & = \hat{n} v^0_{\parallel} + \hat{x} v^0_{\perp} \cos \theta + \hat{y} v^0_{\perp} \sin \theta = \\
+  & = \hat{n} \hat{n} \cdot \vec{v}^0 - \cos \theta \hat{n}_\times \hat{n}_\times \cdot \vec{v}^0 + \sin \theta \hat{n}_\times \cdot \vec{v}^0 = \\
+  & = \left[ \hat{n} \hat{n} - \cos \theta \hat{n}_\times \hat{n}_\times + \sin \theta \hat{n}_\times \right] \cdot \vec{v}^0 = \\
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+and thus
+\begin{equation*}
+\begin{split}\begin{aligned}
+ \mathbb{R}
+ & = \hat{n} \hat{n} - \cos \theta \hat{n}_\times \hat{n}_\times + \sin \theta \hat{n}_\times = \\
+ & = \mathbb{I}  + \sin \theta \, \hat{n}_\times + (1 - \cos \theta ) \, \hat{n}_\times \hat{n}_\times \ .
+\end{aligned}\end{split}
+\end{equation*}\subsubsection*{Proof of relation \protect\(\ \hat{v}_\times \hat{v}_{\times} = \vec{v} \otimes \vec{v} - |\vec{v}|^2 \mathbb{I} \protect\)}
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \hat{v}_\times \hat{v}_{\times}
+  & = \hat{e}^i \hat{e}_m \varepsilon_{ijk} v_j \varepsilon_{klm} v_l = \\
+  & = \hat{e}^i \hat{e}_m \left( \delta_{il} \delta_{jm} - \delta_{im} \delta_{jl} \right) v_j v_l  \ ,
+  & = \hat{e}^i \hat{e}_m \left( v_i v_m - v_j v_j \delta_{im} \right) = \\
+  & = \vec{v} \otimes \vec{v} - |\vec{v}|^2 \mathbb{I}
+\end{aligned}\end{split}
+\end{equation*}
+
+\subsubsection{Angular velocity}
+\label{\detokenize{ch/kinematics-rotations-param-axis-angle:angular-velocity}}\label{\detokenize{ch/kinematics-rotations-param-axis-angle:classical-mechanics-kinematics-rotations-axis-angle-angular-velocity}}
+\sphinxstepscope
+
+
+\subsection{Rotation parametrization: Euler’s angles}
+\label{\detokenize{ch/kinematics-rotations-param-euler:rotation-parametrization-euler-s-angles}}\label{\detokenize{ch/kinematics-rotations-param-euler:classical-mechanics-kinematics-rotations-euler}}\label{\detokenize{ch/kinematics-rotations-param-euler::doc}}
+
+\subsubsection{Rotation tensor}
+\label{\detokenize{ch/kinematics-rotations-param-euler:rotation-tensor}}\label{\detokenize{ch/kinematics-rotations-param-euler:classical-mechanics-kinematics-rotations-euler-rotation-tensor}}
+
+\subsubsection{Angular velocity}
+\label{\detokenize{ch/kinematics-rotations-param-euler:angular-velocity}}\label{\detokenize{ch/kinematics-rotations-param-euler:classical-mechanics-kinematics-rotations-euler-angular-velocity}}
+\sphinxstepscope
+
+
+\subsection{Rotation parametrization: quaternions}
+\label{\detokenize{ch/kinematics-rotations-param-quaternions:rotation-parametrization-quaternions}}\label{\detokenize{ch/kinematics-rotations-param-quaternions:classical-mechanics-kinematics-rotations-quaternions}}\label{\detokenize{ch/kinematics-rotations-param-quaternions::doc}}
+\sphinxAtStartPar
+Here quaternion parametrization of rotations is introducing the unitary quaternion
+\begin{equation}\label{equation:ch/kinematics-rotations-param-quaternions:eq:q:rot}
+\begin{split}\mathbf{q} = q_0 + \vec{q} = \cos \frac{\theta}{2} + \sin \frac{\theta}{2} \vec{q} \ ,\end{split}
+\end{equation}
+\sphinxAtStartPar
+into {\hyperref[\detokenize{ch/kinematics-rotations-param-axis-angle:classical-mechanics-kinematics-rotations-axis-angle}]{\sphinxcrossref{\DUrole{std,std-ref}{axis and angle parametrization}}}}.
+
+\sphinxAtStartPar
+\sphinxstylestrong{Normalization condition.}
+\begin{equation*}
+\begin{split}1 = q_0^2 + \vec{q} \cdot \vec{q}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Rotation tensor}
+\begin{equation*}
+\begin{split}\mathbb{R} = \mathbb{I} + 2 q_0 \vec{q}_\times + 2 \vec{q}_{\times} \vec{q}_{\times} \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Linearization}
+\begin{equation*}
+\begin{split}\Delta \mathbb{R} = 2 \Delta q_0 \vec{q}_\times + 2 q_0 \Delta \vec{q}_\times + 2 \Delta \vec{q}_\times \vec{q}_\times + 2 \vec{q}_\times \Delta \vec{q}_\times\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}\begin{aligned}
+    \vec{\theta}_{\Delta, \times} := & \ \Delta \mathbb{R} \cdot \mathbb{R}^T \\
+    \vec{\theta}_{\Delta} = & - 2 \vec{q} \Delta q_0 + 2 q_0 \Delta \vec{q} - 2 \vec{q}_\times \Delta \vec{q}
+  \end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Angular velocity}
+\begin{equation*}
+\begin{split}\begin{aligned}
+    \vec{\omega}_\times := & \ \dot{\mathbb{R}} \cdot \mathbb{R}^T  \\
+    \vec{\omega} = & - 2 \vec{q} \dot{q}_0 + 2 q_0 \dot{\vec{q}} - 2 \vec{q}_\times \dot{\vec{q}}
+  \end{aligned}\end{split}
+\end{equation*}
+
+\subsubsection{Rotation tensor}
+\label{\detokenize{ch/kinematics-rotations-param-quaternions:rotation-tensor}}\label{\detokenize{ch/kinematics-rotations-param-quaternions:classical-mechanics-kinematics-rotations-quaternions-rotation-tensor}}
+\sphinxAtStartPar
+Introducing the expression \eqref{equation:ch/kinematics-rotations-param-quaternions:eq:q:rot} of the unitary quaternion into expression \eqref{equation:ch/kinematics-rotations-param-axis-angle:eq:R:aa} of the rotation tensor written using {\hyperref[\detokenize{ch/kinematics-rotations-param-axis-angle:classical-mechanics-kinematics-rotations-axis-angle}]{\sphinxcrossref{\DUrole{std,std-ref}{axis and angle parametrization}}}}, and using trigonometric identities
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \sin \theta = \sin \left( 2 \frac{\theta}{2} \right) & = 2 \sin \frac{\theta}{2} \cos \frac{\theta}{2} \\
+  \cos \theta = \cos \left( 2 \frac{\theta}{2} \right) & =   \cos^2 \frac{\theta}{2} -   \sin^2 \frac{\theta}{2} = \\
+                                                       & = 2 \cos^2 \frac{\theta}{2} - 1                         = \\
+                                                       & = 1                         - 2 \sin^2 \frac{\theta}{2}
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+the expression of the rotation tensor becomes
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \mathbb{R}
+  & = \mathbb{I} + \sin \theta \hat{n}_\times + ( 1 - \cos \theta ) \hat{n}_{\times} \hat{n}_{\times} = \\
+  & = \mathbb{I} + 2 \sin \frac{\theta}{2} \cos \frac{\theta}{2} \hat{n}_\times + 2 \sin^2 \frac{\theta}{2} \hat{n}_{\times} \hat{n}_{\times} = \\
+  & = \mathbb{I} + 2 q_0 \vec{q}_\times + 2 \vec{q}_{\times} \vec{q}_{\times} \\
+\end{aligned}\end{split}
+\end{equation*}
+
+\subsubsection{Angular velocity}
+\label{\detokenize{ch/kinematics-rotations-param-quaternions:angular-velocity}}\label{\detokenize{ch/kinematics-rotations-param-quaternions:classical-mechanics-kinematics-rotations-quaternions-angular-velocity}}\begin{equation*}
+\begin{split}\begin{aligned}
+  \vec{\omega}_{\times} 
+  & = \dot{\mathbb{R}} \cdot \mathbb{R}^T = \\
+  & = \left( 2 \dot{q}_0 \vec{q}_\times + 2 q_0 \dot{\vec{q}}_{\times} + 2 \dot{\vec{q}}_\times \vec{q}_\times + 2 \vec{q}_\times \dot{\vec{q}}_\times \right) \cdot \left( \mathbb{I} - 2 q_0 \vec{q}_\times + 2 \vec{q}_{\times} \vec{q}_{\times} \right) = \\
+  & = 2 \dot{q}_0 \vec{q}_\times + 2 q_0 \dot{\vec{q}}_{\times} + 2 \dot{\vec{q}}_\times \vec{q}_\times + 2 \vec{q}_\times \dot{\vec{q}}_\times + \\
+  & \ \ - 4 \dot{q}_0 q_0 \vec{q}_\times \vec{q}_\times - 4 q_0^2 \dot{\vec{q}}_{\times} \vec{q}_\times - \underbrace{4 q_0 \dot{\vec{q}}_\times \vec{q}_\times \vec{q}_\times}_{(a)} - \underbrace{4 q_0 \vec{q}_\times \dot{\vec{q}}_\times \vec{q}_\times}_{-4 q_0 \left( \dot{\vec{q}} \cdot \vec{q} \right) \vec{q}_\times} +  \\
+  & \ \ + 4 \dot{q}_0 \underbrace{\vec{q}_\times \vec{q}_\times \vec{q}_\times}_{-|\vec{q}|^2 \vec{q}_\times} + \underbrace{4 q_0 \dot{\vec{q}}_{\times} \vec{q}_\times \vec{q}_\times}_{(a)} + 4 \dot{\vec{q}}_\times \underbrace{\vec{q}_\times \vec{q}_\times \vec{q}_\times}_{-|\vec{q}|^2 \vec{q}_\times} + \underbrace{4 \vec{q}_\times \dot{\vec{q}}_\times \vec{q}_\times \vec{q}_\times}_{-\left( \dot{\vec{q}} \cdot \vec{q} \right) \vec{q}_\times \vec{q}_\times} = \\
+  & = \underbrace{ 2 \dot{q}_0 \vec{q}_\times}_{(e)} + 2 q_0 \dot{\vec{q}}_{\times} + \underbrace{2 \dot{\vec{q}}_\times \vec{q}_\times}_{(c.1)} + 2 \vec{q}_\times \dot{\vec{q}}_\times + \\
+  & \ \ - 4 \underbrace{\dot{q}_0 q_0 \vec{q}_\times \vec{q}_\times}_{-(b)} - \underbrace{4 q_0^2 \dot{\vec{q}}_{\times} \vec{q}_\times}_{(c.2)} + \underbrace{4 q_0 \left( \dot{\vec{q}} \cdot \vec{q} \right) \vec{q}_\times}_{(d)} +  \\
+  & \ \ - \underbrace{4 \dot{q}_0 |\vec{q}|^2 \vec{q}_\times}_{ 4\dot{q}_0 \vec{q}_\times - 4 \dot{q}_0 q_0^2 \vec{q}_\times = 2(e)-(d)} - \underbrace{4 |\vec{q}|^2 \dot{\vec{q}}_\times \vec{q}_\times}_{(c.3)} - \underbrace{4\left( \dot{\vec{q}} \cdot \vec{q} \right) \vec{q}_\times \vec{q}_\times}_{(b)} = \\
+  & = -2 \dot{q}_0 \vec{q}_\times + 2 q_0 \dot{\vec{q}}_\times - 2 \dot{\vec{q}}_\times \vec{q}_\times + 2 \vec{q}_\times \dot{\vec{q}}_\times =  \\
+  & = \left[ - 2 \vec{q} \dot{q}_0 + 2 q_0 \dot{\vec{q}} - 2 \vec{q}_\times \dot{\vec{q}} \right]_\times
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+having used
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+\(\vec{q}_\times^T = - \vec{q}_\times\), \(\left( \vec{q}_\times \vec{q}_\times \right)^T = \vec{q}_\times \vec{q}_\times\)
+
+\item {} 
+\sphinxAtStartPar
+\(1 = q_0^2 + |\vec{q}|^2\), and thus \(\vec{q} \cdot \dot{\vec{q}} = - q_0 \dot{q}_0\)
+
+\item {} 
+\sphinxAtStartPar
+\(\vec{q}_\times \vec{q}_\times = \vec{q} \otimes \vec{q} - |\vec{q}|^2 \mathbb{I}\)
+
+\item {} 
+\sphinxAtStartPar
+\(\vec{q}_\times \vec{q}_\times \vec{q} = \underbrace{\vec{q}_\times \vec{q} \otimes \vec{q}}_{=\mathbb{0}} - |\vec{q}|^2 \vec{q}_{\times} = -|\vec{q}|^2 \vec{q}_{\times} \)
+
+\item {} 
+\sphinxAtStartPar
+\(\dot{\vec{q}}_\times \vec{q}_\times = \vec{q} \, \dot{\vec{q}} - \left( \dot{\vec{q}} \cdot \vec{q} \right) \, \mathbb{I}\)
+
+\item {} 
+\sphinxAtStartPar
+\(\vec{q}_\times \dot{\vec{q}}_\times = \dot{\vec{q}} \, \vec{q} - \left( \dot{\vec{q}} \cdot \vec{q} \right) \, \mathbb{I}\)
+
+\end{itemize}
+\subsubsection*{Proof \sphinxhyphen{} todo}
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+\((\vec{a}_\times \vec{b})_{\times} = \vec{a}_{\times} \vec{b}_\times - \vec{b}_\times \vec{a}_\times \)
+
+\end{itemize}
+\subsubsection*{Proof \protect\(\ (\vec{a}_\times \vec{b})_{\times} = \vec{a}_{\times} \vec{b}_\times - \vec{b}_\times \vec{a}_\times \protect\)}
+
+\sphinxAtStartPar
+Using
+\begin{equation*}
+\begin{split}(\vec{a} \times \vec{b}) \times \vec{c} + (\vec{b} \times \vec{c}) \times \vec{a} + (\vec{c} \times \vec{a}) \times \vec{b} = \vec{0} \end{split}
+\end{equation*}
+\sphinxAtStartPar
+(todo, prove it with index notation) it immediately follows the desired relation
+\begin{equation*}
+\begin{split}\begin{aligned}
+  (\vec{a}_\times \vec{b})_{\times} \vec{v}
+  & = ( \vec{a} \times \vec{b} ) \times \vec{v} = \\
+  & = - ( \vec{b} \times \vec{v} ) \times \vec{a} - ( \vec{v} \times \vec{a} ) \times \vec{b} = \\
+  & = \vec{a} \times ( \vec{b} \times \vec{v} ) - \vec{b} \times ( \vec{a} \times \vec{v} ) = \\
+  & = \left( \vec{a}_{\times} \vec{b}_\times - \vec{b}_\times \vec{a}_\times \right) \vec{v}
+\end{aligned}\end{split}
+\end{equation*}
 \sphinxstepscope
 
 

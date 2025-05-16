@@ -16,6 +16,11 @@ parts:
     - file: ch/kinematics-continuum
     - file: ch/kinematics-relative
     - file: ch/kinematics-rotations
+      sections:
+      - file: ch/kinematics-rotations-tensors
+      - file: ch/kinematics-rotations-param-axis-angle
+      - file: ch/kinematics-rotations-param-euler
+      - file: ch/kinematics-rotations-param-quaternions
   - file: ch/actions
     sections:
     - file: ch/actions-types
