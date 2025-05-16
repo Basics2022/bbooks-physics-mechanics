@@ -75,15 +75,6 @@ const thebe_selector_output = ".output, .cell_output"
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-NM2E14MQG1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-NM2E14MQG1');
-</script>
-
   
   
   <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
@@ -181,10 +172,16 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="kinematics-rigid.html">1.2. Rigid Body</a></li>
 <li class="toctree-l2"><a class="reference internal" href="kinematics-continuum.html">1.3. Continuous Medium</a></li>
 <li class="toctree-l2"><a class="reference internal" href="kinematics-relative.html">1.4. Relative Kinematics</a></li>
-<li class="toctree-l2"><a class="reference internal" href="kinematics-rotations.html">1.5. Rotations</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="kinematics-rotations.html">1.5. Rotations</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="kinematics-rotations-tensors.html">1.5.1. Tensor formalism for rotations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kinematics-rotations-param-axis-angle.html">1.5.2. Rotation parametrization: axis and angle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kinematics-rotations-param-euler.html">1.5.3. Rotation parametrization: Euler’s angles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kinematics-rotations-param-quaternions.html">1.5.4. Rotation parametrization: quaternions</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="actions.html">2. Actions</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="actions.html">2. Actions</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="actions-types.html">2.1. Force, Moment of a Force, Distributed Actions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="actions-work.html">2.2. Work and Power</a></li>
 <li class="toctree-l2"><a class="reference internal" href="actions-conservative.html">2.3. Conservative Actions</a></li>
@@ -193,7 +190,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="inertia.html">3. Inertia</a></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="dynamics.html">4. Dynamics</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="dynamics.html">4. Dynamics</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">4.1. Principles of Newtonian Mechanics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="dynamics-eom.html">4.2. Equations of Motion and Conservation Principles</a></li>
 <li class="toctree-l2"><a class="reference internal" href="dynamics-eom-point.html">4.3. Equations of motion of a point mass</a></li>
@@ -207,15 +204,15 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Analytical Mechanics</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="lagrange.html">5. Lagrangian Mechanics</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2 has-children"><a class="reference internal" href="lagrange-ii-type.html">5.1. Lagrange Equations of the Second Kind</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="lagrange.html">5. Lagrangian Mechanics</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="lagrange-ii-type.html">5.1. Lagrange Equations of the Second Kind</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="lagrange-point.html">5.1.1. Point</a></li>
 <li class="toctree-l3"><a class="reference internal" href="lagrange-points.html">5.1.2. System of points</a></li>
 <li class="toctree-l3"><a class="reference internal" href="lagrange-rigid-body.html">5.1.3. Rigid Body</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="lagrange-i-type.html">5.2. Lagrange Equations of the First Kind</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="lagrange-t.html">5.3. Lagrangian functions and time dependence</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="lagrange-t.html">5.3. Lagrangian functions and time dependence</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="lagrange-t-no.html">5.3.1. Lagrangian function with no explicit dependence on time</a></li>
 <li class="toctree-l3"><a class="reference internal" href="lagrange-t-explicit.html">5.3.2. Lagrangian function with explicit dependence on time</a></li>
 </ul>
