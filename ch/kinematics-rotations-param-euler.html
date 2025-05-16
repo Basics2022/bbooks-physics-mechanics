@@ -64,6 +64,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'ch/kinematics-rotations-param-euler';</script>
     <link rel="shortcut icon" href="../_static/favicon.svg"/>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -73,15 +75,6 @@ const thebe_selector_output = ".output, .cell_output"
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-NM2E14MQG1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-NM2E14MQG1');
-</script>
-
   
   
   <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
@@ -397,8 +390,46 @@ document.write(`
                   
   <div class="tex2jax_ignore mathjax_ignore section" id="rotation-parametrization-euler-s-angles">
 <span id="classical-mechanics-kinematics-rotations-euler"></span><h1><span class="section-number">1.5.3. </span>Rotation parametrization: Euler’s angles<a class="headerlink" href="#rotation-parametrization-euler-s-angles" title="Permalink to this heading">#</a></h1>
+<p>A generic rotation tensor can be written as a combination of 3 successive rotations. <strong>Euler’s angle parametrizations</strong> are built with three successive rotations around 1 axis of the intermediate reference frames. Two families of angles exist:</p>
+<ul class="simple">
+<li><p>proper Euler’s angles, with the first and the last rotation around axes with the same labels (e.g. <span class="math notranslate nohighlight">\(zxz\)</span>, <span class="math notranslate nohighlight">\(xyx\)</span>, <span class="math notranslate nohighlight">\(yzy\)</span>, <span class="math notranslate nohighlight">\(zyz\)</span>, <span class="math notranslate nohighlight">\(xzx\)</span>, <span class="math notranslate nohighlight">\(yxy\)</span>)</p></li>
+<li><p>Tait-Bryan (or Cardan) angles, with three rotations around three axes with different labels (e.g. <span class="math notranslate nohighlight">\(xyz\)</span>, <span class="math notranslate nohighlight">\(yzx\)</span>, <span class="math notranslate nohighlight">\(zxy\)</span>, <span class="math notranslate nohighlight">\(xzy\)</span>, <span class="math notranslate nohighlight">\(yxz\)</span>, <span class="math notranslate nohighlight">\(zyx\)</span>)</p></li>
+</ul>
+<p>Here, the expressions of rotation tensor and angular velocity are explicitly treated for the set of angles <span class="math notranslate nohighlight">\((\psi, \theta, \phi)\)</span> around axes <span class="math notranslate nohighlight">\(zyx\)</span>.</p>
 <div class="section" id="rotation-tensor">
 <span id="classical-mechanics-kinematics-rotations-euler-rotation-tensor"></span><h2><span class="section-number">1.5.3.1. </span>Rotation tensor<a class="headerlink" href="#rotation-tensor" title="Permalink to this heading">#</a></h2>
+<p>Three successive rotations are</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+&amp; \begin{cases}
+ \hat{x}_1 = \ \ \cos \psi \, \hat{x}_0 + \sin \psi \, \hat{y}_0 \\
+ \hat{y}_1 = -   \sin \psi \, \hat{x}_0 + \cos \psi \, \hat{y}_0 \\
+ \hat{z}_1 =                  \hat{z}_0                          \\
+\end{cases} \\
+&amp; \begin{cases}
+ \hat{x}_2 = \ \ \cos \theta \, \hat{x}_1 - \sin \theta \, \hat{z}_1  \\
+ \hat{y}_2 =                    \hat{y}_1                             \\
+ \hat{z}_2 = \ \ \sin \theta \, \hat{x}_1 + \cos \theta \, \hat{z}_1  \\
+\end{cases} \\
+&amp; \begin{cases}
+ \hat{x}_3 = \ \ \cos \phi \, \hat{x}_2 + \sin \phi \, \hat{y}_2 \\
+ \hat{y}_3 = -   \sin \phi \, \hat{x}_2 + \cos \phi \, \hat{y}_2 \\
+ \hat{z}_3 =                  \hat{z}_2                          \\
+\end{cases} \\
+\end{aligned}\end{split}\]</div>
+<p>Rotation of vector <span class="math notranslate nohighlight">\(\vec{v}^0 = v_x \hat{x}_0 + v_y \hat{y}_0 + v_z \hat{z}_0\)</span> into vector <span class="math notranslate nohighlight">\(\vec{v} = v_x \hat{x}_3 + v_y \hat{y}_3 + v_z \hat{z}_3\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+ \hat{x}_3 &amp; = \ \ \cos \phi \, \hat{x}_2 + \sin \phi \, \hat{y}_2 = \\
+           &amp; = \ \ \cos \phi \, \left( \cos \theta \, \hat{x}_1 - \sin \theta \, \hat{z}_1 \right) + \sin \phi \, \hat{y}_1 = \\
+           &amp; = \ \ \cos \phi \, \left( \cos \theta \left( \cos \psi \, \hat{x}_0 + \sin \psi \,  \hat{y}_0 \right) - \sin \theta \, \hat{z}_0 \right) + \sin \phi \left( - \sin \psi \, \hat{x}_0 + \hat{y}_0 \, \cos \psi \right) \\ 
+ \hat{y}_3 &amp; = -   \sin \phi \, \hat{x}_2 + \cos \phi \, \hat{y}_2 = \\
+           &amp; = -   \sin \phi \, \left( \cos \theta \, \hat{x}_1 - \sin \theta \, \hat{z}_1 \right) + \cos \phi \, \hat{y}_1 = \\
+           &amp; = -   \sin \phi \, \left( \cos \theta \left( \cos \psi \, \hat{x}_0 + \sin \psi \, \hat{y}_0 \right) - \sin \theta \, \hat{z}_0 \right) + \cos \phi \left(  -   \sin \psi \, \hat{x}_0 + \cos \psi \, \hat{y}_0 \right) = \\
+ \hat{z}_3 &amp; =                  \hat{z}_2                          = \\
+           &amp; = \sin \theta \, \hat{x}_1 + \cos \theta \, \hat{z}_1 = \\
+           &amp; = \sin \theta \left( \cos \psi \, \hat{x}_0 + \sin \psi \, \hat{y}_0 \right) + \cos \theta \hat{z}_0 \ .
+\end{aligned}\end{split}\]</div>
 </div>
 <div class="section" id="angular-velocity">
 <span id="classical-mechanics-kinematics-rotations-euler-angular-velocity"></span><h2><span class="section-number">1.5.3.2. </span>Angular velocity<a class="headerlink" href="#angular-velocity" title="Permalink to this heading">#</a></h2>
