@@ -384,13 +384,18 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rotation-tensor">1.5.1.1. Rotation tensor</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#successive-rotations">1.5.1.2. Successive rotations</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linearization-of-rotations">1.5.1.3. Linearization of rotations</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#parametrizations">1.5.1.4. Parametrizations</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#euler-angles">1.5.1.4.1. Euler angles</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#axis-and-rotation-angle">1.5.1.4.2. Axis and rotation angle</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quaternions">1.5.1.4.3. Quaternions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rotation-tensor">1.5.1.1. Rotation tensor</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rotation-of-a-vector">1.5.1.1.1. Rotation of a vector</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rotation-of-basis-and-change-of-components-of-given-vectors-and-tensors">1.5.1.1.2. Rotation of basis, and change of components of given vectors and tensors</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#angular-velocity-and-acceleration">1.5.1.2. Angular velocity and acceleration</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sequence-of-rotations">1.5.1.3. Sequence of rotations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linearization-of-rotations">1.5.1.4. Linearization of rotations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#parametrizations">1.5.1.5. Parametrizations</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#euler-angles">1.5.1.5.1. Euler angles</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#axis-and-rotation-angle">1.5.1.5.2. Axis and rotation angle</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quaternions">1.5.1.5.3. Quaternions</a></li>
 </ul>
 </li>
 </ul>
@@ -406,83 +411,239 @@ document.write(`
                   
   <div class="tex2jax_ignore mathjax_ignore section" id="tensor-formalism-for-rotations">
 <span id="classical-mechanics-kinematics-rotations-tensor"></span><h1><span class="section-number">1.5.1. </span>Tensor formalism for rotations<a class="headerlink" href="#tensor-formalism-for-rotations" title="Permalink to this heading">#</a></h1>
+<p>This section deals with the tensor formalism to represent rotations, its increment and angular velocity, and composition. First the expression of the rotation tensor rotating a Cartesian basis <span class="math notranslate nohighlight">\(\{ \hat{e}_i^0\}_i\)</span> into another Cartesian basis <span class="math notranslate nohighlight">\(\{ \hat{e}^1_j\}_j\)</span> is given, then angular velocity and angular acceleration are defined and their role in the description of the motion of rigid bodies is discussed.
+Then successive rotations are discussed: a rotation can be represented as the composition of many rotations, via dot tensor product of the rotation tensors, while the corresponding angular velocity can be written as the sum of the angular velocity of the successive relative rotations.</p>
 <div class="section" id="rotation-tensor">
-<h2><span class="section-number">1.5.1.1. </span>Rotation tensor<a class="headerlink" href="#rotation-tensor" title="Permalink to this heading">#</a></h2>
-<p>Given 2 Cartesian bases <span class="math notranslate nohighlight">\(\{ \hat{e}^0_i \}_{i=1:3}\)</span>, <span class="math notranslate nohighlight">\(\{ \hat{e}^1_j \}_{j=1:3}\)</span>, the rotation tensor providing the transformation</p>
+<span id="classical-mechanics-kinematics-rotations-tensor-components"></span><h2><span class="section-number">1.5.1.1. </span>Rotation tensor<a class="headerlink" href="#rotation-tensor" title="Permalink to this heading">#</a></h2>
+<p>Given 2 right-handed Cartesian bases <span class="math notranslate nohighlight">\(\{ \hat{e}^0_i \}_{i=1:3}\)</span>, <span class="math notranslate nohighlight">\(\{ \hat{e}^1_j \}_{j=1:3}\)</span>, a rotation transforming the first basis <span class="math notranslate nohighlight">\(\{ \hat{e}^0_i \}_i\)</span> into the second basis <span class="math notranslate nohighlight">\(\{ \hat{e}^1_j \}_j\)</span> exists, and can be represented by unitary tensor with unit determinant, the rotation tensor <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>.
+Given that for Cartesian bases (<strong>todo</strong> add link to Math:Vector Algebra)<a class="footnote-reference brackets" href="#vector-algebra-basis-transformation" id="id1">1</a></p>
 <div class="math notranslate nohighlight">
-\[\hat{e}^1_i = \mathbb{R}^{0 \rightarrow 1} \cdot \hat{e}^0_i \ ,\]</div>
-<p>is</p>
+\[\hat{e}_k^1 = \left( \hat{e}_k^1 \cdot \hat{e}^0_i \right) \hat{e}^0_i \ ,\]</div>
+<p>this expression can be recast using tensor formalism and introducing rotation tensor</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \hat{e}_k^1
+  &amp; = \left( \hat{e}_k^1 \cdot \hat{e}^0_i \right) \hat{e}^0_i = \\
+  &amp; = \left( \hat{e}_j^1 \cdot \hat{e}^0_i \right) \hat{e}^0_i \delta_{jk} = \\
+  &amp; = \left( \hat{e}_j^1 \cdot \hat{e}^0_i \right) \hat{e}^0_i \otimes \hat{e}^0_j \cdot \hat{e}^0_k = \\
+  &amp; = \mathbb{R}^{0 \rightarrow 1} \cdot \hat{e}^0_k \ ,
+\end{aligned}\end{split}\]</div>
+<p>having defined the rotation tensor <span class="math notranslate nohighlight">\(\mathbb{R}^{0 \rightarrow 1}\)</span> transforming the vectors of basis <span class="math notranslate nohighlight">\(\{ \hat{e}^0_i \}_i\)</span> into vectors of basis <span class="math notranslate nohighlight">\(\{ \hat{e}^1_j \}_j\)</span> as</p>
 <div class="math notranslate nohighlight">
 \[\mathbb{R}^{0 \rightarrow 1}
- = R_{ij}^{0 \rightarrow 1} \hat{e}^0_i \otimes \hat{e}^0_j  
- = R_{ij}^{0 \rightarrow 1} \hat{e}^1_i \otimes \hat{e}^1_j 
+ = R_{ij}^{0 \rightarrow 1} \hat{e}^0_i \otimes \hat{e}^0_j 
+ = \left( \hat{e}^0_i \cdot \hat{e}^1_j \right) \hat{e}^0_i \otimes \hat{e}^0_j
 \]</div>
-<p>with <span class="math notranslate nohighlight">\(R^{0 \rightarrow 1}_{ij} = \hat{e}^0_i \cdot \hat{e}^1_j\)</span>.</p>
-<p><strong>Angular velocity.</strong></p>
+<p>having defined the components of the rotation from <span class="math notranslate nohighlight">\(0\)</span> to <span class="math notranslate nohighlight">\(1\)</span> w.r.t. basis <span class="math notranslate nohighlight">\(0\)</span> as <span class="math notranslate nohighlight">\(R^{0 \rightarrow 1}_{ij} = \hat{e}^0_i \cdot \hat{e}^1_j\)</span>.</p>
+<div class="tip admonition">
+<p class="admonition-title">Rotation tensor is unitary with unit determinant: component relation</p>
+<p>As <span class="math notranslate nohighlight">\(\mathbb{R} \cdot \mathbb{R}^T = \mathbb{R}^T \cdot  \mathbb{R} =  \mathbb{I}\)</span>, it follows</p>
 <div class="math notranslate nohighlight">
-\[\vec{\omega}^{01}_{\times} = \mathbb{\Omega}^{01} = \dot{\mathbb{R}}^{01} \cdot \mathbb{R}^{01,T}\]</div>
-<p>Using index notation</p>
+\[R_{ij} R_{kj} = R_{ji} R_{jk} = \delta_{ik} \ .\]</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Proof<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Let’s prove the first relation, explicitly writing rotation tensor using basis <span class="math notranslate nohighlight">\(\{ \hat{e}^0_i \}_i\)</span>,</p>
 <div class="math notranslate nohighlight">
-\[\varepsilon_{ijk} \omega_j = \dot{R}_{ij} R_{kj}\]</div>
-<p>and the identities</p>
+\[\begin{split}\begin{aligned}
+  \delta_{ik} \hat{e}^0_i \otimes \hat{e}^0_k = \mathbb{I} 
+  &amp; = \mathbb{R} \cdot \mathbb{R}^T = \\
+  &amp; = \left( R_{ij}^{0 \rightarrow 1} \hat{e}^0_i \otimes \hat{e}^0_j  \right) \cdot \left( R_{lk}^{0 \rightarrow 1} \hat{e}^0_l \otimes \hat{e}^0_k \right)^T = \\
+  &amp; = \left( R_{ij}^{0 \rightarrow 1} \hat{e}^0_i \otimes \hat{e}^0_j  \right) \cdot \left( R_{kl}^{0 \rightarrow 1} \hat{e}^0_l \otimes \hat{e}^0_k \right) = \\
+  &amp; = R_{ij}^{0 \rightarrow 1} \, R_{kl}^{0 \rightarrow 1} \, \hat{e}^0_i \otimes \underbrace{\hat{e}^0_j  \cdot  \hat{e}^0_l}_{\delta_{jl}} \otimes \hat{e}^0_k  = \\
+  &amp; = R_{ij}^{0 \rightarrow 1} \, R_{kj}^{0 \rightarrow 1} \, \hat{e}^0_i \otimes \hat{e}^0_k \ ,
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text">and thus <span class="math notranslate nohighlight">\(\delta_{ik} = R_{ij}^{0 \rightarrow 1} \, R_{kj}^{0 \rightarrow 1} \)</span>.</p>
+<p class="sd-card-text"><strong>todo</strong> <em>Show that <span class="math notranslate nohighlight">\(\mathbb{I}\)</span> has the same components in all the (Cartesian?) reference frames. Show the rule of transformation of Ricci tensor also.</em></p>
+</div>
+</details></div>
+<div class="tip admonition">
+<p class="admonition-title">Components of a rotation tensor are the same in the original and transformed basis</p>
+<p>Components of the rotation tensor are the same if referred to the original or to the rotated basis.</p>
 <div class="math notranslate nohighlight">
-\[\varepsilon_{ijk} \varepsilon_{lmk} = \delta_{il} \delta_{jm} - \delta_{jl} \delta_{im}\]</div>
+\[\begin{split}\begin{aligned}
+  \mathbb{R}^{0 \rightarrow 1} 
+  &amp; = R^{0 \rightarrow 1, 00}_{ij} \hat{e}^0_i \otimes \hat{e}^0_j = \\
+  &amp; = \underbrace{ R^{0 \rightarrow 1, 00}_{ij}  \left( R^{0 \rightarrow 1, 00 }_{ik}\right.}_{= \delta_{jk}} \left. \hat{e}^1_k \right) \otimes \left( R^{0 \rightarrow 1, 00}_{jl} \hat{e}^1_l \right) = \\
+  &amp; = R^{0 \rightarrow 1, 00}_{kl} \hat{e}^1_k \otimes \hat{e}^1_{l} \ ,
+\end{aligned}\end{split}\]</div>
+<p>and thus the components w.r.t. basis <span class="math notranslate nohighlight">\(1\)</span> equal the component w.r.t. basis <span class="math notranslate nohighlight">\(0\)</span>, <span class="math notranslate nohighlight">\(R^{0 \rightarrow 1, 11} = R^{0\rightarrow 1, 00}\)</span>.
+Transforming only one set of vectors of the rank-2 tensor, the rotation tensor can be further written as</p>
 <div class="math notranslate nohighlight">
-\[\varepsilon_{ijk} \varepsilon_{ljk} = \delta_{il} \delta_{jj} - \delta_{ij} \delta_{jl} = 3 \delta_{il} - \delta_{il} = 2 \delta_{il}\]</div>
-<p>it follows</p>
+\[\mathbb{R}^{0 \rightarrow 1} = \delta_{jk} \hat{e}^1_k \otimes \hat{e}^0_j \ .\]</div>
+<p>It’s immediate to show the correctness of the last expression, showing the effect of tensor rotation on the vectors of the basis <span class="math notranslate nohighlight">\(0\)</span>,</p>
 <div class="math notranslate nohighlight">
-\[\varepsilon_{ilk} \varepsilon_{ijk} \omega_j = \varepsilon_{ilk} \dot{R}_{ij} R_{kj}\]</div>
+\[\mathbb{R}^{0 \rightarrow 1} \cdot \hat{e}^0_i = \left( \delta_{jk} \, \hat{e}^1_k \otimes \hat{e}^0_j \right) \cdot \hat{e}^0_i = \hat{e}^1_k \, \delta_{jk} \, \delta_{ji} = \hat{e}^1_i \ .\]</div>
+</div>
+<div class="section" id="rotation-of-a-vector">
+<h3><span class="section-number">1.5.1.1.1. </span>Rotation of a vector<a class="headerlink" href="#rotation-of-a-vector" title="Permalink to this heading">#</a></h3>
+<p>…</p>
+</div>
+<div class="section" id="rotation-of-basis-and-change-of-components-of-given-vectors-and-tensors">
+<h3><span class="section-number">1.5.1.1.2. </span>Rotation of basis, and change of components of given vectors and tensors<a class="headerlink" href="#rotation-of-basis-and-change-of-components-of-given-vectors-and-tensors" title="Permalink to this heading">#</a></h3>
+<p>…</p>
+</div>
+</div>
+<div class="section" id="angular-velocity-and-acceleration">
+<h2><span class="section-number">1.5.1.2. </span>Angular velocity and acceleration<a class="headerlink" href="#angular-velocity-and-acceleration" title="Permalink to this heading">#</a></h2>
+<p><strong>Angular velocity.</strong> Taken time derivative of the unitary relation <strong>todo</strong> <em>add ref</em>, the definition of angular velocity naturally arises. As the identity tensor is constant,</p>
 <div class="math notranslate nohighlight">
-\[2 \delta_{lj} \omega_j = \varepsilon_{ilk} \dot{R}_{ij} R_{kj}\]</div>
+\[\mathbb{0} = \dot{\mathbb{R}} \cdot \mathbb{R}^T + \mathbb{R} \cdot \dot{\mathbb{R}}^T \ ,\]</div>
+<p>and thus tensor <span class="math notranslate nohighlight">\(\dot{\mathbb{R}} \cdot \mathbb{R}^T\)</span> is anti-symmetric,</p>
 <div class="math notranslate nohighlight">
-\[\omega_l = \frac{1}{2} \varepsilon_{ilk} \dot{R}_{ij} R_{kj} = - \frac{1}{2} \varepsilon_{lik} \dot{R}_{ij} R_{kj} = -\frac{1}{2} \varepsilon_{lij} \Omega_{ij}\]</div>
-<p><strong>Angular acceleration.</strong> Angular acceleration, <span class="math notranslate nohighlight">\(\vec{\alpha}\)</span>, is the time derivative of angular velocity, <span class="math notranslate nohighlight">\(\vec{\omega}\)</span>,</p>
+\[\dot{\mathbb{R}} \cdot \mathbb{R}^T = - \mathbb{R} \cdot \dot{\mathbb{R}}^T = - \left( \dot{\mathbb{R}} \cdot \mathbb{R}^T \right)^T \ ,\]</div>
+<p>and thus it can be written as the <em>cross</em> (<strong>todo</strong> <em>check the def</em>) of a vector,</p>
+<div class="math notranslate nohighlight">
+\[\vec{\omega}_{\times} = \dot{\mathbb{R}} \cdot \mathbb{R}^T \ ,\]</div>
+<p>defined angular velocity.</p>
+<p>As it will be clear in the <a class="reference internal" href="#classical-mechanics-kinematics-rotations-tensor-successive"><span class="std std-ref">section about successive rotations</span></a>, the angular velocity <span class="math notranslate nohighlight">\(\vec{\omega}^{1/0}\)</span> of a reference frame <span class="math notranslate nohighlight">\(1\)</span> w.r.t. a reference frame <span class="math notranslate nohighlight">\(0\)</span> is defined by the relation</p>
+<div class="math notranslate nohighlight">
+\[\vec{\omega}^{1/0}_{\times} := \mathbb{\Omega}^{1/0} = \dfrac{{}^0 d }{d t}\mathbb{R}^{0\rightarrow 1} \cdot \mathbb{R}^{1 \rightarrow 0} \ ,\]</div>
+<p>having replaced the trasponse tensor with the tensor of the inverse rotation <span class="math notranslate nohighlight">\(1 \rightarrow 0\)</span>.</p>
+<p>Using the properties of Dirac’s delta and Ricci’s tensor, it’s possible to retrive the angular velocity vector <span class="math notranslate nohighlight">\(\vec{\omega}\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[\omega^0_l = \frac{1}{2} \varepsilon^0_{ilk} \dot{R}_{ij} R_{kj} = - \frac{1}{2} \varepsilon_{lik} \dot{R}_{ij} R_{kj} = -\frac{1}{2} \varepsilon_{lij} \Omega_{ij}\]</div>
+<p><strong>todo</strong></p>
+<ul>
+<li><div class="math notranslate nohighlight">
+\[\omega^1_k = \dots\]</div>
+</li>
+<li><p><em>Explicitly discuss the two common uses of rotation tensors: 1. rotate a given vector into a new vector; 2. write components of a given vector w.r.t. 2 different Cartesian bases.</em></p></li>
+</ul>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Proof<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Using index notation</p>
+<div class="math notranslate nohighlight">
+\[\varepsilon_{ijk} \omega^0_j \hat{e}^0_i \hat{e}^0_k = \dot{R}_{ij} R_{kj} \hat{e}^0_i \hat{e}^0_j \ ,\]</div>
+<p class="sd-card-text">and the identities</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \varepsilon_{ijk} \varepsilon_{lmk} &amp; = \delta_{il} \delta_{jm} - \delta_{jl} \delta_{im} \\
+  \varepsilon_{ijk} \varepsilon_{ljk} &amp; = \delta_{il} \delta_{jj} - \delta_{ij} \delta_{jl} = 3 \delta_{il} - \delta_{il} = 2 \delta_{il}
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text">it follows</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \varepsilon_{ilk} \varepsilon_{ijk} \omega^0_j &amp; = \varepsilon_{ilk} \dot{R}_{ij} R_{kj} \\
+  2 \delta_{lj} \omega^0_j &amp; = \varepsilon_{ilk} \dot{R}_{ij} R_{kj}
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text">and eventually</p>
+<div class="math notranslate nohighlight">
+\[\omega^0_l = \frac{1}{2} \varepsilon_{ilk} \dot{R}_{ij} R_{kj} = - \frac{1}{2} \varepsilon_{lik} \dot{R}_{ij} R_{kj} = -\frac{1}{2} \varepsilon_{lij} \Omega_{ij} \ .\]</div>
+</div>
+</details><p><strong>Angular acceleration.</strong> Angular acceleration, <span class="math notranslate nohighlight">\(\vec{\alpha}\)</span>, is the time derivative of angular velocity, <span class="math notranslate nohighlight">\(\vec{\omega}\)</span>,</p>
 <div class="math notranslate nohighlight">
 \[\vec{\alpha} = \dot{\vec{\omega}} \ .\]</div>
 </div>
-<div class="section" id="successive-rotations">
-<h2><span class="section-number">1.5.1.2. </span>Successive rotations<a class="headerlink" href="#successive-rotations" title="Permalink to this heading">#</a></h2>
-<p><strong>Orientation.</strong> Given 3 Cartesian bases <span class="math notranslate nohighlight">\(\{ \hat{e}^0_i \}_{i=1:3}\)</span>, <span class="math notranslate nohighlight">\(\{ \hat{e}^1_j \}_{j=1:3}\)</span>, <span class="math notranslate nohighlight">\(\{ \hat{e}^2_k \}_{k=1:3}\)</span>,</p>
+<div class="section" id="sequence-of-rotations">
+<span id="classical-mechanics-kinematics-rotations-tensor-successive"></span><h2><span class="section-number">1.5.1.3. </span>Sequence of rotations<a class="headerlink" href="#sequence-of-rotations" title="Permalink to this heading">#</a></h2>
+<p>A rotation may be represented as the composition of successive rotations. The vectors of a Cartesian basis <span class="math notranslate nohighlight">\(\{ \vec{e}_i^0 \}_i\)</span> can be transformed into the vectors of the Cartesian basis <span class="math notranslate nohighlight">\(\{ \vec{e}_k^2 \}_k\)</span>, first rotating <span class="math notranslate nohighlight">\(0\)</span> into an intermediate basis <span class="math notranslate nohighlight">\(1\)</span>, and then rotating <span class="math notranslate nohighlight">\(1\)</span> into <span class="math notranslate nohighlight">\(2\)</span>.</p>
+<div class="math notranslate nohighlight" id="equation-eq-rot-sequence-rot">
+<span class="eqno">(1.10)<a class="headerlink" href="#equation-eq-rot-sequence-rot" title="Permalink to this equation">#</a></span>\[\mathbb{R}^{0 \rightarrow 2} = \mathbb{R}^{1 \rightarrow 2} \cdot \mathbb{R}^{0 \rightarrow 1}\]</div>
+<p>Angular velocity of the reference frame <span class="math notranslate nohighlight">\(2\)</span> w.r.t. <span class="math notranslate nohighlight">\(0\)</span> can be written as the sum of the relative angular velocity of the intermediate rotations,</p>
+<div class="math notranslate nohighlight" id="equation-eq-rot-sequence-vel">
+<span class="eqno">(1.11)<a class="headerlink" href="#equation-eq-rot-sequence-vel" title="Permalink to this equation">#</a></span>\[\vec{\omega}^{2/0} = \vec{\omega}^{2/1} + \vec{\omega}^{1/0}\]</div>
+<p>The same relation holds for angular acceleration</p>
+<div class="math notranslate nohighlight" id="equation-eq-rot-sequence-acc">
+<span class="eqno">(1.12)<a class="headerlink" href="#equation-eq-rot-sequence-acc" title="Permalink to this equation">#</a></span>\[\vec{\alpha}^{2/0} = \vec{\alpha}^{2/1} + \vec{\alpha}^{1/0}\]</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Orientation<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Given 3 Cartesian bases <span class="math notranslate nohighlight">\(\{ \hat{e}^0_i \}_{i=1:3}\)</span>, <span class="math notranslate nohighlight">\(\{ \hat{e}^1_j \}_{j=1:3}\)</span>, <span class="math notranslate nohighlight">\(\{ \hat{e}^2_k \}_{k=1:3}\)</span>,</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
  \hat{e}^2_i 
   &amp; = \mathbb{R}^{1 \rightarrow 2} \cdot \hat{e}^1_i = \\ 
   &amp; = \mathbb{R}^{1 \rightarrow 2} \cdot \mathbb{R}^{0 \rightarrow 1} \cdot\hat{e}^0_i 
 \end{aligned} \ , \end{split}\]</div>
-<p>i.e composition of rotations holds</p>
+<p class="sd-card-text">i.e composition of rotations holds</p>
 <div class="math notranslate nohighlight">
 \[\mathbb{R}^{0 \rightarrow 2} = \mathbb{R}^{1 \rightarrow 2} \cdot \mathbb{R}^{0 \rightarrow 1} \ .\]</div>
-<p><strong>Angular velocity.</strong> Time derivative w.r.t. reference frame 0 is indicated as the standard time derivative</p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Angular velocity<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Indicating with the apex a time derivative performed keeping constant the vectors of the basis, the following relations hold for vectors and tensors</p>
 <div class="math notranslate nohighlight">
-\[\dot{a} = \dfrac{d a}{d t} = \dfrac{{}^0 d a}{d t} = \dfrac{{}^1 d}{dt} + \vec{\omega}_{1/0} \times \ ,\]</div>
+\[\dfrac{d}{dt}{\vec{a}} = \dfrac{d }{d t} \left( a^1_i \hat{e}^1_i  \right) = \dot{a}^1_i \hat{e}^1_i + a^1_i \vec{\omega}^{1/0} \times \hat{e}^1_i = \dfrac{{}^1 d}{d t} \vec{a} + \vec{\omega}^{1/0} \times \vec{a} \]</div>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
-\dfrac{d}{dt} \mathbb{R}^{21} 
-  &amp; = \frac{d}{dt} \left[ R^{21}_{ik} \hat{e}^1_i \otimes \hat{e}^1_k \right] = \\
-  &amp; = \dot{R}^{21}_{ik} \hat{e}^1_i \otimes \hat{e}^1_k + \mathbb{\Omega}^{10} \cdot  \mathbb{R}^{21} - \mathbb{R}^{21} \cdot \mathbb{\Omega}^{10} = \\
-  &amp; = \dfrac{{}^1 d}{dt} \mathbb{R}^{21} + \mathbb{\Omega}^{10} \cdot  \mathbb{R}^{21} - \mathbb{R}^{21} \cdot \mathbb{\Omega}^{10} = \\
+\dfrac{d}{dt} \mathbb{R}^{1 \rightarrow 2} 
+  &amp; = \frac{d}{dt} \left[ R^{1 \rightarrow 2}_{ik} \hat{e}^1_i \otimes \hat{e}^1_k \right] = \\
+  &amp; = \dot{R}^{1\rightarrow 2}_{ik} \hat{e}^1_i \otimes \hat{e}^1_k + \mathbb{\Omega}^{1/0} \cdot  \mathbb{R}^{1 \rightarrow 2} - \mathbb{R}^{1 \rightarrow 2} \cdot \mathbb{\Omega}^{1/0} = \\
+  &amp; = \dfrac{{}^1 d}{dt} \mathbb{R}^{1 \rightarrow 2} + \mathbb{\Omega}^{1/0} \cdot  \mathbb{R}^{1 \rightarrow 2} - \mathbb{R}^{1 \rightarrow 2} \cdot \mathbb{\Omega}^{1/0} \ .
 \end{aligned}\end{split}\]</div>
+<p class="sd-card-text"><strong>todo</strong> <em>Show details of the evaluation of the last term, exploiting index notation and properties permutation properties of indices of Ricci’s symbols, related to properties of vector product.</em></p>
+<p class="sd-card-text">Using the latter relation, it’s possible to prove the angular velocity of a composite rotation is the sum of the relatvie angularvelocities of the intermediate rotations.</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
- \mathbb{\Omega}^{20}
- &amp; = \dot{\mathbb{R}}^{20} \cdot \mathbb{R}^{20, T} = \\
- &amp; = \frac{d}{dt} \left( \mathbb{R}^{21} \cdot \mathbb{R}^{10} \right) \cdot \mathbb{R}^{20, T} = \\
- &amp; = \left\{ \left[ \dfrac{{}^1 d}{dt} \mathbb{R}^{21} + \mathbb{\Omega}^{10} \cdot  \mathbb{R}^{21} - \mathbb{R}^{21} \cdot \mathbb{\Omega}^{10} \right] \cdot \mathbb{R}^{10} + \mathbb{R}^{21} \cdot \dot{\mathbb{R}}^{10}  \right\} \cdot \mathbb{R}^{01} \cdot \mathbb{R}^{12} = \\
- &amp; =  \dfrac{{}^1 d}{dt} \mathbb{R}^{21} \cdot \mathbb{R}^{12} + \mathbb{\Omega}^{10} = \\
- &amp; = \mathbb{\Omega}^{21} + \mathbb{\Omega}^{10} \ .
+ \mathbb{\Omega}^{2/0}
+ &amp; = \dot{\mathbb{R}}^{0 \rightarrow 2} \cdot \mathbb{R}^{2 \rightarrow 0} = \\
+ &amp; = \frac{d}{dt} \left( \mathbb{R}^{1 \rightarrow 2} \cdot \mathbb{R}^{0 \rightarrow 1} \right) \cdot \mathbb{R}^{2 \rightarrow 0} = \\
+ &amp; = \left\{ \left[ \dfrac{{}^1 d}{dt} \mathbb{R}^{1 \rightarrow 2} + \mathbb{\Omega}^{1/0} \cdot  \mathbb{R}^{1 \rightarrow 2} - \mathbb{R}^{1 \rightarrow 2} \cdot \mathbb{\Omega}^{1/0} \right] \cdot \mathbb{R}^{0 \rightarrow 1} + \mathbb{R}^{1 \rightarrow 2} \cdot \dot{\mathbb{R}}^{0 \rightarrow 1}  \right\} \cdot \mathbb{R}^{1 \rightarrow 0} \cdot \mathbb{R}^{2 \rightarrow 1} = \\
+ &amp; =\left[ \dfrac{{}^1 d}{dt} \mathbb{R}^{1 \rightarrow 2} + \mathbb{\Omega}^{1/0} \cdot  \mathbb{R}^{1 \rightarrow 2} - \mathbb{R}^{1 \rightarrow 2} \cdot \mathbb{\Omega}^{1/0} \right] \cdot \mathbb{R}^{2 \rightarrow 1} + \mathbb{R}^{1 \rightarrow 2} \cdot \mathbb{\Omega}^{1 / 0} \cdot \mathbb{R}^{2 \rightarrow 1} = \\
+ &amp; =  \dfrac{{}^1 d}{dt} \mathbb{R}^{1 \rightarrow 2} \cdot \mathbb{R}^{2 \rightarrow 1} + \mathbb{\Omega}^{1/0} = \\
+ &amp; = \mathbb{\Omega}^{2/1} + \mathbb{\Omega}^{1/0} \ .
 \end{aligned}\end{split}\]</div>
-<p>so that addition of relative angular velocity holds</p>
+<p class="sd-card-text">so that addition of relative angular velocity holds</p>
 <div class="math notranslate nohighlight">
 \[\mathbb{\Omega}^{20} = \mathbb{\Omega}^{21} + \mathbb{\Omega}^{10} \qquad , \qquad \vec{\omega}_{2/0} = \vec{\omega}_{2/1} + \vec{\omega}_{1/0} \ .\]</div>
-<p><strong>Angular acceleration.</strong> Time derivative of angular velocity composition provides the addition of relative angular accelerations</p>
+</div>
+</details><div class="proof example admonition" id="example-0">
+<p class="admonition-title"><span class="caption-number">Example 1.1 </span> (Explicit form of time derivative of rotation tensor)</p>
+<div class="example-content section" id="proof-content">
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+ \dot{\mathbb{R}}^{1 \rightarrow 2} 
+ &amp; = \dfrac{{}^1 d}{dt} \mathbb{R}^{1 \rightarrow 2} + \mathbb{\Omega}^{1/0} \cdot  \mathbb{R}^{1 \rightarrow 2} - \mathbb{R}^{1 \rightarrow 2} \cdot \mathbb{\Omega}^{1/0} = &amp; (1) \\
+ &amp; = \left[ \mathbb{\Omega}^{2/1} + \mathbb{\Omega}^{1/0} \right] \cdot  \mathbb{R}^{1 \rightarrow 2} - \mathbb{R}^{1 \rightarrow 2} \cdot \mathbb{\Omega}^{1/0} \ .
+\end{aligned}\end{split}\]</div>
+<p>having used <span class="math notranslate nohighlight">\((1)\)</span> <span class="math notranslate nohighlight">\(\mathbb{\Omega}^{2/1} = \frac{{}^1 d}{dt} \mathbb{R}^{1 \rightarrow 2} \cdot \mathbb{R}^{2 \rightarrow 1}\)</span></p>
+</div>
+</div><div class="proof example admonition" id="example-1">
+<p class="admonition-title"><span class="caption-number">Example 1.2 </span> (Sequence of three rotations)</p>
+<div class="example-content section" id="proof-content">
+<p><strong>todo</strong></p>
+</div>
+</div><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Angular acceleration<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Time derivative of angular velocity composition provides the addition of relative angular accelerations</p>
 <div class="math notranslate nohighlight">
 \[\dfrac{{}^0 d}{dt} \vec{\omega}_{2/0} = \dfrac{{}^0 d}{dt} \vec{\omega}_{2/1} + \dfrac{{}^0 d}{dt} \vec{\omega}_{1/0} \ ,\]</div>
-<p>or</p>
+<p class="sd-card-text">or</p>
 <div class="math notranslate nohighlight">
 \[\vec{\alpha}_{2/0} = \vec{\alpha}_{2/1} + \vec{\alpha}_{1/0} \ .\]</div>
 </div>
+</details></div>
 <div class="section" id="linearization-of-rotations">
-<h2><span class="section-number">1.5.1.3. </span>Linearization of rotations<a class="headerlink" href="#linearization-of-rotations" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">1.5.1.4. </span>Linearization of rotations<a class="headerlink" href="#linearization-of-rotations" title="Permalink to this heading">#</a></h2>
+<p><strong>todo</strong> Take care of components. Here referred to <span class="math notranslate nohighlight">\(0\)</span> reference frame</p>
+<ul class="simple">
+<li><p>explicitly write components in the original and rotated reference frame</p></li>
+<li><p>deal with intermediate rotations: does increment of <span class="math notranslate nohighlight">\(\mathbb{R}^{i \rightarrow j}\)</span> have simple expression with “relative variation”, keeping constant the vectors of the original basis <span class="math notranslate nohighlight">\(i\)</span>, something like <span class="math notranslate nohighlight">\({}^i \delta \vec{\theta}_\times = {}^i \delta \mathbb{R} \cdot \mathbb{R}\)</span> General expression?</p></li>
+</ul>
 <div class="math notranslate nohighlight">
 \[\mathbb{I} = \mathbb{R} \cdot \mathbb{R}^T\]</div>
 <p>Increment</p>
@@ -496,16 +657,23 @@ document.write(`
 \[\delta \theta_l = -\frac{1}{2} \varepsilon_{lij} \delta R_{ik} \, R_{jk} = - \frac{1}{2} \varepsilon_{lij} \delta \Theta_{ij}\]</div>
 </div>
 <div class="section" id="parametrizations">
-<span id="classical-mechanics-kinematics-rotations-param"></span><h2><span class="section-number">1.5.1.4. </span>Parametrizations<a class="headerlink" href="#parametrizations" title="Permalink to this heading">#</a></h2>
+<span id="classical-mechanics-kinematics-rotations-param"></span><h2><span class="section-number">1.5.1.5. </span>Parametrizations<a class="headerlink" href="#parametrizations" title="Permalink to this heading">#</a></h2>
 <p>Minimal sets of parameters to represent rotations have 3 parameters. However these sets of parameters are not regular over all the possible rotations, and the transformation becomes singular somewhere. <a class="reference internal" href="#classical-mechanics-kinematics-rotations-param-quaternions"><span class="std std-ref">Quaternions</span></a> provide a set of 4 parameters for a regular parametrization of rotations</p>
 <div class="section" id="euler-angles">
-<span id="classical-mechanics-kinematics-rotations-param-euler"></span><h3><span class="section-number">1.5.1.4.1. </span>Euler angles<a class="headerlink" href="#euler-angles" title="Permalink to this heading">#</a></h3>
+<span id="classical-mechanics-kinematics-rotations-param-euler"></span><h3><span class="section-number">1.5.1.5.1. </span>Euler angles<a class="headerlink" href="#euler-angles" title="Permalink to this heading">#</a></h3>
 </div>
 <div class="section" id="axis-and-rotation-angle">
-<span id="classical-mechanics-kinematics-rotations-param-axis"></span><h3><span class="section-number">1.5.1.4.2. </span>Axis and rotation angle<a class="headerlink" href="#axis-and-rotation-angle" title="Permalink to this heading">#</a></h3>
+<span id="classical-mechanics-kinematics-rotations-param-axis"></span><h3><span class="section-number">1.5.1.5.2. </span>Axis and rotation angle<a class="headerlink" href="#axis-and-rotation-angle" title="Permalink to this heading">#</a></h3>
 </div>
 <div class="section" id="quaternions">
-<span id="classical-mechanics-kinematics-rotations-param-quaternions"></span><h3><span class="section-number">1.5.1.4.3. </span>Quaternions<a class="headerlink" href="#quaternions" title="Permalink to this heading">#</a></h3>
+<span id="classical-mechanics-kinematics-rotations-param-quaternions"></span><h3><span class="section-number">1.5.1.5.3. </span>Quaternions<a class="headerlink" href="#quaternions" title="Permalink to this heading">#</a></h3>
+<hr class="footnotes docutils" />
+<dl class="footnote brackets">
+<dt class="label" id="vector-algebra-basis-transformation"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>In general, basis transformation rely on the reciprocal basis,
+<span class="math notranslate nohighlight">\(\mathbf{b}^j\)</span>, defined as those set of vectors <span class="math notranslate nohighlight">\(\mathbf{b}^j \cdot \mathbf{b}_i = \delta_i^j\)</span>. A vector <span class="math notranslate nohighlight">\(\mathbf{w}\)</span> can be written using two different bases <span class="math notranslate nohighlight">\(\{ \mathbf{u}_i \}_i\)</span> and <span class="math notranslate nohighlight">\(\{ \mathbf{v}_j \}_j\)</span>, as <span class="math notranslate nohighlight">\(\mathbf{w} = u^i \mathbf{u}_i = v^j \mathbf{v}_j\)</span>. The vectors of a basis can be written as a linear combinations of the vectors of the other basis, namely <span class="math notranslate nohighlight">\(\mathbf{v}_j = T^i_j \mathbf{u}_i\)</span>, or <span class="math notranslate nohighlight">\(\mathbf{u}_i = \tilde{T}^{j}_i \mathbf{v}_j\)</span>, using the inverse transformation <span class="math notranslate nohighlight">\(T^{-1} := \tilde{T}\)</span>, defined as <span class="math notranslate nohighlight">\(\tilde{T}^k_i T^i_j = \delta^k_j\)</span>. Exploiting the definition of the reciprocal basis, it should be not hard to prove that <span class="math notranslate nohighlight">\(T^i_j = \mathbf{v}_j \cdot \mathbf{u}^i\)</span> and <span class="math notranslate nohighlight">\(\tilde{T}^j_i = \mathbf{v}^j \cdot \mathbf{u}_i\)</span>. As the reciprocal basis of a Cartesian basis is the basis itself (<span class="math notranslate nohighlight">\(\mathbf{e}^j = g^{ij} \mathbf{e}_i\)</span>, with <span class="math notranslate nohighlight">\(g_{ij} = g^{ij} = \delta_{ij}\)</span>), the components of the transformation between two Cartesian bases read <span class="math notranslate nohighlight">\(T_j^i = \mathbf{u}_i \cdot \mathbf{v}_j\)</span>, while the inverse transform involves the transpose, <span class="math notranslate nohighlight">\(\tilde{T} = T^T\)</span>: <span class="math notranslate nohighlight">\(\mathbf{v}_j = T_j^i \mathbf{u}_i = \left( \mathbf{v}_j \cdot \mathbf{u}_i \right) \mathbf{u}_i\)</span>, or <span class="math notranslate nohighlight">\(\mathbf{u}_i = T_i^j \mathbf{v}_j = \left( \mathbf{u}_i \cdot \mathbf{v}_j \right) \mathbf{v}_j\)</span>.</p>
+</dd>
+</dl>
 </div>
 </div>
 </div>
@@ -573,13 +741,18 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rotation-tensor">1.5.1.1. Rotation tensor</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#successive-rotations">1.5.1.2. Successive rotations</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linearization-of-rotations">1.5.1.3. Linearization of rotations</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#parametrizations">1.5.1.4. Parametrizations</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#euler-angles">1.5.1.4.1. Euler angles</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#axis-and-rotation-angle">1.5.1.4.2. Axis and rotation angle</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quaternions">1.5.1.4.3. Quaternions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rotation-tensor">1.5.1.1. Rotation tensor</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rotation-of-a-vector">1.5.1.1.1. Rotation of a vector</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rotation-of-basis-and-change-of-components-of-given-vectors-and-tensors">1.5.1.1.2. Rotation of basis, and change of components of given vectors and tensors</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#angular-velocity-and-acceleration">1.5.1.2. Angular velocity and acceleration</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sequence-of-rotations">1.5.1.3. Sequence of rotations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linearization-of-rotations">1.5.1.4. Linearization of rotations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#parametrizations">1.5.1.5. Parametrizations</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#euler-angles">1.5.1.5.1. Euler angles</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#axis-and-rotation-angle">1.5.1.5.2. Axis and rotation angle</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quaternions">1.5.1.5.3. Quaternions</a></li>
 </ul>
 </li>
 </ul>

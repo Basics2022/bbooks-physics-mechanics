@@ -3,7 +3,7 @@
 
 Here quaternion parametrization of rotations is introducing the unitary quaternion
 
-$$\mathbf{q} = q_0 + \vec{q} = \cos \frac{\theta}{2} + \sin \frac{\theta}{2} \vec{q} \ ,$$ (eq:q:rot)
+$$\mathbf{q} = q_0 + \vec{q} = \cos \frac{\theta}{2} + \sin \frac{\theta}{2} \vec{n} \ ,$$ (eq:q:rot)
 
 into [axis and angle parametrization](classical-mechanics:kinematics:rotations:axis-angle).
 

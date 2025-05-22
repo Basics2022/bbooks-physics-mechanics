@@ -61,3 +61,37 @@ $$\begin{aligned}
 
 (classical-mechanics:kinematics:rotations:axis-angle:angular-velocity)=
 ## Angular velocity
+
+$$
+  \vec{\omega} = \dot{\theta} \,  \hat{n} + \sin \theta \, \dot{\hat{n}} - \left( 1 - \cos \theta \right) \,  \hat{n}\times \dot{\hat{n}}
+$$
+
+```{dropdown} Proof
+
+Using the expression of the [angular velocity using unitary quaternion parametrization](classical-mechanics:kinematics:rotations:quaternions:angular-velocity),
+
+$$\mathbf{q} = q_0 + \vec{q} = \cos \frac{\theta}{2} + \sin \frac{\theta}{2} \, \hat{n} \ .$$
+
+and
+
+$$\vec{\omega} = - 2 \, \vec{q} \, \dot{q}_0 + 2 \, q_0 \, \dot{\vec{q}} - 2 \, \vec{q} \times \dot{\vec{q}}$$
+
+with
+
+$$\begin{aligned}
+  \dot{q}_0     & = - \frac{\dot{\theta}}{2} \sin \frac{\theta}{2} \\
+  \dot{\vec{q}} & = \frac{\dot{\theta}}{2} \cos \frac{\theta}{2} \hat{n} + \sin \frac{\theta}{2} \dot{\hat{n}}
+\end{aligned}$$
+
+$$\begin{aligned}
+  \vec{\omega}
+  & = - 2 \, \vec{q} \, \dot{q}_0 + 2 \, q_0 \, \dot{\vec{q}} - 2 \, \vec{q} \times \dot{\vec{q}} = \\
+  & = - 2 \, \sin \frac{\theta}{2} \hat{n} \left( -\frac{\dot{\theta}}{2} \sin \frac{\theta}{2} \right) + 2 \cos \frac{\theta}{2} \left( \frac{\dot{\theta}}{2} \cos \frac{\theta}{2} \hat{n} + \sin \frac{\theta}{2} \dot{\hat{n}} \right) - 2 \, \sin \frac{\theta}{2} \hat{n} \times \left(  \frac{\dot{\theta}}{2} \cos \frac{\theta}{2} \hat{n} + \sin \frac{\theta}{2} \dot{\hat{n}} \right) = \\
+  & = \dot{\theta} \,  \hat{n} + \sin \theta \, \dot{\hat{n}} - \left( 1 - \cos \theta \right) \,  \hat{n}\times \dot{\hat{n}}
+\end{aligned}$$
+
+having used $\cos \theta = \cos^2 \frac{\theta}{2} - \sin^2 \frac{\theta}{2} = 1 - 2 \sin^2 \frac{\theta}{2}$, to transform $\sin^2 \frac{\theta}{2}$, and $\hat{n} \times \hat{n} = \vec{0}$.
+
+
+```
+

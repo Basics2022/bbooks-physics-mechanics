@@ -386,6 +386,7 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rotation-tensor">1.5.3.1. Rotation tensor</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#angular-velocity">1.5.3.2. Angular velocity</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linearization">1.5.3.3. Linearization</a></li>
 </ul>
             </nav>
         </div>
@@ -405,11 +406,21 @@ document.write(`
 <li><p>Tait-Bryan (or Cardan) angles, with three rotations around three axes with different labels (e.g. <span class="math notranslate nohighlight">\(xyz\)</span>, <span class="math notranslate nohighlight">\(yzx\)</span>, <span class="math notranslate nohighlight">\(zxy\)</span>, <span class="math notranslate nohighlight">\(xzy\)</span>, <span class="math notranslate nohighlight">\(yxz\)</span>, <span class="math notranslate nohighlight">\(zyx\)</span>)</p></li>
 </ul>
 <p>Here, the expressions of rotation tensor and angular velocity are explicitly treated for the set of angles <span class="math notranslate nohighlight">\((\psi, \theta, \phi)\)</span> around axes <span class="math notranslate nohighlight">\(zyx\)</span>.</p>
+<div class="warning admonition">
+<p class="admonition-title">Euler’s angle parametrization is not regular: <em>gimbal lock</em></p>
+<p>Euler’s angles can represent any rotation, but there this parametrization is not one-to-one: some rotations may be represented by many (infinite) set of parameters, as shown below. Thus, for some rotations it’s not possible to recover a unique set of Euler’s angles.</p>
+<p><strong>todo</strong></p>
+<ul class="simple">
+<li><p><em>add link</em></p></li>
+<li><p><em>add picture?</em></p></li>
+</ul>
+</div>
 <div class="section" id="rotation-tensor">
 <span id="classical-mechanics-kinematics-rotations-euler-rotation-tensor"></span><h2><span class="section-number">1.5.3.1. </span>Rotation tensor<a class="headerlink" href="#rotation-tensor" title="Permalink to this heading">#</a></h2>
 <p>Three successive rotations are</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\begin{aligned}
+\[\begin{split}
+\begin{aligned}
 &amp; \begin{cases}
  \hat{x}_1 = \ \ \cos \psi \, \hat{x}_0 + \sin \psi \, \hat{y}_0 \\
  \hat{y}_1 = -   \sin \psi \, \hat{x}_0 + \cos \psi \, \hat{y}_0 \\
@@ -421,27 +432,208 @@ document.write(`
  \hat{z}_2 = \ \ \sin \theta \, \hat{x}_1 + \cos \theta \, \hat{z}_1  \\
 \end{cases} \\
 &amp; \begin{cases}
- \hat{x}_3 = \ \ \cos \phi \, \hat{x}_2 + \sin \phi \, \hat{y}_2 \\
- \hat{y}_3 = -   \sin \phi \, \hat{x}_2 + \cos \phi \, \hat{y}_2 \\
- \hat{z}_3 =                  \hat{z}_2                          \\
+ \hat{x}_3 =                  \hat{x}_2                          \\ 
+ \hat{y}_3 = \ \ \cos \phi \, \hat{y}_2 + \sin \phi \, \hat{z}_2 \\
+ \hat{z}_3 = -   \sin \phi \, \hat{y}_2 + \cos \phi \, \hat{z}_2 \\ 
 \end{cases} \\
-\end{aligned}\end{split}\]</div>
+\end{aligned}
+\quad , \quad
+\begin{aligned}
+&amp; \begin{cases}
+ \hat{x}_0 = \ \ \cos \psi \, \hat{x}_1 - \sin \psi \, \hat{y}_1 \\
+ \hat{y}_0 = \ \ \sin \psi \, \hat{x}_1 + \cos \psi \, \hat{y}_1 \\
+ \hat{z}_0 =                  \hat{z}_1                          \\
+\end{cases} \\
+&amp; \begin{cases}
+ \hat{x}_1 = \ \ \cos \theta \, \hat{x}_2 + \sin \theta \, \hat{z}_2  \\
+ \hat{y}_1 =                    \hat{y}_2                             \\
+ \hat{z}_1 =   - \sin \theta \, \hat{x}_2 + \cos \theta \, \hat{z}_2  \\
+\end{cases} \\
+&amp; \begin{cases}
+ \hat{x}_2 =                  \hat{x}_3                          \\ 
+ \hat{y}_2 = \ \ \cos \phi \, \hat{y}_3 - \sin \phi \, \hat{z}_3 \\
+ \hat{z}_2 = \ \ \sin \phi \, \hat{y}_3 + \cos \phi \, \hat{z}_3 \\ 
+\end{cases} \\
+\end{aligned}
+\end{split}\]</div>
 <p>Rotation of vector <span class="math notranslate nohighlight">\(\vec{v}^0 = v_x \hat{x}_0 + v_y \hat{y}_0 + v_z \hat{z}_0\)</span> into vector <span class="math notranslate nohighlight">\(\vec{v} = v_x \hat{x}_3 + v_y \hat{y}_3 + v_z \hat{z}_3\)</span></p>
+<p><strong>Vectors of basis <span class="math notranslate nohighlight">\(3\)</span> w.r.t. basis <span class="math notranslate nohighlight">\(0\)</span>.</strong></p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
- \hat{x}_3 &amp; = \ \ \cos \phi \, \hat{x}_2 + \sin \phi \, \hat{y}_2 = \\
-           &amp; = \ \ \cos \phi \, \left( \cos \theta \, \hat{x}_1 - \sin \theta \, \hat{z}_1 \right) + \sin \phi \, \hat{y}_1 = \\
-           &amp; = \ \ \cos \phi \, \left( \cos \theta \left( \cos \psi \, \hat{x}_0 + \sin \psi \,  \hat{y}_0 \right) - \sin \theta \, \hat{z}_0 \right) + \sin \phi \left( - \sin \psi \, \hat{x}_0 + \hat{y}_0 \, \cos \psi \right) \\ 
- \hat{y}_3 &amp; = -   \sin \phi \, \hat{x}_2 + \cos \phi \, \hat{y}_2 = \\
-           &amp; = -   \sin \phi \, \left( \cos \theta \, \hat{x}_1 - \sin \theta \, \hat{z}_1 \right) + \cos \phi \, \hat{y}_1 = \\
-           &amp; = -   \sin \phi \, \left( \cos \theta \left( \cos \psi \, \hat{x}_0 + \sin \psi \, \hat{y}_0 \right) - \sin \theta \, \hat{z}_0 \right) + \cos \phi \left(  -   \sin \psi \, \hat{x}_0 + \cos \psi \, \hat{y}_0 \right) = \\
- \hat{z}_3 &amp; =                  \hat{z}_2                          = \\
-           &amp; = \sin \theta \, \hat{x}_1 + \cos \theta \, \hat{z}_1 = \\
-           &amp; = \sin \theta \left( \cos \psi \, \hat{x}_0 + \sin \psi \, \hat{y}_0 \right) + \cos \theta \hat{z}_0 \ .
+ \hat{x}_3 &amp; =                  \hat{x}_2                          = \\
+           &amp; = \ \ \cos \theta \, \hat{x}_1 - \sin \theta \, \hat{z}_1  = \\
+           &amp; = \ \ \cos \theta \, \left( \cos \psi \, \hat{x}_0 + \sin \psi \, \hat{y}_0 \right) - \sin \theta \, \left( \hat{z}_0 \right)  = \\
+ \hat{y}_3 &amp; = \cos \phi \, \hat{y}_2 + \sin \phi \, \hat{z}_2 = \\ 
+           &amp; = \cos \phi \, \left( \hat{y}_1 \right) + \sin \phi \, \left( \sin \theta \, \hat{x}_1 + \cos \theta \, \hat{z}_1  \right) = \\ 
+           &amp; = \hat{x}_0 \left( -\cos\phi \sin \psi + \sin \phi \sin \theta \cos \psi \right) + \hat{y}_0 \left( \cos \phi \cos \psi + \sin \phi \sin \theta \sin \psi \right) + \hat{z}_0 \left( \sin \phi \cos \theta \right) \\
+ \hat{z}_3 &amp; = - \sin \phi \, \hat{y}_2 + \cos \phi \, \hat{z}_2 = \\ 
+           &amp; = - \sin \phi \, \left( \hat{y}_1 \right) + \cos \phi \, \left( \sin \theta \, \hat{x}_1 + \cos \theta \, \hat{z}_1  \right) = \\    
+           &amp; =  \hat{x}_0 \left( \sin \phi \sin \psi + \cos \phi \sin \theta \cos \psi \right) + \hat{y}_0 \left(-\sin \phi \cos \psi + \cos \phi \sin \theta \sin \psi \right) + \hat{z}_0 \left( \cos \phi \cos \theta \right)
 \end{aligned}\end{split}\]</div>
+<p>The components <span class="math notranslate nohighlight">\(R_{ij}^{0 \rightarrow 3} := \hat{e}^0 \cdot \hat{e}^3_j\)</span> of the rotation tensor, transforming the basis <span class="math notranslate nohighlight">\(0\)</span> into the basis <span class="math notranslate nohighlight">\(3\)</span>, referred either to basis <span class="math notranslate nohighlight">\(0\)</span> or basis <span class="math notranslate nohighlight">\(3\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[\mathbb{R}^{0 \rightarrow 3} = R^{0 \rightarrow 3}_{ij} \hat{e}^0_i \otimes \hat{e}^0_j =  R^{0 \rightarrow 3}_{ij} \hat{e}^3_i \otimes \hat{e}^3_j\]</div>
+<p>can be <strong>collected in an array</strong> <span class="math notranslate nohighlight">\(\mathbf{R}^{0 \rightarrow 3}\)</span>, <span class="math notranslate nohighlight">\([\mathbf{R}^{0 \rightarrow 3}]_{ij} = R^{0 \rightarrow 3}_{ij} = \hat{e}^0_i \cdot \hat{e}^3_j\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\mathbf{R}^{0 \rightarrow 3}_{321}(\psi,\theta,\phi) = 
+\begin{bmatrix}
+  \cos \theta \cos \psi                                &amp;   \cos \theta \sin \psi                               &amp;  -\sin \theta          \\
+ -\cos\phi \sin \psi + \sin \phi \sin \theta \cos \psi &amp; \cos \phi \cos \psi + \sin \phi \sin \theta \sin \psi &amp; -\sin \phi \cos \theta \\ 
+  \sin\phi \sin \psi + \cos \phi \sin \theta \cos \psi &amp;-\sin \phi \cos \psi + \cos \phi \sin \theta \sin \psi &amp;  \cos \phi \cos \theta \\ 
+\end{bmatrix}\end{split}\]</div>
+<p>This is the matrix of change of basis discussed in Math:Vector and Tensor Algebra:…</p>
+<div class="warning admonition">
+<p class="admonition-title">Gimbal lock</p>
+<p>For <span class="math notranslate nohighlight">\(\theta = \mp \frac{\pi}{2}\)</span>, the components of the rotation tensor are</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+ \mathbf{R}^{0 \rightarrow 3}_{321}(\psi, 0, \phi) 
+ &amp; = 
+ \begin{bmatrix}
+             0 &amp;         0 &amp; \pm 1 \\
+    -\cos \phi \sin \psi \mp \sin \phi \cos \psi &amp;  \cos \phi \cos \psi \mp \sin \phi \sin \psi &amp; 0 \\
+     \sin \phi \sin \psi \mp \cos \phi \cos \psi &amp; -\sin \phi \cos \psi \mp \cos \phi \sin \psi &amp; 0 \\
+ \end{bmatrix} = \\
+ &amp; = 
+ \begin{bmatrix}
+             0 &amp;         0 &amp; \pm 1 \\
+      - \sin(\psi \pm \phi) &amp;     \cos(\psi \pm \phi) &amp; 0 \\
+    \mp \cos(\psi \pm \phi) &amp; \mp \sin(\psi \pm \phi) &amp; 0 \\
+ \end{bmatrix} \ ,
+\end{aligned}\end{split}\]</div>
+<p>i.e. orientations with <span class="math notranslate nohighlight">\(\theta = - \frac{\pi}{2}\)</span> are determined by the sum <span class="math notranslate nohighlight">\(\psi + \phi\)</span>, while with <span class="math notranslate nohighlight">\(\theta = \frac{\pi}{2}\)</span> by the difference <span class="math notranslate nohighlight">\(\psi - \phi\)</span>. In both situations, for a given orientation it’s not possible to retrieve a unique pair of values <span class="math notranslate nohighlight">\((\psi, \phi)\)</span>, but only their sum or difference.</p>
+</div>
+<!--
+$$\begin{aligned}
+  &  R_{xx}^{0\rightarrow3} = \hat{e}^0_x \cdot \hat{e}^3_x =  \ \ \cos \theta \cos \psi  
+  && R_{xy}^{0\rightarrow3} = \hat{e}^0_x \cdot \hat{e}^3_y =  \ \ \cos \theta \sin \psi 
+  && R_{xz}^{0\rightarrow3} = \hat{e}^0_x \cdot \hat{e}^3_z =     -\sin \theta \\
+  &  R_{yx}^{0\rightarrow3} = \hat{e}^0_y \cdot \hat{e}^3_x =     -\cos\phi \sin \psi + \sin \phi \sin \theta \cos \psi
+  && R_{yy}^{0\rightarrow3} = \hat{e}^0_y \cdot \hat{e}^3_y =  \ \ \cos \phi \cos \psi + \sin \phi \sin \theta \sin \psi 
+  && R_{yz}^{0\rightarrow3} = \hat{e}^0_y \cdot \hat{e}^3_z =     -\sin \phi \cos \theta   \\
+  &  R_{zx}^{0\rightarrow3} = \hat{e}^0_z \cdot \hat{e}^3_x =  
+  && R_{zy}^{0\rightarrow3} = \hat{e}^0_z \cdot \hat{e}^3_y =  
+  && R_{zz}^{0\rightarrow3} = \hat{e}^0_z \cdot \hat{e}^3_z =  \\
+\end{aligned}$$
+-->
 </div>
 <div class="section" id="angular-velocity">
 <span id="classical-mechanics-kinematics-rotations-euler-angular-velocity"></span><h2><span class="section-number">1.5.3.2. </span>Angular velocity<a class="headerlink" href="#angular-velocity" title="Permalink to this heading">#</a></h2>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Angular velocity of simple rotation around a vector of the basis<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Let <span class="math notranslate nohighlight">\(\mathbb{R}^{0\rightarrow 1}\)</span> the rotation tensor representing a rotation of an angle <span class="math notranslate nohighlight">\(\psi\)</span> around the unit vector <span class="math notranslate nohighlight">\(\hat{z}^0 = \hat{z}^1\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[\mathbb{R}^{0\rightarrow 1} = \cos \psi \hat{x}^0 \hat{x}^0 - \sin \psi \hat{x}^0 \hat{y}^0 + \sin \psi\hat{y}^0 \hat{x}^0 + \cos \psi \hat{y}^0 \hat{y}^0 + 1 \hat{z}^0 \hat{z}^0 \ ,\]</div>
+<p class="sd-card-text">Its time derivative at constant <span class="math notranslate nohighlight">\(0\)</span> reads</p>
+<div class="math notranslate nohighlight">
+\[\dfrac{{}^0 d}{dt} \mathbb{R}^{0\rightarrow 1} = \dot{\psi} \left( -\sin \psi \hat{x}^0 \hat{x}^0 - \cos \psi \hat{x}^0 \hat{y}^0 + \cos \psi\hat{y}^0 \hat{x}^0 - \sin \psi \hat{y}^0 \hat{y}^0 \right ) \ ,\]</div>
+<p class="sd-card-text">and thus the angular velocity reads</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \vec{\omega}_\times 
+  &amp; := \dfrac{{}^0 d}{dt} \mathbb{R}^{0 \rightarrow 1} \cdot \mathbb{R}^{1 \rightarrow 0} = \\
+  &amp; := \dot{\psi} \left( -\sin \psi \hat{x}^0 \hat{x}^0 - \cos \psi \hat{x}^0 \hat{y}^0 + \cos \psi\hat{y}^0 \hat{x}^0 - \sin \psi \hat{y}^0 \hat{y}^0 \right) \cdot \\
+  &amp; \quad \cdot \left( \cos \psi \hat{x}^0 \hat{x}^0 - \sin \psi \hat{x}^0 \hat{y}^0 + \sin \psi\hat{y}^0 \hat{x}^0 + \cos \psi \hat{y}^0 \hat{y}^0 + 1 \hat{z}^0 \hat{z}^0  \right)^T =  \\
+  &amp; := \dot{\psi} \left( -\sin \psi \hat{x}^0 \hat{x}^0 - \cos \psi \hat{x}^0 \hat{y}^0 + \cos \psi\hat{y}^0 \hat{x}^0 - \sin \psi \hat{y}^0 \hat{y}^0 \right) \cdot \\
+  &amp; \quad \cdot \left( \cos \psi \hat{x}^0 \hat{x}^0 + \sin \psi \hat{x}^0 \hat{y}^0 - \sin \psi\hat{y}^0 \hat{x}^0 + \cos \psi \hat{y}^0 \hat{y}^0 + 1 \hat{z}^0 \hat{z}^0  \right) =  \\
+  &amp; = \dot{\psi} \left[ \hat{x}^0 \hat{x}^0 \left( - \sin \psi \cos \psi + \cos \psi \sin \psi \right) + 
+                        \hat{x}^0 \hat{y}^0 \left( - \sin^2 \psi - \cos^2 \psi  \right) \right. + \\ 
+  &amp; + \left.            \hat{y}^0 \hat{x}^0 \left(   \cos^2 \psi + \sin^2 \psi  \right) + 
+                        \hat{y}^0 \hat{y}^0 \left( \cos \psi \sin \psi - \sin \psi \cos \psi \right) \right] = \\
+  &amp; = - \dot{\psi} \, \hat{x}^0 \hat{y}^0 + \dot{\psi} \, \hat{y}^0 \hat{x}^0  \ .
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text">and thus</p>
+<div class="math notranslate nohighlight">
+\[\vec{\omega} = \dot{\psi} \hat{z}^0 \ .\]</div>
+<p class="sd-card-text">If the rotation occurs around the vector of the original basis, the components of the angular velocity don’t change when referred to either bases, as <span class="math notranslate nohighlight">\(\hat{z}^1 = \mathbb{R} \cdot \hat{z}^0 = \hat{z}^0\)</span>, and thus</p>
+<div class="math notranslate nohighlight">
+\[\vec{\omega} = \dot{\psi} \hat{z}^0 = \dot{\psi} \hat{z}^1 \ .\]</div>
+<p class="sd-card-text"><strong>This is not true for generic rotations!</strong></p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Relative angular velocities of intermediate Euler’s rotations<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">As shown for the “yaw” angle <span class="math notranslate nohighlight">\(\psi\)</span> before, it’s easy to prove that</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \vec{\omega}^{1/0} &amp; = \dot{\psi}  \, \hat{z}_0  =  \dot{\psi}  \, \hat{z}_1 \\ 
+  \vec{\omega}^{2/1} &amp; = \dot{\theta}\, \hat{y}_1  =  \dot{\theta}\, \hat{y}_2 \\ 
+  \vec{\omega}^{3/2} &amp; = \dot{\phi}  \, \hat{x}_2  =  \dot{\phi}  \, \hat{x}_3 \\ 
+\end{aligned}\end{split}\]</div>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Angular velocity as the sum of relative angular velocity of intermediate rotations<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Using addition of relative angular velocity of intermediate rotations,</p>
+<div class="math notranslate nohighlight">
+\[\begin{aligned}
+  \vec{\omega}^{3/0} 
+  &amp; = \vec{\omega}^{3/2} + \vec{\omega}^{2/1} + \vec{\omega}^{1/0} \ ,
+\end{aligned}\]</div>
+<p class="sd-card-text">and it can be expressed w.r.t. vectors of reference frame <span class="math notranslate nohighlight">\(0\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \vec{\omega}^{3/0} 
+  &amp; = \dot{\phi} \, \hat{x}_2 + \dot{\theta} \, \hat{y}_1 + \dot{\psi} \, \hat{z}_0 = \\
+  &amp; = \dot{\phi} \, \left( \cos \theta \cos \psi \, \hat{x}^0 + \cos \theta \sin \psi \, \hat{y}^0 - \sin \theta \, \hat{z}^0  \right) + \dot{\theta} \, \left( - \sin \psi \, \hat{x}^0 + \cos \psi \, \hat{y}^0 \right) + \dot{\psi} \, \hat{z}_0 = \\
+  &amp; = \left( - \dot{\theta} \, \sin \psi + \dot{\phi} \, \cos \theta \cos \psi \right) \hat{x}^0 + \left( \dot{\theta} \, \cos \psi + \dot{\phi} \, \cos \theta \sin \psi  \right) \hat{y}^0 + \left( - \dot{\phi} \, \sin \theta + \dot{\psi}  \right) \hat{z}^0
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text">or w.r.t. vectors of reference frame <span class="math notranslate nohighlight">\(3\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \vec{\omega}^{3/0} 
+  &amp; = \dot{\phi} \, \hat{x}_3 + \dot{\theta} \, \hat{y}_2 + \dot{\psi} \, \hat{z}_1 = \\
+  &amp; = \dot{\phi} \, \hat{x}_3 + \dot{\theta} \, \left( \cos \phi \, \hat{y}_3 - \sin \phi \, \hat{z}_3 \right) + \dot{\psi} \, \left( - \sin \theta \, \hat{x}_3 + \cos \theta \sin \phi \, \hat{y}_3 + \cos \theta \cos \phi \, \hat{z}_3  \right) = \\
+  &amp; = \left( \dot{\phi} - \dot{\psi} \, \sin \theta  \right) \hat{x}_3 + \left(  \dot{\theta} \, \cos \phi + \dot{\psi} \, \cos \theta \sin \phi \right) \hat{y}_3 + \left( - \dot{\theta} \, \sin \phi + \dot{\psi} \, \cos \theta \cos \phi  \right) \hat{z}_3
+\end{aligned}\end{split}\]</div>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Relation between components of angular velocity and rotation parameters and their time derivative<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Let <span class="math notranslate nohighlight">\(3\)</span> a body reference frame, and <span class="math notranslate nohighlight">\(0\)</span> a global reference frame; let <span class="math notranslate nohighlight">\(p\)</span>, <span class="math notranslate nohighlight">\(q\)</span>, <span class="math notranslate nohighlight">\(r\)</span> the components of the angular velocity <span class="math notranslate nohighlight">\(\vec{\omega}\)</span> w.r.t. the body reference frame</p>
+<div class="math notranslate nohighlight">
+\[\vec{\omega} = p \, \hat{x}_3 + q \, \hat{y}_3 + r \, \hat{z}_3 \ .\]</div>
+<p class="sd-card-text">Exploiting matrix formalism, the relation between the components of the angular velocity in the body reference frame, Euler’s angles and thier time derivative is</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{bmatrix} p \\ q \\ r \end{bmatrix} = 
+\begin{bmatrix} 1 &amp; \cdot &amp; - \sin \theta \\ \cdot &amp; \cos \phi &amp; \cos \theta \sin \phi \\ \cdot &amp; - \sin \phi &amp; \cos \theta \cos \phi \end{bmatrix}
+\begin{bmatrix} \dot{\phi} \\ \dot{\theta} \\ \dot{\psi} \end{bmatrix}
+\end{split}\]</div>
+<p class="sd-card-text">The inverse relation exists for <span class="math notranslate nohighlight">\(\cos \theta \ne 0\)</span> (<strong>gimbal lock</strong>),</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{bmatrix} \dot{\phi} \\ \dot{\theta} \\ \dot{\psi} \end{bmatrix} = 
+\frac{1}{\cos \theta}
+\begin{bmatrix} 1 &amp; \sin \theta \sin \phi &amp; \sin \theta \cos \phi \\ \cdot &amp; \cos \theta \cos \phi &amp; - \cos \theta \sin \phi \\ \cdot &amp; \sin \phi &amp; \cos \phi \end{bmatrix}
+\begin{bmatrix} p \\ q \\ r \end{bmatrix} 
+\end{split}\]</div>
+<p class="sd-card-text">Thus, collecting the body components of the angular velocity in <span class="math notranslate nohighlight">\(\boldsymbol{\omega} = (p,q,r)^T\)</span>, calling <span class="math notranslate nohighlight">\(\mathbf{S}(\mathbf{q})\)</span> the matrix collecing the coefficients depending on the rotation parameters <span class="math notranslate nohighlight">\(\mathbf{q} = (\phi, \theta, \psi)\)</span>, and <span class="math notranslate nohighlight">\(\dot{\mathbf{q}}\)</span> their time derivatives, it remains proved that using Euler’s angles the relation</p>
+<div class="math notranslate nohighlight">
+\[\boldsymbol{\omega} = \mathbf{S}(\mathbf{q}) \, \dot{\mathbf{q}}\]</div>
+<p class="sd-card-text">always exists, but the inverse relation exists only for <span class="math notranslate nohighlight">\(\theta \ne \mp \frac{\pi}{2}\)</span>.</p>
+</div>
+</details></div>
+<div class="section" id="linearization">
+<h2><span class="section-number">1.5.3.3. </span>Linearization<a class="headerlink" href="#linearization" title="Permalink to this heading">#</a></h2>
+<p>…</p>
 </div>
 </div>
 
@@ -510,6 +702,7 @@ document.write(`
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rotation-tensor">1.5.3.1. Rotation tensor</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#angular-velocity">1.5.3.2. Angular velocity</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linearization">1.5.3.3. Linearization</a></li>
 </ul>
   </nav></div>
 
