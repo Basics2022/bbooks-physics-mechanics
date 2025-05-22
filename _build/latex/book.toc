@@ -10,110 +10,114 @@
 \contentsline {subsection}{\numberline {1.4.2}Rigid bodies}{9}{subsection.1.4.2}%
 \contentsline {section}{\numberline {1.5}Rotations}{9}{section.1.5}%
 \contentsline {subsection}{\numberline {1.5.1}Tensor formalism for rotations}{9}{subsection.1.5.1}%
-\contentsline {subsubsection}{Rotation tensor}{9}{subsubsection*.3}%
-\contentsline {subsubsection}{Successive rotations}{10}{subsubsection*.4}%
-\contentsline {subsubsection}{Linearization of rotations}{11}{subsubsection*.5}%
-\contentsline {subsubsection}{Parametrizations}{11}{subsubsection*.6}%
-\contentsline {paragraph}{Euler angles}{11}{paragraph*.7}%
-\contentsline {paragraph}{Axis and rotation angle}{11}{paragraph*.8}%
-\contentsline {paragraph}{Quaternions}{11}{paragraph*.9}%
-\contentsline {subsection}{\numberline {1.5.2}Rotation parametrization: axis and angle}{11}{subsection.1.5.2}%
-\contentsline {subsubsection}{Rotation tensor}{11}{subsubsection*.10}%
-\contentsline {subsubsection}{Angular velocity}{12}{subsubsection*.11}%
-\contentsline {subsection}{\numberline {1.5.3}Rotation parametrization: Euler’s angles}{12}{subsection.1.5.3}%
-\contentsline {subsubsection}{Rotation tensor}{13}{subsubsection*.12}%
-\contentsline {subsubsection}{Angular velocity}{13}{subsubsection*.13}%
-\contentsline {subsection}{\numberline {1.5.4}Rotation parametrization: quaternions}{13}{subsection.1.5.4}%
-\contentsline {subsubsection}{Rotation tensor}{14}{subsubsection*.14}%
-\contentsline {subsubsection}{Angular velocity}{14}{subsubsection*.15}%
-\contentsline {chapter}{\numberline {2}Actions}{17}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Force, Moment of a Force, Distributed Actions}{18}{section.2.1}%
-\contentsline {subsection}{\numberline {2.1.1}Concentrated Force}{18}{subsection.2.1.1}%
-\contentsline {subsection}{\numberline {2.1.2}Moment of a Concentrated Force}{18}{subsection.2.1.2}%
-\contentsline {subsection}{\numberline {2.1.3}System of Forces, Resultant of Actions, and Equivalent Loads}{18}{subsection.2.1.3}%
-\contentsline {subsection}{\numberline {2.1.4}Couple of Forces}{19}{subsection.2.1.4}%
-\contentsline {subsection}{\numberline {2.1.5}Force Fields}{19}{subsection.2.1.5}%
-\contentsline {subsection}{\numberline {2.1.6}Distributed Actions}{19}{subsection.2.1.6}%
-\contentsline {section}{\numberline {2.2}Work and Power}{19}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}Work and Power of a Force}{19}{subsection.2.2.1}%
-\contentsline {subsection}{\numberline {2.2.2}Work and Power of a System of Forces}{20}{subsection.2.2.2}%
-\contentsline {subsection}{\numberline {2.2.3}Work and Power of a Couple of Forces}{20}{subsection.2.2.3}%
-\contentsline {section}{\numberline {2.3}Conservative Actions}{20}{section.2.3}%
-\contentsline {section}{\numberline {2.4}Examples of Forces}{22}{section.2.4}%
-\contentsline {subsection}{\numberline {2.4.1}Gravitation}{22}{subsection.2.4.1}%
-\contentsline {subsubsection}{Universal Law of Gravitation}{22}{subsubsection*.17}%
-\contentsline {subsubsection}{Gravitational Field}{22}{subsubsection*.18}%
-\contentsline {subsubsection}{Gravitational Field Near Earth’s Surface}{23}{subsubsection*.19}%
-\contentsline {subsubsection}{Gravitational field of a continuous mass distribution}{24}{subsubsection*.20}%
-\contentsline {paragraph}{Gauss’ law for the gravitational field}{24}{paragraph*.21}%
-\contentsline {subsection}{\numberline {2.4.2}Elastic Actions: Linear Springs}{25}{subsection.2.4.2}%
-\contentsline {section}{\numberline {2.5}Constraint Reactions}{25}{section.2.5}%
-\contentsline {subsection}{\numberline {2.5.1}Contact Actions}{25}{subsection.2.5.1}%
-\contentsline {subsubsection}{Constraint Reactions of Ideal Constraints}{25}{subsubsection*.23}%
-\contentsline {paragraph}{Fixed Joint}{26}{paragraph*.24}%
-\contentsline {paragraph}{Slider}{26}{paragraph*.25}%
-\contentsline {paragraph}{Cylindrical Joint}{26}{paragraph*.26}%
-\contentsline {paragraph}{Spherical Joint}{26}{paragraph*.27}%
-\contentsline {paragraph}{Roller}{26}{paragraph*.28}%
-\contentsline {paragraph}{Support}{27}{paragraph*.29}%
-\contentsline {subsubsection}{Friction}{27}{subsubsection*.30}%
-\contentsline {paragraph}{Static Friction}{27}{paragraph*.31}%
-\contentsline {paragraph}{Dynamic Friction}{27}{paragraph*.32}%
-\contentsline {paragraph}{Pure Rolling}{27}{paragraph*.33}%
-\contentsline {chapter}{\numberline {3}Inertia}{29}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Point mass}{29}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Discrete masses}{29}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Continuous systems}{30}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Rigid systems}{30}{section.3.4}%
-\contentsline {subsection}{\numberline {3.4.1}Discrete systems}{30}{subsection.3.4.1}%
-\contentsline {subsection}{\numberline {3.4.2}Continuous systems}{31}{subsection.3.4.2}%
-\contentsline {subsection}{\numberline {3.4.3}Properties of inertia tensors of rigid bodies}{33}{subsection.3.4.3}%
-\contentsline {subsubsection}{Static inertia}{33}{subsubsection*.34}%
-\contentsline {subsubsection}{Tensor of inertia}{33}{subsubsection*.35}%
-\contentsline {subsection}{\numberline {3.4.4}Time derivatives of dynamical quantities}{34}{subsection.3.4.4}%
-\contentsline {subsubsection}{Dynamical quantities and time derivatives with \(G\) as reference point}{36}{subsubsection*.36}%
-\contentsline {chapter}{\numberline {4}Dynamics}{37}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Principles of Newtonian Mechanics}{37}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Inertial reference frame}{38}{subsection.4.1.1}%
-\contentsline {section}{\numberline {4.2}Equations of Motion and Conservation Principles}{39}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Equations of Motion}{39}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Conservation Principles}{39}{subsection.4.2.2}%
-\contentsline {section}{\numberline {4.3}Equations of motion of a point mass}{40}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Equations of motion of a discrete system of point masses}{41}{section.4.4}%
-\contentsline {section}{\numberline {4.5}Equations of motion of a rigid body}{42}{section.4.5}%
-\contentsline {subsection}{\numberline {4.5.1}General equations}{43}{subsection.4.5.1}%
-\contentsline {subsection}{\numberline {4.5.2}Dynamical equations w.r.t. the center of mass \(G\)}{43}{subsection.4.5.2}%
-\contentsline {subsection}{\numberline {4.5.3}Dynamical equations w.r.t. a material point \(Q\)}{43}{subsection.4.5.3}%
-\contentsline {section}{\numberline {4.6}Equations of motion for continuous media}{44}{section.4.6}%
-\contentsline {section}{\numberline {4.7}Particular Motions}{44}{section.4.7}%
-\contentsline {section}{\numberline {4.8}Equilibrium and Stability}{45}{section.4.8}%
-\contentsline {subsection}{\numberline {4.8.1}Eigenvalue stability}{45}{subsection.4.8.1}%
-\contentsline {subsection}{\numberline {4.8.2}}{45}{subsection.4.8.2}%
-\contentsline {part}{II\hspace {1em}Analytical Mechanics}{47}{part.2}%
-\contentsline {chapter}{\numberline {5}Lagrangian Mechanics}{49}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Lagrange Equations of the Second Kind}{50}{section.5.1}%
-\contentsline {subsection}{\numberline {5.1.1}Point}{51}{subsection.5.1.1}%
-\contentsline {subsection}{\numberline {5.1.2}System of points}{52}{subsection.5.1.2}%
-\contentsline {subsection}{\numberline {5.1.3}Rigid Body}{52}{subsection.5.1.3}%
-\contentsline {section}{\numberline {5.2}Lagrange Equations of the First Kind}{54}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Lagrangian functions and time dependence}{55}{section.5.3}%
-\contentsline {subsection}{\numberline {5.3.1}Lagrangian function with no explicit dependence on time}{55}{subsection.5.3.1}%
-\contentsline {subsubsection}{Properties of kinetic energy and potential}{56}{subsubsection*.38}%
-\contentsline {subsection}{\numberline {5.3.2}Lagrangian function with explicit dependence on time}{56}{subsection.5.3.2}%
-\contentsline {subsubsection}{Energy balance}{57}{subsubsection*.39}%
-\contentsline {subsubsection}{Properties of kinetic energy and potential}{57}{subsubsection*.40}%
-\contentsline {section}{\numberline {5.4}Constraints classification}{58}{section.5.4}%
-\contentsline {subsection}{\numberline {5.4.1}Holonomic vs. non\sphinxhyphen {}holonomic constraints}{58}{subsection.5.4.1}%
-\contentsline {subsection}{\numberline {5.4.2}Ideal constraints}{58}{subsection.5.4.2}%
-\contentsline {subsubsection}{Ideal holonomic constraints}{58}{subsubsection*.41}%
-\contentsline {subsubsection}{Ideal non\sphinxhyphen {}holonomic constraints}{59}{subsubsection*.42}%
-\contentsline {section}{\numberline {5.5}Properties of the Lagrangian approach to classical mechanics}{59}{section.5.5}%
-\contentsline {subsection}{\numberline {5.5.1}Kinetic energy \(K\) and potential function \(U\)}{59}{subsection.5.5.1}%
-\contentsline {subsection}{\numberline {5.5.2}Lagrange equations}{60}{subsection.5.5.2}%
-\contentsline {subsubsection}{Lagrange equations of the II kind}{61}{subsubsection*.43}%
-\contentsline {subsubsection}{Lagrange equations of the I kind}{61}{subsubsection*.44}%
-\contentsline {chapter}{\numberline {6}Hamiltonian Mechanics}{63}{chapter.6}%
-\contentsline {part}{III\hspace {1em}Exercises}{65}{part.3}%
-\contentsline {chapter}{\numberline {7}Dynamics}{67}{chapter.7}%
-\contentsline {chapter}{\numberline {8}Gravitation}{73}{chapter.8}%
-\contentsline {chapter}{Proof Index}{75}{section*.51}%
+\contentsline {subsubsection}{Rotation tensor}{10}{subsubsection*.4}%
+\contentsline {paragraph}{Rotation of a vector}{11}{paragraph*.6}%
+\contentsline {paragraph}{Rotation of basis, and change of components of given vectors and tensors}{11}{paragraph*.7}%
+\contentsline {subsubsection}{Angular velocity and acceleration}{11}{subsubsection*.8}%
+\contentsline {subsubsection}{Sequence of rotations}{12}{subsubsection*.9}%
+\contentsline {subsubsection}{Linearization of rotations}{14}{subsubsection*.10}%
+\contentsline {subsubsection}{Parametrizations}{14}{subsubsection*.11}%
+\contentsline {paragraph}{Euler angles}{14}{paragraph*.12}%
+\contentsline {paragraph}{Axis and rotation angle}{14}{paragraph*.13}%
+\contentsline {paragraph}{Quaternions}{14}{paragraph*.14}%
+\contentsline {subsection}{\numberline {1.5.2}Rotation parametrization: axis and angle}{14}{subsection.1.5.2}%
+\contentsline {subsubsection}{Rotation tensor}{15}{subsubsection*.15}%
+\contentsline {subsubsection}{Angular velocity}{15}{subsubsection*.16}%
+\contentsline {subsection}{\numberline {1.5.3}Rotation parametrization: Euler’s angles}{16}{subsection.1.5.3}%
+\contentsline {subsubsection}{Rotation tensor}{16}{subsubsection*.17}%
+\contentsline {subsubsection}{Angular velocity}{17}{subsubsection*.18}%
+\contentsline {subsubsection}{Linearization}{19}{subsubsection*.19}%
+\contentsline {subsection}{\numberline {1.5.4}Rotation parametrization: quaternions}{19}{subsection.1.5.4}%
+\contentsline {subsubsection}{Rotation tensor}{20}{subsubsection*.20}%
+\contentsline {subsubsection}{Angular velocity}{20}{subsubsection*.21}%
+\contentsline {chapter}{\numberline {2}Actions}{23}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Force, Moment of a Force, Distributed Actions}{24}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Concentrated Force}{24}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Moment of a Concentrated Force}{24}{subsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.1.3}System of Forces, Resultant of Actions, and Equivalent Loads}{24}{subsection.2.1.3}%
+\contentsline {subsection}{\numberline {2.1.4}Couple of Forces}{25}{subsection.2.1.4}%
+\contentsline {subsection}{\numberline {2.1.5}Force Fields}{25}{subsection.2.1.5}%
+\contentsline {subsection}{\numberline {2.1.6}Distributed Actions}{25}{subsection.2.1.6}%
+\contentsline {section}{\numberline {2.2}Work and Power}{25}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Work and Power of a Force}{25}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Work and Power of a System of Forces}{26}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}Work and Power of a Couple of Forces}{26}{subsection.2.2.3}%
+\contentsline {section}{\numberline {2.3}Conservative Actions}{26}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Examples of Forces}{28}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}Gravitation}{28}{subsection.2.4.1}%
+\contentsline {subsubsection}{Universal Law of Gravitation}{28}{subsubsection*.23}%
+\contentsline {subsubsection}{Gravitational Field}{28}{subsubsection*.24}%
+\contentsline {subsubsection}{Gravitational Field Near Earth’s Surface}{29}{subsubsection*.25}%
+\contentsline {subsubsection}{Gravitational field of a continuous mass distribution}{30}{subsubsection*.26}%
+\contentsline {paragraph}{Gauss’ law for the gravitational field}{30}{paragraph*.27}%
+\contentsline {subsection}{\numberline {2.4.2}Elastic Actions: Linear Springs}{31}{subsection.2.4.2}%
+\contentsline {section}{\numberline {2.5}Constraint Reactions}{31}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}Contact Actions}{31}{subsection.2.5.1}%
+\contentsline {subsubsection}{Constraint Reactions of Ideal Constraints}{31}{subsubsection*.29}%
+\contentsline {paragraph}{Fixed Joint}{32}{paragraph*.30}%
+\contentsline {paragraph}{Slider}{32}{paragraph*.31}%
+\contentsline {paragraph}{Cylindrical Joint}{32}{paragraph*.32}%
+\contentsline {paragraph}{Spherical Joint}{32}{paragraph*.33}%
+\contentsline {paragraph}{Roller}{32}{paragraph*.34}%
+\contentsline {paragraph}{Support}{33}{paragraph*.35}%
+\contentsline {subsubsection}{Friction}{33}{subsubsection*.36}%
+\contentsline {paragraph}{Static Friction}{33}{paragraph*.37}%
+\contentsline {paragraph}{Dynamic Friction}{33}{paragraph*.38}%
+\contentsline {paragraph}{Pure Rolling}{33}{paragraph*.39}%
+\contentsline {chapter}{\numberline {3}Inertia}{35}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Point mass}{35}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Discrete masses}{35}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Continuous systems}{36}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Rigid systems}{36}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Discrete systems}{36}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}Continuous systems}{37}{subsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.4.3}Properties of inertia tensors of rigid bodies}{39}{subsection.3.4.3}%
+\contentsline {subsubsection}{Static inertia}{39}{subsubsection*.40}%
+\contentsline {subsubsection}{Tensor of inertia}{39}{subsubsection*.41}%
+\contentsline {subsection}{\numberline {3.4.4}Time derivatives of dynamical quantities}{40}{subsection.3.4.4}%
+\contentsline {subsubsection}{Dynamical quantities and time derivatives with \(G\) as reference point}{42}{subsubsection*.42}%
+\contentsline {chapter}{\numberline {4}Dynamics}{43}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Principles of Newtonian Mechanics}{43}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Inertial reference frame}{44}{subsection.4.1.1}%
+\contentsline {section}{\numberline {4.2}Equations of Motion and Conservation Principles}{45}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Equations of Motion}{45}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Conservation Principles}{45}{subsection.4.2.2}%
+\contentsline {section}{\numberline {4.3}Equations of motion of a point mass}{46}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Equations of motion of a discrete system of point masses}{47}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Equations of motion of a rigid body}{48}{section.4.5}%
+\contentsline {subsection}{\numberline {4.5.1}General equations}{49}{subsection.4.5.1}%
+\contentsline {subsection}{\numberline {4.5.2}Dynamical equations w.r.t. the center of mass \(G\)}{49}{subsection.4.5.2}%
+\contentsline {subsection}{\numberline {4.5.3}Dynamical equations w.r.t. a material point \(Q\)}{49}{subsection.4.5.3}%
+\contentsline {section}{\numberline {4.6}Equations of motion for continuous media}{50}{section.4.6}%
+\contentsline {section}{\numberline {4.7}Particular Motions}{50}{section.4.7}%
+\contentsline {section}{\numberline {4.8}Equilibrium and Stability}{51}{section.4.8}%
+\contentsline {subsection}{\numberline {4.8.1}Eigenvalue stability}{51}{subsection.4.8.1}%
+\contentsline {subsection}{\numberline {4.8.2}}{51}{subsection.4.8.2}%
+\contentsline {part}{II\hspace {1em}Analytical Mechanics}{53}{part.2}%
+\contentsline {chapter}{\numberline {5}Lagrangian Mechanics}{55}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Lagrange Equations of the Second Kind}{56}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Point}{57}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}System of points}{58}{subsection.5.1.2}%
+\contentsline {subsection}{\numberline {5.1.3}Rigid Body}{58}{subsection.5.1.3}%
+\contentsline {section}{\numberline {5.2}Lagrange Equations of the First Kind}{60}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Lagrangian functions and time dependence}{61}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Lagrangian function with no explicit dependence on time}{61}{subsection.5.3.1}%
+\contentsline {subsubsection}{Properties of kinetic energy and potential}{62}{subsubsection*.44}%
+\contentsline {subsection}{\numberline {5.3.2}Lagrangian function with explicit dependence on time}{62}{subsection.5.3.2}%
+\contentsline {subsubsection}{Energy balance}{63}{subsubsection*.45}%
+\contentsline {subsubsection}{Properties of kinetic energy and potential}{63}{subsubsection*.46}%
+\contentsline {section}{\numberline {5.4}Constraints classification}{64}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}Holonomic vs. non\sphinxhyphen {}holonomic constraints}{64}{subsection.5.4.1}%
+\contentsline {subsection}{\numberline {5.4.2}Ideal constraints}{64}{subsection.5.4.2}%
+\contentsline {subsubsection}{Ideal holonomic constraints}{64}{subsubsection*.47}%
+\contentsline {subsubsection}{Ideal non\sphinxhyphen {}holonomic constraints}{65}{subsubsection*.48}%
+\contentsline {section}{\numberline {5.5}Properties of the Lagrangian approach to classical mechanics}{65}{section.5.5}%
+\contentsline {subsection}{\numberline {5.5.1}Kinetic energy \(K\) and potential function \(U\)}{65}{subsection.5.5.1}%
+\contentsline {subsection}{\numberline {5.5.2}Lagrange equations}{66}{subsection.5.5.2}%
+\contentsline {subsubsection}{Lagrange equations of the II kind}{67}{subsubsection*.49}%
+\contentsline {subsubsection}{Lagrange equations of the I kind}{67}{subsubsection*.50}%
+\contentsline {chapter}{\numberline {6}Hamiltonian Mechanics}{69}{chapter.6}%
+\contentsline {part}{III\hspace {1em}Exercises}{71}{part.3}%
+\contentsline {chapter}{\numberline {7}Dynamics}{73}{chapter.7}%
+\contentsline {chapter}{\numberline {8}Gravitation}{79}{chapter.8}%
+\contentsline {chapter}{Proof Index}{81}{section*.57}%

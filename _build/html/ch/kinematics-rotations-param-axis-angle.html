@@ -401,7 +401,7 @@ document.write(`
 <span id="classical-mechanics-kinematics-rotations-axis-angle"></span><h1><span class="section-number">1.5.2. </span>Rotation parametrization: axis and angle<a class="headerlink" href="#rotation-parametrization-axis-and-angle" title="Permalink to this heading">#</a></h1>
 <p>Rotation tensor</p>
 <div class="math notranslate nohighlight" id="equation-eq-r-aa">
-<span class="eqno">(1.10)<a class="headerlink" href="#equation-eq-r-aa" title="Permalink to this equation">#</a></span>\[\mathbb{R} = \mathbb{I} + \sin \theta \, \hat{n}_\times + ( 1 - \cos \theta ) \, \hat{n}_\times \hat{n}_\times \ ,\]</div>
+<span class="eqno">(1.13)<a class="headerlink" href="#equation-eq-r-aa" title="Permalink to this equation">#</a></span>\[\mathbb{R} = \mathbb{I} + \sin \theta \, \hat{n}_\times + ( 1 - \cos \theta ) \, \hat{n}_\times \hat{n}_\times \ ,\]</div>
 <p>Angular velocity</p>
 <div class="math notranslate nohighlight">
 \[\vec{\omega}_\times = \dot{\mathbb{R}} \cdot \mathbb{R}^T = \]</div>
@@ -413,14 +413,14 @@ document.write(`
 \[\vec{v} = \mathbb{R} \cdot \vec{v}^0 \ ,\]</div>
 <p>comes from little geometry and vector algebra. The rotation of an angle <span class="math notranslate nohighlight">\(\theta\)</span> around the axis determined by the  unit vector <span class="math notranslate nohighlight">\(\hat{n}\)</span> reads</p>
 <div class="math notranslate nohighlight" id="equation-eq-rotation-angle-axis-0">
-<span class="eqno">(1.11)<a class="headerlink" href="#equation-eq-rotation-angle-axis-0" title="Permalink to this equation">#</a></span>\[\vec{v} = \hat{n} v^0_{\parallel} + \hat{x} v^0_{\perp} \cos \theta + \hat{y} v^0_{\perp} \sin \theta \ ,\]</div>
+<span class="eqno">(1.14)<a class="headerlink" href="#equation-eq-rotation-angle-axis-0" title="Permalink to this equation">#</a></span>\[\vec{v} = \hat{n} v^0_{\parallel} + \hat{x} v^0_{\perp} \cos \theta + \hat{y} v^0_{\perp} \sin \theta \ ,\]</div>
 <p>with</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(v^0_{\parallel} = \hat{n} \cdot \vec{v}^0\)</span>,</p></li>
 <li><p><span class="math notranslate nohighlight">\(\hat{n} \times \vec{v}^0 = \hat{y} v^0_{\perp}\)</span>, and thus <span class="math notranslate nohighlight">\(\hat{y} = \frac{\hat{n} \times \vec{v}^0}{v^0_{\perp}}\)</span>,</p></li>
 <li><p><span class="math notranslate nohighlight">\(\hat{x} = \hat{y} \times \hat{n}\)</span>, and thus <span class="math notranslate nohighlight">\(v^0_{\perp} \hat{x} = v^0_{\perp} \frac{(\hat{n} \times \vec{v}^0)}{v^0_{\perp}} \times \hat{n} = - \hat{n} \times \left( \hat{n} \times \vec{v}^0 \right) = - \hat{n}_{\times} \hat{n}_{\times} \cdot \vec{v}^0\)</span>, where the dot product is meant between the <span class="math notranslate nohighlight">\(\hat{n}_\times\)</span> tensors representing vector products.</p></li>
 </ul>
-<p>Exploiting these expressions, the relation <a class="reference internal" href="#equation-eq-rotation-angle-axis-0">(1.11)</a> between the vectors <span class="math notranslate nohighlight">\(\vec{v}\)</span>, <span class="math notranslate nohighlight">\(\vec{v}^0\)</span> can be written in implicit tensor form. Different equivalent tensor expressions follows from the identity <span class="math notranslate nohighlight">\(\hat{v}_\times \hat{v}_\times =  \vec{v} \otimes \vec{v} - |\vec{v}|^2 \mathbb{I} \)</span>,</p>
+<p>Exploiting these expressions, the relation <a class="reference internal" href="#equation-eq-rotation-angle-axis-0">(1.14)</a> between the vectors <span class="math notranslate nohighlight">\(\vec{v}\)</span>, <span class="math notranslate nohighlight">\(\vec{v}^0\)</span> can be written in implicit tensor form. Different equivalent tensor expressions follows from the identity <span class="math notranslate nohighlight">\(\hat{v}_\times \hat{v}_\times =  \vec{v} \otimes \vec{v} - |\vec{v}|^2 \mathbb{I} \)</span>,</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
   \vec{v}
@@ -454,7 +454,39 @@ Proof of relation <span class="math notranslate nohighlight">\(\ \hat{v}_\times 
 </details></div>
 <div class="section" id="angular-velocity">
 <span id="classical-mechanics-kinematics-rotations-axis-angle-angular-velocity"></span><h2><span class="section-number">1.5.2.2. </span>Angular velocity<a class="headerlink" href="#angular-velocity" title="Permalink to this heading">#</a></h2>
+<div class="math notranslate nohighlight">
+\[
+  \vec{\omega} = \dot{\theta} \,  \hat{n} + \sin \theta \, \dot{\hat{n}} - \left( 1 - \cos \theta \right) \,  \hat{n}\times \dot{\hat{n}}
+\]</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Proof<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Using the expression of the <a class="reference internal" href="kinematics-rotations-param-quaternions.html#classical-mechanics-kinematics-rotations-quaternions-angular-velocity"><span class="std std-ref">angular velocity using unitary quaternion parametrization</span></a>,</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{q} = q_0 + \vec{q} = \cos \frac{\theta}{2} + \sin \frac{\theta}{2} \, \hat{n} \ .\]</div>
+<p class="sd-card-text">and</p>
+<div class="math notranslate nohighlight">
+\[\vec{\omega} = - 2 \, \vec{q} \, \dot{q}_0 + 2 \, q_0 \, \dot{\vec{q}} - 2 \, \vec{q} \times \dot{\vec{q}}\]</div>
+<p class="sd-card-text">with</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \dot{q}_0     &amp; = - \frac{\dot{\theta}}{2} \sin \frac{\theta}{2} \\
+  \dot{\vec{q}} &amp; = \frac{\dot{\theta}}{2} \cos \frac{\theta}{2} \hat{n} + \sin \frac{\theta}{2} \dot{\hat{n}}
+\end{aligned}\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \vec{\omega}
+  &amp; = - 2 \, \vec{q} \, \dot{q}_0 + 2 \, q_0 \, \dot{\vec{q}} - 2 \, \vec{q} \times \dot{\vec{q}} = \\
+  &amp; = - 2 \, \sin \frac{\theta}{2} \hat{n} \left( -\frac{\dot{\theta}}{2} \sin \frac{\theta}{2} \right) + 2 \cos \frac{\theta}{2} \left( \frac{\dot{\theta}}{2} \cos \frac{\theta}{2} \hat{n} + \sin \frac{\theta}{2} \dot{\hat{n}} \right) - 2 \, \sin \frac{\theta}{2} \hat{n} \times \left(  \frac{\dot{\theta}}{2} \cos \frac{\theta}{2} \hat{n} + \sin \frac{\theta}{2} \dot{\hat{n}} \right) = \\
+  &amp; = \dot{\theta} \,  \hat{n} + \sin \theta \, \dot{\hat{n}} - \left( 1 - \cos \theta \right) \,  \hat{n}\times \dot{\hat{n}}
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text">having used <span class="math notranslate nohighlight">\(\cos \theta = \cos^2 \frac{\theta}{2} - \sin^2 \frac{\theta}{2} = 1 - 2 \sin^2 \frac{\theta}{2}\)</span>, to transform <span class="math notranslate nohighlight">\(\sin^2 \frac{\theta}{2}\)</span>, and <span class="math notranslate nohighlight">\(\hat{n} \times \hat{n} = \vec{0}\)</span>.</p>
 </div>
+</details></div>
 </div>
 
     <script type="text/x-thebe-config">
