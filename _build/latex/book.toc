@@ -93,6 +93,7 @@
 \contentsline {section}{\numberline {4.8}Equilibrium and Stability}{51}{section.4.8}%
 \contentsline {subsection}{\numberline {4.8.1}Eigenvalue stability}{51}{subsection.4.8.1}%
 \contentsline {subsection}{\numberline {4.8.2}}{51}{subsection.4.8.2}%
+\contentsline {section}{\numberline {4.9}Equivalence principle in classical mechanics}{51}{section.4.9}%
 \contentsline {part}{II\hspace {1em}Analytical Mechanics}{53}{part.2}%
 \contentsline {chapter}{\numberline {5}Lagrangian Mechanics}{55}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Lagrange Equations of the Second Kind}{56}{section.5.1}%

@@ -85,7 +85,7 @@
         
 
 \title{Classical Mechanics}
-\date{May 22, 2025}
+\date{Nov 17, 2026}
 \release{}
 \author{basics}
 \newcommand{\sphinxlogo}{\vbox{}}
@@ -2997,6 +2997,59 @@ A system is in equilibrium is all its components are in equilibrium, and thus th
 \sphinxstepscope
 
 
+\section{Equivalence principle in classical mechanics}
+\label{\detokenize{ch/dynamics-equivalence-principle:equivalence-principle-in-classical-mechanics}}\label{\detokenize{ch/dynamics-equivalence-principle:classical-mechanics-dynamics-equivalence-principle}}\label{\detokenize{ch/dynamics-equivalence-principle::doc}}
+\sphinxAtStartPar
+Without going deep into the details of the most general case, it’s possible to state that
+\begin{quote}
+
+\sphinxAtStartPar
+It’s not possible tell if one is at rest in a uniform gravitational field, or uniformly accelerating in empty space
+\end{quote}
+
+\sphinxAtStartPar
+In this section only a \sphinxstylestrong{uniform gravitational field} is considered. This condition can be meant to be an approximation of more general cases, but it could be a good approximation if the size of the region of space of interest is not large enough to appreciated gradients of the gravitational field. In this \sphinxstylestrong{local} approximation, tidal effects and spatial variations of the gravitational field are neglected (and the approximation is a good model if these effects are negligible).
+
+\sphinxAtStartPar
+Indeed, focusing on a point mass \(P\) with mass \(m\), the dynamic equation of motion w.r.t. an inertial frame \(0\) is provided by Newton’s second principle,
+\begin{equation*}
+\begin{split}m \mathbf{a}^0_{P/O} = \mathbf{F}^0_P \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+with \(\mathbf{a}^0_{P/O}\) the acceleration of point \(P\) w.r.t. \(O\), as seen in the \(0\) ref frame, i.e. as seen by \(O\), and \(\mathbf{F}^0_P\) the total force acting on the point \(P\).
+
+\sphinxAtStartPar
+{\hyperref[\detokenize{ch/kinematics-relative:classical-mechanics-kinematics-relative-points}]{\sphinxcrossref{\DUrole{std,std-ref}{Relative kinematics for a point}}}} gives the relation between the point of view of the observer at the origin \(O\) of the inertial reference frame, and the point of view of the observer at the origin \(Q\) of a general reference frame
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \mathbf{v}^0_{P/O} & = \mathbf{v}^0_{Q/O} + \mathbf{v}^1_{P/Q} + \boldsymbol\omega_{1/0} \times \mathbf{r}_{QP} \\
+  \mathbf{a}^0_{P/O} & = \mathbf{a}^0_{Q/O} + \mathbf{a}^1_{P/Q} + \boldsymbol\alpha_{1/0} \times \mathbf{r}_{QP} + 2 \boldsymbol\omega_{1/0} \times \mathbf{v}_{P/Q}^1 + \boldsymbol\omega_{1/0} \times \boldsymbol\omega_{1/0} \times \mathbf{r}_{QP}
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Non\sphinxhyphen{}rotating (relative rotation) reference frames.} Let the relative angular velocity and the angular acceleration of the two reference frames be identically zero, \(\boldsymbol\omega_{1/0} = \mathbf{0}\), and \(\boldsymbol\alpha_{1/0} = \mathbf{0}\). Then, the dynamical equation describing the motion as seen by \(Q\) is
+\begin{equation*}
+\begin{split}m \mathbf{a}^1_{P/Q} = \mathbf{F}^0_P - m \mathbf{a}^0_{Q/O} \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Example 1.} Let \(P\) be at rest w.r.t. \(Q\), implying \(\mathbf{a}^1_{P/Q} = \mathbf{0}\), and the total force \(\mathbf{F}^0_P\) be the sum of a gravitational action \(m \mathbf{g}\) and a force of a measurement instrument \(\mathbf{R}\) \sphinxhyphen{} or any kind of reaction force that’s required to prescribe the desired motion. The equation of motion becomes
+\begin{equation*}
+\begin{split}0 = m \mathbf{g} + \mathbf{R} - m \mathbf{a}^0_{Q/O} \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+so that the reaction/measurement of the instrument reads
+\begin{equation*}
+\begin{split}\mathbf{R} = m \left( \mathbf{a}^0_{Q/O} - \mathbf{g} \right) \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Without any additional information about the relative motion of the reference frames, i.e. no information about \(\mathbf{a}_{Q/O}^0\), the measuremenent of the instrument can’t discern from the conditions \(( \mathbf{a}^0_{Q/O}, \mathbf{g} ) = \left( \tfrac{\mathbf{R}}{m}, 0 \right)\) and \(( \mathbf{a}^0_{Q/O}, \mathbf{g} ) = \left( 0, - \tfrac{\mathbf{R}}{m} \right)\), or any other condition of the form  \(( \mathbf{a}^0_{Q/O}, \mathbf{g} ) = \left( a \tfrac{\mathbf{R}}{m}, - ( 1 - a ) \tfrac{\mathbf{R}}{m} \right)\).
+
+\sphinxAtStartPar
+\sphinxstylestrong{Example 2 \sphinxhyphen{} Empty space or free fall in gravitational field?.} Let the measurement of the instrument be \(\mathbf{R} = \mathbf{0}\) \sphinxhyphen{} same condition as unconstrained system, so there’s no reaction. Thus, \(\mathbf{a}^0_{Q/O} = \mathbf{g}\), i.e. the observer is accelerating w.r.t. the inertial reference frames with uniform acceleration \(\mathbf{g}\). Without any information about the gravitational field \(\mathbf{g}\) or the acceleration \(\mathbf{a}^0_{Q/O}\) their value is undeterminate: it’s not possible to tell if you’re in uniform motion in an empty space (\(\mathbf{g} = \mathbf{a}^0_{Q/O}\)), or accelerating w.r.t. inertial reference frames with the uniform acceleration of the gravitational field with arbitrary value \(\mathbf{g}\).
+
+\sphinxstepscope
+
+
 \part{Analytical Mechanics}
 
 \sphinxstepscope
@@ -4334,7 +4387,7 @@ At the end of the tunnel, the ball moves above the planet surface while it’s a
 \item\relax\sphinxstyleindexentry{definition\sphinxhyphen{}2}\sphinxstyleindexextra{ch/lagrange\sphinxhyphen{}constraints}\sphinxstyleindexpageref{ch/lagrange-constraints:\detokenize{definition-2}}
 \indexspace
 \bigletter{example\sphinxhyphen{}0}
-\item\relax\sphinxstyleindexentry{example\sphinxhyphen{}0}\sphinxstyleindexextra{ch/kinematics\sphinxhyphen{}rotations\sphinxhyphen{}tensors}\sphinxstyleindexpageref{ch/kinematics-rotations-tensors:\detokenize{example-0}}
+\item\relax\sphinxstyleindexentry{example\sphinxhyphen{}0}\sphinxstyleindexextra{ch/lagrange\sphinxhyphen{}t\sphinxhyphen{}explicit}\sphinxstyleindexpageref{ch/lagrange-t-explicit:\detokenize{example-0}}
 \indexspace
 \bigletter{example\sphinxhyphen{}1}
 \item\relax\sphinxstyleindexentry{example\sphinxhyphen{}1}\sphinxstyleindexextra{ch/kinematics\sphinxhyphen{}rotations\sphinxhyphen{}tensors}\sphinxstyleindexpageref{ch/kinematics-rotations-tensors:\detokenize{example-1}}
