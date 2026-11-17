@@ -362,7 +362,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -378,6 +380,15 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#uniform-gravitational-field">4.9.1. Uniform gravitational field</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#non-uniform-gravitational-field">4.9.2. Non-uniform gravitational field</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -389,6 +400,8 @@ document.write(`
                   
   <div class="tex2jax_ignore mathjax_ignore section" id="equivalence-principle-in-classical-mechanics">
 <span id="classical-mechanics-dynamics-equivalence-principle"></span><h1><span class="section-number">4.9. </span>Equivalence principle in classical mechanics<a class="headerlink" href="#equivalence-principle-in-classical-mechanics" title="Permalink to this heading">#</a></h1>
+<div class="section" id="uniform-gravitational-field">
+<span id="classical-mechanics-dynamics-equivalence-principle-uniform"></span><h2><span class="section-number">4.9.1. </span>Uniform gravitational field<a class="headerlink" href="#uniform-gravitational-field" title="Permalink to this heading">#</a></h2>
 <p>Without going deep into the details of the most general case, it’s possible to state that</p>
 <blockquote>
 <div><p>It’s not possible tell if one is at rest in a uniform gravitational field, or uniformly accelerating in empty space</p>
@@ -415,6 +428,51 @@ document.write(`
 \[\mathbf{R} = m \left( \mathbf{a}^0_{Q/O} - \mathbf{g} \right) \ .\]</div>
 <p>Without any additional information about the relative motion of the reference frames, i.e. no information about <span class="math notranslate nohighlight">\(\mathbf{a}_{Q/O}^0\)</span>, the measuremenent of the instrument can’t discern from the conditions <span class="math notranslate nohighlight">\(( \mathbf{a}^0_{Q/O}, \mathbf{g} ) = \left( \tfrac{\mathbf{R}}{m}, 0 \right)\)</span> and <span class="math notranslate nohighlight">\(( \mathbf{a}^0_{Q/O}, \mathbf{g} ) = \left( 0, - \tfrac{\mathbf{R}}{m} \right)\)</span>, or any other condition of the form  <span class="math notranslate nohighlight">\(( \mathbf{a}^0_{Q/O}, \mathbf{g} ) = \left( a \tfrac{\mathbf{R}}{m}, - ( 1 - a ) \tfrac{\mathbf{R}}{m} \right)\)</span>.</p>
 <p><strong>Example 2 - Empty space or free fall in gravitational field?.</strong> Let the measurement of the instrument be <span class="math notranslate nohighlight">\(\mathbf{R} = \mathbf{0}\)</span> - same condition as unconstrained system, so there’s no reaction. Thus, <span class="math notranslate nohighlight">\(\mathbf{a}^0_{Q/O} = \mathbf{g}\)</span>, i.e. the observer is accelerating w.r.t. the inertial reference frames with uniform acceleration <span class="math notranslate nohighlight">\(\mathbf{g}\)</span>. Without any information about the gravitational field <span class="math notranslate nohighlight">\(\mathbf{g}\)</span> or the acceleration <span class="math notranslate nohighlight">\(\mathbf{a}^0_{Q/O}\)</span> their value is undeterminate: it’s not possible to tell if you’re in uniform motion in an empty space (<span class="math notranslate nohighlight">\(\mathbf{g} = \mathbf{a}^0_{Q/O}\)</span>), or accelerating w.r.t. inertial reference frames with the uniform acceleration of the gravitational field with arbitrary value <span class="math notranslate nohighlight">\(\mathbf{g}\)</span>.</p>
+</div>
+<div class="section" id="non-uniform-gravitational-field">
+<span id="classical-mechanics-dynamics-equivalence-principle-non-uniform"></span><h2><span class="section-number">4.9.2. </span>Non-uniform gravitational field<a class="headerlink" href="#non-uniform-gravitational-field" title="Permalink to this heading">#</a></h2>
+<p>Let the observer be subject to the local gravitational field as well. If it’s not constrained, thus it’s subject to an acceleration <span class="math notranslate nohighlight">\(\mathbf{a}_{Q/O}^0 = \mathbf{g}\left( Q \right)\)</span> w.r.t. the inertial reference frames.</p>
+<p>Let’s the reference frame have no relative rotation so that <span class="math notranslate nohighlight">\(\boldsymbol\omega_{1/0} = \mathbf{0}\)</span>. Then the equations of motion governing the motion of <span class="math notranslate nohighlight">\(P\)</span> and <span class="math notranslate nohighlight">\(Q\)</span> only subject to the gravitational field <span class="math notranslate nohighlight">\(\mathbf{g}\)</span> w.r.t. the inertial reference frames are</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  m_P \mathbf{a}^0_{P/O} &amp; = m_P \mathbf{g}\left( P \right) \\
+  m_Q \mathbf{a}^0_{Q/O} &amp; = m_Q \mathbf{g}\left( Q \right) \ .
+\end{aligned}\end{split}\]</div>
+<p>Thus the relative acceleration of <span class="math notranslate nohighlight">\(P\)</span> w.r.t. <span class="math notranslate nohighlight">\(Q\)</span> as seen by the observer <span class="math notranslate nohighlight">\(Q\)</span> is</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \mathbf{a}^1_{P/Q} 
+  &amp; = \mathbf{a}^0_{P/O} - \mathbf{a}^0_{Q/O} = \\
+  &amp; = \mathbf{g}(P) - \mathbf{g}(Q) = \\
+  &amp; = \left( P - Q \right) \cdot \nabla \mathbf{g}(Q) + o(|P-Q|) \ ,
+\end{aligned}\end{split}\]</div>
+<p><strong>Cartesian coordinates.</strong> Exploiting a set of Cartesian coordinates <span class="math notranslate nohighlight">\(\{ \xi^k \}\)</span> that are stationary w.r.t. the observer <span class="math notranslate nohighlight">\(Q\)</span>, the origin identified by <span class="math notranslate nohighlight">\(\xi^k = 0\)</span>, then</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \mathbf{a}^1_{P/Q} &amp; = \ddot{\xi}^k \hat{\mathbf{e}}_k \\
+  \mathbf{r}_{P/Q} \cdot \nabla \mathbf{g} &amp; = \xi^k_P \hat{\mathbf{e}}_k \cdot \hat{\mathbf{e}}^j \partial_{\xi^j} \left( g^l \hat{\mathbf{e}}_l \right) = \xi^k_P(t) \, \partial_{\xi^k} g^l \hat{\mathbf{e}}_l \ ,
+\end{aligned}\end{split}\]</div>
+<p>so that the <span class="math notranslate nohighlight">\(k^{\rm th}\)</span> component of the equation reads</p>
+<div class="math notranslate nohighlight">
+\[\ddot{\xi}^k_P = \xi^\ell_P \, \partial_{\xi^\ell} \left. g^k\right|_{\xi=0} \ ,\]</div>
+<p><strong>General coordinates.</strong> Exploiting a set of coordinates <span class="math notranslate nohighlight">\(\{ \xi^k \}\)</span> that are stationary w.r.t. the observer <span class="math notranslate nohighlight">\(Q\)</span>, then a point <span class="math notranslate nohighlight">\(P\)</span> in space w.r.t. <span class="math notranslate nohighlight">\(Q\)</span> can be identified by the values of its coordinates as <span class="math notranslate nohighlight">\( (P-Q) = (P-Q)(\xi^k_P(t))\)</span>. It’s velocity reads</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{u}^1_{P/Q} = \dfrac{d}{dt} ( P - Q ) = \dot{\xi}^k_P(t) \, \partial_{\xi^k} (P-Q) = \dot{\xi}^k_P(t) \, \mathbf{b}_k \ .\]</div>
+<p>The acceleration becomes</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{a}^1_{P/Q} = \left\{ \ddot{\xi}^k_P + \Gamma^{k}_{ij} \dot{\xi}^i \dot{\xi}^j \right\} \mathbf{b}_k\]</div>
+<p>The directional derivative for small displacement <span class="math notranslate nohighlight">\(P-Q =\)</span>  <span class="math notranslate nohighlight">\(X(\xi_P^k(t)) - X(\xi_Q^k(t))\sim\)</span>  <span class="math notranslate nohighlight">\(d \xi^k_P \partial_{\xi^k} X =\)</span>  <span class="math notranslate nohighlight">\(d \xi^k_P \mathbf{b}_k\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  d \mathbf{r}_{P/Q} \cdot \nabla \mathbf{g}
+  &amp; = d \xi^k_P \mathbf{b}_k \cdot \mathbf{b}^j \partial_j \mathbf{g} = \\
+  &amp; = d \xi^k_P \partial_k \left( g^i \mathbf{b}_i \right) = \\
+  &amp; = \left\{ d \xi^k_P \partial_k g^i + d \xi^k_P \Gamma^i_{jk} g^j \right\} \mathbf{b}_i
+\end{aligned}\end{split}\]</div>
+<p>so that the <span class="math notranslate nohighlight">\(k^{\rm th}\)</span> component of the linear approximation of the equation of motion is</p>
+<div class="math notranslate nohighlight">
+\[\ddot{\xi}^k_P + \Gamma^{k}_{ij} \dot{\xi}^i \dot{\xi}^j = \xi^k_P \left.\left( \partial_k g^i + \Gamma^{i}_{jk} g^j \right)\right|_{\xi=0} \ .\]</div>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -471,6 +529,21 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#uniform-gravitational-field">4.9.1. Uniform gravitational field</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#non-uniform-gravitational-field">4.9.2. Non-uniform gravitational field</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
